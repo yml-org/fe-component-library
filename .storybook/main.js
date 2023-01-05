@@ -1,13 +1,13 @@
 module.exports = {
   stories: [
-    "../packages/**/*.stories.mdx",
-    "../packages/**/*.stories.@(js|jsx|ts|tsx|vue)",
+    '../packages/**/*.stories.mdx',
+    '../packages/**/*.stories.@(js|jsx|ts|tsx|vue)',
   ],
   addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
     {
-      name: "@storybook/addon-postcss",
+      name: '@storybook/addon-postcss',
       options: {
         cssLoaderOptions: {
           // When you have splitted your css over multiple files
@@ -16,13 +16,13 @@ module.exports = {
         },
         postcssLoaderOptions: {
           // When using postCSS 8
-          implementation: require("postcss"),
+          implementation: require('postcss'),
         },
       },
     },
   ],
-  framework: "@storybook/web-components",
+  framework: '@storybook/web-components',
   core: {
-    builder: "@storybook/builder-vite",
+    builder: '@storybook/builder-vite',
   },
 };
