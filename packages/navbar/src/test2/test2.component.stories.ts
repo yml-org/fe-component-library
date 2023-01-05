@@ -5,4 +5,4 @@ export default {
   title: 'NavBar',
 };
 
-export const Primary = () => html` <test2-component></test2-component> `;
+export const Default = () => html` <test2-component></test2-component> `;
