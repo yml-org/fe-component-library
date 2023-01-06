@@ -1,0 +1,13 @@
+{
+  "useWorkspaces": true,
+  "version": "independent",
+  "npmClient": "yarn",
+  "packages": ["packages/*"],
+  "command": {
+    "publish": {
+      "allowBranch": "main",
+      "conventionalCommits": true,
+      "ignoreChanges": ["*.md", ".spec.ts", ".stories.ts"]
+    }
+  }
+}
