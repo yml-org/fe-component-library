@@ -1,36 +1,36 @@
 import { html } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { TailwindElement } from '../shared/tailwind.element';
+import openMenuIcon from '../../assets/openMenuIcon.svg';
+import closeMenuIcon from '../../assets/closeMenuIcon.svg';
 import Style from './header.component.scss?inline';
+
+interface MenuLink {
+  label: string;
+  type: 'link' | 'button';
+  url?: string;
+  eventName?: string;
+}
+
 interface Nav {
   mode?: 'dark' | 'light';
   logo?: string;
   name?: string;
   menuIcon?: string;
-  menuLinks?: [
-    {
-      label: string;
-      type: 'link' | 'button';
-      url?: string;
-      eventName?: string;
-    }
-  ];
-  topRightIcons?: [
-    {
-      slotName: string;
-    }
-  ];
-  profile?: {
-    avatarUrl: string;
-    dropDownList: [
-      {
-        label: string;
-        type: 'link' | 'button';
-        eventName?: string;
-        url?: string;
-      }
-    ];
-  };
+  menuLinks?: Array<MenuLink>;
+  topRightIcons?: {
+    slotName: string;
+  }[];
+}
+
+const enum NavbarModes {
+  Dark = 'dark',
+  Light = 'light',
+}
+
+const enum NavbarLinkType {
+  LINK = 'link',
+  BUTTON = 'button',
 }
 
 @customElement('header-component')
@@ -76,8 +76,8 @@ export class HeaderComponent extends TailwindElement(Style) {
 
   render() {
     return html`
-      <nav class="${this.themeOptions[this.navOptions.mode].bgColor} ${
-      this.themeOptions[this.navOptions.mode].textColor
+      <nav class="${this.themeOptions[this.navOptions?.mode].bgColor} ${
+      this.themeOptions[this.navOptions?.mode].textColor
     }">
         
         <div class="mx-auto max-w-8xl px-2 sm:px-6 lg:px-4">
@@ -90,7 +90,7 @@ export class HeaderComponent extends TailwindElement(Style) {
               <button
                 type="button"
                 class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 ${
-                  this.themeOptions[this.navOptions.mode].textHoverColor
+                  this.themeOptions[this.navOptions?.mode].textHoverColor
                 } focus:outline-none"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
@@ -98,47 +98,27 @@ export class HeaderComponent extends TailwindElement(Style) {
                 @click=${this.__setHambergerBtn}>
                 ${
                   !this.openMenu
-                    ? html`<svg
+                    ? html`<img
+                        src=${openMenuIcon}
+                        alt="open-menu"
                         class="block h-6 w-6"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                        />
-                      </svg>`
-                    : html`<svg
+                      />`
+                    : html`<img
+                        src=${closeMenuIcon}
+                        alt="close-menu"
                         class="block h-6 w-6"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M6 18L18 6M6 6l12 12"
-                        />
-                      </svg>`
+                      />`
                 }
               </button>
             </div>
 
             <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             ${
-              this.navOptions.logo &&
+              this.navOptions?.logo &&
               html`<div class="flex flex-shrink-0 items-center">
                 <img
                   class="hidden h-8 w-auto lg:block"
-                  src=${this.navOptions.logo}
+                  src=${this.navOptions?.logo}
                   alt="logo"
                 />
               </div> `
@@ -146,26 +126,28 @@ export class HeaderComponent extends TailwindElement(Style) {
             <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
               
               <div class="flex flex-shrink-0 items-center font-bold  pl-4 ${
-                this.navOptions.mode === 'dark' ? 'text-[#fff]' : 'text-[#000]'
+                this.navOptions?.mode === NavbarModes.Dark
+                  ? 'text-[#fff]'
+                  : 'text-[#000]'
               } ">
-                <h2>${this.navOptions.name}</h2>
+                <h2>${this.navOptions?.name}</h2>
               </div>
 
               <div class="hidden sm:ml-6 sm:block">
                 <div class="flex space-x-4 pl-10">
                   <!-- Current: "bg-gray-900", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                  ${this.navOptions.menuLinks.map((link) =>
-                    link.type === 'link'
+                  ${this.navOptions?.menuLinks?.map((link) =>
+                    link.type === NavbarLinkType.LINK
                       ? html`<a
                           href=${link.url}
-                          class="${this.themeOptions[this.navOptions.mode]
+                          class="${this.themeOptions[this.navOptions?.mode]
                             .textHoverColor} px-3 py-2 rounded-md text-sm font-medium"
                           aria-current="page"
                         >
                           ${link.label}
                         </a>`
                       : html`<button
-                          class="${this.themeOptions[this.navOptions.mode]
+                          class="${this.themeOptions[this.navOptions?.mode]
                             .textHoverColor} px-3 py-2 rounded-md text-sm font-medium"
                           @click=${() => {
                             this.dispatchEvent(new CustomEvent(link.eventName));
@@ -181,7 +163,7 @@ export class HeaderComponent extends TailwindElement(Style) {
             </div>
 
             <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              ${this.navOptions.topRightIcons.map(
+              ${this.navOptions?.topRightIcons?.map(
                 (icon) => html`<slot name=${icon.slotName}></slot>`
               )}
             </div>
@@ -196,12 +178,12 @@ export class HeaderComponent extends TailwindElement(Style) {
           
           <div class="space-y-1 px-2 pt-2 pb-3" >
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            ${this.navOptions.menuLinks.map((link) =>
+            ${this.navOptions?.menuLinks?.map((link) =>
               link.type === 'link'
                 ? html` <a
                     href=${link.url}
                     part="anchor-part"
-                    class="text-left ${this.themeOptions[this.navOptions.mode]
+                    class="text-left ${this.themeOptions[this.navOptions?.mode]
                       .textHoverColor} block px-3 py-2 rounded-md text-base font-medium"
                     aria-current="page"
                   >
@@ -209,7 +191,7 @@ export class HeaderComponent extends TailwindElement(Style) {
                   </a>`
                 : html` <button
                     class=" w-full text-left ${this.themeOptions[
-                      this.navOptions.mode
+                      this.navOptions?.mode
                     ]
                       .textColor} block px-3 py-2 rounded-md text-base font-medium"
                     @click=${() => {
