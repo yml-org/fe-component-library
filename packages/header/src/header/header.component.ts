@@ -1,18 +1,16 @@
-import { html } from "lit";
-import { customElement, property, state } from "lit/decorators.js";
-import { TailwindElement } from "../shared/tailwind.element";
-import Style from "./header.component.scss?inline";
+import { html } from 'lit';
+import { customElement, property, state } from 'lit/decorators.js';
+import { TailwindElement } from '../shared/tailwind.element';
+import Style from './header.component.scss?inline';
 interface Nav {
-  themeColor?: string;
-  textColor?: string;
-  textHoverColor?: string;
+  mode?: 'dark' | 'light';
   logo?: string;
   name?: string;
   menuIcon?: string;
   menuLinks?: [
     {
       label: string;
-      type: "link" | "button";
+      type: 'link' | 'button';
       url?: string;
       eventName?: string;
     }
@@ -27,7 +25,7 @@ interface Nav {
     dropDownList: [
       {
         label: string;
-        type: "link" | "button";
+        type: 'link' | 'button';
         eventName?: string;
         url?: string;
       }
@@ -35,48 +33,52 @@ interface Nav {
   };
 }
 
-interface navTheme {
-  themeColor?: string;
-  textColor?: string;
-  textHoverColor?: string;
-}
-@customElement("header-component")
+@customElement('header-component')
 export class HeaderComponent extends TailwindElement(Style) {
   @state() openMenu: boolean = false;
 
   @property()
   navOptions: Nav = {
-    logo: "https://ymedialabs.atlassian.net/s/1jmxwi/b/8/d35727372e299c952e88a10ef82bbaf6/_/jira-logo-scaled.png",
-    name: "YML",
-    menuIcon: "",
+    mode: 'light',
+    logo: 'https://ymedialabs.atlassian.net/s/1jmxwi/b/8/d35727372e299c952e88a10ef82bbaf6/_/jira-logo-scaled.png',
+    name: 'YML',
+    menuIcon: '',
     menuLinks: [
       {
-        label: "Home",
-        type: "link",
-        url: "#home",
+        label: 'Home',
+        type: 'link',
+        url: '#home',
       },
     ],
     topRightIcons: [
       {
-        slotName: "btn",
+        slotName: 'btn',
       },
     ],
   };
 
-  themeOptions: navTheme = {
-    themeColor: "#000",
-    textColor: "#fff",
-    textHoverColor: "#50d71e",
+  themeOptions = {
+    dark: {
+      bgColor: 'bg-[#000000]',
+      textColor: 'text-[#d3dce6]',
+      textHoverColor: 'hover:text-[#ffffff]',
+    },
+    light: {
+      bgColor: 'bg-[#d3dce6]',
+      textColor: 'text-[#364546]',
+      textHoverColor: 'hover:text-[#000000]',
+    },
   };
 
   __setHambergerBtn() {
     this.openMenu = !this.openMenu;
   }
-  
 
   render() {
     return html`
-      <nav class="bg-[${this.themeOptions.themeColor}] text-[${this.themeOptions.textColor}]">
+      <nav class="${this.themeOptions[this.navOptions.mode].bgColor} ${
+      this.themeOptions[this.navOptions.mode].textColor
+    }">
         
         <div class="mx-auto max-w-8xl px-2 sm:px-6 lg:px-4">
           
@@ -87,11 +89,12 @@ export class HeaderComponent extends TailwindElement(Style) {
               <!-- Mobile menu button-->
               <button
                 type="button"
-                class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-[${
-                  this.themeOptions.textHoverColor
-                }] focus:outline-none"
+                class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 ${
+                  this.themeOptions[this.navOptions.mode].textHoverColor
+                } focus:outline-none"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
+                aria-label="menu-button"
                 @click=${this.__setHambergerBtn}>
                 ${
                   !this.openMenu
@@ -127,7 +130,6 @@ export class HeaderComponent extends TailwindElement(Style) {
                       </svg>`
                 }
               </button>
-
             </div>
 
             <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
@@ -143,7 +145,9 @@ export class HeaderComponent extends TailwindElement(Style) {
             }
             <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
               
-              <div class="flex flex-shrink-0 items-center font-bold  pl-4">
+              <div class="flex flex-shrink-0 items-center font-bold  pl-4 ${
+                this.navOptions.mode === 'dark' ? 'text-[#fff]' : 'text-[#000]'
+              } ">
                 <h2>${this.navOptions.name}</h2>
               </div>
 
@@ -151,18 +155,18 @@ export class HeaderComponent extends TailwindElement(Style) {
                 <div class="flex space-x-4 pl-10">
                   <!-- Current: "bg-gray-900", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                   ${this.navOptions.menuLinks.map((link) =>
-                    link.type === "link"
+                    link.type === 'link'
                       ? html`<a
                           href=${link.url}
-                          class="hover:text-[${this.themeOptions
-                            .textHoverColor}] px-3 py-2 rounded-md text-sm font-medium"
+                          class="${this.themeOptions[this.navOptions.mode]
+                            .textHoverColor} px-3 py-2 rounded-md text-sm font-medium"
                           aria-current="page"
                         >
                           ${link.label}
                         </a>`
                       : html`<button
-                          class="text-[${this.themeOptions
-                            .textHoverColor}] px-3 py-2 rounded-md text-sm font-medium"
+                          class="${this.themeOptions[this.navOptions.mode]
+                            .textHoverColor} px-3 py-2 rounded-md text-sm font-medium"
                           @click=${() => {
                             this.dispatchEvent(new CustomEvent(link.eventName));
                             this.openMenu && !this.openMenu;
@@ -193,19 +197,21 @@ export class HeaderComponent extends TailwindElement(Style) {
           <div class="space-y-1 px-2 pt-2 pb-3" >
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             ${this.navOptions.menuLinks.map((link) =>
-              link.type === "link"
+              link.type === 'link'
                 ? html` <a
                     href=${link.url}
                     part="anchor-part"
-                    class="text-left  hover:text-[${this.themeOptions
-                      .textHoverColor}] block px-3 py-2 rounded-md text-base font-medium"
+                    class="text-left ${this.themeOptions[this.navOptions.mode]
+                      .textHoverColor} block px-3 py-2 rounded-md text-base font-medium"
                     aria-current="page"
                   >
                     ${link.label}
                   </a>`
                 : html` <button
-                    class=" w-full text-left text-[${this.themeOptions
-                      .textHoverColor}] block px-3 py-2 rounded-md text-base font-medium"
+                    class=" w-full text-left ${this.themeOptions[
+                      this.navOptions.mode
+                    ]
+                      .textColor} block px-3 py-2 rounded-md text-base font-medium"
                     @click=${() => {
                       this.dispatchEvent(new CustomEvent(link.eventName));
                       this.openMenu = false;
