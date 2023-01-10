@@ -1,8 +1,9 @@
+import { msg, str} from '@lit/localize';
 import { html } from 'lit-html';
 
 export const OpenMenuIcon = html` <svg
   class="block h-6 w-6"
-  aria-label="Open Menu"
+  aria-label=${msg(str`Open menu`)}
   xmlns="http://www.w3.org/2000/svg"
   fill="currentColor"
   viewBox="0 0 24 24"
@@ -19,7 +20,7 @@ export const OpenMenuIcon = html` <svg
 
 export const CloseMenuIcon = html`<svg
   class="block h-6 w-6"
-  aria-label="Close Menu"
+  aria-label=${msg(str`Close menu`)}
   xmlns="http://www.w3.org/2000/svg"
   fill="currentColor"
   viewBox="0 0 24 24"

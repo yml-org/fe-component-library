@@ -1,3 +1,4 @@
+import { msg, str } from '@lit/localize';
 import { html } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { TailwindElement } from '../shared/tailwind.element';
@@ -45,15 +46,15 @@ export class HeaderComponent extends TailwindElement(Style) {
   navOptions: Nav = {
     mode: 'light',
     logo: 'https://ymedialabs.atlassian.net/s/1jmxwi/b/8/d35727372e299c952e88a10ef82bbaf6/_/jira-logo-scaled.png',
-    logoAltText: 'Company logo',
-    headerText: 'YML',
+    logoAltText: msg(str`Company logo`),
+    headerText: 'Home',
     menuIcon: '',
     menuLinks: [
       {
-        label: 'Home',
+        label: msg(str`Home`),
         type: 'link',
         url: '#home',
-      },
+      }
     ],
     isMenuOpen: false,
     topRightIcons: [
@@ -94,7 +95,7 @@ export class HeaderComponent extends TailwindElement(Style) {
             class="${type === 'desktop'
               ? `${this.textHoverColor} px-3 py-2 rounded-md text-sm font-medium`
               : `text-left ${this.textHoverColor} block px-3 py-2 rounded-md text-base font-medium`}"
-            aria-current="page"
+            aria-current=${link.label}
           >
             ${link.label}
           </a>`
@@ -127,9 +128,9 @@ export class HeaderComponent extends TailwindElement(Style) {
                 class="inline-flex items-center justify-center rounded-md p-2 ${
                   this.textHoverColor
                 } focus:outline-none"
-                aria-controls="mobile-menu"
+                aria-controls=${msg(str`mobile menu`)}
                 aria-expanded="${this.navOptions.isMenuOpen}"
-                aria-label="menu button"
+                aria-label=${msg(str`mobile button`)}
                 @click=${this.setMenuOpen}>
                 ${!this.openMenu ? OpenMenuIcon : CloseMenuIcon}
               </button>
