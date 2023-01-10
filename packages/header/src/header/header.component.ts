@@ -17,7 +17,12 @@ interface Nav {
   logo?: string;
   logoAltText?: string;
   headerText?: string;
-  menuIcon?: string;
+  openMenuIcon?: {
+    slotName: string
+  },
+  closeMenuIcon?:{
+    slotName: string
+  },
   menuLinks?: Array<MenuLink>;
   isMenuOpen: boolean;
   topRightIcons?: {
@@ -44,17 +49,22 @@ const enum DeviceType {
 export class HeaderComponent extends TailwindElement(Style) {
   @property()
   navOptions: Nav = {
-    mode: 'light',
+    mode: 'dark',
     logo: 'https://ymedialabs.atlassian.net/s/1jmxwi/b/8/d35727372e299c952e88a10ef82bbaf6/_/jira-logo-scaled.png',
     logoAltText: msg(str`Company logo`),
     headerText: 'YML',
-    menuIcon: '',
+    openMenuIcon: {
+      slotName: ""
+    },
+    closeMenuIcon:{
+      slotName: ""
+    },
     menuLinks: [
       {
         label: msg(str`Home`),
         type: 'link',
         url: '#home',
-      }
+      },
     ],
     isMenuOpen: false,
     topRightIcons: [
@@ -93,16 +103,16 @@ export class HeaderComponent extends TailwindElement(Style) {
         ? html`<a
             href=${link.url}
             class="${type === 'desktop'
-              ? `${this.textHoverColor} px-3 py-2 rounded-md text-sm font-medium`
-              : `text-left ${this.textHoverColor} block px-3 py-2 rounded-md text-base font-medium`}"
+              ? `${this.themeOptions[this.navOptions?.mode].textHoverColor} px-3 py-2 rounded-md text-sm font-medium`
+              : `text-left ${this.themeOptions[this.navOptions?.mode].textHoverColor} block px-3 py-2 rounded-md text-base font-medium`}"
             aria-current=${link.label}
           >
             ${link.label}
           </a>`
         : html`<button
             class="${type === 'desktop'
-              ? `${this.textHoverColor} px-3 py-2 rounded-md text-sm font-medium`
-              : ` w-full text-left ${this.textColor} block px-3 py-2 rounded-md text-base font-medium`}"
+              ? `${this.themeOptions[this.navOptions?.mode].textHoverColor} px-3 py-2 rounded-md text-sm font-medium`
+              : ` w-full text-left ${this.themeOptions[this.navOptions?.mode].textHoverColor} block px-3 py-2 rounded-md text-base font-medium`}"
             @click=${() => {
               this.dispatchEvent(new CustomEvent(link.eventName));
             }}
@@ -114,7 +124,7 @@ export class HeaderComponent extends TailwindElement(Style) {
 
   render() {
     return html`
-      <nav class="${this.bgColor} ${this.textColor}">
+      <nav class="${this.themeOptions[this.navOptions?.mode].bgColor} ${this.themeOptions[this.navOptions?.mode].textColor}">
         
         <div class="mx-auto max-w-8xl px-2 sm:px-6 lg:px-4">
           
@@ -126,13 +136,16 @@ export class HeaderComponent extends TailwindElement(Style) {
               <button
                 type="button"
                 class="inline-flex items-center justify-center rounded-md p-2 ${
-                  this.textHoverColor
+                  this.themeOptions[this.navOptions?.mode].textHoverColor
                 } focus:outline-none"
                 aria-controls=${msg(str`mobile menu`)}
                 aria-expanded="${this.navOptions.isMenuOpen}"
                 aria-label=${msg(str`mobile button`)}
                 @click=${this.setMenuOpen}>
-                ${!this.openMenu ? OpenMenuIcon : CloseMenuIcon}
+                ${
+                  (this.openMenu) ? ( !this.navOptions?.closeMenuIcon?.slotName  ? CloseMenuIcon : html`<div class="h-6 w-6"><slot name=${this.navOptions?.closeMenuIcon?.slotName}></slot></div>`)
+                  :
+                  (!this.navOptions?.openMenuIcon?.slotName ? OpenMenuIcon : html`<div class="h-6 w-6"><slot name=${this.navOptions?.openMenuIcon?.slotName}></slot></div>`) }
               </button>
             </div>
 
@@ -141,7 +154,7 @@ export class HeaderComponent extends TailwindElement(Style) {
               this.navOptions?.logo &&
               html`<div class="flex flex-shrink-0 items-center">
                 <img
-                  class="hidden h-8 w-auto lg:block"
+                  class="hidden h-8 w-8 lg:block"
                   src=${this.navOptions?.logo}
                   alt="${this.navOptions?.logoAltText}"
                 />
@@ -168,7 +181,7 @@ export class HeaderComponent extends TailwindElement(Style) {
 
             <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
               ${this.navOptions?.topRightIcons?.map(
-                (icon) => html`<slot name=${icon.slotName}></slot>`
+                (icon) => html`<div class="h-6 w-6 lg:ml-6" ><slot name=${icon.slotName}></slot></div>`
               )}
             </div>
 
