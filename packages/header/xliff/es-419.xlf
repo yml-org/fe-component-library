@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<file target-language="es-419" source-language="en" original="lit-localize-inputs" datatype="plaintext">
+<body>
+<trans-unit id="s8d91340b5caa2d5c">
+  <source>Open menu</source>
+  <target>Menú abierto</target>
+</trans-unit>
+<trans-unit id="s1d5d2564d7aae78e">
+  <source>Close menu</source>
+   <target>Cerrar menú</target>
+</trans-unit>
+<trans-unit id="sc7c1a00bdcf6e82b">
+  <source>Company logo</source>
+   <target>Logo de la compañía</target>
+</trans-unit>
+<trans-unit id="s6abb1cd87fe0114e">
+  <source>Home</source>
+   <target>Casa</target>
+</trans-unit>
+<trans-unit id="s96815c0ec61797ea">
+  <source>mobile menu</source>
+   <target>menú móvil</target>
+</trans-unit>
+<trans-unit id="s9674b657327cb801">
+  <source>mobile button</source>
+   <target>botón móvil</target>
+</trans-unit>
+</body>
+</file>
+</xliff>

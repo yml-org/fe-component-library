@@ -1,70 +1,131 @@
-import { html } from "lit";
-import { customElement, property, state } from "lit/decorators.js";
-import { TailwindElement } from "../shared/tailwind.element";
-import Style from './header.component.scss?inline'
+import { msg, str } from '@lit/localize';
+import { html } from 'lit';
+import { customElement, property, state } from 'lit/decorators.js';
+import { TailwindElement } from '../shared/tailwind.element';
+import { OpenMenuIcon, CloseMenuIcon } from './headerIcons';
+import Style from './header.component.scss?inline';
+
+interface MenuLink {
+  label: string;
+  type: 'link' | 'button';
+  url?: string;
+  eventName?: string;
+}
+
 interface Nav {
-  themeColor?:string,
-  textColor?:string,
+  mode?: 'dark' | 'light';
   logo?: string;
-  name?: string;
-  menuIcon?: string;
-  menuLinks?: [
-    {
-      label: string;
-      type: "link" | "button";
-      url?: string;
-      eventName?: string;
-    }
-  ];
-  topRightIcons?: [
-    {
-      slotName: string;
-    }
-  ];
-  profile?: {
-    avatarUrl: string;
-    dropDownList: [
-      {
-        label: string;
-        type: "link" | "button";
-        eventName?: string;
-        url?: string;
-      }
-    ];
+  logoAltText?: string;
+  headerText?: string;
+  openMenuIcon?: {
+    slotName: string;
+  };
+  closeMenuIcon?: {
+    slotName: string;
+  };
+  menuLinks?: Array<MenuLink>;
+  isMenuOpen: boolean;
+  topRightSlot?: {
+    slotName: string;
   };
 }
-@customElement("header-component")
-export class HeaderComponent extends TailwindElement(Style) {
-  @state() openMenu: boolean = false;
 
+const enum NavbarModes {
+  Dark = 'dark',
+  Light = 'light',
+}
+
+const enum NavbarLinkType {
+  LINK = 'link',
+  BUTTON = 'button',
+}
+
+const enum DeviceType {
+  DESKTOP = 'desktop',
+  MOBILE = 'mobile',
+}
+
+@customElement('header-component')
+export class HeaderComponent extends TailwindElement(Style) {
   @property()
-  navOptions:Nav = {
-    themeColor:"yellow",
-    textColor:"gray",
-    logo: "",
-    name: "",
-    menuIcon: "",
-    menuLinks: [
-      {
-        label: "",
-        type: "link",
-        url: "",
-      },
-    ],
-    topRightIcons: [
-      {
-        slotName: "",
-      }
-    ],
+  navOptions: Nav = {
+    mode: 'dark',
+    logo: 'https://ymedialabs.atlassian.net/s/1jmxwi/b/8/d35727372e299c952e88a10ef82bbaf6/_/jira-logo-scaled.png',
+    headerText: 'YML',
+    openMenuIcon: {
+      slotName: '',
+    },
+    closeMenuIcon: {
+      slotName: '',
+    },
+    menuLinks: [],
+    isMenuOpen: false,
+    topRightSlot: {
+      slotName: 'bell',
+    },
   };
 
-  __setHambergerBtn() {
+  themeOptions = {
+    dark: {
+      bgColor: 'bg-black',
+      textColor: 'text-grey',
+      textHoverColor: 'hover:text-white',
+    },
+    light: {
+      bgColor: 'bg-grey',
+      textColor: 'text-brown',
+      textHoverColor: 'hover:text-black',
+    },
+  };
+
+  bgColor = this.themeOptions[this.navOptions?.mode].bgColor;
+  textColor = this.themeOptions[this.navOptions?.mode].textColor;
+  textHoverColor = this.themeOptions[this.navOptions?.mode].textHoverColor;
+
+  @state() openMenu: boolean = this.navOptions.isMenuOpen;
+
+  setMenuOpen() {
     this.openMenu = !this.openMenu;
+  }
+
+  displayMenuLinks(type: DeviceType) {
+    return html` ${this.navOptions?.menuLinks?.map((link) =>
+      link.type === NavbarLinkType.LINK
+        ? html`<a
+            href=${link.url}
+            class="${type === 'desktop'
+              ? `${
+                  this.themeOptions[this.navOptions?.mode].textHoverColor
+                } px-3 py-2 rounded-md text-sm font-medium`
+              : `text-left ${
+                  this.themeOptions[this.navOptions?.mode].textHoverColor
+                } block px-3 py-2 rounded-md text-base font-medium`}"
+            aria-current=${link.label}
+          >
+            ${link.label}
+          </a>`
+        : html`<button
+            class="${type === 'desktop'
+              ? `${
+                  this.themeOptions[this.navOptions?.mode].textHoverColor
+                } px-3 py-2 rounded-md text-sm font-medium`
+              : ` w-full text-left ${
+                  this.themeOptions[this.navOptions?.mode].textHoverColor
+                } block px-3 py-2 rounded-md text-base font-medium`}"
+            @click=${() => {
+              this.dispatchEvent(new CustomEvent(link.eventName));
+            }}
+          >
+            ${link.label}
+          </button>`
+    )}`;
   }
 
   render() {
     return html`
-      <nav class="bg-gray-800">
+      <nav class="${this.themeOptions[this.navOptions?.mode].bgColor} ${
+      this.themeOptions[this.navOptions?.mode].textColor
+    }">
         
         <div class="mx-auto max-w-8xl px-2 sm:px-6 lg:px-4">
           
@@ -75,91 +136,67 @@ export class HeaderComponent extends TailwindElement(Style) {
               <!-- Mobile menu button-->
               <button
                 type="button"
-                class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none"
-                aria-controls="mobile-menu"
-                aria-expanded="false"
-                @click=${this.__setHambergerBtn}>
-                ${  !this.openMenu ? 
-                  html 
-                  `<svg 
-                  class="block h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                  />
-                </svg>` : 
-                html 
-                `<svg 
-                 class="block h-6 w-6" 
-                 xmlns="http://www.w3.org/2000/svg"
-                 fill="none" viewBox="0 0 24 24" 
-                 stroke-width="1.5" 
-                 stroke="currentColor" 
-                 aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>`}
+                class="inline-flex items-center justify-center rounded-md p-2 ${
+                  this.themeOptions[this.navOptions?.mode].textHoverColor
+                } focus:outline-none"
+                aria-controls=${msg(str`mobile menu`)}
+                aria-expanded="${this.navOptions.isMenuOpen}"
+                aria-label=${msg(str`mobile button`)}
+                @click=${this.setMenuOpen}>
+                ${
+                  this.openMenu
+                    ? !this.navOptions?.closeMenuIcon?.slotName
+                      ? CloseMenuIcon
+                      : html`<div class="h-6 w-6">
+                          <slot
+                            name=${this.navOptions?.closeMenuIcon?.slotName}
+                          ></slot>
+                        </div>`
+                    : !this.navOptions?.openMenuIcon?.slotName
+                    ? OpenMenuIcon
+                    : html`<div class="h-6 w-6">
+                        <slot
+                          name=${this.navOptions?.openMenuIcon?.slotName}
+                        ></slot>
+                      </div>`
+                }
               </button>
-
             </div>
 
             <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            ${
-              this.navOptions.logo &&
-              html
-              `<div class="flex flex-shrink-0 items-center">
+            <div class="flex flex-shrink-0 items-center">
                 <img
-                  class="hidden h-8 w-auto lg:block"
-                  src=${this.navOptions.logo}
-                  alt="logo"
+                  class="hidden h-8 w-8 lg:block"
+                  src=${this.navOptions?.logo}
+                  alt="${
+                    this.navOptions?.logoAltText
+                      ? this.navOptions?.logoAltText
+                      : msg(str`Company logo`)
+                  }"
                 />
-              </div> `
-            }
+              </div> 
+         
             <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
               
-              <div class="flex flex-shrink-0 items-center text-white font-bold  pl-4">
-                <h2>${this.navOptions.name}</h2>
+              <div class="flex flex-shrink-0 items-center font-bold  pl-4 ${
+                this.navOptions?.mode === NavbarModes.Dark
+                  ? 'text-white'
+                  : 'text-black'
+              } ">
+                <h2>${this.navOptions?.headerText}</h2>
               </div>
 
               <div class="hidden sm:ml-6 sm:block">
                 <div class="flex space-x-4 pl-10">
-                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                  ${this.navOptions.menuLinks.map((link) =>
-                    link.type === "link"
-                      ? html
-                          `<a
-                            href=${link.url}
-                            class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                            aria-current="page">
-                            ${link.label}
-                          </a>`
-                      : html
-                        `<button
-                          class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                          @click=${() => {
-                            this.dispatchEvent(new CustomEvent(link.eventName));
-                            this.openMenu && !this.openMenu;
-                          }}>
-                          ${link.label}
-                        </button>`
-                  )}
+                 
+                ${this.displayMenuLinks(DeviceType.DESKTOP)}
                 </div>
               </div>
 
             </div>
 
-            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              ${this.navOptions.topRightIcons.map((icon) =>
-                html
-                `<slot name=${icon.slotName}></slot>`
-              )}
+            <div class="inset-y-0 right-0 flex pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                <slot name=${this.navOptions.topRightSlot.slotName}></slot>
             </div>
 
           </div>
@@ -171,32 +208,18 @@ export class HeaderComponent extends TailwindElement(Style) {
         <div class="sm:hidden" id="mobile-menu" ?hidden=${!this.openMenu}>
           
           <div class="space-y-1 px-2 pt-2 pb-3" >
-            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            ${this.navOptions.menuLinks.map((link) =>
-              link.type === "link"
-                ? html`
-                  <a
-                    href=${link.url}
-                    part="anchor-part"
-                    class="text-gray-300 text-left hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                    aria-current="page">
-                    ${link.label}
-                  </a>`
-                : html`
-                  <button
-                    class="text-gray-300 w-full text-left hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                    @click=${() => {
-                      this.dispatchEvent(new CustomEvent(link.eventName));
-                      this.openMenu = false;
-                    }}>
-                    ${link.label}
-                  </button>`
-            )}
+          ${this.displayMenuLinks(DeviceType.MOBILE)}
           </div>
 
         </div>
 
       </nav>
     `;
+  }
+}
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'header-component': HeaderComponent;
   }
 }
