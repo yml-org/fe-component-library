@@ -2,7 +2,7 @@ import { LitElement } from 'lit-element';
 
 describe('header-component', () => {
   const HEADER_COMPONENT = 'header-component';
-  let buttonElement: LitElement;
+  let headerElement: LitElement;
 
   // TODO: Uncomment when needed to access the shadow root
   // const getShadowRoot = (tagName: string): ShadowRoot => {
@@ -10,10 +10,10 @@ describe('header-component', () => {
   // };
 
   beforeEach(() => {
-    buttonElement = window.document.createElement(
+    headerElement = window.document.createElement(
       HEADER_COMPONENT
     ) as LitElement;
-    document.body.appendChild(buttonElement);
+    document.body.appendChild(headerElement);
   });
 
   afterEach(() => {
