@@ -10,11 +10,12 @@ This project will provide a reusable component library that will act as building
 
 Provide an overview of the directory structure and files, for example:
 
-`|- package.json => root workspace (private package used by yarn workspaces) 
+```
+ |- package.json => root workspace (private package used by yarn workspaces) 
  |--- packages 
  |------ header 
  |-------- package.json => standalone component utilizing lit.dev framework
- `
+ ```
 
 ## Running instructions
 
