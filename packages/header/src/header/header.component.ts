@@ -18,16 +18,16 @@ interface Nav {
   logoAltText?: string;
   headerText?: string;
   openMenuIcon?: {
-    slotName: string
-  },
-  closeMenuIcon?:{
-    slotName: string
-  },
+    slotName: string;
+  };
+  closeMenuIcon?: {
+    slotName: string;
+  };
   menuLinks?: Array<MenuLink>;
   isMenuOpen: boolean;
-  topRightIcons?: {
+  topRightSlot?: {
     slotName: string;
-  }[];
+  };
 }
 
 const enum NavbarModes {
@@ -51,27 +51,18 @@ export class HeaderComponent extends TailwindElement(Style) {
   navOptions: Nav = {
     mode: 'dark',
     logo: 'https://ymedialabs.atlassian.net/s/1jmxwi/b/8/d35727372e299c952e88a10ef82bbaf6/_/jira-logo-scaled.png',
-    logoAltText: msg(str`Company logo`),
     headerText: 'YML',
     openMenuIcon: {
-      slotName: ""
+      slotName: '',
     },
-    closeMenuIcon:{
-      slotName: ""
+    closeMenuIcon: {
+      slotName: '',
     },
-    menuLinks: [
-      {
-        label: msg(str`Home`),
-        type: 'link',
-        url: '#home',
-      },
-    ],
+    menuLinks: [],
     isMenuOpen: false,
-    topRightIcons: [
-      {
-        slotName: 'btn',
-      },
-    ],
+    topRightSlot: {
+      slotName: 'bell',
+    },
   };
 
   themeOptions = {
@@ -103,16 +94,24 @@ export class HeaderComponent extends TailwindElement(Style) {
         ? html`<a
             href=${link.url}
             class="${type === 'desktop'
-              ? `${this.themeOptions[this.navOptions?.mode].textHoverColor} px-3 py-2 rounded-md text-sm font-medium`
-              : `text-left ${this.themeOptions[this.navOptions?.mode].textHoverColor} block px-3 py-2 rounded-md text-base font-medium`}"
+              ? `${
+                  this.themeOptions[this.navOptions?.mode].textHoverColor
+                } px-3 py-2 rounded-md text-sm font-medium`
+              : `text-left ${
+                  this.themeOptions[this.navOptions?.mode].textHoverColor
+                } block px-3 py-2 rounded-md text-base font-medium`}"
             aria-current=${link.label}
           >
             ${link.label}
           </a>`
         : html`<button
             class="${type === 'desktop'
-              ? `${this.themeOptions[this.navOptions?.mode].textHoverColor} px-3 py-2 rounded-md text-sm font-medium`
-              : ` w-full text-left ${this.themeOptions[this.navOptions?.mode].textHoverColor} block px-3 py-2 rounded-md text-base font-medium`}"
+              ? `${
+                  this.themeOptions[this.navOptions?.mode].textHoverColor
+                } px-3 py-2 rounded-md text-sm font-medium`
+              : ` w-full text-left ${
+                  this.themeOptions[this.navOptions?.mode].textHoverColor
+                } block px-3 py-2 rounded-md text-base font-medium`}"
             @click=${() => {
               this.dispatchEvent(new CustomEvent(link.eventName));
             }}
@@ -124,7 +123,9 @@ export class HeaderComponent extends TailwindElement(Style) {
 
   render() {
     return html`
-      <nav class="${this.themeOptions[this.navOptions?.mode].bgColor} ${this.themeOptions[this.navOptions?.mode].textColor}">
+      <nav class="${this.themeOptions[this.navOptions?.mode].bgColor} ${
+      this.themeOptions[this.navOptions?.mode].textColor
+    }">
         
         <div class="mx-auto max-w-8xl px-2 sm:px-6 lg:px-4">
           
@@ -143,23 +144,38 @@ export class HeaderComponent extends TailwindElement(Style) {
                 aria-label=${msg(str`mobile button`)}
                 @click=${this.setMenuOpen}>
                 ${
-                  (this.openMenu) ? ( !this.navOptions?.closeMenuIcon?.slotName  ? CloseMenuIcon : html`<div class="h-6 w-6"><slot name=${this.navOptions?.closeMenuIcon?.slotName}></slot></div>`)
-                  :
-                  (!this.navOptions?.openMenuIcon?.slotName ? OpenMenuIcon : html`<div class="h-6 w-6"><slot name=${this.navOptions?.openMenuIcon?.slotName}></slot></div>`) }
+                  this.openMenu
+                    ? !this.navOptions?.closeMenuIcon?.slotName
+                      ? CloseMenuIcon
+                      : html`<div class="h-6 w-6">
+                          <slot
+                            name=${this.navOptions?.closeMenuIcon?.slotName}
+                          ></slot>
+                        </div>`
+                    : !this.navOptions?.openMenuIcon?.slotName
+                    ? OpenMenuIcon
+                    : html`<div class="h-6 w-6">
+                        <slot
+                          name=${this.navOptions?.openMenuIcon?.slotName}
+                        ></slot>
+                      </div>`
+                }
               </button>
             </div>
 
             <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            ${
-              this.navOptions?.logo &&
-              html`<div class="flex flex-shrink-0 items-center">
+            <div class="flex flex-shrink-0 items-center">
                 <img
                   class="hidden h-8 w-8 lg:block"
                   src=${this.navOptions?.logo}
-                  alt="${this.navOptions?.logoAltText}"
+                  alt="${
+                    this.navOptions?.logoAltText
+                      ? this.navOptions?.logoAltText
+                      : msg(str`Company logo`)
+                  }"
                 />
-              </div> `
-            }
+              </div> 
+         
             <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
               
               <div class="flex flex-shrink-0 items-center font-bold  pl-4 ${
@@ -179,10 +195,8 @@ export class HeaderComponent extends TailwindElement(Style) {
 
             </div>
 
-            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              ${this.navOptions?.topRightIcons?.map(
-                (icon) => html`<div class="h-6 w-6 lg:ml-6" ><slot name=${icon.slotName}></slot></div>`
-              )}
+            <div class="inset-y-0 right-0 flex pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                <slot name=${this.navOptions.topRightSlot.slotName}></slot>
             </div>
 
           </div>
