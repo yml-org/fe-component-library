@@ -1,0 +1,2640 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`header-component matches component snapshot 1`] = `
+z {
+  "_$AL": Map {},
+  "_$Do": P {
+    "_$AA": <!---->,
+    "_$AB": null,
+    "_$AH": Et {
+      "_$AD": M {
+        "el": <template />,
+        "parts": Array [
+          Object {
+            "ctor": [Function],
+            "index": 0,
+            "name": "class",
+            "strings": Array [
+              "",
+              " ",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 5,
+            "name": "class",
+            "strings": Array [
+              "inline-flex items-center justify-center rounded-md p-2 ",
+              " focus:outline-none",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 5,
+            "name": "aria-controls",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 5,
+            "name": "aria-expanded",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 5,
+            "name": "aria-label",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 5,
+            "name": "click",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "index": 6,
+            "type": 2,
+          },
+          Object {
+            "index": 8,
+            "type": 2,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 10,
+            "name": "class",
+            "strings": Array [
+              "flex flex-shrink-0 items-center font-bold  pl-4 ",
+              " ",
+            ],
+            "type": 1,
+          },
+          Object {
+            "index": 12,
+            "type": 2,
+          },
+          Object {
+            "index": 15,
+            "type": 2,
+          },
+          Object {
+            "index": 17,
+            "type": 2,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 19,
+            "name": "hidden",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "index": 21,
+            "type": 2,
+          },
+        ],
+      },
+      "_$AM": [Circular],
+      "_$AN": undefined,
+      "u": Array [
+        R {
+          "_$AH": Array [
+            "bg-grey",
+            "text-brown",
+          ],
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <nav
+            class="bg-grey text-brown"
+          >
+            
+        
+        
+            <div
+              class="mx-auto max-w-8xl px-2 sm:px-6 lg:px-4"
+            >
+              
+          
+          
+              <div
+                class="relative flex h-16 items-center justify-between"
+              >
+                
+            
+            
+                <div
+                  class="absolute inset-y-0 left-0 flex items-center sm:hidden"
+                >
+                  
+              
+              
+                  <!-- Mobile menu button-->
+                  
+              
+                  <button
+                    aria-controls="mobile menu"
+                    aria-expanded="false"
+                    aria-label="mobile button"
+                    class="inline-flex items-center justify-center rounded-md p-2 hover:text-black focus:outline-none"
+                    type="button"
+                  >
+                    
+                
+                    <!--?lit$2748882037$-->
+                     
+                    <svg
+                      aria-hidden="true"
+                      aria-label="Open menu"
+                      class="block h-6 w-6"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      
+  
+                      <path
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      
+
+                    </svg>
+                    
+              
+                  </button>
+                  
+            
+                </div>
+                
+
+            
+                <div
+                  class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+                >
+                  
+            
+                  <!--?lit$2748882037$-->
+                  <div
+                    class="flex flex-shrink-0 items-center"
+                  >
+                    
+                
+                    <img
+                      alt="Company logo"
+                      class="hidden h-8 w-auto lg:block"
+                      src="https://ymedialabs.atlassian.net/s/1jmxwi/b/8/d35727372e299c952e88a10ef82bbaf6/_/jira-logo-scaled.png"
+                    />
+                    
+              
+                  </div>
+                   
+                  
+            
+                  <div
+                    class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+                  >
+                    
+              
+              
+                    <div
+                      class="flex flex-shrink-0 items-center font-bold  pl-4 text-black "
+                    >
+                      
+                
+                      <h2>
+                        <!--?lit$2748882037$-->
+                        YML
+                      </h2>
+                      
+              
+                    </div>
+                    
+
+              
+                    <div
+                      class="hidden sm:ml-6 sm:block"
+                    >
+                      
+                
+                      <div
+                        class="flex space-x-4 pl-10"
+                      >
+                        
+                 
+                
+                        <!--?lit$2748882037$-->
+                         
+                        <!--?lit$2748882037$-->
+                        <!---->
+                        <a
+                          aria-current="Home"
+                          class="hover:text-black px-3 py-2 rounded-md text-sm font-medium"
+                          href="#home"
+                        >
+                          
+            
+                          <!--?lit$2748882037$-->
+                          Home
+                          
+          
+                        </a>
+                        <!---->
+                        <!--?-->
+                        
+                
+                      </div>
+                      
+              
+                    </div>
+                    
+
+            
+                  </div>
+                  
+
+            
+                  <div
+                    class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+                  >
+                    
+              
+                    <!--?lit$2748882037$-->
+                    <!---->
+                    <slot
+                      name="btn"
+                    />
+                    <!---->
+                    
+            
+                  </div>
+                  
+
+          
+                </div>
+                
+
+        
+              </div>
+              
+
+        
+              <!-- Mobile menu, show/hide based on menu state. -->
+              
+
+        
+              <div
+                class="sm:hidden"
+                hidden=""
+                id="mobile-menu"
+              >
+                
+          
+          
+                <div
+                  class="space-y-1 px-2 pt-2 pb-3"
+                >
+                  
+          
+                  <!--?lit$2748882037$-->
+                   
+                  <!--?lit$2748882037$-->
+                  <!---->
+                  <a
+                    aria-current="Home"
+                    class="text-left hover:text-black block px-3 py-2 rounded-md text-base font-medium"
+                    href="#home"
+                  >
+                    
+            
+                    <!--?lit$2748882037$-->
+                    Home
+                    
+          
+                  </a>
+                  <!---->
+                  <!--?-->
+                  
+          
+                </div>
+                
+
+        
+              </div>
+              
+
+      
+            </div>
+          </nav>,
+          "name": "class",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "strings": Array [
+            "",
+            " ",
+            "",
+          ],
+          "type": 1,
+        },
+        R {
+          "_$AH": Array [
+            "hover:text-black",
+          ],
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <button
+            aria-controls="mobile menu"
+            aria-expanded="false"
+            aria-label="mobile button"
+            class="inline-flex items-center justify-center rounded-md p-2 hover:text-black focus:outline-none"
+            type="button"
+          >
+            
+                
+            <!--?lit$2748882037$-->
+             
+            <svg
+              aria-hidden="true"
+              aria-label="Open menu"
+              class="block h-6 w-6"
+              fill="currentColor"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              
+  
+              <path
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              
+
+            </svg>
+            
+              
+          </button>,
+          "name": "class",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "strings": Array [
+            "inline-flex items-center justify-center rounded-md p-2 ",
+            " focus:outline-none",
+          ],
+          "type": 1,
+        },
+        R {
+          "_$AH": "mobile menu",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <button
+            aria-controls="mobile menu"
+            aria-expanded="false"
+            aria-label="mobile button"
+            class="inline-flex items-center justify-center rounded-md p-2 hover:text-black focus:outline-none"
+            type="button"
+          >
+            
+                
+            <!--?lit$2748882037$-->
+             
+            <svg
+              aria-hidden="true"
+              aria-label="Open menu"
+              class="block h-6 w-6"
+              fill="currentColor"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              
+  
+              <path
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              
+
+            </svg>
+            
+              
+          </button>,
+          "name": "aria-controls",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        R {
+          "_$AH": false,
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <button
+            aria-controls="mobile menu"
+            aria-expanded="false"
+            aria-label="mobile button"
+            class="inline-flex items-center justify-center rounded-md p-2 hover:text-black focus:outline-none"
+            type="button"
+          >
+            
+                
+            <!--?lit$2748882037$-->
+             
+            <svg
+              aria-hidden="true"
+              aria-label="Open menu"
+              class="block h-6 w-6"
+              fill="currentColor"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              
+  
+              <path
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              
+
+            </svg>
+            
+              
+          </button>,
+          "name": "aria-expanded",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        R {
+          "_$AH": "mobile button",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <button
+            aria-controls="mobile menu"
+            aria-expanded="false"
+            aria-label="mobile button"
+            class="inline-flex items-center justify-center rounded-md p-2 hover:text-black focus:outline-none"
+            type="button"
+          >
+            
+                
+            <!--?lit$2748882037$-->
+             
+            <svg
+              aria-hidden="true"
+              aria-label="Open menu"
+              class="block h-6 w-6"
+              fill="currentColor"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              
+  
+              <path
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              
+
+            </svg>
+            
+              
+          </button>,
+          "name": "aria-label",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        Mt {
+          "_$AH": [Function],
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <button
+            aria-controls="mobile menu"
+            aria-expanded="false"
+            aria-label="mobile button"
+            class="inline-flex items-center justify-center rounded-md p-2 hover:text-black focus:outline-none"
+            type="button"
+          >
+            
+                
+            <!--?lit$2748882037$-->
+             
+            <svg
+              aria-hidden="true"
+              aria-label="Open menu"
+              class="block h-6 w-6"
+              fill="currentColor"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              
+  
+              <path
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              
+
+            </svg>
+            
+              
+          </button>,
+          "name": "click",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 5,
+        },
+        P {
+          "_$AA": <!--?lit$2748882037$-->,
+          "_$AB": 
+              ,
+          "_$AH": Et {
+            "_$AD": M {
+              "el": <template />,
+              "parts": Array [
+                Object {
+                  "ctor": [Function],
+                  "index": 0,
+                  "name": "aria-label",
+                  "strings": Array [
+                    "",
+                    "",
+                  ],
+                  "type": 1,
+                },
+              ],
+            },
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "u": Array [
+              R {
+                "_$AH": "Open menu",
+                "_$AM": [Circular],
+                "_$AN": undefined,
+                "element": <svg
+                  aria-hidden="true"
+                  aria-label="Open menu"
+                  class="block h-6 w-6"
+                  fill="currentColor"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  
+  
+                  <path
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  
+
+                </svg>,
+                "name": "aria-label",
+                "options": Object {
+                  "host": [Circular],
+                  "isConnected": true,
+                  "renderBefore": null,
+                },
+                "type": 1,
+              },
+            ],
+          },
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "_$Cm": true,
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 2,
+        },
+        P {
+          "_$AA": <!--?lit$2748882037$-->,
+          "_$AB": 
+            ,
+          "_$AH": Et {
+            "_$AD": M {
+              "el": <template />,
+              "parts": Array [
+                Object {
+                  "ctor": [Function],
+                  "index": 1,
+                  "name": "src",
+                  "strings": Array [
+                    "",
+                    "",
+                  ],
+                  "type": 1,
+                },
+                Object {
+                  "ctor": [Function],
+                  "index": 1,
+                  "name": "alt",
+                  "strings": Array [
+                    "",
+                    "",
+                  ],
+                  "type": 1,
+                },
+              ],
+            },
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "u": Array [
+              R {
+                "_$AH": "https://ymedialabs.atlassian.net/s/1jmxwi/b/8/d35727372e299c952e88a10ef82bbaf6/_/jira-logo-scaled.png",
+                "_$AM": [Circular],
+                "_$AN": undefined,
+                "element": <img
+                  alt="Company logo"
+                  class="hidden h-8 w-auto lg:block"
+                  src="https://ymedialabs.atlassian.net/s/1jmxwi/b/8/d35727372e299c952e88a10ef82bbaf6/_/jira-logo-scaled.png"
+                />,
+                "name": "src",
+                "options": Object {
+                  "host": [Circular],
+                  "isConnected": true,
+                  "renderBefore": null,
+                },
+                "type": 1,
+              },
+              R {
+                "_$AH": "Company logo",
+                "_$AM": [Circular],
+                "_$AN": undefined,
+                "element": <img
+                  alt="Company logo"
+                  class="hidden h-8 w-auto lg:block"
+                  src="https://ymedialabs.atlassian.net/s/1jmxwi/b/8/d35727372e299c952e88a10ef82bbaf6/_/jira-logo-scaled.png"
+                />,
+                "name": "alt",
+                "options": Object {
+                  "host": [Circular],
+                  "isConnected": true,
+                  "renderBefore": null,
+                },
+                "type": 1,
+              },
+            ],
+          },
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "_$Cm": true,
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 2,
+        },
+        R {
+          "_$AH": Array [
+            "text-black",
+          ],
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <div
+            class="flex flex-shrink-0 items-center font-bold  pl-4 text-black "
+          >
+            
+                
+            <h2>
+              <!--?lit$2748882037$-->
+              YML
+            </h2>
+            
+              
+          </div>,
+          "name": "class",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "strings": Array [
+            "flex flex-shrink-0 items-center font-bold  pl-4 ",
+            " ",
+          ],
+          "type": 1,
+        },
+        P {
+          "_$AA": <!--?lit$2748882037$-->,
+          "_$AB": null,
+          "_$AH": "YML",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "_$Cm": true,
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 2,
+        },
+        P {
+          "_$AA": <!--?lit$2748882037$-->,
+          "_$AB": 
+                ,
+          "_$AH": Et {
+            "_$AD": M {
+              "el": <template />,
+              "parts": Array [
+                Object {
+                  "index": 0,
+                  "type": 2,
+                },
+              ],
+            },
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "u": Array [
+              P {
+                "_$AA": <!--?lit$2748882037$-->,
+                "_$AB": <!--?-->,
+                "_$AH": Array [
+                  P {
+                    "_$AA": <!---->,
+                    "_$AB": <!---->,
+                    "_$AH": Et {
+                      "_$AD": M {
+                        "el": <template />,
+                        "parts": Array [
+                          Object {
+                            "ctor": [Function],
+                            "index": 0,
+                            "name": "href",
+                            "strings": Array [
+                              "",
+                              "",
+                            ],
+                            "type": 1,
+                          },
+                          Object {
+                            "ctor": [Function],
+                            "index": 0,
+                            "name": "class",
+                            "strings": Array [
+                              "",
+                              "",
+                            ],
+                            "type": 1,
+                          },
+                          Object {
+                            "ctor": [Function],
+                            "index": 0,
+                            "name": "aria-current",
+                            "strings": Array [
+                              "",
+                              "",
+                            ],
+                            "type": 1,
+                          },
+                          Object {
+                            "index": 1,
+                            "type": 2,
+                          },
+                        ],
+                      },
+                      "_$AM": [Circular],
+                      "_$AN": undefined,
+                      "u": Array [
+                        R {
+                          "_$AH": "#home",
+                          "_$AM": [Circular],
+                          "_$AN": undefined,
+                          "element": <a
+                            aria-current="Home"
+                            class="hover:text-black px-3 py-2 rounded-md text-sm font-medium"
+                            href="#home"
+                          >
+                            
+            
+                            <!--?lit$2748882037$-->
+                            Home
+                            
+          
+                          </a>,
+                          "name": "href",
+                          "options": Object {
+                            "host": [Circular],
+                            "isConnected": true,
+                            "renderBefore": null,
+                          },
+                          "type": 1,
+                        },
+                        R {
+                          "_$AH": "hover:text-black px-3 py-2 rounded-md text-sm font-medium",
+                          "_$AM": [Circular],
+                          "_$AN": undefined,
+                          "element": <a
+                            aria-current="Home"
+                            class="hover:text-black px-3 py-2 rounded-md text-sm font-medium"
+                            href="#home"
+                          >
+                            
+            
+                            <!--?lit$2748882037$-->
+                            Home
+                            
+          
+                          </a>,
+                          "name": "class",
+                          "options": Object {
+                            "host": [Circular],
+                            "isConnected": true,
+                            "renderBefore": null,
+                          },
+                          "type": 1,
+                        },
+                        R {
+                          "_$AH": "Home",
+                          "_$AM": [Circular],
+                          "_$AN": undefined,
+                          "element": <a
+                            aria-current="Home"
+                            class="hover:text-black px-3 py-2 rounded-md text-sm font-medium"
+                            href="#home"
+                          >
+                            
+            
+                            <!--?lit$2748882037$-->
+                            Home
+                            
+          
+                          </a>,
+                          "name": "aria-current",
+                          "options": Object {
+                            "host": [Circular],
+                            "isConnected": true,
+                            "renderBefore": null,
+                          },
+                          "type": 1,
+                        },
+                        P {
+                          "_$AA": <!--?lit$2748882037$-->,
+                          "_$AB": 
+          ,
+                          "_$AH": "Home",
+                          "_$AM": [Circular],
+                          "_$AN": undefined,
+                          "_$Cm": true,
+                          "options": Object {
+                            "host": [Circular],
+                            "isConnected": true,
+                            "renderBefore": null,
+                          },
+                          "type": 2,
+                        },
+                      ],
+                    },
+                    "_$AM": [Circular],
+                    "_$AN": undefined,
+                    "_$Cm": true,
+                    "options": Object {
+                      "host": [Circular],
+                      "isConnected": true,
+                      "renderBefore": null,
+                    },
+                    "type": 2,
+                  },
+                ],
+                "_$AM": [Circular],
+                "_$AN": undefined,
+                "_$Cm": true,
+                "options": Object {
+                  "host": [Circular],
+                  "isConnected": true,
+                  "renderBefore": null,
+                },
+                "type": 2,
+              },
+            ],
+          },
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "_$Cm": true,
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 2,
+        },
+        P {
+          "_$AA": <!--?lit$2748882037$-->,
+          "_$AB": 
+            ,
+          "_$AH": Array [
+            P {
+              "_$AA": <!---->,
+              "_$AB": <!---->,
+              "_$AH": Et {
+                "_$AD": M {
+                  "el": <template />,
+                  "parts": Array [
+                    Object {
+                      "ctor": [Function],
+                      "index": 0,
+                      "name": "name",
+                      "strings": Array [
+                        "",
+                        "",
+                      ],
+                      "type": 1,
+                    },
+                  ],
+                },
+                "_$AM": [Circular],
+                "_$AN": undefined,
+                "u": Array [
+                  R {
+                    "_$AH": "btn",
+                    "_$AM": [Circular],
+                    "_$AN": undefined,
+                    "element": <slot
+                      name="btn"
+                    />,
+                    "name": "name",
+                    "options": Object {
+                      "host": [Circular],
+                      "isConnected": true,
+                      "renderBefore": null,
+                    },
+                    "type": 1,
+                  },
+                ],
+              },
+              "_$AM": [Circular],
+              "_$AN": undefined,
+              "_$Cm": true,
+              "options": Object {
+                "host": [Circular],
+                "isConnected": true,
+                "renderBefore": null,
+              },
+              "type": 2,
+            },
+          ],
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "_$Cm": true,
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 2,
+        },
+        Ot {
+          "_$AH": true,
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <div
+            class="sm:hidden"
+            hidden=""
+            id="mobile-menu"
+          >
+            
+          
+          
+            <div
+              class="space-y-1 px-2 pt-2 pb-3"
+            >
+              
+          
+              <!--?lit$2748882037$-->
+               
+              <!--?lit$2748882037$-->
+              <!---->
+              <a
+                aria-current="Home"
+                class="text-left hover:text-black block px-3 py-2 rounded-md text-base font-medium"
+                href="#home"
+              >
+                
+            
+                <!--?lit$2748882037$-->
+                Home
+                
+          
+              </a>
+              <!---->
+              <!--?-->
+              
+          
+            </div>
+            
+
+        
+          </div>,
+          "name": "hidden",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 4,
+        },
+        P {
+          "_$AA": <!--?lit$2748882037$-->,
+          "_$AB": 
+          ,
+          "_$AH": Et {
+            "_$AD": M {
+              "el": <template />,
+              "parts": Array [
+                Object {
+                  "index": 0,
+                  "type": 2,
+                },
+              ],
+            },
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "u": Array [
+              P {
+                "_$AA": <!--?lit$2748882037$-->,
+                "_$AB": <!--?-->,
+                "_$AH": Array [
+                  P {
+                    "_$AA": <!---->,
+                    "_$AB": <!---->,
+                    "_$AH": Et {
+                      "_$AD": M {
+                        "el": <template />,
+                        "parts": Array [
+                          Object {
+                            "ctor": [Function],
+                            "index": 0,
+                            "name": "href",
+                            "strings": Array [
+                              "",
+                              "",
+                            ],
+                            "type": 1,
+                          },
+                          Object {
+                            "ctor": [Function],
+                            "index": 0,
+                            "name": "class",
+                            "strings": Array [
+                              "",
+                              "",
+                            ],
+                            "type": 1,
+                          },
+                          Object {
+                            "ctor": [Function],
+                            "index": 0,
+                            "name": "aria-current",
+                            "strings": Array [
+                              "",
+                              "",
+                            ],
+                            "type": 1,
+                          },
+                          Object {
+                            "index": 1,
+                            "type": 2,
+                          },
+                        ],
+                      },
+                      "_$AM": [Circular],
+                      "_$AN": undefined,
+                      "u": Array [
+                        R {
+                          "_$AH": "#home",
+                          "_$AM": [Circular],
+                          "_$AN": undefined,
+                          "element": <a
+                            aria-current="Home"
+                            class="text-left hover:text-black block px-3 py-2 rounded-md text-base font-medium"
+                            href="#home"
+                          >
+                            
+            
+                            <!--?lit$2748882037$-->
+                            Home
+                            
+          
+                          </a>,
+                          "name": "href",
+                          "options": Object {
+                            "host": [Circular],
+                            "isConnected": true,
+                            "renderBefore": null,
+                          },
+                          "type": 1,
+                        },
+                        R {
+                          "_$AH": "text-left hover:text-black block px-3 py-2 rounded-md text-base font-medium",
+                          "_$AM": [Circular],
+                          "_$AN": undefined,
+                          "element": <a
+                            aria-current="Home"
+                            class="text-left hover:text-black block px-3 py-2 rounded-md text-base font-medium"
+                            href="#home"
+                          >
+                            
+            
+                            <!--?lit$2748882037$-->
+                            Home
+                            
+          
+                          </a>,
+                          "name": "class",
+                          "options": Object {
+                            "host": [Circular],
+                            "isConnected": true,
+                            "renderBefore": null,
+                          },
+                          "type": 1,
+                        },
+                        R {
+                          "_$AH": "Home",
+                          "_$AM": [Circular],
+                          "_$AN": undefined,
+                          "element": <a
+                            aria-current="Home"
+                            class="text-left hover:text-black block px-3 py-2 rounded-md text-base font-medium"
+                            href="#home"
+                          >
+                            
+            
+                            <!--?lit$2748882037$-->
+                            Home
+                            
+          
+                          </a>,
+                          "name": "aria-current",
+                          "options": Object {
+                            "host": [Circular],
+                            "isConnected": true,
+                            "renderBefore": null,
+                          },
+                          "type": 1,
+                        },
+                        P {
+                          "_$AA": <!--?lit$2748882037$-->,
+                          "_$AB": 
+          ,
+                          "_$AH": "Home",
+                          "_$AM": [Circular],
+                          "_$AN": undefined,
+                          "_$Cm": true,
+                          "options": Object {
+                            "host": [Circular],
+                            "isConnected": true,
+                            "renderBefore": null,
+                          },
+                          "type": 2,
+                        },
+                      ],
+                    },
+                    "_$AM": [Circular],
+                    "_$AN": undefined,
+                    "_$Cm": true,
+                    "options": Object {
+                      "host": [Circular],
+                      "isConnected": true,
+                      "renderBefore": null,
+                    },
+                    "type": 2,
+                  },
+                ],
+                "_$AM": [Circular],
+                "_$AN": undefined,
+                "_$Cm": true,
+                "options": Object {
+                  "host": [Circular],
+                  "isConnected": true,
+                  "renderBefore": null,
+                },
+                "type": 2,
+              },
+            ],
+          },
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "_$Cm": true,
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 2,
+        },
+      ],
+    },
+    "_$AM": undefined,
+    "_$AN": undefined,
+    "_$Cm": true,
+    "options": Object {
+      "host": [Circular],
+      "isConnected": true,
+      "renderBefore": null,
+    },
+    "type": 2,
+  },
+  "_$E_": Promise {},
+  "_$Ei": undefined,
+  "_$El": null,
+  "__navOptions": Object {
+    "headerText": "YML",
+    "isMenuOpen": false,
+    "logo": "https://ymedialabs.atlassian.net/s/1jmxwi/b/8/d35727372e299c952e88a10ef82bbaf6/_/jira-logo-scaled.png",
+    "logoAltText": "Company logo",
+    "menuIcon": "",
+    "menuLinks": Array [
+      Object {
+        "label": "Home",
+        "type": "link",
+        "url": "#home",
+      },
+    ],
+    "mode": "light",
+    "topRightIcons": Array [
+      Object {
+        "slotName": "btn",
+      },
+    ],
+  },
+  "__openMenu": false,
+  "bgColor": "bg-grey",
+  "enableUpdating": [Function],
+  "hasUpdated": true,
+  "isUpdatePending": false,
+  "renderOptions": Object {
+    "host": [Circular],
+    "isConnected": true,
+    "renderBefore": null,
+  },
+  "renderRoot": ShadowRoot {
+    "_$litPart$": P {
+      "_$AA": <!---->,
+      "_$AB": null,
+      "_$AH": Et {
+        "_$AD": M {
+          "el": <template />,
+          "parts": Array [
+            Object {
+              "ctor": [Function],
+              "index": 0,
+              "name": "class",
+              "strings": Array [
+                "",
+                " ",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 5,
+              "name": "class",
+              "strings": Array [
+                "inline-flex items-center justify-center rounded-md p-2 ",
+                " focus:outline-none",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 5,
+              "name": "aria-controls",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 5,
+              "name": "aria-expanded",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 5,
+              "name": "aria-label",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 5,
+              "name": "click",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "index": 6,
+              "type": 2,
+            },
+            Object {
+              "index": 8,
+              "type": 2,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 10,
+              "name": "class",
+              "strings": Array [
+                "flex flex-shrink-0 items-center font-bold  pl-4 ",
+                " ",
+              ],
+              "type": 1,
+            },
+            Object {
+              "index": 12,
+              "type": 2,
+            },
+            Object {
+              "index": 15,
+              "type": 2,
+            },
+            Object {
+              "index": 17,
+              "type": 2,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 19,
+              "name": "hidden",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "index": 21,
+              "type": 2,
+            },
+          ],
+        },
+        "_$AM": [Circular],
+        "_$AN": undefined,
+        "u": Array [
+          R {
+            "_$AH": Array [
+              "bg-grey",
+              "text-brown",
+            ],
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <nav
+              class="bg-grey text-brown"
+            >
+              
+        
+        
+              <div
+                class="mx-auto max-w-8xl px-2 sm:px-6 lg:px-4"
+              >
+                
+          
+          
+                <div
+                  class="relative flex h-16 items-center justify-between"
+                >
+                  
+            
+            
+                  <div
+                    class="absolute inset-y-0 left-0 flex items-center sm:hidden"
+                  >
+                    
+              
+              
+                    <!-- Mobile menu button-->
+                    
+              
+                    <button
+                      aria-controls="mobile menu"
+                      aria-expanded="false"
+                      aria-label="mobile button"
+                      class="inline-flex items-center justify-center rounded-md p-2 hover:text-black focus:outline-none"
+                      type="button"
+                    >
+                      
+                
+                      <!--?lit$2748882037$-->
+                       
+                      <svg
+                        aria-hidden="true"
+                        aria-label="Open menu"
+                        class="block h-6 w-6"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        
+  
+                        <path
+                          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        
+
+                      </svg>
+                      
+              
+                    </button>
+                    
+            
+                  </div>
+                  
+
+            
+                  <div
+                    class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+                  >
+                    
+            
+                    <!--?lit$2748882037$-->
+                    <div
+                      class="flex flex-shrink-0 items-center"
+                    >
+                      
+                
+                      <img
+                        alt="Company logo"
+                        class="hidden h-8 w-auto lg:block"
+                        src="https://ymedialabs.atlassian.net/s/1jmxwi/b/8/d35727372e299c952e88a10ef82bbaf6/_/jira-logo-scaled.png"
+                      />
+                      
+              
+                    </div>
+                     
+                    
+            
+                    <div
+                      class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+                    >
+                      
+              
+              
+                      <div
+                        class="flex flex-shrink-0 items-center font-bold  pl-4 text-black "
+                      >
+                        
+                
+                        <h2>
+                          <!--?lit$2748882037$-->
+                          YML
+                        </h2>
+                        
+              
+                      </div>
+                      
+
+              
+                      <div
+                        class="hidden sm:ml-6 sm:block"
+                      >
+                        
+                
+                        <div
+                          class="flex space-x-4 pl-10"
+                        >
+                          
+                 
+                
+                          <!--?lit$2748882037$-->
+                           
+                          <!--?lit$2748882037$-->
+                          <!---->
+                          <a
+                            aria-current="Home"
+                            class="hover:text-black px-3 py-2 rounded-md text-sm font-medium"
+                            href="#home"
+                          >
+                            
+            
+                            <!--?lit$2748882037$-->
+                            Home
+                            
+          
+                          </a>
+                          <!---->
+                          <!--?-->
+                          
+                
+                        </div>
+                        
+              
+                      </div>
+                      
+
+            
+                    </div>
+                    
+
+            
+                    <div
+                      class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+                    >
+                      
+              
+                      <!--?lit$2748882037$-->
+                      <!---->
+                      <slot
+                        name="btn"
+                      />
+                      <!---->
+                      
+            
+                    </div>
+                    
+
+          
+                  </div>
+                  
+
+        
+                </div>
+                
+
+        
+                <!-- Mobile menu, show/hide based on menu state. -->
+                
+
+        
+                <div
+                  class="sm:hidden"
+                  hidden=""
+                  id="mobile-menu"
+                >
+                  
+          
+          
+                  <div
+                    class="space-y-1 px-2 pt-2 pb-3"
+                  >
+                    
+          
+                    <!--?lit$2748882037$-->
+                     
+                    <!--?lit$2748882037$-->
+                    <!---->
+                    <a
+                      aria-current="Home"
+                      class="text-left hover:text-black block px-3 py-2 rounded-md text-base font-medium"
+                      href="#home"
+                    >
+                      
+            
+                      <!--?lit$2748882037$-->
+                      Home
+                      
+          
+                    </a>
+                    <!---->
+                    <!--?-->
+                    
+          
+                  </div>
+                  
+
+        
+                </div>
+                
+
+      
+              </div>
+            </nav>,
+            "name": "class",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "strings": Array [
+              "",
+              " ",
+              "",
+            ],
+            "type": 1,
+          },
+          R {
+            "_$AH": Array [
+              "hover:text-black",
+            ],
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <button
+              aria-controls="mobile menu"
+              aria-expanded="false"
+              aria-label="mobile button"
+              class="inline-flex items-center justify-center rounded-md p-2 hover:text-black focus:outline-none"
+              type="button"
+            >
+              
+                
+              <!--?lit$2748882037$-->
+               
+              <svg
+                aria-hidden="true"
+                aria-label="Open menu"
+                class="block h-6 w-6"
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                
+  
+                <path
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                
+
+              </svg>
+              
+              
+            </button>,
+            "name": "class",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "strings": Array [
+              "inline-flex items-center justify-center rounded-md p-2 ",
+              " focus:outline-none",
+            ],
+            "type": 1,
+          },
+          R {
+            "_$AH": "mobile menu",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <button
+              aria-controls="mobile menu"
+              aria-expanded="false"
+              aria-label="mobile button"
+              class="inline-flex items-center justify-center rounded-md p-2 hover:text-black focus:outline-none"
+              type="button"
+            >
+              
+                
+              <!--?lit$2748882037$-->
+               
+              <svg
+                aria-hidden="true"
+                aria-label="Open menu"
+                class="block h-6 w-6"
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                
+  
+                <path
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                
+
+              </svg>
+              
+              
+            </button>,
+            "name": "aria-controls",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          R {
+            "_$AH": false,
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <button
+              aria-controls="mobile menu"
+              aria-expanded="false"
+              aria-label="mobile button"
+              class="inline-flex items-center justify-center rounded-md p-2 hover:text-black focus:outline-none"
+              type="button"
+            >
+              
+                
+              <!--?lit$2748882037$-->
+               
+              <svg
+                aria-hidden="true"
+                aria-label="Open menu"
+                class="block h-6 w-6"
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                
+  
+                <path
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                
+
+              </svg>
+              
+              
+            </button>,
+            "name": "aria-expanded",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          R {
+            "_$AH": "mobile button",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <button
+              aria-controls="mobile menu"
+              aria-expanded="false"
+              aria-label="mobile button"
+              class="inline-flex items-center justify-center rounded-md p-2 hover:text-black focus:outline-none"
+              type="button"
+            >
+              
+                
+              <!--?lit$2748882037$-->
+               
+              <svg
+                aria-hidden="true"
+                aria-label="Open menu"
+                class="block h-6 w-6"
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                
+  
+                <path
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                
+
+              </svg>
+              
+              
+            </button>,
+            "name": "aria-label",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          Mt {
+            "_$AH": [Function],
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <button
+              aria-controls="mobile menu"
+              aria-expanded="false"
+              aria-label="mobile button"
+              class="inline-flex items-center justify-center rounded-md p-2 hover:text-black focus:outline-none"
+              type="button"
+            >
+              
+                
+              <!--?lit$2748882037$-->
+               
+              <svg
+                aria-hidden="true"
+                aria-label="Open menu"
+                class="block h-6 w-6"
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                
+  
+                <path
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                
+
+              </svg>
+              
+              
+            </button>,
+            "name": "click",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 5,
+          },
+          P {
+            "_$AA": <!--?lit$2748882037$-->,
+            "_$AB": 
+              ,
+            "_$AH": Et {
+              "_$AD": M {
+                "el": <template />,
+                "parts": Array [
+                  Object {
+                    "ctor": [Function],
+                    "index": 0,
+                    "name": "aria-label",
+                    "strings": Array [
+                      "",
+                      "",
+                    ],
+                    "type": 1,
+                  },
+                ],
+              },
+              "_$AM": [Circular],
+              "_$AN": undefined,
+              "u": Array [
+                R {
+                  "_$AH": "Open menu",
+                  "_$AM": [Circular],
+                  "_$AN": undefined,
+                  "element": <svg
+                    aria-hidden="true"
+                    aria-label="Open menu"
+                    class="block h-6 w-6"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    
+  
+                    <path
+                      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    
+
+                  </svg>,
+                  "name": "aria-label",
+                  "options": Object {
+                    "host": [Circular],
+                    "isConnected": true,
+                    "renderBefore": null,
+                  },
+                  "type": 1,
+                },
+              ],
+            },
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "_$Cm": true,
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 2,
+          },
+          P {
+            "_$AA": <!--?lit$2748882037$-->,
+            "_$AB": 
+            ,
+            "_$AH": Et {
+              "_$AD": M {
+                "el": <template />,
+                "parts": Array [
+                  Object {
+                    "ctor": [Function],
+                    "index": 1,
+                    "name": "src",
+                    "strings": Array [
+                      "",
+                      "",
+                    ],
+                    "type": 1,
+                  },
+                  Object {
+                    "ctor": [Function],
+                    "index": 1,
+                    "name": "alt",
+                    "strings": Array [
+                      "",
+                      "",
+                    ],
+                    "type": 1,
+                  },
+                ],
+              },
+              "_$AM": [Circular],
+              "_$AN": undefined,
+              "u": Array [
+                R {
+                  "_$AH": "https://ymedialabs.atlassian.net/s/1jmxwi/b/8/d35727372e299c952e88a10ef82bbaf6/_/jira-logo-scaled.png",
+                  "_$AM": [Circular],
+                  "_$AN": undefined,
+                  "element": <img
+                    alt="Company logo"
+                    class="hidden h-8 w-auto lg:block"
+                    src="https://ymedialabs.atlassian.net/s/1jmxwi/b/8/d35727372e299c952e88a10ef82bbaf6/_/jira-logo-scaled.png"
+                  />,
+                  "name": "src",
+                  "options": Object {
+                    "host": [Circular],
+                    "isConnected": true,
+                    "renderBefore": null,
+                  },
+                  "type": 1,
+                },
+                R {
+                  "_$AH": "Company logo",
+                  "_$AM": [Circular],
+                  "_$AN": undefined,
+                  "element": <img
+                    alt="Company logo"
+                    class="hidden h-8 w-auto lg:block"
+                    src="https://ymedialabs.atlassian.net/s/1jmxwi/b/8/d35727372e299c952e88a10ef82bbaf6/_/jira-logo-scaled.png"
+                  />,
+                  "name": "alt",
+                  "options": Object {
+                    "host": [Circular],
+                    "isConnected": true,
+                    "renderBefore": null,
+                  },
+                  "type": 1,
+                },
+              ],
+            },
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "_$Cm": true,
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 2,
+          },
+          R {
+            "_$AH": Array [
+              "text-black",
+            ],
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <div
+              class="flex flex-shrink-0 items-center font-bold  pl-4 text-black "
+            >
+              
+                
+              <h2>
+                <!--?lit$2748882037$-->
+                YML
+              </h2>
+              
+              
+            </div>,
+            "name": "class",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "strings": Array [
+              "flex flex-shrink-0 items-center font-bold  pl-4 ",
+              " ",
+            ],
+            "type": 1,
+          },
+          P {
+            "_$AA": <!--?lit$2748882037$-->,
+            "_$AB": null,
+            "_$AH": "YML",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "_$Cm": true,
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 2,
+          },
+          P {
+            "_$AA": <!--?lit$2748882037$-->,
+            "_$AB": 
+                ,
+            "_$AH": Et {
+              "_$AD": M {
+                "el": <template />,
+                "parts": Array [
+                  Object {
+                    "index": 0,
+                    "type": 2,
+                  },
+                ],
+              },
+              "_$AM": [Circular],
+              "_$AN": undefined,
+              "u": Array [
+                P {
+                  "_$AA": <!--?lit$2748882037$-->,
+                  "_$AB": <!--?-->,
+                  "_$AH": Array [
+                    P {
+                      "_$AA": <!---->,
+                      "_$AB": <!---->,
+                      "_$AH": Et {
+                        "_$AD": M {
+                          "el": <template />,
+                          "parts": Array [
+                            Object {
+                              "ctor": [Function],
+                              "index": 0,
+                              "name": "href",
+                              "strings": Array [
+                                "",
+                                "",
+                              ],
+                              "type": 1,
+                            },
+                            Object {
+                              "ctor": [Function],
+                              "index": 0,
+                              "name": "class",
+                              "strings": Array [
+                                "",
+                                "",
+                              ],
+                              "type": 1,
+                            },
+                            Object {
+                              "ctor": [Function],
+                              "index": 0,
+                              "name": "aria-current",
+                              "strings": Array [
+                                "",
+                                "",
+                              ],
+                              "type": 1,
+                            },
+                            Object {
+                              "index": 1,
+                              "type": 2,
+                            },
+                          ],
+                        },
+                        "_$AM": [Circular],
+                        "_$AN": undefined,
+                        "u": Array [
+                          R {
+                            "_$AH": "#home",
+                            "_$AM": [Circular],
+                            "_$AN": undefined,
+                            "element": <a
+                              aria-current="Home"
+                              class="hover:text-black px-3 py-2 rounded-md text-sm font-medium"
+                              href="#home"
+                            >
+                              
+            
+                              <!--?lit$2748882037$-->
+                              Home
+                              
+          
+                            </a>,
+                            "name": "href",
+                            "options": Object {
+                              "host": [Circular],
+                              "isConnected": true,
+                              "renderBefore": null,
+                            },
+                            "type": 1,
+                          },
+                          R {
+                            "_$AH": "hover:text-black px-3 py-2 rounded-md text-sm font-medium",
+                            "_$AM": [Circular],
+                            "_$AN": undefined,
+                            "element": <a
+                              aria-current="Home"
+                              class="hover:text-black px-3 py-2 rounded-md text-sm font-medium"
+                              href="#home"
+                            >
+                              
+            
+                              <!--?lit$2748882037$-->
+                              Home
+                              
+          
+                            </a>,
+                            "name": "class",
+                            "options": Object {
+                              "host": [Circular],
+                              "isConnected": true,
+                              "renderBefore": null,
+                            },
+                            "type": 1,
+                          },
+                          R {
+                            "_$AH": "Home",
+                            "_$AM": [Circular],
+                            "_$AN": undefined,
+                            "element": <a
+                              aria-current="Home"
+                              class="hover:text-black px-3 py-2 rounded-md text-sm font-medium"
+                              href="#home"
+                            >
+                              
+            
+                              <!--?lit$2748882037$-->
+                              Home
+                              
+          
+                            </a>,
+                            "name": "aria-current",
+                            "options": Object {
+                              "host": [Circular],
+                              "isConnected": true,
+                              "renderBefore": null,
+                            },
+                            "type": 1,
+                          },
+                          P {
+                            "_$AA": <!--?lit$2748882037$-->,
+                            "_$AB": 
+          ,
+                            "_$AH": "Home",
+                            "_$AM": [Circular],
+                            "_$AN": undefined,
+                            "_$Cm": true,
+                            "options": Object {
+                              "host": [Circular],
+                              "isConnected": true,
+                              "renderBefore": null,
+                            },
+                            "type": 2,
+                          },
+                        ],
+                      },
+                      "_$AM": [Circular],
+                      "_$AN": undefined,
+                      "_$Cm": true,
+                      "options": Object {
+                        "host": [Circular],
+                        "isConnected": true,
+                        "renderBefore": null,
+                      },
+                      "type": 2,
+                    },
+                  ],
+                  "_$AM": [Circular],
+                  "_$AN": undefined,
+                  "_$Cm": true,
+                  "options": Object {
+                    "host": [Circular],
+                    "isConnected": true,
+                    "renderBefore": null,
+                  },
+                  "type": 2,
+                },
+              ],
+            },
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "_$Cm": true,
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 2,
+          },
+          P {
+            "_$AA": <!--?lit$2748882037$-->,
+            "_$AB": 
+            ,
+            "_$AH": Array [
+              P {
+                "_$AA": <!---->,
+                "_$AB": <!---->,
+                "_$AH": Et {
+                  "_$AD": M {
+                    "el": <template />,
+                    "parts": Array [
+                      Object {
+                        "ctor": [Function],
+                        "index": 0,
+                        "name": "name",
+                        "strings": Array [
+                          "",
+                          "",
+                        ],
+                        "type": 1,
+                      },
+                    ],
+                  },
+                  "_$AM": [Circular],
+                  "_$AN": undefined,
+                  "u": Array [
+                    R {
+                      "_$AH": "btn",
+                      "_$AM": [Circular],
+                      "_$AN": undefined,
+                      "element": <slot
+                        name="btn"
+                      />,
+                      "name": "name",
+                      "options": Object {
+                        "host": [Circular],
+                        "isConnected": true,
+                        "renderBefore": null,
+                      },
+                      "type": 1,
+                    },
+                  ],
+                },
+                "_$AM": [Circular],
+                "_$AN": undefined,
+                "_$Cm": true,
+                "options": Object {
+                  "host": [Circular],
+                  "isConnected": true,
+                  "renderBefore": null,
+                },
+                "type": 2,
+              },
+            ],
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "_$Cm": true,
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 2,
+          },
+          Ot {
+            "_$AH": true,
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <div
+              class="sm:hidden"
+              hidden=""
+              id="mobile-menu"
+            >
+              
+          
+          
+              <div
+                class="space-y-1 px-2 pt-2 pb-3"
+              >
+                
+          
+                <!--?lit$2748882037$-->
+                 
+                <!--?lit$2748882037$-->
+                <!---->
+                <a
+                  aria-current="Home"
+                  class="text-left hover:text-black block px-3 py-2 rounded-md text-base font-medium"
+                  href="#home"
+                >
+                  
+            
+                  <!--?lit$2748882037$-->
+                  Home
+                  
+          
+                </a>
+                <!---->
+                <!--?-->
+                
+          
+              </div>
+              
+
+        
+            </div>,
+            "name": "hidden",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 4,
+          },
+          P {
+            "_$AA": <!--?lit$2748882037$-->,
+            "_$AB": 
+          ,
+            "_$AH": Et {
+              "_$AD": M {
+                "el": <template />,
+                "parts": Array [
+                  Object {
+                    "index": 0,
+                    "type": 2,
+                  },
+                ],
+              },
+              "_$AM": [Circular],
+              "_$AN": undefined,
+              "u": Array [
+                P {
+                  "_$AA": <!--?lit$2748882037$-->,
+                  "_$AB": <!--?-->,
+                  "_$AH": Array [
+                    P {
+                      "_$AA": <!---->,
+                      "_$AB": <!---->,
+                      "_$AH": Et {
+                        "_$AD": M {
+                          "el": <template />,
+                          "parts": Array [
+                            Object {
+                              "ctor": [Function],
+                              "index": 0,
+                              "name": "href",
+                              "strings": Array [
+                                "",
+                                "",
+                              ],
+                              "type": 1,
+                            },
+                            Object {
+                              "ctor": [Function],
+                              "index": 0,
+                              "name": "class",
+                              "strings": Array [
+                                "",
+                                "",
+                              ],
+                              "type": 1,
+                            },
+                            Object {
+                              "ctor": [Function],
+                              "index": 0,
+                              "name": "aria-current",
+                              "strings": Array [
+                                "",
+                                "",
+                              ],
+                              "type": 1,
+                            },
+                            Object {
+                              "index": 1,
+                              "type": 2,
+                            },
+                          ],
+                        },
+                        "_$AM": [Circular],
+                        "_$AN": undefined,
+                        "u": Array [
+                          R {
+                            "_$AH": "#home",
+                            "_$AM": [Circular],
+                            "_$AN": undefined,
+                            "element": <a
+                              aria-current="Home"
+                              class="text-left hover:text-black block px-3 py-2 rounded-md text-base font-medium"
+                              href="#home"
+                            >
+                              
+            
+                              <!--?lit$2748882037$-->
+                              Home
+                              
+          
+                            </a>,
+                            "name": "href",
+                            "options": Object {
+                              "host": [Circular],
+                              "isConnected": true,
+                              "renderBefore": null,
+                            },
+                            "type": 1,
+                          },
+                          R {
+                            "_$AH": "text-left hover:text-black block px-3 py-2 rounded-md text-base font-medium",
+                            "_$AM": [Circular],
+                            "_$AN": undefined,
+                            "element": <a
+                              aria-current="Home"
+                              class="text-left hover:text-black block px-3 py-2 rounded-md text-base font-medium"
+                              href="#home"
+                            >
+                              
+            
+                              <!--?lit$2748882037$-->
+                              Home
+                              
+          
+                            </a>,
+                            "name": "class",
+                            "options": Object {
+                              "host": [Circular],
+                              "isConnected": true,
+                              "renderBefore": null,
+                            },
+                            "type": 1,
+                          },
+                          R {
+                            "_$AH": "Home",
+                            "_$AM": [Circular],
+                            "_$AN": undefined,
+                            "element": <a
+                              aria-current="Home"
+                              class="text-left hover:text-black block px-3 py-2 rounded-md text-base font-medium"
+                              href="#home"
+                            >
+                              
+            
+                              <!--?lit$2748882037$-->
+                              Home
+                              
+          
+                            </a>,
+                            "name": "aria-current",
+                            "options": Object {
+                              "host": [Circular],
+                              "isConnected": true,
+                              "renderBefore": null,
+                            },
+                            "type": 1,
+                          },
+                          P {
+                            "_$AA": <!--?lit$2748882037$-->,
+                            "_$AB": 
+          ,
+                            "_$AH": "Home",
+                            "_$AM": [Circular],
+                            "_$AN": undefined,
+                            "_$Cm": true,
+                            "options": Object {
+                              "host": [Circular],
+                              "isConnected": true,
+                              "renderBefore": null,
+                            },
+                            "type": 2,
+                          },
+                        ],
+                      },
+                      "_$AM": [Circular],
+                      "_$AN": undefined,
+                      "_$Cm": true,
+                      "options": Object {
+                        "host": [Circular],
+                        "isConnected": true,
+                        "renderBefore": null,
+                      },
+                      "type": 2,
+                    },
+                  ],
+                  "_$AM": [Circular],
+                  "_$AN": undefined,
+                  "_$Cm": true,
+                  "options": Object {
+                    "host": [Circular],
+                    "isConnected": true,
+                    "renderBefore": null,
+                  },
+                  "type": 2,
+                },
+              ],
+            },
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "_$Cm": true,
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 2,
+          },
+        ],
+      },
+      "_$AM": undefined,
+      "_$AN": undefined,
+      "_$Cm": true,
+      "options": Object {
+        "host": [Circular],
+        "isConnected": true,
+        "renderBefore": null,
+      },
+      "type": 2,
+    },
+  },
+  "textColor": "text-brown",
+  "textHoverColor": "hover:text-black",
+  "themeOptions": Object {
+    "dark": Object {
+      "bgColor": "bg-black",
+      "textColor": "text-grey",
+      "textHoverColor": "hover:text-white",
+    },
+    "light": Object {
+      "bgColor": "bg-grey",
+      "textColor": "text-brown",
+      "textHoverColor": "hover:text-black",
+    },
+  },
+}
+`;
