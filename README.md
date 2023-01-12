@@ -10,10 +10,12 @@ This project will provide a reusable component library that will act as building
 
 Provide an overview of the directory structure and files, for example:
 
-|- package.json => root workspace (private package used by yarn workspaces)
-|--- packages
-|------ header
-|-------- package.json => standalone component utilizing lit.dev framework
+```
+ |- package.json => root workspace (private package used by yarn workspaces) 
+ |--- packages 
+ |------ header 
+ |-------- package.json => standalone component utilizing lit.dev framework
+ ```
 
 ## Running instructions
 
@@ -31,14 +33,20 @@ To run the storybook:
 
 1. In the root directory run `$ yarn storybook`
 
+To run tests:
+
+1. In the root directory run `$ yarn test`
+2. To generate coverage reports run `$ yarn test:coverage`
+3. To run tests in watch mode run `$ yarn test:watch`
+
 ## More resources
 
 Some of the resources that will be helpful in understanding the codebase:
 
-[Monorepo Architecture](https://www.toptal.com/front-end/guide-to-monorepos)
-[Lerna](https://lerna.js.org/docs/getting-started)
-[Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
-[Lit.dev](https://lit.dev/docs/)
+1. [Monorepo Architecture](https://www.toptal.com/front-end/guide-to-monorepos)
+2. [Lerna](https://lerna.js.org/docs/getting-started)
+3. [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
+4. [Lit.dev](https://lit.dev/docs/)
 
 ## About
 
