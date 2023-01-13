@@ -116,6 +116,7 @@ export class HeaderComponent extends TailwindElement(Style) {
                 } ${this.themeOptions[this.navOptions?.mode].bgHoverColor} block px-3 py-2 rounded-md text-base font-medium`}"
             @click=${() => {
               this.dispatchEvent(new CustomEvent(link.eventName));
+              this.openMenu = false;
             }}
           >
             ${link.label}
@@ -140,7 +141,7 @@ export class HeaderComponent extends TailwindElement(Style) {
                 type="button"
                 class="inline-flex items-center justify-center rounded-md p-2 ${
                   this.themeOptions[this.navOptions?.mode].textHoverColorDesktop
-                } focus:outline-none"
+                } focus:outline-none btn-tap-color"
                 aria-controls=${msg(str`mobile menu`)}
                 aria-expanded="${this.navOptions.isMenuOpen}"
                 aria-label=${msg(str`mobile button`)}
