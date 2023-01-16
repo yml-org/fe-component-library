@@ -1,0 +1,178 @@
+import { html } from 'lit';
+import { Story, Meta, Canvas } from '@storybook/addon-docs';
+import './header.component';
+
+<Meta title="Header" />
+
+# Header Component
+
+Basic header component without `props`
+
+export const TemplateDefault = () =>
+  html`<header-component></header-component>`;
+
+<Canvas columns={1}>
+  <Story name="default">{TemplateDefault.bind({})}</Story>
+</Canvas>
+
+Header component With `dark` mode and `props`
+
+export const TemplateTheme = (args) => html`<header-component
+  .navOptions=${args.navOptions}
+>
+</header-component>`;
+
+<Canvas columns={1}>
+  <Story
+    name="Dark"
+    args={{
+      navOptions: {
+        mode: 'dark',
+        logo: 'https://ymedialabs.atlassian.net/s/1jmxwi/b/8/d35727372e299c952e88a10ef82bbaf6/_/jira-logo-scaled.png',
+        logoAltText: 'Logo',
+        headerText: 'YML',
+        menuLinks: [
+          {
+            label: 'Home',
+            type: 'link',
+            url: 'home',
+          },
+          {
+            label: 'Company',
+            type: 'link',
+            url: 'company',
+          },
+          {
+            label: 'Team',
+            type: 'link',
+            url: 'team',
+          },
+          {
+            label: 'Map',
+            type: 'button',
+            eventName: 'map-click',
+          },
+        ],
+      },
+    }}
+  >
+    {TemplateTheme.bind({})}
+  </Story>
+</Canvas>
+
+Header component With `light` mode and `props`
+
+<Canvas columns={1}>
+  <Story
+    name="Light"
+    args={{
+      navOptions: {
+        mode: 'light',
+        logo: 'https://ymedialabs.atlassian.net/s/1jmxwi/b/8/d35727372e299c952e88a10ef82bbaf6/_/jira-logo-scaled.png',
+        logoAltText: 'Logo',
+        headerText: 'YML',
+        menuLinks: [
+          {
+            label: 'Home',
+            type: 'link',
+            url: 'home',
+          },
+          {
+            label: 'Company',
+            type: 'link',
+            url: 'company',
+          },
+          {
+            label: 'Team',
+            type: 'link',
+            url: 'team',
+          },
+          {
+            label: 'Map',
+            type: 'button',
+            eventName: 'map-click',
+          },
+        ],
+      },
+    }}
+  >
+    {TemplateTheme.bind({})}
+  </Story>
+</Canvas>
+
+Header component With `slot` for top right icons and open and close menu icons
+
+export const Template = (args) => html`<header-component
+  .navOptions=${args.navOptions}
+>
+  <div slot="slot-div" style="display:flex;flex-direction:row">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="white"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      aria-hidden="true"
+      style="width:26px;height:26px;margin-top:3px;margin-right:5px"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
+      />
+    </svg>
+    <img
+      class="h-8 w-8 rounded-full"
+      src="https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png"
+      alt=""
+    />
+  </div>
+  <button slot="open">open</button>
+  <button slot="close">Close</button>
+</header-component>`;
+
+<Canvas columns={1}>
+  <Story
+    name="withSlot"
+    args={{
+      navOptions: {
+        logo: 'https://ymedialabs.atlassian.net/s/1jmxwi/b/8/d35727372e299c952e88a10ef82bbaf6/_/jira-logo-scaled.png',
+        logoAltText: 'Logo',
+        headerText: 'YML',
+        openMenuIcon: {
+          slotName: 'open',
+        },
+        closeMenuIcon: {
+          slotName: 'close',
+        },
+        menuLinks: [
+          {
+            label: 'Home',
+            type: 'link',
+            url: 'home',
+          },
+          {
+            label: 'Company',
+            type: 'link',
+            url: 'company',
+          },
+          {
+            label: 'Team',
+            type: 'link',
+            url: 'team',
+          },
+          {
+            label: 'Map',
+            type: 'button',
+            eventName: 'map-click',
+          },
+        ],
+        topRightSlot: {
+          slotName: 'slot-div',
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
