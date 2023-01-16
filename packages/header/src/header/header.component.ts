@@ -69,18 +69,18 @@ export class HeaderComponent extends TailwindElement(Style) {
     dark: {
       bgColor: 'bg-black',
       textColor: 'text-grey',
-      textHoverColor: 'hover:text-white',
+      textHoverColorDesktop: 'hover:text-white',
+      textHoverColorMobile: 'hover:text-black',
+      bgHoverColor:'hover:bg-light-gray'
     },
     light: {
       bgColor: 'bg-grey',
       textColor: 'text-brown',
-      textHoverColor: 'hover:text-black',
+      textHoverColorDesktop: 'hover:text-black',
+      textHoverColorMobile: 'hover:text-white',
+      bgHoverColor:'hover:bg-brown'
     },
   };
-
-  bgColor = this.themeOptions[this.navOptions?.mode].bgColor;
-  textColor = this.themeOptions[this.navOptions?.mode].textColor;
-  textHoverColor = this.themeOptions[this.navOptions?.mode].textHoverColor;
 
   @state() openMenu: boolean = this.navOptions.isMenuOpen;
 
@@ -93,27 +93,30 @@ export class HeaderComponent extends TailwindElement(Style) {
       link.type === NavbarLinkType.LINK
         ? html`<a
             href=${link.url}
+            part="a-menu-link-${link.label}"
             class="${type === 'desktop'
               ? `${
-                  this.themeOptions[this.navOptions?.mode].textHoverColor
+                  this.themeOptions[this.navOptions?.mode].textHoverColorDesktop
                 } px-3 py-2 rounded-md text-sm font-medium`
               : `text-left ${
-                  this.themeOptions[this.navOptions?.mode].textHoverColor
-                } block px-3 py-2 rounded-md text-base font-medium`}"
-            aria-current=${link.label}
+                  this.themeOptions[this.navOptions?.mode].textHoverColorMobile
+                } ${this.themeOptions[this.navOptions?.mode].bgHoverColor} block px-3 py-2 rounded-md text-base font-medium`}"
+                aria-current=${link.label}
           >
             ${link.label}
           </a>`
         : html`<button
+            part="btn-menu-link-${link.label}"
             class="${type === 'desktop'
               ? `${
-                  this.themeOptions[this.navOptions?.mode].textHoverColor
+                  this.themeOptions[this.navOptions?.mode].textHoverColorDesktop
                 } px-3 py-2 rounded-md text-sm font-medium`
               : ` w-full text-left ${
-                  this.themeOptions[this.navOptions?.mode].textHoverColor
-                } block px-3 py-2 rounded-md text-base font-medium`}"
+                  this.themeOptions[this.navOptions?.mode].textHoverColorMobile
+                } ${this.themeOptions[this.navOptions?.mode].bgHoverColor} block px-3 py-2 rounded-md text-base font-medium`}"
             @click=${() => {
               this.dispatchEvent(new CustomEvent(link.eventName));
+              this.openMenu = false;
             }}
           >
             ${link.label}
@@ -125,36 +128,37 @@ export class HeaderComponent extends TailwindElement(Style) {
     return html`
       <nav class="${this.themeOptions[this.navOptions?.mode].bgColor} ${
       this.themeOptions[this.navOptions?.mode].textColor
-    }">
+    }" part="nav">
         
-        <div class="mx-auto max-w-8xl px-2 sm:px-6 lg:px-4">
+        <div class="mx-auto max-w-8xl px-2 sm:px-6 lg:px-4" >
           
           <div class="relative flex h-16 items-center justify-between">
             
-            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden" part="menu-icon-container" >
               
               <!-- Mobile menu button-->
               <button
                 type="button"
                 class="inline-flex items-center justify-center rounded-md p-2 ${
-                  this.themeOptions[this.navOptions?.mode].textHoverColor
-                } focus:outline-none"
+                  this.themeOptions[this.navOptions?.mode].textHoverColorDesktop
+                } focus:outline-none btn-tap-color"
                 aria-controls=${msg(str`mobile menu`)}
                 aria-expanded="${this.navOptions.isMenuOpen}"
                 aria-label=${msg(str`mobile button`)}
-                @click=${this.setMenuOpen}>
+                @click=${this.setMenuOpen}
+                part="menu-icon-button">
                 ${
                   this.openMenu
                     ? !this.navOptions?.closeMenuIcon?.slotName
                       ? CloseMenuIcon
-                      : html`<div class="h-6 w-6">
+                      : html`<div class="h-6 w-6" part="menu-close-icon">
                           <slot
                             name=${this.navOptions?.closeMenuIcon?.slotName}
                           ></slot>
                         </div>`
                     : !this.navOptions?.openMenuIcon?.slotName
                     ? OpenMenuIcon
-                    : html`<div class="h-6 w-6">
+                    : html`<div class="h-6 w-6" part="menu-open-icon">
                         <slot
                           name=${this.navOptions?.openMenuIcon?.slotName}
                         ></slot>
@@ -164,8 +168,9 @@ export class HeaderComponent extends TailwindElement(Style) {
             </div>
 
             <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div class="flex flex-shrink-0 items-center">
+              <div class="flex flex-shrink-0 items-center" part="logo-container">
                 <img
+                  part="logo"
                   class="hidden h-8 w-8 lg:block"
                   src=${this.navOptions?.logo}
                   alt="${
@@ -182,12 +187,12 @@ export class HeaderComponent extends TailwindElement(Style) {
                 this.navOptions?.mode === NavbarModes.Dark
                   ? 'text-white'
                   : 'text-black'
-              } ">
-                <h2>${this.navOptions?.headerText}</h2>
+              } " part="headerText-container">
+                <h2 part="headerText">${this.navOptions?.headerText}</h2>
               </div>
 
               <div class="hidden sm:ml-6 sm:block">
-                <div class="flex space-x-4 pl-10">
+                <div class="flex space-x-4 pl-10" part="menu-link-container">
                  
                 ${this.displayMenuLinks(DeviceType.DESKTOP)}
                 </div>
@@ -195,7 +200,7 @@ export class HeaderComponent extends TailwindElement(Style) {
 
             </div>
 
-            <div class="inset-y-0 right-0 flex pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+            <div class="inset-y-0 right-0 flex pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0" part="right-icons-container">
                 <slot name=${this.navOptions.topRightSlot.slotName}></slot>
             </div>
 
@@ -207,7 +212,7 @@ export class HeaderComponent extends TailwindElement(Style) {
 
         <div class="sm:hidden" id="mobile-menu" ?hidden=${!this.openMenu}>
           
-          <div class="space-y-1 px-2 pt-2 pb-3" >
+          <div class="space-y-1 px-2 pt-2 pb-3" part="menu-link-container-mobile">
           ${this.displayMenuLinks(DeviceType.MOBILE)}
           </div>
 
