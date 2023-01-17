@@ -298,37 +298,158 @@ export default {
 }
 </style>
 ```
+## With React
+React can render Web Components, but it cannot easily pass React props to custom element properties or event listeners. 
+This Web-Component wrapper package- (https://www.npmjs.com/package/reactify-wc) correctly passes React props to properties accepted by the custom element and listens for events dispatched by the custom element.
 
-### With React
-
-```js
-import React from 'react'
-Install the package - npm i @lit-labs/react
-
-Usage
-import * as React from 'react';
-import {createComponent} from '@lit-labs/react';
-import {MyElement} from './my-element.js';
-
-export const MyElementComponent = createComponent({
-tagName: 'my-element',
-elementClass: MyElement,
-react: React,
-events: {
-myEvent: 'myCustumEventName',
-},
-});
-
-// where myEvent is the event name given to the custom event defined in the lit component.
-// In the above example 'myCustumEventName' is the custom event.
-
-// After defining the React component, you can use it just as you would use any other React component.
-// <MyElementComponent
-// myEvent: {myEventHandler}
-// />
-// where my myEventHandler is a function that needs to fired when myEvent is triggered.
+```bash
+npm i reactify-wc
 ```
 
+### With default value
+```js
+import reactifyWc from "reactify-wc";
+function App() {
+  const HeaderComponent = reactifyWc("header-component");
+  return (
+    <div className="App">
+      <HeaderComponent></HeaderComponent>
+    </div>
+  );
+}
+export default App;
+```
+### With Props
+```js
+import reactifyWc from "reactify-wc";
+import { useState } from "react";
+function App() {
+  const HeaderComponent = reactifyWc("header-component");
+  const [navOption, setNavOption] = useState({
+    mode: "dark",
+    logo: "https://ymedialabs.atlassian.net/s/1jmxwi/b/8/d35727372e299c952e88a10ef82bbaf6/_/jira-logo-scaled.png",
+    logoAltText: "Logo",
+    headerText: "YML",
+    menuLinks: [
+      {
+        label: "Home",
+        type: "link",
+        url: "home",
+      },
+      {
+        label: "Company",
+        type: "link",
+        url: "company",
+      },
+      {
+        label: "Team",
+        type: "link",
+        url: "team",
+      },
+      {
+        label: "Map",
+        type: "button",
+        eventName: "map-click",
+      },
+    ]
+  });
+  return (
+    <div className="App">
+      <HeaderComponent navOptions={navOption}>
+      </HeaderComponent>
+    </div>
+  );
+}
+export default App;
+```
+### With Slots and custom events
+```js
+import reactifyWc from "reactify-wc";
+import { useState } from "react";
+function App() {
+  const HeaderComponent = reactifyWc("header-component");
+  const [navOption, setNavOption] = useState({
+    mode: "dark",
+    logo: "https://ymedialabs.atlassian.net/s/1jmxwi/b/8/d35727372e299c952e88a10ef82bbaf6/_/jira-logo-scaled.png",
+    logoAltText: "Logo",
+    headerText: "YML",
+     openMenuIcon: {
+      slotName: 'open',
+    },
+    closeMenuIcon: {
+      slotName: 'close',
+    },
+    menuLinks: [
+      {
+        label: "Home",
+        type: "link",
+        url: "home",
+      },
+      {
+        label: "Company",
+        type: "link",
+        url: "company",
+      },
+      {
+        label: "Team",
+        type: "link",
+        url: "team",
+      },
+      {
+        label: "Map",
+        type: "button",
+        eventName: "map-click", //custom-event
+      },
+    ],
+    topRightSlot: {
+      slotName: "notification",
+    },
+  });
+  const handleMap = () => {
+    //define method
+  };
+  const handleNotification = () => {
+    //define method
+  };
+  return (
+    <div className="App">
+      {/* Note: prefix 'on-' should be added to custom events */}
+      <HeaderComponent on-map-click={handleMap} navOptions={navOption}> 
+          <svg slot="open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+      <path
+        d="M61.1 224C45 224 32 211 32 194.9c0-1.9 .2-3.7 .6-5.6C37.9 168.3 78.8 32 256 32s218.1 136.3 223.4 157.3c.5 1.9 .6 3.7 .6 5.6c0 16.1-13 29.1-29.1 29.1H61.1zM144 128c0-8.8-7.2-16-16-16s-16 7.2-16 16s7.2 16 16 16s16-7.2 16-16zm240 16c8.8 0 16-7.2 16-16s-7.2-16-16-16s-16 7.2-16 16s7.2 16 16 16zM272 96c0-8.8-7.2-16-16-16s-16 7.2-16 16s7.2 16 16 16s16-7.2 16-16zM16 304c0-26.5 21.5-48 48-48H448c26.5 0 48 21.5 48 48s-21.5 48-48 48H64c-26.5 0-48-21.5-48-48zm16 96c0-8.8 7.2-16 16-16H464c8.8 0 16 7.2 16 16v16c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V400z"
+      />
+    </svg>
+    <svg slot="close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+      <path
+        d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"
+      />
+    </svg>
+        <button onClick={handleNotification} slot="notification">
+          Notification
+        </button>
+      </HeaderComponent>
+    </div>
+  );
+}
+export default App;
+```
+## Styling
+
+### Styling the Custom Component
+Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/::part
+
+```style.scss
+//The ::part CSS pseudo-element represents any element within a shadow tree that has a matching part attribute.
+header-component::part(nav) { /*Note : header-component is the custom component and nav is the name given to the the part attribute in element within header-components */
+background: yellow ;
+//add css properties
+ }
+ header-component::part(menu-icon-container) { /*Note : header-component is the custom component and menu-icon-container is the name given to the the part attribute in element within header-components */
+background: yellow ;
+//add css properties
+ }
+```
 ## Compatibility
 
 | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Safari  

@@ -71,18 +71,20 @@ export class HeaderComponent extends TailwindElement(Style) {
       textColor: 'text-grey',
       textHoverColorDesktop: 'hover:text-white',
       textHoverColorMobile: 'hover:text-black',
-      bgHoverColor:'hover:bg-light-gray'
+      bgHoverColor: 'hover:bg-light-gray',
+      headerTextColor: 'text-white',
     },
     light: {
       bgColor: 'bg-grey',
       textColor: 'text-brown',
       textHoverColorDesktop: 'hover:text-black',
       textHoverColorMobile: 'hover:text-white',
-      bgHoverColor:'hover:bg-brown'
+      bgHoverColor: 'hover:bg-brown',
+      headerTextColor: 'text-black',
     },
   };
 
-  @state() openMenu: boolean = this.navOptions.isMenuOpen;
+  @state() openMenu: boolean = this.navOptions?.isMenuOpen;
 
   setMenuOpen() {
     this.openMenu = !this.openMenu;
@@ -96,12 +98,19 @@ export class HeaderComponent extends TailwindElement(Style) {
             part="a-menu-link-${link.label}"
             class="${type === 'desktop'
               ? `${
-                  this.themeOptions[this.navOptions?.mode].textHoverColorDesktop
+                  this.themeOptions[this.navOptions?.mode]
+                    ?.textHoverColorDesktop ||
+                  this.themeOptions[NavbarModes.Dark].textHoverColorDesktop
                 } px-3 py-2 rounded-md text-sm font-medium`
               : `text-left ${
-                  this.themeOptions[this.navOptions?.mode].textHoverColorMobile
-                } ${this.themeOptions[this.navOptions?.mode].bgHoverColor} block px-3 py-2 rounded-md text-base font-medium`}"
-                aria-current=${link.label}
+                  this.themeOptions[this.navOptions?.mode]
+                    ?.textHoverColorMobile ||
+                  this.themeOptions[NavbarModes.Dark].textHoverColorMobile
+                } ${
+                  this.themeOptions[this.navOptions?.mode]?.bgHoverColor ||
+                  this.themeOptions[NavbarModes.Dark].bgHoverColor
+                } block px-3 py-2 rounded-md text-base font-medium`}"
+            aria-current=${link.label}
           >
             ${link.label}
           </a>`
@@ -109,11 +118,18 @@ export class HeaderComponent extends TailwindElement(Style) {
             part="btn-menu-link-${link.label}"
             class="${type === 'desktop'
               ? `${
-                  this.themeOptions[this.navOptions?.mode].textHoverColorDesktop
+                  this.themeOptions[this.navOptions?.mode]
+                    ?.textHoverColorDesktop ||
+                  this.themeOptions[NavbarModes.Dark].textHoverColorDesktop
                 } px-3 py-2 rounded-md text-sm font-medium`
               : ` w-full text-left ${
-                  this.themeOptions[this.navOptions?.mode].textHoverColorMobile
-                } ${this.themeOptions[this.navOptions?.mode].bgHoverColor} block px-3 py-2 rounded-md text-base font-medium`}"
+                  this.themeOptions[this.navOptions?.mode]
+                    ?.textHoverColorMobile ||
+                  this.themeOptions[NavbarModes.Dark].textHoverColorMobile
+                } ${
+                  this.themeOptions[this.navOptions?.mode]?.bgHoverColor ||
+                  this.themeOptions[NavbarModes.Dark].bgHoverColor
+                } block px-3 py-2 rounded-md text-base font-medium`}"
             @click=${() => {
               this.dispatchEvent(new CustomEvent(link.eventName));
               this.openMenu = false;
@@ -126,9 +142,14 @@ export class HeaderComponent extends TailwindElement(Style) {
 
   render() {
     return html`
-      <nav class="${this.themeOptions[this.navOptions?.mode].bgColor} ${
-      this.themeOptions[this.navOptions?.mode].textColor
-    }" part="nav">
+      <nav class="${
+        this.themeOptions[this.navOptions?.mode]?.bgColor ||
+        this.themeOptions[NavbarModes.Dark].bgColor
+      }
+      ${
+        this.themeOptions[this.navOptions?.mode]?.textColor ||
+        this.themeOptions[NavbarModes.Dark].textColor
+      } " part="nav">
         
         <div class="mx-auto max-w-8xl px-2 sm:px-6 lg:px-4" >
           
@@ -140,7 +161,9 @@ export class HeaderComponent extends TailwindElement(Style) {
               <button
                 type="button"
                 class="inline-flex items-center justify-center rounded-md p-2 ${
-                  this.themeOptions[this.navOptions?.mode].textHoverColorDesktop
+                  this.themeOptions[this.navOptions?.mode]
+                    ?.textHoverColorDesktop ||
+                  this.themeOptions[NavbarModes.Dark].textHoverColorDesktop
                 } focus:outline-none btn-tap-color"
                 aria-controls=${msg(str`mobile menu`)}
                 aria-expanded="${this.navOptions.isMenuOpen}"
@@ -169,24 +192,24 @@ export class HeaderComponent extends TailwindElement(Style) {
 
             <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
               <div class="flex flex-shrink-0 items-center" part="logo-container">
-                <img
-                  part="logo"
-                  class="hidden h-8 w-8 lg:block"
-                  src=${this.navOptions?.logo}
-                  alt="${
-                    this.navOptions?.logoAltText
+                ${
+                  this.navOptions?.logo &&
+                  html`<img
+                    part="logo"
+                    class="hidden h-8 w-8 lg:block"
+                    src=${this.navOptions?.logo}
+                    alt="${this.navOptions?.logoAltText
                       ? this.navOptions?.logoAltText
-                      : msg(str`Company logo`)
-                  }"
-                />
+                      : msg(str`Company logo`)}"
+                  />`
+                }
               </div> 
          
             <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
               
               <div class="flex flex-shrink-0 items-center font-bold  pl-4 ${
-                this.navOptions?.mode === NavbarModes.Dark
-                  ? 'text-white'
-                  : 'text-black'
+                this.themeOptions[this.navOptions?.mode]?.headerTextColor ||
+                this.themeOptions[NavbarModes.Dark].headerTextColor
               } " part="headerText-container">
                 <h2 part="headerText">${this.navOptions?.headerText}</h2>
               </div>
@@ -201,7 +224,7 @@ export class HeaderComponent extends TailwindElement(Style) {
             </div>
 
             <div class="inset-y-0 right-0 flex pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0" part="right-icons-container">
-                <slot name=${this.navOptions.topRightSlot.slotName}></slot>
+                <slot name=${this.navOptions?.topRightSlot?.slotName}></slot>
             </div>
 
           </div>
