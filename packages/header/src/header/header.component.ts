@@ -68,18 +68,18 @@ export class HeaderComponent extends TailwindElement(Style) {
   themeOptions = {
     dark: {
       bgColor: 'bg-black',
-      textColor: 'text-grey',
+      textColor: 'text-gray-300',
       textHoverColorDesktop: 'hover:text-white',
       textHoverColorMobile: 'hover:text-black',
-      bgHoverColor: 'hover:bg-light-gray',
+      bgHoverColor: 'hover:bg-gray-300',
       headerTextColor: 'text-white',
     },
     light: {
-      bgColor: 'bg-grey',
-      textColor: 'text-brown',
+      bgColor: 'bg-gray-200',
+      textColor: 'text-stone-900',
       textHoverColorDesktop: 'hover:text-black',
       textHoverColorMobile: 'hover:text-white',
-      bgHoverColor: 'hover:bg-brown',
+      bgHoverColor: 'hover:bg-stone-700',
       headerTextColor: 'text-black',
     },
   };

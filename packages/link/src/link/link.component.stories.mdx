@@ -1,0 +1,118 @@
+import { html } from 'lit';
+import { Story, Meta, Canvas } from '@storybook/addon-docs';
+import './link.component';
+
+<Meta title="Link" />
+
+# Link Component
+
+Basic link component without `props`
+
+export const TemplateDefault = () => html`<link-component></link-component>`;
+
+<Canvas columns={1}>
+  <Story name="default">{TemplateDefault.bind({})}</Story>
+</Canvas>
+
+Link component With `props`
+
+export const TemplateProps = (args) => html`<link-component
+  .href=${args.href}
+  .text=${args.text}
+  .linkTitle=${args.linkTitle}
+  .rel=${args.rel}
+  .target=${args.target}
+  .type=${args.type}
+>
+</link-component>`;
+
+<Canvas columns={1}>
+  <Story
+    name="withProps"
+    args={{
+      text: 'Click here to test',
+      linkTitle: 'myLink',
+      href: 'https://www.w3schools.com/html/html_links.asp',
+      rel: 'noopener noreferrer',
+      target: '_blank',
+      type: 'default',
+    }}
+  >
+    {TemplateProps.bind({})}
+  </Story>
+</Canvas>
+
+Link component with type `button`
+
+<Canvas columns={1}>
+  <Story
+    name="typeButton"
+    args={{
+      text: 'Click here to test',
+      linkTitle: 'myLink',
+      href: 'https://www.w3schools.com/html/html_links.asp',
+      rel: 'noopener noreferrer',
+      target: '_blank',
+      type: 'button',
+    }}
+  >
+    {TemplateProps.bind({})}
+  </Story>
+</Canvas>
+
+Link component with `slot`
+
+export const TemplateSlot = (args) => html`<link-component
+  .href=${args.href}
+  .text=${args.text}
+  .linkTitle=${args.linkTitle}
+  .rel=${args.rel}
+  .target=${args.target}
+  .type=${args.type}
+  .slotName=${args.slotName}
+>
+  <div slot="newSlot" style="width:auto;  display: inline-block">
+    <p>Slot elements wrapped within an anchor tag</p>
+    <img
+      class="h-9 w-9"
+      src="https://avatars.mds.yandex.net/i?id=84dbd50839c3d640ebfc0de20994c30d-4473719-images-taas-consumers&n=27&h=480&w=480"
+      alt=""
+    />
+  </div>
+</link-component>`;
+
+<Canvas columns={1}>
+  <Story
+    name="withSlot"
+    args={{
+      text: '',
+      linkTitle: 'myLink',
+      href: 'https://www.w3schools.com/html/html_links.asp',
+      rel: 'noopener noreferrer',
+      target: '_blank',
+      type: 'default',
+      slotName: 'newSlot',
+    }}
+  >
+    {TemplateSlot.bind({})}
+  </Story>
+</Canvas>
+
+Link component with `slot` and type `button`
+
+<Canvas columns={1}>
+  <Story
+    name="withSlotTypeButton"
+    args={{
+      text: '',
+      linkTitle: 'myLink',
+      href: 'https://www.w3schools.com/html/html_links.asp',
+      rel: 'noopener noreferrer',
+      target: '_blank',
+      type: 'button',
+      slotName: 'newSlot',
+    }}
+  >
+    {TemplateSlot.bind({})}
+  </Story>
+</Canvas>
