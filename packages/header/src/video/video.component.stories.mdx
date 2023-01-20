@@ -1,0 +1,16 @@
+import { html } from 'lit';
+import { Story, Meta, Canvas } from '@storybook/addon-docs';
+import './video.component';
+
+<Meta title="Video" />
+
+# Header Component
+
+Basic video component without `props`
+
+export const TemplateDefault = () =>
+  html`<video-component></video-component>`;
+
+<Canvas columns={1}>
+  <Story name="default">{TemplateDefault.bind({})}</Story>
+</Canvas>
