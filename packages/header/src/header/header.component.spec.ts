@@ -21,9 +21,8 @@ describe('header-component', () => {
   const HEADER_COMPONENT = 'header-component';
   let headerElement: LitElement;
 
-  const getShadowRoot = (tagName: string): ShadowRoot => {
-    return document.body.getElementsByTagName(tagName)[0].shadowRoot;
-  };
+  const getShadowRoot = (tagName: string): ShadowRoot =>
+    document.body.getElementsByTagName(tagName)[0].shadowRoot;
 
   beforeEach(() => {
     headerElement = window.document.createElement(
