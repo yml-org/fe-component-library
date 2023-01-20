@@ -99,4 +99,31 @@ describe('header-component', () => {
       .querySelector('div');
     expect(elem.classList.contains('slot-test')).toBe(true);
   });
+
+  it('triggers the custom event passed', async () => {
+    const func = jest.fn();
+    headerElement['navOptions'] = {
+      ...navOptions,
+      menuLinks: [
+        {
+          type: 'button',
+          label: 'Test',
+          eventName: 'my-custom-event',
+        },
+      ],
+    };
+    window.document.body.appendChild(headerElement);
+    await headerElement.updateComplete;
+    document
+      .querySelector('header-component')
+      .addEventListener('my-custom-event', func);
+    const customElem = getShadowRoot(HEADER_COMPONENT);
+    const btnElem = customElem.querySelectorAll('button');
+    btnElem.forEach((elem) => {
+      if (elem.classList.contains('hover:text-white')) {
+        elem?.click();
+      }
+    });
+    expect(func.mock.calls).toHaveLength(1);
+  });
 });
