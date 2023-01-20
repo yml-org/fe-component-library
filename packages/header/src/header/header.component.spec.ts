@@ -1,5 +1,22 @@
 import { LitElement } from 'lit-element';
 
+const navOptions = {
+  mode: 'dark',
+  logo: 'https://ymedialabs.atlassian.net/s/1jmxwi/b/8/d35727372e299c952e88a10ef82bbaf6/_/jira-logo-scaled.png',
+  headerText: 'YML',
+  openMenuIcon: {
+    slotName: '',
+  },
+  closeMenuIcon: {
+    slotName: '',
+  },
+  menuLinks: [],
+  isMenuOpen: false,
+  topRightSlot: {
+    slotName: 'bell',
+  },
+};
+
 describe('header-component', () => {
   const HEADER_COMPONENT = 'header-component';
   let headerElement: LitElement;
@@ -47,37 +64,40 @@ describe('header-component', () => {
     expect(headerDivClassList).not.toBe(-1);
   });
 
-  // Test Case Failing
   it('sets the default header headerTextColor correctly', async () => {
-    const headerDivClassList =
-      document.body.getElementsByClassName('text-white');
-    console.log(headerDivClassList);
-    expect(headerDivClassList).toHaveLength(1);
-  });
-
-  it('sets the default header headerTextColor correctly', async () => {
-    const navOptions = {
-      mode: 'dark',
-      logo: 'https://ymedialabs.atlassian.net/s/1jmxwi/b/8/d35727372e299c952e88a10ef82bbaf6/_/jira-logo-scaled.png',
-      headerText: 'YML',
-      openMenuIcon: {
-        slotName: '',
-      },
-      closeMenuIcon: {
-        slotName: '',
-      },
-      menuLinks: [],
-      isMenuOpen: false,
-      topRightSlot: {
-        slotName: 'bell',
-      },
-    };
-
-    headerElement.setAttribute('navOptions', JSON.stringify(navOptions));
     window.document.body.appendChild(headerElement);
     await headerElement.updateComplete;
-    console.log(HEADER_COMPONENT);
-    // Fails to change anything in the above consoled HEADER_COMPONENT
+    const elemList =
+      getShadowRoot(HEADER_COMPONENT).querySelectorAll('.text-white');
+    expect(elemList).toHaveLength(2);
   });
 
+  it('sets the  header text correctly', async () => {
+    headerElement['navOptions'] = navOptions;
+    window.document.body.appendChild(headerElement);
+    await headerElement.updateComplete;
+    const headingElementText =
+      getShadowRoot(HEADER_COMPONENT).querySelector('h2').textContent;
+    expect(headingElementText).toBe('YML');
+  });
+
+  it('renders the component in mode passed by user', async () => {
+    headerElement['navOptions'] = { ...navOptions, mode: 'light' };
+    window.document.body.appendChild(headerElement);
+    await headerElement.updateComplete;
+    const elem = getShadowRoot(HEADER_COMPONENT).querySelector('nav');
+    expect(elem.classList.contains('bg-gray-200')).toBe(true);
+  });
+
+  it('renders the component passed in slot', async () => {
+    headerElement['navOptions'] = navOptions;
+    window.document.body.appendChild(headerElement);
+    document.querySelector('header-component').innerHTML =
+      '<div slot="bell" class="slot-test">Test</div>';
+    await headerElement.updateComplete;
+    const elem = document
+      .querySelector('header-component')
+      .querySelector('div');
+    expect(elem.classList.contains('slot-test')).toBe(true);
+  });
 });
