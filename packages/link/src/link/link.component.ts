@@ -1,4 +1,5 @@
 import { html } from 'lit';
+import { msg, str } from '@lit/localize';
 import { customElement, property } from 'lit/decorators.js';
 import { TailwindElement } from '../shared/tailwind.element';
 import { LinkTypes } from '../constants/link.component';
@@ -29,8 +30,9 @@ export class LinkComponent extends TailwindElement(null) {
         href=${this.href}
         target=${this.target}
         rel=${this.rel}
+        aria-label=${msg(str`Click Here to redirect`)}
       >
-        ${this.text}
+        ${this.text ? this.text : this.text === '' ? '' : msg(str`Click Here`)}
         <slot name=${this.slotName}></slot>
       </a>
     `;
