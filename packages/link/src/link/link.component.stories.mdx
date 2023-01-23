@@ -1,6 +1,12 @@
 import { html } from 'lit';
 import { Story, Meta, Canvas } from '@storybook/addon-docs';
 import './link.component';
+import {
+  linkConfig,
+  linkConfigTypeButton,
+  linkConfigSlot,
+  linkConfigSlotTypeButton,
+} from '../constants/link.variants';
 
 <Meta title="Link" />
 
@@ -17,12 +23,12 @@ export const TemplateDefault = () => html`<link-component></link-component>`;
 Link component With `props`
 
 export const TemplateProps = (args) => html`<link-component
-  .href=${args.href}
-  .text=${args.text}
-  .linkTitle=${args.linkTitle}
-  .rel=${args.rel}
-  .target=${args.target}
-  .type=${args.type}
+  .href=${args.linkProps.href}
+  .text=${args.linkProps.text}
+  .linkTitle=${args.linkProps.linkTitle}
+  .rel=${args.linkProps.rel}
+  .target=${args.linkProps.target}
+  .type=${args.linkProps.type}
 >
 </link-component>`;
 
@@ -30,12 +36,7 @@ export const TemplateProps = (args) => html`<link-component
   <Story
     name="withProps"
     args={{
-      text: 'Click here to test',
-      linkTitle: 'myLink',
-      href: 'https://www.w3schools.com/html/html_links.asp',
-      rel: 'noopener noreferrer',
-      target: '_blank',
-      type: 'default',
+      linkProps: linkConfig,
     }}
   >
     {TemplateProps.bind({})}
@@ -48,12 +49,7 @@ Link component with type `button`
   <Story
     name="typeButton"
     args={{
-      text: 'Click here to test',
-      linkTitle: 'myLink',
-      href: 'https://www.w3schools.com/html/html_links.asp',
-      rel: 'noopener noreferrer',
-      target: '_blank',
-      type: 'button',
+      linkProps: linkConfigTypeButton,
     }}
   >
     {TemplateProps.bind({})}
@@ -63,13 +59,13 @@ Link component with type `button`
 Link component with `slot`
 
 export const TemplateSlot = (args) => html`<link-component
-  .href=${args.href}
-  .text=${args.text}
-  .linkTitle=${args.linkTitle}
-  .rel=${args.rel}
-  .target=${args.target}
-  .type=${args.type}
-  .slotName=${args.slotName}
+  .href=${args.linkSlot.href}
+  .text=${args.linkSlot.text}
+  .linkTitle=${args.linkSlot.linkTitle}
+  .rel=${args.linkSlot.rel}
+  .target=${args.linkSlot.target}
+  .type=${args.linkSlot.type}
+  .slotName=${args.linkSlot.slotName}
 >
   <div slot="newSlot" style="width:auto;  display: inline-block">
     <p>Slot elements wrapped within an anchor tag</p>
@@ -85,13 +81,7 @@ export const TemplateSlot = (args) => html`<link-component
   <Story
     name="withSlot"
     args={{
-      text: '',
-      linkTitle: 'myLink',
-      href: 'https://www.w3schools.com/html/html_links.asp',
-      rel: 'noopener noreferrer',
-      target: '_blank',
-      type: 'default',
-      slotName: 'newSlot',
+      linkSlot: linkConfigSlot,
     }}
   >
     {TemplateSlot.bind({})}
@@ -104,13 +94,7 @@ Link component with `slot` and type `button`
   <Story
     name="withSlotTypeButton"
     args={{
-      text: '',
-      linkTitle: 'myLink',
-      href: 'https://www.w3schools.com/html/html_links.asp',
-      rel: 'noopener noreferrer',
-      target: '_blank',
-      type: 'button',
-      slotName: 'newSlot',
+      linkSlot: linkConfigSlotTypeButton,
     }}
   >
     {TemplateSlot.bind({})}
