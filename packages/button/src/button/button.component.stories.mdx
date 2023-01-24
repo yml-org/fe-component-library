@@ -1,0 +1,243 @@
+import { html } from 'lit';
+import { Story, Meta, Canvas } from '@storybook/addon-docs';
+import '../../../header/src/header/header.component.ts';
+import './button.component.ts';
+
+<Meta title="Button" />
+
+# Button Component
+
+Button component With `text` prop
+
+export const withTextTemplate = ({text}) =>
+  html`<button-component .text=${text}></button-component>`;
+
+<Canvas>
+  <Story
+    name="with text"
+    args={{
+        text:"YML"
+    }}
+  >
+    {withTextTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Button component With `link` Variant
+
+export const withVariantTemplate = ({ variant, text}) =>
+  html`<button-component  .text=${text} .variant=${variant}></button-component>`;
+
+<Canvas>
+  <Story
+    name="with link variant"
+    args={{
+        variant:"link",
+        text:'Button'
+    }}
+  >
+    {withVariantTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Button component With `Contained` Variant
+
+<Canvas>
+  <Story
+    name="with contained variant"
+    args={{
+        variant:"contained",
+        text:'Button'
+    }}
+  >
+    {withVariantTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Button component With `outlined` Variant
+
+<Canvas>
+  <Story
+    name="with outlined variant"
+    args={{
+        variant:"outlined",
+        text:'Button'
+    }}
+  >
+    {withVariantTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Button component With `Primary` color
+
+export const withColorTemplate = ({color, text}) =>
+  html`<button-component .color=${color} .text=${text}></button-component>`;
+
+<Canvas>
+  <Story
+    name="with primary color"
+    args={{
+        color:"primary",
+        text:'Button'
+    }}
+  >
+    {withColorTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Button component With `Secondary` color
+
+<Canvas>
+  <Story
+    name="with secondary color"
+    args={{
+        color:"secondary",
+        text:'Button'
+    }}
+  >
+    {withColorTemplate.bind({})}
+  </Story>
+</Canvas>
+
+
+Button component With `success` color
+
+<Canvas>
+  <Story
+    name="with success color"
+    args={{
+        color:"success",
+        text:'Button'
+    }}
+  >
+    {withColorTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Button component With `danger` color
+
+<Canvas>
+  <Story
+    name="with danger color"
+    args={{
+        color:"danger",
+        text:'Button'
+    }}
+  >
+    {withColorTemplate.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="with warning color"
+    args={{
+        color:"warning",
+        text:'Button'
+    }}
+  >
+    {withColorTemplate.bind({})}
+  </Story>
+</Canvas>
+
+
+Button component With `light` color
+
+<Canvas>
+  <Story
+    name="with light color"
+    args={{
+        color:"light",
+        text:'Button'
+    }}
+  >
+    {withColorTemplate.bind({})}
+  </Story>
+</Canvas>
+
+
+Button component With `dark` color
+
+<Canvas>
+  <Story
+    name="with dark color"
+    args={{
+        color:"dark",
+        text:'Button'
+    }}
+  >
+    {withColorTemplate.bind({})}
+  </Story>
+</Canvas>
+
+
+Button component With `round` border
+
+export const withRoundedTemplate = ({isRounded, text}) =>
+  html`<button-component .text=${text} .isRounded=${isRounded}></button-component>`;
+
+<Canvas>
+  <Story
+    name="with rounded prop"
+    args={{
+        isRounded:true,
+        text:'Button'
+    }}
+  >
+    {withRoundedTemplate.bind({})}
+  </Story>
+</Canvas>
+
+
+Button component With `disabled` property
+
+export const withDisableTemplate = ({isDisabled, text}) =>
+  html`<button-component .text=${text} .isDisabled=${isDisabled}></button-component>`;
+
+<Canvas>
+  <Story
+    name="with disabled prop"
+    args={{
+        isDisabled: true,
+        text:'Button'
+    }}
+  >
+    {withDisableTemplate.bind({})}
+  </Story>
+</Canvas>
+
+
+Button component With `full-width`
+
+export const withFullWidthTemplate = ({fullWidth, text}) =>
+  html`<button-component .text=${text} .fullWidth=${fullWidth}></button-component>`;
+
+<Canvas>
+  <Story
+    name="with fullWidth"
+    args={{
+        fullWidth: true,
+        text:'Button'
+    }}
+  >
+    {withFullWidthTemplate.bind({})}
+  </Story>
+</Canvas>
+
+
+Button component With `Slot`  
+
+export const withSlotTemplate = () =>
+  html`<button-component>
+  <a href="#" slotName="text">A Link</a></button-component>`;
+
+<Canvas>
+  <Story
+    name="with slot"
+    args={{
+        slotName:"text"
+    }}
+  >
+    {withSlotTemplate.bind({})}
+  </Story>
+</Canvas>
