@@ -1,4 +1,4 @@
 export const enum LinkTypes {
-    Default = 'default',
+    Default = 'link',
     Button = 'button',
   }
