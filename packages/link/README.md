@@ -371,8 +371,8 @@ link-component::part(custom-link) { /*Note : link-component is the custom compon
           <td>type</td>
           <td>String</td>
           <td>no</td>
-          <td>default</td>
-          <td>default | button</td>
+          <td>link</td>
+          <td>link | button</td>
           <td>by default anchor tag will just have a text without any styling, but if type is given as a button, UI changes to that of a button </td>
         </tr>
         <tr>
