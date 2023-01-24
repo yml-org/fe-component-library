@@ -99,12 +99,12 @@ B {
             href="#"
             part="custom-link"
             rel=""
-            target=""
+            target="_self"
             title=""
           >
             
         
-            <!--?lit$6304231325$-->
+            <!--?lit$01272464855$-->
             Click Here
             
         
@@ -132,12 +132,12 @@ B {
             href="#"
             part="custom-link"
             rel=""
-            target=""
+            target="_self"
             title=""
           >
             
         
-            <!--?lit$6304231325$-->
+            <!--?lit$01272464855$-->
             Click Here
             
         
@@ -165,12 +165,12 @@ B {
             href="#"
             part="custom-link"
             rel=""
-            target=""
+            target="_self"
             title=""
           >
             
         
-            <!--?lit$6304231325$-->
+            <!--?lit$01272464855$-->
             Click Here
             
         
@@ -189,7 +189,7 @@ B {
           "type": 1,
         },
         T {
-          "_$AH": undefined,
+          "_$AH": "_self",
           "_$AM": [Circular],
           "_$AN": undefined,
           "element": <a
@@ -198,12 +198,12 @@ B {
             href="#"
             part="custom-link"
             rel=""
-            target=""
+            target="_self"
             title=""
           >
             
         
-            <!--?lit$6304231325$-->
+            <!--?lit$01272464855$-->
             Click Here
             
         
@@ -231,12 +231,12 @@ B {
             href="#"
             part="custom-link"
             rel=""
-            target=""
+            target="_self"
             title=""
           >
             
         
-            <!--?lit$6304231325$-->
+            <!--?lit$01272464855$-->
             Click Here
             
         
@@ -264,12 +264,12 @@ B {
             href="#"
             part="custom-link"
             rel=""
-            target=""
+            target="_self"
             title=""
           >
             
         
-            <!--?lit$6304231325$-->
+            <!--?lit$01272464855$-->
             Click Here
             
         
@@ -288,7 +288,7 @@ B {
           "type": 1,
         },
         C {
-          "_$AA": <!--?lit$6304231325$-->,
+          "_$AA": <!--?lit$01272464855$-->,
           "_$AB": 
         ,
           "_$AH": "Click Here",
@@ -441,12 +441,12 @@ B {
               href="#"
               part="custom-link"
               rel=""
-              target=""
+              target="_self"
               title=""
             >
               
         
-              <!--?lit$6304231325$-->
+              <!--?lit$01272464855$-->
               Click Here
               
         
@@ -474,12 +474,12 @@ B {
               href="#"
               part="custom-link"
               rel=""
-              target=""
+              target="_self"
               title=""
             >
               
         
-              <!--?lit$6304231325$-->
+              <!--?lit$01272464855$-->
               Click Here
               
         
@@ -507,12 +507,12 @@ B {
               href="#"
               part="custom-link"
               rel=""
-              target=""
+              target="_self"
               title=""
             >
               
         
-              <!--?lit$6304231325$-->
+              <!--?lit$01272464855$-->
               Click Here
               
         
@@ -531,7 +531,7 @@ B {
             "type": 1,
           },
           T {
-            "_$AH": undefined,
+            "_$AH": "_self",
             "_$AM": [Circular],
             "_$AN": undefined,
             "element": <a
@@ -540,12 +540,12 @@ B {
               href="#"
               part="custom-link"
               rel=""
-              target=""
+              target="_self"
               title=""
             >
               
         
-              <!--?lit$6304231325$-->
+              <!--?lit$01272464855$-->
               Click Here
               
         
@@ -573,12 +573,12 @@ B {
               href="#"
               part="custom-link"
               rel=""
-              target=""
+              target="_self"
               title=""
             >
               
         
-              <!--?lit$6304231325$-->
+              <!--?lit$01272464855$-->
               Click Here
               
         
@@ -606,12 +606,12 @@ B {
               href="#"
               part="custom-link"
               rel=""
-              target=""
+              target="_self"
               title=""
             >
               
         
-              <!--?lit$6304231325$-->
+              <!--?lit$01272464855$-->
               Click Here
               
         
@@ -630,7 +630,7 @@ B {
             "type": 1,
           },
           C {
-            "_$AA": <!--?lit$6304231325$-->,
+            "_$AA": <!--?lit$01272464855$-->,
             "_$AB": 
         ,
             "_$AH": "Click Here",
@@ -673,6 +673,7 @@ B {
     },
   },
   "slotName": "",
-  "type": "default",
+  "target": "_self",
+  "type": "link",
 }
 `;

@@ -9,11 +9,17 @@ import { msg, str } from '@lit/localize';
 export class ButtonComponent extends TailwindElement(null) {
   @property()
   text?: string;
+  @property()
   variant?: VariantType; 
+  @property()
   color?: colorType; 
+  @property()
   slotName?: string;
+  @property()
   isDisabled?:boolean;
+  @property()
   fullWidth?: boolean;
+  @property()
   isRounded?: boolean;
   
 
@@ -31,6 +37,7 @@ export class ButtonComponent extends TailwindElement(null) {
       <button
         tabindex=${this.isDisabled? '-1': '0'}
         type="button"
+        part="custom-button"
         role=${msg(str`button`)}
         class=${this.getClassTheme()}
       >
