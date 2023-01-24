@@ -8,18 +8,18 @@ import { msg, str } from '@lit/localize';
 @customElement('button-component')
 export class ButtonComponent extends TailwindElement(null) {
   @property()
-  text?: string = 'Button';
-  variant?: VariantType = 'contained'; 
-  color?: colorType = 'primary'; 
-  slotName?: string = '';
-  isDisabled?:boolean = false;
-  fullWidth?: boolean = false;
-  isRounded?: boolean = false;
+  text?: string;
+  variant?: VariantType; 
+  color?: colorType; 
+  slotName?: string;
+  isDisabled?:boolean;
+  fullWidth?: boolean;
+  isRounded?: boolean;
   
 
   protected getClassTheme() {
     return `inline-block px-6 font-medium text-xs leading-tight uppercase focus:outline-none focus:ring-0 transition duration-150 ease-in-out
-      ${themeOptions[this.color][this.variant]}
+      ${themeOptions[this.color || 'primary'][this.variant || 'contained']}
       ${this.isRounded ? 'rounded-full' : 'rounded'}
       ${this.fullWidth && 'w-full'}
       ${this.isDisabled && 'pointer-events-none opacity-60'}
