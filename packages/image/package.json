@@ -1,5 +1,5 @@
 {
-  "name": "butopen-web-components-tailwind-starter-kit",
+  "name": "image",
   "version": "1.0.1",
   "scripts": {
     "start": "vite dev --host",

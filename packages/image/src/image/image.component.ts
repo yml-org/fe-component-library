@@ -2,41 +2,18 @@ import { msg, str } from '@lit/localize';
 import { html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { TailwindElement } from '../shared/tailwind.element';
-
-interface border {
-  width?: string;
-  type?:
-    | 'solid'
-    | 'dotted'
-    | 'dashed'
-    | 'double'
-    | 'none'
-    | 'groove'
-    | 'ridge'
-    | 'inset'
-    | 'outset';
-  color?: string;
-}
-
-interface size {
-  width?: string;
-  height?: string;
-  maxHeight?: string;
-  minHeight?: string;
-  maxWidth?: string;
-  minWidth?: string;
-  border?: border;
-  rounded?: boolean;
-  objectFit?: 'contain' | 'fill' | 'scale-down' | 'fit' | 'none' | 'cover';
-}
+import {Size } from '../constants/image.component'
 
 @customElement('image-component')
 export class ImageComponent extends TailwindElement(null) {
   @property()
-  altText? = 'image';
-  src = '';
-  placeholderImg? = '';
-  size?: size = {};
+  altText?:string;
+  @property()
+  src:string;
+  @property()
+  placeholderImg?:string;
+  @property()
+  size?: Size;
 
   render() {
     return html`
@@ -47,7 +24,7 @@ export class ImageComponent extends TailwindElement(null) {
      src=${this.placeholderImg}
      srcset="${this.src}"
      alt="${this.altText ? this.altText : msg(str`image`)}"
-     part="image"
+     part="custom-image"
      width=${this.size?.width}
      height=${this.size?.height}
      min-width=${this.size?.minWidth}
