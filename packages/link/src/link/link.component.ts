@@ -12,7 +12,7 @@ export class LinkComponent extends TailwindElement(null) {
   href?: string = '#';
   rel?: string = '';
   target?: string = '_self';
-  type?: 'default' | 'button' = 'default';
+  type?: 'link' | 'button' = 'link';
   slotName?: string = '';
 
   protected getClassTheme() {

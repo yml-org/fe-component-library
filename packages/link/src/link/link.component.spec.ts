@@ -29,18 +29,4 @@ describe('link-component', () => {
     const elem = getShadowRoot(LINK_COMPONENT).querySelector('a');
     expect(elem.classList.contains('text-blue-600')).toBe(true);
   });
-
-  
-  it('renders the component with type button', async () => {
-    document.body.getElementsByTagName(LINK_COMPONENT)[0].remove();
-    linkElement = window.document.createElement(LINK_COMPONENT) as LitElement;
-    // linkElement['target'] = "_blank";
-    linkElement.setAttribute('target', '_blank');
-
-    window.document.body.appendChild(linkElement);
-    await linkElement.updateComplete;
-    const elem = getShadowRoot(LINK_COMPONENT).querySelector('a');
-    console.log(elem.getAttribute('target'))
-    // expect(elem.classList.contains(' bg-blue-700')).toBe(true);
-  });
 });
