@@ -14,7 +14,7 @@ export const linkConfig: Link = {
   href: 'https://www.w3schools.com/html/html_links.asp',
   rel: 'noopener noreferrer',
   target: '_blank',
-  type: 'default',
+  type: 'link',
 };
 
 export const linkConfigTypeButton: Link = {
@@ -32,7 +32,7 @@ export const linkConfigSlot: Link = {
   href: 'https://www.w3schools.com/html/html_links.asp',
   rel: 'noopener noreferrer',
   target: '_blank',
-  type: 'default',
+  type: 'link',
   slotName: 'newSlot',
 };
 
