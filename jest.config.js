@@ -1,8 +1,5 @@
 module.exports = {
-  preset: 'ts-jest',
-  runner: 'jest-electron/runner',
   rootDir: '.',
-  testEnvironment: 'jest-electron/environment',
   projects: [
     {
       preset: 'ts-jest',
@@ -29,6 +26,15 @@ module.exports = {
       displayName: 'image',
       setupFiles: ['<rootDir>/packages/image/dist/assets/index.js'],
       testMatch: ['<rootDir>/packages/image/src/**/*.(test|spec).ts'],
+      collectCoverageFrom: ['**/*.{js,ts}', '!**/node_modules/**'],
+    },
+    {
+      preset: 'ts-jest',
+      runner: 'jest-electron/runner',
+      testEnvironment: 'jest-electron/environment',
+      displayName: 'link',
+      setupFiles: ['<rootDir>/packages/link/dist/assets/index.js'],
+      testMatch: ['<rootDir>/packages/link/src/**/*.(test|spec).ts'],
       collectCoverageFrom: ['**/*.{js,ts}', '!**/node_modules/**'],
     },
   ],
