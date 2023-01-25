@@ -1,0 +1,102 @@
+import { html } from 'lit';
+import { Story, Meta, Canvas } from '@storybook/addon-docs';
+import './link.component';
+import {
+  linkConfig,
+  linkConfigTypeButton,
+  linkConfigSlot,
+  linkConfigSlotTypeButton,
+} from '../constants/link.variants';
+
+<Meta title="Link" />
+
+# Link Component
+
+Basic link component without `props`
+
+export const TemplateDefault = () => html`<link-component></link-component>`;
+
+<Canvas columns={1}>
+  <Story name="default">{TemplateDefault.bind({})}</Story>
+</Canvas>
+
+Link component With `props`
+
+export const TemplateProps = (args) => html`<link-component
+  .href=${args.linkProps.href}
+  .text=${args.linkProps.text}
+  .linkTitle=${args.linkProps.linkTitle}
+  .rel=${args.linkProps.rel}
+  .target=${args.linkProps.target}
+  .type=${args.linkProps.type}
+>
+</link-component>`;
+
+<Canvas columns={1}>
+  <Story
+    name="withProps"
+    args={{
+      linkProps: linkConfig,
+    }}
+  >
+    {TemplateProps.bind({})}
+  </Story>
+</Canvas>
+
+Link component with type `button`
+
+<Canvas columns={1}>
+  <Story
+    name="typeButton"
+    args={{
+      linkProps: linkConfigTypeButton,
+    }}
+  >
+    {TemplateProps.bind({})}
+  </Story>
+</Canvas>
+
+Link component with `slot`
+
+export const TemplateSlot = (args) => html`<link-component
+  .href=${args.linkSlot.href}
+  .text=${args.linkSlot.text}
+  .linkTitle=${args.linkSlot.linkTitle}
+  .rel=${args.linkSlot.rel}
+  .target=${args.linkSlot.target}
+  .type=${args.linkSlot.type}
+  .slotName=${args.linkSlot.slotName}
+>
+  <div slot="newSlot" style="width:auto;  display: inline-block">
+    <p>Slot elements wrapped within an anchor tag</p>
+    <img
+      class="h-9 w-9"
+      src="https://avatars.mds.yandex.net/i?id=84dbd50839c3d640ebfc0de20994c30d-4473719-images-taas-consumers&n=27&h=480&w=480"
+      alt=""
+    />
+  </div>
+</link-component>`;
+
+<Canvas columns={1}>
+  <Story
+    name="withSlot"
+    args={{
+      linkSlot: linkConfigSlot,
+    }}
+  >
+    {TemplateSlot.bind({})}
+  </Story>
+</Canvas>
+
+Link component with `slot` and type `button`
+
+<Canvas columns={1}>
+  <Story
+    name="withSlotTypeButton"
+    args={{
+      linkSlot: linkConfigSlotTypeButton,
+    }}
+  >
+    {TemplateSlot.bind({})}
+  </Story>
+</Canvas>
