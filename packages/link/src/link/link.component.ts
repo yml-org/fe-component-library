@@ -3,16 +3,23 @@ import { msg, str } from '@lit/localize';
 import { customElement, property } from 'lit/decorators.js';
 import { TailwindElement } from '../shared/tailwind.element';
 import { LinkTypes } from '../constants/link.component';
+import { LinkComponentTypes } from '../types/link.component';
 
 @customElement('link-component')
 export class LinkComponent extends TailwindElement(null) {
   @property()
   text?: string = 'Click Here';
+  @property()
   linkTitle?: string = '';
+  @property()
   href?: string = '#';
+  @property()
   rel?: string = '';
+  @property()
   target?: string = '_self';
-  type?: 'link' | 'button' = 'link';
+  @property()
+  type?: LinkComponentTypes = 'link';
+  @property()
   slotName?: string = '';
 
   protected getClassTheme() {

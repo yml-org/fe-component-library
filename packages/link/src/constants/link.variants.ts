@@ -1,12 +1,4 @@
-interface Link {
-  text?: string;
-  linkTitle?: string;
-  href: string;
-  rel?: string;
-  target?: string;
-  type?: string;
-  slotName?: string;
-}
+import { Link } from '../types/link.component';
 
 export const linkConfig: Link = {
   text: 'Click here to test',

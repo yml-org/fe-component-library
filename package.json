@@ -1,6 +1,7 @@
 {
   "name": "root",
   "private": true,
+  "version": "1.0.0",
   "workspaces": [
     "packages/*"
   ],
@@ -48,13 +49,14 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint"
     }
   },
   "lint-staged": {
-    "**/*.{js,mjs,ts}": [
+    "packages/**/*.{js,mjs,ts}": [
       "eslint \"packages/**/src/**\" --fix",
-      "prettier --write"
+      "prettier --write",
+      "git add"
     ]
   }
 }
