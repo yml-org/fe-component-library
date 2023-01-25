@@ -1,6 +1,6 @@
 {
-  "name": "link-web-components-tailwind-starter-kit",
-  "version": "1.0.1",
+  "name": "link",
+  "version": "1.0.0",
   "scripts": {
     "start": "vite dev --host",
     "dev": "vite dev --host",

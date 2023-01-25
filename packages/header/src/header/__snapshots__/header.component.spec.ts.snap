@@ -2,12 +2,10 @@
 
 exports[`header-component matches component snapshot 1`] = `
 R {
-R {
   "_$AL": Map {},
   "_$Do": H {
     "_$AA": <!---->,
     "_$AB": null,
-    "_$AH": Tt {
     "_$AH": Tt {
       "_$AD": P {
         "el": <template />,
@@ -20,8 +18,6 @@ R {
               "",
               "
       ",
-              "
-      ",
               " ",
             ],
             "type": 1,
@@ -32,7 +28,6 @@ R {
             "name": "class",
             "strings": Array [
               "inline-flex items-center justify-center rounded-md p-2 ",
-              " focus:outline-none btn-tap-color",
               " focus:outline-none btn-tap-color",
             ],
             "type": 1,
@@ -84,7 +79,6 @@ R {
           Object {
             "index": 9,
             "type": 2,
-            "type": 2,
           },
           Object {
             "ctor": [Function],
@@ -134,18 +128,13 @@ R {
       "_$AN": undefined,
       "u": Array [
         I {
-        I {
           "_$AH": Array [
             "bg-black",
-            "text-white",
             "text-white",
           ],
           "_$AM": [Circular],
           "_$AN": undefined,
           "element": <nav
-            class="bg-black
-      text-white "
-            part="nav"
             class="bg-black
       text-white "
             part="nav"
@@ -168,7 +157,6 @@ R {
                 <div
                   class="absolute inset-y-0 left-0 flex items-center sm:hidden"
                   part="menu-icon-container"
-                  part="menu-icon-container"
                 >
                   
               
@@ -182,13 +170,11 @@ R {
                     aria-label="mobile button"
                     class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
                     part="menu-icon-button"
-                    class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
-                    part="menu-icon-button"
                     type="button"
                   >
                     
                 
-                    <!--?lit$1878932175$-->
+                    <!--?lit$907127582$-->
                      
                     <svg
                       aria-hidden="true"
@@ -224,19 +210,16 @@ R {
                 >
                   
               
-              
                   <div
                     class="flex flex-shrink-0 items-center"
-                    part="logo-container"
                     part="logo-container"
                   >
                     
                 
-                    <!--?lit$1878932175$-->
+                    <!--?lit$907127582$-->
                     <img
                       alt="Company logo"
                       class="hidden h-8 w-8 lg:block"
-                      part="logo"
                       part="logo"
                       src="https://ymedialabs.atlassian.net/s/1jmxwi/b/8/d35727372e299c952e88a10ef82bbaf6/_/jira-logo-scaled.png"
                     />
@@ -255,14 +238,13 @@ R {
                     <div
                       class="flex flex-shrink-0 items-center font-bold  pl-4 text-white "
                       part="headerText-container"
-                      part="headerText-container"
                     >
                       
                 
                       <h2
                         part="headerText"
                       >
-                        <!--?lit$1878932175$-->
+                        <!--?lit$907127582$-->
                         YML
                       </h2>
                       
@@ -279,14 +261,13 @@ R {
                       <div
                         class="flex space-x-4 pl-10"
                         part="menu-link-container"
-                        part="menu-link-container"
                       >
                         
                  
                 
-                        <!--?lit$1878932175$-->
+                        <!--?lit$907127582$-->
                          
-                        <!--?lit$1878932175$-->
+                        <!--?lit$907127582$-->
                         <!--?-->
                         
                 
@@ -303,7 +284,6 @@ R {
             
                   <div
                     class="inset-y-0 right-0 flex pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
-                    part="right-icons-container"
                     part="right-icons-container"
                   >
                     
@@ -340,13 +320,12 @@ R {
                 <div
                   class="space-y-1 px-2 pt-2 pb-3"
                   part="menu-link-container-mobile"
-                  part="menu-link-container-mobile"
                 >
                   
           
-                  <!--?lit$1878932175$-->
+                  <!--?lit$907127582$-->
                    
-                  <!--?lit$1878932175$-->
+                  <!--?lit$907127582$-->
                   <!--?-->
                   
           
@@ -370,13 +349,10 @@ R {
             "",
             "
       ",
-            "
-      ",
             " ",
           ],
           "type": 1,
         },
-        I {
         I {
           "_$AH": Array [
             "hover:text-white",
@@ -389,13 +365,11 @@ R {
             aria-label="mobile button"
             class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
             part="menu-icon-button"
-            class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
-            part="menu-icon-button"
             type="button"
           >
             
                 
-            <!--?lit$1878932175$-->
+            <!--?lit$907127582$-->
              
             <svg
               aria-hidden="true"
@@ -429,11 +403,9 @@ R {
           "strings": Array [
             "inline-flex items-center justify-center rounded-md p-2 ",
             " focus:outline-none btn-tap-color",
-            " focus:outline-none btn-tap-color",
           ],
           "type": 1,
         },
-        I {
         I {
           "_$AH": "mobile menu",
           "_$AM": [Circular],
@@ -444,13 +416,11 @@ R {
             aria-label="mobile button"
             class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
             part="menu-icon-button"
-            class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
-            part="menu-icon-button"
             type="button"
           >
             
                 
-            <!--?lit$1878932175$-->
+            <!--?lit$907127582$-->
              
             <svg
               aria-hidden="true"
@@ -484,7 +454,6 @@ R {
           "type": 1,
         },
         I {
-        I {
           "_$AH": false,
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -494,13 +463,11 @@ R {
             aria-label="mobile button"
             class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
             part="menu-icon-button"
-            class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
-            part="menu-icon-button"
             type="button"
           >
             
                 
-            <!--?lit$1878932175$-->
+            <!--?lit$907127582$-->
              
             <svg
               aria-hidden="true"
@@ -534,7 +501,6 @@ R {
           "type": 1,
         },
         I {
-        I {
           "_$AH": "mobile button",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -544,13 +510,11 @@ R {
             aria-label="mobile button"
             class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
             part="menu-icon-button"
-            class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
-            part="menu-icon-button"
             type="button"
           >
             
                 
-            <!--?lit$1878932175$-->
+            <!--?lit$907127582$-->
              
             <svg
               aria-hidden="true"
@@ -584,7 +548,6 @@ R {
           "type": 1,
         },
         Ut {
-        Ut {
           "_$AH": [Function],
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -594,13 +557,11 @@ R {
             aria-label="mobile button"
             class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
             part="menu-icon-button"
-            class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
-            part="menu-icon-button"
             type="button"
           >
             
                 
-            <!--?lit$1878932175$-->
+            <!--?lit$907127582$-->
              
             <svg
               aria-hidden="true"
@@ -634,10 +595,9 @@ R {
           "type": 5,
         },
         H {
-          "_$AA": <!--?lit$1878932175$-->,
+          "_$AA": <!--?lit$907127582$-->,
           "_$AB": 
               ,
-          "_$AH": Tt {
           "_$AH": Tt {
             "_$AD": P {
               "el": <template />,
@@ -657,7 +617,6 @@ R {
             "_$AM": [Circular],
             "_$AN": undefined,
             "u": Array [
-              I {
               I {
                 "_$AH": "Open menu",
                 "_$AM": [Circular],
@@ -703,7 +662,7 @@ R {
           "type": 2,
         },
         H {
-          "_$AA": <!--?lit$1878932175$-->,
+          "_$AA": <!--?lit$907127582$-->,
           "_$AB": 
               ,
           "_$AH": Tt {
@@ -792,14 +751,13 @@ R {
           "element": <div
             class="flex flex-shrink-0 items-center font-bold  pl-4 text-white "
             part="headerText-container"
-            part="headerText-container"
           >
             
                 
             <h2
               part="headerText"
             >
-              <!--?lit$1878932175$-->
+              <!--?lit$907127582$-->
               YML
             </h2>
             
@@ -818,7 +776,7 @@ R {
           "type": 1,
         },
         H {
-          "_$AA": <!--?lit$1878932175$-->,
+          "_$AA": <!--?lit$907127582$-->,
           "_$AB": null,
           "_$AH": "YML",
           "_$AM": [Circular],
@@ -832,10 +790,9 @@ R {
           "type": 2,
         },
         H {
-          "_$AA": <!--?lit$1878932175$-->,
+          "_$AA": <!--?lit$907127582$-->,
           "_$AB": 
                 ,
-          "_$AH": Tt {
           "_$AH": Tt {
             "_$AD": P {
               "el": <template />,
@@ -850,7 +807,7 @@ R {
             "_$AN": undefined,
             "u": Array [
               H {
-                "_$AA": <!--?lit$1878932175$-->,
+                "_$AA": <!--?lit$907127582$-->,
                 "_$AB": <!--?-->,
                 "_$AH": Array [],
                 "_$AM": [Circular],
@@ -876,7 +833,6 @@ R {
           "type": 2,
         },
         I {
-        I {
           "_$AH": "bell",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -892,7 +848,6 @@ R {
           "type": 1,
         },
         Nt {
-        Nt {
           "_$AH": true,
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -907,13 +862,12 @@ R {
             <div
               class="space-y-1 px-2 pt-2 pb-3"
               part="menu-link-container-mobile"
-              part="menu-link-container-mobile"
             >
               
           
-              <!--?lit$1878932175$-->
+              <!--?lit$907127582$-->
                
-              <!--?lit$1878932175$-->
+              <!--?lit$907127582$-->
               <!--?-->
               
           
@@ -931,10 +885,9 @@ R {
           "type": 4,
         },
         H {
-          "_$AA": <!--?lit$1878932175$-->,
+          "_$AA": <!--?lit$907127582$-->,
           "_$AB": 
           ,
-          "_$AH": Tt {
           "_$AH": Tt {
             "_$AD": P {
               "el": <template />,
@@ -949,7 +902,7 @@ R {
             "_$AN": undefined,
             "u": Array [
               H {
-                "_$AA": <!--?lit$1878932175$-->,
+                "_$AA": <!--?lit$907127582$-->,
                 "_$AB": <!--?-->,
                 "_$AH": Array [],
                 "_$AM": [Circular],
@@ -1019,7 +972,6 @@ R {
       "_$AA": <!---->,
       "_$AB": null,
       "_$AH": Tt {
-      "_$AH": Tt {
         "_$AD": P {
           "el": <template />,
           "parts": Array [
@@ -1029,8 +981,6 @@ R {
               "name": "class",
               "strings": Array [
                 "",
-                "
-      ",
                 "
       ",
                 " ",
@@ -1043,7 +993,6 @@ R {
               "name": "class",
               "strings": Array [
                 "inline-flex items-center justify-center rounded-md p-2 ",
-                " focus:outline-none btn-tap-color",
                 " focus:outline-none btn-tap-color",
               ],
               "type": 1,
@@ -1095,7 +1044,6 @@ R {
             Object {
               "index": 9,
               "type": 2,
-              "type": 2,
             },
             Object {
               "ctor": [Function],
@@ -1145,18 +1093,13 @@ R {
         "_$AN": undefined,
         "u": Array [
           I {
-          I {
             "_$AH": Array [
               "bg-black",
-              "text-white",
               "text-white",
             ],
             "_$AM": [Circular],
             "_$AN": undefined,
             "element": <nav
-              class="bg-black
-      text-white "
-              part="nav"
               class="bg-black
       text-white "
               part="nav"
@@ -1179,7 +1122,6 @@ R {
                   <div
                     class="absolute inset-y-0 left-0 flex items-center sm:hidden"
                     part="menu-icon-container"
-                    part="menu-icon-container"
                   >
                     
               
@@ -1193,13 +1135,11 @@ R {
                       aria-label="mobile button"
                       class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
                       part="menu-icon-button"
-                      class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
-                      part="menu-icon-button"
                       type="button"
                     >
                       
                 
-                      <!--?lit$1878932175$-->
+                      <!--?lit$907127582$-->
                        
                       <svg
                         aria-hidden="true"
@@ -1235,19 +1175,16 @@ R {
                   >
                     
               
-              
                     <div
                       class="flex flex-shrink-0 items-center"
-                      part="logo-container"
                       part="logo-container"
                     >
                       
                 
-                      <!--?lit$1878932175$-->
+                      <!--?lit$907127582$-->
                       <img
                         alt="Company logo"
                         class="hidden h-8 w-8 lg:block"
-                        part="logo"
                         part="logo"
                         src="https://ymedialabs.atlassian.net/s/1jmxwi/b/8/d35727372e299c952e88a10ef82bbaf6/_/jira-logo-scaled.png"
                       />
@@ -1266,14 +1203,13 @@ R {
                       <div
                         class="flex flex-shrink-0 items-center font-bold  pl-4 text-white "
                         part="headerText-container"
-                        part="headerText-container"
                       >
                         
                 
                         <h2
                           part="headerText"
                         >
-                          <!--?lit$1878932175$-->
+                          <!--?lit$907127582$-->
                           YML
                         </h2>
                         
@@ -1290,14 +1226,13 @@ R {
                         <div
                           class="flex space-x-4 pl-10"
                           part="menu-link-container"
-                          part="menu-link-container"
                         >
                           
                  
                 
-                          <!--?lit$1878932175$-->
+                          <!--?lit$907127582$-->
                            
-                          <!--?lit$1878932175$-->
+                          <!--?lit$907127582$-->
                           <!--?-->
                           
                 
@@ -1314,7 +1249,6 @@ R {
             
                     <div
                       class="inset-y-0 right-0 flex pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
-                      part="right-icons-container"
                       part="right-icons-container"
                     >
                       
@@ -1351,13 +1285,12 @@ R {
                   <div
                     class="space-y-1 px-2 pt-2 pb-3"
                     part="menu-link-container-mobile"
-                    part="menu-link-container-mobile"
                   >
                     
           
-                    <!--?lit$1878932175$-->
+                    <!--?lit$907127582$-->
                      
-                    <!--?lit$1878932175$-->
+                    <!--?lit$907127582$-->
                     <!--?-->
                     
           
@@ -1381,13 +1314,10 @@ R {
               "",
               "
       ",
-              "
-      ",
               " ",
             ],
             "type": 1,
           },
-          I {
           I {
             "_$AH": Array [
               "hover:text-white",
@@ -1400,13 +1330,11 @@ R {
               aria-label="mobile button"
               class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
               part="menu-icon-button"
-              class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
-              part="menu-icon-button"
               type="button"
             >
               
                 
-              <!--?lit$1878932175$-->
+              <!--?lit$907127582$-->
                
               <svg
                 aria-hidden="true"
@@ -1440,11 +1368,9 @@ R {
             "strings": Array [
               "inline-flex items-center justify-center rounded-md p-2 ",
               " focus:outline-none btn-tap-color",
-              " focus:outline-none btn-tap-color",
             ],
             "type": 1,
           },
-          I {
           I {
             "_$AH": "mobile menu",
             "_$AM": [Circular],
@@ -1455,13 +1381,11 @@ R {
               aria-label="mobile button"
               class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
               part="menu-icon-button"
-              class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
-              part="menu-icon-button"
               type="button"
             >
               
                 
-              <!--?lit$1878932175$-->
+              <!--?lit$907127582$-->
                
               <svg
                 aria-hidden="true"
@@ -1495,7 +1419,6 @@ R {
             "type": 1,
           },
           I {
-          I {
             "_$AH": false,
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -1505,13 +1428,11 @@ R {
               aria-label="mobile button"
               class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
               part="menu-icon-button"
-              class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
-              part="menu-icon-button"
               type="button"
             >
               
                 
-              <!--?lit$1878932175$-->
+              <!--?lit$907127582$-->
                
               <svg
                 aria-hidden="true"
@@ -1545,7 +1466,6 @@ R {
             "type": 1,
           },
           I {
-          I {
             "_$AH": "mobile button",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -1555,13 +1475,11 @@ R {
               aria-label="mobile button"
               class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
               part="menu-icon-button"
-              class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
-              part="menu-icon-button"
               type="button"
             >
               
                 
-              <!--?lit$1878932175$-->
+              <!--?lit$907127582$-->
                
               <svg
                 aria-hidden="true"
@@ -1595,7 +1513,6 @@ R {
             "type": 1,
           },
           Ut {
-          Ut {
             "_$AH": [Function],
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -1605,13 +1522,11 @@ R {
               aria-label="mobile button"
               class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
               part="menu-icon-button"
-              class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
-              part="menu-icon-button"
               type="button"
             >
               
                 
-              <!--?lit$1878932175$-->
+              <!--?lit$907127582$-->
                
               <svg
                 aria-hidden="true"
@@ -1645,10 +1560,9 @@ R {
             "type": 5,
           },
           H {
-            "_$AA": <!--?lit$1878932175$-->,
+            "_$AA": <!--?lit$907127582$-->,
             "_$AB": 
               ,
-            "_$AH": Tt {
             "_$AH": Tt {
               "_$AD": P {
                 "el": <template />,
@@ -1668,7 +1582,6 @@ R {
               "_$AM": [Circular],
               "_$AN": undefined,
               "u": Array [
-                I {
                 I {
                   "_$AH": "Open menu",
                   "_$AM": [Circular],
@@ -1714,7 +1627,7 @@ R {
             "type": 2,
           },
           H {
-            "_$AA": <!--?lit$1878932175$-->,
+            "_$AA": <!--?lit$907127582$-->,
             "_$AB": 
               ,
             "_$AH": Tt {
@@ -1803,14 +1716,13 @@ R {
             "element": <div
               class="flex flex-shrink-0 items-center font-bold  pl-4 text-white "
               part="headerText-container"
-              part="headerText-container"
             >
               
                 
               <h2
                 part="headerText"
               >
-                <!--?lit$1878932175$-->
+                <!--?lit$907127582$-->
                 YML
               </h2>
               
@@ -1829,7 +1741,7 @@ R {
             "type": 1,
           },
           H {
-            "_$AA": <!--?lit$1878932175$-->,
+            "_$AA": <!--?lit$907127582$-->,
             "_$AB": null,
             "_$AH": "YML",
             "_$AM": [Circular],
@@ -1843,10 +1755,9 @@ R {
             "type": 2,
           },
           H {
-            "_$AA": <!--?lit$1878932175$-->,
+            "_$AA": <!--?lit$907127582$-->,
             "_$AB": 
                 ,
-            "_$AH": Tt {
             "_$AH": Tt {
               "_$AD": P {
                 "el": <template />,
@@ -1861,7 +1772,7 @@ R {
               "_$AN": undefined,
               "u": Array [
                 H {
-                  "_$AA": <!--?lit$1878932175$-->,
+                  "_$AA": <!--?lit$907127582$-->,
                   "_$AB": <!--?-->,
                   "_$AH": Array [],
                   "_$AM": [Circular],
@@ -1887,7 +1798,6 @@ R {
             "type": 2,
           },
           I {
-          I {
             "_$AH": "bell",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -1903,7 +1813,6 @@ R {
             "type": 1,
           },
           Nt {
-          Nt {
             "_$AH": true,
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -1918,13 +1827,12 @@ R {
               <div
                 class="space-y-1 px-2 pt-2 pb-3"
                 part="menu-link-container-mobile"
-                part="menu-link-container-mobile"
               >
                 
           
-                <!--?lit$1878932175$-->
+                <!--?lit$907127582$-->
                  
-                <!--?lit$1878932175$-->
+                <!--?lit$907127582$-->
                 <!--?-->
                 
           
@@ -1942,10 +1850,9 @@ R {
             "type": 4,
           },
           H {
-            "_$AA": <!--?lit$1878932175$-->,
+            "_$AA": <!--?lit$907127582$-->,
             "_$AB": 
           ,
-            "_$AH": Tt {
             "_$AH": Tt {
               "_$AD": P {
                 "el": <template />,
@@ -1960,7 +1867,7 @@ R {
               "_$AN": undefined,
               "u": Array [
                 H {
-                  "_$AA": <!--?lit$1878932175$-->,
+                  "_$AA": <!--?lit$907127582$-->,
                   "_$AB": <!--?-->,
                   "_$AH": Array [],
                   "_$AM": [Circular],
@@ -2006,19 +1913,8 @@ R {
       "textColor": "text-gray-300",
       "textHoverColorDesktop": "hover:text-white",
       "textHoverColorMobile": "hover:text-black",
-      "bgHoverColor": "hover:bg-gray-300",
-      "headerTextColor": "text-white",
-      "textColor": "text-gray-300",
-      "textHoverColorDesktop": "hover:text-white",
-      "textHoverColorMobile": "hover:text-black",
     },
     "light": Object {
-      "bgColor": "bg-gray-200",
-      "bgHoverColor": "hover:bg-stone-700",
-      "headerTextColor": "text-black",
-      "textColor": "text-stone-900",
-      "textHoverColorDesktop": "hover:text-black",
-      "textHoverColorMobile": "hover:text-white",
       "bgColor": "bg-gray-200",
       "bgHoverColor": "hover:bg-stone-700",
       "headerTextColor": "text-black",
