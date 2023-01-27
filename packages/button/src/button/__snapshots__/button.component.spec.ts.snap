@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`button-component matches component snapshot 1`] = `
-w {
+u {
   "_$AL": Map {},
-  "_$Do": q {
+  "_$Do": O {
     "_$AA": <!---->,
     "_$AB": null,
-    "_$AH": ve {
-      "_$AD": V {
+    "_$AH": yt {
+      "_$AD": N {
         "el": <template />,
         "parts": Array [
           Object {
@@ -59,7 +59,7 @@ w {
       "_$AM": [Circular],
       "_$AN": undefined,
       "u": Array [
-        et {
+        R {
           "_$AH": "0",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -77,7 +77,7 @@ w {
           >
             
         
-            <!--?lit$416505284$-->
+            <!--?lit$683458172$-->
             
         
             <slot
@@ -94,7 +94,7 @@ w {
           },
           "type": 1,
         },
-        et {
+        R {
           "_$AH": "button",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -112,7 +112,7 @@ w {
           >
             
         
-            <!--?lit$416505284$-->
+            <!--?lit$683458172$-->
             
         
             <slot
@@ -129,7 +129,7 @@ w {
           },
           "type": 1,
         },
-        et {
+        R {
           "_$AH": "inline-block px-6 font-medium text-xs leading-tight uppercase focus:outline-none focus:ring-0 transition duration-150 ease-in-out
       py-2.5 bg-blue-600 text-white shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg  active:bg-blue-800 active:shadow-lg
       rounded
@@ -152,7 +152,7 @@ w {
           >
             
         
-            <!--?lit$416505284$-->
+            <!--?lit$683458172$-->
             
         
             <slot
@@ -169,8 +169,8 @@ w {
           },
           "type": 1,
         },
-        q {
-          "_$AA": <!--?lit$416505284$-->,
+        O {
+          "_$AA": <!--?lit$683458172$-->,
           "_$AB": 
         ,
           "_$AH": Symbol(lit-nothing),
@@ -184,7 +184,7 @@ w {
           },
           "type": 2,
         },
-        et {
+        R {
           "_$AH": undefined,
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -223,11 +223,11 @@ w {
     "renderBefore": null,
   },
   "renderRoot": ShadowRoot {
-    "_$litPart$": q {
+    "_$litPart$": O {
       "_$AA": <!---->,
       "_$AB": null,
-      "_$AH": ve {
-        "_$AD": V {
+      "_$AH": yt {
+        "_$AD": N {
           "el": <template />,
           "parts": Array [
             Object {
@@ -279,7 +279,7 @@ w {
         "_$AM": [Circular],
         "_$AN": undefined,
         "u": Array [
-          et {
+          R {
             "_$AH": "0",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -297,7 +297,7 @@ w {
             >
               
         
-              <!--?lit$416505284$-->
+              <!--?lit$683458172$-->
               
         
               <slot
@@ -314,7 +314,7 @@ w {
             },
             "type": 1,
           },
-          et {
+          R {
             "_$AH": "button",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -332,7 +332,7 @@ w {
             >
               
         
-              <!--?lit$416505284$-->
+              <!--?lit$683458172$-->
               
         
               <slot
@@ -349,7 +349,7 @@ w {
             },
             "type": 1,
           },
-          et {
+          R {
             "_$AH": "inline-block px-6 font-medium text-xs leading-tight uppercase focus:outline-none focus:ring-0 transition duration-150 ease-in-out
       py-2.5 bg-blue-600 text-white shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg  active:bg-blue-800 active:shadow-lg
       rounded
@@ -372,7 +372,7 @@ w {
             >
               
         
-              <!--?lit$416505284$-->
+              <!--?lit$683458172$-->
               
         
               <slot
@@ -389,8 +389,8 @@ w {
             },
             "type": 1,
           },
-          q {
-            "_$AA": <!--?lit$416505284$-->,
+          O {
+            "_$AA": <!--?lit$683458172$-->,
             "_$AB": 
         ,
             "_$AH": Symbol(lit-nothing),
@@ -404,7 +404,7 @@ w {
             },
             "type": 2,
           },
-          et {
+          R {
             "_$AH": undefined,
             "_$AM": [Circular],
             "_$AN": undefined,

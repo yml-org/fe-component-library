@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`link-component matches component snapshot 1`] = `
-_ {
+f {
   "_$AL": Map {},
-  "_$Do": q {
+  "_$Do": T {
     "_$AA": <!---->,
     "_$AB": null,
-    "_$AH": me {
-      "_$AD": W {
+    "_$AH": yt {
+      "_$AD": N {
         "el": <template />,
         "parts": Array [
           Object {
@@ -89,7 +89,7 @@ _ {
       "_$AM": [Circular],
       "_$AN": undefined,
       "u": Array [
-        et {
+        R {
           "_$AH": "font-medium text-blue-600 dark:text-blue-500 hover:underline",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -104,7 +104,7 @@ _ {
           >
             
         
-            <!--?lit$3719001955$-->
+            <!--?lit$653339804$-->
             Click Here
             
         
@@ -122,7 +122,7 @@ _ {
           },
           "type": 1,
         },
-        et {
+        R {
           "_$AH": "",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -137,7 +137,7 @@ _ {
           >
             
         
-            <!--?lit$3719001955$-->
+            <!--?lit$653339804$-->
             Click Here
             
         
@@ -155,7 +155,7 @@ _ {
           },
           "type": 1,
         },
-        et {
+        R {
           "_$AH": "#",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -170,7 +170,7 @@ _ {
           >
             
         
-            <!--?lit$3719001955$-->
+            <!--?lit$653339804$-->
             Click Here
             
         
@@ -188,7 +188,7 @@ _ {
           },
           "type": 1,
         },
-        et {
+        R {
           "_$AH": "_self",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -203,7 +203,7 @@ _ {
           >
             
         
-            <!--?lit$3719001955$-->
+            <!--?lit$653339804$-->
             Click Here
             
         
@@ -221,7 +221,7 @@ _ {
           },
           "type": 1,
         },
-        et {
+        R {
           "_$AH": "",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -236,7 +236,7 @@ _ {
           >
             
         
-            <!--?lit$3719001955$-->
+            <!--?lit$653339804$-->
             Click Here
             
         
@@ -254,7 +254,7 @@ _ {
           },
           "type": 1,
         },
-        et {
+        R {
           "_$AH": "Click Here to redirect",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -269,7 +269,7 @@ _ {
           >
             
         
-            <!--?lit$3719001955$-->
+            <!--?lit$653339804$-->
             Click Here
             
         
@@ -287,8 +287,8 @@ _ {
           },
           "type": 1,
         },
-        q {
-          "_$AA": <!--?lit$3719001955$-->,
+        T {
+          "_$AA": <!--?lit$653339804$-->,
           "_$AB": 
         ,
           "_$AH": "Click Here",
@@ -302,7 +302,7 @@ _ {
           },
           "type": 2,
         },
-        et {
+        R {
           "_$AH": "",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -348,11 +348,11 @@ _ {
     "renderBefore": null,
   },
   "renderRoot": ShadowRoot {
-    "_$litPart$": q {
+    "_$litPart$": T {
       "_$AA": <!---->,
       "_$AB": null,
-      "_$AH": me {
-        "_$AD": W {
+      "_$AH": yt {
+        "_$AD": N {
           "el": <template />,
           "parts": Array [
             Object {
@@ -434,7 +434,7 @@ _ {
         "_$AM": [Circular],
         "_$AN": undefined,
         "u": Array [
-          et {
+          R {
             "_$AH": "font-medium text-blue-600 dark:text-blue-500 hover:underline",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -449,7 +449,7 @@ _ {
             >
               
         
-              <!--?lit$3719001955$-->
+              <!--?lit$653339804$-->
               Click Here
               
         
@@ -467,7 +467,7 @@ _ {
             },
             "type": 1,
           },
-          et {
+          R {
             "_$AH": "",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -482,7 +482,7 @@ _ {
             >
               
         
-              <!--?lit$3719001955$-->
+              <!--?lit$653339804$-->
               Click Here
               
         
@@ -500,7 +500,7 @@ _ {
             },
             "type": 1,
           },
-          et {
+          R {
             "_$AH": "#",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -515,7 +515,7 @@ _ {
             >
               
         
-              <!--?lit$3719001955$-->
+              <!--?lit$653339804$-->
               Click Here
               
         
@@ -533,7 +533,7 @@ _ {
             },
             "type": 1,
           },
-          et {
+          R {
             "_$AH": "_self",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -548,7 +548,7 @@ _ {
             >
               
         
-              <!--?lit$3719001955$-->
+              <!--?lit$653339804$-->
               Click Here
               
         
@@ -566,7 +566,7 @@ _ {
             },
             "type": 1,
           },
-          et {
+          R {
             "_$AH": "",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -581,7 +581,7 @@ _ {
             >
               
         
-              <!--?lit$3719001955$-->
+              <!--?lit$653339804$-->
               Click Here
               
         
@@ -599,7 +599,7 @@ _ {
             },
             "type": 1,
           },
-          et {
+          R {
             "_$AH": "Click Here to redirect",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -614,7 +614,7 @@ _ {
             >
               
         
-              <!--?lit$3719001955$-->
+              <!--?lit$653339804$-->
               Click Here
               
         
@@ -632,8 +632,8 @@ _ {
             },
             "type": 1,
           },
-          q {
-            "_$AA": <!--?lit$3719001955$-->,
+          T {
+            "_$AA": <!--?lit$653339804$-->,
             "_$AB": 
         ,
             "_$AH": "Click Here",
@@ -647,7 +647,7 @@ _ {
             },
             "type": 2,
           },
-          et {
+          R {
             "_$AH": "",
             "_$AM": [Circular],
             "_$AN": undefined,
