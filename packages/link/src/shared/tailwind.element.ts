@@ -1,10 +1,10 @@
 import { LitElement, unsafeCSS } from 'lit';
 
-// import style from "./tailwind.global.css";
+import style from './tailwind.global.css';
 
-// const tailwindElement = unsafeCSS(style);
+const tailwindElement = unsafeCSS(style);
 
 export const TailwindElement = (style) =>
   class extends LitElement {
-    static styles = [unsafeCSS(style)];
+    static styles = [tailwindElement, unsafeCSS(style)];
   };
