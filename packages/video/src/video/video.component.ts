@@ -3,12 +3,18 @@ import { customElement, property } from 'lit/decorators.js';
 import videojs from 'video.js';
 import Style from '../../../../packages/video/node_modules/video.js/dist/video-js.css';
 import { TailwindElement } from '../shared/tailwind.element';
-import { VideoStyle, Captions } from '../constants/video.component';
+import {
+  VideoStyle,
+  Captions,
+  AspectRatioDefault,
+} from '../constants/video.component';
 
 @customElement('video-component')
 export class VideoComponent extends TailwindElement(Style) {
   @property()
   src: string;
+  @property()
+  preload?: string = 'auto';
   @property()
   autoplay?: boolean | string = false;
   @property()
@@ -32,6 +38,22 @@ export class VideoComponent extends TailwindElement(Style) {
 
   private player = null;
 
+  protected getTrackOptions() {
+    return (
+      this.captions &&
+      this.captions
+        .filter((c) => c.srcTrack)
+        .map((caption) => {
+          return {
+            src: caption.srcTrack,
+            kind: caption.kind,
+            srclang: caption.srcLang,
+            label: caption.label,
+          };
+        })
+    );
+  }
+
   firstUpdated() {
     const defaultsStyleEl = this.shadowRoot?.querySelector(
       '.vjs-styles-defaults'
@@ -47,24 +69,13 @@ export class VideoComponent extends TailwindElement(Style) {
       muted: this.muted,
       poster: this.poster,
       loop: this.loop,
-      aspectRatio: this.videoStyle?.aspectRatio ?? '16:9',
+      aspectRatio: this.videoStyle?.aspectRatio ?? AspectRatioDefault,
       playbackRates: this.playbackRates,
-      tracks:
-        this.captions &&
-        this.captions
-          .filter((c) => c.srcTrack)
-          .map((caption) => {
-            return {
-              src: caption.srcTrack,
-              kind: caption.kind,
-              srclang: caption.srcLang,
-              label: caption.label,
-            };
-          }),
+      tracks: this.getTrackOptions(),
       userActions: {
         hotkeys: true,
       },
-      preload: 'auto',
+      preload: this.preload,
     });
   }
 
@@ -81,7 +92,7 @@ export class VideoComponent extends TailwindElement(Style) {
     `;
   }
 
-  updated(changedProperties) {
+  updated(changedProperties: Map<keyof this, string | boolean | undefined>) {
     if (changedProperties.has('src')) {
       this.player.src(this.src);
     }

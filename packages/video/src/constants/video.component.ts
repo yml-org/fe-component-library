@@ -4,6 +4,8 @@ export interface VideoStyle {
   aspectRatio?: string;
 }
 
+export const AspectRatioDefault = '16:9';
+
 export interface Captions {
   srcTrack: string;
   kind: string;
