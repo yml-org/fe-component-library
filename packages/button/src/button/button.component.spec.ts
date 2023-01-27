@@ -49,5 +49,45 @@ describe('button-component', () => {
      expect(buttonEle.classList.contains('bg-blue-600')).toBe(true);
   });
 
+  it('sets button color as secondary', async () => {
+    buttonElement['color']="secondary";
+    window.document.body.appendChild(buttonElement);
+    await buttonElement.updateComplete;
+    const buttonEle = getShadowRoot(BUTTON_COMPONENT).querySelector('button'); 
+    expect(buttonEle.classList.contains('bg-purple-600')).toBe(true);
+  });
+
+  it('sets button variant as outlined', async () => {
+    buttonElement['variant']="outlined";
+    window.document.body.appendChild(buttonElement);
+    await buttonElement.updateComplete;
+    const buttonEle = getShadowRoot(BUTTON_COMPONENT).querySelector('button'); 
+    expect(buttonEle.classList.contains('border-2')).toBe(true);
+  });
+
+  it('sets the isDisabled property correctly', async () => {
+    buttonElement['isDisabled']= true;
+    window.document.body.appendChild(buttonElement);
+    await buttonElement.updateComplete;
+    const buttonEle = getShadowRoot(BUTTON_COMPONENT).querySelector('button'); 
+    expect(buttonEle.classList.contains('pointer-events-none')).toBe(true);
+  });
+
+  it('sets the fullWidth property correctly', async () => {
+    buttonElement['fullWidth']= true;
+    window.document.body.appendChild(buttonElement);
+    await buttonElement.updateComplete;
+    const buttonEle = getShadowRoot(BUTTON_COMPONENT).querySelector('button'); 
+    expect(buttonEle.classList.contains('w-full')).toBe(true);
+  });
+
+  it('sets the isRounded property correctly', async () => {
+    buttonElement['isRounded']= true;
+    window.document.body.appendChild(buttonElement);
+    await buttonElement.updateComplete;
+    const buttonEle = getShadowRoot(BUTTON_COMPONENT).querySelector('button'); 
+    expect(buttonEle.classList.contains('rounded-full')).toBe(true);
+  });
+
 });
 

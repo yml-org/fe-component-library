@@ -42,12 +42,28 @@ describe('link-component', () => {
     expect(elem.classList.contains('text-white')).toBe(true);
   });
 
+  it('sets the text property correctly', async () => {
+    linkElement.setAttribute('text', linkConfig.text);
+    window.document.body.appendChild(linkElement);
+    await linkElement.updateComplete;
+    const elem = getShadowRoot(LINK_COMPONENT).querySelector('a');
+    expect(elem.innerText).toBe(linkConfig.text);
+  });
+
   it('sets the href property correctly', async () => {
     linkElement.setAttribute('href', linkConfig.href);
     window.document.body.appendChild(linkElement);
     await linkElement.updateComplete;
     const elem = getShadowRoot(LINK_COMPONENT).querySelector('a');
     expect(elem.getAttribute('href')).toBe(linkConfig.href);
+  });
+
+  it('sets the rel property correctly', async () => {
+    linkElement.setAttribute('rel', linkConfig.rel);
+    window.document.body.appendChild(linkElement);
+    await linkElement.updateComplete;
+    const elem = getShadowRoot(LINK_COMPONENT).querySelector('a');
+    expect(elem.getAttribute('rel')).toBe(linkConfig.rel);
   });
 
   it('sets the target property correctly', async () => {
@@ -68,3 +84,4 @@ describe('link-component', () => {
     expect(elem.classList.contains('slot-test')).toBe(true);
   });
 });
+
