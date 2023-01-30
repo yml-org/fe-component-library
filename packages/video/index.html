@@ -7,7 +7,26 @@
     <title>web components</title>
   </head>
   <body>
-    <video-component></video-component>
+    <script>
+       function handlePlay() {
+        console.log("inside play");
+      }
+      function handlePause() {
+        console.log("inside pause");
+      }
+      function handleSeek() {
+        console.log("inside seek");
+      }
+    </script>
+    <video-component src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"></video-component>
+    <script>
+      // const player = document.querySelector('video-component').getAttribute('player');
+      // player.on('play', () => console.log('play'));
+      document.querySelector('video-component').onPlay = window.handlePlay;
+      document.querySelector('video-component').onPause = window.handlePause;
+      // document.querySelector('video-component').dispatchEvent(new CustomEvent('seek', { detail: 50 }));
+      document.querySelector('video-component').onSeek = window.handleSeek;
+    </script>
     <script type="module" src="src/video/video.component.ts"></script>
   </body>
 </html>

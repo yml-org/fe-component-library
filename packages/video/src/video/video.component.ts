@@ -35,6 +35,12 @@ export class VideoComponent extends TailwindElement(Style) {
   videoStyle?: VideoStyle | null;
   @property()
   captions?: Captions[];
+  @property()
+  onPlay?: Function;
+  @property()
+  onPause?: Function;
+  @property()
+  onSeek?: Function;
 
   private player = null;
 
@@ -77,7 +83,25 @@ export class VideoComponent extends TailwindElement(Style) {
       },
       preload: this.preload,
     });
+
+    // this.addEventListener('seek', (event: CustomEvent) => {
+    //   console.log('detail', event.detail);
+    //   this.seek(event.detail + this.player.currentTime());
+    // });
+    // this.player.on('seeked', (event: CustomEvent) => {
+    //   this.player.currentTime(event.detail);
+    // });
+    this.player.on('play', () => this.onPlay());
+    this.player.on('pause', () => this.onPause());
   }
+
+  protected seek(time: number) {
+    this.player.currentTime(time);
+  }
+
+  // getPlayer() {
+  //   return this.player;
+  // }
 
   render() {
     return html`
