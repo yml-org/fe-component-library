@@ -167,7 +167,7 @@ E {
           "type": 1,
         },
         M {
-          "_$AH": undefined,
+          "_$AH": "",
           "_$AM": [Circular],
           "_$AN": undefined,
           "element": <img
@@ -195,7 +195,7 @@ E {
           "type": 1,
         },
         M {
-          "_$AH": undefined,
+          "_$AH": "",
           "_$AM": [Circular],
           "_$AN": undefined,
           "element": <img
@@ -467,6 +467,10 @@ E {
   "_$E_": Promise {},
   "_$Ei": undefined,
   "_$El": null,
+  "__altText": "",
+  "__placeholderImg": "",
+  "__size": Object {},
+  "__src": "",
   "enableUpdating": [Function],
   "hasUpdated": true,
   "isUpdatePending": false,
@@ -640,7 +644,7 @@ E {
             "type": 1,
           },
           M {
-            "_$AH": undefined,
+            "_$AH": "",
             "_$AM": [Circular],
             "_$AN": undefined,
             "element": <img
@@ -668,7 +672,7 @@ E {
             "type": 1,
           },
           M {
-            "_$AH": undefined,
+            "_$AH": "",
             "_$AM": [Circular],
             "_$AN": undefined,
             "element": <img

@@ -349,6 +349,22 @@ border: 5px solid red;
           <td></td>
           <td>Adds max Height to the image</td>
         </tr>
+          <tr>
+          <td>size.minWidth</td>
+          <td>String</td>
+          <td>no</td>
+          <td></td>
+          <td></td>
+          <td>Adds min width to the image</td>
+        </tr>
+         <tr>
+          <td>size.minHeight</td>
+          <td>String</td>
+          <td>no</td>
+          <td></td>
+          <td></td>
+          <td>Adds min Height to the image</td>
+        </tr>
         <tr>
           <td>size.rounded</td>
           <td>Boolean</td>
@@ -362,7 +378,7 @@ border: 5px solid red;
           <td>String</td>
           <td>no</td>
           <td></td>
-          <td></td>
+          <td>'contain' | 'fill' | 'scale-down' | 'fit' | 'none' | 'cover'</td>
           <td>Adds object-fit styling to the image</td>
         </tr>
         <tr>
@@ -378,7 +394,7 @@ border: 5px solid red;
           <td>String</td>
           <td>no</td>
           <td></td>
-          <td>'contain' | 'fill' | 'scale-down' | 'fit' | 'none' | 'cover'</td>
+          <td></td>
           <td>Adds border-color styling to the image</td>
         </tr>
         <tr>
