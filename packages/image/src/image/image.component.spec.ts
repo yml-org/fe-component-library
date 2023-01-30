@@ -28,8 +28,6 @@ describe('image-component', () => {
   });
 
   it('sets part property correctly', async () => {
-    window.document.body.appendChild(imageElement);
-    await imageElement.updateComplete;
     const elem = getShadowRoot(IMAGE_COMPONENT).querySelector('img');
     expect(elem.part[0]).toBe("custom-image");
   });
@@ -139,6 +137,4 @@ describe('image-component', () => {
     const imageEle = getShadowRoot(IMAGE_COMPONENT).querySelector('img'); 
     expect(imageEle.getAttribute('srcset')).toBe(imageConfig.src);
   });
-
-
 });
