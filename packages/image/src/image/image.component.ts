@@ -6,14 +6,15 @@ import {Size } from '../constants/image.component'
 
 @customElement('image-component')
 export class ImageComponent extends TailwindElement(null) {
+
   @property()
-  altText?:string;
+  altText?:string="";
   @property()
-  src:string;
+  src?:string = "";
   @property()
-  placeholderImg?:string;
+  placeholderImg?:string= "";
   @property()
-  size?: Size;
+  size?: Size= {};
 
   render() {
     return html`

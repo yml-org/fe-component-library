@@ -51,7 +51,7 @@ There are only two differences to a standard _LitElement_:
    - note the `?inline` at the end of the file path: if you don't add it, then vite will add the style to the head of the html. If you add it, the style is scoped into the component only
 2. the class extends a _TailwindElement_ rather than a LitElement
 
-A _TailwindElement_ extends a _LitElmement_ (see below) and adds the logic to integrate tailwind and your styles.
+A _TailwindElement_ extends a _LitElement_ (see below) and adds the logic to integrate tailwind and your styles.
 
 ## Get started
 
@@ -68,7 +68,7 @@ As an alternative, and if you like to have control over every piece, do the foll
 1. copy the files in the shared folder:
    - _tailwind.element.ts_ extends LitElement by adding the tailwind support
    - _tailwind.global.css_ includes tha Tailwind base classes into each component
-   - _globals.d.ts_ is used to avoid TypeScript errors whe nimporting CSS/Scss files in typescript files (thanks [@emaant96](https://github.com/emaant96))
+   - _globals.d.ts_ is used to avoid TypeScript errors when importing CSS/Scss files in typescript files (thanks [@emaant96](https://github.com/emaant96))
 2. copy the _package.json_ or the devDependencies inside into your own _package.json_ (**there are no dependencies**)
 3. copy _postcss.config.js_, _tailwind.config.js_ and _tsconfig.js_
 
@@ -78,7 +78,7 @@ That's all.
 
 If you want to understand how it works, it's simple:
 
-- the **package.json** integrates these technolgies:
+- the **package.json** integrates these technologies:
 
 ```json
 "autoprefixer": "^10.4.12",
@@ -118,9 +118,10 @@ If you add more components, the common parts are reused.
 
 We developed this starter kit to implement a web session player for our open source SaaS [browserbot](https://browserbot.io/).
 
-If you want to contribute or share soem thoughts, just get in touch with us.
+If you want to contribute or share some thoughts, just get in touch with us.
 
 Enjoy.
+
 
 
 # image-component
@@ -349,6 +350,22 @@ border: 5px solid red;
           <td></td>
           <td>Adds max Height to the image</td>
         </tr>
+          <tr>
+          <td>size.minWidth</td>
+          <td>String</td>
+          <td>no</td>
+          <td></td>
+          <td></td>
+          <td>Adds min width to the image</td>
+        </tr>
+         <tr>
+          <td>size.minHeight</td>
+          <td>String</td>
+          <td>no</td>
+          <td></td>
+          <td></td>
+          <td>Adds min Height to the image</td>
+        </tr>
         <tr>
           <td>size.rounded</td>
           <td>Boolean</td>
@@ -362,7 +379,7 @@ border: 5px solid red;
           <td>String</td>
           <td>no</td>
           <td></td>
-          <td></td>
+          <td>'contain' | 'fill' | 'scale-down' | 'fit' | 'none' | 'cover'</td>
           <td>Adds object-fit styling to the image</td>
         </tr>
         <tr>
@@ -370,7 +387,7 @@ border: 5px solid red;
           <td>String</td>
           <td>no</td>
           <td></td>
-          <td>| 'dotted' | 'dashed' | 'double' | 'none' | 'groove' | 'ridge' | 'inset' | 'outset'</td>
+          <td>'dotted' | 'dashed' | 'double' | 'none' | 'groove' | 'ridge' | 'inset' | 'outset'</td>
           <td>Adds border-type styling to the image</td>
         </tr>
         <tr>
@@ -378,7 +395,7 @@ border: 5px solid red;
           <td>String</td>
           <td>no</td>
           <td></td>
-          <td>'contain' | 'fill' | 'scale-down' | 'fit' | 'none' | 'cover'</td>
+          <td></td>
           <td>Adds border-color styling to the image</td>
         </tr>
         <tr>
