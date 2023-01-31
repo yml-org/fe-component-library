@@ -1,5 +1,5 @@
 import { html } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { customElement, property, state } from 'lit/decorators.js';
 import videojs from 'video.js';
 import Style from '../../../../packages/video/node_modules/video.js/dist/video-js.css';
 import { TailwindElement } from '../shared/tailwind.element';
@@ -35,8 +35,18 @@ export class VideoComponent extends TailwindElement(Style) {
   videoStyle?: VideoStyle | null;
   @property()
   captions?: Captions[];
+  @property()
+  seekTo?: string = '';
+  @property()
+  customPlayEvent?: string = '';
+  @property()
+  customPauseEvent?: string = '';
+  @property()
+  customSeekEvent?: string = '';
 
   private player = null;
+
+  @state() hasSeeked = false;
 
   protected getTrackOptions() {
     return (
@@ -77,6 +87,35 @@ export class VideoComponent extends TailwindElement(Style) {
       },
       preload: this.preload,
     });
+
+    this.player.on('play', () => {
+      this.hasSeeked = false;
+      if (this?.customPlayEvent) {
+        this.dispatchEvent(new CustomEvent('handlePlay'));
+      }
+    });
+    this.player.on('pause', () => {
+      this.hasSeeked = false;
+      if (this?.customPauseEvent) {
+        this.dispatchEvent(new CustomEvent('handlePause'));
+      }
+    });
+
+    this.player.on('seeked', () => {
+      if (this?.customSeekEvent && !this.hasSeeked) {
+        this.seek(Number(this.seekTo) + this.player.currentTime());
+        this.dispatchEvent(new CustomEvent('handleSeek'));
+        this.hasSeeked = true;
+        setTimeout(() => {
+          // work around approach to suspend continuous seeking
+          this.hasSeeked = false;
+        }, 1000);
+      }
+    });
+  }
+
+  protected seek(time: number) {
+    this.player.currentTime(time);
   }
 
   render() {
