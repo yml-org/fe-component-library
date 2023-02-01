@@ -215,3 +215,150 @@ export const withCaptionsTemplate = ({
     {withCaptionsTemplate.bind({})}
   </Story>
 </Canvas>
+
+Video component with `custom play function`
+
+export const withCustomPlayFunctionTemplate = ({
+  src,
+  poster,
+  playbackRates,
+  captions,
+  aspectRatio,
+  handlePlay,
+  customPlayEvent,
+}) =>
+  html`<video-component
+    .src=${src}
+    .poster=${poster}
+    .playbackRates=${playbackRates}
+    .captions=${captions}
+    .aspectRatio=${aspectRatio}
+    .customPlayEvent="${customPlayEvent}"
+    @handlePlay=${handlePlay}
+    ><video-component></video-component>
+  </video-component>`;
+
+<Canvas>
+  <Story
+    name="With Custom Play Function"
+    args={{
+      src: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+      poster:
+        'https://upload.wikimedia.org/wikipedia/commons/6/69/Big_Buck_Bunny_-_forest.jpg',
+      playbackRates: [0.25, 0.5, 1, 1.5, 2, 2.5, 3],
+      aspectRatio: '16:9',
+      captions: [
+        {
+          srcTrack:
+            'https://gist.githubusercontent.com/samdutton/ca37f3adaf4e23679957b8083e061177/raw/e19399fbccbc069a2af4266e5120ae6bad62699a/sample.vtt',
+          kind: 'captions',
+          srcLang: 'en',
+          label: 'English',
+        },
+      ],
+      customPlayEvent: 'handlePlay',
+      handlePlay: () => console.log('Play Video'),
+    }}
+  >
+    {withCustomPlayFunctionTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Video component with `custom play function`
+
+export const withCustomPauseFunctionTemplate = ({
+  src,
+  poster,
+  playbackRates,
+  captions,
+  aspectRatio,
+  handlePause,
+  customPauseEvent,
+}) =>
+  html`<video-component
+    .src=${src}
+    .poster=${poster}
+    .playbackRates=${playbackRates}
+    .captions=${captions}
+    .aspectRatio=${aspectRatio}
+    .customPauseEvent="${customPauseEvent}"
+    @handlePause=${handlePause}
+    ><video-component></video-component>
+  </video-component>`;
+
+<Canvas>
+  <Story
+    name="With Custom Pause Function"
+    args={{
+      src: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+      poster:
+        'https://upload.wikimedia.org/wikipedia/commons/6/69/Big_Buck_Bunny_-_forest.jpg',
+      playbackRates: [0.25, 0.5, 1, 1.5, 2, 2.5, 3],
+      aspectRatio: '16:9',
+      captions: [
+        {
+          srcTrack:
+            'https://gist.githubusercontent.com/samdutton/ca37f3adaf4e23679957b8083e061177/raw/e19399fbccbc069a2af4266e5120ae6bad62699a/sample.vtt',
+          kind: 'captions',
+          srcLang: 'en',
+          label: 'English',
+        },
+      ],
+      customPauseEvent: 'handlePause',
+      handlePause: () => console.log('Pause Video'),
+    }}
+  >
+    {withCustomPauseFunctionTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Video component with `custom seek function`
+
+export const withCustomSeekFunctionTemplate = ({
+  src,
+  poster,
+  playbackRates,
+  captions,
+  aspectRatio,
+  handleSeek,
+  customSeekEvent,
+  seekTo,
+}) =>
+  html`<video-component
+    .src=${src}
+    .poster=${poster}
+    .playbackRates=${playbackRates}
+    .captions=${captions}
+    .aspectRatio=${aspectRatio}
+    .customSeekEvent="${customSeekEvent}"
+    .seekTo=${seekTo}
+    @handleSeek=${handleSeek}
+    ><video-component></video-component>
+  </video-component>`;
+
+<Canvas>
+  <Story
+    name="With Custom Seek Function"
+    args={{
+      src: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+      poster:
+        'https://upload.wikimedia.org/wikipedia/commons/6/69/Big_Buck_Bunny_-_forest.jpg',
+      playbackRates: [0.25, 0.5, 1, 1.5, 2, 2.5, 3],
+      aspectRatio: '16:9',
+      captions: [
+        {
+          srcTrack:
+            'https://gist.githubusercontent.com/samdutton/ca37f3adaf4e23679957b8083e061177/raw/e19399fbccbc069a2af4266e5120ae6bad62699a/sample.vtt',
+          kind: 'captions',
+          srcLang: 'en',
+          label: 'English',
+        },
+      ],
+      seekTo: '60',
+      customSeekEvent: 'handleSeek',
+      handleSeek: () => console.log('Seek Video'),
+    }}
+  >
+    {withCustomSeekFunctionTemplate.bind({})}
+  </Story>
+</Canvas>
