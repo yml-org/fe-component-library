@@ -3,153 +3,100 @@ import { html } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { TailwindElement } from '../shared/tailwind.element';
 import { OpenMenuIcon, CloseMenuIcon } from './headerIcons';
+import { MenuLink, Nav } from '../types/header.component';
+import {
+  NavbarModes,
+  NavbarLinkType,
+  DeviceType,
+  themeOptions,
+  ThemeOptionKeys,
+} from '../constants/header.component';
+import { defaultNavConfig } from '../constants/header.variants';
 import Style from './header.component.scss?inline';
-
-interface MenuLink {
-  label: string;
-  type: 'link' | 'button';
-  url?: string;
-  eventName?: string;
-}
-
-interface Nav {
-  mode?: 'dark' | 'light';
-  logo?: string;
-  logoAltText?: string;
-  headerText?: string;
-  openMenuIcon?: {
-    slotName: string;
-  };
-  closeMenuIcon?: {
-    slotName: string;
-  };
-  menuLinks?: Array<MenuLink>;
-  isMenuOpen: boolean;
-  topRightSlot?: {
-    slotName: string;
-  };
-}
-
-const enum NavbarModes {
-  Dark = 'dark',
-  Light = 'light',
-}
-
-const enum NavbarLinkType {
-  LINK = 'link',
-  BUTTON = 'button',
-}
-
-const enum DeviceType {
-  DESKTOP = 'desktop',
-  MOBILE = 'mobile',
-}
 
 @customElement('header-component')
 export class HeaderComponent extends TailwindElement(Style) {
   @property()
-  navOptions: Nav = {
-    mode: 'dark',
-    logo: 'https://ymedialabs.atlassian.net/s/1jmxwi/b/8/d35727372e299c952e88a10ef82bbaf6/_/jira-logo-scaled.png',
-    headerText: 'YML',
-    openMenuIcon: {
-      slotName: '',
-    },
-    closeMenuIcon: {
-      slotName: '',
-    },
-    menuLinks: [],
-    isMenuOpen: false,
-    topRightSlot: {
-      slotName: 'bell',
-    },
-  };
+  navOptions: Nav = defaultNavConfig;
 
-  themeOptions = {
-    dark: {
-      bgColor: 'bg-black',
-      textColor: 'text-grey',
-      textHoverColorDesktop: 'hover:text-white',
-      textHoverColorMobile: 'hover:text-black',
-      bgHoverColor: 'hover:bg-light-gray',
-      headerTextColor: 'text-white',
-    },
-    light: {
-      bgColor: 'bg-grey',
-      textColor: 'text-brown',
-      textHoverColorDesktop: 'hover:text-black',
-      textHoverColorMobile: 'hover:text-white',
-      bgHoverColor: 'hover:bg-brown',
-      headerTextColor: 'text-black',
-    },
-  };
+  themeOptions = themeOptions;
 
   @state() openMenu: boolean = this.navOptions?.isMenuOpen;
 
-  setMenuOpen() {
+  protected setMenuOpen() {
     this.openMenu = !this.openMenu;
   }
 
-  displayMenuLinks(type: DeviceType) {
+  protected getThemeProperty(key: string) {
+    return (
+      this.themeOptions[this.navOptions?.mode][key] ||
+      this.themeOptions[NavbarModes.Dark][key]
+    );
+  }
+
+  protected renderMenuOptionsAsButton(type: DeviceType, link: MenuLink) {
+    return html`<button
+      part="btn-menu-link-${link.label}"
+      class="${type === DeviceType.DESKTOP
+        ? `${this.getThemeProperty(
+            ThemeOptionKeys.TextHoverColorDesktop
+          )} px-3 py-2 rounded-md text-sm font-medium`
+        : ` w-full text-left ${this.getThemeProperty(
+            ThemeOptionKeys.TextHoverColorMobile
+          )} ${this.getThemeProperty(
+            ThemeOptionKeys.BackgroundHoverColor
+          )} block px-3 py-2 rounded-md text-base font-medium`}"
+      @click=${() => {
+        this.dispatchEvent(new CustomEvent(link.eventName));
+        this.openMenu = false;
+      }}
+    >
+      ${link.label}
+    </button>`;
+  }
+
+  protected renderMenuOptionsAsLink(type: DeviceType, link: MenuLink) {
+    return html`<a
+      href=${link.url}
+      part="a-menu-link-${link.label}"
+      class="${type === DeviceType.DESKTOP
+        ? `${this.getThemeProperty(
+            ThemeOptionKeys.TextHoverColorDesktop
+          )} px-3 py-2 rounded-md text-sm font-medium`
+        : `text-left ${this.getThemeProperty(
+            ThemeOptionKeys.TextHoverColorMobile
+          )} ${this.getThemeProperty(
+            ThemeOptionKeys.BackgroundHoverColor
+          )} block px-3 py-2 rounded-md text-base font-medium`}"
+      aria-current=${link.label}
+    >
+      ${link.label}
+    </a>`;
+  }
+
+  protected displayMenuLinks(type: DeviceType) {
     return html` ${this.navOptions?.menuLinks?.map((link) =>
       link.type === NavbarLinkType.LINK
-        ? html`<a
-            href=${link.url}
-            part="a-menu-link-${link.label}"
-            class="${type === 'desktop'
-              ? `${
-                  this.themeOptions[this.navOptions?.mode]
-                    ?.textHoverColorDesktop ||
-                  this.themeOptions[NavbarModes.Dark].textHoverColorDesktop
-                } px-3 py-2 rounded-md text-sm font-medium`
-              : `text-left ${
-                  this.themeOptions[this.navOptions?.mode]
-                    ?.textHoverColorMobile ||
-                  this.themeOptions[NavbarModes.Dark].textHoverColorMobile
-                } ${
-                  this.themeOptions[this.navOptions?.mode]?.bgHoverColor ||
-                  this.themeOptions[NavbarModes.Dark].bgHoverColor
-                } block px-3 py-2 rounded-md text-base font-medium`}"
-            aria-current=${link.label}
-          >
-            ${link.label}
-          </a>`
-        : html`<button
-            part="btn-menu-link-${link.label}"
-            class="${type === 'desktop'
-              ? `${
-                  this.themeOptions[this.navOptions?.mode]
-                    ?.textHoverColorDesktop ||
-                  this.themeOptions[NavbarModes.Dark].textHoverColorDesktop
-                } px-3 py-2 rounded-md text-sm font-medium`
-              : ` w-full text-left ${
-                  this.themeOptions[this.navOptions?.mode]
-                    ?.textHoverColorMobile ||
-                  this.themeOptions[NavbarModes.Dark].textHoverColorMobile
-                } ${
-                  this.themeOptions[this.navOptions?.mode]?.bgHoverColor ||
-                  this.themeOptions[NavbarModes.Dark].bgHoverColor
-                } block px-3 py-2 rounded-md text-base font-medium`}"
-            @click=${() => {
-              this.dispatchEvent(new CustomEvent(link.eventName));
-              this.openMenu = false;
-            }}
-          >
-            ${link.label}
-          </button>`
+        ? this.renderMenuOptionsAsLink(type, link)
+        : this.renderMenuOptionsAsButton(type, link)
     )}`;
+  }
+
+  protected renderNavBarLogo() {
+    return html`<img
+      part="logo"
+      class="hidden h-8 w-8 lg:block"
+      src=${this.navOptions?.logo}
+      alt="${this.navOptions?.logoAltText
+        ? this.navOptions?.logoAltText
+        : msg(str`Company logo`)}"
+    />`;
   }
 
   render() {
     return html`
-      <nav class="${
-        this.themeOptions[this.navOptions?.mode]?.bgColor ||
-        this.themeOptions[NavbarModes.Dark].bgColor
-      }
-      ${
-        this.themeOptions[this.navOptions?.mode]?.textColor ||
-        this.themeOptions[NavbarModes.Dark].textColor
-      } " part="nav">
+      <nav class="${this.getThemeProperty(ThemeOptionKeys.BackgroundColor)}
+      ${this.getThemeProperty(ThemeOptionKeys.HeaderTextColor)} " part="nav">
         
         <div class="mx-auto max-w-8xl px-2 sm:px-6 lg:px-4" >
           
@@ -160,11 +107,9 @@ export class HeaderComponent extends TailwindElement(Style) {
               <!-- Mobile menu button-->
               <button
                 type="button"
-                class="inline-flex items-center justify-center rounded-md p-2 ${
-                  this.themeOptions[this.navOptions?.mode]
-                    ?.textHoverColorDesktop ||
-                  this.themeOptions[NavbarModes.Dark].textHoverColorDesktop
-                } focus:outline-none btn-tap-color"
+                class="inline-flex items-center justify-center rounded-md p-2 ${this.getThemeProperty(
+                  ThemeOptionKeys.TextHoverColorDesktop
+                )} focus:outline-none btn-tap-color"
                 aria-controls=${msg(str`mobile menu`)}
                 aria-expanded="${this.navOptions.isMenuOpen}"
                 aria-label=${msg(str`mobile button`)}
@@ -192,25 +137,14 @@ export class HeaderComponent extends TailwindElement(Style) {
 
             <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
               <div class="flex flex-shrink-0 items-center" part="logo-container">
-                ${
-                  this.navOptions?.logo &&
-                  html`<img
-                    part="logo"
-                    class="hidden h-8 w-8 lg:block"
-                    src=${this.navOptions?.logo}
-                    alt="${this.navOptions?.logoAltText
-                      ? this.navOptions?.logoAltText
-                      : msg(str`Company logo`)}"
-                  />`
-                }
+                ${this.navOptions?.logo && this.renderNavBarLogo()}
               </div> 
          
             <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
               
-              <div class="flex flex-shrink-0 items-center font-bold  pl-4 ${
-                this.themeOptions[this.navOptions?.mode]?.headerTextColor ||
-                this.themeOptions[NavbarModes.Dark].headerTextColor
-              } " part="headerText-container">
+              <div class="flex flex-shrink-0 items-center font-bold  pl-4 ${this.getThemeProperty(
+                ThemeOptionKeys.HeaderTextColor
+              )} " part="headerText-container">
                 <h2 part="headerText">${this.navOptions?.headerText}</h2>
               </div>
 

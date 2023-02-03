@@ -1,0 +1,249 @@
+import { html } from 'lit';
+import { Story, Meta, Canvas } from '@storybook/addon-docs';
+import '../../../header/src/header/header.component.ts';
+import './image.component.ts';
+
+<Meta title="Images" />
+
+# Image Component
+
+Basic Image component with `src` prop
+
+Here we include `src` prop to srcset attribute
+with a reference to a high-resolution version
+f the image. this will be loaded instead of the src
+image on high-resolution devices.
+
+export const defaultTemplate = ({ src }) =>
+  html`<image-component .src=${src}></image-component>`;
+
+<Canvas>
+  <Story
+    name="default"
+    args={{
+      src: 'https://i.ibb.co/yBV3M1C/planet.jpg',
+    }}
+  >
+    {defaultTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Image component with `altText` prop
+
+export const withAltTextTemplate = ({ src, altText }) =>
+  html`<image-component .src=${src} .altText=${altText}
+    ><image-component></image-component
+  ></image-component>`;
+
+<Canvas>
+  <Story
+    name="AltText"
+    args={{
+      src: 'https://i.ibb.co/yBV3M1C/planet.jpg',
+      altText: 'background image',
+    }}
+  >
+    {withAltTextTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Image component with `placeholderImg` prop
+
+In this example we include `placeholderImg` prop to
+src attribute. Displayed, in case the 'srcset' is
+failed to load the image or before image is loaded
+
+export const withPlaceholderImgTemplate = ({ src, altText, placeholderImg }) =>
+  html`<image-component
+    .src=${src}
+    .altText=${altText}
+    .placeholderImg=${placeholderImg}
+    ><image-component></image-component
+  ></image-component>`;
+
+<Canvas>
+  <Story
+    name="PlaceHolder Image"
+    args={{
+      src: 'https://i.ibb.co/yBV3M1C/planet.jpg',
+      altText: 'background image',
+      placeholderImg: 'https://i.ibb.co/yBV3M1C/planet-mini.jpg',
+    }}
+  >
+    {withPlaceholderImgTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Image component with `width`, `height`
+
+export const withWidthAndHeightTemplate = ({
+  src,
+  altText,
+  placeholderImg,
+  size,
+}) =>
+  html`<image-component
+    .src=${src}
+    .altText=${altText}
+    .placeholderImg=${placeholderImg}
+    .size=${size}
+    ><image-component></image-component
+  ></image-component>`;
+
+<Canvas>
+  <Story
+    name="Height and Width"
+    args={{
+      src: 'https://i.ibb.co/yBV3M1C/planet.jpg',
+      altText: 'background image',
+      placeholderImg: 'https://i.ibb.co/yBV3M1C/planet-mini.jpg',
+      size: {
+        width: '20%',
+        height: '200px',
+      },
+    }}
+  >
+    {withWidthAndHeightTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Image component with `max-height/width`
+
+export const withMaxWidthTemplate = ({ src, altText, placeholderImg, size }) =>
+  html`<image-component
+    .src=${src}
+    .altText=${altText}
+    .placeholderImg=${placeholderImg}
+    .size=${size}
+    ><image-component></image-component
+  ></image-component>`;
+
+<Canvas>
+  <Story
+    name="Max Height/Width"
+    args={{
+      src: 'https://i.ibb.co/yBV3M1C/planet.jpg',
+      altText: 'background image',
+      placeholderImg: 'https://i.ibb.co/yBV3M1C/planet-mini.jpg',
+      size: {
+        maxWidth: '100%',
+        height: 'auto',
+      },
+    }}
+  >
+    {withMaxWidthTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Image component with `min-height/width`
+
+export const withMinWidthTemplate = ({ src, altText, placeholderImg, size }) =>
+  html`<image-component
+    .src=${src}
+    .altText=${altText}
+    .placeholderImg=${placeholderImg}
+    .size=${size}
+    ><image-component></image-component
+  ></image-component>`;
+
+<Canvas>
+  <Story
+    name="Min Height/Width"
+    args={{
+      src: 'https://i.ibb.co/yBV3M1C/planet.jpg',
+      altText: 'background image',
+      placeholderImg: 'https://i.ibb.co/yBV3M1C/planet-mini.jpg',
+      size: {
+        minHeight: '100px',
+      },
+    }}
+  >
+    {withMinWidthTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Image component with `round border`
+
+export const withRoundImgTemplate = ({ src, altText, placeholderImg, size }) =>
+  html`<image-component
+    .src=${src}
+    .altText=${altText}
+    .placeholderImg=${placeholderImg}
+    .size=${size}
+    ><image-component></image-component
+  ></image-component>`;
+
+<Canvas>
+  <Story
+    name="Round image"
+    args={{
+      src: 'https://i.ibb.co/yBV3M1C/planet.jpg',
+      altText: 'background image',
+      placeholderImg: 'https://i.ibb.co/yBV3M1C/planet-mini.jpg',
+      size: {
+        rounded: true,
+      },
+    }}
+  >
+    {withRoundImgTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Image component with `object-fit`
+
+export const withObjectFitTemplate = ({ src, altText, placeholderImg, size }) =>
+  html`<image-component
+    .src=${src}
+    .altText=${altText}
+    .placeholderImg=${placeholderImg}
+    .size=${size}
+    ><image-component></image-component
+  ></image-component>`;
+
+<Canvas>
+  <Story
+    name="Object Fit"
+    args={{
+      src: 'https://i.ibb.co/yBV3M1C/planet.jpg',
+      altText: 'background image',
+      placeholderImg: 'https://i.ibb.co/yBV3M1C/planet-mini.jpg',
+      size: {
+        objectFit: 'cover',
+      },
+    }}
+  >
+    {withObjectFitTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Image component with `border`
+
+export const withBorderTemplate = ({ src, altText, placeholderImg, size }) =>
+  html`<image-component
+    .src=${src}
+    .altText=${altText}
+    .placeholderImg=${placeholderImg}
+    .size=${size}
+    ><image-component></image-component
+  ></image-component>`;
+
+<Canvas>
+  <Story
+    name="border"
+    args={{
+      src: 'https://i.ibb.co/yBV3M1C/planet.jpg',
+      altText: 'background image',
+      placeholderImg: 'https://i.ibb.co/yBV3M1C/planet-mini.jpg',
+      size: {
+        border: {
+          type: 'solid',
+          color: 'yellow',
+          width: '10px',
+        },
+        rounded: true,
+      },
+    }}
+  >
+    {withBorderTemplate.bind({})}
+  </Story>
+</Canvas>

@@ -1,0 +1,946 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`image-component matches component snapshot 1`] = `
+E {
+  "_$AL": Map {},
+  "_$Do": P {
+    "_$AA": <!---->,
+    "_$AB": null,
+    "_$AH": xt {
+      "_$AD": z {
+        "el": <template />,
+        "parts": Array [
+          Object {
+            "ctor": [Function],
+            "index": 0,
+            "name": "class",
+            "strings": Array [
+              "max-w-full h-auto transition-shadow ease-in-out duration-300
+     ",
+              "
+     ",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 0,
+            "name": "src",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 0,
+            "name": "srcset",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 0,
+            "name": "alt",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 0,
+            "name": "width",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 0,
+            "name": "height",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 0,
+            "name": "min-width",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 0,
+            "name": "max-width",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 0,
+            "name": "min-height",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 0,
+            "name": "max-height",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 0,
+            "name": "style",
+            "strings": Array [
+              "border:",
+              "",
+            ],
+            "type": 1,
+          },
+        ],
+      },
+      "_$AM": [Circular],
+      "_$AN": undefined,
+      "u": Array [
+        M {
+          "_$AH": Array [
+            undefined,
+            undefined,
+          ],
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <img
+            alt="image"
+            class="max-w-full h-auto transition-shadow ease-in-out duration-300
+     
+     "
+            height=""
+            max-height=""
+            max-width=""
+            min-height=""
+            min-width=""
+            part="custom-image"
+            src=""
+            srcset=""
+            style="border:undefined undefined undefined"
+            width=""
+          />,
+          "name": "class",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "strings": Array [
+            "max-w-full h-auto transition-shadow ease-in-out duration-300
+     ",
+            "
+     ",
+            "",
+          ],
+          "type": 1,
+        },
+        M {
+          "_$AH": "",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <img
+            alt="image"
+            class="max-w-full h-auto transition-shadow ease-in-out duration-300
+     
+     "
+            height=""
+            max-height=""
+            max-width=""
+            min-height=""
+            min-width=""
+            part="custom-image"
+            src=""
+            srcset=""
+            style="border:undefined undefined undefined"
+            width=""
+          />,
+          "name": "src",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        M {
+          "_$AH": "",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <img
+            alt="image"
+            class="max-w-full h-auto transition-shadow ease-in-out duration-300
+     
+     "
+            height=""
+            max-height=""
+            max-width=""
+            min-height=""
+            min-width=""
+            part="custom-image"
+            src=""
+            srcset=""
+            style="border:undefined undefined undefined"
+            width=""
+          />,
+          "name": "srcset",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        M {
+          "_$AH": "image",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <img
+            alt="image"
+            class="max-w-full h-auto transition-shadow ease-in-out duration-300
+     
+     "
+            height=""
+            max-height=""
+            max-width=""
+            min-height=""
+            min-width=""
+            part="custom-image"
+            src=""
+            srcset=""
+            style="border:undefined undefined undefined"
+            width=""
+          />,
+          "name": "alt",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        M {
+          "_$AH": undefined,
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <img
+            alt="image"
+            class="max-w-full h-auto transition-shadow ease-in-out duration-300
+     
+     "
+            height=""
+            max-height=""
+            max-width=""
+            min-height=""
+            min-width=""
+            part="custom-image"
+            src=""
+            srcset=""
+            style="border:undefined undefined undefined"
+            width=""
+          />,
+          "name": "width",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        M {
+          "_$AH": undefined,
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <img
+            alt="image"
+            class="max-w-full h-auto transition-shadow ease-in-out duration-300
+     
+     "
+            height=""
+            max-height=""
+            max-width=""
+            min-height=""
+            min-width=""
+            part="custom-image"
+            src=""
+            srcset=""
+            style="border:undefined undefined undefined"
+            width=""
+          />,
+          "name": "height",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        M {
+          "_$AH": undefined,
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <img
+            alt="image"
+            class="max-w-full h-auto transition-shadow ease-in-out duration-300
+     
+     "
+            height=""
+            max-height=""
+            max-width=""
+            min-height=""
+            min-width=""
+            part="custom-image"
+            src=""
+            srcset=""
+            style="border:undefined undefined undefined"
+            width=""
+          />,
+          "name": "min-width",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        M {
+          "_$AH": undefined,
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <img
+            alt="image"
+            class="max-w-full h-auto transition-shadow ease-in-out duration-300
+     
+     "
+            height=""
+            max-height=""
+            max-width=""
+            min-height=""
+            min-width=""
+            part="custom-image"
+            src=""
+            srcset=""
+            style="border:undefined undefined undefined"
+            width=""
+          />,
+          "name": "max-width",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        M {
+          "_$AH": undefined,
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <img
+            alt="image"
+            class="max-w-full h-auto transition-shadow ease-in-out duration-300
+     
+     "
+            height=""
+            max-height=""
+            max-width=""
+            min-height=""
+            min-width=""
+            part="custom-image"
+            src=""
+            srcset=""
+            style="border:undefined undefined undefined"
+            width=""
+          />,
+          "name": "min-height",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        M {
+          "_$AH": undefined,
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <img
+            alt="image"
+            class="max-w-full h-auto transition-shadow ease-in-out duration-300
+     
+     "
+            height=""
+            max-height=""
+            max-width=""
+            min-height=""
+            min-width=""
+            part="custom-image"
+            src=""
+            srcset=""
+            style="border:undefined undefined undefined"
+            width=""
+          />,
+          "name": "max-height",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        M {
+          "_$AH": Array [
+            "undefined undefined undefined",
+          ],
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <img
+            alt="image"
+            class="max-w-full h-auto transition-shadow ease-in-out duration-300
+     
+     "
+            height=""
+            max-height=""
+            max-width=""
+            min-height=""
+            min-width=""
+            part="custom-image"
+            src=""
+            srcset=""
+            style="border:undefined undefined undefined"
+            width=""
+          />,
+          "name": "style",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "strings": Array [
+            "border:",
+            "",
+          ],
+          "type": 1,
+        },
+      ],
+    },
+    "_$AM": undefined,
+    "_$AN": undefined,
+    "_$Cm": true,
+    "options": Object {
+      "host": [Circular],
+      "isConnected": true,
+      "renderBefore": null,
+    },
+    "type": 2,
+  },
+  "_$E_": Promise {},
+  "_$Ei": undefined,
+  "_$El": null,
+  "__altText": "",
+  "__placeholderImg": "",
+  "__size": Object {},
+  "__src": "",
+  "enableUpdating": [Function],
+  "hasUpdated": true,
+  "isUpdatePending": false,
+  "renderOptions": Object {
+    "host": [Circular],
+    "isConnected": true,
+    "renderBefore": null,
+  },
+  "renderRoot": ShadowRoot {
+    "_$litPart$": P {
+      "_$AA": <!---->,
+      "_$AB": null,
+      "_$AH": xt {
+        "_$AD": z {
+          "el": <template />,
+          "parts": Array [
+            Object {
+              "ctor": [Function],
+              "index": 0,
+              "name": "class",
+              "strings": Array [
+                "max-w-full h-auto transition-shadow ease-in-out duration-300
+     ",
+                "
+     ",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 0,
+              "name": "src",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 0,
+              "name": "srcset",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 0,
+              "name": "alt",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 0,
+              "name": "width",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 0,
+              "name": "height",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 0,
+              "name": "min-width",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 0,
+              "name": "max-width",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 0,
+              "name": "min-height",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 0,
+              "name": "max-height",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 0,
+              "name": "style",
+              "strings": Array [
+                "border:",
+                "",
+              ],
+              "type": 1,
+            },
+          ],
+        },
+        "_$AM": [Circular],
+        "_$AN": undefined,
+        "u": Array [
+          M {
+            "_$AH": Array [
+              undefined,
+              undefined,
+            ],
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <img
+              alt="image"
+              class="max-w-full h-auto transition-shadow ease-in-out duration-300
+     
+     "
+              height=""
+              max-height=""
+              max-width=""
+              min-height=""
+              min-width=""
+              part="custom-image"
+              src=""
+              srcset=""
+              style="border:undefined undefined undefined"
+              width=""
+            />,
+            "name": "class",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "strings": Array [
+              "max-w-full h-auto transition-shadow ease-in-out duration-300
+     ",
+              "
+     ",
+              "",
+            ],
+            "type": 1,
+          },
+          M {
+            "_$AH": "",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <img
+              alt="image"
+              class="max-w-full h-auto transition-shadow ease-in-out duration-300
+     
+     "
+              height=""
+              max-height=""
+              max-width=""
+              min-height=""
+              min-width=""
+              part="custom-image"
+              src=""
+              srcset=""
+              style="border:undefined undefined undefined"
+              width=""
+            />,
+            "name": "src",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          M {
+            "_$AH": "",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <img
+              alt="image"
+              class="max-w-full h-auto transition-shadow ease-in-out duration-300
+     
+     "
+              height=""
+              max-height=""
+              max-width=""
+              min-height=""
+              min-width=""
+              part="custom-image"
+              src=""
+              srcset=""
+              style="border:undefined undefined undefined"
+              width=""
+            />,
+            "name": "srcset",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          M {
+            "_$AH": "image",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <img
+              alt="image"
+              class="max-w-full h-auto transition-shadow ease-in-out duration-300
+     
+     "
+              height=""
+              max-height=""
+              max-width=""
+              min-height=""
+              min-width=""
+              part="custom-image"
+              src=""
+              srcset=""
+              style="border:undefined undefined undefined"
+              width=""
+            />,
+            "name": "alt",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          M {
+            "_$AH": undefined,
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <img
+              alt="image"
+              class="max-w-full h-auto transition-shadow ease-in-out duration-300
+     
+     "
+              height=""
+              max-height=""
+              max-width=""
+              min-height=""
+              min-width=""
+              part="custom-image"
+              src=""
+              srcset=""
+              style="border:undefined undefined undefined"
+              width=""
+            />,
+            "name": "width",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          M {
+            "_$AH": undefined,
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <img
+              alt="image"
+              class="max-w-full h-auto transition-shadow ease-in-out duration-300
+     
+     "
+              height=""
+              max-height=""
+              max-width=""
+              min-height=""
+              min-width=""
+              part="custom-image"
+              src=""
+              srcset=""
+              style="border:undefined undefined undefined"
+              width=""
+            />,
+            "name": "height",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          M {
+            "_$AH": undefined,
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <img
+              alt="image"
+              class="max-w-full h-auto transition-shadow ease-in-out duration-300
+     
+     "
+              height=""
+              max-height=""
+              max-width=""
+              min-height=""
+              min-width=""
+              part="custom-image"
+              src=""
+              srcset=""
+              style="border:undefined undefined undefined"
+              width=""
+            />,
+            "name": "min-width",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          M {
+            "_$AH": undefined,
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <img
+              alt="image"
+              class="max-w-full h-auto transition-shadow ease-in-out duration-300
+     
+     "
+              height=""
+              max-height=""
+              max-width=""
+              min-height=""
+              min-width=""
+              part="custom-image"
+              src=""
+              srcset=""
+              style="border:undefined undefined undefined"
+              width=""
+            />,
+            "name": "max-width",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          M {
+            "_$AH": undefined,
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <img
+              alt="image"
+              class="max-w-full h-auto transition-shadow ease-in-out duration-300
+     
+     "
+              height=""
+              max-height=""
+              max-width=""
+              min-height=""
+              min-width=""
+              part="custom-image"
+              src=""
+              srcset=""
+              style="border:undefined undefined undefined"
+              width=""
+            />,
+            "name": "min-height",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          M {
+            "_$AH": undefined,
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <img
+              alt="image"
+              class="max-w-full h-auto transition-shadow ease-in-out duration-300
+     
+     "
+              height=""
+              max-height=""
+              max-width=""
+              min-height=""
+              min-width=""
+              part="custom-image"
+              src=""
+              srcset=""
+              style="border:undefined undefined undefined"
+              width=""
+            />,
+            "name": "max-height",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          M {
+            "_$AH": Array [
+              "undefined undefined undefined",
+            ],
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <img
+              alt="image"
+              class="max-w-full h-auto transition-shadow ease-in-out duration-300
+     
+     "
+              height=""
+              max-height=""
+              max-width=""
+              min-height=""
+              min-width=""
+              part="custom-image"
+              src=""
+              srcset=""
+              style="border:undefined undefined undefined"
+              width=""
+            />,
+            "name": "style",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "strings": Array [
+              "border:",
+              "",
+            ],
+            "type": 1,
+          },
+        ],
+      },
+      "_$AM": undefined,
+      "_$AN": undefined,
+      "_$Cm": true,
+      "options": Object {
+        "host": [Circular],
+        "isConnected": true,
+        "renderBefore": null,
+      },
+      "type": 2,
+    },
+  },
+}
+`;

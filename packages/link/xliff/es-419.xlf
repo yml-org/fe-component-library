@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<file target-language="es-419" source-language="en" original="lit-localize-inputs" datatype="plaintext">
+<body>
+<trans-unit id="s66e7012cb5146b20">
+  <source>Click Here to redirect</source>
+  <target>Haga clic aquí para redirigir</target>
+</trans-unit>
+<trans-unit id="sd832bfea9a82a813">
+  <source>Click Here</source>
+  <target>Haga clic aquí</target>
+</trans-unit>
+</body>
+</file>
+</xliff>
