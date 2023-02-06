@@ -93,6 +93,33 @@ export class HeaderComponent extends TailwindElement(Style) {
     />`;
   }
 
+  protected renderHamburgerIcon() {
+    return `<button
+    type="button"
+    class="inline-flex items-center justify-center rounded-md p-2 ${this.getThemeProperty(
+      ThemeOptionKeys.TextHoverColorDesktop
+    )} focus:outline-none btn-tap-color"
+    aria-controls=${msg(str`mobile menu`)}
+    aria-expanded="${this.navOptions.isMenuOpen}"
+    aria-label=${msg(str`mobile button`)}
+    @click=${this.setMenuOpen}
+    part="menu-icon-button">
+    ${
+      this.openMenu
+        ? !this.navOptions?.closeMenuIcon?.slotName
+          ? CloseMenuIcon
+          : html`<div class="h-6 w-6" part="menu-close-icon">
+              <slot name=${this.navOptions?.closeMenuIcon?.slotName}></slot>
+            </div>`
+        : !this.navOptions?.openMenuIcon?.slotName
+        ? OpenMenuIcon
+        : html`<div class="h-6 w-6" part="menu-open-icon">
+            <slot name=${this.navOptions?.openMenuIcon?.slotName}></slot>
+          </div>`
+    }
+  </button>`;
+  }
+
   render() {
     return html`
       <nav class="${this.getThemeProperty(ThemeOptionKeys.BackgroundColor)}
@@ -105,34 +132,11 @@ export class HeaderComponent extends TailwindElement(Style) {
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden" part="menu-icon-container" >
               
               <!-- Mobile menu button-->
-              <button
-                type="button"
-                class="inline-flex items-center justify-center rounded-md p-2 ${this.getThemeProperty(
-                  ThemeOptionKeys.TextHoverColorDesktop
-                )} focus:outline-none btn-tap-color"
-                aria-controls=${msg(str`mobile menu`)}
-                aria-expanded="${this.navOptions.isMenuOpen}"
-                aria-label=${msg(str`mobile button`)}
-                @click=${this.setMenuOpen}
-                part="menu-icon-button">
-                ${
-                  this.openMenu
-                    ? !this.navOptions?.closeMenuIcon?.slotName
-                      ? CloseMenuIcon
-                      : html`<div class="h-6 w-6" part="menu-close-icon">
-                          <slot
-                            name=${this.navOptions?.closeMenuIcon?.slotName}
-                          ></slot>
-                        </div>`
-                    : !this.navOptions?.openMenuIcon?.slotName
-                    ? OpenMenuIcon
-                    : html`<div class="h-6 w-6" part="menu-open-icon">
-                        <slot
-                          name=${this.navOptions?.openMenuIcon?.slotName}
-                        ></slot>
-                      </div>`
-                }
-              </button>
+            ${
+              !!this.navOptions?.menuLinks.length
+                ? this.renderHamburgerIcon()
+                : ''
+            }
             </div>
 
             <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">

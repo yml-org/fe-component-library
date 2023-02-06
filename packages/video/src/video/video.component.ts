@@ -1,7 +1,7 @@
 import { html } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import videojs from 'video.js';
-import Style from '../../../../packages/video/node_modules/video.js/dist/video-js.css';
+import Style from '../../../../node_modules/video.js/dist/video-js.css';
 import { TailwindElement } from '../shared/tailwind.element';
 import {
   VideoStyle,
