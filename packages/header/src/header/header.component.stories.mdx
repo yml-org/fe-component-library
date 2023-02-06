@@ -7,11 +7,61 @@ import {
   withSlots,
 } from '../constants/header.variants';
 
-<Meta title="Header" />
-
 # Header Component
 
-Basic header component without `props`
+The header component is an accelerator that enables you to add a navbar on the go. It accepts properties that can be set by the user which can be plugged into any application.
+This component is framework independent and can be used in a variety of web applications.
+
+# Props
+
+| Prop Name     | Type |
+| ------------- | ---- |
+| navBarOptions | Nav  |
+
+The navBarOptions is an object of type Nav which has the following key value pairs:
+
+| Key           | Type        | Description                                                     |
+| ------------- | ----------- | --------------------------------------------------------------- |
+| mode          | NavbarModes | The navbar mode (dark/light)                                    |
+| logo          | string      | The url for the app logo                                        |
+| logoAltText   | string      | The alt text for the app logo                                   |
+| headerText    | string      | The app title                                                   |
+| openMenuIcon  | SlotRecord  | Slot provided to the user to insert custom elements             |
+| closeMenuIcon | SlotRecord  | Slot provided to the user to insert custom elements             |
+| menuLinks     | MenuLink[]  | The navbar links that are used for navigation                   |
+| isMenuOpen    | boolean     | This determines whether the hamburger menu is opened by default |
+| topRightSlot  | SlotRecord  | Slot provided to the user to insert custom elements             |
+
+Following are the NavbarModes:
+
+1. dark (This is the default mode)
+2. light
+
+The slot record has the following key value pairs:
+
+| Key      | Type   | Description                                                       |
+| -------- | ------ | ----------------------------------------------------------------- |
+| slotName | string | The name of the slot which will be replaced by the custom element |
+
+The menuLink is an object having the following key value pairs:
+
+| Key       | Type         | Description                                                        |
+| --------- | ------------ | ------------------------------------------------------------------ |
+| label     | string       | The menu item label                                                |
+| type      | MenuLinkType | The type of menu item(button/link)                                 |
+| url       | string       | The redirection URL                                                |
+| eventName | string       | The custom event name that will be triggered on click of menu item |
+
+Following are the MenuLinkTypes:
+
+1. link (This is the default mode)
+2. button
+
+<Meta title="Header" />
+
+# Examples
+
+**Basic header component without `props`**
 
 export const TemplateDefault = () =>
   html`<header-component></header-component>`;
