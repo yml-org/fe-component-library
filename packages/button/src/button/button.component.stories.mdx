@@ -7,121 +7,152 @@ import './button.component.ts';
 
 # Button Component
 
-Button component With `text` prop
+The Button component is a Lit component that renders a button element that is framework independent and utilizes Tailwind CSS internally.
 
-export const withTextTemplate = ({text}) =>
+# Props
+
+| Prop Name  | Type        | Description                                                                          |
+| ---------- | ----------- | ------------------------------------------------------------------------------------ |
+| text       | string      | The text for the button element                                                      |
+| linkTitle  | VariantType | The button variant                                                                   |
+| color      | colorType   | The button background color                                                          |
+| slotName   | string      | The name for the slot that can be used to pass children                              |
+| isDisabled | boolean     | Flag to determine whether the button needs to be disabled or not                     |
+| fullWidth  | boolean     | Flag to determine whether the button needs to occupy the full width of the container |
+| isRounded  | boolean     | Flag to determine whether the button will have rounded corners                       |
+
+The button has the following variants:
+
+1. contained
+2. outlined
+3. link
+
+The different color options for the button component are as follows:
+
+1. primary
+2. secondary
+3. success
+4. danger
+5. warning
+6. light
+7. dark
+
+# Examples
+
+Button component with `text` prop
+
+export const withTextTemplate = ({ text }) =>
   html`<button-component .text=${text}></button-component>`;
 
 <Canvas>
   <Story
     name="with text"
     args={{
-        text:"YML"
+      text: 'YML',
     }}
   >
     {withTextTemplate.bind({})}
   </Story>
 </Canvas>
 
-Button component With `link` Variant
+Button component with `link` Variant
 
-export const withVariantTemplate = ({ variant, text}) =>
-  html`<button-component  .text=${text} .variant=${variant}></button-component>`;
+export const withVariantTemplate = ({ variant, text }) =>
+  html`<button-component .text=${text} .variant=${variant}></button-component>`;
 
 <Canvas>
   <Story
     name="with link variant"
     args={{
-        variant:"link",
-        text:'Button'
+      variant: 'link',
+      text: 'Button',
     }}
   >
     {withVariantTemplate.bind({})}
   </Story>
 </Canvas>
 
-Button component With `Contained` Variant
+Button component with `Contained` Variant
 
 <Canvas>
   <Story
     name="with contained variant"
     args={{
-        variant:"contained",
-        text:'Button'
+      variant: 'contained',
+      text: 'Button',
     }}
   >
     {withVariantTemplate.bind({})}
   </Story>
 </Canvas>
 
-Button component With `outlined` Variant
+Button component with `outlined` Variant
 
 <Canvas>
   <Story
     name="with outlined variant"
     args={{
-        variant:"outlined",
-        text:'Button'
+      variant: 'outlined',
+      text: 'Button',
     }}
   >
     {withVariantTemplate.bind({})}
   </Story>
 </Canvas>
 
-Button component With `Primary` color
+Button component with `Primary` color
 
-export const withColorTemplate = ({color, text}) =>
+export const withColorTemplate = ({ color, text }) =>
   html`<button-component .color=${color} .text=${text}></button-component>`;
 
 <Canvas>
   <Story
     name="with primary color"
     args={{
-        color:"primary",
-        text:'Button'
+      color: 'primary',
+      text: 'Button',
     }}
   >
     {withColorTemplate.bind({})}
   </Story>
 </Canvas>
 
-Button component With `Secondary` color
+Button component with `Secondary` color
 
 <Canvas>
   <Story
     name="with secondary color"
     args={{
-        color:"secondary",
-        text:'Button'
+      color: 'secondary',
+      text: 'Button',
     }}
   >
     {withColorTemplate.bind({})}
   </Story>
 </Canvas>
 
-
-Button component With `success` color
+Button component with `success` color
 
 <Canvas>
   <Story
     name="with success color"
     args={{
-        color:"success",
-        text:'Button'
+      color: 'success',
+      text: 'Button',
     }}
   >
     {withColorTemplate.bind({})}
   </Story>
 </Canvas>
 
-Button component With `danger` color
+Button component with `danger` color
 
 <Canvas>
   <Story
     name="with danger color"
     args={{
-        color:"danger",
-        text:'Button'
+      color: 'danger',
+      text: 'Button',
     }}
   >
     {withColorTemplate.bind({})}
@@ -132,110 +163,114 @@ Button component With `danger` color
   <Story
     name="with warning color"
     args={{
-        color:"warning",
-        text:'Button'
+      color: 'warning',
+      text: 'Button',
     }}
   >
     {withColorTemplate.bind({})}
   </Story>
 </Canvas>
 
-
-Button component With `light` color
+Button component with `light` color
 
 <Canvas>
   <Story
     name="with light color"
     args={{
-        color:"light",
-        text:'Button'
+      color: 'light',
+      text: 'Button',
     }}
   >
     {withColorTemplate.bind({})}
   </Story>
 </Canvas>
 
-
-Button component With `dark` color
+Button component with `dark` color
 
 <Canvas>
   <Story
     name="with dark color"
     args={{
-        color:"dark",
-        text:'Button'
+      color: 'dark',
+      text: 'Button',
     }}
   >
     {withColorTemplate.bind({})}
   </Story>
 </Canvas>
 
+Button component with `round` border
 
-Button component With `round` border
-
-export const withRoundedTemplate = ({isRounded, text}) =>
-  html`<button-component .text=${text} .isRounded=${isRounded}></button-component>`;
+export const withRoundedTemplate = ({ isRounded, text }) =>
+  html`<button-component
+    .text=${text}
+    .isRounded=${isRounded}
+  ></button-component>`;
 
 <Canvas>
   <Story
     name="with rounded prop"
     args={{
-        isRounded:true,
-        text:'Button'
+      isRounded: true,
+      text: 'Button',
     }}
   >
     {withRoundedTemplate.bind({})}
   </Story>
 </Canvas>
 
+Button component with `disabled` property
 
-Button component With `disabled` property
-
-export const withDisableTemplate = ({isDisabled, text}) =>
-  html`<button-component .text=${text} .isDisabled=${isDisabled}></button-component>`;
+export const withDisableTemplate = ({ isDisabled, text }) =>
+  html`<button-component
+    .text=${text}
+    .isDisabled=${isDisabled}
+  ></button-component>`;
 
 <Canvas>
   <Story
     name="with disabled prop"
     args={{
-        isDisabled: true,
-        text:'Button'
+      isDisabled: true,
+      text: 'Button',
     }}
   >
     {withDisableTemplate.bind({})}
   </Story>
 </Canvas>
 
+Button component with `full-width`
 
-Button component With `full-width`
-
-export const withFullWidthTemplate = ({fullWidth, text}) =>
-  html`<button-component .text=${text} .fullWidth=${fullWidth}></button-component>`;
+export const withFullWidthTemplate = ({ fullWidth, text }) =>
+  html`<button-component
+    .text=${text}
+    .fullWidth=${fullWidth}
+  ></button-component>`;
 
 <Canvas>
   <Story
     name="with fullWidth"
     args={{
-        fullWidth: true,
-        text:'Button'
+      fullWidth: true,
+      text: 'Button',
     }}
   >
     {withFullWidthTemplate.bind({})}
   </Story>
 </Canvas>
 
-
-Button component With `Slot`  
+Button component with `Slot`
 
 export const withSlotTemplate = () =>
   html`<button-component>
-  <a href="#" slotName="text">A Link</a></button-component>`;
+    <a href="#" slotName="text">A Link</a></button-component
+  >`;
 
 <Canvas>
   <Story
     name="with slot"
     args={{
-        slotName:"text"
+      slotName: 'text',
     }}
   >
     {withSlotTemplate.bind({})}
