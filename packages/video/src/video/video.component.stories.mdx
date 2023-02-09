@@ -2,9 +2,50 @@ import { html } from 'lit';
 import { Story, Meta, Canvas } from '@storybook/addon-docs';
 import './video.component.ts';
 
-<Meta title="Videos" />
-
 # Video Component
+
+The image component is a Lit component that renders an img element that is framework independent and utilizes Tailwind CSS internally. It also uses [video.js](https://videojs.com/) library as a player instead of native HTML Video element.
+
+# Props
+
+| Prop Name        | Type            | Description                                                                       |
+| ---------------- | --------------- | --------------------------------------------------------------------------------- |
+| src              | string          | The video source                                                                  |
+| preload          | string          | The preload attribute for the video tag                                           |
+| autoplay         | boolean/string  | The autoplay attribute for the video tag                                          |
+| controls         | boolean         | Flag to determine whether or not to show the video controls                       |
+| fluid            | boolean         | Flag to determine whether or not the player is fixed to a particular aspect ratio |
+| responsive       | boolean         | Flag to determine whether or not to customize the player UI based on player size  |
+| muted            | boolean         | Flag to determine whether or not the video is muted by default                    |
+| playbackRates    | Number[]        | The different playback rates that will be available for the user to select from   |
+| poster           | string          | The video poster                                                                  |
+| videoStyle       | VideoStyle/null | Object for overwriting the video size or aspect ratio                             |
+| captions         | Captions[]      | List of captions for the video                                                    |
+| seekTo           | string          | The custom time to which the video will be seeked                                 |
+| customPlayEvent  | string          | The custom event which is dispatched when the video is played                     |
+| customPauseEvent | string          | The custom event which is dispatched when the video is paused                     |
+| customSeekEvent  | string          | The custom event which is dispatched when the video is seeked                     |
+
+The VideoStyle interface consist of the following keys:
+
+| Key         | Type   | Description                    |
+| ----------- | ------ | ------------------------------ |
+| width       | string | The width of the player        |
+| height      | string | The height of the player       |
+| aspectRatio | string | The aspect ratio of the player |
+
+The Captions interface consist of the following keys:
+
+| Key      | Type   | Description                                       |
+| -------- | ------ | ------------------------------------------------- |
+| srcTrack | string | The source of the text track                      |
+| kind     | string | The type of content the files contain             |
+| srcLang  | string | The language each subtitle files' contents are in |
+| label    | string | The language that subtitle set is for             |
+
+# Examples
+
+<Meta title="Videos" />
 
 Basic Video component with `src` prop
 
