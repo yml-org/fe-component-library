@@ -9,3 +9,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - feat: Add button component
 - feat: Add image component
 - feat: Add link component
+
+## [v1.1.1] - 2023-02-09
+
+- feat: Add video component
+- feat: Improve storybook documentation
