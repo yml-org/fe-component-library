@@ -12,6 +12,27 @@ import {
 
 # Link Component
 
+The link component is a Lit component that renders an anchor element that is framework independent and utilizes Tailwind CSS internally.
+
+# Props
+
+| Prop Name | Type               | Description                                                                                               |
+| --------- | ------------------ | --------------------------------------------------------------------------------------------------------- |
+| text      | string             | The text for the button element                                                                           |
+| linkTitle | string             | The tooltip text on hover                                                                                 |
+| href      | string             | The redirection URL                                                                                       |
+| slotName  | string             | The name for the slot that can be used to pass children                                                   |
+| rel       | string             | The rel attribute which defines the relationship between the current page and the linked page or resource |
+| target    | string             | The target attribute that specifies where to open the linked document                                     |
+| type      | LinkComponentTypes | The link component type                                                                                   |
+
+The link has the following types:
+
+1. link
+2. button
+
+# Examples
+
 Basic link component without `props`
 
 export const TemplateDefault = () => html`<link-component></link-component>`;
@@ -20,7 +41,7 @@ export const TemplateDefault = () => html`<link-component></link-component>`;
   <Story name="default">{TemplateDefault.bind({})}</Story>
 </Canvas>
 
-Link component With `props`
+Link component with `props`
 
 export const TemplateProps = (args) => html`<link-component
   .href=${args.linkProps.href}

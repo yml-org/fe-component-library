@@ -7,6 +7,62 @@ import './image.component.ts';
 
 # Image Component
 
+The image component is a Lit component that renders an img element that is framework independent and utilizes Tailwind CSS internally.
+
+# Props
+
+| Prop Name      | Type   | Description                                             |
+| -------------- | ------ | ------------------------------------------------------- |
+| altText        | string | The image alt text                                      |
+| src            | string | The image source                                        |
+| placeholderImg | string | The default image in case the actual image doesn't load |
+| size           | Size   | The image size                                          |
+
+The size property is of type Size which has the following properties:
+
+| Key       | Type          | Description                                         |
+| --------- | ------------- | --------------------------------------------------- |
+| width     | string        | The width of the image                              |
+| height    | string        | The height of the image                             |
+| maxHeight | string        | The maximum height of the image                     |
+| minHeight | string        | The minimum height of the image                     |
+| maxWidth  | string        | The maximum width of the image                      |
+| minWidth  | string        | The minimum width of the image                      |
+| border    | Border        | The border property for the image                   |
+| rounded   | boolean       | Flag to determine whether the image will be rounded |
+| objectFit | objectFitType | The object fit property value for the image         |
+
+The border property is of type Border which has the following properties:
+
+| Key   | Type       | Description        |
+| ----- | ---------- | ------------------ |
+| width | string     | The border width   |
+| type  | BorderType | The type of border |
+| color | string     | The border color   |
+
+Following are the ObjectFit types:
+
+1. contain
+2. fill
+3. scale-down
+4. fit
+5. none
+6. cover
+
+Following are the border types:
+
+1. solid
+2. dotted
+3. dashed
+4. double
+5. none
+6. groove
+7. ridge
+8. inset
+9. outset
+
+# Examples
+
 Basic Image component with `src` prop
 
 Here we include `src` prop to srcset attribute

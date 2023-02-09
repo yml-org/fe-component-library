@@ -1,7 +1,7 @@
 {
   "name": "root",
   "private": true,
-  "version": "1.1.0",
+  "version": "1.1.1",
   "workspaces": [
     "packages/*"
   ],
@@ -41,7 +41,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build": "lerna run build",
-    "test": "yarn build && jest --no-verbose -u",
+    "test": "yarn build && jest --no-verbose -u --silent",
     "test:coverage": "yarn build && jest --coverage -u",
     "test:watch": "yarn build && jest -u --watch",
     "lint": "yarn eslint \"packages/**/src/**\" --fix"

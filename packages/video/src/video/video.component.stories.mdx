@@ -1,0 +1,405 @@
+import { html } from 'lit';
+import { Story, Meta, Canvas } from '@storybook/addon-docs';
+import './video.component.ts';
+
+# Video Component
+
+The image component is a Lit component that renders an img element that is framework independent and utilizes Tailwind CSS internally. It also uses [video.js](https://videojs.com/) library as a player instead of native HTML Video element.
+
+# Props
+
+| Prop Name        | Type            | Description                                                                       |
+| ---------------- | --------------- | --------------------------------------------------------------------------------- |
+| src              | string          | The video source                                                                  |
+| preload          | string          | The preload attribute for the video tag                                           |
+| autoplay         | boolean/string  | The autoplay attribute for the video tag                                          |
+| controls         | boolean         | Flag to determine whether or not to show the video controls                       |
+| fluid            | boolean         | Flag to determine whether or not the player is fixed to a particular aspect ratio |
+| responsive       | boolean         | Flag to determine whether or not to customize the player UI based on player size  |
+| muted            | boolean         | Flag to determine whether or not the video is muted by default                    |
+| playbackRates    | Number[]        | The different playback rates that will be available for the user to select from   |
+| poster           | string          | The video poster                                                                  |
+| videoStyle       | VideoStyle/null | Object for overwriting the video size or aspect ratio                             |
+| captions         | Captions[]      | List of captions for the video                                                    |
+| seekTo           | string          | The custom time to which the video will be seeked                                 |
+| customPlayEvent  | string          | The custom event which is dispatched when the video is played                     |
+| customPauseEvent | string          | The custom event which is dispatched when the video is paused                     |
+| customSeekEvent  | string          | The custom event which is dispatched when the video is seeked                     |
+
+The VideoStyle interface consist of the following keys:
+
+| Key         | Type   | Description                    |
+| ----------- | ------ | ------------------------------ |
+| width       | string | The width of the player        |
+| height      | string | The height of the player       |
+| aspectRatio | string | The aspect ratio of the player |
+
+The Captions interface consist of the following keys:
+
+| Key      | Type   | Description                                       |
+| -------- | ------ | ------------------------------------------------- |
+| srcTrack | string | The source of the text track                      |
+| kind     | string | The type of content the files contain             |
+| srcLang  | string | The language each subtitle files' contents are in |
+| label    | string | The language that subtitle set is for             |
+
+# Examples
+
+<Meta title="Videos" />
+
+Basic Video component with `src` prop
+
+export const defaultTemplate = ({ src }) =>
+  html`<video-component .src=${src}></video-component>`;
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      src: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+    }}
+  >
+    {defaultTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Video component with `poster` prop
+
+In this example we include `poster` prop. Poster will act as a thumbnail image
+for the video. If not added, the default thumbnail would be displayed.
+
+export const withPosterImgTemplate = ({ src, poster }) =>
+  html`<video-component .src=${src} .poster=${poster}
+    ><video-component></video-component
+  ></video-component>`;
+
+<Canvas>
+  <Story
+    name="With Poster"
+    args={{
+      src: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+      poster:
+        'https://upload.wikimedia.org/wikipedia/commons/6/69/Big_Buck_Bunny_-_forest.jpg',
+    }}
+  >
+    {withPosterImgTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Video component with `loop` prop
+
+In this example we include `loop` prop. This will enable the video to be played
+on loop.
+
+export const withLoopTemplate = ({ src, poster, loop }) =>
+  html`<video-component .src=${src} .poster=${poster}
+    ><video-component></video-component
+  ></video-component>`;
+
+<Canvas>
+  <Story
+    name="With Loop"
+    args={{
+      src: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+      poster:
+        'https://upload.wikimedia.org/wikipedia/commons/6/69/Big_Buck_Bunny_-_forest.jpg',
+      loop: true,
+    }}
+  >
+    {withLoopTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Video component with custom `width`, `height`
+
+export const withCustomWidthAndHeightTemplate = ({
+  src,
+  poster,
+  playbackRates,
+  videoStyle,
+  fluid,
+  responsive,
+}) =>
+  html`<video-component
+    .src=${src}
+    .poster=${poster}
+    .playbackRates=${playbackRates}
+    .videoStyle=${videoStyle}
+    .fluid=${fluid}
+    .responsive=${responsive}
+    ><video-component></video-component
+  ></video-component>`;
+
+<Canvas>
+  <Story
+    name="With Custom Height and Width"
+    args={{
+      src: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+      poster:
+        'https://upload.wikimedia.org/wikipedia/commons/6/69/Big_Buck_Bunny_-_forest.jpg',
+      videoStyle: {
+        width: '600px',
+        height: '400px',
+        aspectRatio: '4:3',
+      },
+      fluid: true,
+      responsive: true,
+    }}
+  >
+    {withCustomWidthAndHeightTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Video component with `playbackRates`
+
+export const withPlayBackRatesTemplate = ({
+  src,
+  poster,
+  playbackRates,
+  aspectRatio,
+}) =>
+  html`<video-component
+    .src=${src}
+    .poster=${poster}
+    .playbackRates=${playbackRates}
+    .aspectRatio=${aspectRatio}
+    ><video-component></video-component
+  ></video-component>`;
+
+<Canvas>
+  <Story
+    name="With PlayBackRates"
+    args={{
+      src: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+      poster:
+        'https://upload.wikimedia.org/wikipedia/commons/6/69/Big_Buck_Bunny_-_forest.jpg',
+      playbackRates: [0.25, 0.5, 1, 1.5, 2, 2.5, 3],
+    }}
+  >
+    {withPlayBackRatesTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Video component with `responsiveness`
+
+export const withResponsiveTemplate = ({
+  src,
+  poster,
+  playbackRates,
+  fluid,
+  responsive,
+}) =>
+  html`<video-component
+    .src=${src}
+    .poster=${poster}
+    .playbackRates=${playbackRates}
+    .fluid=${fluid}
+    .responsive:
+    ${responsive},
+    ><video-component></video-component
+  ></video-component>`;
+
+<Canvas>
+  <Story
+    name="With Responsiveness"
+    args={{
+      src: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+      poster:
+        'https://upload.wikimedia.org/wikipedia/commons/6/69/Big_Buck_Bunny_-_forest.jpg',
+      playbackRates: [0.25, 0.5, 1, 1.5, 2, 2.5, 3],
+      fluid: true,
+      responsive: true,
+    }}
+  >
+    {withResponsiveTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Video component with `captions/subtitles`
+
+export const withCaptionsTemplate = ({
+  src,
+  poster,
+  playbackRates,
+  captions,
+  aspectRatio,
+}) =>
+  html`<video-component
+    .src=${src}
+    .poster=${poster}
+    .playbackRates=${playbackRates}
+    .captions=${captions}
+    .aspectRatio=${aspectRatio}
+    ><video-component></video-component>
+  </video-component>`;
+
+<Canvas>
+  <Story
+    name="With Subtitles"
+    args={{
+      src: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+      poster:
+        'https://upload.wikimedia.org/wikipedia/commons/6/69/Big_Buck_Bunny_-_forest.jpg',
+      playbackRates: [0.25, 0.5, 1, 1.5, 2, 2.5, 3],
+      aspectRatio: '16:9',
+      captions: [
+        {
+          srcTrack:
+            'https://gist.githubusercontent.com/samdutton/ca37f3adaf4e23679957b8083e061177/raw/e19399fbccbc069a2af4266e5120ae6bad62699a/sample.vtt',
+          kind: 'captions',
+          srcLang: 'en',
+          label: 'English',
+        },
+      ],
+    }}
+  >
+    {withCaptionsTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Video component with `custom play function`
+
+export const withCustomPlayFunctionTemplate = ({
+  src,
+  poster,
+  playbackRates,
+  captions,
+  aspectRatio,
+  handlePlay,
+  customPlayEvent,
+}) =>
+  html`<video-component
+    .src=${src}
+    .poster=${poster}
+    .playbackRates=${playbackRates}
+    .captions=${captions}
+    .aspectRatio=${aspectRatio}
+    .customPlayEvent="${customPlayEvent}"
+    @handlePlay=${handlePlay}
+    ><video-component></video-component>
+  </video-component>`;
+
+<Canvas>
+  <Story
+    name="With Custom Play Function"
+    args={{
+      src: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+      poster:
+        'https://upload.wikimedia.org/wikipedia/commons/6/69/Big_Buck_Bunny_-_forest.jpg',
+      playbackRates: [0.25, 0.5, 1, 1.5, 2, 2.5, 3],
+      aspectRatio: '16:9',
+      captions: [
+        {
+          srcTrack:
+            'https://gist.githubusercontent.com/samdutton/ca37f3adaf4e23679957b8083e061177/raw/e19399fbccbc069a2af4266e5120ae6bad62699a/sample.vtt',
+          kind: 'captions',
+          srcLang: 'en',
+          label: 'English',
+        },
+      ],
+      customPlayEvent: 'handlePlay',
+      handlePlay: () => console.log('Play Video'),
+    }}
+  >
+    {withCustomPlayFunctionTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Video component with `custom play function`
+
+export const withCustomPauseFunctionTemplate = ({
+  src,
+  poster,
+  playbackRates,
+  captions,
+  aspectRatio,
+  handlePause,
+  customPauseEvent,
+}) =>
+  html`<video-component
+    .src=${src}
+    .poster=${poster}
+    .playbackRates=${playbackRates}
+    .captions=${captions}
+    .aspectRatio=${aspectRatio}
+    .customPauseEvent="${customPauseEvent}"
+    @handlePause=${handlePause}
+    ><video-component></video-component>
+  </video-component>`;
+
+<Canvas>
+  <Story
+    name="With Custom Pause Function"
+    args={{
+      src: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+      poster:
+        'https://upload.wikimedia.org/wikipedia/commons/6/69/Big_Buck_Bunny_-_forest.jpg',
+      playbackRates: [0.25, 0.5, 1, 1.5, 2, 2.5, 3],
+      aspectRatio: '16:9',
+      captions: [
+        {
+          srcTrack:
+            'https://gist.githubusercontent.com/samdutton/ca37f3adaf4e23679957b8083e061177/raw/e19399fbccbc069a2af4266e5120ae6bad62699a/sample.vtt',
+          kind: 'captions',
+          srcLang: 'en',
+          label: 'English',
+        },
+      ],
+      customPauseEvent: 'handlePause',
+      handlePause: () => console.log('Pause Video'),
+    }}
+  >
+    {withCustomPauseFunctionTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Video component with `custom seek function`
+
+export const withCustomSeekFunctionTemplate = ({
+  src,
+  poster,
+  playbackRates,
+  captions,
+  aspectRatio,
+  handleSeek,
+  customSeekEvent,
+  seekTo,
+}) =>
+  html`<video-component
+    .src=${src}
+    .poster=${poster}
+    .playbackRates=${playbackRates}
+    .captions=${captions}
+    .aspectRatio=${aspectRatio}
+    .customSeekEvent="${customSeekEvent}"
+    .seekTo=${seekTo}
+    @handleSeek=${handleSeek}
+    ><video-component></video-component>
+  </video-component>`;
+
+<Canvas>
+  <Story
+    name="With Custom Seek Function"
+    args={{
+      src: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+      poster:
+        'https://upload.wikimedia.org/wikipedia/commons/6/69/Big_Buck_Bunny_-_forest.jpg',
+      playbackRates: [0.25, 0.5, 1, 1.5, 2, 2.5, 3],
+      aspectRatio: '16:9',
+      captions: [
+        {
+          srcTrack:
+            'https://gist.githubusercontent.com/samdutton/ca37f3adaf4e23679957b8083e061177/raw/e19399fbccbc069a2af4266e5120ae6bad62699a/sample.vtt',
+          kind: 'captions',
+          srcLang: 'en',
+          label: 'English',
+        },
+      ],
+      seekTo: '60',
+      customSeekEvent: 'handleSeek',
+      handleSeek: () => console.log('Seek Video'),
+    }}
+  >
+    {withCustomSeekFunctionTemplate.bind({})}
+  </Story>
+</Canvas>
