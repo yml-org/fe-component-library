@@ -101,42 +101,36 @@ export class TransitionComponent extends TailwindElement(Style) {
     this.div.addEventListener('touchstart', (e) => this.handleTouchDown(e));
   };
 
-  protected handleTouchMove = (event) => {
+  protected handleTouchMove = (event, axis, eventName) => {
     this.slotClass = '';
-    if (this.scrollDirection === Direction.VERTICAL) {
-      this.mousePosition = {
-        y: event.touches[0].clientY,
-      };
-      this.div.style.top = this.mousePosition.y + this.offset[1] + 'px';
 
-      if (this.mousePosition.y + this.offset[1] > 50) {
-        this.swipedVertical = SwipeDirection.SwipedDown;
-        this.isScrolled = true;
-      } else if (this.mousePosition.y + this.offset[1] < -50) {
-        this.swipedVertical = SwipeDirection.SwipedUP;
-        this.isScrolled = true;
-      } else {
-        this.swipedVertical = SwipeDirection.None;
-        this.isScrolled = false;
-      }
+    (axis=== 'x')?  (
+      this.mousePosition = {
+        axis: (eventName === 'touch') ?event.touches[0].clientX :event.clientX ,
+      }) : (
+        this.mousePosition = {
+          axis: (eventName === 'touch') ?event.touches[0].clientY :event.clientY,
+        });
+
+        (axis=== 'x')
+        ? 
+        (this.div.style.left = (this.mousePosition.axis + this.offset[(axis === 'x')? '0': '1']) + 'px')
+        :
+        (this.div.style.top = (this.mousePosition.axis + this.offset[(axis === 'x')? '0': '1'])+ 'px')
+  
+    if (this.mousePosition.axis + this.offset[(axis === 'x')? '0': '1'] > 50) {
+      (axis=== 'x')? (this.swipedHorizontal = SwipeDirection.SwipedRight):
+      (this.swipedVertical = SwipeDirection.SwipedDown)
+      this.isScrolled = true;
+    } else if (this.mousePosition.axis + this.offset[(axis === 'x')? '0': '1'] < -50) {
+      (axis=== 'x')? (this.swipedHorizontal = SwipeDirection.SwipedLeft):
+      (this.swipedVertical = SwipeDirection.SwipedUP)
+      this.isScrolled = true;
+    } else {
+      this.swipedHorizontal = SwipeDirection.None;
+      this.isScrolled = false;
     }
 
-    if (this.scrollDirection === Direction.HORIZONTAL) {
-      this.mousePosition = {
-        x: event.touches[0].clientX,
-      };
-      this.div.style.left = this.mousePosition.x + this.offset[0] + 'px';
-      if (this.mousePosition.x + this.offset[0] > 50) {
-        this.swipedHorizontal = SwipeDirection.SwipedRight;
-        this.isScrolled = true;
-      } else if (this.mousePosition.x + this.offset[0] < -50) {
-        this.swipedHorizontal = SwipeDirection.SwipedLeft;
-        this.isScrolled = true;
-      } else {
-        this.swipedHorizontal = SwipeDirection.None;
-        this.isScrolled = false;
-      }
-    }   
   };
 
   protected handleMouseDown = (e) => {
@@ -219,57 +213,40 @@ export class TransitionComponent extends TailwindElement(Style) {
     this.isScrolled = false;
   };
 
-  protected handleMouseMove = (event) => {
+  protected handleMouseMove = (event, axis, eventName) => {
     event.preventDefault();
     if (this.isDown) {
       this.slotClass = '';
       
-      (this.scrollDirection === Direction.HORIZONTAL)?  (
+    (axis=== 'x')?  (
         this.mousePosition = {
-          x: event.clientX,
+          axis: event.clientX,
         }) : (
           this.mousePosition = {
-            y: event.clientY,
+            axis: event.clientY,
           });
 
-          (this.scrollDirection === Direction.HORIZONTAL)
+          (axis=== 'x')
           ? 
-          (this.div.style.left = (this.mousePosition.x + this.offset[0]) + 'px')
+          (this.div.style.left = (this.mousePosition.axis + this.offset[0]) + 'px')
           :
-          (this.div.style.top = (this.mousePosition.y + this.offset[1])+ 'px')
-       
-       if((this.scrollDirection === Direction.VERTICAL)){
-          if (this.mousePosition.y + this.offset[1] > 50) {
-          this.swipedVertical = SwipeDirection.SwipedDown;
+          (this.div.style.top = (this.mousePosition.axis + this.offset[1])+ 'px')
+    
+      
+        if (this.mousePosition.axis + this.offset[(axis === 'x')? '0': '1'] > 50) {
+          (axis=== 'x')? (this.swipedHorizontal = SwipeDirection.SwipedRight):
+          (this.swipedVertical = SwipeDirection.SwipedDown)
           this.isScrolled = true;
-        } else if (this.mousePosition.y + this.offset[1] < -50) {
-          this.swipedVertical = SwipeDirection.SwipedUP;
-          this.isScrolled = true;
-        } else {
-          this.swipedVertical = SwipeDirection.None;
-          this.isScrolled = false;
-        }
-      }
-    }
-
-      if (this.scrollDirection === Direction.HORIZONTAL) {
-        this.mousePosition = {
-          x: event.clientX,
-        };
-        this.div.style.left = this.mousePosition.x + this.offset[0] + 'px';
-        if (this.mousePosition.x + this.offset[0] > 50) {
-          this.swipedHorizontal = SwipeDirection.SwipedRight;
-          this.isScrolled = true;
-        } else if (this.mousePosition.x + this.offset[0] < -50) {
-          this.swipedHorizontal = SwipeDirection.SwipedLeft;
+        } else if (this.mousePosition.axis + this.offset[(axis === 'x')? '0': '1'] < -50) {
+          (axis=== 'x')? (this.swipedHorizontal = SwipeDirection.SwipedLeft):
+          (this.swipedVertical = SwipeDirection.SwipedUP)
           this.isScrolled = true;
         } else {
           this.swipedHorizontal = SwipeDirection.None;
           this.isScrolled = false;
         }
-      }
     }
-
+    }
 
 
   firstUpdated() {
@@ -280,9 +257,19 @@ export class TransitionComponent extends TailwindElement(Style) {
     document.addEventListener('touchend', this.handleMouseUp);
     document.addEventListener('mouseup', this.handleMouseUp);
     document.addEventListener('mousemove', (e) => {
-      this.handleMouseMove(e);
+      let axis;
+      (this.scrollDirection === Direction.HORIZONTAL)? (axis='x'):(axis='y')
+      e.preventDefault();
+      if(this.isDown){
+      this.handleTouchMove(e, axis, 'mouse');
+      }
     });
-    document.addEventListener('touchmove', this.handleTouchMove);    
+
+    document.addEventListener('touchmove',  (e) => {
+      let axis;
+      (this.scrollDirection === Direction.HORIZONTAL)? (axis='x'):(axis='y')
+        this.handleTouchMove(e, axis, 'touch');
+    });   
   }
 
   render() {
