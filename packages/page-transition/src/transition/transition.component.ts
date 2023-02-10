@@ -43,7 +43,7 @@ export class TransitionComponent extends TailwindElement(Style) {
   callbackEvent?: string = null;
 
   @property()
-  scrollDirection?: Direction = Direction.HORIZONTAL;
+  scrollDirection?: Direction = Direction.VERTICAL;
 
   @property()
   backgroundColor?: string = '#ECECEC';
@@ -180,7 +180,6 @@ export class TransitionComponent extends TailwindElement(Style) {
           this.slotName = this.componentArray[this.index].components;
         } else return;
       }
-      this.handleSlot();
     }
   };
 
@@ -200,33 +199,28 @@ export class TransitionComponent extends TailwindElement(Style) {
           this.slotName = this.componentArray[this.index].components;
         }
       }
-      this.handleSlot();
     }
   };
 
   protected handleUp = () => {
     this.isDown = false;
+    this.scrollDirection === Direction.HORIZONTAL
+      ? (this.div.style.left = '0px')
+      : (this.div.style.top = '0px');
 
-    this.scrollDirection === Direction.VERTICAL && (this.div.style.top = '0px');
-    this.scrollDirection === Direction.HORIZONTAL &&
-      (this.div.style.left = '0px');
-
-    if (
-      (this.swipedVertical === SwipeDirection.SwipedUP ||
-        this.swipedHorizontal === SwipeDirection.SwipedLeft) &&
-      this.isScrolled
-    ) {
-      this.handleIncrementIndex();
-      if (this.callbackEvent) {
-        this.dispatchEvent(new CustomEvent(this.callbackEvent));
+    if (this.isScrolled) {
+      if (
+        this.swipedVertical === SwipeDirection.SwipedUP ||
+        this.swipedHorizontal === SwipeDirection.SwipedLeft
+      ) {
+        this.handleIncrementIndex();
+        if (this.callbackEvent) {
+          this.dispatchEvent(new CustomEvent(this.callbackEvent));
+        }
+      } else {
+        this.handleDecrementIndex();
       }
-    }
-    if (
-      (this.swipedVertical === SwipeDirection.SwipedDown ||
-        this.swipedHorizontal === SwipeDirection.SwipedRight) &&
-      this.isScrolled
-    ) {
-      this.handleDecrementIndex();
+      this.handleSlot();
     }
     this.isScrolled = false;
   };
