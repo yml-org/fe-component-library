@@ -4,9 +4,32 @@ import './transition.component';
 
 <Meta title="Transition Component" />
 
-# Transition Component
+# Flick To Transition Component
 
-Basic tarnsition component without `props`
+The Flick To Transition component is an accelerator that allows the user to render one component at a time and also allows switching between component by swiping in defined directions. It accepts properties that can be set by the user which can be plugged into any application. This component is framework independent and can be used in a variety of web applications.
+
+# Props
+
+| Prop Name          | Type    | Description                                                        |
+| ------------------ | ------- | ------------------------------------------------------------------ |
+| componentArray     | Array   | The array containing slot names given to each components           |
+| disableSwipeNext   | boolean | Flag to disable swipe next function                                |
+| disableSwipePrev   | boolean | Flag to disable swipe previous function                            |
+| animationDuration  | number  | Speed in which new component should appear                         |
+| animationDelay     | number  | time to delay the animation in which new component appears         |
+| allowCircularSwipe | boolean | Flag to determine whether the components should form a loop or not |
+| callbackEvent      | string  | Custom event that gets fired on swipe next function                |
+| scrollDirection    | string  | The direction in which transition should occur                     |
+| backgroundColor    | string  | background for the parent container element                        |
+
+The different scrollDirection options for the flick to transition component are as follows:
+
+1. vertical(default)
+2. horizontal
+
+# Examples
+
+Basic transition component without `props`
 
 export const TemplateDefault = () =>
   html`<transition-component>
@@ -28,287 +51,261 @@ export const TemplateDefault = () =>
   </transition-component>`;
 
 <Canvas columns={1}>
-  <Story name="default" >{TemplateDefault.bind({})}</Story>
+  <Story name="default">{TemplateDefault.bind({})}</Story>
 </Canvas>
 
 Transition component with `componentArray'
 
 export const TemplateTheme = (args) => html` <transition-component
- .componentArray=${args.componentArray}>
-    <div slot="company">
-      <div style="width: 100vw; height: 100vh; background-color: red;">
-        <p>company</p>
-      </div>
+  .componentArray=${args.componentArray}
+>
+  <div slot="company">
+    <div style="width: 100vw; height: 100vh; background-color: red;">
+      <p>company</p>
     </div>
-    <div slot="team">
-      <div style="width: 100vw; height: 100vh; background-color: green;">
-        <p>team</p>
-      </div>
+  </div>
+  <div slot="team">
+    <div style="width: 100vw; height: 100vh; background-color: green;">
+      <p>team</p>
     </div>
-    <div slot="home">
-      <div style="width: 100vw; height: 100vh; background-color: blue;">
-        <p>home</p>
-      </div>
+  </div>
+  <div slot="home">
+    <div style="width: 100vw; height: 100vh; background-color: blue;">
+      <p>home</p>
     </div>
-  </transition-component>`;
+  </div>
+</transition-component>`;
 
 <Canvas columns={1}>
-  <Story name="componentArray" args={{ componentArray: [
-    {
-      components: 'company',
-    },
-    {
-      components: 'team',
-    },
-    {
-      components: 'home',
-    }
-  ] }}>
+  <Story
+    name="componentArray"
+    args={{ componentArray: ['company', 'team', 'home'] }}
+  >
     {TemplateTheme.bind({})}
   </Story>
 </Canvas>
 
 Transition component with `scrollDirection'
 
-export const TemplateWithScrollDirection = (args) => html`
- <transition-component
- .componentArray=${args.componentArray} scrollDirection=${args.scrollDirection}>
-    <div slot="company">
-      <div style="width: 100vw; height: 100vh; background-color: red;">
-        <p>company</p>
-      </div>
+export const TemplateWithScrollDirection = (args) => html` <transition-component
+  .componentArray=${args.componentArray}
+  scrollDirection=${args.scrollDirection}
+>
+  <div slot="company">
+    <div style="width: 100vw; height: 100vh; background-color: red;">
+      <p>company</p>
     </div>
-    <div slot="team">
-      <div style="width: 100vw; height: 100vh; background-color: green;">
-        <p>team</p>
-      </div>
+  </div>
+  <div slot="team">
+    <div style="width: 100vw; height: 100vh; background-color: green;">
+      <p>team</p>
     </div>
-    <div slot="home">
-      <div style="width: 100vw; height: 100vh; background-color: blue;">
-        <p>home</p>
-      </div>
+  </div>
+  <div slot="home">
+    <div style="width: 100vw; height: 100vh; background-color: blue;">
+      <p>home</p>
     </div>
-  </transition-component>`;
+  </div>
+</transition-component>`;
 
 <Canvas columns={1}>
-  <Story name="scrollDirection" args={{ 
-    componentArray: [
-    {
-      components: 'company',
-    },
-    {
-      components: 'team',
-    },
-    {
-      components: 'home',
-    }
-  ],
-  scrollDirection: 'horizontal' }}>
+  <Story
+    name="scrollDirection"
+    args={{
+      componentArray: ['company', 'team', 'home'],
+      scrollDirection: 'horizontal',
+    }}
+  >
     {TemplateWithScrollDirection.bind({})}
   </Story>
 </Canvas>
 
 Transition component with `allowCircularSwipe'
 
-export const TemplateWithallowCircularSwipe = ({componentArray, allowCircularSwipe}) => html`
- <transition-component
- .componentArray=${componentArray} allowCircularSwipe=${allowCircularSwipe}>
-    <div slot="company">
-      <div style="width: 100vw; height: 100vh; background-color: red;">
-        <p>company</p>
-      </div>
+export const TemplateWithAllowCircularSwipe = ({
+  componentArray,
+  allowCircularSwipe,
+}) => html` <transition-component
+  .componentArray=${componentArray}
+  allowCircularSwipe=${allowCircularSwipe}
+>
+  <div slot="company">
+    <div style="width: 100vw; height: 100vh; background-color: red;">
+      <p>company</p>
     </div>
-    <div slot="team">
-      <div style="width: 100vw; height: 100vh; background-color: green;">
-        <p>team</p>
-      </div>
+  </div>
+  <div slot="team">
+    <div style="width: 100vw; height: 100vh; background-color: green;">
+      <p>team</p>
     </div>
-    <div slot="home">
-      <div style="width: 100vw; height: 100vh; background-color: blue;">
-        <p>home</p>
-      </div>
+  </div>
+  <div slot="home">
+    <div style="width: 100vw; height: 100vh; background-color: blue;">
+      <p>home</p>
     </div>
-  </transition-component>`;
+  </div>
+</transition-component>`;
 
 <Canvas columns={1}>
-  <Story name="allowCircularSwipe" args={{ 
-    componentArray: [
-    {
-      components: 'company',
-    },
-    {
-      components: 'team',
-    },
-    {
-      components: 'home',
-    }
-  ],
-  allowCircularSwipe: true }}>
-    {TemplateWithallowCircularSwipe.bind({})}
+  <Story
+    name="allowCircularSwipe"
+    args={{
+      componentArray: ['company', 'team', 'home'],
+      allowCircularSwipe: true,
+    }}
+  >
+    {TemplateWithAllowCircularSwipe.bind({})}
   </Story>
 </Canvas>
-
-
 
 Transition component with `backgroundColor'
 
-export const TemplateWithallowbackgroundColor = ({componentArray, backgroundColor}) => html`
- <transition-component
- .componentArray=${componentArray} backgroundColor=${backgroundColor}>
-    <div slot="company">
-      <div style="width: 100vw; height: 100vh; background-color: red;">
-        <p>company</p>
-      </div>
+export const TemplateWithAllowBackgroundColor = ({
+  componentArray,
+  backgroundColor,
+}) => html` <transition-component
+  .componentArray=${componentArray}
+  .backgroundColor=${backgroundColor}
+>
+  <div slot="company">
+    <div style="width: 100vw; height: 100vh; background-color: red;">
+      <p>company</p>
     </div>
-    <div slot="team">
-      <div style="width: 100vw; height: 100vh; background-color: green;">
-        <p>team</p>
-      </div>
+  </div>
+  <div slot="team">
+    <div style="width: 100vw; height: 100vh; background-color: green;">
+      <p>team</p>
     </div>
-    <div slot="home">
-      <div style="width: 100vw; height: 100vh; background-color: blue;">
-        <p>home</p>
-      </div>
+  </div>
+  <div slot="home">
+    <div style="width: 100vw; height: 100vh; background-color: blue;">
+      <p>home</p>
     </div>
-  </transition-component>`;
+  </div>
+</transition-component>`;
 
 <Canvas columns={1}>
-  <Story name="backgroundColor" args={{ 
-    componentArray: [
-    {
-      components: 'company',
-    },
-    {
-      components: 'team',
-    },
-    {
-      components: 'home',
-    }
-  ],
-  backgroundColor: "#000000" }}>
-    {TemplateWithallowCircularSwipe.bind({})}
+  <Story
+    name="backgroundColor"
+    args={{
+      componentArray: ['company', 'team', 'home'],
+      backgroundColor: '#000000',
+    }}
+  >
+    {TemplateWithAllowBackgroundColor.bind({})}
   </Story>
 </Canvas>
-
 
 Transition component with `disableSwipeNext`
 
-export const TemplateWithdisableSwipeNext = ({componentArray, disableSwipeNext}) => html`
- <transition-component
- .componentArray=${componentArray} disableSwipeNext=${disableSwipeNext}>
-    <div slot="company">
-      <div style="width: 100vw; height: 100vh; background-color: red;">
-        <p>company</p>
-      </div>
+export const TemplateWithDisableSwipeNext = ({
+  componentArray,
+  disableSwipeNext,
+}) => html` <transition-component
+  .componentArray=${componentArray}
+  disableSwipeNext=${disableSwipeNext}
+>
+  <div slot="company">
+    <div style="width: 100vw; height: 100vh; background-color: red;">
+      <p>company</p>
     </div>
-    <div slot="team">
-      <div style="width: 100vw; height: 100vh; background-color: green;">
-        <p>team</p>
-      </div>
+  </div>
+  <div slot="team">
+    <div style="width: 100vw; height: 100vh; background-color: green;">
+      <p>team</p>
     </div>
-    <div slot="home">
-      <div style="width: 100vw; height: 100vh; background-color: blue;">
-        <p>home</p>
-      </div>
+  </div>
+  <div slot="home">
+    <div style="width: 100vw; height: 100vh; background-color: blue;">
+      <p>home</p>
     </div>
-  </transition-component>`;
+  </div>
+</transition-component>`;
 
 <Canvas columns={1}>
-  <Story name="disableSwipeNext" args={{ 
-    componentArray: [
-    {
-      components: 'company',
-    },
-    {
-      components: 'team',
-    },
-    {
-      components: 'home',
-    }
-  ],
-  disableSwipeNext: true }}>
-    {TemplateWithdisableSwipeNext.bind({})}
+  <Story
+    name="disableSwipeNext"
+    args={{
+      componentArray: ['company', 'team', 'home'],
+      disableSwipeNext: true,
+    }}
+  >
+    {TemplateWithDisableSwipeNext.bind({})}
   </Story>
 </Canvas>
-
 
 Transition component with `animationDuration`
 
-export const TemplateWithanimationDuration = ({componentArray, animationDuration}) => html`
- <transition-component
- .componentArray=${componentArray} animationDuration=${animationDuration}>
-    <div slot="company">
-      <div style="width: 100vw; height: 100vh; background-color: red;">
-        <p>company</p>
-      </div>
+export const TemplateWithAnimationDuration = ({
+  componentArray,
+  animationDuration,
+}) => html` <transition-component
+  .componentArray=${componentArray}
+  animationDuration=${animationDuration}
+>
+  <div slot="company">
+    <div style="width: 100vw; height: 100vh; background-color: red;">
+      <p>company</p>
     </div>
-    <div slot="team">
-      <div style="width: 100vw; height: 100vh; background-color: green;">
-        <p>team</p>
-      </div>
+  </div>
+  <div slot="team">
+    <div style="width: 100vw; height: 100vh; background-color: green;">
+      <p>team</p>
     </div>
-    <div slot="home">
-      <div style="width: 100vw; height: 100vh; background-color: blue;">
-        <p>home</p>
-      </div>
+  </div>
+  <div slot="home">
+    <div style="width: 100vw; height: 100vh; background-color: blue;">
+      <p>home</p>
     </div>
-  </transition-component>`;
+  </div>
+</transition-component>`;
 
 <Canvas columns={1}>
-  <Story name="animationDuration" args={{ 
-    componentArray: [
-    {
-      components: 'company',
-    },
-    {
-      components: 'team',
-    },
-    {
-      components: 'home',
-    }
-  ],
-  animationDuration: 3 }}>
-    {TemplateWithanimationDuration.bind({})}
+  <Story
+    name="animationDuration"
+    args={{
+      componentArray: ['company', 'team', 'home'],
+      animationDuration: 3,
+    }}
+  >
+    {TemplateWithAnimationDuration.bind({})}
   </Story>
 </Canvas>
 
-
 Transition component with `animationDelay`
 
-export const TemplateWithanimationDelay = ({componentArray, animationDelay}) => html`
- <transition-component
- .componentArray=${componentArray} animationDelay=${animationDelay}>
-    <div slot="company">
-      <div style="width: 100vw; height: 100vh; background-color: red;">
-        <p>company</p>
-      </div>
+export const TemplateWithAnimationDelay = ({
+  componentArray,
+  animationDelay,
+}) => html` <transition-component
+  .componentArray=${componentArray}
+  animationDelay=${animationDelay}
+>
+  <div slot="company">
+    <div style="width: 100vw; height: 100vh; background-color: red;">
+      <p>company</p>
     </div>
-    <div slot="team">
-      <div style="width: 100vw; height: 100vh; background-color: green;">
-        <p>team</p>
-      </div>
+  </div>
+  <div slot="team">
+    <div style="width: 100vw; height: 100vh; background-color: green;">
+      <p>team</p>
     </div>
-    <div slot="home">
-      <div style="width: 100vw; height: 100vh; background-color: blue;">
-        <p>home</p>
-      </div>
+  </div>
+  <div slot="home">
+    <div style="width: 100vw; height: 100vh; background-color: blue;">
+      <p>home</p>
     </div>
-  </transition-component>`;
+  </div>
+</transition-component>`;
 
 <Canvas columns={1}>
-  <Story name="animationDelay" args={{ 
-    componentArray: [
-    {
-      components: 'company',
-    },
-    {
-      components: 'team',
-    },
-    {
-      components: 'home',
-    }
-  ],
-  animationDelay: 3 }}>
-    {TemplateWithanimationDelay.bind({})}
+  <Story
+    name="animationDelay"
+    args={{
+      componentArray: ['company', 'team', 'home'],
+      animationDelay: 3,
+    }}
+  >
+    {TemplateWithAnimationDelay.bind({})}
   </Story>
 </Canvas>

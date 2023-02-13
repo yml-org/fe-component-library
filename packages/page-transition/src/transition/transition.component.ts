@@ -3,26 +3,18 @@ import { customElement, property, state } from 'lit/decorators.js';
 import { TailwindElement } from '../shared/tailwind.element';
 import 'animate.css';
 import {
-  ComponentObj,
   Direction,
   SwipeDirection,
+  DivStyle,
+  EventType,
+  MousePosition
 } from './../constants/transition.component';
 import Style from './transition.component.scss?inline';
 
 @customElement('transition-component')
 export class TransitionComponent extends TailwindElement(Style) {
   @property()
-  componentArray?: Array<ComponentObj> = [
-    {
-      components: 'slot1',
-    },
-    {
-      components: 'slot2',
-    },
-    {
-      components: 'slot3',
-    },
-  ];
+  componentArray?: Array<string> = ['slot1', 'slot2', 'slot3'];
 
   @property()
   disableSwipeNext?: boolean;
@@ -46,7 +38,7 @@ export class TransitionComponent extends TailwindElement(Style) {
   scrollDirection?: Direction = Direction.VERTICAL;
 
   @property()
-  backgroundColor?: string = '#ECECEC';
+  backgroundColor?: string = '#ffffff';
 
   @state()
   slotName: string;
@@ -58,16 +50,16 @@ export class TransitionComponent extends TailwindElement(Style) {
   slotClass = '';
 
   @state()
-  mousePosition;
+  mousePosition : MousePosition;
 
   @state()
   offset = [0, 0];
 
   @state()
-  div;
+  div : HTMLElement;
 
   @state()
-  hiddenDiv;
+  hiddenDiv : HTMLElement;
 
   @state()
   isDown = false;
@@ -76,108 +68,163 @@ export class TransitionComponent extends TailwindElement(Style) {
   isScrolled = false;
 
   @state()
-  swipedHorizontal = '';
+  swipedDirection = '';
 
   @state()
-  swipedVertical = '';
-
-  @property()
-  divClass;
+  divPointer : string;
 
   protected handleSlot = () => {
     this.div = this.renderRoot.querySelector(`#${this.slotName}`);
 
     this.animationDuration &&
-      (this.div.style.webkitAnimationDuration = `${this.animationDuration}s`);
+      (this.div.style.animationDuration = `${this.animationDuration}s`);
     this.animationDelay &&
       (this.div.style.animationDelay = `${this.animationDelay}s`);
 
-    this.div.style.position = 'relative';
-    this.div.style.display = 'block';
+    this.div.style.position = DivStyle.Position;
+    this.div.style.display = DivStyle.Display;
+    this.div.style.overflow = DivStyle.Overflow;
+    this.div.style.maxHeight = DivStyle.MaxHeight;
+    this.div.style.maxWidth = DivStyle.MaxWidth;
 
     this.componentArray.map((item) => {
-      if (item.components !== this.slotName) {
-        this.hiddenDiv = this.renderRoot.querySelector(`#${item.components}`);
+      if (item !== this.slotName) {
+        this.hiddenDiv = this.renderRoot.querySelector(`#${item}`);
         this.hiddenDiv.style.display = 'none';
       }
     });
 
     this.div.addEventListener('mousedown', (e) =>
-      this.handleMouseDown(e, 'mouse')
+      this.handleMouseDown(e, EventType.MouseEvent)
     );
     this.div.addEventListener('touchstart', (e) =>
-      this.handleMouseDown(e, 'touch')
+      this.handleMouseDown(e, EventType.TouchEvent)
     );
   };
 
-  protected handleMove = (event, axis, eventName) => {
+  protected handleMove = (event, axis: string, eventName: string) => {
     this.slotClass = '';
 
     axis === 'x'
       ? (this.mousePosition = {
           axis:
-            eventName === 'touch' ? event.touches[0].clientX : event.clientX,
+            eventName === EventType.TouchEvent
+              ? event.touches[0].clientX
+              : event.clientX,
         })
       : (this.mousePosition = {
           axis:
-            eventName === 'touch' ? event.touches[0].clientY : event.clientY,
+            eventName === EventType.TouchEvent
+              ? event.touches[0].clientY
+              : event.clientY,
         });
 
-    axis === 'x'
-      ? (this.div.style.left =
-          this.mousePosition.axis +
-          this.offset[axis === 'x' ? '0' : '1'] +
-          'px')
-      : (this.div.style.top =
-          this.mousePosition.axis +
-          this.offset[axis === 'x' ? '0' : '1'] +
-          'px');
-
-    if (this.mousePosition.axis + this.offset[axis === 'x' ? '0' : '1'] > 50) {
+    if (eventName === EventType.TouchEvent) {
+      this.divPointer =
+        this.mousePosition.axis + this.offset[axis === 'x' ? '0' : '1'] > 0
+          ? (
+              axis === 'x'
+                ? this.div.scrollLeft === 0
+                : this.div.scrollTop === 0
+            )
+            ? this.mousePosition.axis +
+              this.offset[axis === 'x' ? '0' : '1'] +
+              'px'
+            : '0px'
+          : Math.trunc(
+              axis === 'x' ? this.div.scrollLeft : this.div.scrollTop
+            ) ===
+            Math.trunc(
+              (axis === 'x' ? this.div.scrollWidth : this.div.scrollHeight) -
+                (axis === 'x' ? this.div.offsetWidth : this.div.offsetHeight)
+            )
+          ? this.mousePosition.axis +
+            this.offset[axis === 'x' ? '0' : '1'] +
+            'px'
+          : '0px';
       axis === 'x'
-        ? (this.swipedHorizontal = SwipeDirection.SwipedRight)
-        : (this.swipedVertical = SwipeDirection.SwipedDown);
-      this.isScrolled = true;
+        ? (this.div.style.left = this.divPointer)
+        : (this.div.style.top = this.divPointer);
+    } else {
+      this.divPointer =
+        this.mousePosition.axis + this.offset[axis === 'x' ? '0' : '1'] + 'px';
+      axis === 'x'
+        ? (this.div.style.left = this.divPointer)
+        : (this.div.style.top = this.divPointer);
+    }
+
+    if (
+      this.mousePosition.axis + this.offset[axis === 'x' ? '0' : '1'] >
+      (axis === 'x' ? 20 : 50)
+    ) {
+      if (eventName === 'touch') {
+        this.swipedDirection =
+          axis === 'x' ? SwipeDirection.SwipedRight : SwipeDirection.SwipedDown;
+
+        if (
+          axis === 'x' ? this.div.scrollLeft === 0 : this.div.scrollTop === 0
+        ) {
+          this.isScrolled = true;
+        } else {
+          this.isScrolled = false;
+        }
+      } else {
+        this.swipedDirection =
+          axis === 'x' ? SwipeDirection.SwipedRight : SwipeDirection.SwipedDown;
+        this.isScrolled = true;
+      }
     } else if (
       this.mousePosition.axis + this.offset[axis === 'x' ? '0' : '1'] <
-      -50
+      (axis === 'x' ? -20 : -50)
     ) {
-      axis === 'x'
-        ? (this.swipedHorizontal = SwipeDirection.SwipedLeft)
-        : (this.swipedVertical = SwipeDirection.SwipedUP);
-      this.isScrolled = true;
+      if (eventName === EventType.TouchEvent) {
+        this.swipedDirection =
+          axis === 'x' ? SwipeDirection.SwipedLeft : SwipeDirection.SwipedUP;
+        Math.trunc(axis === 'x' ? this.div.scrollLeft : this.div.scrollTop) ===
+        Math.trunc(
+          axis === 'x'
+            ? this.div.scrollWidth - this.div.offsetWidth
+            : this.div.scrollHeight - this.div.offsetHeight
+        )
+          ? (this.isScrolled = true)
+          : (this.isScrolled = false);
+      } else {
+        this.swipedDirection =
+          axis === 'x' ? SwipeDirection.SwipedLeft : SwipeDirection.SwipedUP;
+        this.isScrolled = true;
+      }
     } else {
-      this.swipedHorizontal = SwipeDirection.None;
+      this.swipedDirection = SwipeDirection.None;
       this.isScrolled = false;
     }
   };
 
-  protected handleMouseDown = (e, eventName) => {
-    if (eventName !== 'touch') {
+  protected handleMouseDown = (e, eventName: string) => {
+    if (eventName !== EventType.TouchEvent) {
       this.isDown = true;
     }
     this.offset = [
       this.div.offsetLeft -
-        (eventName === 'touch' ? e.touches[0].clientX : e.clientX),
+        (eventName === EventType.TouchEvent ? e.touches[0].clientX : e.clientX),
       this.div.offsetTop -
-        (eventName === 'touch' ? e.touches[0].clientY : e.clientY),
+        (eventName === EventType.TouchEvent ? e.touches[0].clientY : e.clientY),
     ];
   };
 
   protected handleDecrementIndex = () => {
     if (!this.disableSwipePrev) {
-      if (this.index !== 0) {
+      if (this.index !== 0 || this.allowCircularSwipe) {
         this.scrollDirection === Direction.HORIZONTAL
           ? (this.slotClass = 'animate__animated animate__fadeInLeft')
           : (this.slotClass = 'animate__animated animate__fadeInDown');
       }
       if (this.index > 0) {
         this.index = this.index - 1;
-        this.slotName = this.componentArray[this.index].components;
+        this.slotName = this.componentArray[this.index];
       } else {
         if (this.allowCircularSwipe) {
           this.index = this.componentArray.length - 1;
-          this.slotName = this.componentArray[this.index].components;
+          this.slotName = this.componentArray[this.index];
         } else return;
       }
     }
@@ -185,18 +232,21 @@ export class TransitionComponent extends TailwindElement(Style) {
 
   protected handleIncrementIndex = () => {
     if (!this.disableSwipeNext) {
-      if (this.index !== this.componentArray.length - 1) {
+      if (
+        this.index !== this.componentArray.length - 1 ||
+        this.allowCircularSwipe
+      ) {
         this.scrollDirection === Direction.HORIZONTAL
           ? (this.slotClass = 'animate__animated animate__fadeInRight')
           : (this.slotClass = 'animate__animated animate__fadeInUp');
       }
       if (this.index < this.componentArray.length - 1) {
         this.index = this.index + 1;
-        this.slotName = this.componentArray[this.index].components;
+        this.slotName = this.componentArray[this.index];
       } else {
         if (this.allowCircularSwipe) {
           this.index = 0;
-          this.slotName = this.componentArray[this.index].components;
+          this.slotName = this.componentArray[this.index];
         }
       }
     }
@@ -210,8 +260,8 @@ export class TransitionComponent extends TailwindElement(Style) {
 
     if (this.isScrolled) {
       if (
-        this.swipedVertical === SwipeDirection.SwipedUP ||
-        this.swipedHorizontal === SwipeDirection.SwipedLeft
+        this.swipedDirection === SwipeDirection.SwipedUP ||
+        this.swipedDirection === SwipeDirection.SwipedLeft
       ) {
         this.handleIncrementIndex();
         if (this.callbackEvent) {
@@ -226,35 +276,39 @@ export class TransitionComponent extends TailwindElement(Style) {
   };
 
   firstUpdated() {
-    this.slotName = this.componentArray[0].components;
+    this.slotName = this.componentArray[0];
     this.handleSlot();
     document.addEventListener('touchend', this.handleUp);
     document.addEventListener('mouseup', this.handleUp);
     document.addEventListener('mousemove', (e) => {
-      let axis;
+      let axis : string;
       this.scrollDirection === Direction.HORIZONTAL
         ? (axis = 'x')
         : (axis = 'y');
       e.preventDefault();
       if (this.isDown) {
-        this.handleMove(e, axis, 'mouse');
+        this.handleMove(e, axis, EventType.MouseEvent);
       }
     });
 
     document.addEventListener('touchmove', (e) => {
-      let axis;
+      let axis: string;
       this.scrollDirection === Direction.HORIZONTAL
         ? (axis = 'x')
         : (axis = 'y');
-      this.handleMove(e, axis, 'touch');
+      this.handleMove(e, axis, EventType.TouchEvent);
     });
   }
 
   render() {
     return html`
-      <div class="overflow-hidden bg-[${this.backgroundColor}]">
+      <div
+        part="flick-to-transition-container"
+        style="overflow : hidden ; background : ${this.backgroundColor}"
+      >
         ${this.componentArray.map(
-          ({ components }) => html` <div
+          (components) => html` <div
+            part="flick-to-transition-${components}"
             id=${components}
             class=${this.slotClass}
           >
