@@ -14,3 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - feat: Add video component
 - feat: Improve storybook documentation
+
+## [v1.1.2] - 2023-02-13
+
+- hotfix: Fix hamburger menu icon for header component
