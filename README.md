@@ -55,7 +55,7 @@ Reach out to the following presons in case of any concerns:
 
 1. [Shashanka Nataraj](https://github.com/ShashankaNataraj)
 2. [Ramya Nayak](https://github.com/Ramyarnayak)
-3. [Nirlipt Gaur](https://github.com/ng22792yml)
+3. [Aswathi S](https://github.com/AswathiSYML)
 4. [Abdul Ziyan](https://github.com/Ziyan7)
 5. [Adithya S Shenoy](https://github.com/AadiShenoy)
 6. [Nilesh Kumar Sinha](https://github.com/NileshSinhaYML)
