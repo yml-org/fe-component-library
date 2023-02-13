@@ -94,18 +94,18 @@ export class HeaderComponent extends TailwindElement(Style) {
   }
 
   protected renderHamburgerIcon() {
-    return `<button
-    type="button"
-    class="inline-flex items-center justify-center rounded-md p-2 ${this.getThemeProperty(
-      ThemeOptionKeys.TextHoverColorDesktop
-    )} focus:outline-none btn-tap-color"
-    aria-controls=${msg(str`mobile menu`)}
-    aria-expanded="${this.navOptions.isMenuOpen}"
-    aria-label=${msg(str`mobile button`)}
-    @click=${this.setMenuOpen}
-    part="menu-icon-button">
-    ${
-      this.openMenu
+    return html`<button
+      type="button"
+      class="inline-flex items-center justify-center rounded-md p-2 ${this.getThemeProperty(
+        ThemeOptionKeys.TextHoverColorDesktop
+      )} focus:outline-none btn-tap-color"
+      aria-controls=${msg(str`mobile menu`)}
+      aria-expanded="${this.navOptions.isMenuOpen}"
+      aria-label=${msg(str`mobile button`)}
+      @click=${this.setMenuOpen}
+      part="menu-icon-button"
+    >
+      ${this.openMenu
         ? !this.navOptions?.closeMenuIcon?.slotName
           ? CloseMenuIcon
           : html`<div class="h-6 w-6" part="menu-close-icon">
@@ -115,9 +115,8 @@ export class HeaderComponent extends TailwindElement(Style) {
         ? OpenMenuIcon
         : html`<div class="h-6 w-6" part="menu-open-icon">
             <slot name=${this.navOptions?.openMenuIcon?.slotName}></slot>
-          </div>`
-    }
-  </button>`;
+          </div>`}
+    </button>`;
   }
 
   render() {
@@ -133,7 +132,7 @@ export class HeaderComponent extends TailwindElement(Style) {
               
               <!-- Mobile menu button-->
             ${
-              !!this.navOptions?.menuLinks.length
+              this.navOptions?.menuLinks?.length > 0
                 ? this.renderHamburgerIcon()
                 : ''
             }
