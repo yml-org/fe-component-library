@@ -6,9 +6,6 @@ This is a JavaScript module that provides a simple and efficient way to install 
 
 ## Install
 
-
-## Install
-
 ```bash
 yarn add ga-accelerator
 ```
