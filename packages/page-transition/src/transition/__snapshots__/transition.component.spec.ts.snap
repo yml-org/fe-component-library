@@ -1,0 +1,1506 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`transition-component matches component snapshot 1`] = `
+d {
+  "_$AL": Map {},
+  "_$Do": U {
+    "_$AA": <!---->,
+    "_$AB": null,
+    "_$AH": At {
+      "_$AD": O {
+        "el": <template />,
+        "parts": Array [
+          Object {
+            "ctor": [Function],
+            "index": 0,
+            "name": "style",
+            "strings": Array [
+              "overflow : hidden ; background : ",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "index": 1,
+            "type": 2,
+          },
+        ],
+      },
+      "_$AM": [Circular],
+      "_$AN": undefined,
+      "u": Array [
+        B {
+          "_$AH": Array [
+            "#ffffff",
+          ],
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <div
+            part="flick-to-transition-container"
+            style="overflow : hidden ; background : #ffffff"
+          >
+            
+        
+            <!--?lit$58247526802$-->
+            <!---->
+             
+            <div
+              class=""
+              id="slot1"
+              part="flick-to-transition-slot1"
+              style="animation-duration: 1s; position: relative; display: block; overflow: scroll; max-height: 100vh; max-width: 100vw;"
+            >
+              
+            
+              <slot
+                id="slot1"
+                name="slot1"
+              />
+              
+          
+            </div>
+            <!---->
+            <!---->
+             
+            <div
+              class=""
+              id="slot2"
+              part="flick-to-transition-slot2"
+              style="display: none;"
+            >
+              
+            
+              <slot
+                id="slot2"
+                name="slot2"
+              />
+              
+          
+            </div>
+            <!---->
+            <!---->
+             
+            <div
+              class=""
+              id="slot3"
+              part="flick-to-transition-slot3"
+              style="display: none;"
+            >
+              
+            
+              <slot
+                id="slot3"
+                name="slot3"
+              />
+              
+          
+            </div>
+            <!---->
+            
+      
+          </div>,
+          "name": "style",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "strings": Array [
+            "overflow : hidden ; background : ",
+            "",
+          ],
+          "type": 1,
+        },
+        U {
+          "_$AA": <!--?lit$58247526802$-->,
+          "_$AB": 
+      ,
+          "_$AH": Array [
+            U {
+              "_$AA": <!---->,
+              "_$AB": <!---->,
+              "_$AH": At {
+                "_$AD": O {
+                  "el": <template />,
+                  "parts": Array [
+                    Object {
+                      "ctor": [Function],
+                      "index": 0,
+                      "name": "part",
+                      "strings": Array [
+                        "flick-to-transition-",
+                        "",
+                      ],
+                      "type": 1,
+                    },
+                    Object {
+                      "ctor": [Function],
+                      "index": 0,
+                      "name": "id",
+                      "strings": Array [
+                        "",
+                        "",
+                      ],
+                      "type": 1,
+                    },
+                    Object {
+                      "ctor": [Function],
+                      "index": 0,
+                      "name": "class",
+                      "strings": Array [
+                        "",
+                        "",
+                      ],
+                      "type": 1,
+                    },
+                    Object {
+                      "ctor": [Function],
+                      "index": 1,
+                      "name": "id",
+                      "strings": Array [
+                        "",
+                        "",
+                      ],
+                      "type": 1,
+                    },
+                    Object {
+                      "ctor": [Function],
+                      "index": 1,
+                      "name": "name",
+                      "strings": Array [
+                        "",
+                        "",
+                      ],
+                      "type": 1,
+                    },
+                  ],
+                },
+                "_$AM": [Circular],
+                "_$AN": undefined,
+                "u": Array [
+                  B {
+                    "_$AH": Array [
+                      "slot1",
+                    ],
+                    "_$AM": [Circular],
+                    "_$AN": undefined,
+                    "element": <div
+                      class=""
+                      id="slot1"
+                      part="flick-to-transition-slot1"
+                      style="animation-duration: 1s; position: relative; display: block; overflow: scroll; max-height: 100vh; max-width: 100vw;"
+                    >
+                      
+            
+                      <slot
+                        id="slot1"
+                        name="slot1"
+                      />
+                      
+          
+                    </div>,
+                    "name": "part",
+                    "options": Object {
+                      "host": [Circular],
+                      "isConnected": true,
+                      "renderBefore": null,
+                    },
+                    "strings": Array [
+                      "flick-to-transition-",
+                      "",
+                    ],
+                    "type": 1,
+                  },
+                  B {
+                    "_$AH": "slot1",
+                    "_$AM": [Circular],
+                    "_$AN": undefined,
+                    "element": <div
+                      class=""
+                      id="slot1"
+                      part="flick-to-transition-slot1"
+                      style="animation-duration: 1s; position: relative; display: block; overflow: scroll; max-height: 100vh; max-width: 100vw;"
+                    >
+                      
+            
+                      <slot
+                        id="slot1"
+                        name="slot1"
+                      />
+                      
+          
+                    </div>,
+                    "name": "id",
+                    "options": Object {
+                      "host": [Circular],
+                      "isConnected": true,
+                      "renderBefore": null,
+                    },
+                    "type": 1,
+                  },
+                  B {
+                    "_$AH": "",
+                    "_$AM": [Circular],
+                    "_$AN": undefined,
+                    "element": <div
+                      class=""
+                      id="slot1"
+                      part="flick-to-transition-slot1"
+                      style="animation-duration: 1s; position: relative; display: block; overflow: scroll; max-height: 100vh; max-width: 100vw;"
+                    >
+                      
+            
+                      <slot
+                        id="slot1"
+                        name="slot1"
+                      />
+                      
+          
+                    </div>,
+                    "name": "class",
+                    "options": Object {
+                      "host": [Circular],
+                      "isConnected": true,
+                      "renderBefore": null,
+                    },
+                    "type": 1,
+                  },
+                  B {
+                    "_$AH": "slot1",
+                    "_$AM": [Circular],
+                    "_$AN": undefined,
+                    "element": <slot
+                      id="slot1"
+                      name="slot1"
+                    />,
+                    "name": "id",
+                    "options": Object {
+                      "host": [Circular],
+                      "isConnected": true,
+                      "renderBefore": null,
+                    },
+                    "type": 1,
+                  },
+                  B {
+                    "_$AH": "slot1",
+                    "_$AM": [Circular],
+                    "_$AN": undefined,
+                    "element": <slot
+                      id="slot1"
+                      name="slot1"
+                    />,
+                    "name": "name",
+                    "options": Object {
+                      "host": [Circular],
+                      "isConnected": true,
+                      "renderBefore": null,
+                    },
+                    "type": 1,
+                  },
+                ],
+              },
+              "_$AM": [Circular],
+              "_$AN": undefined,
+              "_$Cm": true,
+              "options": Object {
+                "host": [Circular],
+                "isConnected": true,
+                "renderBefore": null,
+              },
+              "type": 2,
+            },
+            U {
+              "_$AA": <!---->,
+              "_$AB": <!---->,
+              "_$AH": At {
+                "_$AD": O {
+                  "el": <template />,
+                  "parts": Array [
+                    Object {
+                      "ctor": [Function],
+                      "index": 0,
+                      "name": "part",
+                      "strings": Array [
+                        "flick-to-transition-",
+                        "",
+                      ],
+                      "type": 1,
+                    },
+                    Object {
+                      "ctor": [Function],
+                      "index": 0,
+                      "name": "id",
+                      "strings": Array [
+                        "",
+                        "",
+                      ],
+                      "type": 1,
+                    },
+                    Object {
+                      "ctor": [Function],
+                      "index": 0,
+                      "name": "class",
+                      "strings": Array [
+                        "",
+                        "",
+                      ],
+                      "type": 1,
+                    },
+                    Object {
+                      "ctor": [Function],
+                      "index": 1,
+                      "name": "id",
+                      "strings": Array [
+                        "",
+                        "",
+                      ],
+                      "type": 1,
+                    },
+                    Object {
+                      "ctor": [Function],
+                      "index": 1,
+                      "name": "name",
+                      "strings": Array [
+                        "",
+                        "",
+                      ],
+                      "type": 1,
+                    },
+                  ],
+                },
+                "_$AM": [Circular],
+                "_$AN": undefined,
+                "u": Array [
+                  B {
+                    "_$AH": Array [
+                      "slot2",
+                    ],
+                    "_$AM": [Circular],
+                    "_$AN": undefined,
+                    "element": <div
+                      class=""
+                      id="slot2"
+                      part="flick-to-transition-slot2"
+                      style="display: none;"
+                    >
+                      
+            
+                      <slot
+                        id="slot2"
+                        name="slot2"
+                      />
+                      
+          
+                    </div>,
+                    "name": "part",
+                    "options": Object {
+                      "host": [Circular],
+                      "isConnected": true,
+                      "renderBefore": null,
+                    },
+                    "strings": Array [
+                      "flick-to-transition-",
+                      "",
+                    ],
+                    "type": 1,
+                  },
+                  B {
+                    "_$AH": "slot2",
+                    "_$AM": [Circular],
+                    "_$AN": undefined,
+                    "element": <div
+                      class=""
+                      id="slot2"
+                      part="flick-to-transition-slot2"
+                      style="display: none;"
+                    >
+                      
+            
+                      <slot
+                        id="slot2"
+                        name="slot2"
+                      />
+                      
+          
+                    </div>,
+                    "name": "id",
+                    "options": Object {
+                      "host": [Circular],
+                      "isConnected": true,
+                      "renderBefore": null,
+                    },
+                    "type": 1,
+                  },
+                  B {
+                    "_$AH": "",
+                    "_$AM": [Circular],
+                    "_$AN": undefined,
+                    "element": <div
+                      class=""
+                      id="slot2"
+                      part="flick-to-transition-slot2"
+                      style="display: none;"
+                    >
+                      
+            
+                      <slot
+                        id="slot2"
+                        name="slot2"
+                      />
+                      
+          
+                    </div>,
+                    "name": "class",
+                    "options": Object {
+                      "host": [Circular],
+                      "isConnected": true,
+                      "renderBefore": null,
+                    },
+                    "type": 1,
+                  },
+                  B {
+                    "_$AH": "slot2",
+                    "_$AM": [Circular],
+                    "_$AN": undefined,
+                    "element": <slot
+                      id="slot2"
+                      name="slot2"
+                    />,
+                    "name": "id",
+                    "options": Object {
+                      "host": [Circular],
+                      "isConnected": true,
+                      "renderBefore": null,
+                    },
+                    "type": 1,
+                  },
+                  B {
+                    "_$AH": "slot2",
+                    "_$AM": [Circular],
+                    "_$AN": undefined,
+                    "element": <slot
+                      id="slot2"
+                      name="slot2"
+                    />,
+                    "name": "name",
+                    "options": Object {
+                      "host": [Circular],
+                      "isConnected": true,
+                      "renderBefore": null,
+                    },
+                    "type": 1,
+                  },
+                ],
+              },
+              "_$AM": [Circular],
+              "_$AN": undefined,
+              "_$Cm": true,
+              "options": Object {
+                "host": [Circular],
+                "isConnected": true,
+                "renderBefore": null,
+              },
+              "type": 2,
+            },
+            U {
+              "_$AA": <!---->,
+              "_$AB": <!---->,
+              "_$AH": At {
+                "_$AD": O {
+                  "el": <template />,
+                  "parts": Array [
+                    Object {
+                      "ctor": [Function],
+                      "index": 0,
+                      "name": "part",
+                      "strings": Array [
+                        "flick-to-transition-",
+                        "",
+                      ],
+                      "type": 1,
+                    },
+                    Object {
+                      "ctor": [Function],
+                      "index": 0,
+                      "name": "id",
+                      "strings": Array [
+                        "",
+                        "",
+                      ],
+                      "type": 1,
+                    },
+                    Object {
+                      "ctor": [Function],
+                      "index": 0,
+                      "name": "class",
+                      "strings": Array [
+                        "",
+                        "",
+                      ],
+                      "type": 1,
+                    },
+                    Object {
+                      "ctor": [Function],
+                      "index": 1,
+                      "name": "id",
+                      "strings": Array [
+                        "",
+                        "",
+                      ],
+                      "type": 1,
+                    },
+                    Object {
+                      "ctor": [Function],
+                      "index": 1,
+                      "name": "name",
+                      "strings": Array [
+                        "",
+                        "",
+                      ],
+                      "type": 1,
+                    },
+                  ],
+                },
+                "_$AM": [Circular],
+                "_$AN": undefined,
+                "u": Array [
+                  B {
+                    "_$AH": Array [
+                      "slot3",
+                    ],
+                    "_$AM": [Circular],
+                    "_$AN": undefined,
+                    "element": <div
+                      class=""
+                      id="slot3"
+                      part="flick-to-transition-slot3"
+                      style="display: none;"
+                    >
+                      
+            
+                      <slot
+                        id="slot3"
+                        name="slot3"
+                      />
+                      
+          
+                    </div>,
+                    "name": "part",
+                    "options": Object {
+                      "host": [Circular],
+                      "isConnected": true,
+                      "renderBefore": null,
+                    },
+                    "strings": Array [
+                      "flick-to-transition-",
+                      "",
+                    ],
+                    "type": 1,
+                  },
+                  B {
+                    "_$AH": "slot3",
+                    "_$AM": [Circular],
+                    "_$AN": undefined,
+                    "element": <div
+                      class=""
+                      id="slot3"
+                      part="flick-to-transition-slot3"
+                      style="display: none;"
+                    >
+                      
+            
+                      <slot
+                        id="slot3"
+                        name="slot3"
+                      />
+                      
+          
+                    </div>,
+                    "name": "id",
+                    "options": Object {
+                      "host": [Circular],
+                      "isConnected": true,
+                      "renderBefore": null,
+                    },
+                    "type": 1,
+                  },
+                  B {
+                    "_$AH": "",
+                    "_$AM": [Circular],
+                    "_$AN": undefined,
+                    "element": <div
+                      class=""
+                      id="slot3"
+                      part="flick-to-transition-slot3"
+                      style="display: none;"
+                    >
+                      
+            
+                      <slot
+                        id="slot3"
+                        name="slot3"
+                      />
+                      
+          
+                    </div>,
+                    "name": "class",
+                    "options": Object {
+                      "host": [Circular],
+                      "isConnected": true,
+                      "renderBefore": null,
+                    },
+                    "type": 1,
+                  },
+                  B {
+                    "_$AH": "slot3",
+                    "_$AM": [Circular],
+                    "_$AN": undefined,
+                    "element": <slot
+                      id="slot3"
+                      name="slot3"
+                    />,
+                    "name": "id",
+                    "options": Object {
+                      "host": [Circular],
+                      "isConnected": true,
+                      "renderBefore": null,
+                    },
+                    "type": 1,
+                  },
+                  B {
+                    "_$AH": "slot3",
+                    "_$AM": [Circular],
+                    "_$AN": undefined,
+                    "element": <slot
+                      id="slot3"
+                      name="slot3"
+                    />,
+                    "name": "name",
+                    "options": Object {
+                      "host": [Circular],
+                      "isConnected": true,
+                      "renderBefore": null,
+                    },
+                    "type": 1,
+                  },
+                ],
+              },
+              "_$AM": [Circular],
+              "_$AN": undefined,
+              "_$Cm": true,
+              "options": Object {
+                "host": [Circular],
+                "isConnected": true,
+                "renderBefore": null,
+              },
+              "type": 2,
+            },
+          ],
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "_$Cm": true,
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 2,
+        },
+      ],
+    },
+    "_$AM": undefined,
+    "_$AN": undefined,
+    "_$Cm": true,
+    "options": Object {
+      "host": [Circular],
+      "isConnected": true,
+      "renderBefore": null,
+    },
+    "type": 2,
+  },
+  "_$E_": Promise {},
+  "_$Ei": undefined,
+  "_$El": null,
+  "__allowCircularSwipe": false,
+  "__animationDuration": 1,
+  "__backgroundColor": "#ffffff",
+  "__callbackEvent": null,
+  "__componentArray": Array [
+    "slot1",
+    "slot2",
+    "slot3",
+  ],
+  "__hideSlotWrapperDiv": <div
+    class=""
+    id="slot3"
+    part="flick-to-transition-slot3"
+    style="display: none;"
+  >
+    
+            
+    <slot
+      id="slot3"
+      name="slot3"
+    />
+    
+          
+  </div>,
+  "__index": 0,
+  "__isDown": false,
+  "__isScrolled": false,
+  "__offset": Array [
+    0,
+    0,
+  ],
+  "__scrollDirection": "vertical",
+  "__slotClass": "",
+  "__slotName": "slot1",
+  "__slotWrapperDiv": <div
+    class=""
+    id="slot1"
+    part="flick-to-transition-slot1"
+    style="animation-duration: 1s; position: relative; display: block; overflow: scroll; max-height: 100vh; max-width: 100vw;"
+  >
+    
+            
+    <slot
+      id="slot1"
+      name="slot1"
+    />
+    
+          
+  </div>,
+  "__swipedDirection": "",
+  "enableUpdating": [Function],
+  "handleDecrementIndex": [Function],
+  "handleIncrementIndex": [Function],
+  "handleMouseDown": [Function],
+  "handleMove": [Function],
+  "handleSlot": [Function],
+  "handleUp": [Function],
+  "hasUpdated": true,
+  "isUpdatePending": false,
+  "renderOptions": Object {
+    "host": [Circular],
+    "isConnected": true,
+    "renderBefore": null,
+  },
+  "renderRoot": ShadowRoot {
+    "_$litPart$": U {
+      "_$AA": <!---->,
+      "_$AB": null,
+      "_$AH": At {
+        "_$AD": O {
+          "el": <template />,
+          "parts": Array [
+            Object {
+              "ctor": [Function],
+              "index": 0,
+              "name": "style",
+              "strings": Array [
+                "overflow : hidden ; background : ",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "index": 1,
+              "type": 2,
+            },
+          ],
+        },
+        "_$AM": [Circular],
+        "_$AN": undefined,
+        "u": Array [
+          B {
+            "_$AH": Array [
+              "#ffffff",
+            ],
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <div
+              part="flick-to-transition-container"
+              style="overflow : hidden ; background : #ffffff"
+            >
+              
+        
+              <!--?lit$58247526802$-->
+              <!---->
+               
+              <div
+                class=""
+                id="slot1"
+                part="flick-to-transition-slot1"
+                style="animation-duration: 1s; position: relative; display: block; overflow: scroll; max-height: 100vh; max-width: 100vw;"
+              >
+                
+            
+                <slot
+                  id="slot1"
+                  name="slot1"
+                />
+                
+          
+              </div>
+              <!---->
+              <!---->
+               
+              <div
+                class=""
+                id="slot2"
+                part="flick-to-transition-slot2"
+                style="display: none;"
+              >
+                
+            
+                <slot
+                  id="slot2"
+                  name="slot2"
+                />
+                
+          
+              </div>
+              <!---->
+              <!---->
+               
+              <div
+                class=""
+                id="slot3"
+                part="flick-to-transition-slot3"
+                style="display: none;"
+              >
+                
+            
+                <slot
+                  id="slot3"
+                  name="slot3"
+                />
+                
+          
+              </div>
+              <!---->
+              
+      
+            </div>,
+            "name": "style",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "strings": Array [
+              "overflow : hidden ; background : ",
+              "",
+            ],
+            "type": 1,
+          },
+          U {
+            "_$AA": <!--?lit$58247526802$-->,
+            "_$AB": 
+      ,
+            "_$AH": Array [
+              U {
+                "_$AA": <!---->,
+                "_$AB": <!---->,
+                "_$AH": At {
+                  "_$AD": O {
+                    "el": <template />,
+                    "parts": Array [
+                      Object {
+                        "ctor": [Function],
+                        "index": 0,
+                        "name": "part",
+                        "strings": Array [
+                          "flick-to-transition-",
+                          "",
+                        ],
+                        "type": 1,
+                      },
+                      Object {
+                        "ctor": [Function],
+                        "index": 0,
+                        "name": "id",
+                        "strings": Array [
+                          "",
+                          "",
+                        ],
+                        "type": 1,
+                      },
+                      Object {
+                        "ctor": [Function],
+                        "index": 0,
+                        "name": "class",
+                        "strings": Array [
+                          "",
+                          "",
+                        ],
+                        "type": 1,
+                      },
+                      Object {
+                        "ctor": [Function],
+                        "index": 1,
+                        "name": "id",
+                        "strings": Array [
+                          "",
+                          "",
+                        ],
+                        "type": 1,
+                      },
+                      Object {
+                        "ctor": [Function],
+                        "index": 1,
+                        "name": "name",
+                        "strings": Array [
+                          "",
+                          "",
+                        ],
+                        "type": 1,
+                      },
+                    ],
+                  },
+                  "_$AM": [Circular],
+                  "_$AN": undefined,
+                  "u": Array [
+                    B {
+                      "_$AH": Array [
+                        "slot1",
+                      ],
+                      "_$AM": [Circular],
+                      "_$AN": undefined,
+                      "element": <div
+                        class=""
+                        id="slot1"
+                        part="flick-to-transition-slot1"
+                        style="animation-duration: 1s; position: relative; display: block; overflow: scroll; max-height: 100vh; max-width: 100vw;"
+                      >
+                        
+            
+                        <slot
+                          id="slot1"
+                          name="slot1"
+                        />
+                        
+          
+                      </div>,
+                      "name": "part",
+                      "options": Object {
+                        "host": [Circular],
+                        "isConnected": true,
+                        "renderBefore": null,
+                      },
+                      "strings": Array [
+                        "flick-to-transition-",
+                        "",
+                      ],
+                      "type": 1,
+                    },
+                    B {
+                      "_$AH": "slot1",
+                      "_$AM": [Circular],
+                      "_$AN": undefined,
+                      "element": <div
+                        class=""
+                        id="slot1"
+                        part="flick-to-transition-slot1"
+                        style="animation-duration: 1s; position: relative; display: block; overflow: scroll; max-height: 100vh; max-width: 100vw;"
+                      >
+                        
+            
+                        <slot
+                          id="slot1"
+                          name="slot1"
+                        />
+                        
+          
+                      </div>,
+                      "name": "id",
+                      "options": Object {
+                        "host": [Circular],
+                        "isConnected": true,
+                        "renderBefore": null,
+                      },
+                      "type": 1,
+                    },
+                    B {
+                      "_$AH": "",
+                      "_$AM": [Circular],
+                      "_$AN": undefined,
+                      "element": <div
+                        class=""
+                        id="slot1"
+                        part="flick-to-transition-slot1"
+                        style="animation-duration: 1s; position: relative; display: block; overflow: scroll; max-height: 100vh; max-width: 100vw;"
+                      >
+                        
+            
+                        <slot
+                          id="slot1"
+                          name="slot1"
+                        />
+                        
+          
+                      </div>,
+                      "name": "class",
+                      "options": Object {
+                        "host": [Circular],
+                        "isConnected": true,
+                        "renderBefore": null,
+                      },
+                      "type": 1,
+                    },
+                    B {
+                      "_$AH": "slot1",
+                      "_$AM": [Circular],
+                      "_$AN": undefined,
+                      "element": <slot
+                        id="slot1"
+                        name="slot1"
+                      />,
+                      "name": "id",
+                      "options": Object {
+                        "host": [Circular],
+                        "isConnected": true,
+                        "renderBefore": null,
+                      },
+                      "type": 1,
+                    },
+                    B {
+                      "_$AH": "slot1",
+                      "_$AM": [Circular],
+                      "_$AN": undefined,
+                      "element": <slot
+                        id="slot1"
+                        name="slot1"
+                      />,
+                      "name": "name",
+                      "options": Object {
+                        "host": [Circular],
+                        "isConnected": true,
+                        "renderBefore": null,
+                      },
+                      "type": 1,
+                    },
+                  ],
+                },
+                "_$AM": [Circular],
+                "_$AN": undefined,
+                "_$Cm": true,
+                "options": Object {
+                  "host": [Circular],
+                  "isConnected": true,
+                  "renderBefore": null,
+                },
+                "type": 2,
+              },
+              U {
+                "_$AA": <!---->,
+                "_$AB": <!---->,
+                "_$AH": At {
+                  "_$AD": O {
+                    "el": <template />,
+                    "parts": Array [
+                      Object {
+                        "ctor": [Function],
+                        "index": 0,
+                        "name": "part",
+                        "strings": Array [
+                          "flick-to-transition-",
+                          "",
+                        ],
+                        "type": 1,
+                      },
+                      Object {
+                        "ctor": [Function],
+                        "index": 0,
+                        "name": "id",
+                        "strings": Array [
+                          "",
+                          "",
+                        ],
+                        "type": 1,
+                      },
+                      Object {
+                        "ctor": [Function],
+                        "index": 0,
+                        "name": "class",
+                        "strings": Array [
+                          "",
+                          "",
+                        ],
+                        "type": 1,
+                      },
+                      Object {
+                        "ctor": [Function],
+                        "index": 1,
+                        "name": "id",
+                        "strings": Array [
+                          "",
+                          "",
+                        ],
+                        "type": 1,
+                      },
+                      Object {
+                        "ctor": [Function],
+                        "index": 1,
+                        "name": "name",
+                        "strings": Array [
+                          "",
+                          "",
+                        ],
+                        "type": 1,
+                      },
+                    ],
+                  },
+                  "_$AM": [Circular],
+                  "_$AN": undefined,
+                  "u": Array [
+                    B {
+                      "_$AH": Array [
+                        "slot2",
+                      ],
+                      "_$AM": [Circular],
+                      "_$AN": undefined,
+                      "element": <div
+                        class=""
+                        id="slot2"
+                        part="flick-to-transition-slot2"
+                        style="display: none;"
+                      >
+                        
+            
+                        <slot
+                          id="slot2"
+                          name="slot2"
+                        />
+                        
+          
+                      </div>,
+                      "name": "part",
+                      "options": Object {
+                        "host": [Circular],
+                        "isConnected": true,
+                        "renderBefore": null,
+                      },
+                      "strings": Array [
+                        "flick-to-transition-",
+                        "",
+                      ],
+                      "type": 1,
+                    },
+                    B {
+                      "_$AH": "slot2",
+                      "_$AM": [Circular],
+                      "_$AN": undefined,
+                      "element": <div
+                        class=""
+                        id="slot2"
+                        part="flick-to-transition-slot2"
+                        style="display: none;"
+                      >
+                        
+            
+                        <slot
+                          id="slot2"
+                          name="slot2"
+                        />
+                        
+          
+                      </div>,
+                      "name": "id",
+                      "options": Object {
+                        "host": [Circular],
+                        "isConnected": true,
+                        "renderBefore": null,
+                      },
+                      "type": 1,
+                    },
+                    B {
+                      "_$AH": "",
+                      "_$AM": [Circular],
+                      "_$AN": undefined,
+                      "element": <div
+                        class=""
+                        id="slot2"
+                        part="flick-to-transition-slot2"
+                        style="display: none;"
+                      >
+                        
+            
+                        <slot
+                          id="slot2"
+                          name="slot2"
+                        />
+                        
+          
+                      </div>,
+                      "name": "class",
+                      "options": Object {
+                        "host": [Circular],
+                        "isConnected": true,
+                        "renderBefore": null,
+                      },
+                      "type": 1,
+                    },
+                    B {
+                      "_$AH": "slot2",
+                      "_$AM": [Circular],
+                      "_$AN": undefined,
+                      "element": <slot
+                        id="slot2"
+                        name="slot2"
+                      />,
+                      "name": "id",
+                      "options": Object {
+                        "host": [Circular],
+                        "isConnected": true,
+                        "renderBefore": null,
+                      },
+                      "type": 1,
+                    },
+                    B {
+                      "_$AH": "slot2",
+                      "_$AM": [Circular],
+                      "_$AN": undefined,
+                      "element": <slot
+                        id="slot2"
+                        name="slot2"
+                      />,
+                      "name": "name",
+                      "options": Object {
+                        "host": [Circular],
+                        "isConnected": true,
+                        "renderBefore": null,
+                      },
+                      "type": 1,
+                    },
+                  ],
+                },
+                "_$AM": [Circular],
+                "_$AN": undefined,
+                "_$Cm": true,
+                "options": Object {
+                  "host": [Circular],
+                  "isConnected": true,
+                  "renderBefore": null,
+                },
+                "type": 2,
+              },
+              U {
+                "_$AA": <!---->,
+                "_$AB": <!---->,
+                "_$AH": At {
+                  "_$AD": O {
+                    "el": <template />,
+                    "parts": Array [
+                      Object {
+                        "ctor": [Function],
+                        "index": 0,
+                        "name": "part",
+                        "strings": Array [
+                          "flick-to-transition-",
+                          "",
+                        ],
+                        "type": 1,
+                      },
+                      Object {
+                        "ctor": [Function],
+                        "index": 0,
+                        "name": "id",
+                        "strings": Array [
+                          "",
+                          "",
+                        ],
+                        "type": 1,
+                      },
+                      Object {
+                        "ctor": [Function],
+                        "index": 0,
+                        "name": "class",
+                        "strings": Array [
+                          "",
+                          "",
+                        ],
+                        "type": 1,
+                      },
+                      Object {
+                        "ctor": [Function],
+                        "index": 1,
+                        "name": "id",
+                        "strings": Array [
+                          "",
+                          "",
+                        ],
+                        "type": 1,
+                      },
+                      Object {
+                        "ctor": [Function],
+                        "index": 1,
+                        "name": "name",
+                        "strings": Array [
+                          "",
+                          "",
+                        ],
+                        "type": 1,
+                      },
+                    ],
+                  },
+                  "_$AM": [Circular],
+                  "_$AN": undefined,
+                  "u": Array [
+                    B {
+                      "_$AH": Array [
+                        "slot3",
+                      ],
+                      "_$AM": [Circular],
+                      "_$AN": undefined,
+                      "element": <div
+                        class=""
+                        id="slot3"
+                        part="flick-to-transition-slot3"
+                        style="display: none;"
+                      >
+                        
+            
+                        <slot
+                          id="slot3"
+                          name="slot3"
+                        />
+                        
+          
+                      </div>,
+                      "name": "part",
+                      "options": Object {
+                        "host": [Circular],
+                        "isConnected": true,
+                        "renderBefore": null,
+                      },
+                      "strings": Array [
+                        "flick-to-transition-",
+                        "",
+                      ],
+                      "type": 1,
+                    },
+                    B {
+                      "_$AH": "slot3",
+                      "_$AM": [Circular],
+                      "_$AN": undefined,
+                      "element": <div
+                        class=""
+                        id="slot3"
+                        part="flick-to-transition-slot3"
+                        style="display: none;"
+                      >
+                        
+            
+                        <slot
+                          id="slot3"
+                          name="slot3"
+                        />
+                        
+          
+                      </div>,
+                      "name": "id",
+                      "options": Object {
+                        "host": [Circular],
+                        "isConnected": true,
+                        "renderBefore": null,
+                      },
+                      "type": 1,
+                    },
+                    B {
+                      "_$AH": "",
+                      "_$AM": [Circular],
+                      "_$AN": undefined,
+                      "element": <div
+                        class=""
+                        id="slot3"
+                        part="flick-to-transition-slot3"
+                        style="display: none;"
+                      >
+                        
+            
+                        <slot
+                          id="slot3"
+                          name="slot3"
+                        />
+                        
+          
+                      </div>,
+                      "name": "class",
+                      "options": Object {
+                        "host": [Circular],
+                        "isConnected": true,
+                        "renderBefore": null,
+                      },
+                      "type": 1,
+                    },
+                    B {
+                      "_$AH": "slot3",
+                      "_$AM": [Circular],
+                      "_$AN": undefined,
+                      "element": <slot
+                        id="slot3"
+                        name="slot3"
+                      />,
+                      "name": "id",
+                      "options": Object {
+                        "host": [Circular],
+                        "isConnected": true,
+                        "renderBefore": null,
+                      },
+                      "type": 1,
+                    },
+                    B {
+                      "_$AH": "slot3",
+                      "_$AM": [Circular],
+                      "_$AN": undefined,
+                      "element": <slot
+                        id="slot3"
+                        name="slot3"
+                      />,
+                      "name": "name",
+                      "options": Object {
+                        "host": [Circular],
+                        "isConnected": true,
+                        "renderBefore": null,
+                      },
+                      "type": 1,
+                    },
+                  ],
+                },
+                "_$AM": [Circular],
+                "_$AN": undefined,
+                "_$Cm": true,
+                "options": Object {
+                  "host": [Circular],
+                  "isConnected": true,
+                  "renderBefore": null,
+                },
+                "type": 2,
+              },
+            ],
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "_$Cm": true,
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 2,
+          },
+        ],
+      },
+      "_$AM": undefined,
+      "_$AN": undefined,
+      "_$Cm": true,
+      "options": Object {
+        "host": [Circular],
+        "isConnected": true,
+        "renderBefore": null,
+      },
+      "type": 2,
+    },
+  },
+}
+`;

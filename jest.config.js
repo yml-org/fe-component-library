@@ -46,5 +46,14 @@ module.exports = {
       testMatch: ['<rootDir>/packages/video/src/**/*.(test|spec).ts'],
       collectCoverageFrom: ['**/*.{js,ts}', '!**/node_modules/**'],
     },
+    {
+      preset: 'ts-jest',
+      runner: 'jest-electron/runner',
+      testEnvironment: 'jest-electron/environment',
+      displayName: 'flick-to-transition',
+      setupFiles: ['<rootDir>/packages/page-transition/dist/assets/index.js'],
+      testMatch: ['<rootDir>/packages/page-transition/src/**/*.(test|spec).ts'],
+      collectCoverageFrom: ['**/*.{js,ts}', '!**/node_modules/**'],
+    },
   ],
 };
