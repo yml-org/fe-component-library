@@ -59,6 +59,7 @@ describe('transition-component', () => {
   it('set the background color for parent div of slot elements', async () => {
     transitionElement['componentArray'] = ['slot1', 'slot2'];
     transitionElement['backgroundColor'] = 'white';
+    window.document.body.appendChild(transitionElement);
     await transitionElement.updateComplete;
     const slotComponents = getShadowRoot(TRANSITION_COMPONENT)
       .querySelector('div')
