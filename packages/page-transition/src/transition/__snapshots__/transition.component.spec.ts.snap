@@ -41,14 +41,14 @@ d {
           >
             
         
-            <!--?lit$58247526802$-->
+            <!--?lit$389086711$-->
             <!---->
              
             <div
               class=""
               id="slot1"
               part="flick-to-transition-slot1"
-              style="animation-duration: 1s; position: relative; display: block; overflow: scroll; max-height: 100vh; max-width: 100vw;"
+              style="position: relative; display: block; overflow: scroll; max-height: 100vh; max-width: 100vw;"
             >
               
             
@@ -112,7 +112,7 @@ d {
           "type": 1,
         },
         U {
-          "_$AA": <!--?lit$58247526802$-->,
+          "_$AA": <!--?lit$389086711$-->,
           "_$AB": 
       ,
           "_$AH": Array [
@@ -188,7 +188,7 @@ d {
                       class=""
                       id="slot1"
                       part="flick-to-transition-slot1"
-                      style="animation-duration: 1s; position: relative; display: block; overflow: scroll; max-height: 100vh; max-width: 100vw;"
+                      style="position: relative; display: block; overflow: scroll; max-height: 100vh; max-width: 100vw;"
                     >
                       
             
@@ -219,7 +219,7 @@ d {
                       class=""
                       id="slot1"
                       part="flick-to-transition-slot1"
-                      style="animation-duration: 1s; position: relative; display: block; overflow: scroll; max-height: 100vh; max-width: 100vw;"
+                      style="position: relative; display: block; overflow: scroll; max-height: 100vh; max-width: 100vw;"
                     >
                       
             
@@ -246,7 +246,7 @@ d {
                       class=""
                       id="slot1"
                       part="flick-to-transition-slot1"
-                      style="animation-duration: 1s; position: relative; display: block; overflow: scroll; max-height: 100vh; max-width: 100vw;"
+                      style="position: relative; display: block; overflow: scroll; max-height: 100vh; max-width: 100vw;"
                     >
                       
             
@@ -722,7 +722,6 @@ d {
   "_$Ei": undefined,
   "_$El": null,
   "__allowCircularSwipe": false,
-  "__animationDuration": 1,
   "__backgroundColor": "#ffffff",
   "__callbackEvent": null,
   "__componentArray": Array [
@@ -759,7 +758,7 @@ d {
     class=""
     id="slot1"
     part="flick-to-transition-slot1"
-    style="animation-duration: 1s; position: relative; display: block; overflow: scroll; max-height: 100vh; max-width: 100vw;"
+    style="position: relative; display: block; overflow: scroll; max-height: 100vh; max-width: 100vw;"
   >
     
             
@@ -824,14 +823,14 @@ d {
             >
               
         
-              <!--?lit$58247526802$-->
+              <!--?lit$389086711$-->
               <!---->
                
               <div
                 class=""
                 id="slot1"
                 part="flick-to-transition-slot1"
-                style="animation-duration: 1s; position: relative; display: block; overflow: scroll; max-height: 100vh; max-width: 100vw;"
+                style="position: relative; display: block; overflow: scroll; max-height: 100vh; max-width: 100vw;"
               >
                 
             
@@ -895,7 +894,7 @@ d {
             "type": 1,
           },
           U {
-            "_$AA": <!--?lit$58247526802$-->,
+            "_$AA": <!--?lit$389086711$-->,
             "_$AB": 
       ,
             "_$AH": Array [
@@ -971,7 +970,7 @@ d {
                         class=""
                         id="slot1"
                         part="flick-to-transition-slot1"
-                        style="animation-duration: 1s; position: relative; display: block; overflow: scroll; max-height: 100vh; max-width: 100vw;"
+                        style="position: relative; display: block; overflow: scroll; max-height: 100vh; max-width: 100vw;"
                       >
                         
             
@@ -1002,7 +1001,7 @@ d {
                         class=""
                         id="slot1"
                         part="flick-to-transition-slot1"
-                        style="animation-duration: 1s; position: relative; display: block; overflow: scroll; max-height: 100vh; max-width: 100vw;"
+                        style="position: relative; display: block; overflow: scroll; max-height: 100vh; max-width: 100vw;"
                       >
                         
             
@@ -1029,7 +1028,7 @@ d {
                         class=""
                         id="slot1"
                         part="flick-to-transition-slot1"
-                        style="animation-duration: 1s; position: relative; display: block; overflow: scroll; max-height: 100vh; max-width: 100vw;"
+                        style="position: relative; display: block; overflow: scroll; max-height: 100vh; max-width: 100vw;"
                       >
                         
             
