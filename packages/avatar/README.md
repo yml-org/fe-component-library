@@ -127,11 +127,11 @@ Enjoy.
 ## Install
 
 ```bash
-yarn add button-component
+yarn add avatar-component
 ```
 
 ```bash
-npm i button-component
+npm i avatar-component
 ```
 
 ## Usage
@@ -142,8 +142,8 @@ npm i button-component
 
 ```js
 <template>
-  <button-component text="button">
-  </button-component>
+  <avatar-component isRounded=true>
+  </avatar-component>
 </template>
 
 <script>
@@ -162,14 +162,9 @@ export default {
 
 ```js
 <template>
-  <button-component
-    text="button"
-    variant="contained"
-    color="primary"
-    :isDisabled="false"
-    :fullWidth="false"
-    :isRounded="false"
-  ></button-component>
+  <avatar-component
+    :isRounded="true"
+  ></avatar-component>
 </template>
 
 <script>
@@ -188,13 +183,7 @@ export default {
 
 ```js
 <template>
-  <button-component
-    text="button"
-    variant="contained"
-    color="primary"
-    :isDisabled="false"
-    :fullWidth="false"
-    :isRounded="false"
+  <avatar-component
     slotName="slot"
   >
     <div slot="slot">
@@ -205,7 +194,7 @@ export default {
         alt=""
       />
     </div>
-  </button-component>
+  </avatar-component>
 </template>
 
 <script>
@@ -232,10 +221,10 @@ npm i reactify-wc
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const ButtonComponent = reactifyWc("button-component");
+  const AvatarComponent = reactifyWc("avatar-component");
   return (
     <div className="App">
-      <ButtonComponent text="button"></ButtonComponent>
+      <AvatarComponent />
     </div>
   );
 }
@@ -246,17 +235,12 @@ export default App;
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const ButtonComponent = reactifyWc("button-component");
+  const AvatarComponent = reactifyWc("avatar-component");
   return (
     <div className="App">
-      <ButtonComponent
-        text="button"
-        variant="contained"
-        color="primary"
-        isDisabled={false}
-        fullWidth={false}
-        isRounded={false}
-      ></ButtonComponent>
+      <AvatarComponent
+        isRounded={true}
+      />
     </div>
   );
 }
@@ -267,19 +251,14 @@ export default App;
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const ButtonComponent = reactifyWc("button-component");
+  const AvatarComponent = reactifyWc("avatar-component");
   return (
     <div className="App">
-      <ButtonComponent
-        text="button"
-        variant="contained"
-        color="primary"
-        isDisabled={false}
-        fullWidth={false}
-        isRounded={false}
+      <AvatarComponent
+        isRounded={true}
         slotName="slot"
       >
-           <div slot="slot">
+      <div slot="slot">
       <p>Add any Slot Elements</p>
       <img
         style={{width:"50%"}}
@@ -287,7 +266,7 @@ function App() {
         alt=""
       />
     </div>
-      </ButtonComponent>
+      </AvatarComponent>
     </div>
   );
 }
