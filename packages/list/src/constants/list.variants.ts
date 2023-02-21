@@ -1,14 +1,26 @@
 import { ListItemType, ListVariant } from '../types/list';
-import { ListTypes } from './list';
+import { BorderPositions, BorderStyles, ListTypes } from './list';
 
 const listItemsMock: ListItemType[] = [
   {
     id: 1,
-    listLabel: 'YML',
+    listLabel: 'Account Details',
   },
   {
     id: 2,
-    listLabel: 'Component Library',
+    listLabel: 'Notifications',
+  },
+  {
+    id: 3,
+    listLabel: 'About',
+  },
+  {
+    id: 4,
+    listLabel: 'Technical Support',
+  },
+  {
+    id: 5,
+    listLabel: 'Logout',
   },
 ];
 
@@ -22,4 +34,16 @@ const unOrderedListVariant: ListVariant = {
   listItems: listItemsMock,
 };
 
-export { orderedListVariant, unOrderedListVariant };
+const unOrderedListWithBottomBorder: ListVariant = {
+  ...unOrderedListVariant,
+  showBorder: true,
+  borderPosition: BorderPositions.Bottom,
+  borderStyle: BorderStyles.Solid,
+  overrideDefaultListStyles: true,
+};
+
+export {
+  orderedListVariant,
+  unOrderedListVariant,
+  unOrderedListWithBottomBorder,
+};

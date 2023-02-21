@@ -4,6 +4,7 @@ import './list.component.ts';
 import {
   orderedListVariant,
   unOrderedListVariant,
+  unOrderedListWithBottomBorder,
 } from '../constants/list.variants.ts';
 
 <Meta title="List" />
@@ -33,5 +34,33 @@ export const unOrderedListTemplate = ({ listType, listItems }) =>
 <Canvas>
   <Story name="unordered list" args={unOrderedListVariant}>
     {unOrderedListTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Unordered List with default list styles overridden and bottom border
+
+export const unOrderedListWithDefaultOverriddenAndBorderBottomTemplate = ({
+  listType,
+  listItems,
+  showBorder,
+  borderPosition,
+  borderStyle,
+  overrideDefaultListStyles,
+}) =>
+  html`<list-component
+    .listType=${listType}
+    .listItems=${listItems}
+    .overrideDefaultListStyles=${overrideDefaultListStyles}
+    .showBorder=${showBorder}
+    .borderPosition=${borderPosition}
+    .borderStyle=${borderStyle}
+  />`;
+
+<Canvas>
+  <Story
+    name="unordered list with default list styles overridden and border bottom"
+    args={unOrderedListWithBottomBorder}
+  >
+    {unOrderedListWithDefaultOverriddenAndBorderBottomTemplate.bind({})}
   </Story>
 </Canvas>

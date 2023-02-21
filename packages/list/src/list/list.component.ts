@@ -3,8 +3,18 @@ import { customElement, property } from 'lit/decorators.js';
 import { repeat } from 'lit/directives/repeat.js';
 import { TailwindElement } from '../shared/tailwind.element';
 import { msg, str } from '@lit/localize';
-import { ListType, ListItemType } from '../types/list';
-import { ListTypes, SlotPositions } from '../constants/list';
+import {
+  ListType,
+  ListItemType,
+  BorderPosition,
+  BorderStyle,
+} from '../types/list';
+import {
+  ListTypes,
+  SlotPositions,
+  BorderPositions,
+  BorderStyles,
+} from '../constants/list';
 
 @customElement('list-component')
 export class ListComponent extends TailwindElement(null) {
@@ -12,6 +22,14 @@ export class ListComponent extends TailwindElement(null) {
   listType?: ListType = ListTypes.Ordered;
   @property()
   listItems?: ListItemType[] = [];
+  @property()
+  overrideDefaultListStyles?: boolean = false;
+  @property()
+  showBorder?: boolean = false;
+  @property()
+  borderPosition?: BorderPosition = BorderPositions.All;
+  @property()
+  borderStyle?: BorderStyle = BorderStyles.Solid;
 
   protected renderListItemContent(hasSlot, slotName, slotPosition, listLabel) {
     return html` ${hasSlot && slotPosition === SlotPositions.Start
@@ -60,22 +78,53 @@ export class ListComponent extends TailwindElement(null) {
         >`;
   }
 
+  protected renderBorderStyles() {
+    const { borderPosition, borderStyle } = this;
+    switch (borderPosition) {
+      case BorderPositions.Bottom:
+        return `border-${borderStyle} border-b`;
+      case BorderPositions.Top:
+        return `border-${borderStyle} border-t`;
+      case BorderPositions.Right:
+        return `border-${borderStyle} border-r`;
+      case BorderPositions.Left:
+        return `border-${borderStyle} border-l`;
+      case BorderPositions.All:
+      default:
+        return `border border-${borderStyle}`;
+    }
+  }
+
   protected renderListItems() {
+    const { showBorder, renderBorderStyles } = this;
     return html` ${repeat(
       this.listItems,
       (listItem) => listItem?.id || listItem?.listLabel,
-      (listItem) => html` <li>${this.renderAnchorOrButton(listItem)}</li> `
+      (listItem) =>
+        html`
+          <li class=${showBorder ? renderBorderStyles.call(this) : ''}>
+            ${this.renderAnchorOrButton(listItem)}
+          </li>
+        `
     )}`;
   }
 
   protected renderUnorderedList() {
-    return html`<ul part="webcl-list" class="list-disc">
+    const { overrideDefaultListStyles } = this;
+    return html`<ul
+      part="webcl-list"
+      class=${overrideDefaultListStyles ? '' : 'list-disc'}
+    >
       ${this.renderListItems()}
     </ul>`;
   }
 
   protected renderOrderedList() {
-    return html`<ol part="webcl-list" class="list-decimal">
+    const { overrideDefaultListStyles } = this;
+    return html`<ol
+      part="webcl-list"
+      class=${overrideDefaultListStyles ? '' : 'list-decimal'}
+    >
       ${this.renderListItems()}
     </ol>`;
   }
