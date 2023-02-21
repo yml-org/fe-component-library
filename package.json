@@ -54,7 +54,7 @@
     }
   },
   "lint-staged": {
-    "*/packages/**/*.{js,mjs,ts}": [
+    "**/packages/**/*.{js,mjs,ts}": [
       "eslint \"packages/**/src/**\" --fix",
       "prettier --write",
       "git add"
