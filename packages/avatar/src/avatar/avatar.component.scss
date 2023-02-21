@@ -1,0 +1,11 @@
+.parent-container {
+  avatar-component::part(webcl-avatar) {
+    background-color: black;
+    color: white;
+
+    span {
+      font-weight: 600;
+      font-size: 24px;
+    }
+  }
+}

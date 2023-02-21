@@ -55,5 +55,14 @@ module.exports = {
       testMatch: ['<rootDir>/packages/page-transition/src/**/*.(test|spec).ts'],
       collectCoverageFrom: ['**/*.{js,ts}', '!**/node_modules/**'],
     },
+    {
+      preset: 'ts-jest',
+      runner: 'jest-electron/runner',
+      testEnvironment: 'jest-electron/environment',
+      displayName: 'avatar',
+      setupFiles: ['<rootDir>/packages/avatar/dist/assets/index.js'],
+      testMatch: ['<rootDir>/packages/avatar/src/**/*.(test|spec).ts'],
+      collectCoverageFrom: ['**/*.{js,ts}', '!**/node_modules/**'],
+    },
   ],
 };
