@@ -1,0 +1,37 @@
+import { html } from 'lit';
+import { Story, Meta, Canvas } from '@storybook/addon-docs';
+import './list.component.ts';
+import {
+  orderedListVariant,
+  unOrderedListVariant,
+} from '../constants/list.variants.ts';
+
+<Meta title="List" />
+
+# List Component
+
+The List component is a Lit component that renders a list component that is framework independent and utilizes Tailwind CSS internally.
+
+# Examples
+
+Ordered List default
+
+export const orderedListTemplate = ({ listType, listItems }) =>
+  html`<list-component .listType=${listType} .listItems=${listItems} />`;
+
+<Canvas>
+  <Story name="ordered list" args={orderedListVariant}>
+    {orderedListTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Unordered List default
+
+export const unOrderedListTemplate = ({ listType, listItems }) =>
+  html`<list-component .listType=${listType} .listItems=${listItems} />`;
+
+<Canvas>
+  <Story name="unordered list" args={unOrderedListVariant}>
+    {unOrderedListTemplate.bind({})}
+  </Story>
+</Canvas>
