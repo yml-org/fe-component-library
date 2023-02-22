@@ -279,7 +279,7 @@ Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/::part
 ```style.scss
 //The ::part CSS pseudo-element represents any element within a shadow tree that has a matching part attribute.
 
-button-component::part(custom-button) { /*Note : button-component is the custom component and custom-button is the name given to the the part attribute in element within button-component */
+avatar-component::part(webcl-avatar) { /*Note : avatar-component is the custom component and webcl-avatar is the name given to the the part attribute in element within avatar-component */
 background-color: yellow;
 color:black;
 //add css properties
