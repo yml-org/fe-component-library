@@ -21,6 +21,7 @@ export type ListItemType = {
   hasSlot?: boolean;
   slotName?: string;
   slotPosition?: SlotPosition;
+  btnClickHandler?: (id: string | number, listLabel: string) => void;
 };
 
 export type ListVariant = {

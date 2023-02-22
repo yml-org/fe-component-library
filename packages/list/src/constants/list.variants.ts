@@ -1,5 +1,10 @@
 import { ListItemType, ListVariant } from '../types/list';
-import { BorderPositions, BorderStyles, ListTypes } from './list';
+import {
+  BorderPositions,
+  BorderStyles,
+  ListTypes,
+  SlotPositions,
+} from './list';
 
 const listItemsMock: ListItemType[] = [
   {
@@ -13,6 +18,11 @@ const listItemsMock: ListItemType[] = [
   {
     id: 3,
     listLabel: 'About',
+    isAnchor: true,
+    href: 'http://google.com/',
+    hasSlot: true,
+    slotName: 'list-slot',
+    slotPosition: SlotPositions.End,
   },
   {
     id: 4,
@@ -21,6 +31,13 @@ const listItemsMock: ListItemType[] = [
   {
     id: 5,
     listLabel: 'Logout',
+    isButton: true,
+    btnClickHandler: (id, listLabel) => {
+      console.log(id, listLabel);
+    },
+    hasSlot: true,
+    slotName: 'list-slot-1',
+    slotPosition: SlotPositions.End,
   },
 ];
 

@@ -13,6 +13,58 @@ import {
 
 The List component is a Lit component that renders a list component that is framework independent and utilizes Tailwind CSS internally.
 
+# Props
+
+| Prop Name                 | Type           | Description                                                                 |
+| ------------------------- | -------------- | --------------------------------------------------------------------------- |
+| listType                  | ListType       | The type of list to render                                                  |
+| listItems                 | ListItemType[] | The list items                                                              |
+| overrideDefaultListStyles | boolean        | Flag to determine whether or not the default list styles need to be applied |
+| showBorder                | boolean        | Flag to determine whether or not to show border on list elements            |
+| borderPosition            | BorderPosition | Where to show the border                                                    |
+| borderStyle               | BorderStyle    | The border style                                                            |
+
+The different values for the list types are as follows:
+
+1. Ordered
+2. Unordered
+
+The different values for the border position are as follows:
+
+1. All
+2. Top
+3. Left
+4. Bottom
+5. Right
+
+The different values for the border style are as follows:
+
+1.  solid
+2.  dashed
+3.  dotted
+4.  double
+5.  hidden
+6.  none
+
+The ListItemType consist of the following key value pairs:
+
+| Key             | Type          | Description                                                         |
+| --------------- | ------------- | ------------------------------------------------------------------- |
+| id              | string/number | The id of the list element                                          |
+| listLabel       | string        | The list label                                                      |
+| isAnchor        | boolean       | Flag to determine whether or not to render the content as an anchor |
+| isButton        | boolean       | Flag to determine whether or not to render the content as a button  |
+| href            | string        | The href for the anchor element                                     |
+| hasSlot         | boolean       | Flag to determine whether or not to render the slot                 |
+| slotName        | string        | The name of the slot to render                                      |
+| slotPosition    | SlotPosition  | Different positions in which the slot can be rendered               |
+| btnClickHandler | Function      | The handler to be called when the button is clicked                 |
+
+The different slot positions available to the user are as follows:
+
+1. Start
+2. End
+
 # Examples
 
 Ordered List default
@@ -46,6 +98,9 @@ export const unOrderedListWithDefaultOverriddenAndBorderBottomTemplate = ({
   borderPosition,
   borderStyle,
   overrideDefaultListStyles,
+  hasSlot,
+  slotName,
+  slotPosition,
 }) =>
   html`<list-component
     .listType=${listType}
@@ -54,7 +109,27 @@ export const unOrderedListWithDefaultOverriddenAndBorderBottomTemplate = ({
     .showBorder=${showBorder}
     .borderPosition=${borderPosition}
     .borderStyle=${borderStyle}
-  />`;
+    .hasSlot=${hasSlot}
+    .slotName=${slotName}
+    .slotPosition=${slotPosition}
+  >
+    <div slot="list-slot">
+      <img
+        src="https://static.thenounproject.com/png/1916331-200.png"
+        alt="caret"
+        width="24px"
+        height="24px"
+      />
+    </div>
+    <div slot="list-slot-1">
+      <img
+        src="https://static.thenounproject.com/png/1916331-200.png"
+        alt="caret"
+        width="24px"
+        height="24px"
+      />
+    </div>
+  </list-component>`;
 
 <Canvas>
   <Story

@@ -33,15 +33,16 @@ export class ListComponent extends TailwindElement(null) {
 
   protected renderListItemContent(hasSlot, slotName, slotPosition, listLabel) {
     return html` ${hasSlot && slotPosition === SlotPositions.Start
-      ? html`<slot name=${slotName} />`
-      : nothing}
-    ${msg(str`${listLabel}`)}
-    ${hasSlot && slotPosition === SlotPositions.End
-      ? html`<slot name=${slotName} />`
-      : nothing}`;
+        ? html`<slot name=${slotName} />`
+        : nothing}
+      <span>${msg(str`${listLabel}`)}</span>
+      ${hasSlot && slotPosition === SlotPositions.End
+        ? html`<slot name=${slotName} />`
+        : nothing}`;
   }
 
   protected renderAnchorOrButton({
+    id,
     isAnchor,
     isButton,
     href,
@@ -49,9 +50,12 @@ export class ListComponent extends TailwindElement(null) {
     hasSlot,
     slotPosition,
     slotName,
+    btnClickHandler,
   }: ListItemType) {
     return isAnchor
-      ? html`<a href=${href}
+      ? html`<a
+          href=${href}
+          class="w-full flex basis-full flex-row justify-between"
           >${this.renderListItemContent(
             hasSlot,
             slotName,
@@ -60,7 +64,10 @@ export class ListComponent extends TailwindElement(null) {
           )}
         </a>`
       : isButton
-      ? html`<button>
+      ? html`<button
+          @click=${() => btnClickHandler(id, listLabel)}
+          class="w-full flex basis-full flex-row justify-between"
+        >
           ${this.renderListItemContent(
             hasSlot,
             slotName,
@@ -113,7 +120,7 @@ export class ListComponent extends TailwindElement(null) {
     const { overrideDefaultListStyles } = this;
     return html`<ul
       part="webcl-list"
-      class=${overrideDefaultListStyles ? '' : 'list-disc'}
+      class=" flex flex-col ${overrideDefaultListStyles ? '' : 'list-disc'}"
     >
       ${this.renderListItems()}
     </ul>`;
@@ -123,7 +130,7 @@ export class ListComponent extends TailwindElement(null) {
     const { overrideDefaultListStyles } = this;
     return html`<ol
       part="webcl-list"
-      class=${overrideDefaultListStyles ? '' : 'list-decimal'}
+      class="flex flex-col ${overrideDefaultListStyles ? '' : 'list-decimal'}"
     >
       ${this.renderListItems()}
     </ol>`;
