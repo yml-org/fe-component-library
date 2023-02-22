@@ -127,11 +127,11 @@ Enjoy.
 ## Install
 
 ```bash
-yarn add avatar-component
+yarn add list-component
 ```
 
 ```bash
-npm i avatar-component
+npm i list-component
 ```
 
 ## Usage
@@ -142,8 +142,8 @@ npm i avatar-component
 
 ```js
 <template>
-  <avatar-component isRounded=true>
-  </avatar-component>
+  <list-component listItems=[]>
+  </list-component>
 </template>
 
 <script>
@@ -162,9 +162,9 @@ export default {
 
 ```js
 <template>
-  <avatar-component
-    :isRounded="true"
-  ></avatar-component>
+  <list-component
+    :listItems="[]"
+  ></list-component>
 </template>
 
 <script>
@@ -183,8 +183,11 @@ export default {
 
 ```js
 <template>
-  <avatar-component
-    slotName="slot"
+  <list-component
+    listItems=[{
+      slotName:'slot',
+      hasSlot:true
+    }]
   >
     <div slot="slot">
       <p>Add any Slot Elements</p>
@@ -194,7 +197,7 @@ export default {
         alt=""
       />
     </div>
-  </avatar-component>
+  </list-component>
 </template>
 
 <script>
@@ -221,10 +224,10 @@ npm i reactify-wc
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const AvatarComponent = reactifyWc("avatar-component");
+  const ListComponent = reactifyWc("list-component");
   return (
     <div className="App">
-      <AvatarComponent />
+      <ListComponent />
     </div>
   );
 }
@@ -235,11 +238,11 @@ export default App;
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const AvatarComponent = reactifyWc("avatar-component");
+const ListComponent = reactifyWc("list-component");
   return (
     <div className="App">
-      <AvatarComponent
-        isRounded={true}
+      <ListComponent
+        listItems={[]}
       />
     </div>
   );
@@ -251,12 +254,14 @@ export default App;
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const AvatarComponent = reactifyWc("avatar-component");
+const ListComponent = reactifyWc("list-component");
   return (
     <div className="App">
-      <AvatarComponent
-        isRounded={true}
-        slotName="slot"
+      <ListComponent
+        listItems=[{
+      slotName:'slot',
+      hasSlot:true
+    }]
       >
       <div slot="slot">
       <p>Add any Slot Elements</p>
@@ -266,7 +271,7 @@ function App() {
         alt=""
       />
     </div>
-      </AvatarComponent>
+      </ListComponent>
     </div>
   );
 }
@@ -279,7 +284,7 @@ Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/::part
 ```style.scss
 //The ::part CSS pseudo-element represents any element within a shadow tree that has a matching part attribute.
 
-avatar-component::part(webcl-avatar) { /*Note : avatar-component is the custom component and webcl-avatar is the name given to the the part attribute in element within avatar-component */
+list-component::part(webcl-list-container) { /*Note : list-component is the custom component and webcl-list-container is the name given to the the part attribute in element within list-component */
 background-color: yellow;
 color:black;
 //add css properties
