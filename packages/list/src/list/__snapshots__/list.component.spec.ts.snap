@@ -1,0 +1,320 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`avatar-component matches component snapshot 1`] = `
+_ {
+  "_$AL": Map {},
+  "_$Do": T {
+    "_$AA": <!---->,
+    "_$AB": null,
+    "_$AH": Et {
+      "_$AD": R {
+        "el": <template />,
+        "parts": Array [
+          Object {
+            "index": 1,
+            "type": 2,
+          },
+        ],
+      },
+      "_$AM": [Circular],
+      "_$AN": undefined,
+      "u": Array [
+        T {
+          "_$AA": <!--?lit$178479813$-->,
+          "_$AB": 
+    ,
+          "_$AH": Et {
+            "_$AD": R {
+              "el": <template />,
+              "parts": Array [
+                Object {
+                  "ctor": [Function],
+                  "index": 0,
+                  "name": "class",
+                  "strings": Array [
+                    "flex flex-col ",
+                    "",
+                  ],
+                  "type": 1,
+                },
+                Object {
+                  "index": 1,
+                  "type": 2,
+                },
+              ],
+            },
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "u": Array [
+              j {
+                "_$AH": Array [
+                  "list-decimal",
+                ],
+                "_$AM": [Circular],
+                "_$AN": undefined,
+                "element": <ol
+                  class="flex flex-col list-decimal"
+                  part="webcl-list"
+                >
+                  
+      
+                  <!--?lit$178479813$-->
+                   
+                  <!--?lit$178479813$-->
+                  <!--?-->
+                  
+    
+                </ol>,
+                "name": "class",
+                "options": Object {
+                  "host": [Circular],
+                  "isConnected": true,
+                  "renderBefore": null,
+                },
+                "strings": Array [
+                  "flex flex-col ",
+                  "",
+                ],
+                "type": 1,
+              },
+              T {
+                "_$AA": <!--?lit$178479813$-->,
+                "_$AB": 
+    ,
+                "_$AH": Et {
+                  "_$AD": R {
+                    "el": <template />,
+                    "parts": Array [
+                      Object {
+                        "index": 0,
+                        "type": 2,
+                      },
+                    ],
+                  },
+                  "_$AM": [Circular],
+                  "_$AN": undefined,
+                  "u": Array [
+                    T {
+                      "_$AA": <!--?lit$178479813$-->,
+                      "_$AB": <!--?-->,
+                      "_$AH": Array [],
+                      "_$AM": [Circular],
+                      "_$AN": undefined,
+                      "_$Cl": Object {
+                        "_$AM": [Circular],
+                        "_$Ci": undefined,
+                        "_$Ct": [Circular],
+                        "ut": Array [],
+                      },
+                      "_$Cm": true,
+                      "options": Object {
+                        "host": [Circular],
+                        "isConnected": true,
+                        "renderBefore": null,
+                      },
+                      "type": 2,
+                    },
+                  ],
+                },
+                "_$AM": [Circular],
+                "_$AN": undefined,
+                "_$Cm": true,
+                "options": Object {
+                  "host": [Circular],
+                  "isConnected": true,
+                  "renderBefore": null,
+                },
+                "type": 2,
+              },
+            ],
+          },
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "_$Cm": true,
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 2,
+        },
+      ],
+    },
+    "_$AM": undefined,
+    "_$AN": undefined,
+    "_$Cm": true,
+    "options": Object {
+      "host": [Circular],
+      "isConnected": true,
+      "renderBefore": null,
+    },
+    "type": 2,
+  },
+  "_$E_": Promise {},
+  "_$Ei": undefined,
+  "_$El": null,
+  "__borderPosition": "All",
+  "__borderStyle": "solid",
+  "__listItems": Array [],
+  "__listType": "Ordered",
+  "__overrideDefaultListStyles": false,
+  "__showBorder": false,
+  "enableUpdating": [Function],
+  "hasUpdated": true,
+  "isUpdatePending": false,
+  "renderOptions": Object {
+    "host": [Circular],
+    "isConnected": true,
+    "renderBefore": null,
+  },
+  "renderRoot": ShadowRoot {
+    "_$litPart$": T {
+      "_$AA": <!---->,
+      "_$AB": null,
+      "_$AH": Et {
+        "_$AD": R {
+          "el": <template />,
+          "parts": Array [
+            Object {
+              "index": 1,
+              "type": 2,
+            },
+          ],
+        },
+        "_$AM": [Circular],
+        "_$AN": undefined,
+        "u": Array [
+          T {
+            "_$AA": <!--?lit$178479813$-->,
+            "_$AB": 
+    ,
+            "_$AH": Et {
+              "_$AD": R {
+                "el": <template />,
+                "parts": Array [
+                  Object {
+                    "ctor": [Function],
+                    "index": 0,
+                    "name": "class",
+                    "strings": Array [
+                      "flex flex-col ",
+                      "",
+                    ],
+                    "type": 1,
+                  },
+                  Object {
+                    "index": 1,
+                    "type": 2,
+                  },
+                ],
+              },
+              "_$AM": [Circular],
+              "_$AN": undefined,
+              "u": Array [
+                j {
+                  "_$AH": Array [
+                    "list-decimal",
+                  ],
+                  "_$AM": [Circular],
+                  "_$AN": undefined,
+                  "element": <ol
+                    class="flex flex-col list-decimal"
+                    part="webcl-list"
+                  >
+                    
+      
+                    <!--?lit$178479813$-->
+                     
+                    <!--?lit$178479813$-->
+                    <!--?-->
+                    
+    
+                  </ol>,
+                  "name": "class",
+                  "options": Object {
+                    "host": [Circular],
+                    "isConnected": true,
+                    "renderBefore": null,
+                  },
+                  "strings": Array [
+                    "flex flex-col ",
+                    "",
+                  ],
+                  "type": 1,
+                },
+                T {
+                  "_$AA": <!--?lit$178479813$-->,
+                  "_$AB": 
+    ,
+                  "_$AH": Et {
+                    "_$AD": R {
+                      "el": <template />,
+                      "parts": Array [
+                        Object {
+                          "index": 0,
+                          "type": 2,
+                        },
+                      ],
+                    },
+                    "_$AM": [Circular],
+                    "_$AN": undefined,
+                    "u": Array [
+                      T {
+                        "_$AA": <!--?lit$178479813$-->,
+                        "_$AB": <!--?-->,
+                        "_$AH": Array [],
+                        "_$AM": [Circular],
+                        "_$AN": undefined,
+                        "_$Cl": Object {
+                          "_$AM": [Circular],
+                          "_$Ci": undefined,
+                          "_$Ct": [Circular],
+                          "ut": Array [],
+                        },
+                        "_$Cm": true,
+                        "options": Object {
+                          "host": [Circular],
+                          "isConnected": true,
+                          "renderBefore": null,
+                        },
+                        "type": 2,
+                      },
+                    ],
+                  },
+                  "_$AM": [Circular],
+                  "_$AN": undefined,
+                  "_$Cm": true,
+                  "options": Object {
+                    "host": [Circular],
+                    "isConnected": true,
+                    "renderBefore": null,
+                  },
+                  "type": 2,
+                },
+              ],
+            },
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "_$Cm": true,
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 2,
+          },
+        ],
+      },
+      "_$AM": undefined,
+      "_$AN": undefined,
+      "_$Cm": true,
+      "options": Object {
+        "host": [Circular],
+        "isConnected": true,
+        "renderBefore": null,
+      },
+      "type": 2,
+    },
+  },
+}
+`;

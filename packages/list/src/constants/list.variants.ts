@@ -6,7 +6,7 @@ import {
   SlotPositions,
 } from './list';
 
-const listItemsMock: ListItemType[] = [
+export const listItemsMock: ListItemType[] = [
   {
     id: 1,
     listLabel: 'Account Details',
