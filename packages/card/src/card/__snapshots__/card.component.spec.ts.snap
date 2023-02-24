@@ -1,0 +1,433 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`card-component matches component snapshot 1`] = `
+v {
+  "_$AL": Map {},
+  "_$Do": N {
+    "_$AA": <!---->,
+    "_$AB": null,
+    "_$AH": gt {
+      "_$AD": H {
+        "el": <template />,
+        "parts": Array [
+          Object {
+            "ctor": [Function],
+            "index": 0,
+            "name": "class",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 0,
+            "name": "style",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "index": 1,
+            "type": 2,
+          },
+        ],
+      },
+      "_$AM": [Circular],
+      "_$AN": undefined,
+      "u": Array [
+        U {
+          "_$AH": "webcl-card-wrapper flex flex-col",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <div
+            class="webcl-card-wrapper flex flex-col"
+            part="webcl-card-container"
+            style="width:300px; min-height:300px"
+          >
+            
+      
+            <!--?lit$472687944$-->
+            <div
+              class="webcl-card-header-section"
+              part="webcl-card-header"
+            >
+              
+            
+              <slot
+                name="webcl-card-header"
+              >
+                
+          
+              </slot>
+            </div>
+            
+          
+            <div
+              class="webcl-card-content-section"
+              part="webcl-card-content"
+            >
+              
+            
+              <slot
+                name="webcl-card-content"
+              >
+                
+          
+              </slot>
+            </div>
+            
+          
+            <div
+              class="webcl-card-footer-section mt-auto"
+              part="webcl-card-footer"
+            >
+              
+            
+              <slot
+                name="webcl-card-footer"
+              >
+                
+          
+              </slot>
+            </div>
+            
+    
+          </div>,
+          "name": "class",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        U {
+          "_$AH": "width:300px; min-height:300px",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <div
+            class="webcl-card-wrapper flex flex-col"
+            part="webcl-card-container"
+            style="width:300px; min-height:300px"
+          >
+            
+      
+            <!--?lit$472687944$-->
+            <div
+              class="webcl-card-header-section"
+              part="webcl-card-header"
+            >
+              
+            
+              <slot
+                name="webcl-card-header"
+              >
+                
+          
+              </slot>
+            </div>
+            
+          
+            <div
+              class="webcl-card-content-section"
+              part="webcl-card-content"
+            >
+              
+            
+              <slot
+                name="webcl-card-content"
+              >
+                
+          
+              </slot>
+            </div>
+            
+          
+            <div
+              class="webcl-card-footer-section mt-auto"
+              part="webcl-card-footer"
+            >
+              
+            
+              <slot
+                name="webcl-card-footer"
+              >
+                
+          
+              </slot>
+            </div>
+            
+    
+          </div>,
+          "name": "style",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        N {
+          "_$AA": <!--?lit$472687944$-->,
+          "_$AB": 
+    ,
+          "_$AH": gt {
+            "_$AD": H {
+              "el": <template />,
+              "parts": Array [],
+            },
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "u": Array [],
+          },
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "_$Cm": true,
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 2,
+        },
+      ],
+    },
+    "_$AM": undefined,
+    "_$AN": undefined,
+    "_$Cm": true,
+    "options": Object {
+      "host": [Circular],
+      "isConnected": true,
+      "renderBefore": null,
+    },
+    "type": 2,
+  },
+  "_$E_": Promise {},
+  "_$Ei": undefined,
+  "_$El": null,
+  "__cardDimensionUnit": "px",
+  "__cardHeight": 300,
+  "__cardWidth": 300,
+  "__customSlotName": "",
+  "__hasRoundedBorder": false,
+  "__isHorizontal": false,
+  "__showCustomSlot": false,
+  "enableUpdating": [Function],
+  "hasUpdated": true,
+  "isUpdatePending": false,
+  "renderOptions": Object {
+    "host": [Circular],
+    "isConnected": true,
+    "renderBefore": null,
+  },
+  "renderRoot": ShadowRoot {
+    "_$litPart$": N {
+      "_$AA": <!---->,
+      "_$AB": null,
+      "_$AH": gt {
+        "_$AD": H {
+          "el": <template />,
+          "parts": Array [
+            Object {
+              "ctor": [Function],
+              "index": 0,
+              "name": "class",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 0,
+              "name": "style",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "index": 1,
+              "type": 2,
+            },
+          ],
+        },
+        "_$AM": [Circular],
+        "_$AN": undefined,
+        "u": Array [
+          U {
+            "_$AH": "webcl-card-wrapper flex flex-col",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <div
+              class="webcl-card-wrapper flex flex-col"
+              part="webcl-card-container"
+              style="width:300px; min-height:300px"
+            >
+              
+      
+              <!--?lit$472687944$-->
+              <div
+                class="webcl-card-header-section"
+                part="webcl-card-header"
+              >
+                
+            
+                <slot
+                  name="webcl-card-header"
+                >
+                  
+          
+                </slot>
+              </div>
+              
+          
+              <div
+                class="webcl-card-content-section"
+                part="webcl-card-content"
+              >
+                
+            
+                <slot
+                  name="webcl-card-content"
+                >
+                  
+          
+                </slot>
+              </div>
+              
+          
+              <div
+                class="webcl-card-footer-section mt-auto"
+                part="webcl-card-footer"
+              >
+                
+            
+                <slot
+                  name="webcl-card-footer"
+                >
+                  
+          
+                </slot>
+              </div>
+              
+    
+            </div>,
+            "name": "class",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          U {
+            "_$AH": "width:300px; min-height:300px",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <div
+              class="webcl-card-wrapper flex flex-col"
+              part="webcl-card-container"
+              style="width:300px; min-height:300px"
+            >
+              
+      
+              <!--?lit$472687944$-->
+              <div
+                class="webcl-card-header-section"
+                part="webcl-card-header"
+              >
+                
+            
+                <slot
+                  name="webcl-card-header"
+                >
+                  
+          
+                </slot>
+              </div>
+              
+          
+              <div
+                class="webcl-card-content-section"
+                part="webcl-card-content"
+              >
+                
+            
+                <slot
+                  name="webcl-card-content"
+                >
+                  
+          
+                </slot>
+              </div>
+              
+          
+              <div
+                class="webcl-card-footer-section mt-auto"
+                part="webcl-card-footer"
+              >
+                
+            
+                <slot
+                  name="webcl-card-footer"
+                >
+                  
+          
+                </slot>
+              </div>
+              
+    
+            </div>,
+            "name": "style",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          N {
+            "_$AA": <!--?lit$472687944$-->,
+            "_$AB": 
+    ,
+            "_$AH": gt {
+              "_$AD": H {
+                "el": <template />,
+                "parts": Array [],
+              },
+              "_$AM": [Circular],
+              "_$AN": undefined,
+              "u": Array [],
+            },
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "_$Cm": true,
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 2,
+          },
+        ],
+      },
+      "_$AM": undefined,
+      "_$AN": undefined,
+      "_$Cm": true,
+      "options": Object {
+        "host": [Circular],
+        "isConnected": true,
+        "renderBefore": null,
+      },
+      "type": 2,
+    },
+  },
+}
+`;
