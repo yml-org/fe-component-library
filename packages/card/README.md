@@ -127,11 +127,11 @@ Enjoy.
 ## Install
 
 ```bash
-yarn add list-component
+yarn add card-component
 ```
 
 ```bash
-npm i list-component
+npm i card-component
 ```
 
 ## Usage
@@ -142,8 +142,8 @@ npm i list-component
 
 ```js
 <template>
-  <list-component listItems=[]>
-  </list-component>
+  <card-component hasRoundedBorder={true}>
+  </card-component>
 </template>
 
 <script>
@@ -162,9 +162,9 @@ export default {
 
 ```js
 <template>
-  <list-component
-    :listItems="[]"
-  ></list-component>
+  <card-component
+   :hasRoundedBorder="true"
+  ></card-component>
 </template>
 
 <script>
@@ -183,13 +183,9 @@ export default {
 
 ```js
 <template>
-  <list-component
-    listItems=[{
-      slotName:'slot',
-      hasSlot:true
-    }]
+  <card-component
   >
-    <div slot="slot">
+    <div slot="webcl-card-content">
       <p>Add any Slot Elements</p>
       <img
         style="width:50%"
@@ -197,7 +193,7 @@ export default {
         alt=""
       />
     </div>
-  </list-component>
+  </card-component>
 </template>
 
 <script>
@@ -224,10 +220,10 @@ npm i reactify-wc
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const ListComponent = reactifyWc("list-component");
+  const CardComponent = reactifyWc("card-component");
   return (
     <div className="App">
-      <ListComponent />
+      <CardComponent />
     </div>
   );
 }
@@ -238,11 +234,11 @@ export default App;
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-const ListComponent = reactifyWc("list-component");
+const CardComponent = reactifyWc("card-component");
   return (
     <div className="App">
-      <ListComponent
-        listItems={[]}
+      <CardComponent
+       hasRoundedBorder
       />
     </div>
   );
@@ -254,14 +250,12 @@ export default App;
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-const ListComponent = reactifyWc("list-component");
+const CardComponent = reactifyWc("card-component");
   return (
     <div className="App">
-      <ListComponent
-        listItems=[{
-      slotName:'slot',
-      hasSlot:true
-    }]
+      <CardComponent
+        showCustomSlot
+        customSlotName="slot"
       >
       <div slot="slot">
       <p>Add any Slot Elements</p>
@@ -271,7 +265,7 @@ const ListComponent = reactifyWc("list-component");
         alt=""
       />
     </div>
-      </ListComponent>
+      </CardComponent>
     </div>
   );
 }
@@ -284,7 +278,7 @@ Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/::part
 ```style.scss
 //The ::part CSS pseudo-element represents any element within a shadow tree that has a matching part attribute.
 
-list-component::part(webcl-list-container) { /*Note : list-component is the custom component and webcl-list-container is the name given to the the part attribute in element within list-component */
+card-component::part(webcl-card-container) { /*Note : card-component is the custom component and webcl-card-container is the name given to the the part attribute in element within card-component */
 background-color: yellow;
 color:black;
 //add css properties
