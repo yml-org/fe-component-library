@@ -1,0 +1,218 @@
+import { html } from 'lit';
+import { Story, Meta, Canvas } from '@storybook/addon-docs';
+import './card.component';
+import {
+  cardWithRoundedBorder,
+  cardWithCustomWidthHeight,
+  cardWithCustomSlot,
+} from '../constants/card.variants.ts';
+import './card.component.scss';
+
+<Meta title="Components/Card" />
+
+# Card Component
+
+The card component is a Lit component that renders a skeleton card that is framework independent and utilizes Tailwind CSS internally.
+
+# Props
+
+| Prop Name         | Type              | Description                                                |
+| ----------------- | ----------------- | ---------------------------------------------------------- |
+| hasRoundedBorder  | boolean           | Flag to determine whether or not to have rounded borders   |
+| cardWidth         | number            | The width of the avatar component                          |
+| cardHeight        | number            | The height of the avatar component                         |
+| customSlotName    | boolean           | The name of the child slot                                 |
+| showCustomSlot    | boolean           | Flag to determine whether or not to render the custom slot |
+| cardDimensionUnit | CardDimensionUnit | The unit for the card width and height                     |
+| isHorizontal      | boolean           | Flag to determine the content direction                    |
+
+Following are the values for the CardDimensionUnit:
+
+1. px
+2. %
+3. em
+4. rem
+5. pt
+6. cm
+7. in
+8. mm
+9. pc
+10. ex
+11. ch
+12. vh
+13. vw
+
+The default slots provided in the component are as follows:
+
+1. webcl-card-header
+2. webcl-card-content
+3. webcl-card-footer
+
+# Examples
+
+Basic card component without `props`
+
+export const TemplateDefault = () =>
+  html`<div class="storybook-card-container">
+    <card-component></card-component>
+  </div>`;
+
+<Canvas columns={1}>
+  <Story name="default">{TemplateDefault.bind({})}</Story>
+</Canvas>
+
+Basic card with rounded border
+
+export const withRoundedBorderTemplate = ({ hasRoundedBorder }) =>
+  html`<div class="storybook-card-container">
+    <card-component .hasRoundedBorder=${hasRoundedBorder}></card-component>
+  </div>`;
+
+<Canvas>
+  <Story name="with rounded border" args={cardWithRoundedBorder}>
+    {withRoundedBorderTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Basic card with custom height and width
+
+export const withCustomHeightWidth = ({
+  hasRoundedBorder,
+  cardWidth,
+  cardHeight,
+}) =>
+  html`<div class="storybook-card-container">
+    <card-component
+      .hasRoundedBorder=${hasRoundedBorder}
+      .cardHeight=${cardHeight}
+      .cardWidth=${cardWidth}
+    ></card-component>
+  </div>`;
+
+<Canvas>
+  <Story name="with custom height and width" args={cardWithCustomWidthHeight}>
+    {withCustomHeightWidth.bind({})}
+  </Story>
+</Canvas>
+
+Basic card using defined header slot
+
+export const withDefinedHeaderSlot = ({
+  hasRoundedBorder,
+  cardWidth,
+  cardHeight,
+}) =>
+  html`<div class="storybook-card-container custom-header-variant">
+    <card-component
+      .hasRoundedBorder=${hasRoundedBorder}
+      .cardHeight=${cardHeight}
+      .cardWidth=${cardWidth}
+    >
+      <div slot="webcl-card-header">
+        <h1>WebCl Card Header</h1>
+      </div>
+    </card-component>
+  </div>`;
+
+<Canvas>
+  <Story name="using defined header slot" args={cardWithCustomWidthHeight}>
+    {withDefinedHeaderSlot.bind({})}
+  </Story>
+</Canvas>
+
+Basic card using defined footer slot
+
+export const withDefinedFooterSlot = ({
+  hasRoundedBorder,
+  cardWidth,
+  cardHeight,
+}) =>
+  html`<div class="storybook-card-container">
+    <card-component
+      .hasRoundedBorder=${hasRoundedBorder}
+      .cardHeight=${cardHeight}
+      .cardWidth=${cardWidth}
+    >
+      <div slot="webcl-card-footer">
+        <p>WebCl Card Footer</p>
+      </div>
+    </card-component>
+  </div>`;
+
+<Canvas>
+  <Story name="using defined footer slot" args={cardWithCustomWidthHeight}>
+    {withDefinedFooterSlot.bind({})}
+  </Story>
+</Canvas>
+
+Basic card using all the defined slots
+
+export const withAllDefinedSlots = ({
+  hasRoundedBorder,
+  cardWidth,
+  cardHeight,
+}) =>
+  html`<div class="storybook-card-container all-slots-variant">
+    <card-component
+      .hasRoundedBorder=${hasRoundedBorder}
+      .cardHeight=${cardHeight}
+      .cardWidth=${cardWidth}
+    >
+      <div slot="webcl-card-header">
+        <h1>WebCl Card Header</h1>
+      </div>
+      <div slot="webcl-card-content">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          ac aliquam orci. In dignissim eget enim ut faucibus. Donec volutpat
+          libero a ipsum tincidunt, in vehicula tellus congue. Mauris id
+          consequat justo. Donec turpis justo, dictum quis nulla quis, convallis
+          semper mi.
+        </p>
+      </div>
+      <div slot="webcl-card-footer">
+        <p>WebCl Card Footer</p>
+      </div>
+    </card-component>
+  </div>`;
+
+<Canvas>
+  <Story name="using all the defined slots" args={cardWithCustomWidthHeight}>
+    {withAllDefinedSlots.bind({})}
+  </Story>
+</Canvas>
+
+Basic card using custom slot name
+
+export const cardWithCustomSlotNameTemplate = ({
+  hasRoundedBorder,
+  cardWidth,
+  cardHeight,
+  customSlotName,
+  showCustomSlot,
+}) =>
+  html`<div class="storybook-card-container">
+    <card-component
+      .hasRoundedBorder=${hasRoundedBorder}
+      .cardHeight=${cardHeight}
+      .cardWidth=${cardWidth}
+      .showCustomSlot=${showCustomSlot}
+      .customSlotName=${customSlotName}
+    >
+      <div slot="custom-card-slot">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          ac aliquam orci. In dignissim eget enim ut faucibus. Donec volutpat
+          libero a ipsum tincidunt, in vehicula tellus congue. Mauris id
+          consequat justo. Donec turpis justo, dictum quis nulla quis, convallis
+          semper mi.
+        </p>
+      </div>
+    </card-component>
+  </div>`;
+
+<Canvas>
+  <Story name="card with custom slot name" args={cardWithCustomSlot}>
+    {cardWithCustomSlotNameTemplate.bind({})}
+  </Story>
+</Canvas>
