@@ -9,12 +9,7 @@ import {
   BorderPosition,
   BorderStyle,
 } from '../types/list';
-import {
-  ListTypes,
-  SlotPositions,
-  BorderPositions,
-  BorderStyles,
-} from '../constants/list';
+import { ListTypes, BorderPositions, BorderStyles } from '../constants/list';
 
 @customElement('list-component')
 export class ListComponent extends TailwindElement(null) {
@@ -30,14 +25,18 @@ export class ListComponent extends TailwindElement(null) {
   borderPosition?: BorderPosition = BorderPositions.All;
   @property()
   borderStyle?: BorderStyle = BorderStyles.Solid;
+  @property()
+  containerPartName?: string = 'webcl-list-container';
+  @property()
+  listPartName?: string = 'webcl-list';
 
-  protected renderListItemContent(hasSlot, slotName, slotPosition, listLabel) {
-    return html` ${hasSlot && slotPosition === SlotPositions.Start
-        ? html`<slot name=${slotName} />`
+  protected renderListItemContent(rightSlot, leftSlot, listLabel) {
+    return html` ${leftSlot?.hasSlot
+        ? html`<slot name=${leftSlot?.slotName} />`
         : nothing}
       <span>${msg(str`${listLabel}`)}</span>
-      ${hasSlot && slotPosition === SlotPositions.End
-        ? html`<slot name=${slotName} />`
+      ${rightSlot?.hasSlot
+        ? html`<slot name=${rightSlot?.slotName} />`
         : nothing}`;
   }
 
@@ -47,41 +46,23 @@ export class ListComponent extends TailwindElement(null) {
     isButton,
     href,
     listLabel,
-    hasSlot,
-    slotPosition,
-    slotName,
+    rightSlot,
+    leftSlot,
     btnClickHandler,
   }: ListItemType) {
     return isAnchor
-      ? html`<a
-          href=${href}
-          class="w-full flex basis-full flex-row justify-between"
-          >${this.renderListItemContent(
-            hasSlot,
-            slotName,
-            slotPosition,
-            listLabel
-          )}
+      ? html`<a href=${href} class="w-full flex basis-full flex-row"
+          >${this.renderListItemContent(rightSlot, leftSlot, listLabel)}
         </a>`
       : isButton
       ? html`<button
           @click=${() => btnClickHandler(id, listLabel)}
-          class="w-full flex basis-full flex-row justify-between"
+          class="w-full flex basis-full flex-row"
         >
-          ${this.renderListItemContent(
-            hasSlot,
-            slotName,
-            slotPosition,
-            listLabel
-          )}
+          ${this.renderListItemContent(rightSlot, leftSlot, listLabel)}
         </button>`
       : html`<span
-          >${this.renderListItemContent(
-            hasSlot,
-            slotName,
-            slotPosition,
-            listLabel
-          )}</span
+          >${this.renderListItemContent(rightSlot, leftSlot, listLabel)}</span
         >`;
   }
 
@@ -109,7 +90,10 @@ export class ListComponent extends TailwindElement(null) {
       (listItem) => listItem?.id || listItem?.listLabel,
       (listItem) =>
         html`
-          <li class=${showBorder ? renderBorderStyles.call(this) : ''}>
+          <li
+            class=${showBorder ? renderBorderStyles.call(this) : ''}
+            part=${listItem?.listItemPartName || 'webcl-list-item'}
+          >
             ${this.renderAnchorOrButton(listItem)}
           </li>
         `
@@ -119,7 +103,7 @@ export class ListComponent extends TailwindElement(null) {
   protected renderUnorderedList() {
     const { overrideDefaultListStyles } = this;
     return html`<ul
-      part="webcl-list"
+      part=${this.listPartName}
       class=" flex flex-col ${overrideDefaultListStyles ? '' : 'list-disc'}"
     >
       ${this.renderListItems()}
@@ -129,7 +113,7 @@ export class ListComponent extends TailwindElement(null) {
   protected renderOrderedList() {
     const { overrideDefaultListStyles } = this;
     return html`<ol
-      part="webcl-list"
+      part=${this.listPartName}
       class="flex flex-col ${overrideDefaultListStyles ? '' : 'list-decimal'}"
     >
       ${this.renderListItems()}
@@ -147,7 +131,7 @@ export class ListComponent extends TailwindElement(null) {
     }
   }
   render() {
-    return html`<div class="webcl-list-wrapper" part="webcl-list-container">
+    return html`<div class="webcl-list-wrapper" part=${this.containerPartName}>
       ${this.renderList()}
     </div>`;
   }

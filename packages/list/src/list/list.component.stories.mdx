@@ -23,6 +23,8 @@ The List component is a Lit component that renders a list component that is fram
 | showBorder                | boolean        | Flag to determine whether or not to show border on list elements            |
 | borderPosition            | BorderPosition | Where to show the border                                                    |
 | borderStyle               | BorderStyle    | The border style                                                            |
+| containerPartName         | string         | The part name for the container                                             |
+| listPartName              | string         | The part name for the list                                                  |
 
 The different values for the list types are as follows:
 
@@ -48,22 +50,24 @@ The different values for the border style are as follows:
 
 The ListItemType consist of the following key value pairs:
 
-| Key             | Type          | Description                                                         |
-| --------------- | ------------- | ------------------------------------------------------------------- |
-| id              | string/number | The id of the list element                                          |
-| listLabel       | string        | The list label                                                      |
-| isAnchor        | boolean       | Flag to determine whether or not to render the content as an anchor |
-| isButton        | boolean       | Flag to determine whether or not to render the content as a button  |
-| href            | string        | The href for the anchor element                                     |
-| hasSlot         | boolean       | Flag to determine whether or not to render the slot                 |
-| slotName        | string        | The name of the slot to render                                      |
-| slotPosition    | SlotPosition  | Different positions in which the slot can be rendered               |
-| btnClickHandler | Function      | The handler to be called when the button is clicked                 |
+| Key              | Type          | Description                                                         |
+| ---------------- | ------------- | ------------------------------------------------------------------- |
+| id               | string/number | The id of the list element                                          |
+| listLabel        | string        | The list label                                                      |
+| isAnchor         | boolean       | Flag to determine whether or not to render the content as an anchor |
+| isButton         | boolean       | Flag to determine whether or not to render the content as a button  |
+| href             | string        | The href for the anchor element                                     |
+| leftSlot         | Slot          | Slot for the left content                                           |
+| rightSlot        | Slot          | SLot for the right content                                          |
+| btnClickHandler  | Function      | The handler to be called when the button is clicked                 |
+| listItemPartName | string        | The part name for the list item                                     |
 
-The different slot positions available to the user are as follows:
+The Slot type consist of the following key value pairs:
 
-1. Start
-2. End
+| Key      | Type    | Description                                         |
+| -------- | ------- | --------------------------------------------------- |
+| hasSlot  | boolean | Flag to determine whether or not to render the slot |
+| slotName | string  | The name of the slot to render                      |
 
 # Examples
 
@@ -98,9 +102,7 @@ export const unOrderedListWithDefaultOverriddenAndBorderBottomTemplate = ({
   borderPosition,
   borderStyle,
   overrideDefaultListStyles,
-  hasSlot,
-  slotName,
-  slotPosition,
+  leftSlot,
 }) =>
   html`<list-component
     .listType=${listType}
@@ -109,9 +111,7 @@ export const unOrderedListWithDefaultOverriddenAndBorderBottomTemplate = ({
     .showBorder=${showBorder}
     .borderPosition=${borderPosition}
     .borderStyle=${borderStyle}
-    .hasSlot=${hasSlot}
-    .slotName=${slotName}
-    .slotPosition=${slotPosition}
+    .leftSlot=${leftSlot}
   >
     <div slot="list-slot">
       <img
