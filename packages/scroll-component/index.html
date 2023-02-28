@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./src/scroll/scroll.component.scss" />
+  <title>web components</title>
+</head>
+
+<body>
+  <scroll-component>
+    <div slot="text1">
+      <h5>THE NEW</h5><span>YONDER<sup>™</sup></span>
+      <h5>WATER BOTTLE</h5>
+    </div>
+    <div slot="text2">
+      <h5>
+        OUR LIGHTEST BOTTLE YET
+      </h5>
+    </div>
+
+    <div slot="text3">
+      <h5>EASY TO CARRY.<br>HARD TO BREAK.</h5>
+      <span>Made with Shatter-Resistant Plastic</span>
+    </div>
+    <div slot="text4">
+      <h5>EASY DRINK SPOUT</h5>
+      <span>Spill less and sip more</span>
+    </div>
+    <div slot="text5">
+      <h5>CLIP OR CARRY CAP</h5>
+      <span>Hands-On or Hands-Free for Ultimate Portability</span>
+    </div>
+  </scroll-component>
+  <script type="module" src="src/scroll/scroll.component.ts"></script>
+</body>
+
+</html>
