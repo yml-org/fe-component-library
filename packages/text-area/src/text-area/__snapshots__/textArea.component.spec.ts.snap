@@ -1,0 +1,1301 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`text-area-component matches component snapshot 1`] = `
+d {
+  "_$AL": Map {},
+  "_$Do": N {
+    "_$AA": <!---->,
+    "_$AB": null,
+    "_$AH": bt {
+      "_$AD": O {
+        "el": <template />,
+        "parts": Array [
+          Object {
+            "ctor": [Function],
+            "index": 0,
+            "name": "part",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "index": 1,
+            "type": 2,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 2,
+            "name": "part",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 2,
+            "name": "class",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 2,
+            "name": "id",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 2,
+            "name": "name",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 2,
+            "name": "rows",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 2,
+            "name": "cols",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 2,
+            "name": "autocomplete",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 2,
+            "name": "autofocus",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 2,
+            "name": "disabled",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 2,
+            "name": "form",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 2,
+            "name": "maxlength",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 2,
+            "name": "minlength",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 2,
+            "name": "placeholder",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 2,
+            "name": "readonly",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 2,
+            "name": "required",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 2,
+            "name": "input",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+        ],
+      },
+      "_$AM": [Circular],
+      "_$AN": undefined,
+      "u": Array [
+        M {
+          "_$AH": "webcl-textarea-container",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <div
+            part="webcl-textarea-container"
+          >
+            
+      
+            <!--?lit$873057108$-->
+            
+      
+            <textarea
+              autocomplete="off"
+              class="resize"
+              cols="20"
+              id=""
+              maxlength=""
+              minlength=""
+              name=""
+              part="webcl-textarea"
+              placeholder=""
+              rows="2"
+            />
+            
+    
+          </div>,
+          "name": "part",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        N {
+          "_$AA": <!--?lit$873057108$-->,
+          "_$AB": 
+      ,
+          "_$AH": Symbol(lit-nothing),
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "_$Cm": true,
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 2,
+        },
+        M {
+          "_$AH": "webcl-textarea",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <textarea
+            autocomplete="off"
+            class="resize"
+            cols="20"
+            id=""
+            maxlength=""
+            minlength=""
+            name=""
+            part="webcl-textarea"
+            placeholder=""
+            rows="2"
+          />,
+          "name": "part",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        M {
+          "_$AH": "resize",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <textarea
+            autocomplete="off"
+            class="resize"
+            cols="20"
+            id=""
+            maxlength=""
+            minlength=""
+            name=""
+            part="webcl-textarea"
+            placeholder=""
+            rows="2"
+          />,
+          "name": "class",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        M {
+          "_$AH": "",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <textarea
+            autocomplete="off"
+            class="resize"
+            cols="20"
+            id=""
+            maxlength=""
+            minlength=""
+            name=""
+            part="webcl-textarea"
+            placeholder=""
+            rows="2"
+          />,
+          "name": "id",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        M {
+          "_$AH": "",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <textarea
+            autocomplete="off"
+            class="resize"
+            cols="20"
+            id=""
+            maxlength=""
+            minlength=""
+            name=""
+            part="webcl-textarea"
+            placeholder=""
+            rows="2"
+          />,
+          "name": "name",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        M {
+          "_$AH": 2,
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <textarea
+            autocomplete="off"
+            class="resize"
+            cols="20"
+            id=""
+            maxlength=""
+            minlength=""
+            name=""
+            part="webcl-textarea"
+            placeholder=""
+            rows="2"
+          />,
+          "name": "rows",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        M {
+          "_$AH": 20,
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <textarea
+            autocomplete="off"
+            class="resize"
+            cols="20"
+            id=""
+            maxlength=""
+            minlength=""
+            name=""
+            part="webcl-textarea"
+            placeholder=""
+            rows="2"
+          />,
+          "name": "cols",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        M {
+          "_$AH": "off",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <textarea
+            autocomplete="off"
+            class="resize"
+            cols="20"
+            id=""
+            maxlength=""
+            minlength=""
+            name=""
+            part="webcl-textarea"
+            placeholder=""
+            rows="2"
+          />,
+          "name": "autocomplete",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        At {
+          "_$AH": false,
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <textarea
+            autocomplete="off"
+            class="resize"
+            cols="20"
+            id=""
+            maxlength=""
+            minlength=""
+            name=""
+            part="webcl-textarea"
+            placeholder=""
+            rows="2"
+          />,
+          "name": "autofocus",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 4,
+        },
+        At {
+          "_$AH": false,
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <textarea
+            autocomplete="off"
+            class="resize"
+            cols="20"
+            id=""
+            maxlength=""
+            minlength=""
+            name=""
+            part="webcl-textarea"
+            placeholder=""
+            rows="2"
+          />,
+          "name": "disabled",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 4,
+        },
+        At {
+          "_$AH": "",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <textarea
+            autocomplete="off"
+            class="resize"
+            cols="20"
+            id=""
+            maxlength=""
+            minlength=""
+            name=""
+            part="webcl-textarea"
+            placeholder=""
+            rows="2"
+          />,
+          "name": "form",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 4,
+        },
+        M {
+          "_$AH": undefined,
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <textarea
+            autocomplete="off"
+            class="resize"
+            cols="20"
+            id=""
+            maxlength=""
+            minlength=""
+            name=""
+            part="webcl-textarea"
+            placeholder=""
+            rows="2"
+          />,
+          "name": "maxlength",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        M {
+          "_$AH": undefined,
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <textarea
+            autocomplete="off"
+            class="resize"
+            cols="20"
+            id=""
+            maxlength=""
+            minlength=""
+            name=""
+            part="webcl-textarea"
+            placeholder=""
+            rows="2"
+          />,
+          "name": "minlength",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        M {
+          "_$AH": "",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <textarea
+            autocomplete="off"
+            class="resize"
+            cols="20"
+            id=""
+            maxlength=""
+            minlength=""
+            name=""
+            part="webcl-textarea"
+            placeholder=""
+            rows="2"
+          />,
+          "name": "placeholder",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        At {
+          "_$AH": false,
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <textarea
+            autocomplete="off"
+            class="resize"
+            cols="20"
+            id=""
+            maxlength=""
+            minlength=""
+            name=""
+            part="webcl-textarea"
+            placeholder=""
+            rows="2"
+          />,
+          "name": "readonly",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 4,
+        },
+        At {
+          "_$AH": false,
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <textarea
+            autocomplete="off"
+            class="resize"
+            cols="20"
+            id=""
+            maxlength=""
+            minlength=""
+            name=""
+            part="webcl-textarea"
+            placeholder=""
+            rows="2"
+          />,
+          "name": "required",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 4,
+        },
+        _t {
+          "_$AH": [Function],
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <textarea
+            autocomplete="off"
+            class="resize"
+            cols="20"
+            id=""
+            maxlength=""
+            minlength=""
+            name=""
+            part="webcl-textarea"
+            placeholder=""
+            rows="2"
+          />,
+          "name": "input",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 5,
+        },
+      ],
+    },
+    "_$AM": undefined,
+    "_$AN": undefined,
+    "_$Cm": true,
+    "options": Object {
+      "host": [Circular],
+      "isConnected": true,
+      "renderBefore": null,
+    },
+    "type": 2,
+  },
+  "_$E_": Promise {},
+  "_$Ei": undefined,
+  "_$El": null,
+  "__canResize": true,
+  "__changeHandlerName": "",
+  "__containerPartAttribute": "webcl-textarea-container",
+  "__formId": "",
+  "__isAutoFocus": false,
+  "__isDisabled": false,
+  "__isReadOnly": false,
+  "__isRequired": false,
+  "__label": "",
+  "__labelPartAttribute": "webcl-textarea-label",
+  "__textAreaAutoComplete": "off",
+  "__textAreaCols": 20,
+  "__textAreaId": "",
+  "__textAreaName": "",
+  "__textAreaPartAttribute": "webcl-textarea",
+  "__textAreaPlaceHolder": "",
+  "__textAreaRows": 2,
+  "enableUpdating": [Function],
+  "hasUpdated": true,
+  "isUpdatePending": false,
+  "renderOptions": Object {
+    "host": [Circular],
+    "isConnected": true,
+    "renderBefore": null,
+  },
+  "renderRoot": ShadowRoot {
+    "_$litPart$": N {
+      "_$AA": <!---->,
+      "_$AB": null,
+      "_$AH": bt {
+        "_$AD": O {
+          "el": <template />,
+          "parts": Array [
+            Object {
+              "ctor": [Function],
+              "index": 0,
+              "name": "part",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "index": 1,
+              "type": 2,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 2,
+              "name": "part",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 2,
+              "name": "class",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 2,
+              "name": "id",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 2,
+              "name": "name",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 2,
+              "name": "rows",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 2,
+              "name": "cols",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 2,
+              "name": "autocomplete",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 2,
+              "name": "autofocus",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 2,
+              "name": "disabled",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 2,
+              "name": "form",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 2,
+              "name": "maxlength",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 2,
+              "name": "minlength",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 2,
+              "name": "placeholder",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 2,
+              "name": "readonly",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 2,
+              "name": "required",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 2,
+              "name": "input",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+          ],
+        },
+        "_$AM": [Circular],
+        "_$AN": undefined,
+        "u": Array [
+          M {
+            "_$AH": "webcl-textarea-container",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <div
+              part="webcl-textarea-container"
+            >
+              
+      
+              <!--?lit$873057108$-->
+              
+      
+              <textarea
+                autocomplete="off"
+                class="resize"
+                cols="20"
+                id=""
+                maxlength=""
+                minlength=""
+                name=""
+                part="webcl-textarea"
+                placeholder=""
+                rows="2"
+              />
+              
+    
+            </div>,
+            "name": "part",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          N {
+            "_$AA": <!--?lit$873057108$-->,
+            "_$AB": 
+      ,
+            "_$AH": Symbol(lit-nothing),
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "_$Cm": true,
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 2,
+          },
+          M {
+            "_$AH": "webcl-textarea",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <textarea
+              autocomplete="off"
+              class="resize"
+              cols="20"
+              id=""
+              maxlength=""
+              minlength=""
+              name=""
+              part="webcl-textarea"
+              placeholder=""
+              rows="2"
+            />,
+            "name": "part",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          M {
+            "_$AH": "resize",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <textarea
+              autocomplete="off"
+              class="resize"
+              cols="20"
+              id=""
+              maxlength=""
+              minlength=""
+              name=""
+              part="webcl-textarea"
+              placeholder=""
+              rows="2"
+            />,
+            "name": "class",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          M {
+            "_$AH": "",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <textarea
+              autocomplete="off"
+              class="resize"
+              cols="20"
+              id=""
+              maxlength=""
+              minlength=""
+              name=""
+              part="webcl-textarea"
+              placeholder=""
+              rows="2"
+            />,
+            "name": "id",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          M {
+            "_$AH": "",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <textarea
+              autocomplete="off"
+              class="resize"
+              cols="20"
+              id=""
+              maxlength=""
+              minlength=""
+              name=""
+              part="webcl-textarea"
+              placeholder=""
+              rows="2"
+            />,
+            "name": "name",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          M {
+            "_$AH": 2,
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <textarea
+              autocomplete="off"
+              class="resize"
+              cols="20"
+              id=""
+              maxlength=""
+              minlength=""
+              name=""
+              part="webcl-textarea"
+              placeholder=""
+              rows="2"
+            />,
+            "name": "rows",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          M {
+            "_$AH": 20,
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <textarea
+              autocomplete="off"
+              class="resize"
+              cols="20"
+              id=""
+              maxlength=""
+              minlength=""
+              name=""
+              part="webcl-textarea"
+              placeholder=""
+              rows="2"
+            />,
+            "name": "cols",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          M {
+            "_$AH": "off",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <textarea
+              autocomplete="off"
+              class="resize"
+              cols="20"
+              id=""
+              maxlength=""
+              minlength=""
+              name=""
+              part="webcl-textarea"
+              placeholder=""
+              rows="2"
+            />,
+            "name": "autocomplete",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          At {
+            "_$AH": false,
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <textarea
+              autocomplete="off"
+              class="resize"
+              cols="20"
+              id=""
+              maxlength=""
+              minlength=""
+              name=""
+              part="webcl-textarea"
+              placeholder=""
+              rows="2"
+            />,
+            "name": "autofocus",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 4,
+          },
+          At {
+            "_$AH": false,
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <textarea
+              autocomplete="off"
+              class="resize"
+              cols="20"
+              id=""
+              maxlength=""
+              minlength=""
+              name=""
+              part="webcl-textarea"
+              placeholder=""
+              rows="2"
+            />,
+            "name": "disabled",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 4,
+          },
+          At {
+            "_$AH": "",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <textarea
+              autocomplete="off"
+              class="resize"
+              cols="20"
+              id=""
+              maxlength=""
+              minlength=""
+              name=""
+              part="webcl-textarea"
+              placeholder=""
+              rows="2"
+            />,
+            "name": "form",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 4,
+          },
+          M {
+            "_$AH": undefined,
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <textarea
+              autocomplete="off"
+              class="resize"
+              cols="20"
+              id=""
+              maxlength=""
+              minlength=""
+              name=""
+              part="webcl-textarea"
+              placeholder=""
+              rows="2"
+            />,
+            "name": "maxlength",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          M {
+            "_$AH": undefined,
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <textarea
+              autocomplete="off"
+              class="resize"
+              cols="20"
+              id=""
+              maxlength=""
+              minlength=""
+              name=""
+              part="webcl-textarea"
+              placeholder=""
+              rows="2"
+            />,
+            "name": "minlength",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          M {
+            "_$AH": "",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <textarea
+              autocomplete="off"
+              class="resize"
+              cols="20"
+              id=""
+              maxlength=""
+              minlength=""
+              name=""
+              part="webcl-textarea"
+              placeholder=""
+              rows="2"
+            />,
+            "name": "placeholder",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          At {
+            "_$AH": false,
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <textarea
+              autocomplete="off"
+              class="resize"
+              cols="20"
+              id=""
+              maxlength=""
+              minlength=""
+              name=""
+              part="webcl-textarea"
+              placeholder=""
+              rows="2"
+            />,
+            "name": "readonly",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 4,
+          },
+          At {
+            "_$AH": false,
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <textarea
+              autocomplete="off"
+              class="resize"
+              cols="20"
+              id=""
+              maxlength=""
+              minlength=""
+              name=""
+              part="webcl-textarea"
+              placeholder=""
+              rows="2"
+            />,
+            "name": "required",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 4,
+          },
+          _t {
+            "_$AH": [Function],
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <textarea
+              autocomplete="off"
+              class="resize"
+              cols="20"
+              id=""
+              maxlength=""
+              minlength=""
+              name=""
+              part="webcl-textarea"
+              placeholder=""
+              rows="2"
+            />,
+            "name": "input",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 5,
+          },
+        ],
+      },
+      "_$AM": undefined,
+      "_$AN": undefined,
+      "_$Cm": true,
+      "options": Object {
+        "host": [Circular],
+        "isConnected": true,
+        "renderBefore": null,
+      },
+      "type": 2,
+    },
+  },
+}
+`;

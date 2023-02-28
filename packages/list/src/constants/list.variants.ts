@@ -1,10 +1,5 @@
 import { ListItemType, ListVariant } from '../types/list';
-import {
-  BorderPositions,
-  BorderStyles,
-  ListTypes,
-  SlotPositions,
-} from './list';
+import { BorderPositions, BorderStyles, ListTypes } from './list';
 
 export const listItemsMock: ListItemType[] = [
   {
@@ -20,9 +15,11 @@ export const listItemsMock: ListItemType[] = [
     listLabel: 'About',
     isAnchor: true,
     href: 'http://google.com/',
-    hasSlot: true,
-    slotName: 'list-slot',
-    slotPosition: SlotPositions.End,
+    rightSlot: {
+      hasSlot: true,
+      slotName: 'list-slot',
+    },
+    listItemPartName: 'custom-part-name',
   },
   {
     id: 4,
@@ -35,9 +32,10 @@ export const listItemsMock: ListItemType[] = [
     btnClickHandler: (id, listLabel) => {
       console.log(id, listLabel);
     },
-    hasSlot: true,
-    slotName: 'list-slot-1',
-    slotPosition: SlotPositions.End,
+    rightSlot: {
+      hasSlot: true,
+      slotName: 'list-slot-1',
+    },
   },
 ];
 

@@ -3,4 +3,5 @@ import ymlTheme from './yml-theme';
 
 addons.setConfig({
   theme: ymlTheme,
+  enableShortcuts: false,
 });

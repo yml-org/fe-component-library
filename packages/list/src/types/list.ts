@@ -1,7 +1,5 @@
 export type ListType = 'Ordered' | 'Unordered';
 
-export type SlotPosition = 'Start' | 'End';
-
 export type BorderPosition = 'All' | 'Top' | 'Left' | 'Bottom' | 'Right';
 
 export type BorderStyle =
@@ -12,16 +10,21 @@ export type BorderStyle =
   | 'hidden'
   | 'none';
 
+export type Slot = {
+  slotName?: string;
+  hasSlot?: boolean;
+};
+
 export type ListItemType = {
   id?: string | number;
   listLabel?: string;
   isAnchor?: boolean;
   isButton?: boolean;
   href?: string;
-  hasSlot?: boolean;
-  slotName?: string;
-  slotPosition?: SlotPosition;
+  rightSlot?: Slot;
+  leftSlot?: Slot;
   btnClickHandler?: (id: string | number, listLabel: string) => void;
+  listItemPartName?: string;
 };
 
 export type ListVariant = {
@@ -31,4 +34,6 @@ export type ListVariant = {
   showBorder?: boolean;
   borderPosition?: BorderPosition;
   borderStyle?: BorderStyle;
+  containerPartName?: string;
+  listPartName?: string;
 };
