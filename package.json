@@ -42,7 +42,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build": "lerna run build",
-    "test": "yarn build && jest --no-verbose -u --silent",
+    "test": "yarn build && jest --no-verbose -u",
     "test:coverage": "yarn build && jest --coverage -u",
     "test:watch": "yarn build && jest -u --watch",
     "lint": "yarn eslint \"packages/**/src/**\" --fix"

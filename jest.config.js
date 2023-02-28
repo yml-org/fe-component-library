@@ -82,5 +82,14 @@ module.exports = {
       testMatch: ['<rootDir>/packages/card/src/**/*.(test|spec).ts'],
       collectCoverageFrom: ['**/*.{js,ts}', '!**/node_modules/**'],
     },
+    {
+      preset: 'ts-jest',
+      runner: 'jest-electron/runner',
+      testEnvironment: 'jest-electron/environment',
+      displayName: 'text-area',
+      setupFiles: ['<rootDir>/packages/text-area/dist/assets/index.js'],
+      testMatch: ['<rootDir>/packages/text-area/src/**/*.(test|spec).ts'],
+      collectCoverageFrom: ['**/*.{js,ts}', '!**/node_modules/**'],
+    },
   ],
 };

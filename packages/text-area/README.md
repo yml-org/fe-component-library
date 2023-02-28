@@ -122,16 +122,16 @@ If you want to contribute or share some thoughts, just get in touch with us.
 
 Enjoy.
 
-# button-component
+# text-area-component
 
 ## Install
 
 ```bash
-yarn add card-component
+yarn add text-area-component
 ```
 
 ```bash
-npm i card-component
+npm i text-area-component
 ```
 
 ## Usage
@@ -142,8 +142,8 @@ npm i card-component
 
 ```js
 <template>
-  <card-component hasRoundedBorder={true}>
-  </card-component>
+  <text-area-component >
+  </text-area-component>
 </template>
 
 <script>
@@ -162,9 +162,9 @@ export default {
 
 ```js
 <template>
-  <card-component
-   :hasRoundedBorder="true"
-  ></card-component>
+  <text-area-component
+  :isDisabled="false"
+  ></text-area-component>
 </template>
 
 <script>
@@ -179,34 +179,6 @@ export default {
 </style>
 ```
 
-### With Slots
-
-```js
-<template>
-  <card-component
-  >
-    <div slot="webcl-card-content">
-      <p>Add any Slot Elements</p>
-      <img
-        style="width:50%"
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-thsyY7pcpafX5U5CN_fkREa_Bmrvak0sRg&usqp=CAU"
-        alt=""
-      />
-    </div>
-  </card-component>
-</template>
-
-<script>
-export default {
-  name: "App"
-};
-</script>
-
-<style>
-#app {
-}
-</style>
-```
 
 ## With React
 React can render Web Components, but it cannot easily pass React props to custom element properties or event listeners. 
@@ -220,10 +192,10 @@ npm i reactify-wc
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const CardComponent = reactifyWc("card-component");
+  const TextAreaComponent = reactifyWc("text-area-component");
   return (
     <div className="App">
-      <CardComponent />
+      <TextAreaComponent />
     </div>
   );
 }
@@ -234,11 +206,11 @@ export default App;
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-const CardComponent = reactifyWc("card-component");
+const TextAreaComponent = reactifyWc("text-area-component");
   return (
     <div className="App">
-      <CardComponent
-       hasRoundedBorder
+      <TextAreaComponent
+       isDisabled
       />
     </div>
   );
@@ -246,31 +218,6 @@ const CardComponent = reactifyWc("card-component");
 export default App;
 ```
 
-### With Slots 
-```js
-import reactifyWc from "reactify-wc";
-function App() {
-const CardComponent = reactifyWc("card-component");
-  return (
-    <div className="App">
-      <CardComponent
-        showCustomSlot
-        customSlotName="slot"
-      >
-      <div slot="slot">
-      <p>Add any Slot Elements</p>
-      <img
-        style={{width:"50%"}}
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-thsyY7pcpafX5U5CN_fkREa_Bmrvak0sRg&usqp=CAU"
-        alt=""
-      />
-    </div>
-      </CardComponent>
-    </div>
-  );
-}
-export default App;
-```
 
 ### Styling the Custom Component
 Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/::part
@@ -278,7 +225,7 @@ Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/::part
 ```style.scss
 //The ::part CSS pseudo-element represents any element within a shadow tree that has a matching part attribute.
 
-card-component::part(webcl-card-container) { /*Note : card-component is the custom component and webcl-card-container is the name given to the the part attribute in element within card-component */
+text-area-component::part(webcl-textarea) { /*Note : text-area-component is the custom component and webcl-textarea is the name given to the the part attribute in element within text-area-component */
 background-color: yellow;
 color:black;
 //add css properties
@@ -289,80 +236,6 @@ color:black;
 
 | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Safari  
 | --- | --- | --- | --- |
-
-## Props
-
-<table class="table table-bordered table-striped">
-    <thead>
-    <tr>
-        <th>prop</th>
-        <th>type</th>
-        <th>required</th>
-        <th>default</th>
-        <th>possible values</th>
-        <th>description</th>
-    </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>text</td>
-          <td>String</td>
-          <td>no</td>
-          <td></td>
-          <td></td>
-          <td>This will add text to the button tag</td>
-        </tr>
-        <tr>
-          <td>variant</td>
-          <td>String</td>
-          <td>no</td>
-          <td>contained</td>
-          <td>contained | outlined | link</td>
-          <td>Choose from several predefined button styles to customize the button component
-          </td>
-        </tr>		
-        <tr>
-          <td>color</td>
-          <td>String</td>
-          <td>no</td>
-          <td>primary</td>
-          <td>primary | secondary | success | danger | warning | light | dark</td>
-          <td>Choose from several predefined button colors to customize the button component</td>
-        </tr>
-        <tr>
-          <td>isDisabled</td>
-          <td>Boolean</td>
-          <td>no</td>
-          <td></td>
-          <td>true | false</td>
-          <td>Disables the button to make it unusable and un-clickable.</td>
-        </tr>
-        <tr>
-          <td>fullWidth</td>
-          <td>Boolean</td>
-          <td>no</td>
-          <td></td>
-          <td>true | false</td>
-          <td>Changes the width of the button to 100%.</td>
-        </tr>
-        <tr>
-          <td>isRounded</td>
-          <td>Boolean</td>
-          <td>no</td>
-          <td></td>
-          <td>true | false</td>
-          <td>This attribute is used to get rounded corners </td>
-        </tr>
-        <tr>
-          <td>slotName</td>
-          <td>String</td>
-          <td>no</td>
-          <td></td>
-          <td></td>
-          <td>A Slot which can render a HTMLElement or a component</td>
-        </tr>
-    </tbody>
-</table>
 
 ## Accessibility
 
