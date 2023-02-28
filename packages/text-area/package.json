@@ -1,0 +1,26 @@
+{
+  "name": "textarea",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "vite dev --host",
+    "dev": "vite dev --host",
+    "build": "vite build",
+    "lint": "eslint src --fix",
+    "localize": "lit-localize extract",
+    "localize-build": "lit-localize build"
+  },
+  "devDependencies": {
+    "@lit/localize-tools": "^0.6.5",
+    "autoprefixer": "^10.4.12",
+    "lit": "^2.4.0",
+    "postcss": "^8.4.18",
+    "sass": "^1.55.0",
+    "tailwindcss": "^3.2.0",
+    "typescript": "^4.8.4",
+    "vite": "^3.1.8"
+  },
+  "dependencies": {
+    "@lit/localize": "^0.11.4",
+    "@lit/localize-tools": "^0.6.5"
+  }
+}

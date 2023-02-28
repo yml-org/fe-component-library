@@ -1,0 +1,237 @@
+import { html } from 'lit';
+import { Story, Meta, Canvas } from '@storybook/addon-docs';
+import './textArea.component';
+import {
+  withLabel,
+  withCustomRows,
+  withCustomCols,
+  disabledVariant,
+  autoFocusVariant,
+  withPlaceHolder,
+  withNoResize,
+} from '../constants/text-area.variants.ts';
+import './textArea.component.stories.scss';
+
+<Meta title="Components/TextArea" />
+
+# TextArea Component
+
+The text area component is a Lit component that renders a textarea that is framework independent and utilizes Tailwind CSS internally.
+
+# Props
+
+| Prop Name              | Type         | Description                                                        |
+| ---------------------- | ------------ | ------------------------------------------------------------------ |
+| label                  | string       | Text area label                                                    |
+| textAreaId             | string       | The id for the text area                                           |
+| textAreaName           | string       | The name of the text area                                          |
+| textAreaRows           | number       | The number of rows for the textarea                                |
+| textAreaCols           | number       | The number of columns for the textarea                             |
+| textAreaAutoComplete   | AutoComplete | The autocomplete attribute for the textarea                        |
+| isAutoFocus            | boolean      | Flag to determine whether the text area will be focussed initially |
+| isDisabled             | boolean      | Flag to determine whether the text area will be disabled           |
+| isReadOnly             | boolean      | Flag to determine whether the text area will be readonly           |
+| isRequired             | boolean      | Flag to determine whether the text area will be required field     |
+| labelPartAttribute     | string       | The part name for label tag                                        |
+| containerPartAttribute | string       | The part name for container tag                                    |
+| textAreaPartAttribute  | string       | The part name for textarea tag                                     |
+| formId                 | string       | The id for the form tag the textarea tag is a part of              |
+| textAreaMaxLength      | number       | The max length for the text area content                           |
+| textAreaMinLength      | number       | The min length for the text area content                           |
+| textAreaPlaceHolder    | string       | The placeholder text for the text area                             |
+| changeHandlerName      | string       | The name of the custom change handler event                        |
+| canResize              | boolean      | Flag to determine whether or not the textarea can be resized       |
+
+The AutoComplete type has the following values:
+
+1. off
+2. on
+
+# Examples
+
+Basic textarea component without `props`
+
+export const TemplateDefault = () =>
+  html` <text-area-component></text-area-component> `;
+
+<Canvas columns={1}>
+  <Story name="default textarea">{TemplateDefault.bind({})}</Story>
+</Canvas>
+
+Basic textarea component with label
+
+export const TemplateWithLabel = ({ label, textAreaId, textAreaName }) =>
+  html`
+    <div class="textarea-storybook-container">
+      <text-area-component
+        label=${label}
+        textAreaId=${textAreaId}
+        textAreaName=${textAreaName}
+      ></text-area-component>
+    </div>
+  `;
+
+<Canvas columns={1}>
+  <Story name="default textarea with label" args={withLabel}>
+    {TemplateWithLabel.bind({})}
+  </Story>
+</Canvas>
+
+Basic textarea component with custom rows
+
+export const TemplateWithCustomRows = ({
+  label,
+  textAreaId,
+  textAreaName,
+  textAreaRows,
+}) =>
+  html` <div class="textarea-storybook-container">
+    <text-area-component
+      label=${label}
+      textAreaId=${textAreaId}
+      textAreaName=${textAreaName}
+      textAreaRows=${textAreaRows}
+    ></text-area-component>
+  </div>`;
+
+<Canvas columns={1}>
+  <Story name="default textarea with custom rows" args={withCustomRows}>
+    {TemplateWithCustomRows.bind({})}
+  </Story>
+</Canvas>
+
+Basic textarea component with custom rows and columns
+
+export const TemplateWithCustomRowsAndCols = ({
+  label,
+  textAreaId,
+  textAreaName,
+  textAreaRows,
+  textAreaCols,
+}) =>
+  html` <div class="textarea-storybook-container">
+    <text-area-component
+      label=${label}
+      textAreaId=${textAreaId}
+      textAreaName=${textAreaName}
+      textAreaRows=${textAreaRows}
+      textAreaCols=${textAreaCols}
+    ></text-area-component>
+  </div>`;
+
+<Canvas columns={1}>
+  <Story
+    name="default textarea with custom rows and columns"
+    args={withCustomCols}
+  >
+    {TemplateWithCustomRowsAndCols.bind({})}
+  </Story>
+</Canvas>
+
+Disabled textarea
+
+export const TemplateWithDisabledTextArea = ({
+  label,
+  textAreaId,
+  textAreaName,
+  textAreaRows,
+  textAreaCols,
+  isDisabled,
+}) =>
+  html` <div class="textarea-storybook-container">
+    <text-area-component
+      label=${label}
+      textAreaId=${textAreaId}
+      textAreaName=${textAreaName}
+      textAreaRows=${textAreaRows}
+      textAreaCols=${textAreaCols}
+      isDisabled=${isDisabled}
+    ></text-area-component>
+  </div>`;
+
+<Canvas columns={1}>
+  <Story name="disabled text area" args={disabledVariant}>
+    {TemplateWithDisabledTextArea.bind({})}
+  </Story>
+</Canvas>
+
+Auto focus textarea
+
+export const TemplateWithAutoFocus = ({
+  label,
+  textAreaId,
+  textAreaName,
+  textAreaRows,
+  textAreaCols,
+  isAutoFocus,
+}) =>
+  html` <div class="textarea-storybook-container">
+    <text-area-component
+      label=${label}
+      textAreaId=${textAreaId}
+      textAreaName=${textAreaName}
+      textAreaRows=${textAreaRows}
+      textAreaCols=${textAreaCols}
+      isAutoFocus=${isAutoFocus}
+    ></text-area-component>
+  </div>`;
+
+<Canvas columns={1}>
+  <Story name="auto focus text area" args={autoFocusVariant}>
+    {TemplateWithAutoFocus.bind({})}
+  </Story>
+</Canvas>
+
+textarea with placeholder
+
+export const TemplateWithPlaceHolder = ({
+  label,
+  textAreaId,
+  textAreaName,
+  textAreaRows,
+  textAreaCols,
+  textAreaPlaceHolder,
+}) =>
+  html` <div class="textarea-storybook-container">
+    <text-area-component
+      label=${label}
+      textAreaId=${textAreaId}
+      textAreaName=${textAreaName}
+      textAreaRows=${textAreaRows}
+      textAreaCols=${textAreaCols}
+      textAreaPlaceHolder=${textAreaPlaceHolder}
+    ></text-area-component>
+  </div>`;
+
+<Canvas columns={1}>
+  <Story name="text area with placeholder" args={withPlaceHolder}>
+    {TemplateWithPlaceHolder.bind({})}
+  </Story>
+</Canvas>
+
+textarea with no resize
+
+export const TemplateWithNoResize = ({
+  label,
+  textAreaId,
+  textAreaName,
+  textAreaRows,
+  textAreaCols,
+  canResize,
+}) =>
+  html` <div class="textarea-storybook-container">
+    <text-area-component
+      .label=${label}
+      .textAreaId=${textAreaId}
+      .textAreaName=${textAreaName}
+      .textAreaRows=${textAreaRows}
+      .textAreaCols=${textAreaCols}
+      .canResize=${canResize}
+    ></text-area-component>
+  </div>`;
+
+<Canvas columns={1}>
+  <Story name="text area with no resize" args={withNoResize}>
+    {TemplateWithNoResize.bind({})}
+  </Story>
+</Canvas>

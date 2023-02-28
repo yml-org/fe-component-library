@@ -1,0 +1,448 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`avatar-component matches component snapshot 1`] = `
+u {
+  "_$AL": Map {},
+  "_$Do": U {
+    "_$AA": <!---->,
+    "_$AB": null,
+    "_$AH": wt {
+      "_$AD": N {
+        "el": <template />,
+        "parts": Array [
+          Object {
+            "ctor": [Function],
+            "index": 0,
+            "name": "class",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 0,
+            "name": "style",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 0,
+            "name": "role",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 0,
+            "name": "click",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "index": 1,
+            "type": 2,
+          },
+          Object {
+            "index": 2,
+            "type": 2,
+          },
+        ],
+      },
+      "_$AM": [Circular],
+      "_$AN": undefined,
+      "u": Array [
+        R {
+          "_$AH": "webcl-avatar-container flex items-center justify-center",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <div
+            class="webcl-avatar-container flex items-center justify-center"
+            part="webcl-avatar"
+            role="button"
+            style="width: 75px;height: 75px;"
+          >
+            
+      
+            <!--?lit$5022558643$-->
+            
+      
+            <!--?lit$5022558643$-->
+            
+    
+          </div>,
+          "name": "class",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        R {
+          "_$AH": "width: 75px;height: 75px;",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <div
+            class="webcl-avatar-container flex items-center justify-center"
+            part="webcl-avatar"
+            role="button"
+            style="width: 75px;height: 75px;"
+          >
+            
+      
+            <!--?lit$5022558643$-->
+            
+      
+            <!--?lit$5022558643$-->
+            
+    
+          </div>,
+          "name": "style",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        R {
+          "_$AH": "button",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <div
+            class="webcl-avatar-container flex items-center justify-center"
+            part="webcl-avatar"
+            role="button"
+            style="width: 75px;height: 75px;"
+          >
+            
+      
+            <!--?lit$5022558643$-->
+            
+      
+            <!--?lit$5022558643$-->
+            
+    
+          </div>,
+          "name": "role",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        _t {
+          "_$AH": Symbol(lit-nothing),
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <div
+            class="webcl-avatar-container flex items-center justify-center"
+            part="webcl-avatar"
+            role="button"
+            style="width: 75px;height: 75px;"
+          >
+            
+      
+            <!--?lit$5022558643$-->
+            
+      
+            <!--?lit$5022558643$-->
+            
+    
+          </div>,
+          "name": "click",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 5,
+        },
+        U {
+          "_$AA": <!--?lit$5022558643$-->,
+          "_$AB": 
+      ,
+          "_$AH": Symbol(lit-nothing),
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "_$Cm": true,
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 2,
+        },
+        U {
+          "_$AA": <!--?lit$5022558643$-->,
+          "_$AB": 
+    ,
+          "_$AH": Symbol(lit-nothing),
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "_$Cm": true,
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 2,
+        },
+      ],
+    },
+    "_$AM": undefined,
+    "_$AN": undefined,
+    "_$Cm": true,
+    "options": Object {
+      "host": [Circular],
+      "isConnected": true,
+      "renderBefore": null,
+    },
+    "type": 2,
+  },
+  "_$E_": Promise {},
+  "_$Ei": undefined,
+  "_$El": null,
+  "__borderColor": "slate-200",
+  "__hasBorder": false,
+  "__hasShadow": false,
+  "__height": 75,
+  "__isRounded": false,
+  "__showDefaultIcon": false,
+  "__usePercentage": false,
+  "__width": 75,
+  "enableUpdating": [Function],
+  "hasUpdated": true,
+  "isUpdatePending": false,
+  "renderOptions": Object {
+    "host": [Circular],
+    "isConnected": true,
+    "renderBefore": null,
+  },
+  "renderRoot": ShadowRoot {
+    "_$litPart$": U {
+      "_$AA": <!---->,
+      "_$AB": null,
+      "_$AH": wt {
+        "_$AD": N {
+          "el": <template />,
+          "parts": Array [
+            Object {
+              "ctor": [Function],
+              "index": 0,
+              "name": "class",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 0,
+              "name": "style",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 0,
+              "name": "role",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 0,
+              "name": "click",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "index": 1,
+              "type": 2,
+            },
+            Object {
+              "index": 2,
+              "type": 2,
+            },
+          ],
+        },
+        "_$AM": [Circular],
+        "_$AN": undefined,
+        "u": Array [
+          R {
+            "_$AH": "webcl-avatar-container flex items-center justify-center",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <div
+              class="webcl-avatar-container flex items-center justify-center"
+              part="webcl-avatar"
+              role="button"
+              style="width: 75px;height: 75px;"
+            >
+              
+      
+              <!--?lit$5022558643$-->
+              
+      
+              <!--?lit$5022558643$-->
+              
+    
+            </div>,
+            "name": "class",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          R {
+            "_$AH": "width: 75px;height: 75px;",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <div
+              class="webcl-avatar-container flex items-center justify-center"
+              part="webcl-avatar"
+              role="button"
+              style="width: 75px;height: 75px;"
+            >
+              
+      
+              <!--?lit$5022558643$-->
+              
+      
+              <!--?lit$5022558643$-->
+              
+    
+            </div>,
+            "name": "style",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          R {
+            "_$AH": "button",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <div
+              class="webcl-avatar-container flex items-center justify-center"
+              part="webcl-avatar"
+              role="button"
+              style="width: 75px;height: 75px;"
+            >
+              
+      
+              <!--?lit$5022558643$-->
+              
+      
+              <!--?lit$5022558643$-->
+              
+    
+            </div>,
+            "name": "role",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          _t {
+            "_$AH": Symbol(lit-nothing),
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <div
+              class="webcl-avatar-container flex items-center justify-center"
+              part="webcl-avatar"
+              role="button"
+              style="width: 75px;height: 75px;"
+            >
+              
+      
+              <!--?lit$5022558643$-->
+              
+      
+              <!--?lit$5022558643$-->
+              
+    
+            </div>,
+            "name": "click",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 5,
+          },
+          U {
+            "_$AA": <!--?lit$5022558643$-->,
+            "_$AB": 
+      ,
+            "_$AH": Symbol(lit-nothing),
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "_$Cm": true,
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 2,
+          },
+          U {
+            "_$AA": <!--?lit$5022558643$-->,
+            "_$AB": 
+    ,
+            "_$AH": Symbol(lit-nothing),
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "_$Cm": true,
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 2,
+          },
+        ],
+      },
+      "_$AM": undefined,
+      "_$AN": undefined,
+      "_$Cm": true,
+      "options": Object {
+        "host": [Circular],
+        "isConnected": true,
+        "renderBefore": null,
+      },
+      "type": 2,
+    },
+  },
+}
+`;

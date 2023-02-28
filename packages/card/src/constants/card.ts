@@ -1,0 +1,15 @@
+export enum CardDimensionUnits {
+  Pixel = 'px',
+  Centimeter = 'cm',
+  Millimeter = 'mm',
+  Inch = 'in',
+  Points = 'pt',
+  Picas = 'pc',
+  Em = 'em',
+  Rem = 'rem',
+  Ex = 'ex',
+  Ch = 'ch',
+  Vw = 'vw',
+  Vh = 'vh',
+  Percentage = '%',
+}
