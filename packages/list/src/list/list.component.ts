@@ -30,11 +30,16 @@ export class ListComponent extends TailwindElement(null) {
   @property()
   listPartName?: string = 'webcl-list';
 
-  protected renderListItemContent(rightSlot, leftSlot, listLabel) {
+  protected renderListItemContent(
+    rightSlot,
+    leftSlot,
+    listLabel,
+    listLabelPartName
+  ) {
     return html` ${leftSlot?.hasSlot
         ? html`<slot name=${leftSlot?.slotName} />`
         : nothing}
-      <span>${msg(str`${listLabel}`)}</span>
+      <span part=${listLabelPartName}>${msg(str`${listLabel}`)}</span>
       ${rightSlot?.hasSlot
         ? html`<slot name=${rightSlot?.slotName} />`
         : nothing}`;
@@ -49,21 +54,42 @@ export class ListComponent extends TailwindElement(null) {
     rightSlot,
     leftSlot,
     btnClickHandler,
+    contentPartName,
+    listLabelPartName,
   }: ListItemType) {
     return isAnchor
-      ? html`<a href=${href} class="w-full flex basis-full flex-row"
-          >${this.renderListItemContent(rightSlot, leftSlot, listLabel)}
+      ? html`<a
+          href=${href}
+          class="w-full flex basis-full flex-row"
+          part=${contentPartName}
+          >${this.renderListItemContent(
+            rightSlot,
+            leftSlot,
+            listLabel,
+            listLabelPartName
+          )}
         </a>`
       : isButton
       ? html`<button
           @click=${() => btnClickHandler(id, listLabel)}
           class="w-full flex basis-full flex-row"
+          part=${contentPartName}
         >
-          ${this.renderListItemContent(rightSlot, leftSlot, listLabel)}
+          ${this.renderListItemContent(
+            rightSlot,
+            leftSlot,
+            listLabel,
+            listLabelPartName
+          )}
         </button>`
-      : html`<span
-          >${this.renderListItemContent(rightSlot, leftSlot, listLabel)}</span
-        >`;
+      : html`<p class="w-full flex basis-full flex-row" part=${contentPartName}>
+          ${this.renderListItemContent(
+            rightSlot,
+            leftSlot,
+            listLabel,
+            listLabelPartName
+          )}
+        </p>`;
   }
 
   protected renderBorderStyles() {
