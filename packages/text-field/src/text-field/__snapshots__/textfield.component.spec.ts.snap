@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`text-field matches component snapshot 1`] = `
-u {
+exports[`text-field-component matches component snapshot 1`] = `
+d {
   "_$AL": Map {},
-  "_$Do": N {
+  "_$Do": O {
     "_$AA": <!---->,
     "_$AB": null,
-    "_$AH": mt {
+    "_$AH": bt {
       "_$AD": H {
         "el": <template />,
         "parts": Array [
@@ -33,6 +33,16 @@ u {
           Object {
             "index": 1,
             "type": 2,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 3,
+            "name": "part",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
           },
           Object {
             "ctor": [Function],
@@ -68,6 +78,16 @@ u {
             "ctor": [Function],
             "index": 5,
             "name": "value",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 5,
+            "name": "autocomplete",
             "strings": Array [
               "",
               "",
@@ -165,6 +185,16 @@ u {
             "type": 1,
           },
           Object {
+            "ctor": [Function],
+            "index": 5,
+            "name": "part",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
             "index": 6,
             "type": 2,
           },
@@ -174,16 +204,16 @@ u {
       "_$AN": undefined,
       "u": Array [
         R {
-          "_$AH": undefined,
+          "_$AH": "text-field-wrapper",
           "_$AM": [Circular],
           "_$AN": undefined,
           "element": <div
-            class=""
-            part=""
+            class="text-field-wrapper"
+            part="text-field-wrapper"
           >
             
       
-            <!--?lit$569777623$-->
+            <!--?lit$00684845$-->
             
       
             <div
@@ -205,6 +235,7 @@ u {
               
         
               <input
+                autocomplete="off"
                 autofocus="false"
                 class="text-field-input"
                 id=""
@@ -218,7 +249,7 @@ u {
             </div>
             
       
-            <!--?lit$569777623$-->
+            <!--?lit$00684845$-->
             
     
           </div>,
@@ -231,16 +262,16 @@ u {
           "type": 1,
         },
         R {
-          "_$AH": undefined,
+          "_$AH": "text-field-wrapper",
           "_$AM": [Circular],
           "_$AN": undefined,
           "element": <div
-            class=""
-            part=""
+            class="text-field-wrapper"
+            part="text-field-wrapper"
           >
             
       
-            <!--?lit$569777623$-->
+            <!--?lit$00684845$-->
             
       
             <div
@@ -262,6 +293,7 @@ u {
               
         
               <input
+                autocomplete="off"
                 autofocus="false"
                 class="text-field-input"
                 id=""
@@ -275,7 +307,7 @@ u {
             </div>
             
       
-            <!--?lit$569777623$-->
+            <!--?lit$00684845$-->
             
     
           </div>,
@@ -287,8 +319,8 @@ u {
           },
           "type": 1,
         },
-        N {
-          "_$AA": <!--?lit$569777623$-->,
+        O {
+          "_$AA": <!--?lit$00684845$-->,
           "_$AB": 
       ,
           "_$AH": Symbol(lit-nothing),
@@ -302,7 +334,30 @@ u {
           },
           "type": 2,
         },
-        _t {
+        R {
+          "_$AH": "text-field-icon",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <div
+            part="text-field-icon"
+          >
+            
+          
+            <slot
+              name="textfield-icon"
+            />
+            
+        
+          </div>,
+          "name": "part",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        At {
           "_$AH": [Function],
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -330,6 +385,7 @@ u {
           "_$AM": [Circular],
           "_$AN": undefined,
           "element": <input
+            autocomplete="off"
             autofocus="false"
             class="text-field-input"
             id=""
@@ -351,6 +407,7 @@ u {
           "_$AM": [Circular],
           "_$AN": undefined,
           "element": <input
+            autocomplete="off"
             autofocus="false"
             class="text-field-input"
             id=""
@@ -372,6 +429,7 @@ u {
           "_$AM": [Circular],
           "_$AN": undefined,
           "element": <input
+            autocomplete="off"
             autofocus="false"
             class="text-field-input"
             id=""
@@ -389,10 +447,33 @@ u {
           "type": 1,
         },
         R {
+          "_$AH": "off",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <input
+            autocomplete="off"
+            autofocus="false"
+            class="text-field-input"
+            id=""
+            part="text-field-input"
+            placeholder=""
+            type="text"
+            value=""
+          />,
+          "name": "autocomplete",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        R {
           "_$AH": "",
           "_$AM": [Circular],
           "_$AN": undefined,
           "element": <input
+            autocomplete="off"
             autofocus="false"
             class="text-field-input"
             id=""
@@ -414,6 +495,7 @@ u {
           "_$AM": [Circular],
           "_$AN": undefined,
           "element": <input
+            autocomplete="off"
             autofocus="false"
             class="text-field-input"
             id=""
@@ -430,11 +512,12 @@ u {
           },
           "type": 1,
         },
-        bt {
+        _t {
           "_$AH": false,
           "_$AM": [Circular],
           "_$AN": undefined,
           "element": <input
+            autocomplete="off"
             autofocus="false"
             class="text-field-input"
             id=""
@@ -451,11 +534,12 @@ u {
           },
           "type": 4,
         },
-        bt {
+        _t {
           "_$AH": false,
           "_$AM": [Circular],
           "_$AN": undefined,
           "element": <input
+            autocomplete="off"
             autofocus="false"
             class="text-field-input"
             id=""
@@ -472,11 +556,12 @@ u {
           },
           "type": 4,
         },
-        bt {
+        _t {
           "_$AH": false,
           "_$AM": [Circular],
           "_$AN": undefined,
           "element": <input
+            autocomplete="off"
             autofocus="false"
             class="text-field-input"
             id=""
@@ -493,11 +578,12 @@ u {
           },
           "type": 4,
         },
-        bt {
+        _t {
           "_$AH": "",
           "_$AM": [Circular],
           "_$AN": undefined,
           "element": <input
+            autocomplete="off"
             autofocus="false"
             class="text-field-input"
             id=""
@@ -514,11 +600,12 @@ u {
           },
           "type": 4,
         },
-        bt {
+        _t {
           "_$AH": "",
           "_$AM": [Circular],
           "_$AN": undefined,
           "element": <input
+            autocomplete="off"
             autofocus="false"
             class="text-field-input"
             id=""
@@ -535,11 +622,12 @@ u {
           },
           "type": 4,
         },
-        bt {
+        _t {
           "_$AH": "",
           "_$AM": [Circular],
           "_$AN": undefined,
           "element": <input
+            autocomplete="off"
             autofocus="false"
             class="text-field-input"
             id=""
@@ -556,11 +644,12 @@ u {
           },
           "type": 4,
         },
-        _t {
+        At {
           "_$AH": [Function],
           "_$AM": [Circular],
           "_$AN": undefined,
           "element": <input
+            autocomplete="off"
             autofocus="false"
             class="text-field-input"
             id=""
@@ -577,8 +666,30 @@ u {
           },
           "type": 5,
         },
-        N {
-          "_$AA": <!--?lit$569777623$-->,
+        R {
+          "_$AH": "text-field-input",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <input
+            autocomplete="off"
+            autofocus="false"
+            class="text-field-input"
+            id=""
+            part="text-field-input"
+            placeholder=""
+            type="text"
+            value=""
+          />,
+          "name": "part",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        O {
+          "_$AA": <!--?lit$00684845$-->,
           "_$AB": 
     ,
           "_$AH": Symbol(lit-nothing),
@@ -607,8 +718,13 @@ u {
   "_$E_": Promise {},
   "_$Ei": undefined,
   "_$El": null,
+  "__autocomplete": "off",
   "__changeHandler": "",
   "__clickIconHandler": "",
+  "__hintTextPartAttribute": "text-field-hint-text",
+  "__iconPartAttribute": "text-field-icon",
+  "__labelPartAttribute": "text-field-label",
+  "__textFieldPartAttribute": "text-field-input",
   "enableUpdating": [Function],
   "hasUpdated": true,
   "isUpdatePending": false,
@@ -618,10 +734,10 @@ u {
     "renderBefore": null,
   },
   "renderRoot": ShadowRoot {
-    "_$litPart$": N {
+    "_$litPart$": O {
       "_$AA": <!---->,
       "_$AB": null,
-      "_$AH": mt {
+      "_$AH": bt {
         "_$AD": H {
           "el": <template />,
           "parts": Array [
@@ -648,6 +764,16 @@ u {
             Object {
               "index": 1,
               "type": 2,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 3,
+              "name": "part",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
             },
             Object {
               "ctor": [Function],
@@ -683,6 +809,16 @@ u {
               "ctor": [Function],
               "index": 5,
               "name": "value",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 5,
+              "name": "autocomplete",
               "strings": Array [
                 "",
                 "",
@@ -780,6 +916,16 @@ u {
               "type": 1,
             },
             Object {
+              "ctor": [Function],
+              "index": 5,
+              "name": "part",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
               "index": 6,
               "type": 2,
             },
@@ -789,16 +935,16 @@ u {
         "_$AN": undefined,
         "u": Array [
           R {
-            "_$AH": undefined,
+            "_$AH": "text-field-wrapper",
             "_$AM": [Circular],
             "_$AN": undefined,
             "element": <div
-              class=""
-              part=""
+              class="text-field-wrapper"
+              part="text-field-wrapper"
             >
               
       
-              <!--?lit$569777623$-->
+              <!--?lit$00684845$-->
               
       
               <div
@@ -820,6 +966,7 @@ u {
                 
         
                 <input
+                  autocomplete="off"
                   autofocus="false"
                   class="text-field-input"
                   id=""
@@ -833,7 +980,7 @@ u {
               </div>
               
       
-              <!--?lit$569777623$-->
+              <!--?lit$00684845$-->
               
     
             </div>,
@@ -846,16 +993,16 @@ u {
             "type": 1,
           },
           R {
-            "_$AH": undefined,
+            "_$AH": "text-field-wrapper",
             "_$AM": [Circular],
             "_$AN": undefined,
             "element": <div
-              class=""
-              part=""
+              class="text-field-wrapper"
+              part="text-field-wrapper"
             >
               
       
-              <!--?lit$569777623$-->
+              <!--?lit$00684845$-->
               
       
               <div
@@ -877,6 +1024,7 @@ u {
                 
         
                 <input
+                  autocomplete="off"
                   autofocus="false"
                   class="text-field-input"
                   id=""
@@ -890,7 +1038,7 @@ u {
               </div>
               
       
-              <!--?lit$569777623$-->
+              <!--?lit$00684845$-->
               
     
             </div>,
@@ -902,8 +1050,8 @@ u {
             },
             "type": 1,
           },
-          N {
-            "_$AA": <!--?lit$569777623$-->,
+          O {
+            "_$AA": <!--?lit$00684845$-->,
             "_$AB": 
       ,
             "_$AH": Symbol(lit-nothing),
@@ -917,7 +1065,30 @@ u {
             },
             "type": 2,
           },
-          _t {
+          R {
+            "_$AH": "text-field-icon",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <div
+              part="text-field-icon"
+            >
+              
+          
+              <slot
+                name="textfield-icon"
+              />
+              
+        
+            </div>,
+            "name": "part",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          At {
             "_$AH": [Function],
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -945,6 +1116,7 @@ u {
             "_$AM": [Circular],
             "_$AN": undefined,
             "element": <input
+              autocomplete="off"
               autofocus="false"
               class="text-field-input"
               id=""
@@ -966,6 +1138,7 @@ u {
             "_$AM": [Circular],
             "_$AN": undefined,
             "element": <input
+              autocomplete="off"
               autofocus="false"
               class="text-field-input"
               id=""
@@ -987,6 +1160,7 @@ u {
             "_$AM": [Circular],
             "_$AN": undefined,
             "element": <input
+              autocomplete="off"
               autofocus="false"
               class="text-field-input"
               id=""
@@ -1004,10 +1178,33 @@ u {
             "type": 1,
           },
           R {
+            "_$AH": "off",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <input
+              autocomplete="off"
+              autofocus="false"
+              class="text-field-input"
+              id=""
+              part="text-field-input"
+              placeholder=""
+              type="text"
+              value=""
+            />,
+            "name": "autocomplete",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          R {
             "_$AH": "",
             "_$AM": [Circular],
             "_$AN": undefined,
             "element": <input
+              autocomplete="off"
               autofocus="false"
               class="text-field-input"
               id=""
@@ -1029,6 +1226,7 @@ u {
             "_$AM": [Circular],
             "_$AN": undefined,
             "element": <input
+              autocomplete="off"
               autofocus="false"
               class="text-field-input"
               id=""
@@ -1045,11 +1243,12 @@ u {
             },
             "type": 1,
           },
-          bt {
+          _t {
             "_$AH": false,
             "_$AM": [Circular],
             "_$AN": undefined,
             "element": <input
+              autocomplete="off"
               autofocus="false"
               class="text-field-input"
               id=""
@@ -1066,11 +1265,12 @@ u {
             },
             "type": 4,
           },
-          bt {
+          _t {
             "_$AH": false,
             "_$AM": [Circular],
             "_$AN": undefined,
             "element": <input
+              autocomplete="off"
               autofocus="false"
               class="text-field-input"
               id=""
@@ -1087,11 +1287,12 @@ u {
             },
             "type": 4,
           },
-          bt {
+          _t {
             "_$AH": false,
             "_$AM": [Circular],
             "_$AN": undefined,
             "element": <input
+              autocomplete="off"
               autofocus="false"
               class="text-field-input"
               id=""
@@ -1108,11 +1309,12 @@ u {
             },
             "type": 4,
           },
-          bt {
+          _t {
             "_$AH": "",
             "_$AM": [Circular],
             "_$AN": undefined,
             "element": <input
+              autocomplete="off"
               autofocus="false"
               class="text-field-input"
               id=""
@@ -1129,11 +1331,12 @@ u {
             },
             "type": 4,
           },
-          bt {
+          _t {
             "_$AH": "",
             "_$AM": [Circular],
             "_$AN": undefined,
             "element": <input
+              autocomplete="off"
               autofocus="false"
               class="text-field-input"
               id=""
@@ -1150,11 +1353,12 @@ u {
             },
             "type": 4,
           },
-          bt {
+          _t {
             "_$AH": "",
             "_$AM": [Circular],
             "_$AN": undefined,
             "element": <input
+              autocomplete="off"
               autofocus="false"
               class="text-field-input"
               id=""
@@ -1171,11 +1375,12 @@ u {
             },
             "type": 4,
           },
-          _t {
+          At {
             "_$AH": [Function],
             "_$AM": [Circular],
             "_$AN": undefined,
             "element": <input
+              autocomplete="off"
               autofocus="false"
               class="text-field-input"
               id=""
@@ -1192,8 +1397,30 @@ u {
             },
             "type": 5,
           },
-          N {
-            "_$AA": <!--?lit$569777623$-->,
+          R {
+            "_$AH": "text-field-input",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <input
+              autocomplete="off"
+              autofocus="false"
+              class="text-field-input"
+              id=""
+              part="text-field-input"
+              placeholder=""
+              type="text"
+              value=""
+            />,
+            "name": "part",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          O {
+            "_$AA": <!--?lit$00684845$-->,
             "_$AB": 
     ,
             "_$AH": Symbol(lit-nothing),

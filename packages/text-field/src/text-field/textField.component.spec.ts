@@ -1,30 +1,35 @@
 import { LitElement } from 'lit-element';
 
-describe('text-field', () => {
-  const TEXT_FIELD = 'text-field';
+describe('text-field-component', () => {
+  const TEXTFIELD_COMPONENT = 'text-field-component';
   let textFieldElement: LitElement;
 
   const getShadowRoot = (tagName: string): ShadowRoot =>
     document.body.getElementsByTagName(tagName)[0].shadowRoot;
 
   beforeEach(() => {
-    textFieldElement = window.document.createElement(TEXT_FIELD) as LitElement;
+    textFieldElement = window.document.createElement(
+      TEXTFIELD_COMPONENT
+    ) as LitElement;
     document.body.appendChild(textFieldElement);
   });
 
   afterEach(() => {
-    document.body.getElementsByTagName(TEXT_FIELD)[0].remove();
+    document.body.getElementsByTagName(TEXTFIELD_COMPONENT)[0].remove();
   });
 
   it('matches component snapshot', async () => {
-    expect(document.body.getElementsByTagName(TEXT_FIELD)[0]).toMatchSnapshot();
+    expect(
+      document.body.getElementsByTagName(TEXTFIELD_COMPONENT)[0]
+    ).toMatchSnapshot();
   });
 
   it('matches the label passed', async () => {
     const LABEL = 'Label';
     textFieldElement['label'] = LABEL;
     await textFieldElement.updateComplete;
-    const textEle = getShadowRoot(TEXT_FIELD).querySelector('label').innerText;
+    const textEle =
+      getShadowRoot(TEXTFIELD_COMPONENT).querySelector('label').innerText;
     console.log(textEle);
     expect(textEle).toEqual(LABEL);
   });
@@ -33,7 +38,7 @@ describe('text-field', () => {
     textFieldElement['disabled'] = true;
     await textFieldElement.updateComplete;
     const isDisabled =
-      getShadowRoot(TEXT_FIELD).querySelector('input').disabled;
+      getShadowRoot(TEXTFIELD_COMPONENT).querySelector('input').disabled;
     expect(isDisabled).toBeTruthy();
   });
 
@@ -41,7 +46,7 @@ describe('text-field', () => {
     textFieldElement['autofocus'] = true;
     await textFieldElement.updateComplete;
     const isAutoFocus =
-      getShadowRoot(TEXT_FIELD).querySelector('input').autofocus;
+      getShadowRoot(TEXTFIELD_COMPONENT).querySelector('input').autofocus;
     expect(isAutoFocus).toBeTruthy();
   });
 
@@ -49,7 +54,7 @@ describe('text-field', () => {
     textFieldElement['readonly'] = true;
     await textFieldElement.updateComplete;
     const isReadOnly =
-      getShadowRoot(TEXT_FIELD).querySelector('input').readOnly;
+      getShadowRoot(TEXTFIELD_COMPONENT).querySelector('input').readOnly;
     expect(isReadOnly).toBeTruthy();
   });
 
@@ -57,7 +62,7 @@ describe('text-field', () => {
     textFieldElement['error'] = true;
     await textFieldElement.updateComplete;
     const textFieldComponentClassList =
-      getShadowRoot(TEXT_FIELD).querySelector('div').classList;
+      getShadowRoot(TEXTFIELD_COMPONENT).querySelector('div').classList;
     expect(textFieldComponentClassList).toContain('text-field-wrapper-error');
   });
 
@@ -65,7 +70,7 @@ describe('text-field', () => {
     textFieldElement['required'] = true;
     await textFieldElement.updateComplete;
     const isRequired =
-      getShadowRoot(TEXT_FIELD).querySelector('input').required;
+      getShadowRoot(TEXTFIELD_COMPONENT).querySelector('input').required;
     expect(isRequired).toBeTruthy();
   });
 });

@@ -122,7 +122,7 @@ If you want to contribute or share some thoughts, just get in touch with us.
 
 Enjoy.
 
-# text-area-component
+# text-field-component
 
 ## Install
 
@@ -192,7 +192,7 @@ npm i reactify-wc
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const TextAreaComponent = reactifyWc("text-field-component");
+  const TextFieldComponent = reactifyWc("text-field-component");
   return (
     <div className="App">
       <TextFieldComponent />
@@ -206,7 +206,7 @@ export default App;
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-const TextAreaComponent = reactifyWc("text-field-component");
+const TextFieldComponent = reactifyWc("text-field-component");
   return (
     <div className="App">
       <TextFieldComponent
@@ -225,7 +225,7 @@ Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/::part
 ```style.scss
 //The ::part CSS pseudo-element represents any element within a shadow tree that has a matching part attribute.
 
-text-area-component::part(webcl-textarea) { /*Note : text-area-component is the custom component and webcl-textarea is the name given to the the part attribute in element within text-area-component */
+text-field-component::part(text-field-input) { /*Note : text-field-component is the custom component and text-field-input is the name given to the the part attribute in element within text-field-component */
 background-color: yellow;
 color:black;
 //add css properties

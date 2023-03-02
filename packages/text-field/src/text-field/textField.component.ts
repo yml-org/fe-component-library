@@ -85,7 +85,7 @@ export class TextFieldComponent extends TailwindElement(null) {
   protected handleIconClick() {
     if (this.clearField) {
       document.body
-        .getElementsByTagName('text-field')[0]
+        .getElementsByTagName('text-field-component')[0]
         .shadowRoot.querySelector('.text-field-input').value = '';
       this.value = '';
     } else {
