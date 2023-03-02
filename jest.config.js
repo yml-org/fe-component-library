@@ -1,5 +1,6 @@
 module.exports = {
   rootDir: '.',
+
   projects: [
     {
       preset: 'ts-jest',
@@ -89,6 +90,29 @@ module.exports = {
       displayName: 'text-area',
       setupFiles: ['<rootDir>/packages/text-area/dist/assets/index.js'],
       testMatch: ['<rootDir>/packages/text-area/src/**/*.(test|spec).ts'],
+      collectCoverageFrom: ['**/*.{js,ts}', '!**/node_modules/**'],
+    },
+    {
+      preset: 'ts-jest',
+      runner: 'jest-electron/runner',
+      testEnvironment: 'jest-electron/environment',
+      displayName: 'scroll-component',
+      setupFiles: ['<rootDir>/packages/scroll-component/dist/assets/index.js'],
+      testMatch: [
+        '<rootDir>/packages/scroll-component/src/**/*.(test|spec).ts',
+      ],
+      collectCoverageFrom: ['**/*.{js,ts}', '!**/node_modules/**'],
+      transform: {
+        '\\.js$': ['babel-jest', { configFile: './babel-jest.config.js' }],
+      },
+    },
+    {
+      preset: 'ts-jest',
+      runner: 'jest-electron/runner',
+      testEnvironment: 'jest-electron/environment',
+      displayName: 'text-field',
+      setupFiles: ['<rootDir>/packages/text-field/dist/assets/index.js'],
+      testMatch: ['<rootDir>/packages/text-field/src/**/*.(test|spec).ts'],
       collectCoverageFrom: ['**/*.{js,ts}', '!**/node_modules/**'],
     },
   ],

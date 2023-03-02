@@ -1,0 +1,287 @@
+import { html } from 'lit';
+import { Story, Meta, Canvas } from '@storybook/addon-docs';
+import './textField.component';
+
+import './textField.component.scss';
+
+<Meta title="Components/TextField" />
+
+# TextField Component
+
+The text field component is a Lit component that renders a skeleton text field that is framework independent and utilizes Tailwind CSS internally.
+
+# Props
+
+| Prop Name              | Type         | Description                                                         |
+| ---------------------- | ------------ | ------------------------------------------------------------------- | --- |
+| label                  | string       | Text field label                                                    |
+| textFieldId            | string       | The id for the text field                                           |
+| value                  | string       | The value of the text field                                         |
+| placeholder            | string       | The placeholder for the text field                                  |
+| hintText               | string       | The hint text for the text field                                    |
+| autocomplete           | AutoComplete | The autocomplete attribute for the text field                       |
+| autofocus              | boolean      | Flag to determine whether the text field will be focussed initially |
+| disabled               | boolean      | Flag to determine whether the text field will be disabled           |
+| readonly               | boolean      | Flag to determine whether the text field will be readonly           |
+| required               | boolean      | Flag to determine whether the text field will be required field     |
+| labelPartAttribute     | string       | The part name for label tag                                         |
+| iconPartAttribute      | string       | The part name for container tag                                     |
+| hintTextPartAttribute  | string       | The part name for hint text tag                                     |     |
+| textFieldPartAttribute | string       | The part name for text field tag                                    |
+| formId                 | string       | The id for the form tag the text field tag is a part of             |
+| minLength              | number       | The max length for the text field content                           |
+| maxLength              | number       | The min length for the text field content                           |
+| clearField             | boolean      | Flag to clear text field                                            |
+| error                  | boolean      | Flag to indicate error in input field                               |
+| changeHandler          | string       | The name of the custom change handler event                         |
+| clickIconHandler       | string       | The name of the custom click handler event                          |
+
+The default slots provided in the component are as follows:
+
+1. textfield-icon
+
+# Examples
+
+Default text field
+
+export const withDefaultTemplate = ({}) =>
+  html`<text-field-component></text-field-component>`;
+
+<Canvas>
+  <Story name="with default">{withDefaultTemplate.bind({})}</Story>
+</Canvas>
+
+Basic text field with label and placeholder
+
+export const withLabelPlaceholderTemplate = ({ label, placeholder }) =>
+  html`
+    <text-field-component .label=${label} .placeholder=${placeholder}>
+    </text-field-component>
+  `;
+
+<Canvas>
+  <Story
+    name="with label and placeholder"
+    args={{
+      label: 'Label',
+      placeholder: 'Input',
+    }}
+  >
+    {withLabelPlaceholderTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Basic text field with rounded border(styles)
+
+export const withRoundedBorderTemplate = ({ label, placeholder }) =>
+  html`<div class="storybook-text-field-container">
+    <text-field-component .label=${label} .placeholder=${placeholder}>
+    </text-field-component>
+  </div>`;
+
+<Canvas>
+  <Story
+    name="with rounded border"
+    args={{
+      label: 'Label',
+      placeholder: 'Input',
+    }}
+  >
+    {withRoundedBorderTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Basic text field with required asterisk
+
+export const withRequiredTemplate = ({ label, placeholder, required }) =>
+  html`<div class="storybook-text-field-container">
+    <text-field-component
+      .label=${label}
+      .placeholder=${placeholder}
+      .required=${required}
+    >
+    </text-field-component>
+  </div>`;
+
+<Canvas>
+  <Story
+    name="with required"
+    args={{
+      label: 'Label',
+      placeholder: 'Input',
+      required: true,
+    }}
+  >
+    {withRequiredTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Basic text field with hint text
+
+export const withHintTextTemplate = ({
+  label,
+  placeholder,
+  hintText,
+  required,
+}) =>
+  html`<div class="storybook-text-field-container">
+    <text-field-component
+      .label=${label}
+      .placeholder=${placeholder}
+      .hintText=${hintText}
+      .required=${required}
+    >
+    </text-field-component>
+  </div>`;
+
+<Canvas>
+  <Story
+    name="with hint text"
+    args={{
+      label: 'Label',
+      placeholder: 'Input',
+      hintText: 'Hint Text',
+    }}
+  >
+    {withHintTextTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Basic text field having disabled prop
+
+export const withDisabledTemplate = ({
+  label,
+  placeholder,
+  hintText,
+  disabled,
+}) =>
+  html`<div class="storybook-text-field-container custom-disabled-variant">
+    <text-field-component
+      .label=${label}
+      .placeholder=${placeholder}
+      .hintText=${hintText}
+      .disabled=${disabled}
+    >
+    </text-field-component>
+  </div>`;
+
+<Canvas>
+  <Story
+    name="with disabled"
+    args={{
+      label: 'Label',
+      placeholder: 'Input',
+      hintText: 'Hint Text',
+      disabled: true,
+    }}
+  >
+    {withDisabledTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Basic text field having error
+
+export const withErrorTemplate = ({ label, placeholder, hintText, error }) =>
+  html`<div class="storybook-text-field-container custom-error-variant">
+    <text-field-component
+      .label=${label}
+      .placeholder=${placeholder}
+      .hintText=${hintText}
+      .error=${error}
+    >
+    </text-field-component>
+  </div>`;
+
+<Canvas>
+  <Story
+    name="with error"
+    args={{
+      label: 'Label',
+      placeholder: 'Input',
+      hintText: 'Hint Text',
+      error: true,
+    }}
+  >
+    {withErrorTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Basic text field having error with icon slot
+
+export const withErrorWithIconSlotTemplate = ({
+  label,
+  placeholder,
+  hintText,
+  error,
+}) =>
+  html`<div class="storybook-text-field-container custom-error-variant">
+    <text-field-component
+      .label=${label}
+      .placeholder=${placeholder}
+      .hintText=${hintText}
+      .error=${error}
+    >
+      <img
+        slot="textfield-icon"
+        src="https://www.citypng.com/public/uploads/preview/png-red-round-close-x-icon-31631915146jpppmdzihs.png"
+        alt="test"
+        style="height: 18px"
+      />
+    </text-field-component>
+  </div>`;
+
+<Canvas>
+  <Story
+    name="with error and icon slot"
+    args={{
+      label: 'Label',
+      placeholder: 'Input',
+      hintText: 'Hint Text',
+      error: true,
+    }}
+  >
+    {withErrorWithIconSlotTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Basic text field using defined icon slot
+
+export const withDefinedIconSlot = ({
+  label,
+  placeholder,
+  hintText,
+  required,
+  clearField,
+}) =>
+  html`<div class="storybook-text-field-container custom-icon-variant">
+    <text-field-component
+      .label=${label}
+      .placeholder=${placeholder}
+      .hintText=${hintText}
+      .required=${required}
+      .clearField=${clearField}
+    >
+      <img
+        slot="textfield-icon"
+        src="https://cdn-icons-png.flaticon.com/512/106/106830.png"
+        alt="test"
+        style="height: 18px"
+      />
+    </text-field-component>
+  </div>`;
+
+<Canvas>
+  <Story
+    name="with icon slot"
+    args={{
+      label: 'Label',
+      placeholder: 'Input',
+      hintText: 'Hint Text',
+      changeHandler: 'changeHandlerName',
+      required: true,
+      clearField: true,
+    }}
+  >
+    {withDefinedIconSlot.bind({})}
+  </Story>
+</Canvas>
