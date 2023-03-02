@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>web components: Text Field</title>
+  </head>
+  <body>
+    <text-field label="Label" placeholder="Input" hintText="Hint Text" autofocus=true clearField=true changeHandler="changeHandlerName" clickIconHandler="clickIconHandler" required=true error=true>
+      <img slot="textfield-icon" src="https://cdn-icons-png.flaticon.com/512/106/106830.png" alt="test" style="height: 20px"/>
+    </text-field>
+    <script type="module" src="src/textfield/textfield.component.ts"></script>
+  </body>
+    <script>
+      document.querySelector('text-field').addEventListener("changeHandlerName", function(event){
+          console.log('insode')
+      });
+      document.querySelector('text-field').addEventListener("clickIconHandler", function(event){
+          console.log('inside click')
+      });
+      </script>
+</html>
