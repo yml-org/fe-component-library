@@ -1,0 +1,1451 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`text-field-component matches component snapshot 1`] = `
+d {
+  "_$AL": Map {},
+  "_$Do": O {
+    "_$AA": <!---->,
+    "_$AB": null,
+    "_$AH": bt {
+      "_$AD": H {
+        "el": <template />,
+        "parts": Array [
+          Object {
+            "ctor": [Function],
+            "index": 0,
+            "name": "class",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 0,
+            "name": "part",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "index": 1,
+            "type": 2,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 3,
+            "name": "part",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 3,
+            "name": "click",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 5,
+            "name": "class",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 5,
+            "name": "id",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 5,
+            "name": "value",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 5,
+            "name": "autocomplete",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 5,
+            "name": "placeholder",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 5,
+            "name": "autofocus",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 5,
+            "name": "disabled",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 5,
+            "name": "readonly",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 5,
+            "name": "required",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 5,
+            "name": "pattern",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 5,
+            "name": "minlength",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 5,
+            "name": "maxlength",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 5,
+            "name": "input",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 5,
+            "name": "part",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "index": 6,
+            "type": 2,
+          },
+        ],
+      },
+      "_$AM": [Circular],
+      "_$AN": undefined,
+      "u": Array [
+        R {
+          "_$AH": "text-field-wrapper",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <div
+            class="text-field-wrapper"
+            part="text-field-wrapper"
+          >
+            
+      
+            <!--?lit$00684845$-->
+            
+      
+            <div
+              class="text-field-input-wrapper"
+            >
+              
+        
+              <div
+                part="text-field-icon"
+              >
+                
+          
+                <slot
+                  name="textfield-icon"
+                />
+                
+        
+              </div>
+              
+        
+              <input
+                autocomplete="off"
+                autofocus="false"
+                class="text-field-input"
+                id=""
+                part="text-field-input"
+                placeholder=""
+                type="text"
+                value=""
+              />
+              
+      
+            </div>
+            
+      
+            <!--?lit$00684845$-->
+            
+    
+          </div>,
+          "name": "class",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        R {
+          "_$AH": "text-field-wrapper",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <div
+            class="text-field-wrapper"
+            part="text-field-wrapper"
+          >
+            
+      
+            <!--?lit$00684845$-->
+            
+      
+            <div
+              class="text-field-input-wrapper"
+            >
+              
+        
+              <div
+                part="text-field-icon"
+              >
+                
+          
+                <slot
+                  name="textfield-icon"
+                />
+                
+        
+              </div>
+              
+        
+              <input
+                autocomplete="off"
+                autofocus="false"
+                class="text-field-input"
+                id=""
+                part="text-field-input"
+                placeholder=""
+                type="text"
+                value=""
+              />
+              
+      
+            </div>
+            
+      
+            <!--?lit$00684845$-->
+            
+    
+          </div>,
+          "name": "part",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        O {
+          "_$AA": <!--?lit$00684845$-->,
+          "_$AB": 
+      ,
+          "_$AH": Symbol(lit-nothing),
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "_$Cm": true,
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 2,
+        },
+        R {
+          "_$AH": "text-field-icon",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <div
+            part="text-field-icon"
+          >
+            
+          
+            <slot
+              name="textfield-icon"
+            />
+            
+        
+          </div>,
+          "name": "part",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        At {
+          "_$AH": [Function],
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <div
+            part="text-field-icon"
+          >
+            
+          
+            <slot
+              name="textfield-icon"
+            />
+            
+        
+          </div>,
+          "name": "click",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 5,
+        },
+        R {
+          "_$AH": "text-field-input",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <input
+            autocomplete="off"
+            autofocus="false"
+            class="text-field-input"
+            id=""
+            part="text-field-input"
+            placeholder=""
+            type="text"
+            value=""
+          />,
+          "name": "class",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        R {
+          "_$AH": undefined,
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <input
+            autocomplete="off"
+            autofocus="false"
+            class="text-field-input"
+            id=""
+            part="text-field-input"
+            placeholder=""
+            type="text"
+            value=""
+          />,
+          "name": "id",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        R {
+          "_$AH": "",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <input
+            autocomplete="off"
+            autofocus="false"
+            class="text-field-input"
+            id=""
+            part="text-field-input"
+            placeholder=""
+            type="text"
+            value=""
+          />,
+          "name": "value",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        R {
+          "_$AH": "off",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <input
+            autocomplete="off"
+            autofocus="false"
+            class="text-field-input"
+            id=""
+            part="text-field-input"
+            placeholder=""
+            type="text"
+            value=""
+          />,
+          "name": "autocomplete",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        R {
+          "_$AH": "",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <input
+            autocomplete="off"
+            autofocus="false"
+            class="text-field-input"
+            id=""
+            part="text-field-input"
+            placeholder=""
+            type="text"
+            value=""
+          />,
+          "name": "placeholder",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        R {
+          "_$AH": false,
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <input
+            autocomplete="off"
+            autofocus="false"
+            class="text-field-input"
+            id=""
+            part="text-field-input"
+            placeholder=""
+            type="text"
+            value=""
+          />,
+          "name": "autofocus",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        _t {
+          "_$AH": false,
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <input
+            autocomplete="off"
+            autofocus="false"
+            class="text-field-input"
+            id=""
+            part="text-field-input"
+            placeholder=""
+            type="text"
+            value=""
+          />,
+          "name": "disabled",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 4,
+        },
+        _t {
+          "_$AH": false,
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <input
+            autocomplete="off"
+            autofocus="false"
+            class="text-field-input"
+            id=""
+            part="text-field-input"
+            placeholder=""
+            type="text"
+            value=""
+          />,
+          "name": "readonly",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 4,
+        },
+        _t {
+          "_$AH": false,
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <input
+            autocomplete="off"
+            autofocus="false"
+            class="text-field-input"
+            id=""
+            part="text-field-input"
+            placeholder=""
+            type="text"
+            value=""
+          />,
+          "name": "required",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 4,
+        },
+        _t {
+          "_$AH": "",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <input
+            autocomplete="off"
+            autofocus="false"
+            class="text-field-input"
+            id=""
+            part="text-field-input"
+            placeholder=""
+            type="text"
+            value=""
+          />,
+          "name": "pattern",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 4,
+        },
+        _t {
+          "_$AH": "",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <input
+            autocomplete="off"
+            autofocus="false"
+            class="text-field-input"
+            id=""
+            part="text-field-input"
+            placeholder=""
+            type="text"
+            value=""
+          />,
+          "name": "minlength",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 4,
+        },
+        _t {
+          "_$AH": "",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <input
+            autocomplete="off"
+            autofocus="false"
+            class="text-field-input"
+            id=""
+            part="text-field-input"
+            placeholder=""
+            type="text"
+            value=""
+          />,
+          "name": "maxlength",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 4,
+        },
+        At {
+          "_$AH": [Function],
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <input
+            autocomplete="off"
+            autofocus="false"
+            class="text-field-input"
+            id=""
+            part="text-field-input"
+            placeholder=""
+            type="text"
+            value=""
+          />,
+          "name": "input",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 5,
+        },
+        R {
+          "_$AH": "text-field-input",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <input
+            autocomplete="off"
+            autofocus="false"
+            class="text-field-input"
+            id=""
+            part="text-field-input"
+            placeholder=""
+            type="text"
+            value=""
+          />,
+          "name": "part",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        O {
+          "_$AA": <!--?lit$00684845$-->,
+          "_$AB": 
+    ,
+          "_$AH": Symbol(lit-nothing),
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "_$Cm": true,
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 2,
+        },
+      ],
+    },
+    "_$AM": undefined,
+    "_$AN": undefined,
+    "_$Cm": true,
+    "options": Object {
+      "host": [Circular],
+      "isConnected": true,
+      "renderBefore": null,
+    },
+    "type": 2,
+  },
+  "_$E_": Promise {},
+  "_$Ei": undefined,
+  "_$El": null,
+  "__autocomplete": "off",
+  "__changeHandler": "",
+  "__clickIconHandler": "",
+  "__hintTextPartAttribute": "text-field-hint-text",
+  "__iconPartAttribute": "text-field-icon",
+  "__labelPartAttribute": "text-field-label",
+  "__textFieldPartAttribute": "text-field-input",
+  "enableUpdating": [Function],
+  "hasUpdated": true,
+  "isUpdatePending": false,
+  "renderOptions": Object {
+    "host": [Circular],
+    "isConnected": true,
+    "renderBefore": null,
+  },
+  "renderRoot": ShadowRoot {
+    "_$litPart$": O {
+      "_$AA": <!---->,
+      "_$AB": null,
+      "_$AH": bt {
+        "_$AD": H {
+          "el": <template />,
+          "parts": Array [
+            Object {
+              "ctor": [Function],
+              "index": 0,
+              "name": "class",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 0,
+              "name": "part",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "index": 1,
+              "type": 2,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 3,
+              "name": "part",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 3,
+              "name": "click",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 5,
+              "name": "class",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 5,
+              "name": "id",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 5,
+              "name": "value",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 5,
+              "name": "autocomplete",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 5,
+              "name": "placeholder",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 5,
+              "name": "autofocus",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 5,
+              "name": "disabled",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 5,
+              "name": "readonly",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 5,
+              "name": "required",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 5,
+              "name": "pattern",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 5,
+              "name": "minlength",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 5,
+              "name": "maxlength",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 5,
+              "name": "input",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 5,
+              "name": "part",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "index": 6,
+              "type": 2,
+            },
+          ],
+        },
+        "_$AM": [Circular],
+        "_$AN": undefined,
+        "u": Array [
+          R {
+            "_$AH": "text-field-wrapper",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <div
+              class="text-field-wrapper"
+              part="text-field-wrapper"
+            >
+              
+      
+              <!--?lit$00684845$-->
+              
+      
+              <div
+                class="text-field-input-wrapper"
+              >
+                
+        
+                <div
+                  part="text-field-icon"
+                >
+                  
+          
+                  <slot
+                    name="textfield-icon"
+                  />
+                  
+        
+                </div>
+                
+        
+                <input
+                  autocomplete="off"
+                  autofocus="false"
+                  class="text-field-input"
+                  id=""
+                  part="text-field-input"
+                  placeholder=""
+                  type="text"
+                  value=""
+                />
+                
+      
+              </div>
+              
+      
+              <!--?lit$00684845$-->
+              
+    
+            </div>,
+            "name": "class",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          R {
+            "_$AH": "text-field-wrapper",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <div
+              class="text-field-wrapper"
+              part="text-field-wrapper"
+            >
+              
+      
+              <!--?lit$00684845$-->
+              
+      
+              <div
+                class="text-field-input-wrapper"
+              >
+                
+        
+                <div
+                  part="text-field-icon"
+                >
+                  
+          
+                  <slot
+                    name="textfield-icon"
+                  />
+                  
+        
+                </div>
+                
+        
+                <input
+                  autocomplete="off"
+                  autofocus="false"
+                  class="text-field-input"
+                  id=""
+                  part="text-field-input"
+                  placeholder=""
+                  type="text"
+                  value=""
+                />
+                
+      
+              </div>
+              
+      
+              <!--?lit$00684845$-->
+              
+    
+            </div>,
+            "name": "part",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          O {
+            "_$AA": <!--?lit$00684845$-->,
+            "_$AB": 
+      ,
+            "_$AH": Symbol(lit-nothing),
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "_$Cm": true,
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 2,
+          },
+          R {
+            "_$AH": "text-field-icon",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <div
+              part="text-field-icon"
+            >
+              
+          
+              <slot
+                name="textfield-icon"
+              />
+              
+        
+            </div>,
+            "name": "part",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          At {
+            "_$AH": [Function],
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <div
+              part="text-field-icon"
+            >
+              
+          
+              <slot
+                name="textfield-icon"
+              />
+              
+        
+            </div>,
+            "name": "click",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 5,
+          },
+          R {
+            "_$AH": "text-field-input",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <input
+              autocomplete="off"
+              autofocus="false"
+              class="text-field-input"
+              id=""
+              part="text-field-input"
+              placeholder=""
+              type="text"
+              value=""
+            />,
+            "name": "class",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          R {
+            "_$AH": undefined,
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <input
+              autocomplete="off"
+              autofocus="false"
+              class="text-field-input"
+              id=""
+              part="text-field-input"
+              placeholder=""
+              type="text"
+              value=""
+            />,
+            "name": "id",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          R {
+            "_$AH": "",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <input
+              autocomplete="off"
+              autofocus="false"
+              class="text-field-input"
+              id=""
+              part="text-field-input"
+              placeholder=""
+              type="text"
+              value=""
+            />,
+            "name": "value",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          R {
+            "_$AH": "off",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <input
+              autocomplete="off"
+              autofocus="false"
+              class="text-field-input"
+              id=""
+              part="text-field-input"
+              placeholder=""
+              type="text"
+              value=""
+            />,
+            "name": "autocomplete",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          R {
+            "_$AH": "",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <input
+              autocomplete="off"
+              autofocus="false"
+              class="text-field-input"
+              id=""
+              part="text-field-input"
+              placeholder=""
+              type="text"
+              value=""
+            />,
+            "name": "placeholder",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          R {
+            "_$AH": false,
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <input
+              autocomplete="off"
+              autofocus="false"
+              class="text-field-input"
+              id=""
+              part="text-field-input"
+              placeholder=""
+              type="text"
+              value=""
+            />,
+            "name": "autofocus",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          _t {
+            "_$AH": false,
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <input
+              autocomplete="off"
+              autofocus="false"
+              class="text-field-input"
+              id=""
+              part="text-field-input"
+              placeholder=""
+              type="text"
+              value=""
+            />,
+            "name": "disabled",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 4,
+          },
+          _t {
+            "_$AH": false,
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <input
+              autocomplete="off"
+              autofocus="false"
+              class="text-field-input"
+              id=""
+              part="text-field-input"
+              placeholder=""
+              type="text"
+              value=""
+            />,
+            "name": "readonly",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 4,
+          },
+          _t {
+            "_$AH": false,
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <input
+              autocomplete="off"
+              autofocus="false"
+              class="text-field-input"
+              id=""
+              part="text-field-input"
+              placeholder=""
+              type="text"
+              value=""
+            />,
+            "name": "required",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 4,
+          },
+          _t {
+            "_$AH": "",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <input
+              autocomplete="off"
+              autofocus="false"
+              class="text-field-input"
+              id=""
+              part="text-field-input"
+              placeholder=""
+              type="text"
+              value=""
+            />,
+            "name": "pattern",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 4,
+          },
+          _t {
+            "_$AH": "",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <input
+              autocomplete="off"
+              autofocus="false"
+              class="text-field-input"
+              id=""
+              part="text-field-input"
+              placeholder=""
+              type="text"
+              value=""
+            />,
+            "name": "minlength",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 4,
+          },
+          _t {
+            "_$AH": "",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <input
+              autocomplete="off"
+              autofocus="false"
+              class="text-field-input"
+              id=""
+              part="text-field-input"
+              placeholder=""
+              type="text"
+              value=""
+            />,
+            "name": "maxlength",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 4,
+          },
+          At {
+            "_$AH": [Function],
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <input
+              autocomplete="off"
+              autofocus="false"
+              class="text-field-input"
+              id=""
+              part="text-field-input"
+              placeholder=""
+              type="text"
+              value=""
+            />,
+            "name": "input",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 5,
+          },
+          R {
+            "_$AH": "text-field-input",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <input
+              autocomplete="off"
+              autofocus="false"
+              class="text-field-input"
+              id=""
+              part="text-field-input"
+              placeholder=""
+              type="text"
+              value=""
+            />,
+            "name": "part",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          O {
+            "_$AA": <!--?lit$00684845$-->,
+            "_$AB": 
+    ,
+            "_$AH": Symbol(lit-nothing),
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "_$Cm": true,
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 2,
+          },
+        ],
+      },
+      "_$AM": undefined,
+      "_$AN": undefined,
+      "_$Cm": true,
+      "options": Object {
+        "host": [Circular],
+        "isConnected": true,
+        "renderBefore": null,
+      },
+      "type": 2,
+    },
+  },
+}
+`;
