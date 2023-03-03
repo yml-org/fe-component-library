@@ -1,0 +1,63 @@
+import { html } from 'lit';
+import { Story, Meta, Canvas } from '@storybook/addon-docs';
+import './progressBar.component';
+import './progressBar.component.stories.scss';
+
+<Meta title="Components/ProgressBar" />
+
+# ProgressBar Component
+
+The progress bar component is a Lit component that renders a progress bar with dynamic percent value that is framework independent and utilizes Tailwind CSS internally.
+
+# Props
+
+| Prop Name                | Type   | Description                          |
+| ------------------------ | ------ | ------------------------------------ |
+| percent                  | number | Progress percent of the progress bar |
+| max                      | number | Maximum percent of the progress bar  |
+| containerPartAttribute   | string | The part name for container tag      |
+| progressBarPartAttribute | string | The part name for progress bar       |
+
+# Examples
+
+Basic progress bar component with percent
+
+export const TemplateWithProgressPercent = ({ percent }) =>
+  html`
+    <div class="progress-bar-storybook-container">
+      <progress-bar-component .percent=${percent}></progress-bar-component>
+    </div>
+  `;
+
+<Canvas columns={1}>
+  <Story
+    name="progress bar with percent"
+    args={{
+      percent: '30',
+    }}
+  >
+    {TemplateWithProgressPercent.bind({})}
+  </Story>
+</Canvas>
+
+Basic progress bar component with percent and max prop
+
+export const TemplateWithPercentAndMax = ({ percent, max }) =>
+  html` <div class="progress-bar-storybook-container">
+    <progress-bar-component
+      .percent=${percent}
+      .max=${max}
+    ></progress-bar-component>
+  </div>`;
+
+<Canvas columns={1}>
+  <Story
+    name="progress with percent and max prop"
+    args={{
+      percent: '70',
+      max: '100',
+    }}
+  >
+    {TemplateWithPercentAndMax.bind({})}
+  </Story>
+</Canvas>
