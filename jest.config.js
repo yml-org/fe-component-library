@@ -104,5 +104,14 @@ module.exports = {
         '\\.js$': ['babel-jest', { configFile: './babel-jest.config.js' }],
       },
     },
+    {
+      preset: 'ts-jest',
+      runner: 'jest-electron/runner',
+      testEnvironment: 'jest-electron/environment',
+      displayName: 'chip',
+      setupFiles: ['<rootDir>/packages/chip/dist/assets/index.js'],
+      testMatch: ['<rootDir>/packages/chip/src/**/*.(test|spec).ts'],
+      collectCoverageFrom: ['**/*.{js,ts}', '!**/node_modules/**'],
+    },
   ],
 };
