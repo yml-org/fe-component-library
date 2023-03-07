@@ -3,34 +3,34 @@ import { customElement, property } from 'lit/decorators.js';
 import { TailwindElement } from '../shared/tailwind.element';
 import { msg, str } from '@lit/localize';
 
-@customElement('avatar-component')
+@customElement('ymlwebcl-avatar')
 export class AvatarComponent extends TailwindElement(null) {
-  @property()
+  @property({ type: Boolean, reflect: true })
   isRounded?: boolean = false;
-  @property()
+  @property({ type: Number, reflect: true })
   width?: number = 75;
-  @property()
+  @property({ type: Number, reflect: true })
   height?: number = 75;
-  @property()
+  @property({ type: Boolean, reflect: true })
   usePercentage?: boolean = false;
-  @property()
+  @property({ type: Boolean, reflect: true })
   hasBorder?: boolean = false;
-  @property()
+  @property({ type: String, reflect: true })
   borderColor?: string = 'slate-200';
-  @property()
+  @property({ type: String, reflect: true })
   defaultBgColor?: string;
-  @property()
+  @property({ type: String, reflect: true })
   slotName?: string;
-  @property()
+  @property({ attribute: 'onAvatarClick', reflect: true })
   onAvatarClick?: () => void;
-  @property()
+  @property({ type: Boolean, reflect: true })
   hasShadow?: boolean = false;
-  @property()
+  @property({ type: Boolean, reflect: true })
   showDefaultIcon?: boolean = false;
-  @property()
+  @property({ type: String, reflect: true })
   defaultImage?: string;
 
-  protected getContainerClassList() {
+  private getContainerClassList() {
     const { isRounded, hasBorder, borderColor, hasShadow, defaultBgColor } =
       this;
     return `webcl-avatar-container flex items-center justify-center ${
@@ -39,13 +39,13 @@ export class AvatarComponent extends TailwindElement(null) {
       hasBorder ? `border border-${borderColor}` : ''
     } ${hasShadow ? 'shadow' : ''}`.trim();
   }
-  protected getContainerDimensions() {
+  private getContainerDimensions() {
     const { width, height, usePercentage } = this;
     const dimension = `${usePercentage ? '%' : 'px'}`;
     return `width: ${width}${dimension};height: ${height}${dimension};`;
   }
 
-  protected renderDefaultIcon() {
+  private renderDefaultIcon() {
     const { defaultImage, showDefaultIcon, width, height } = this;
     return showDefaultIcon
       ? html`<img
@@ -57,7 +57,7 @@ export class AvatarComponent extends TailwindElement(null) {
       : '';
   }
 
-  render() {
+  public override render() {
     return html`<div
       class=${this.getContainerClassList()}
       style=${this.getContainerDimensions()}
@@ -68,11 +68,5 @@ export class AvatarComponent extends TailwindElement(null) {
       ${this.renderDefaultIcon()}
       ${this.slotName ? html`<slot name=${this.slotName}></slot>` : ''}
     </div>`;
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    'avatar-component': AvatarComponent;
   }
 }

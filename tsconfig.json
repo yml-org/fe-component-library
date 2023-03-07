@@ -8,18 +8,15 @@
     "importHelpers": true,
     "inlineSources": true,
     "isolatedModules": true,
-    "lib": ["es2018", "dom", "dom.iterable"],
-    "module": "esNext",
+    "lib": ["esnext", "dom", "dom.iterable"],
     "moduleResolution": "node",
-    "noImplicitOverride": true,
-    "noImplicitReturns": true,
     "noUnusedParameters": true,
     "noUnusedLocals": true,
     "rootDir": ".",
     "skipLibCheck": true,
-    "strict": true,
     "sourceMap": true,
-    "target": "es2018"
-  },
-  "include": ["./global.d.ts"]
+    "target": "esnext",
+    "module": "esnext",
+    "useDefineForClassFields": false
+  }
 }
