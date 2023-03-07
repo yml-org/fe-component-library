@@ -13,31 +13,21 @@ export class AvatarComponent extends TailwindElement(null) {
   height?: number = 75;
   @property({ type: Boolean, reflect: true })
   usePercentage?: boolean = false;
-  @property({ type: Boolean, reflect: true })
-  hasBorder?: boolean = false;
-  @property({ type: String, reflect: true })
-  borderColor?: string = 'slate-200';
-  @property({ type: String, reflect: true })
-  defaultBgColor?: string;
-  @property({ type: String, reflect: true })
+  @property()
   slotName?: string;
   @property({ attribute: 'onAvatarClick', reflect: true })
   onAvatarClick?: () => void;
-  @property({ type: Boolean, reflect: true })
-  hasShadow?: boolean = false;
-  @property({ type: Boolean, reflect: true })
+  @property()
   showDefaultIcon?: boolean = false;
   @property({ type: String, reflect: true })
   defaultImage?: string;
+  @property()
+  avatarPartAttribute?: string = 'webcl-avatar';
 
-  private getContainerClassList() {
-    const { isRounded, hasBorder, borderColor, hasShadow, defaultBgColor } =
-      this;
+  protected getContainerClassList() {
     return `webcl-avatar-container flex items-center justify-center ${
-      defaultBgColor || ''
-    } ${isRounded ? 'rounded-full' : ''} ${
-      hasBorder ? `border border-${borderColor}` : ''
-    } ${hasShadow ? 'shadow' : ''}`.trim();
+      this.isRounded ? 'rounded-full' : ''
+    }`;
   }
   private getContainerDimensions() {
     const { width, height, usePercentage } = this;
@@ -61,7 +51,7 @@ export class AvatarComponent extends TailwindElement(null) {
     return html`<div
       class=${this.getContainerClassList()}
       style=${this.getContainerDimensions()}
-      part="webcl-avatar"
+      part=${this.avatarPartAttribute}
       role=${msg(str`button`)}
       @click=${this.onAvatarClick}
     >

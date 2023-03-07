@@ -122,16 +122,16 @@ If you want to contribute or share some thoughts, just get in touch with us.
 
 Enjoy.
 
-# button-component
+# text-area-component
 
 ## Install
 
 ```bash
-yarn add card-component
+yarn add chip-component
 ```
 
 ```bash
-npm i card-component
+npm i chip-component
 ```
 
 ## Usage
@@ -142,8 +142,9 @@ npm i card-component
 
 ```js
 <template>
-  <card-component hasRoundedBorder={true}>
-  </card-component>
+ <template>
+  <chip-component >
+  </chip-component>
 </template>
 
 <script>
@@ -161,10 +162,9 @@ export default {
 ### With Props
 
 ```js
-<template>
-  <card-component
-   :hasRoundedBorder="true"
-  ></card-component>
+ <template>
+  <chip-component text="Chip Component" >
+  </chip-component>
 </template>
 
 <script>
@@ -179,21 +179,14 @@ export default {
 </style>
 ```
 
-### With Slots
+### With Slot
 
 ```js
-<template>
-  <card-component
-  >
-    <div slot="webcl-card-content">
-      <p>Add any Slot Elements</p>
-      <img
-        style="width:50%"
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-thsyY7pcpafX5U5CN_fkREa_Bmrvak0sRg&usqp=CAU"
-        alt=""
-      />
-    </div>
-  </card-component>
+ <template>
+  <chip-component text="Chip Component" rightSlotName = "rightSlot" leftSlotName = "leftSlot">
+    <div slot="rightSlot"> Right Slot Element</div>
+    <div slot="leftSlot"> Left Slot Element</div>
+  </chip-component>
 </template>
 
 <script>
@@ -207,6 +200,7 @@ export default {
 }
 </style>
 ```
+
 
 ## With React
 React can render Web Components, but it cannot easily pass React props to custom element properties or event listeners. 
@@ -220,10 +214,11 @@ npm i reactify-wc
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const CardComponent = reactifyWc("card-component");
+  const ChipComponent = reactifyWc("chip-component");
+
   return (
     <div className="App">
-      <CardComponent />
+      <ChipComponent/>
     </div>
   );
 }
@@ -234,43 +229,35 @@ export default App;
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-const CardComponent = reactifyWc("card-component");
+  const ChipComponent = reactifyWc("chip-component");
+
   return (
     <div className="App">
-      <CardComponent
-       hasRoundedBorder
-      />
+      <ChipComponent text="Chip Component"/>
     </div>
   );
 }
 export default App;
 ```
 
-### With Slots 
+### With Slots
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-const CardComponent = reactifyWc("card-component");
+  const ChipComponent = reactifyWc("chip-component");
+
   return (
     <div className="App">
-      <CardComponent
-        showCustomSlot
-        customSlotName="slot"
-      >
-      <div slot="slot">
-      <p>Add any Slot Elements</p>
-      <img
-        style={{width:"50%"}}
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-thsyY7pcpafX5U5CN_fkREa_Bmrvak0sRg&usqp=CAU"
-        alt=""
-      />
-    </div>
-      </CardComponent>
+      <ChipComponent text={"Chip Component"} rightSlotName ={"rightSlot"} leftSlotName = {"leftSlot"}>
+    <div slot="rightSlot"> Right Slot Element</div>
+    <div slot="leftSlot"> Left Slot Element</div>
+    </ChipComponent>
     </div>
   );
 }
 export default App;
 ```
+
 
 ### Styling the Custom Component
 Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/::part
@@ -278,9 +265,9 @@ Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/::part
 ```style.scss
 //The ::part CSS pseudo-element represents any element within a shadow tree that has a matching part attribute.
 
-card-component::part(webcl-card-container) { /*Note : card-component is the custom component and webcl-card-container is the name given to the the part attribute in element within card-component */
-background-color: yellow;
-color:black;
+chip-component::part(webcl-chip) { /*Note : chip-component is the custom component and webcl-chip is the name given to the the part attribute in element within chip-component */
+ border: 2px solid black;
+ border-radius: 12px;
 //add css properties
  }
 ```
@@ -305,68 +292,44 @@ color:black;
     </thead>
     <tbody>
         <tr>
-          <td>hasRoundedBorder</td>
-          <td>boolean</td>
+          <td>text</td>
+          <td>String</td>
           <td>no</td>
-          <td>false</td>
-          <td>true | false</td>
-          <td>Flag to determine whether or not to have rounded borders </td>
+          <td>Label</td>
+          <td></td>
+          <td>text within the chip component   </td>
         </tr>
         <tr>
-          <td>cardWidth</td>
-          <td>number</td>
+          <td>chipPartAttribute</td>
+          <td>String</td>
           <td>no</td>
-          <td>300</td>
+          <td>webcl-chip</td>
           <td></td>
-          <td>The width of the card component </td>
+          <td>The part name for chip component </td>
         </tr>		
         <tr>
-          <td>cardHeight</td>
-          <td>number</td>
-          <td>no</td>
-          <td>300</td>
-          <td></td>
-          <td>The height of the card component</td>
-        </tr>
-        <tr>
-          <td>customSlotName</td>
+          <td>rightSlotName</td>
           <td>String</td>
           <td>no</td>
           <td></td>
           <td></td>
-          <td>The name of the child slot</td>
+          <td>Name given to slot that renders an HTMLElement on the right of the text within chip component </td>
         </tr>
-           <tr>
-          <td>showCustomSlot</td>
-          <td>boolean</td>
+          <tr>
+          <td>leftSlotName</td>
+          <td>String</td>
           <td>no</td>
-          <td>false</td>
-          <td>true | false</td>
-          <td>Flag to determine whether or not to render the custom slot     </td>
-        </tr>
-           <tr>
-          <td>cardDimensionUnit</td>
-          <td>string</td>
-          <td>no</td>
-          <td>'px'</td>
-          <td>'cm', 'in', 'mm', 'pt', 'pc', 'em', 'rem', 'ex', 'ch', 'vw', 'vh', '%'</td>
-          <td>The unit for the card width and height</td>
-        </tr>
-           <tr>
-          <td>isHorizontal</td>
-          <td>boolean</td>
-          <td>no</td>
-          <td>false</td>
-          <td>true | false</td>
-          <td>Flag to determine the content direction</td>
+          <td></td>
+          <td></td>
+          <td>Name given to slot that renders an HTMLElement on the left of the text within chip component </td>
         </tr>
     </tbody>
 </table>
 
 ## Accessibility
 
-Throughout the development of this component proper a11y options are set. This means things like aria-expanded , aria-label, aria-current, aria-control are set and any user can use the card component easily.
+Throughout the development of this component proper a11y options are set. This means things like aria-expanded , aria-label, aria-current, aria-control are set and any user can use the chip component easily.
 
 ## Localization
 
-card component supports localization, currently supports English[en], Spanish[es-419] and Chinese[zh-Hans]
+Chip component supports localization, currently supports English[en], Spanish[es-419] and Chinese[zh-Hans]

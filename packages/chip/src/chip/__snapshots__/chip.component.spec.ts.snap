@@ -1,29 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ymlwebcl-avatar matches component snapshot 1`] = `
-$ {
+exports[`chip-component matches component snapshot 1`] = `
+v {
   "_$AL": Map {},
   "_$Do": U {
     "_$AA": <!---->,
     "_$AB": null,
-    "_$AH": gt {
-      "_$AD": O {
+    "_$AH": mt {
+      "_$AD": N {
         "el": <template />,
         "parts": Array [
           Object {
             "ctor": [Function],
             "index": 0,
             "name": "class",
-            "strings": Array [
-              "",
-              "",
-            ],
-            "type": 1,
-          },
-          Object {
-            "ctor": [Function],
-            "index": 0,
-            "name": "style",
             "strings": Array [
               "",
               "",
@@ -42,8 +32,8 @@ $ {
           },
           Object {
             "ctor": [Function],
-            "index": 0,
-            "name": "role",
+            "index": 1,
+            "name": "part",
             "strings": Array [
               "",
               "",
@@ -52,8 +42,8 @@ $ {
           },
           Object {
             "ctor": [Function],
-            "index": 0,
-            "name": "click",
+            "index": 2,
+            "name": "name",
             "strings": Array [
               "",
               "",
@@ -61,36 +51,76 @@ $ {
             "type": 1,
           },
           Object {
-            "index": 1,
+            "index": 3,
             "type": 2,
           },
           Object {
-            "index": 2,
-            "type": 2,
+            "ctor": [Function],
+            "index": 4,
+            "name": "part",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 5,
+            "name": "name",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
           },
         ],
       },
       "_$AM": [Circular],
       "_$AN": undefined,
       "u": Array [
-        L {
-          "_$AH": "webcl-avatar-container flex items-center justify-center ",
+        R {
+          "_$AH": "[word-wrap: break-word] inline-flex flex-row items-center my-[5px] pt-[4px] pb-[6px] px-[12px]",
           "_$AM": [Circular],
           "_$AN": undefined,
           "element": <div
-            class="webcl-avatar-container flex items-center justify-center "
-            part="webcl-avatar"
-            role="button"
-            style="width: 75px;height: 75px;"
+            class="[word-wrap: break-word] inline-flex flex-row items-center my-[5px] pt-[4px] pb-[6px] px-[12px]"
+            part="webcl-chip"
           >
             
-      
-            <!--?lit$33669318$-->
+        
+            <div
+              class="mr-[6px]"
+              part="webcl-chip-leftSlot"
+            >
+              
+          
+              <slot
+                name=""
+              />
+              
+        
+            </div>
+            
+        
+            <!--?lit$97514775$-->
+            Label
+            
+        
+            <div
+              class="ml-[6px]"
+              part="webcl-chip-rightSlot"
+            >
+              
+          
+              <slot
+                name=""
+              />
+              
+        
+            </div>
             
       
-            <!--?lit$33669318$-->
-            
-    
           </div>,
           "name": "class",
           "options": Object {
@@ -100,51 +130,48 @@ $ {
           },
           "type": 1,
         },
-        L {
-          "_$AH": "width: 75px;height: 75px;",
+        R {
+          "_$AH": "webcl-chip",
           "_$AM": [Circular],
           "_$AN": undefined,
           "element": <div
-            class="webcl-avatar-container flex items-center justify-center "
-            part="webcl-avatar"
-            role="button"
-            style="width: 75px;height: 75px;"
+            class="[word-wrap: break-word] inline-flex flex-row items-center my-[5px] pt-[4px] pb-[6px] px-[12px]"
+            part="webcl-chip"
           >
             
-      
-            <!--?lit$33669318$-->
+        
+            <div
+              class="mr-[6px]"
+              part="webcl-chip-leftSlot"
+            >
+              
+          
+              <slot
+                name=""
+              />
+              
+        
+            </div>
+            
+        
+            <!--?lit$97514775$-->
+            Label
+            
+        
+            <div
+              class="ml-[6px]"
+              part="webcl-chip-rightSlot"
+            >
+              
+          
+              <slot
+                name=""
+              />
+              
+        
+            </div>
             
       
-            <!--?lit$33669318$-->
-            
-    
-          </div>,
-          "name": "style",
-          "options": Object {
-            "host": [Circular],
-            "isConnected": true,
-            "renderBefore": null,
-          },
-          "type": 1,
-        },
-        L {
-          "_$AH": "webcl-avatar",
-          "_$AM": [Circular],
-          "_$AN": undefined,
-          "element": <div
-            class="webcl-avatar-container flex items-center justify-center "
-            part="webcl-avatar"
-            role="button"
-            style="width: 75px;height: 75px;"
-          >
-            
-      
-            <!--?lit$33669318$-->
-            
-      
-            <!--?lit$33669318$-->
-            
-    
           </div>,
           "name": "part",
           "options": Object {
@@ -154,26 +181,23 @@ $ {
           },
           "type": 1,
         },
-        L {
-          "_$AH": "button",
+        R {
+          "_$AH": "webcl-chip-leftSlot",
           "_$AM": [Circular],
           "_$AN": undefined,
           "element": <div
-            class="webcl-avatar-container flex items-center justify-center "
-            part="webcl-avatar"
-            role="button"
-            style="width: 75px;height: 75px;"
+            class="mr-[6px]"
+            part="webcl-chip-leftSlot"
           >
             
-      
-            <!--?lit$33669318$-->
+          
+            <slot
+              name=""
+            />
             
-      
-            <!--?lit$33669318$-->
-            
-    
+        
           </div>,
-          "name": "role",
+          "name": "part",
           "options": Object {
             "host": [Circular],
             "isConnected": true,
@@ -181,62 +205,74 @@ $ {
           },
           "type": 1,
         },
-        Et {
-          "_$AH": Symbol(lit-nothing),
+        R {
+          "_$AH": undefined,
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <slot
+            name=""
+          />,
+          "name": "name",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        U {
+          "_$AA": <!--?lit$97514775$-->,
+          "_$AB": 
+        ,
+          "_$AH": "Label",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "_$Cm": true,
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 2,
+        },
+        R {
+          "_$AH": "webcl-chip-rightSlot",
           "_$AM": [Circular],
           "_$AN": undefined,
           "element": <div
-            class="webcl-avatar-container flex items-center justify-center "
-            part="webcl-avatar"
-            role="button"
-            style="width: 75px;height: 75px;"
+            class="ml-[6px]"
+            part="webcl-chip-rightSlot"
           >
             
-      
-            <!--?lit$33669318$-->
+          
+            <slot
+              name=""
+            />
             
-      
-            <!--?lit$33669318$-->
-            
-    
+        
           </div>,
-          "name": "click",
+          "name": "part",
           "options": Object {
             "host": [Circular],
             "isConnected": true,
             "renderBefore": null,
           },
-          "type": 5,
+          "type": 1,
         },
-        U {
-          "_$AA": <!--?lit$33669318$-->,
-          "_$AB": 
-      ,
-          "_$AH": Symbol(lit-nothing),
+        R {
+          "_$AH": undefined,
           "_$AM": [Circular],
           "_$AN": undefined,
-          "_$Cm": true,
+          "element": <slot
+            name=""
+          />,
+          "name": "name",
           "options": Object {
             "host": [Circular],
             "isConnected": true,
             "renderBefore": null,
           },
-          "type": 2,
-        },
-        U {
-          "_$AA": <!--?lit$33669318$-->,
-          "_$AB": 
-    ,
-          "_$AH": Symbol(lit-nothing),
-          "_$AM": [Circular],
-          "_$AN": undefined,
-          "_$Cm": true,
-          "options": Object {
-            "host": [Circular],
-            "isConnected": true,
-            "renderBefore": null,
-          },
-          "type": 2,
+          "type": 1,
         },
       ],
     },
@@ -250,16 +286,13 @@ $ {
     },
     "type": 2,
   },
-  "_$EC": undefined,
   "_$E_": Promise {},
   "_$Ei": undefined,
   "_$El": null,
-  "__avatarPartAttribute": "webcl-avatar",
-  "__height": 75,
-  "__isRounded": false,
-  "__showDefaultIcon": false,
-  "__usePercentage": false,
-  "__width": 75,
+  "__chipPartAttribute": "webcl-chip",
+  "__leftSlotPartAttribute": "webcl-chip-leftSlot",
+  "__rightSlotPartAttribute": "webcl-chip-rightSlot",
+  "__text": "Label",
   "enableUpdating": [Function],
   "hasUpdated": true,
   "isUpdatePending": false,
@@ -272,24 +305,14 @@ $ {
     "_$litPart$": U {
       "_$AA": <!---->,
       "_$AB": null,
-      "_$AH": gt {
-        "_$AD": O {
+      "_$AH": mt {
+        "_$AD": N {
           "el": <template />,
           "parts": Array [
             Object {
               "ctor": [Function],
               "index": 0,
               "name": "class",
-              "strings": Array [
-                "",
-                "",
-              ],
-              "type": 1,
-            },
-            Object {
-              "ctor": [Function],
-              "index": 0,
-              "name": "style",
               "strings": Array [
                 "",
                 "",
@@ -308,8 +331,8 @@ $ {
             },
             Object {
               "ctor": [Function],
-              "index": 0,
-              "name": "role",
+              "index": 1,
+              "name": "part",
               "strings": Array [
                 "",
                 "",
@@ -318,8 +341,8 @@ $ {
             },
             Object {
               "ctor": [Function],
-              "index": 0,
-              "name": "click",
+              "index": 2,
+              "name": "name",
               "strings": Array [
                 "",
                 "",
@@ -327,36 +350,76 @@ $ {
               "type": 1,
             },
             Object {
-              "index": 1,
+              "index": 3,
               "type": 2,
             },
             Object {
-              "index": 2,
-              "type": 2,
+              "ctor": [Function],
+              "index": 4,
+              "name": "part",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 5,
+              "name": "name",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
             },
           ],
         },
         "_$AM": [Circular],
         "_$AN": undefined,
         "u": Array [
-          L {
-            "_$AH": "webcl-avatar-container flex items-center justify-center ",
+          R {
+            "_$AH": "[word-wrap: break-word] inline-flex flex-row items-center my-[5px] pt-[4px] pb-[6px] px-[12px]",
             "_$AM": [Circular],
             "_$AN": undefined,
             "element": <div
-              class="webcl-avatar-container flex items-center justify-center "
-              part="webcl-avatar"
-              role="button"
-              style="width: 75px;height: 75px;"
+              class="[word-wrap: break-word] inline-flex flex-row items-center my-[5px] pt-[4px] pb-[6px] px-[12px]"
+              part="webcl-chip"
             >
               
-      
-              <!--?lit$33669318$-->
+        
+              <div
+                class="mr-[6px]"
+                part="webcl-chip-leftSlot"
+              >
+                
+          
+                <slot
+                  name=""
+                />
+                
+        
+              </div>
+              
+        
+              <!--?lit$97514775$-->
+              Label
+              
+        
+              <div
+                class="ml-[6px]"
+                part="webcl-chip-rightSlot"
+              >
+                
+          
+                <slot
+                  name=""
+                />
+                
+        
+              </div>
               
       
-              <!--?lit$33669318$-->
-              
-    
             </div>,
             "name": "class",
             "options": Object {
@@ -366,51 +429,48 @@ $ {
             },
             "type": 1,
           },
-          L {
-            "_$AH": "width: 75px;height: 75px;",
+          R {
+            "_$AH": "webcl-chip",
             "_$AM": [Circular],
             "_$AN": undefined,
             "element": <div
-              class="webcl-avatar-container flex items-center justify-center "
-              part="webcl-avatar"
-              role="button"
-              style="width: 75px;height: 75px;"
+              class="[word-wrap: break-word] inline-flex flex-row items-center my-[5px] pt-[4px] pb-[6px] px-[12px]"
+              part="webcl-chip"
             >
               
-      
-              <!--?lit$33669318$-->
+        
+              <div
+                class="mr-[6px]"
+                part="webcl-chip-leftSlot"
+              >
+                
+          
+                <slot
+                  name=""
+                />
+                
+        
+              </div>
+              
+        
+              <!--?lit$97514775$-->
+              Label
+              
+        
+              <div
+                class="ml-[6px]"
+                part="webcl-chip-rightSlot"
+              >
+                
+          
+                <slot
+                  name=""
+                />
+                
+        
+              </div>
               
       
-              <!--?lit$33669318$-->
-              
-    
-            </div>,
-            "name": "style",
-            "options": Object {
-              "host": [Circular],
-              "isConnected": true,
-              "renderBefore": null,
-            },
-            "type": 1,
-          },
-          L {
-            "_$AH": "webcl-avatar",
-            "_$AM": [Circular],
-            "_$AN": undefined,
-            "element": <div
-              class="webcl-avatar-container flex items-center justify-center "
-              part="webcl-avatar"
-              role="button"
-              style="width: 75px;height: 75px;"
-            >
-              
-      
-              <!--?lit$33669318$-->
-              
-      
-              <!--?lit$33669318$-->
-              
-    
             </div>,
             "name": "part",
             "options": Object {
@@ -420,26 +480,23 @@ $ {
             },
             "type": 1,
           },
-          L {
-            "_$AH": "button",
+          R {
+            "_$AH": "webcl-chip-leftSlot",
             "_$AM": [Circular],
             "_$AN": undefined,
             "element": <div
-              class="webcl-avatar-container flex items-center justify-center "
-              part="webcl-avatar"
-              role="button"
-              style="width: 75px;height: 75px;"
+              class="mr-[6px]"
+              part="webcl-chip-leftSlot"
             >
               
-      
-              <!--?lit$33669318$-->
+          
+              <slot
+                name=""
+              />
               
-      
-              <!--?lit$33669318$-->
-              
-    
+        
             </div>,
-            "name": "role",
+            "name": "part",
             "options": Object {
               "host": [Circular],
               "isConnected": true,
@@ -447,62 +504,74 @@ $ {
             },
             "type": 1,
           },
-          Et {
-            "_$AH": Symbol(lit-nothing),
+          R {
+            "_$AH": undefined,
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <slot
+              name=""
+            />,
+            "name": "name",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          U {
+            "_$AA": <!--?lit$97514775$-->,
+            "_$AB": 
+        ,
+            "_$AH": "Label",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "_$Cm": true,
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 2,
+          },
+          R {
+            "_$AH": "webcl-chip-rightSlot",
             "_$AM": [Circular],
             "_$AN": undefined,
             "element": <div
-              class="webcl-avatar-container flex items-center justify-center "
-              part="webcl-avatar"
-              role="button"
-              style="width: 75px;height: 75px;"
+              class="ml-[6px]"
+              part="webcl-chip-rightSlot"
             >
               
-      
-              <!--?lit$33669318$-->
+          
+              <slot
+                name=""
+              />
               
-      
-              <!--?lit$33669318$-->
-              
-    
+        
             </div>,
-            "name": "click",
+            "name": "part",
             "options": Object {
               "host": [Circular],
               "isConnected": true,
               "renderBefore": null,
             },
-            "type": 5,
+            "type": 1,
           },
-          U {
-            "_$AA": <!--?lit$33669318$-->,
-            "_$AB": 
-      ,
-            "_$AH": Symbol(lit-nothing),
+          R {
+            "_$AH": undefined,
             "_$AM": [Circular],
             "_$AN": undefined,
-            "_$Cm": true,
+            "element": <slot
+              name=""
+            />,
+            "name": "name",
             "options": Object {
               "host": [Circular],
               "isConnected": true,
               "renderBefore": null,
             },
-            "type": 2,
-          },
-          U {
-            "_$AA": <!--?lit$33669318$-->,
-            "_$AB": 
-    ,
-            "_$AH": Symbol(lit-nothing),
-            "_$AM": [Circular],
-            "_$AN": undefined,
-            "_$Cm": true,
-            "options": Object {
-              "host": [Circular],
-              "isConnected": true,
-              "renderBefore": null,
-            },
-            "type": 2,
+            "type": 1,
           },
         ],
       },

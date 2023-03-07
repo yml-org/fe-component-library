@@ -1,6 +1,9 @@
 {
-  "name": "button",
+  "name": "@yml-webcl/button",
   "version": "0.0.1",
+  "main": "./src/index.js",
+  "module": "./src/index.js",
+  "type": "module",
   "scripts": {
     "start": "vite dev --host",
     "dev": "vite dev --host",
@@ -22,5 +25,26 @@
   "dependencies": {
     "@lit/localize": "^0.11.4",
     "@lit/localize-tools": "^0.6.5"
-  }
+  },
+  "exports": {
+    ".": {
+      "development": "./src/index.dev.js",
+      "default": "./src/index.js"
+    },
+    "./package.json": "./package.json",
+    "./src/button/button.component.js": {
+      "development": "./src/button/button.component.dev.js",
+      "default": "./src/button/button.component.js"
+    },
+    "./button.component.js": {
+      "development": "./button.component.dev.js",
+      "default": "./button.component.js"
+    }
+  },
+  "types": "./src/index.d.ts",
+  "keywords": [
+    "web components",
+    "lit-element",
+    "lit-html"
+  ]
 }
