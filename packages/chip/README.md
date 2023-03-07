@@ -122,7 +122,7 @@ If you want to contribute or share some thoughts, just get in touch with us.
 
 Enjoy.
 
-# text-area-component
+# chip-component
 
 ## Install
 
@@ -142,7 +142,6 @@ npm i chip-component
 
 ```js
 <template>
- <template>
   <chip-component >
   </chip-component>
 </template>

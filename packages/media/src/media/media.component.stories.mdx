@@ -1,11 +1,8 @@
 import { html } from 'lit';
 import { Story, Meta, Canvas } from '@storybook/addon-docs';
 import './media.component.ts';
-import {
-  mediaProps,
-  houseIcon,
-  bookmarkIcon,
-} from '../constants/media.variants.ts';
+import {mediaProps} from '../constants/media.variants.ts';  
+import { houseIcon, bookmarkIcon} from '../constants/mediaIcons.ts'; 
 import './media.component.scss';
 
 <Meta title="Components/Media" />
@@ -28,14 +25,25 @@ The Media component is a Lit component that renders a media component that is fr
 
 # Examples
 
-Default media component with title prop
+Default Media component 
 
-export const defaultMediaTemplate = ({ mediaTitle }) =>
+export const defaultMediaTemplate = () =>
+  html`<media-component />`;
+
+<Canvas>
+  <Story name="default" >
+    {defaultMediaTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Media component with title prop
+
+export const propMediaTemplate = ({ mediaTitle }) =>
   html`<media-component .mediaTitle=${mediaTitle} />`;
 
 <Canvas>
   <Story name="title" args={mediaProps}>
-    {defaultMediaTemplate.bind({})}
+    {propMediaTemplate.bind({})}
   </Story>
 </Canvas>
 
