@@ -1,6 +1,6 @@
 {
   "name": "textarea",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "scripts": {
     "start": "vite dev --host",
     "dev": "vite dev --host",
