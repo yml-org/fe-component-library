@@ -115,5 +115,14 @@ module.exports = {
       testMatch: ['<rootDir>/packages/text-field/src/**/*.(test|spec).ts'],
       collectCoverageFrom: ['**/*.{js,ts}', '!**/node_modules/**'],
     },
+    {
+      preset: 'ts-jest',
+      runner: 'jest-electron/runner',
+      testEnvironment: 'jest-electron/environment',
+      displayName: 'progress-bar',
+      setupFiles: ['<rootDir>/packages/progress-bar/dist/assets/index.js'],
+      testMatch: ['<rootDir>/packages/progress-bar/src/**/*.(test|spec).ts'],
+      collectCoverageFrom: ['**/*.{js,ts}', '!**/node_modules/**'],
+    },
   ],
 };
