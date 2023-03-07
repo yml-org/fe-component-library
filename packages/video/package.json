@@ -1,6 +1,6 @@
 {
   "name": "video",
-  "version": "1.0.1",
+  "version": "0.0.1",
   "scripts": {
     "start": "vite dev --host",
     "dev": "vite dev --host",

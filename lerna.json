@@ -1,13 +1,18 @@
 {
-  "useWorkspaces": true,
-  "version": "independent",
-  "npmClient": "yarn",
   "packages": ["packages/*"],
+  "version": "independent",
+  "granularPathspec": false,
+  "npmClient": "yarn",
+  "useWorkspaces": true,
   "command": {
     "publish": {
-      "allowBranch": "main",
       "conventionalCommits": true,
-      "ignoreChanges": ["*.md", ".spec.ts", ".stories.ts"]
+      "ignoreChanges": [
+        "**/*.md",
+        "**/tsconfig.json",
+        "**/test/**",
+        "**/stories/**"
+      ]
     }
   }
 }
