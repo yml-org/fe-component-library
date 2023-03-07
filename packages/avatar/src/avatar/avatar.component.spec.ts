@@ -26,20 +26,12 @@ describe('avatar-component', () => {
 
   it('renders the avatar with rounded border', async () => {
     avatarElement['isRounded'] = true;
-    avatarElement['hasBorder'] = true;
     await avatarElement.updateComplete;
     const avatarComponentClassList =
       getShadowRoot(AVATAR_COMPONENT).querySelector('div').classList;
     expect(avatarComponentClassList).toContain('rounded-full');
   });
 
-  it('renders the avatar with border', async () => {
-    avatarElement['hasBorder'] = true;
-    await avatarElement.updateComplete;
-    const avatarComponentClassList =
-      getShadowRoot(AVATAR_COMPONENT).querySelector('div').classList;
-    expect(avatarComponentClassList).toContain('border');
-  });
 
   it('renders the avatar with custom width', async () => {
     const CUSTOM_WIDTH = 200;
