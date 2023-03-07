@@ -1,0 +1,10 @@
+.parent-container {
+    chip-component::part(customizeChip) {
+        background-color: grey;
+        color: black;
+        font-weight: 600;
+        font-size: 20px;
+        border: 2px solid black;
+        border-radius: 24px;
+    }
+}

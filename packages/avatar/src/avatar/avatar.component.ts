@@ -14,30 +14,18 @@ export class AvatarComponent extends TailwindElement(null) {
   @property()
   usePercentage?: boolean = false;
   @property()
-  hasBorder?: boolean = false;
-  @property()
-  borderColor?: string = 'slate-200';
-  @property()
-  defaultBgColor?: string;
-  @property()
   slotName?: string;
   @property()
   onAvatarClick?: () => void;
   @property()
-  hasShadow?: boolean = false;
-  @property()
   showDefaultIcon?: boolean = false;
   @property()
   defaultImage?: string;
+  @property()
+  avatarPartAttribute?: string = 'webcl-avatar';
 
   protected getContainerClassList() {
-    const { isRounded, hasBorder, borderColor, hasShadow, defaultBgColor } =
-      this;
-    return `webcl-avatar-container flex items-center justify-center ${
-      defaultBgColor || ''
-    } ${isRounded ? 'rounded-full' : ''} ${
-      hasBorder ? `border border-${borderColor}` : ''
-    } ${hasShadow ? 'shadow' : ''}`.trim();
+    return `webcl-avatar-container flex items-center justify-center ${this.isRounded ? 'rounded-full' : ''}`;
   }
   protected getContainerDimensions() {
     const { width, height, usePercentage } = this;
@@ -61,7 +49,7 @@ export class AvatarComponent extends TailwindElement(null) {
     return html`<div
       class=${this.getContainerClassList()}
       style=${this.getContainerDimensions()}
-      part="webcl-avatar"
+      part=${this.avatarPartAttribute}
       role=${msg(str`button`)}
       @click=${this.onAvatarClick}
     >

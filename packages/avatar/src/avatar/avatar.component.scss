@@ -1,3 +1,8 @@
+.rounded-avatar {
+  avatar-component::part(webcl-avatar) {
+    background-color: black;
+  }
+}
 .parent-container {
   avatar-component::part(webcl-avatar) {
     background-color: black;
