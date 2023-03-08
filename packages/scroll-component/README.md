@@ -122,16 +122,16 @@ If you want to contribute or share some thoughts, just get in touch with us.
 
 Enjoy.
 
-# Scroll Component
+# ymlwebcl-scroll
 
 ## Install
 
 ```bash
-yarn add scroll-component
+yarn add ymlwebcl-scroll
 ```
 
 ```bash
-npm i scroll-component
+npm i ymlwebcl-scroll
 ```
 
 ## Usage
@@ -142,11 +142,11 @@ npm i scroll-component
 
 ```js
 <template>
-  <scroll-component
+  <ymlwebcl-scroll
     :desktopImages="desktopImages"
     :mobileImages="mobileImages"
   >
-  </scroll-component>
+  </ymlwebcl-scroll>
 </template>
 
 <script >
@@ -178,7 +178,7 @@ export default {
 
 ```js
 <template>
-  <scroll-component
+  <ymlwebcl-scroll
     :dataSlot="dataSlot"
     :desktopImages="desktopImages"
     :mobileImages="mobileImages"
@@ -190,7 +190,7 @@ export default {
     <div slot="slot2">
       <h5>OUR LIGHTEST BOTTLE YET</h5>
     </div>
-  </scroll-component>
+  </ymlwebcl-scroll>
   <router-view />
 </template>
 
@@ -247,7 +247,7 @@ npm i reactify-wc
 import reactifyWc from "reactify-wc";
 
 function App() {
-  const ScrollComponent = reactifyWc("scroll-component");
+  const ScrollComponent = reactifyWc("ymlwebcl-scroll");
 
   const desktopImages = {
     "desktopImage-1": require("./assets/desktop/desktopImage-1.avif"),
@@ -278,7 +278,7 @@ export default App;
 import reactifyWc from "reactify-wc";
 
 function App() {
-  const ScrollComponent = reactifyWc("scroll-component");
+  const ScrollComponent = reactifyWc("ymlwebcl-scroll");
 
   const desktopImages = {
     "desktopImage-1": require("./assets/desktop/desktopImage-1.avif"),
@@ -333,13 +333,13 @@ Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/::part
 ```style.scss
 //The ::part CSS pseudo-element represents any element within a shadow tree that has a matching part attribute.
 
-scroll-component::part(slot1){ /*Note : scroll-component is the custom component and slot1 is the name given to the the part attribute in element within scroll-component by the user in the dataSlot slotName */
+ymlwebcl-scroll::part(slot1){ /*Note : ymlwebcl-scroll is the custom component and slot1 is the name given to the the part attribute in element within ymlwebcl-scroll by the user in the dataSlot slotName */
 font-size: 50px;
 top: 25vh;
 //add css properties
  }
 
-scroll-component::part(slot2){
+ymlwebcl-scroll::part(slot2){
   font-size: 40px;
   top: 70vh;
 }

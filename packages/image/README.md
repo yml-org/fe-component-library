@@ -124,16 +124,16 @@ Enjoy.
 
 
 
-# image-component
+# ymlwebcl-image
 
 ## Install
 
 ```bash
-yarn add image-component
+yarn add ymlwebcl-image
 ```
 
 ```bash
-npm i image-component
+npm i ymlwebcl-image
 ```
 
 ## Usage
@@ -144,8 +144,8 @@ npm i image-component
 
 ```js
 <template>
-  <image-component :src="src">    
-  </image-component>
+  <ymlwebcl-image :src="src">    
+  </ymlwebcl-image>
 </template>
 
 <script>
@@ -165,13 +165,13 @@ export default {
 
 ```js
 <template>
-  <image-component
+  <ymlwebcl-image
     :src="src"
     :altText="altText"
     :placeholderImg="placeholderImg"
     :size="size"
   >
-  </image-component>
+  </ymlwebcl-image>
   <router-view />
 </template>
 
@@ -216,7 +216,7 @@ npm i reactify-wc
 import reactifyWc from "reactify-wc";
 
 function App() {
-  const ImageComponent = reactifyWc("image-component");
+  const ImageComponent = reactifyWc("ymlwebcl-image");
   return (
     <div className="App">
       <ImageComponent 
@@ -233,7 +233,7 @@ import reactifyWc from "reactify-wc";
 import "./index.css";
 
 function App() {
-  const ImageComponent = reactifyWc("image-component");
+  const ImageComponent = reactifyWc("ymlwebcl-image");
   const size = {
     width: "500px",
     height: "500px",
@@ -270,7 +270,7 @@ Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/::part
 
 ```style.scss
 //The ::part CSS pseudo-element represents any element within a shadow tree that has a matching part attribute.
-image-component::part(custom-image) { /*Note : image-component is the custom component and custom-image is the name given to the the part attribute for 'img' tag within image-components */
+ymlwebcl-image::part(custom-image) { /*Note : ymlwebcl-image is the custom component and custom-image is the name given to the the part attribute for 'img' tag within ymlwebcl-images */
 border: 5px solid red;
 //add css properties
  }
