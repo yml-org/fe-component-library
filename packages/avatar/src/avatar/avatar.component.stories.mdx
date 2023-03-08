@@ -33,11 +33,10 @@ The Avatar component is a Lit component that renders an avatar component that is
 
 Avatar component with rounded border with custom background
 
-export const roundedBorderTemplate = ({ isRounded, defaultBgColor }) =>
-  html`<ymlwebcl-avatar
-    .isRounded=${isRounded}
-    .defaultBgColor=${defaultBgColor}
-  ></ymlwebcl-avatar>`;
+export const roundedBorderTemplate = ({ isRounded }) =>
+  html`<div class="rounded-avatar">
+    <ymlwebcl-avatar .isRounded=${isRounded}></ymlwebcl-avatar>
+  </div>`;
 
 <Canvas>
   <Story name="rounded border" args={roundedVariant}>
@@ -129,18 +128,8 @@ export const withShadowTemplate = ({
 
 Avatar component with slot and custom children
 
-export const withSlotAndChildrenTemplate = ({
-  isRounded,
-  hasBorder,
-  hasShadow,
-  slotName,
-}) =>
-  html`<ymlwebcl-avatar
-    .slotName=${slotName}
-    .isRounded=${isRounded}
-    .hasBorder=${hasBorder}
-    .hasShadow=${hasShadow}
-  >
+export const withSlotAndChildrenTemplate = ({ isRounded, slotName }) =>
+  html`<ymlwebcl-avatar .slotName=${slotName} .isRounded=${isRounded}>
     <div slot=${slotName}>${'YML'.charAt(0)}</div>
   </ymlwebcl-avatar>`;
 
@@ -154,12 +143,7 @@ Avatar component with custom styling
 
 export const withCustomStylingTemplate = ({ isRounded, slotName }) =>
   html` <div class="parent-container">
-    <ymlwebcl-avatar
-      .slotName=${slotName}
-      .isRounded=${isRounded}
-      .hasBorder=${hasBorder}
-      .hasShadow=${hasShadow}
-    >
+    <ymlwebcl-avatar .slotName=${slotName} .isRounded=${isRounded}>
       <div slot=${slotName}>
         <span> ${'YML'.charAt(0)}</span>
       </div>

@@ -122,16 +122,16 @@ If you want to contribute or share some thoughts, just get in touch with us.
 
 Enjoy.
 
-# chip-component
+# ymlwebcl-chip
 
 ## Install
 
 ```bash
-yarn add chip-component
+yarn add ymlwebcl-chip
 ```
 
 ```bash
-npm i chip-component
+npm i ymlwebcl-chip
 ```
 
 ## Usage
@@ -142,8 +142,9 @@ npm i chip-component
 
 ```js
 <template>
-  <chip-component >
-  </chip-component>
+ <template>
+  <ymlwebcl-chip >
+  </ymlwebcl-chip>
 </template>
 
 <script>
@@ -162,8 +163,8 @@ export default {
 
 ```js
  <template>
-  <chip-component text="Chip Component" >
-  </chip-component>
+  <ymlwebcl-chip text="Chip Component" >
+  </ymlwebcl-chip>
 </template>
 
 <script>
@@ -182,10 +183,10 @@ export default {
 
 ```js
  <template>
-  <chip-component text="Chip Component" rightSlotName = "rightSlot" leftSlotName = "leftSlot">
+  <ymlwebcl-chip text="Chip Component" rightSlotName = "rightSlot" leftSlotName = "leftSlot">
     <div slot="rightSlot"> Right Slot Element</div>
     <div slot="leftSlot"> Left Slot Element</div>
-  </chip-component>
+  </ymlwebcl-chip>
 </template>
 
 <script>
@@ -213,7 +214,7 @@ npm i reactify-wc
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const ChipComponent = reactifyWc("chip-component");
+  const ChipComponent = reactifyWc("ymlwebcl-chip");
 
   return (
     <div className="App">
@@ -228,7 +229,7 @@ export default App;
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const ChipComponent = reactifyWc("chip-component");
+  const ChipComponent = reactifyWc("ymlwebcl-chip");
 
   return (
     <div className="App">
@@ -243,7 +244,7 @@ export default App;
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const ChipComponent = reactifyWc("chip-component");
+  const ChipComponent = reactifyWc("ymlwebcl-chip");
 
   return (
     <div className="App">
@@ -264,7 +265,7 @@ Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/::part
 ```style.scss
 //The ::part CSS pseudo-element represents any element within a shadow tree that has a matching part attribute.
 
-chip-component::part(webcl-chip) { /*Note : chip-component is the custom component and webcl-chip is the name given to the the part attribute in element within chip-component */
+ymlwebcl-chip::part(webcl-chip) { /*Note : ymlwebcl-chip is the custom component and webcl-chip is the name given to the the part attribute in element within ymlwebcl-chip */
  border: 2px solid black;
  border-radius: 12px;
 //add css properties

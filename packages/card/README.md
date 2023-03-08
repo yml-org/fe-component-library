@@ -122,16 +122,16 @@ If you want to contribute or share some thoughts, just get in touch with us.
 
 Enjoy.
 
-# button-component
+# ymlwebcl-card
 
 ## Install
 
 ```bash
-yarn add card-component
+yarn add ymlwebcl-card
 ```
 
 ```bash
-npm i card-component
+npm i ymlwebcl-card
 ```
 
 ## Usage
@@ -142,8 +142,8 @@ npm i card-component
 
 ```js
 <template>
-  <card-component hasRoundedBorder={true}>
-  </card-component>
+  <ymlwebcl-card hasRoundedBorder={true}>
+  </ymlwebcl-card>
 </template>
 
 <script>
@@ -162,9 +162,9 @@ export default {
 
 ```js
 <template>
-  <card-component
+  <ymlwebcl-card
    :hasRoundedBorder="true"
-  ></card-component>
+  ></ymlwebcl-card>
 </template>
 
 <script>
@@ -183,7 +183,7 @@ export default {
 
 ```js
 <template>
-  <card-component
+  <ymlwebcl-card
   >
     <div slot="webcl-card-content">
       <p>Add any Slot Elements</p>
@@ -193,7 +193,7 @@ export default {
         alt=""
       />
     </div>
-  </card-component>
+  </ymlwebcl-card>
 </template>
 
 <script>
@@ -220,7 +220,7 @@ npm i reactify-wc
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const CardComponent = reactifyWc("card-component");
+  const CardComponent = reactifyWc("ymlwebcl-card");
   return (
     <div className="App">
       <CardComponent />
@@ -234,7 +234,7 @@ export default App;
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-const CardComponent = reactifyWc("card-component");
+const CardComponent = reactifyWc("ymlwebcl-card");
   return (
     <div className="App">
       <CardComponent
@@ -250,7 +250,7 @@ export default App;
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-const CardComponent = reactifyWc("card-component");
+const CardComponent = reactifyWc("ymlwebcl-card");
   return (
     <div className="App">
       <CardComponent
@@ -278,7 +278,7 @@ Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/::part
 ```style.scss
 //The ::part CSS pseudo-element represents any element within a shadow tree that has a matching part attribute.
 
-card-component::part(webcl-card-container) { /*Note : card-component is the custom component and webcl-card-container is the name given to the the part attribute in element within card-component */
+ymlwebcl-card::part(webcl-card-container) { /*Note : ymlwebcl-card is the custom component and webcl-card-container is the name given to the the part attribute in element within ymlwebcl-card */
 background-color: yellow;
 color:black;
 //add css properties
