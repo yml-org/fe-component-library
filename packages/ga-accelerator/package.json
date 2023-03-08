@@ -1,6 +1,6 @@
 {
   "name": "@yml-webcl/ga-accelerator",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "start": "vite dev --host",
     "dev": "vite dev --host",

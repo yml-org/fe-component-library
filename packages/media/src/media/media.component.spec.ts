@@ -1,15 +1,17 @@
-import { LitElement } from 'lit-element';
+import { MediaComponent } from './media.component';
 import { mediaProps } from '../constants/media.variants';
 
-describe('media-component', () => {
-  const MEDIA_COMPONENT = 'media-component';
-  let mediaElement: LitElement;
+describe('ymlwebcl-media', () => {
+  const MEDIA_COMPONENT = 'ymlwebcl-media';
+  let mediaElement: MediaComponent;
 
-  const getShadowRoot = (tagName: string): ShadowRoot =>
+  const getShadowRoot = (tagName: string): ShadowRoot | null =>
     document.body.getElementsByTagName(tagName)[0].shadowRoot;
 
   beforeEach(() => {
-    mediaElement = window.document.createElement(MEDIA_COMPONENT) as LitElement;
+    mediaElement = window.document.createElement(
+      MEDIA_COMPONENT
+    ) as MediaComponent;
     document.body.appendChild(mediaElement);
   });
 
@@ -59,7 +61,7 @@ describe('media-component', () => {
       .querySelector('div');
     expect(elem.getAttribute('part')).toBe(mediaProps.titlePartAttribute);
   });
-  
+
   it('renders the slot elements correctly', async () => {
     getShadowRoot(MEDIA_COMPONENT)
       .querySelector('div')
