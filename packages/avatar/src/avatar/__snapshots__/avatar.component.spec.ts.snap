@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ymlwebcl-avatar matches component snapshot 1`] = `
-p {
+$ {
   "_$AL": Map {},
   "_$Do": U {
     "_$AA": <!---->,
