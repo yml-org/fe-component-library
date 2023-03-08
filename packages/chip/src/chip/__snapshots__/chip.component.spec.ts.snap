@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`chip-component matches component snapshot 1`] = `
-v {
+exports[`ymlwebcl-chip matches component snapshot 1`] = `
+S {
   "_$AL": Map {},
-  "_$Do": U {
+  "_$Do": N {
     "_$AA": <!---->,
     "_$AB": null,
     "_$AH": mt {
-      "_$AD": N {
+      "_$AD": P {
         "el": <template />,
         "parts": Array [
           Object {
@@ -33,16 +33,6 @@ v {
           Object {
             "ctor": [Function],
             "index": 1,
-            "name": "part",
-            "strings": Array [
-              "",
-              "",
-            ],
-            "type": 1,
-          },
-          Object {
-            "ctor": [Function],
-            "index": 2,
             "name": "name",
             "strings": Array [
               "",
@@ -51,22 +41,12 @@ v {
             "type": 1,
           },
           Object {
-            "index": 3,
+            "index": 2,
             "type": 2,
           },
           Object {
             "ctor": [Function],
-            "index": 4,
-            "name": "part",
-            "strings": Array [
-              "",
-              "",
-            ],
-            "type": 1,
-          },
-          Object {
-            "ctor": [Function],
-            "index": 5,
+            "index": 3,
             "name": "name",
             "strings": Array [
               "",
@@ -79,7 +59,7 @@ v {
       "_$AM": [Circular],
       "_$AN": undefined,
       "u": Array [
-        R {
+        L {
           "_$AH": "[word-wrap: break-word] inline-flex flex-row items-center my-[5px] pt-[4px] pb-[6px] px-[12px]",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -89,36 +69,18 @@ v {
           >
             
         
-            <div
-              class="mr-[6px]"
-              part="webcl-chip-leftSlot"
-            >
-              
-          
-              <slot
-                name=""
-              />
-              
-        
-            </div>
+            <slot
+              name=""
+            />
             
         
-            <!--?lit$97514775$-->
+            <!--?lit$386367457$-->
             Label
             
         
-            <div
-              class="ml-[6px]"
-              part="webcl-chip-rightSlot"
-            >
-              
-          
-              <slot
-                name=""
-              />
-              
-        
-            </div>
+            <slot
+              name=""
+            />
             
       
           </div>,
@@ -130,7 +92,7 @@ v {
           },
           "type": 1,
         },
-        R {
+        L {
           "_$AH": "webcl-chip",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -140,36 +102,18 @@ v {
           >
             
         
-            <div
-              class="mr-[6px]"
-              part="webcl-chip-leftSlot"
-            >
-              
-          
-              <slot
-                name=""
-              />
-              
-        
-            </div>
+            <slot
+              name=""
+            />
             
         
-            <!--?lit$97514775$-->
+            <!--?lit$386367457$-->
             Label
             
         
-            <div
-              class="ml-[6px]"
-              part="webcl-chip-rightSlot"
-            >
-              
-          
-              <slot
-                name=""
-              />
-              
-        
-            </div>
+            <slot
+              name=""
+            />
             
       
           </div>,
@@ -181,31 +125,7 @@ v {
           },
           "type": 1,
         },
-        R {
-          "_$AH": "webcl-chip-leftSlot",
-          "_$AM": [Circular],
-          "_$AN": undefined,
-          "element": <div
-            class="mr-[6px]"
-            part="webcl-chip-leftSlot"
-          >
-            
-          
-            <slot
-              name=""
-            />
-            
-        
-          </div>,
-          "name": "part",
-          "options": Object {
-            "host": [Circular],
-            "isConnected": true,
-            "renderBefore": null,
-          },
-          "type": 1,
-        },
-        R {
+        L {
           "_$AH": undefined,
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -220,8 +140,8 @@ v {
           },
           "type": 1,
         },
-        U {
-          "_$AA": <!--?lit$97514775$-->,
+        N {
+          "_$AA": <!--?lit$386367457$-->,
           "_$AB": 
         ,
           "_$AH": "Label",
@@ -235,31 +155,7 @@ v {
           },
           "type": 2,
         },
-        R {
-          "_$AH": "webcl-chip-rightSlot",
-          "_$AM": [Circular],
-          "_$AN": undefined,
-          "element": <div
-            class="ml-[6px]"
-            part="webcl-chip-rightSlot"
-          >
-            
-          
-            <slot
-              name=""
-            />
-            
-        
-          </div>,
-          "name": "part",
-          "options": Object {
-            "host": [Circular],
-            "isConnected": true,
-            "renderBefore": null,
-          },
-          "type": 1,
-        },
-        R {
+        L {
           "_$AH": undefined,
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -286,12 +182,11 @@ v {
     },
     "type": 2,
   },
+  "_$EC": undefined,
   "_$E_": Promise {},
   "_$Ei": undefined,
   "_$El": null,
   "__chipPartAttribute": "webcl-chip",
-  "__leftSlotPartAttribute": "webcl-chip-leftSlot",
-  "__rightSlotPartAttribute": "webcl-chip-rightSlot",
   "__text": "Label",
   "enableUpdating": [Function],
   "hasUpdated": true,
@@ -302,11 +197,11 @@ v {
     "renderBefore": null,
   },
   "renderRoot": ShadowRoot {
-    "_$litPart$": U {
+    "_$litPart$": N {
       "_$AA": <!---->,
       "_$AB": null,
       "_$AH": mt {
-        "_$AD": N {
+        "_$AD": P {
           "el": <template />,
           "parts": Array [
             Object {
@@ -332,16 +227,6 @@ v {
             Object {
               "ctor": [Function],
               "index": 1,
-              "name": "part",
-              "strings": Array [
-                "",
-                "",
-              ],
-              "type": 1,
-            },
-            Object {
-              "ctor": [Function],
-              "index": 2,
               "name": "name",
               "strings": Array [
                 "",
@@ -350,22 +235,12 @@ v {
               "type": 1,
             },
             Object {
-              "index": 3,
+              "index": 2,
               "type": 2,
             },
             Object {
               "ctor": [Function],
-              "index": 4,
-              "name": "part",
-              "strings": Array [
-                "",
-                "",
-              ],
-              "type": 1,
-            },
-            Object {
-              "ctor": [Function],
-              "index": 5,
+              "index": 3,
               "name": "name",
               "strings": Array [
                 "",
@@ -378,7 +253,7 @@ v {
         "_$AM": [Circular],
         "_$AN": undefined,
         "u": Array [
-          R {
+          L {
             "_$AH": "[word-wrap: break-word] inline-flex flex-row items-center my-[5px] pt-[4px] pb-[6px] px-[12px]",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -388,36 +263,18 @@ v {
             >
               
         
-              <div
-                class="mr-[6px]"
-                part="webcl-chip-leftSlot"
-              >
-                
-          
-                <slot
-                  name=""
-                />
-                
-        
-              </div>
+              <slot
+                name=""
+              />
               
         
-              <!--?lit$97514775$-->
+              <!--?lit$386367457$-->
               Label
               
         
-              <div
-                class="ml-[6px]"
-                part="webcl-chip-rightSlot"
-              >
-                
-          
-                <slot
-                  name=""
-                />
-                
-        
-              </div>
+              <slot
+                name=""
+              />
               
       
             </div>,
@@ -429,7 +286,7 @@ v {
             },
             "type": 1,
           },
-          R {
+          L {
             "_$AH": "webcl-chip",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -439,36 +296,18 @@ v {
             >
               
         
-              <div
-                class="mr-[6px]"
-                part="webcl-chip-leftSlot"
-              >
-                
-          
-                <slot
-                  name=""
-                />
-                
-        
-              </div>
+              <slot
+                name=""
+              />
               
         
-              <!--?lit$97514775$-->
+              <!--?lit$386367457$-->
               Label
               
         
-              <div
-                class="ml-[6px]"
-                part="webcl-chip-rightSlot"
-              >
-                
-          
-                <slot
-                  name=""
-                />
-                
-        
-              </div>
+              <slot
+                name=""
+              />
               
       
             </div>,
@@ -480,31 +319,7 @@ v {
             },
             "type": 1,
           },
-          R {
-            "_$AH": "webcl-chip-leftSlot",
-            "_$AM": [Circular],
-            "_$AN": undefined,
-            "element": <div
-              class="mr-[6px]"
-              part="webcl-chip-leftSlot"
-            >
-              
-          
-              <slot
-                name=""
-              />
-              
-        
-            </div>,
-            "name": "part",
-            "options": Object {
-              "host": [Circular],
-              "isConnected": true,
-              "renderBefore": null,
-            },
-            "type": 1,
-          },
-          R {
+          L {
             "_$AH": undefined,
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -519,8 +334,8 @@ v {
             },
             "type": 1,
           },
-          U {
-            "_$AA": <!--?lit$97514775$-->,
+          N {
+            "_$AA": <!--?lit$386367457$-->,
             "_$AB": 
         ,
             "_$AH": "Label",
@@ -534,31 +349,7 @@ v {
             },
             "type": 2,
           },
-          R {
-            "_$AH": "webcl-chip-rightSlot",
-            "_$AM": [Circular],
-            "_$AN": undefined,
-            "element": <div
-              class="ml-[6px]"
-              part="webcl-chip-rightSlot"
-            >
-              
-          
-              <slot
-                name=""
-              />
-              
-        
-            </div>,
-            "name": "part",
-            "options": Object {
-              "host": [Circular],
-              "isConnected": true,
-              "renderBefore": null,
-            },
-            "type": 1,
-          },
-          R {
+          L {
             "_$AH": undefined,
             "_$AM": [Circular],
             "_$AN": undefined,

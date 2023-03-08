@@ -12,19 +12,18 @@ The Chip component is a Lit component that renders a chip component that is fram
 
 # Props
 
-| Prop Name              | Type   | Description                                                                                   |
-| ---------------------- | ------ | --------------------------------------------------------------------------------------------- |
-| text                   | string | text within the chip component                                                                |
-| chipPartAttribute      | string | The part name for chip component                                                              |
-| rightSlotName          | string | Name given to slot that renders an HTMLElement on the right of the text within chip component |
-| leftSlotName           | string | Name given to slot that renders an HTMLElement on the left of the text within chip component  |
+| Prop Name         | Type   | Description                                                                                   |
+| ----------------- | ------ | --------------------------------------------------------------------------------------------- |
+| text              | string | text within the chip component                                                                |
+| chipPartAttribute | string | The part name for chip component                                                              |
+| rightSlotName     | string | Name given to slot that renders an HTMLElement on the right of the text within chip component |
+| leftSlotName      | string | Name given to slot that renders an HTMLElement on the left of the text within chip component  |
 
 # Examples
 
 Default Chip Component
 
-export const defaultChipTemplate = () =>
-  html`<chip-component></chip-component>`;
+export const defaultChipTemplate = () => html`<ymlwebcl-chip></ymlwebcl-chip>`;
 
 <Canvas>
   <Story name="default chip">{defaultChipTemplate.bind({})}</Story>
@@ -33,7 +32,7 @@ export const defaultChipTemplate = () =>
 Chip Component with text prop
 
 export const textTemplate = ({ text }) =>
-  html`<chip-component .text=${text}></chip-component>`;
+  html`<ymlwebcl-chip .text=${text}></ymlwebcl-chip>`;
 
 <Canvas>
   <Story name="text prop" args={withTextProp}>
@@ -41,14 +40,11 @@ export const textTemplate = ({ text }) =>
   </Story>
 </Canvas>
 
-
 Chip Component with right slot element
 
 export const chipRightSlotTemplate = ({ rightSlotName }) =>
-  html`<chip-component
-    .rightSlotName=${rightSlotName}
-  >
-   <div slot=${rightSlotName}>
+  html`<ymlwebcl-chip .rightSlotName=${rightSlotName}>
+    <div slot=${rightSlotName}>
       <svg
         width="20px"
         height="20px"
@@ -81,9 +77,10 @@ export const chipRightSlotTemplate = ({ rightSlotName }) =>
         </g>
       </svg>
     </div>
-  </chip-component>`;
+  </ymlwebcl-chip>`;
 
-  <Canvas>
+{' '}
+<Canvas>
   <Story name="chip with right slot" args={withSlot}>
     {chipRightSlotTemplate.bind({})}
   </Story>
@@ -92,9 +89,7 @@ export const chipRightSlotTemplate = ({ rightSlotName }) =>
 Chip Component with left slot element
 
 export const chipLeftSlotTemplate = ({ leftSlotName }) =>
-  html`<chip-component
-    .leftSlotName=${leftSlotName}
-  >
+  html`<ymlwebcl-chip .leftSlotName=${leftSlotName}>
     <div slot=${leftSlotName}>
       <svg
         width="20px"
@@ -112,9 +107,10 @@ export const chipLeftSlotTemplate = ({ leftSlotName }) =>
         />
       </svg>
     </div>
-  </chip-component>`;
+  </ymlwebcl-chip>`;
 
-  <Canvas>
+{' '}
+<Canvas>
   <Story name="chip with left slot" args={withSlot}>
     {chipLeftSlotTemplate.bind({})}
   </Story>
@@ -123,7 +119,7 @@ export const chipLeftSlotTemplate = ({ leftSlotName }) =>
 Chip Component with slot elements
 
 export const chipSlotTemplate = ({ rightSlotName, leftSlotName }) =>
-  html`<chip-component
+  html`<ymlwebcl-chip
     .rightSlotName=${rightSlotName}
     .leftSlotName=${leftSlotName}
   >
@@ -177,7 +173,7 @@ export const chipSlotTemplate = ({ rightSlotName, leftSlotName }) =>
         />
       </svg>
     </div>
-  </chip-component>`;
+  </ymlwebcl-chip>`;
 
 <Canvas>
   <Story name="chip with slot" args={withSlot}>
@@ -189,7 +185,7 @@ Customized Chip Component
 
 export const withCustomStylingTemplate = ({ chipPartAttribute }) =>
   html` <div class="parent-container">
-    <chip-component .chipPartAttribute=${chipPartAttribute}> </chip-component>
+    <ymlwebcl-chip .chipPartAttribute=${chipPartAttribute}> </ymlwebcl-chip>
   </div>`;
 
 <Canvas>
@@ -206,7 +202,7 @@ export const withSlotCustomStylingTemplate = ({
   chipPartAttribute,
 }) =>
   html` <div class="parent-container">
-    <chip-component
+    <ymlwebcl-chip
       .rightSlotName=${rightSlotName}
       .leftSlotName=${leftSlotName}
       .chipPartAttribute=${chipPartAttribute}
@@ -244,7 +240,7 @@ export const withSlotCustomStylingTemplate = ({
           </g>
         </svg>
       </div>
-      <div  style="margin-right:25px" slot=${leftSlotName}>
+      <div style="margin-right:25px" slot=${leftSlotName}>
         <svg
           width="20px"
           height="20px"
@@ -261,7 +257,7 @@ export const withSlotCustomStylingTemplate = ({
           />
         </svg>
       </div>
-    </chip-component>
+    </ymlwebcl-chip>
   </div>`;
 
 <Canvas>
