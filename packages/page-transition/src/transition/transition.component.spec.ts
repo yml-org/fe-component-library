@@ -70,7 +70,7 @@ describe('ymlwebcl-transition', () => {
     document.body.getElementsByTagName(TRANSITION_COMPONENT)[0].remove();
     transitionElement = window.document.createElement(
       TRANSITION_COMPONENT
-    ) as LitElement;
+    ) as TransitionComponent;
     transitionElement['componentArray'] = ['mySlot1', 'mySlot2'];
     transitionElement.setAttribute('animationDuration', '3');
     await window.document.body.appendChild(transitionElement);
@@ -83,7 +83,7 @@ describe('ymlwebcl-transition', () => {
     document.body.getElementsByTagName(TRANSITION_COMPONENT)[0].remove();
     transitionElement = window.document.createElement(
       TRANSITION_COMPONENT
-    ) as LitElement;
+    ) as TransitionComponent;
     transitionElement['componentArray'] = ['mySlot1', 'mySlot2'];
     transitionElement.setAttribute('animationDelay', '2');
     await window.document.body.appendChild(transitionElement);
