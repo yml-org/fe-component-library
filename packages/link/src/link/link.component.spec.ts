@@ -79,10 +79,10 @@ describe('ymlwebcl-link', () => {
   it('renders the component passed in slot', async () => {
     linkElement.setAttribute('slotName', linkConfigSlot?.slotName);
     window.document.body.appendChild(linkElement);
-    document.querySelector('link-component').innerHTML =
+    document.querySelector('ymlwebcl-link').innerHTML =
       '<p slot="bell" class="slot-test">Test</p>';
     await linkElement.updateComplete;
-    const elem = document.querySelector('link-component').querySelector('p');
+    const elem = document.querySelector('ymlwebcl-link').querySelector('p');
     expect(elem.classList.contains('slot-test')).toBe(true);
   });
 });

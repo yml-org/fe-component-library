@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`media-component matches component snapshot 1`] = `
+exports[`ymlwebcl-media matches component snapshot 1`] = `
 v {
   "_$AL": Map {},
-  "_$Do": T {
+  "_$Do": O {
     "_$AA": <!---->,
     "_$AB": null,
-    "_$AH": gt {
+    "_$AH": mt {
       "_$AD": N {
         "el": <template />,
         "parts": Array [
@@ -79,7 +79,7 @@ v {
       "_$AM": [Circular],
       "_$AN": undefined,
       "u": Array [
-        R {
+        L {
           "_$AH": "webcl-media",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -105,8 +105,12 @@ v {
                 
           
                 <p>
-                  <!--?lit$695546061$-->
+                  
+            
+                  <!--?lit$419653849$-->
                   Title
+                  
+          
                 </p>
                 
         
@@ -135,7 +139,7 @@ v {
           },
           "type": 1,
         },
-        R {
+        L {
           "_$AH": undefined,
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -150,7 +154,7 @@ v {
           },
           "type": 1,
         },
-        R {
+        L {
           "_$AH": "media-text-container",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -165,8 +169,12 @@ v {
               
           
               <p>
-                <!--?lit$695546061$-->
+                
+            
+                <!--?lit$419653849$-->
                 Title
+                
+          
               </p>
               
         
@@ -187,7 +195,7 @@ v {
           },
           "type": 1,
         },
-        R {
+        L {
           "_$AH": "media-title-container",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -197,8 +205,12 @@ v {
             
           
             <p>
-              <!--?lit$695546061$-->
+              
+            
+              <!--?lit$419653849$-->
               Title
+              
+          
             </p>
             
         
@@ -211,9 +223,10 @@ v {
           },
           "type": 1,
         },
-        T {
-          "_$AA": <!--?lit$695546061$-->,
-          "_$AB": null,
+        O {
+          "_$AA": <!--?lit$419653849$-->,
+          "_$AB": 
+          ,
           "_$AH": "Title",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -225,7 +238,7 @@ v {
           },
           "type": 2,
         },
-        R {
+        L {
           "_$AH": undefined,
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -240,7 +253,7 @@ v {
           },
           "type": 1,
         },
-        R {
+        L {
           "_$AH": undefined,
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -267,6 +280,7 @@ v {
     },
     "type": 2,
   },
+  "_$EC": undefined,
   "_$E_": Promise {},
   "_$Ei": undefined,
   "_$El": null,
@@ -283,10 +297,10 @@ v {
     "renderBefore": null,
   },
   "renderRoot": ShadowRoot {
-    "_$litPart$": T {
+    "_$litPart$": O {
       "_$AA": <!---->,
       "_$AB": null,
-      "_$AH": gt {
+      "_$AH": mt {
         "_$AD": N {
           "el": <template />,
           "parts": Array [
@@ -359,7 +373,7 @@ v {
         "_$AM": [Circular],
         "_$AN": undefined,
         "u": Array [
-          R {
+          L {
             "_$AH": "webcl-media",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -385,8 +399,12 @@ v {
                   
           
                   <p>
-                    <!--?lit$695546061$-->
+                    
+            
+                    <!--?lit$419653849$-->
                     Title
+                    
+          
                   </p>
                   
         
@@ -415,7 +433,7 @@ v {
             },
             "type": 1,
           },
-          R {
+          L {
             "_$AH": undefined,
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -430,7 +448,7 @@ v {
             },
             "type": 1,
           },
-          R {
+          L {
             "_$AH": "media-text-container",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -445,8 +463,12 @@ v {
                 
           
                 <p>
-                  <!--?lit$695546061$-->
+                  
+            
+                  <!--?lit$419653849$-->
                   Title
+                  
+          
                 </p>
                 
         
@@ -467,7 +489,7 @@ v {
             },
             "type": 1,
           },
-          R {
+          L {
             "_$AH": "media-title-container",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -477,8 +499,12 @@ v {
               
           
               <p>
-                <!--?lit$695546061$-->
+                
+            
+                <!--?lit$419653849$-->
                 Title
+                
+          
               </p>
               
         
@@ -491,9 +517,10 @@ v {
             },
             "type": 1,
           },
-          T {
-            "_$AA": <!--?lit$695546061$-->,
-            "_$AB": null,
+          O {
+            "_$AA": <!--?lit$419653849$-->,
+            "_$AB": 
+          ,
             "_$AH": "Title",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -505,7 +532,7 @@ v {
             },
             "type": 2,
           },
-          R {
+          L {
             "_$AH": undefined,
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -520,7 +547,7 @@ v {
             },
             "type": 1,
           },
-          R {
+          L {
             "_$AH": undefined,
             "_$AM": [Circular],
             "_$AN": undefined,

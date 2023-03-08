@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`image-component matches component snapshot 1`] = `
-E {
+exports[`ymlwebcl-image matches component snapshot 1`] = `
+b {
   "_$AL": Map {},
-  "_$Do": P {
+  "_$Do": O {
     "_$AA": <!---->,
     "_$AB": null,
-    "_$AH": xt {
-      "_$AD": z {
+    "_$AH": Ct {
+      "_$AD": T {
         "el": <template />,
         "parts": Array [
           Object {
@@ -128,7 +128,7 @@ E {
       "_$AM": [Circular],
       "_$AN": undefined,
       "u": Array [
-        M {
+        R {
           "_$AH": Array [
             undefined,
             undefined,
@@ -166,7 +166,7 @@ E {
           ],
           "type": 1,
         },
-        M {
+        R {
           "_$AH": "",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -194,7 +194,7 @@ E {
           },
           "type": 1,
         },
-        M {
+        R {
           "_$AH": "",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -222,7 +222,7 @@ E {
           },
           "type": 1,
         },
-        M {
+        R {
           "_$AH": "image",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -250,7 +250,7 @@ E {
           },
           "type": 1,
         },
-        M {
+        R {
           "_$AH": undefined,
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -278,7 +278,7 @@ E {
           },
           "type": 1,
         },
-        M {
+        R {
           "_$AH": undefined,
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -306,7 +306,7 @@ E {
           },
           "type": 1,
         },
-        M {
+        R {
           "_$AH": undefined,
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -334,7 +334,7 @@ E {
           },
           "type": 1,
         },
-        M {
+        R {
           "_$AH": undefined,
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -362,7 +362,7 @@ E {
           },
           "type": 1,
         },
-        M {
+        R {
           "_$AH": undefined,
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -390,7 +390,7 @@ E {
           },
           "type": 1,
         },
-        M {
+        R {
           "_$AH": undefined,
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -418,7 +418,7 @@ E {
           },
           "type": 1,
         },
-        M {
+        R {
           "_$AH": Array [
             "undefined undefined undefined",
           ],
@@ -464,6 +464,7 @@ E {
     },
     "type": 2,
   },
+  "_$EC": undefined,
   "_$E_": Promise {},
   "_$Ei": undefined,
   "_$El": null,
@@ -480,11 +481,11 @@ E {
     "renderBefore": null,
   },
   "renderRoot": ShadowRoot {
-    "_$litPart$": P {
+    "_$litPart$": O {
       "_$AA": <!---->,
       "_$AB": null,
-      "_$AH": xt {
-        "_$AD": z {
+      "_$AH": Ct {
+        "_$AD": T {
           "el": <template />,
           "parts": Array [
             Object {
@@ -605,7 +606,7 @@ E {
         "_$AM": [Circular],
         "_$AN": undefined,
         "u": Array [
-          M {
+          R {
             "_$AH": Array [
               undefined,
               undefined,
@@ -643,7 +644,7 @@ E {
             ],
             "type": 1,
           },
-          M {
+          R {
             "_$AH": "",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -671,7 +672,7 @@ E {
             },
             "type": 1,
           },
-          M {
+          R {
             "_$AH": "",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -699,7 +700,7 @@ E {
             },
             "type": 1,
           },
-          M {
+          R {
             "_$AH": "image",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -727,7 +728,7 @@ E {
             },
             "type": 1,
           },
-          M {
+          R {
             "_$AH": undefined,
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -755,7 +756,7 @@ E {
             },
             "type": 1,
           },
-          M {
+          R {
             "_$AH": undefined,
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -783,7 +784,7 @@ E {
             },
             "type": 1,
           },
-          M {
+          R {
             "_$AH": undefined,
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -811,7 +812,7 @@ E {
             },
             "type": 1,
           },
-          M {
+          R {
             "_$AH": undefined,
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -839,7 +840,7 @@ E {
             },
             "type": 1,
           },
-          M {
+          R {
             "_$AH": undefined,
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -867,7 +868,7 @@ E {
             },
             "type": 1,
           },
-          M {
+          R {
             "_$AH": undefined,
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -895,7 +896,7 @@ E {
             },
             "type": 1,
           },
-          M {
+          R {
             "_$AH": Array [
               "undefined undefined undefined",
             ],
