@@ -1,0 +1,552 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`media-component matches component snapshot 1`] = `
+v {
+  "_$AL": Map {},
+  "_$Do": T {
+    "_$AA": <!---->,
+    "_$AB": null,
+    "_$AH": gt {
+      "_$AD": N {
+        "el": <template />,
+        "parts": Array [
+          Object {
+            "ctor": [Function],
+            "index": 0,
+            "name": "part",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 1,
+            "name": "name",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 2,
+            "name": "part",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 3,
+            "name": "part",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "index": 5,
+            "type": 2,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 6,
+            "name": "name",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 7,
+            "name": "name",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+        ],
+      },
+      "_$AM": [Circular],
+      "_$AN": undefined,
+      "u": Array [
+        R {
+          "_$AH": "webcl-media",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <div
+            class="inline-flex flex-row"
+            part="webcl-media"
+          >
+            
+      
+            <slot
+              name=""
+            />
+            
+      
+            <div
+              part="media-text-container"
+            >
+              
+        
+              <div
+                part="media-title-container"
+              >
+                
+          
+                <p>
+                  <!--?lit$695546061$-->
+                  Title
+                </p>
+                
+        
+              </div>
+              
+        
+              <slot
+                name=""
+              />
+              
+      
+            </div>
+            
+      
+            <slot
+              name=""
+            />
+            
+    
+          </div>,
+          "name": "part",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        R {
+          "_$AH": undefined,
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <slot
+            name=""
+          />,
+          "name": "name",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        R {
+          "_$AH": "media-text-container",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <div
+            part="media-text-container"
+          >
+            
+        
+            <div
+              part="media-title-container"
+            >
+              
+          
+              <p>
+                <!--?lit$695546061$-->
+                Title
+              </p>
+              
+        
+            </div>
+            
+        
+            <slot
+              name=""
+            />
+            
+      
+          </div>,
+          "name": "part",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        R {
+          "_$AH": "media-title-container",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <div
+            part="media-title-container"
+          >
+            
+          
+            <p>
+              <!--?lit$695546061$-->
+              Title
+            </p>
+            
+        
+          </div>,
+          "name": "part",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        T {
+          "_$AA": <!--?lit$695546061$-->,
+          "_$AB": null,
+          "_$AH": "Title",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "_$Cm": true,
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 2,
+        },
+        R {
+          "_$AH": undefined,
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <slot
+            name=""
+          />,
+          "name": "name",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        R {
+          "_$AH": undefined,
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <slot
+            name=""
+          />,
+          "name": "name",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+      ],
+    },
+    "_$AM": undefined,
+    "_$AN": undefined,
+    "_$Cm": true,
+    "options": Object {
+      "host": [Circular],
+      "isConnected": true,
+      "renderBefore": null,
+    },
+    "type": 2,
+  },
+  "_$E_": Promise {},
+  "_$Ei": undefined,
+  "_$El": null,
+  "__mediaPartAttribute": "webcl-media",
+  "__mediaTitle": "Title",
+  "__textPartAttribute": "media-text-container",
+  "__titlePartAttribute": "media-title-container",
+  "enableUpdating": [Function],
+  "hasUpdated": true,
+  "isUpdatePending": false,
+  "renderOptions": Object {
+    "host": [Circular],
+    "isConnected": true,
+    "renderBefore": null,
+  },
+  "renderRoot": ShadowRoot {
+    "_$litPart$": T {
+      "_$AA": <!---->,
+      "_$AB": null,
+      "_$AH": gt {
+        "_$AD": N {
+          "el": <template />,
+          "parts": Array [
+            Object {
+              "ctor": [Function],
+              "index": 0,
+              "name": "part",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 1,
+              "name": "name",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 2,
+              "name": "part",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 3,
+              "name": "part",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "index": 5,
+              "type": 2,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 6,
+              "name": "name",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 7,
+              "name": "name",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+          ],
+        },
+        "_$AM": [Circular],
+        "_$AN": undefined,
+        "u": Array [
+          R {
+            "_$AH": "webcl-media",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <div
+              class="inline-flex flex-row"
+              part="webcl-media"
+            >
+              
+      
+              <slot
+                name=""
+              />
+              
+      
+              <div
+                part="media-text-container"
+              >
+                
+        
+                <div
+                  part="media-title-container"
+                >
+                  
+          
+                  <p>
+                    <!--?lit$695546061$-->
+                    Title
+                  </p>
+                  
+        
+                </div>
+                
+        
+                <slot
+                  name=""
+                />
+                
+      
+              </div>
+              
+      
+              <slot
+                name=""
+              />
+              
+    
+            </div>,
+            "name": "part",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          R {
+            "_$AH": undefined,
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <slot
+              name=""
+            />,
+            "name": "name",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          R {
+            "_$AH": "media-text-container",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <div
+              part="media-text-container"
+            >
+              
+        
+              <div
+                part="media-title-container"
+              >
+                
+          
+                <p>
+                  <!--?lit$695546061$-->
+                  Title
+                </p>
+                
+        
+              </div>
+              
+        
+              <slot
+                name=""
+              />
+              
+      
+            </div>,
+            "name": "part",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          R {
+            "_$AH": "media-title-container",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <div
+              part="media-title-container"
+            >
+              
+          
+              <p>
+                <!--?lit$695546061$-->
+                Title
+              </p>
+              
+        
+            </div>,
+            "name": "part",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          T {
+            "_$AA": <!--?lit$695546061$-->,
+            "_$AB": null,
+            "_$AH": "Title",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "_$Cm": true,
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 2,
+          },
+          R {
+            "_$AH": undefined,
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <slot
+              name=""
+            />,
+            "name": "name",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          R {
+            "_$AH": undefined,
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <slot
+              name=""
+            />,
+            "name": "name",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+        ],
+      },
+      "_$AM": undefined,
+      "_$AN": undefined,
+      "_$Cm": true,
+      "options": Object {
+        "host": [Circular],
+        "isConnected": true,
+        "renderBefore": null,
+      },
+      "type": 2,
+    },
+  },
+}
+`;
