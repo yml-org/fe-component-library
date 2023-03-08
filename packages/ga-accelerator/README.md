@@ -18,32 +18,32 @@ npm i --save ga-accelerator
 
 To use gaAccelerator in your project, after installing, import it using the following command:
 
-import { gaAccelerator, gaInstall, gaCookieLessInstall } from 'ga-accelerator';
+import { ymlGaAccelerator, ymlGaInstall, ymlGaCookieLessInstall } from 'ga-accelerator';
 
-To install Google Analytics using gaAccelerator, you can use either gaInstall or gaCookieLessInstall depending on whether you want to use cookies or not. Both methods take the tracking ID for your Google Analytics account as their first argument. The second argument is an optional object that allows you to specify additional configuration options for Google Analytics.
+To install Google Analytics using gaAccelerator, you can use either ymlGaInstall or ymlGaCookieLessInstall depending on whether you want to use cookies or not. Both methods take the tracking ID for your Google Analytics account as their first argument. The second argument is an optional object that allows you to specify additional configuration options for Google Analytics.
 
 // Install Google Analytics with cookies
 // Substitute your tracking ID (begins with "G-", "UA-", "AW-" or "DC-")
-gaInstall('G-##########', {
+ymlGaInstall('G-##########', {
   // additional configuration options here
 });
 
 To specify additional config info for the initialization (for instance to disable page view measurement):
 
-gaInstall('G-##########', { 'send_page_view': false });
+ymlGaInstall('G-##########', { 'send_page_view': false });
 
 // Install Google Analytics without cookies
 // Substitute your tracking ID (begins with "G-", "UA-", "AW-" or "DC-")
-gaCookieLessInstall('G-##########');
+ymlGaCookieLessInstall('G-##########');
 
 
 // Send an event to Google Analytics
-To send events to Google Analytics, you can use the gaAccelerator function. 
-To use gaAccelerator to send an event to Google Analytics, you can call the function and pass three arguments.
+To send events to Google Analytics, you can use the ymlGaAccelerator function. 
+To use ymlGaAccelerator to send an event to Google Analytics, you can call the function and pass three arguments.
 
 The first argument is the string 'event', which specifies that this is an event. The second argument is the name of the event, in this case 'click'. The third argument is an object that contains any additional data associated with the event. In this example, the object contains a key-value pair of 'element': 'button', which specifies the value of the element dimension is 'button', which indicates that a button was clicked.
 
-gaAccelerator('event', 'click', { 'element': 'button' });
+ymlGaAccelerator('event', 'click', { 'element': 'button' });
 
-Refer Google's documentation for more specification and usage of gaAccelerator() :
+Refer Google's documentation for more specification and usage of ymlGaAccelerator() :
 https://developers.google.com/tag-platform/gtagjs/configure

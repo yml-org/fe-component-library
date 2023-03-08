@@ -122,16 +122,16 @@ If you want to contribute or share some thoughts, just get in touch with us.
 
 Enjoy.
 
-# text-area-component
+# ymlwebcl-textarea
 
 ## Install
 
 ```bash
-yarn add text-area-component
+yarn add ymlwebcl-textarea
 ```
 
 ```bash
-npm i text-area-component
+npm i ymlwebcl-textarea
 ```
 
 ## Usage
@@ -142,8 +142,8 @@ npm i text-area-component
 
 ```js
 <template>
-  <text-area-component >
-  </text-area-component>
+  <ymlwebcl-textarea >
+  </ymlwebcl-textarea>
 </template>
 
 <script>
@@ -162,9 +162,9 @@ export default {
 
 ```js
 <template>
-  <text-area-component
+  <ymlwebcl-textarea
   :isDisabled="false"
-  ></text-area-component>
+  ></ymlwebcl-textarea>
 </template>
 
 <script>
@@ -192,7 +192,7 @@ npm i reactify-wc
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const TextAreaComponent = reactifyWc("text-area-component");
+  const TextAreaComponent = reactifyWc("ymlwebcl-textarea");
   return (
     <div className="App">
       <TextAreaComponent />
@@ -206,7 +206,7 @@ export default App;
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-const TextAreaComponent = reactifyWc("text-area-component");
+const TextAreaComponent = reactifyWc("ymlwebcl-textarea");
   return (
     <div className="App">
       <TextAreaComponent
@@ -225,7 +225,7 @@ Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/::part
 ```style.scss
 //The ::part CSS pseudo-element represents any element within a shadow tree that has a matching part attribute.
 
-text-area-component::part(webcl-textarea) { /*Note : text-area-component is the custom component and webcl-textarea is the name given to the the part attribute in element within text-area-component */
+ymlwebcl-textarea::part(webcl-textarea) { /*Note : ymlwebcl-textarea is the custom component and webcl-textarea is the name given to the the part attribute in element within ymlwebcl-textarea */
 background-color: yellow;
 color:black;
 //add css properties
