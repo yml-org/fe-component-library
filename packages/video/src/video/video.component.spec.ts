@@ -1,14 +1,16 @@
-import { LitElement } from 'lit-element';
+import { VideoComponent } from './video.component';
 
-describe('video-component', () => {
-  const VIDEO_COMPONENT = 'video-component';
-  let videoElement: LitElement;
+describe('ymlwebcl-video', () => {
+  const VIDEO_COMPONENT = 'ymlwebcl-video';
+  let videoElement: VideoComponent;
 
-  const getShadowRoot = (tagName: string): ShadowRoot =>
+  const getShadowRoot = (tagName: string): ShadowRoot | null =>
     document.body.getElementsByTagName(tagName)[0].shadowRoot;
 
   beforeEach(() => {
-    videoElement = window.document.createElement(VIDEO_COMPONENT) as LitElement;
+    videoElement = window.document.createElement(
+      VIDEO_COMPONENT
+    ) as VideoComponent;
     document.body.appendChild(videoElement);
   });
 

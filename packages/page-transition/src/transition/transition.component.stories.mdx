@@ -32,7 +32,7 @@ The different scrollDirection options for the flick to transition component are 
 Basic transition component without `props`
 
 export const TemplateDefault = () =>
-  html`<transition-component>
+  html`<ymlwebcl-transition>
     <div slot="slot1">
       <div style="width: 100vw; height: 100vh; background-color: red;">
         <p>company</p>
@@ -48,7 +48,7 @@ export const TemplateDefault = () =>
         <p>home</p>
       </div>
     </div>
-  </transition-component>`;
+  </ymlwebcl-transition>`;
 
 <Canvas columns={1}>
   <Story name="default">{TemplateDefault.bind({})}</Story>
@@ -56,7 +56,7 @@ export const TemplateDefault = () =>
 
 Transition component with `componentArray'
 
-export const TemplateTheme = (args) => html` <transition-component
+export const TemplateTheme = (args) => html` <ymlwebcl-transition
   .componentArray=${args.componentArray}
 >
   <div slot="company">
@@ -74,7 +74,7 @@ export const TemplateTheme = (args) => html` <transition-component
       <p>home</p>
     </div>
   </div>
-</transition-component>`;
+</ymlwebcl-transition>`;
 
 <Canvas columns={1}>
   <Story
@@ -87,7 +87,7 @@ export const TemplateTheme = (args) => html` <transition-component
 
 Transition component with `scrollDirection'
 
-export const TemplateWithScrollDirection = (args) => html` <transition-component
+export const TemplateWithScrollDirection = (args) => html` <ymlwebcl-transition
   .componentArray=${args.componentArray}
   scrollDirection=${args.scrollDirection}
 >
@@ -106,7 +106,7 @@ export const TemplateWithScrollDirection = (args) => html` <transition-component
       <p>home</p>
     </div>
   </div>
-</transition-component>`;
+</ymlwebcl-transition>`;
 
 <Canvas columns={1}>
   <Story
@@ -125,7 +125,7 @@ Transition component with `allowCircularSwipe'
 export const TemplateWithAllowCircularSwipe = ({
   componentArray,
   allowCircularSwipe,
-}) => html` <transition-component
+}) => html` <ymlwebcl-transition
   .componentArray=${componentArray}
   allowCircularSwipe=${allowCircularSwipe}
 >
@@ -144,7 +144,7 @@ export const TemplateWithAllowCircularSwipe = ({
       <p>home</p>
     </div>
   </div>
-</transition-component>`;
+</ymlwebcl-transition>`;
 
 <Canvas columns={1}>
   <Story
@@ -163,7 +163,7 @@ Transition component with `backgroundColor'
 export const TemplateWithAllowBackgroundColor = ({
   componentArray,
   backgroundColor,
-}) => html` <transition-component
+}) => html` <ymlwebcl-transition
   .componentArray=${componentArray}
   .backgroundColor=${backgroundColor}
 >
@@ -182,7 +182,7 @@ export const TemplateWithAllowBackgroundColor = ({
       <p>home</p>
     </div>
   </div>
-</transition-component>`;
+</ymlwebcl-transition>`;
 
 <Canvas columns={1}>
   <Story
@@ -201,7 +201,7 @@ Transition component with `disableSwipeNext`
 export const TemplateWithDisableSwipeNext = ({
   componentArray,
   disableSwipeNext,
-}) => html` <transition-component
+}) => html` <ymlwebcl-transition
   .componentArray=${componentArray}
   disableSwipeNext=${disableSwipeNext}
 >
@@ -220,7 +220,7 @@ export const TemplateWithDisableSwipeNext = ({
       <p>home</p>
     </div>
   </div>
-</transition-component>`;
+</ymlwebcl-transition>`;
 
 <Canvas columns={1}>
   <Story
@@ -239,7 +239,7 @@ Transition component with `animationDuration`
 export const TemplateWithAnimationDuration = ({
   componentArray,
   animationDuration,
-}) => html` <transition-component
+}) => html` <ymlwebcl-transition
   .componentArray=${componentArray}
   animationDuration=${animationDuration}
 >
@@ -258,7 +258,7 @@ export const TemplateWithAnimationDuration = ({
       <p>home</p>
     </div>
   </div>
-</transition-component>`;
+</ymlwebcl-transition>`;
 
 <Canvas columns={1}>
   <Story
@@ -277,7 +277,7 @@ Transition component with `animationDelay`
 export const TemplateWithAnimationDelay = ({
   componentArray,
   animationDelay,
-}) => html` <transition-component
+}) => html` <ymlwebcl-transition
   .componentArray=${componentArray}
   animationDelay=${animationDelay}
 >
@@ -296,7 +296,7 @@ export const TemplateWithAnimationDelay = ({
       <p>home</p>
     </div>
   </div>
-</transition-component>`;
+</ymlwebcl-transition>`;
 
 <Canvas columns={1}>
   <Story

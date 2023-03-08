@@ -5,21 +5,21 @@ import { TailwindElement } from '../shared/tailwind.element';
 import { LinkTypes } from '../constants/link.component';
 import { LinkComponentTypes } from '../types/link.component';
 
-@customElement('link-component')
+@customElement('ymlwebcl-link')
 export class LinkComponent extends TailwindElement(null) {
-  @property()
+  @property({ type: String, reflect: true })
   text?: string = 'Click Here';
-  @property()
+  @property({ type: String, reflect: true })
   linkTitle?: string = '';
-  @property()
+  @property({ type: String, reflect: true })
   href?: string = '#';
-  @property()
+  @property({ type: String, reflect: true })
   rel?: string = '';
-  @property()
+  @property({ type: String, reflect: true })
   target?: string = '_self';
-  @property()
+  @property({ reflect: true })
   type?: LinkComponentTypes = 'link';
-  @property()
+  @property({ type: String, reflect: true })
   slotName?: string = '';
 
   protected getClassTheme() {
@@ -43,11 +43,5 @@ export class LinkComponent extends TailwindElement(null) {
         <slot name=${this.slotName}></slot>
       </a>
     `;
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    'link-component': LinkComponent;
   }
 }

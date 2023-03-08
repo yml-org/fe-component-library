@@ -45,7 +45,7 @@ The default slots provided in the component are as follows:
 Default text field
 
 export const withDefaultTemplate = ({}) =>
-  html`<text-field-component></text-field-component>`;
+  html`<ymlwebcl-textfield></ymlwebcl-textfield>`;
 
 <Canvas>
   <Story name="with default">{withDefaultTemplate.bind({})}</Story>
@@ -55,8 +55,8 @@ Basic text field with label and placeholder
 
 export const withLabelPlaceholderTemplate = ({ label, placeholder }) =>
   html`
-    <text-field-component .label=${label} .placeholder=${placeholder}>
-    </text-field-component>
+    <ymlwebcl-textfield .label=${label} .placeholder=${placeholder}>
+    </ymlwebcl-textfield>
   `;
 
 <Canvas>
@@ -75,8 +75,8 @@ Basic text field with rounded border(styles)
 
 export const withRoundedBorderTemplate = ({ label, placeholder }) =>
   html`<div class="storybook-text-field-container">
-    <text-field-component .label=${label} .placeholder=${placeholder}>
-    </text-field-component>
+    <ymlwebcl-textfield .label=${label} .placeholder=${placeholder}>
+    </ymlwebcl-textfield>
   </div>`;
 
 <Canvas>
@@ -95,12 +95,12 @@ Basic text field with required asterisk
 
 export const withRequiredTemplate = ({ label, placeholder, required }) =>
   html`<div class="storybook-text-field-container">
-    <text-field-component
+    <ymlwebcl-textfield
       .label=${label}
       .placeholder=${placeholder}
       .required=${required}
     >
-    </text-field-component>
+    </ymlwebcl-textfield>
   </div>`;
 
 <Canvas>
@@ -125,13 +125,13 @@ export const withHintTextTemplate = ({
   required,
 }) =>
   html`<div class="storybook-text-field-container">
-    <text-field-component
+    <ymlwebcl-textfield
       .label=${label}
       .placeholder=${placeholder}
       .hintText=${hintText}
       .required=${required}
     >
-    </text-field-component>
+    </ymlwebcl-textfield>
   </div>`;
 
 <Canvas>
@@ -156,13 +156,13 @@ export const withDisabledTemplate = ({
   disabled,
 }) =>
   html`<div class="storybook-text-field-container custom-disabled-variant">
-    <text-field-component
+    <ymlwebcl-textfield
       .label=${label}
       .placeholder=${placeholder}
       .hintText=${hintText}
       .disabled=${disabled}
     >
-    </text-field-component>
+    </ymlwebcl-textfield>
   </div>`;
 
 <Canvas>
@@ -183,13 +183,13 @@ Basic text field having error
 
 export const withErrorTemplate = ({ label, placeholder, hintText, error }) =>
   html`<div class="storybook-text-field-container custom-error-variant">
-    <text-field-component
+    <ymlwebcl-textfield
       .label=${label}
       .placeholder=${placeholder}
       .hintText=${hintText}
       .error=${error}
     >
-    </text-field-component>
+    </ymlwebcl-textfield>
   </div>`;
 
 <Canvas>
@@ -215,7 +215,7 @@ export const withErrorWithIconSlotTemplate = ({
   error,
 }) =>
   html`<div class="storybook-text-field-container custom-error-variant">
-    <text-field-component
+    <ymlwebcl-textfield
       .label=${label}
       .placeholder=${placeholder}
       .hintText=${hintText}
@@ -227,7 +227,7 @@ export const withErrorWithIconSlotTemplate = ({
         alt="test"
         style="height: 18px"
       />
-    </text-field-component>
+    </ymlwebcl-textfield>
   </div>`;
 
 <Canvas>
@@ -254,7 +254,7 @@ export const withDefinedIconSlot = ({
   clearField,
 }) =>
   html`<div class="storybook-text-field-container custom-icon-variant">
-    <text-field-component
+    <ymlwebcl-textfield
       .label=${label}
       .placeholder=${placeholder}
       .hintText=${hintText}
@@ -267,7 +267,7 @@ export const withDefinedIconSlot = ({
         alt="test"
         style="height: 18px"
       />
-    </text-field-component>
+    </ymlwebcl-textfield>
   </div>`;
 
 <Canvas>

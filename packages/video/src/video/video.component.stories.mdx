@@ -50,7 +50,7 @@ The Captions interface consist of the following keys:
 Basic Video component with `src` prop
 
 export const defaultTemplate = ({ src }) =>
-  html`<video-component .src=${src}></video-component>`;
+  html`<ymlwebcl-video .src=${src}></ymlwebcl-video>`;
 
 <Canvas>
   <Story
@@ -69,9 +69,9 @@ In this example we include `poster` prop. Poster will act as a thumbnail image
 for the video. If not added, the default thumbnail would be displayed.
 
 export const withPosterImgTemplate = ({ src, poster }) =>
-  html`<video-component .src=${src} .poster=${poster}
-    ><video-component></video-component
-  ></video-component>`;
+  html`<ymlwebcl-video .src=${src} .poster=${poster}
+    ><ymlwebcl-video></ymlwebcl-video
+  ></ymlwebcl-video>`;
 
 <Canvas>
   <Story
@@ -92,9 +92,9 @@ In this example we include `loop` prop. This will enable the video to be played
 on loop.
 
 export const withLoopTemplate = ({ src, poster, loop }) =>
-  html`<video-component .src=${src} .poster=${poster}
-    ><video-component></video-component
-  ></video-component>`;
+  html`<ymlwebcl-video .src=${src} .poster=${poster}
+    ><ymlwebcl-video></ymlwebcl-video
+  ></ymlwebcl-video>`;
 
 <Canvas>
   <Story
@@ -120,15 +120,15 @@ export const withCustomWidthAndHeightTemplate = ({
   fluid,
   responsive,
 }) =>
-  html`<video-component
+  html`<ymlwebcl-video
     .src=${src}
     .poster=${poster}
     .playbackRates=${playbackRates}
     .videoStyle=${videoStyle}
     .fluid=${fluid}
     .responsive=${responsive}
-    ><video-component></video-component
-  ></video-component>`;
+    ><ymlwebcl-video></ymlwebcl-video
+  ></ymlwebcl-video>`;
 
 <Canvas>
   <Story
@@ -158,13 +158,13 @@ export const withPlayBackRatesTemplate = ({
   playbackRates,
   aspectRatio,
 }) =>
-  html`<video-component
+  html`<ymlwebcl-video
     .src=${src}
     .poster=${poster}
     .playbackRates=${playbackRates}
     .aspectRatio=${aspectRatio}
-    ><video-component></video-component
-  ></video-component>`;
+    ><ymlwebcl-video></ymlwebcl-video
+  ></ymlwebcl-video>`;
 
 <Canvas>
   <Story
@@ -189,15 +189,15 @@ export const withResponsiveTemplate = ({
   fluid,
   responsive,
 }) =>
-  html`<video-component
+  html`<ymlwebcl-video
     .src=${src}
     .poster=${poster}
     .playbackRates=${playbackRates}
     .fluid=${fluid}
     .responsive:
     ${responsive},
-    ><video-component></video-component
-  ></video-component>`;
+    ><ymlwebcl-video></ymlwebcl-video
+  ></ymlwebcl-video>`;
 
 <Canvas>
   <Story
@@ -224,14 +224,14 @@ export const withCaptionsTemplate = ({
   captions,
   aspectRatio,
 }) =>
-  html`<video-component
+  html`<ymlwebcl-video
     .src=${src}
     .poster=${poster}
     .playbackRates=${playbackRates}
     .captions=${captions}
     .aspectRatio=${aspectRatio}
-    ><video-component></video-component>
-  </video-component>`;
+    ><ymlwebcl-video></ymlwebcl-video>
+  </ymlwebcl-video>`;
 
 <Canvas>
   <Story
@@ -268,7 +268,7 @@ export const withCustomPlayFunctionTemplate = ({
   handlePlay,
   customPlayEvent,
 }) =>
-  html`<video-component
+  html`<ymlwebcl-video
     .src=${src}
     .poster=${poster}
     .playbackRates=${playbackRates}
@@ -276,8 +276,8 @@ export const withCustomPlayFunctionTemplate = ({
     .aspectRatio=${aspectRatio}
     .customPlayEvent="${customPlayEvent}"
     @handlePlay=${handlePlay}
-    ><video-component></video-component>
-  </video-component>`;
+    ><ymlwebcl-video></ymlwebcl-video>
+  </ymlwebcl-video>`;
 
 <Canvas>
   <Story
@@ -316,7 +316,7 @@ export const withCustomPauseFunctionTemplate = ({
   handlePause,
   customPauseEvent,
 }) =>
-  html`<video-component
+  html`<ymlwebcl-video
     .src=${src}
     .poster=${poster}
     .playbackRates=${playbackRates}
@@ -324,8 +324,8 @@ export const withCustomPauseFunctionTemplate = ({
     .aspectRatio=${aspectRatio}
     .customPauseEvent="${customPauseEvent}"
     @handlePause=${handlePause}
-    ><video-component></video-component>
-  </video-component>`;
+    ><ymlwebcl-video></ymlwebcl-video>
+  </ymlwebcl-video>`;
 
 <Canvas>
   <Story
@@ -365,7 +365,7 @@ export const withCustomSeekFunctionTemplate = ({
   customSeekEvent,
   seekTo,
 }) =>
-  html`<video-component
+  html`<ymlwebcl-video
     .src=${src}
     .poster=${poster}
     .playbackRates=${playbackRates}
@@ -374,8 +374,8 @@ export const withCustomSeekFunctionTemplate = ({
     .customSeekEvent="${customSeekEvent}"
     .seekTo=${seekTo}
     @handleSeek=${handleSeek}
-    ><video-component></video-component>
-  </video-component>`;
+    ><ymlwebcl-video></ymlwebcl-video>
+  </ymlwebcl-video>`;
 
 <Canvas>
   <Story

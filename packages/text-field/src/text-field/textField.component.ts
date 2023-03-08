@@ -4,49 +4,49 @@ import { TailwindElement } from '../shared/tailwind.element';
 import { AutoComplete } from '../types/text-field';
 import { AutoCompleteValues } from '../constants/text-field';
 
-@customElement('text-field-component')
+@customElement('ymlwebcl-textfield')
 export class TextFieldComponent extends TailwindElement(null) {
-  @property()
+  @property({ type: String, reflect: true })
   textFieldId: string;
-  @property()
-  label?: string;
-  @property()
-  value?: string;
-  @property()
-  placeholder?: string;
-  @property()
+  @property({ type: String, reflect: true })
+  label?: string = 'Label';
+  @property({ type: String, reflect: true })
+  value?: string = '';
+  @property({ type: String, reflect: true })
+  placeholder?: string = 'Input';
+  @property({ type: Boolean, reflect: true })
   disabled?: boolean;
-  @property()
+  @property({ type: Boolean, reflect: true })
   readonly?: boolean;
-  @property()
+  @property({ type: Boolean, reflect: true })
   required?: boolean;
-  @property()
+  @property({ type: Boolean, reflect: true })
   clearField?: boolean;
-  @property()
+  @property({ type: Boolean, reflect: true })
   autofocus: boolean;
-  @property()
+  @property({ type: Boolean, reflect: true })
   error?: boolean;
-  @property()
+  @property({ type: Number, reflect: true })
   minLength?: number;
-  @property()
+  @property({ type: Number, reflect: true })
   maxLength?: number;
-  @property()
+  @property({ type: String, reflect: true })
   pattern?: string;
-  @property()
+  @property({ type: String, reflect: true })
   hintText?: string;
-  @property()
+  @property({ type: String, reflect: true })
   changeHandler?: string = '';
-  @property()
+  @property({ type: String, reflect: true })
   clickIconHandler?: string = '';
-  @property()
+  @property({ type: String, reflect: true })
   labelPartAttribute?: string = 'text-field-label';
-  @property()
+  @property({ type: String, reflect: true })
   textFieldPartAttribute?: string = 'text-field-input';
-  @property()
+  @property({ type: String, reflect: true })
   iconPartAttribute?: string = 'text-field-icon';
-  @property()
+  @property({ type: String, reflect: true })
   hintTextPartAttribute?: string = 'text-field-hint-text';
-  @property()
+  @property({ reflect: true })
   autocomplete?: AutoComplete = AutoCompleteValues.Off;
 
   protected getContainerList() {
@@ -85,7 +85,7 @@ export class TextFieldComponent extends TailwindElement(null) {
   protected handleIconClick() {
     if (this.clearField) {
       document.body
-        .getElementsByTagName('text-field-component')[0]
+        .getElementsByTagName('ymlwebcl-textfield')[0]
         .shadowRoot.querySelector('.text-field-input').value = '';
       this.value = '';
     } else {
@@ -133,11 +133,5 @@ export class TextFieldComponent extends TailwindElement(null) {
       </div>
       ${this.renderHintText()}
     </div>`;
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    'text-field-component': TextFieldComponent;
   }
 }

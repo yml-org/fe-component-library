@@ -1,16 +1,16 @@
-import { LitElement } from 'lit-element';
+import { TextFieldComponent } from './textField.component';
 
-describe('text-field-component', () => {
-  const TEXTFIELD_COMPONENT = 'text-field-component';
-  let textFieldElement: LitElement;
+describe('ymlwebcl-textfield', () => {
+  const TEXTFIELD_COMPONENT = 'ymlwebcl-textfield';
+  let textFieldElement: TextFieldComponent;
 
-  const getShadowRoot = (tagName: string): ShadowRoot =>
+  const getShadowRoot = (tagName: string): ShadowRoot | null =>
     document.body.getElementsByTagName(tagName)[0].shadowRoot;
 
   beforeEach(() => {
     textFieldElement = window.document.createElement(
       TEXTFIELD_COMPONENT
-    ) as LitElement;
+    ) as TextFieldComponent;
     document.body.appendChild(textFieldElement);
   });
 

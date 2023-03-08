@@ -1,6 +1,6 @@
 .storybook-text-field-container {
 
-  text-field-component {
+  ymlwebcl-textfield {
     &::part(text-field-input) {
       width: 100%;
       height: 50px;
@@ -16,7 +16,7 @@
   }
 
   &.custom-icon-variant {
-    text-field-component {
+    ymlwebcl-textfield {
       &::part(text-field-icon) {
         position: absolute;
         right: 50px;
@@ -27,7 +27,7 @@
   }
 
   &.custom-error-variant {
-    text-field-component {
+    ymlwebcl-textfield {
       &::part(text-field-label) {
         color: red;
       }
@@ -47,7 +47,7 @@
   }
 
   &.custom-disabled-variant {
-    text-field-component {
+    ymlwebcl-textfield {
       &::part(text-field-wrapper-disabled) {
        opacity: 0.5;
       }

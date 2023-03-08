@@ -76,7 +76,7 @@ The Slot type consist of the following key value pairs:
 Ordered List default
 
 export const orderedListTemplate = ({ listType, listItems }) =>
-  html`<list-component .listType=${listType} .listItems=${listItems} />`;
+  html`<ymlwebcl-list .listType=${listType} .listItems=${listItems} />`;
 
 <Canvas>
   <Story name="ordered list" args={orderedListVariant}>
@@ -87,7 +87,7 @@ export const orderedListTemplate = ({ listType, listItems }) =>
 Unordered List default
 
 export const unOrderedListTemplate = ({ listType, listItems }) =>
-  html`<list-component .listType=${listType} .listItems=${listItems} />`;
+  html`<ymlwebcl-list .listType=${listType} .listItems=${listItems} />`;
 
 <Canvas>
   <Story name="unordered list" args={unOrderedListVariant}>
@@ -106,7 +106,7 @@ export const unOrderedListWithDefaultOverriddenAndBorderBottomTemplate = ({
   overrideDefaultListStyles,
   leftSlot,
 }) =>
-  html`<list-component
+  html`<ymlwebcl-list
     .listType=${listType}
     .listItems=${listItems}
     .overrideDefaultListStyles=${overrideDefaultListStyles}
@@ -131,7 +131,7 @@ export const unOrderedListWithDefaultOverriddenAndBorderBottomTemplate = ({
         height="24px"
       />
     </div>
-  </list-component>`;
+  </ymlwebcl-list>`;
 
 <Canvas>
   <Story

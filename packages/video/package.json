@@ -1,6 +1,9 @@
 {
-  "name": "video",
+  "name": "@yml-webcl/video",
   "version": "0.0.1",
+  "main": "./src/index.js",
+  "module": "./src/index.js",
+  "type": "module",
   "scripts": {
     "start": "vite dev --host",
     "dev": "vite dev --host",
@@ -16,12 +19,33 @@
     "postcss": "^8.4.18",
     "sass": "^1.55.0",
     "tailwindcss": "^3.2.0",
-    "typescript": "^4.8.4",
+    "typescript": "^4.9.5",
     "vite": "^3.1.8"
   },
   "dependencies": {
     "@lit/localize": "^0.11.4",
     "@lit/localize-tools": "^0.6.5",
     "video.js": "^7.21.1"
-  }
+  },
+  "exports": {
+    ".": {
+      "development": "./src/index.dev.js",
+      "default": "./src/index.js"
+    },
+    "./package.json": "./package.json",
+    "./src/video/video.component.js": {
+      "development": "./src/video/video.component.dev.js",
+      "default": "./src/video/video.component.js"
+    },
+    "./video.component.js": {
+      "development": "./video.component.dev.js",
+      "default": "./video.component.js"
+    }
+  },
+  "types": "./src/index.d.ts",
+  "keywords": [
+    "web components",
+    "lit-element",
+    "lit-html"
+  ]
 }

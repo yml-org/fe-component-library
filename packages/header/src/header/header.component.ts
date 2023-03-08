@@ -14,9 +14,9 @@ import {
 import { defaultNavConfig } from '../constants/header.variants';
 import Style from './header.component.scss?inline';
 
-@customElement('header-component')
+@customElement('ymlwebcl-header')
 export class HeaderComponent extends TailwindElement(Style) {
-  @property()
+  @property({ reflect: true })
   navOptions: Nav = defaultNavConfig;
 
   themeOptions = themeOptions;
@@ -119,7 +119,7 @@ export class HeaderComponent extends TailwindElement(Style) {
     </button>`;
   }
 
-  render() {
+  public override render() {
     return html`
       <nav class="${this.getThemeProperty(ThemeOptionKeys.BackgroundColor)}
       ${this.getThemeProperty(ThemeOptionKeys.HeaderTextColor)} " part="nav">
@@ -180,11 +180,5 @@ export class HeaderComponent extends TailwindElement(Style) {
 
       </nav>
     `;
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    'header-component': HeaderComponent;
   }
 }
