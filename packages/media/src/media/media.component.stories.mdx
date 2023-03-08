@@ -1,0 +1,153 @@
+import { html } from 'lit';
+import { Story, Meta, Canvas } from '@storybook/addon-docs';
+import './media.component.ts';
+import {mediaProps} from '../constants/media.variants.ts';  
+import { houseIcon, bookmarkIcon} from '../constants/mediaIcons.ts'; 
+import './media.component.scss';
+
+<Meta title="Components/Media" />
+
+# Media Component
+
+The Media component is a Lit component that renders a media component that is framework independent and utilizes Tailwind CSS internally.
+
+# Props
+
+| Prop Name             | Type   | Description                           |
+| --------------------- | ------ | ------------------------------------- |
+| mediaTitle            | string | to add title                          |
+| imageSlotName         | string | the slot name for image slot          |
+| staticContentSlotName | string | the slot name for static content slot |
+| iconSlotName          | string | the slot name for icon slot           |
+| mediaPartAttribute    | string | The part name for media component     |
+| textPartAttribute     | string | The part name for text container      |
+| titlePartAttribute    | string | The part name for title               |
+
+# Examples
+
+Default Media component 
+
+export const defaultMediaTemplate = () =>
+  html`<media-component />`;
+
+<Canvas>
+  <Story name="default" >
+    {defaultMediaTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Media component with title prop
+
+export const propMediaTemplate = ({ mediaTitle }) =>
+  html`<media-component .mediaTitle=${mediaTitle} />`;
+
+<Canvas>
+  <Story name="title" args={mediaProps}>
+    {propMediaTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Media component with image slot
+
+export const imageSlotTemplate = ({ mediaTitle, imageSlotName }) =>
+  html`<media-component
+    .mediaTitle=${mediaTitle}
+    .imageSlotName=${imageSlotName}
+  >
+    <div slot=${imageSlotName}>${houseIcon}</div>
+  </media-component>`;
+
+<Canvas>
+  <Story name="image slot" args={mediaProps}>
+    {imageSlotTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Media component with static content slot
+
+export const staticSlotTemplate = ({
+  mediaTitle,
+  staticContentSlotName,
+  imageSlotName,
+}) =>
+  html`<media-component
+    .mediaTitle=${mediaTitle}
+    .imageSlotName=${imageSlotName}
+    .staticContentSlotName=${staticContentSlotName}
+  >
+    <div slot=${imageSlotName}>${houseIcon}</div>
+    <div slot=${staticContentSlotName}>
+      <p>Emotion</p>
+      <p>Time</p>
+    </div>
+  </media-component>`;
+
+<Canvas>
+  <Story name="static content slot" args={mediaProps}>
+    {staticSlotTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Media component with icon slot
+
+export const iconSlotTemplate = ({
+  mediaTitle,
+  staticContentSlotName,
+  imageSlotName,
+  iconSlotName,
+}) =>
+  html`<media-component
+    .mediaTitle=${mediaTitle}
+    .imageSlotName=${imageSlotName}
+    .staticContentSlotName=${staticContentSlotName}
+    .iconSlotName=${iconSlotName}
+  >
+    <div slot=${imageSlotName}>${houseIcon}</div>
+    <div slot=${staticContentSlotName}>
+      <p>Emotion</p>
+      <p>Time</p>
+    </div>
+    <div slot=${iconSlotName}>${bookmarkIcon}</div>
+  </media-component>`;
+
+<Canvas>
+  <Story name="icon slot" args={mediaProps}>
+    {iconSlotTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Customized Media Component
+
+export const customizedTemplate = ({
+  mediaTitle,
+  staticContentSlotName,
+  imageSlotName,
+  iconSlotName,
+  mediaPartAttribute,
+  textPartAttribute,
+  titlePartAttribute,
+}) =>
+  html` <div class="parent-container">
+    <media-component
+      .mediaTitle=${mediaTitle}
+      .imageSlotName=${imageSlotName}
+      .staticContentSlotName=${staticContentSlotName}
+      .iconSlotName=${iconSlotName}
+      .mediaPartAttribute=${mediaPartAttribute}
+      .textPartAttribute=${textPartAttribute}
+      .titlePartAttribute=${titlePartAttribute}
+    >
+      <div slot=${imageSlotName}>${houseIcon}</div>
+      <div class="static-slot-content" slot=${staticContentSlotName}>
+        <p>Emotion</p>
+        <p>Time</p>
+      </div>
+      <div class="icon-slot-content" slot=${iconSlotName}>${bookmarkIcon}</div>
+    </media-component>
+  </div>`;
+
+<Canvas>
+  <Story name="customized media component" args={mediaProps}>
+    {customizedTemplate.bind({})}
+  </Story>
+</Canvas>
