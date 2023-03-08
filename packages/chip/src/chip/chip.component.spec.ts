@@ -43,12 +43,10 @@ describe('ymlwebcl-chip', () => {
     chipElement['chipPartAttribute'] = withSlot.rightSlotName;
     getShadowRoot(CHIP_COMPONENT)
       .querySelector('div')
-      .querySelector('div')
       .querySelector('slot').innerHTML =
       '<h2 class="slot-test">The chip Component</h2>';
     await chipElement.updateComplete;
     const elem = getShadowRoot(CHIP_COMPONENT)
-      .querySelector('div')
       .querySelector('div')
       .querySelector('slot')
       .querySelector('h2');

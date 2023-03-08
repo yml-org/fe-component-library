@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`header-component matches component snapshot 1`] = `
-R {
+exports[`ymlwebcl-header matches component snapshot 1`] = `
+D {
   "_$AL": Map {},
   "_$Do": H {
     "_$AA": <!---->,
@@ -23,66 +23,16 @@ R {
             "type": 1,
           },
           Object {
-            "ctor": [Function],
             "index": 5,
-            "name": "class",
-            "strings": Array [
-              "inline-flex items-center justify-center rounded-md p-2 ",
-              " focus:outline-none btn-tap-color",
-            ],
-            "type": 1,
-          },
-          Object {
-            "ctor": [Function],
-            "index": 5,
-            "name": "aria-controls",
-            "strings": Array [
-              "",
-              "",
-            ],
-            "type": 1,
-          },
-          Object {
-            "ctor": [Function],
-            "index": 5,
-            "name": "aria-expanded",
-            "strings": Array [
-              "",
-              "",
-            ],
-            "type": 1,
-          },
-          Object {
-            "ctor": [Function],
-            "index": 5,
-            "name": "aria-label",
-            "strings": Array [
-              "",
-              "",
-            ],
-            "type": 1,
-          },
-          Object {
-            "ctor": [Function],
-            "index": 5,
-            "name": "click",
-            "strings": Array [
-              "",
-              "",
-            ],
-            "type": 1,
-          },
-          Object {
-            "index": 6,
             "type": 2,
           },
           Object {
-            "index": 9,
+            "index": 8,
             "type": 2,
           },
           Object {
             "ctor": [Function],
-            "index": 11,
+            "index": 10,
             "name": "class",
             "strings": Array [
               "flex flex-shrink-0 items-center font-bold  pl-4 ",
@@ -91,16 +41,16 @@ R {
             "type": 1,
           },
           Object {
-            "index": 13,
+            "index": 12,
             "type": 2,
           },
           Object {
-            "index": 16,
+            "index": 15,
             "type": 2,
           },
           Object {
             "ctor": [Function],
-            "index": 18,
+            "index": 17,
             "name": "name",
             "strings": Array [
               "",
@@ -110,7 +60,7 @@ R {
           },
           Object {
             "ctor": [Function],
-            "index": 20,
+            "index": 19,
             "name": "hidden",
             "strings": Array [
               "",
@@ -119,7 +69,7 @@ R {
             "type": 1,
           },
           Object {
-            "index": 22,
+            "index": 21,
             "type": 2,
           },
         ],
@@ -163,42 +113,8 @@ R {
               
                   <!-- Mobile menu button-->
                   
-              
-                  <button
-                    aria-controls="mobile menu"
-                    aria-expanded="false"
-                    aria-label="mobile button"
-                    class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
-                    part="menu-icon-button"
-                    type="button"
-                  >
-                    
-                
-                    <!--?lit$7821081631$-->
-                     
-                    <svg
-                      aria-hidden="true"
-                      aria-label="Open menu"
-                      class="block h-6 w-6"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      
-  
-                      <path
-                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      
-
-                    </svg>
-                    
-              
-                  </button>
+            
+                  <!--?lit$311819298$-->
                   
             
                 </div>
@@ -216,7 +132,7 @@ R {
                   >
                     
                 
-                    <!--?lit$7821081631$-->
+                    <!--?lit$311819298$-->
                     <img
                       alt="Company logo"
                       class="hidden h-8 w-8 lg:block"
@@ -244,7 +160,7 @@ R {
                       <h2
                         part="headerText"
                       >
-                        <!--?lit$7821081631$-->
+                        <!--?lit$311819298$-->
                         YML
                       </h2>
                       
@@ -265,9 +181,9 @@ R {
                         
                  
                 
-                        <!--?lit$7821081631$-->
+                        <!--?lit$311819298$-->
                          
-                        <!--?lit$7821081631$-->
+                        <!--?lit$311819298$-->
                         <!--?-->
                         
                 
@@ -323,9 +239,9 @@ R {
                 >
                   
           
-                  <!--?lit$7821081631$-->
+                  <!--?lit$311819298$-->
                    
-                  <!--?lit$7821081631$-->
+                  <!--?lit$311819298$-->
                   <!--?-->
                   
           
@@ -353,304 +269,11 @@ R {
           ],
           "type": 1,
         },
-        I {
-          "_$AH": Array [
-            "hover:text-white",
-          ],
-          "_$AM": [Circular],
-          "_$AN": undefined,
-          "element": <button
-            aria-controls="mobile menu"
-            aria-expanded="false"
-            aria-label="mobile button"
-            class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
-            part="menu-icon-button"
-            type="button"
-          >
-            
-                
-            <!--?lit$7821081631$-->
-             
-            <svg
-              aria-hidden="true"
-              aria-label="Open menu"
-              class="block h-6 w-6"
-              fill="currentColor"
-              stroke="currentColor"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              
-  
-              <path
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              
-
-            </svg>
-            
-              
-          </button>,
-          "name": "class",
-          "options": Object {
-            "host": [Circular],
-            "isConnected": true,
-            "renderBefore": null,
-          },
-          "strings": Array [
-            "inline-flex items-center justify-center rounded-md p-2 ",
-            " focus:outline-none btn-tap-color",
-          ],
-          "type": 1,
-        },
-        I {
-          "_$AH": "mobile menu",
-          "_$AM": [Circular],
-          "_$AN": undefined,
-          "element": <button
-            aria-controls="mobile menu"
-            aria-expanded="false"
-            aria-label="mobile button"
-            class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
-            part="menu-icon-button"
-            type="button"
-          >
-            
-                
-            <!--?lit$7821081631$-->
-             
-            <svg
-              aria-hidden="true"
-              aria-label="Open menu"
-              class="block h-6 w-6"
-              fill="currentColor"
-              stroke="currentColor"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              
-  
-              <path
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              
-
-            </svg>
-            
-              
-          </button>,
-          "name": "aria-controls",
-          "options": Object {
-            "host": [Circular],
-            "isConnected": true,
-            "renderBefore": null,
-          },
-          "type": 1,
-        },
-        I {
-          "_$AH": false,
-          "_$AM": [Circular],
-          "_$AN": undefined,
-          "element": <button
-            aria-controls="mobile menu"
-            aria-expanded="false"
-            aria-label="mobile button"
-            class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
-            part="menu-icon-button"
-            type="button"
-          >
-            
-                
-            <!--?lit$7821081631$-->
-             
-            <svg
-              aria-hidden="true"
-              aria-label="Open menu"
-              class="block h-6 w-6"
-              fill="currentColor"
-              stroke="currentColor"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              
-  
-              <path
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              
-
-            </svg>
-            
-              
-          </button>,
-          "name": "aria-expanded",
-          "options": Object {
-            "host": [Circular],
-            "isConnected": true,
-            "renderBefore": null,
-          },
-          "type": 1,
-        },
-        I {
-          "_$AH": "mobile button",
-          "_$AM": [Circular],
-          "_$AN": undefined,
-          "element": <button
-            aria-controls="mobile menu"
-            aria-expanded="false"
-            aria-label="mobile button"
-            class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
-            part="menu-icon-button"
-            type="button"
-          >
-            
-                
-            <!--?lit$7821081631$-->
-             
-            <svg
-              aria-hidden="true"
-              aria-label="Open menu"
-              class="block h-6 w-6"
-              fill="currentColor"
-              stroke="currentColor"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              
-  
-              <path
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              
-
-            </svg>
-            
-              
-          </button>,
-          "name": "aria-label",
-          "options": Object {
-            "host": [Circular],
-            "isConnected": true,
-            "renderBefore": null,
-          },
-          "type": 1,
-        },
-        Ut {
-          "_$AH": [Function],
-          "_$AM": [Circular],
-          "_$AN": undefined,
-          "element": <button
-            aria-controls="mobile menu"
-            aria-expanded="false"
-            aria-label="mobile button"
-            class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
-            part="menu-icon-button"
-            type="button"
-          >
-            
-                
-            <!--?lit$7821081631$-->
-             
-            <svg
-              aria-hidden="true"
-              aria-label="Open menu"
-              class="block h-6 w-6"
-              fill="currentColor"
-              stroke="currentColor"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              
-  
-              <path
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              
-
-            </svg>
-            
-              
-          </button>,
-          "name": "click",
-          "options": Object {
-            "host": [Circular],
-            "isConnected": true,
-            "renderBefore": null,
-          },
-          "type": 5,
-        },
         H {
-          "_$AA": <!--?lit$7821081631$-->,
+          "_$AA": <!--?lit$311819298$-->,
           "_$AB": 
-              ,
-          "_$AH": Tt {
-            "_$AD": P {
-              "el": <template />,
-              "parts": Array [
-                Object {
-                  "ctor": [Function],
-                  "index": 0,
-                  "name": "aria-label",
-                  "strings": Array [
-                    "",
-                    "",
-                  ],
-                  "type": 1,
-                },
-              ],
-            },
-            "_$AM": [Circular],
-            "_$AN": undefined,
-            "u": Array [
-              I {
-                "_$AH": "Open menu",
-                "_$AM": [Circular],
-                "_$AN": undefined,
-                "element": <svg
-                  aria-hidden="true"
-                  aria-label="Open menu"
-                  class="block h-6 w-6"
-                  fill="currentColor"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  
-  
-                  <path
-                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  
-
-                </svg>,
-                "name": "aria-label",
-                "options": Object {
-                  "host": [Circular],
-                  "isConnected": true,
-                  "renderBefore": null,
-                },
-                "type": 1,
-              },
-            ],
-          },
+            ,
+          "_$AH": Symbol(lit-nothing),
           "_$AM": [Circular],
           "_$AN": undefined,
           "_$Cm": true,
@@ -662,7 +285,7 @@ R {
           "type": 2,
         },
         H {
-          "_$AA": <!--?lit$7821081631$-->,
+          "_$AA": <!--?lit$311819298$-->,
           "_$AB": 
               ,
           "_$AH": Tt {
@@ -757,7 +380,7 @@ R {
             <h2
               part="headerText"
             >
-              <!--?lit$7821081631$-->
+              <!--?lit$311819298$-->
               YML
             </h2>
             
@@ -776,7 +399,7 @@ R {
           "type": 1,
         },
         H {
-          "_$AA": <!--?lit$7821081631$-->,
+          "_$AA": <!--?lit$311819298$-->,
           "_$AB": null,
           "_$AH": "YML",
           "_$AM": [Circular],
@@ -790,7 +413,7 @@ R {
           "type": 2,
         },
         H {
-          "_$AA": <!--?lit$7821081631$-->,
+          "_$AA": <!--?lit$311819298$-->,
           "_$AB": 
                 ,
           "_$AH": Tt {
@@ -807,7 +430,7 @@ R {
             "_$AN": undefined,
             "u": Array [
               H {
-                "_$AA": <!--?lit$7821081631$-->,
+                "_$AA": <!--?lit$311819298$-->,
                 "_$AB": <!--?-->,
                 "_$AH": Array [],
                 "_$AM": [Circular],
@@ -865,9 +488,9 @@ R {
             >
               
           
-              <!--?lit$7821081631$-->
+              <!--?lit$311819298$-->
                
-              <!--?lit$7821081631$-->
+              <!--?lit$311819298$-->
               <!--?-->
               
           
@@ -885,7 +508,7 @@ R {
           "type": 4,
         },
         H {
-          "_$AA": <!--?lit$7821081631$-->,
+          "_$AA": <!--?lit$311819298$-->,
           "_$AB": 
           ,
           "_$AH": Tt {
@@ -902,7 +525,7 @@ R {
             "_$AN": undefined,
             "u": Array [
               H {
-                "_$AA": <!--?lit$7821081631$-->,
+                "_$AA": <!--?lit$311819298$-->,
                 "_$AB": <!--?-->,
                 "_$AH": Array [],
                 "_$AM": [Circular],
@@ -939,6 +562,7 @@ R {
     },
     "type": 2,
   },
+  "_$EC": undefined,
   "_$E_": Promise {},
   "_$Ei": undefined,
   "_$El": null,
@@ -988,66 +612,16 @@ R {
               "type": 1,
             },
             Object {
-              "ctor": [Function],
               "index": 5,
-              "name": "class",
-              "strings": Array [
-                "inline-flex items-center justify-center rounded-md p-2 ",
-                " focus:outline-none btn-tap-color",
-              ],
-              "type": 1,
-            },
-            Object {
-              "ctor": [Function],
-              "index": 5,
-              "name": "aria-controls",
-              "strings": Array [
-                "",
-                "",
-              ],
-              "type": 1,
-            },
-            Object {
-              "ctor": [Function],
-              "index": 5,
-              "name": "aria-expanded",
-              "strings": Array [
-                "",
-                "",
-              ],
-              "type": 1,
-            },
-            Object {
-              "ctor": [Function],
-              "index": 5,
-              "name": "aria-label",
-              "strings": Array [
-                "",
-                "",
-              ],
-              "type": 1,
-            },
-            Object {
-              "ctor": [Function],
-              "index": 5,
-              "name": "click",
-              "strings": Array [
-                "",
-                "",
-              ],
-              "type": 1,
-            },
-            Object {
-              "index": 6,
               "type": 2,
             },
             Object {
-              "index": 9,
+              "index": 8,
               "type": 2,
             },
             Object {
               "ctor": [Function],
-              "index": 11,
+              "index": 10,
               "name": "class",
               "strings": Array [
                 "flex flex-shrink-0 items-center font-bold  pl-4 ",
@@ -1056,16 +630,16 @@ R {
               "type": 1,
             },
             Object {
-              "index": 13,
+              "index": 12,
               "type": 2,
             },
             Object {
-              "index": 16,
+              "index": 15,
               "type": 2,
             },
             Object {
               "ctor": [Function],
-              "index": 18,
+              "index": 17,
               "name": "name",
               "strings": Array [
                 "",
@@ -1075,7 +649,7 @@ R {
             },
             Object {
               "ctor": [Function],
-              "index": 20,
+              "index": 19,
               "name": "hidden",
               "strings": Array [
                 "",
@@ -1084,7 +658,7 @@ R {
               "type": 1,
             },
             Object {
-              "index": 22,
+              "index": 21,
               "type": 2,
             },
           ],
@@ -1128,42 +702,8 @@ R {
               
                     <!-- Mobile menu button-->
                     
-              
-                    <button
-                      aria-controls="mobile menu"
-                      aria-expanded="false"
-                      aria-label="mobile button"
-                      class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
-                      part="menu-icon-button"
-                      type="button"
-                    >
-                      
-                
-                      <!--?lit$7821081631$-->
-                       
-                      <svg
-                        aria-hidden="true"
-                        aria-label="Open menu"
-                        class="block h-6 w-6"
-                        fill="currentColor"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        
-  
-                        <path
-                          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        
-
-                      </svg>
-                      
-              
-                    </button>
+            
+                    <!--?lit$311819298$-->
                     
             
                   </div>
@@ -1181,7 +721,7 @@ R {
                     >
                       
                 
-                      <!--?lit$7821081631$-->
+                      <!--?lit$311819298$-->
                       <img
                         alt="Company logo"
                         class="hidden h-8 w-8 lg:block"
@@ -1209,7 +749,7 @@ R {
                         <h2
                           part="headerText"
                         >
-                          <!--?lit$7821081631$-->
+                          <!--?lit$311819298$-->
                           YML
                         </h2>
                         
@@ -1230,9 +770,9 @@ R {
                           
                  
                 
-                          <!--?lit$7821081631$-->
+                          <!--?lit$311819298$-->
                            
-                          <!--?lit$7821081631$-->
+                          <!--?lit$311819298$-->
                           <!--?-->
                           
                 
@@ -1288,9 +828,9 @@ R {
                   >
                     
           
-                    <!--?lit$7821081631$-->
+                    <!--?lit$311819298$-->
                      
-                    <!--?lit$7821081631$-->
+                    <!--?lit$311819298$-->
                     <!--?-->
                     
           
@@ -1318,304 +858,11 @@ R {
             ],
             "type": 1,
           },
-          I {
-            "_$AH": Array [
-              "hover:text-white",
-            ],
-            "_$AM": [Circular],
-            "_$AN": undefined,
-            "element": <button
-              aria-controls="mobile menu"
-              aria-expanded="false"
-              aria-label="mobile button"
-              class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
-              part="menu-icon-button"
-              type="button"
-            >
-              
-                
-              <!--?lit$7821081631$-->
-               
-              <svg
-                aria-hidden="true"
-                aria-label="Open menu"
-                class="block h-6 w-6"
-                fill="currentColor"
-                stroke="currentColor"
-                stroke-width="1.5"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                
-  
-                <path
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                
-
-              </svg>
-              
-              
-            </button>,
-            "name": "class",
-            "options": Object {
-              "host": [Circular],
-              "isConnected": true,
-              "renderBefore": null,
-            },
-            "strings": Array [
-              "inline-flex items-center justify-center rounded-md p-2 ",
-              " focus:outline-none btn-tap-color",
-            ],
-            "type": 1,
-          },
-          I {
-            "_$AH": "mobile menu",
-            "_$AM": [Circular],
-            "_$AN": undefined,
-            "element": <button
-              aria-controls="mobile menu"
-              aria-expanded="false"
-              aria-label="mobile button"
-              class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
-              part="menu-icon-button"
-              type="button"
-            >
-              
-                
-              <!--?lit$7821081631$-->
-               
-              <svg
-                aria-hidden="true"
-                aria-label="Open menu"
-                class="block h-6 w-6"
-                fill="currentColor"
-                stroke="currentColor"
-                stroke-width="1.5"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                
-  
-                <path
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                
-
-              </svg>
-              
-              
-            </button>,
-            "name": "aria-controls",
-            "options": Object {
-              "host": [Circular],
-              "isConnected": true,
-              "renderBefore": null,
-            },
-            "type": 1,
-          },
-          I {
-            "_$AH": false,
-            "_$AM": [Circular],
-            "_$AN": undefined,
-            "element": <button
-              aria-controls="mobile menu"
-              aria-expanded="false"
-              aria-label="mobile button"
-              class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
-              part="menu-icon-button"
-              type="button"
-            >
-              
-                
-              <!--?lit$7821081631$-->
-               
-              <svg
-                aria-hidden="true"
-                aria-label="Open menu"
-                class="block h-6 w-6"
-                fill="currentColor"
-                stroke="currentColor"
-                stroke-width="1.5"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                
-  
-                <path
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                
-
-              </svg>
-              
-              
-            </button>,
-            "name": "aria-expanded",
-            "options": Object {
-              "host": [Circular],
-              "isConnected": true,
-              "renderBefore": null,
-            },
-            "type": 1,
-          },
-          I {
-            "_$AH": "mobile button",
-            "_$AM": [Circular],
-            "_$AN": undefined,
-            "element": <button
-              aria-controls="mobile menu"
-              aria-expanded="false"
-              aria-label="mobile button"
-              class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
-              part="menu-icon-button"
-              type="button"
-            >
-              
-                
-              <!--?lit$7821081631$-->
-               
-              <svg
-                aria-hidden="true"
-                aria-label="Open menu"
-                class="block h-6 w-6"
-                fill="currentColor"
-                stroke="currentColor"
-                stroke-width="1.5"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                
-  
-                <path
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                
-
-              </svg>
-              
-              
-            </button>,
-            "name": "aria-label",
-            "options": Object {
-              "host": [Circular],
-              "isConnected": true,
-              "renderBefore": null,
-            },
-            "type": 1,
-          },
-          Ut {
-            "_$AH": [Function],
-            "_$AM": [Circular],
-            "_$AN": undefined,
-            "element": <button
-              aria-controls="mobile menu"
-              aria-expanded="false"
-              aria-label="mobile button"
-              class="inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none btn-tap-color"
-              part="menu-icon-button"
-              type="button"
-            >
-              
-                
-              <!--?lit$7821081631$-->
-               
-              <svg
-                aria-hidden="true"
-                aria-label="Open menu"
-                class="block h-6 w-6"
-                fill="currentColor"
-                stroke="currentColor"
-                stroke-width="1.5"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                
-  
-                <path
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                
-
-              </svg>
-              
-              
-            </button>,
-            "name": "click",
-            "options": Object {
-              "host": [Circular],
-              "isConnected": true,
-              "renderBefore": null,
-            },
-            "type": 5,
-          },
           H {
-            "_$AA": <!--?lit$7821081631$-->,
+            "_$AA": <!--?lit$311819298$-->,
             "_$AB": 
-              ,
-            "_$AH": Tt {
-              "_$AD": P {
-                "el": <template />,
-                "parts": Array [
-                  Object {
-                    "ctor": [Function],
-                    "index": 0,
-                    "name": "aria-label",
-                    "strings": Array [
-                      "",
-                      "",
-                    ],
-                    "type": 1,
-                  },
-                ],
-              },
-              "_$AM": [Circular],
-              "_$AN": undefined,
-              "u": Array [
-                I {
-                  "_$AH": "Open menu",
-                  "_$AM": [Circular],
-                  "_$AN": undefined,
-                  "element": <svg
-                    aria-hidden="true"
-                    aria-label="Open menu"
-                    class="block h-6 w-6"
-                    fill="currentColor"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    
-  
-                    <path
-                      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    
-
-                  </svg>,
-                  "name": "aria-label",
-                  "options": Object {
-                    "host": [Circular],
-                    "isConnected": true,
-                    "renderBefore": null,
-                  },
-                  "type": 1,
-                },
-              ],
-            },
+            ,
+            "_$AH": Symbol(lit-nothing),
             "_$AM": [Circular],
             "_$AN": undefined,
             "_$Cm": true,
@@ -1627,7 +874,7 @@ R {
             "type": 2,
           },
           H {
-            "_$AA": <!--?lit$7821081631$-->,
+            "_$AA": <!--?lit$311819298$-->,
             "_$AB": 
               ,
             "_$AH": Tt {
@@ -1722,7 +969,7 @@ R {
               <h2
                 part="headerText"
               >
-                <!--?lit$7821081631$-->
+                <!--?lit$311819298$-->
                 YML
               </h2>
               
@@ -1741,7 +988,7 @@ R {
             "type": 1,
           },
           H {
-            "_$AA": <!--?lit$7821081631$-->,
+            "_$AA": <!--?lit$311819298$-->,
             "_$AB": null,
             "_$AH": "YML",
             "_$AM": [Circular],
@@ -1755,7 +1002,7 @@ R {
             "type": 2,
           },
           H {
-            "_$AA": <!--?lit$7821081631$-->,
+            "_$AA": <!--?lit$311819298$-->,
             "_$AB": 
                 ,
             "_$AH": Tt {
@@ -1772,7 +1019,7 @@ R {
               "_$AN": undefined,
               "u": Array [
                 H {
-                  "_$AA": <!--?lit$7821081631$-->,
+                  "_$AA": <!--?lit$311819298$-->,
                   "_$AB": <!--?-->,
                   "_$AH": Array [],
                   "_$AM": [Circular],
@@ -1830,9 +1077,9 @@ R {
               >
                 
           
-                <!--?lit$7821081631$-->
+                <!--?lit$311819298$-->
                  
-                <!--?lit$7821081631$-->
+                <!--?lit$311819298$-->
                 <!--?-->
                 
           
@@ -1850,7 +1097,7 @@ R {
             "type": 4,
           },
           H {
-            "_$AA": <!--?lit$7821081631$-->,
+            "_$AA": <!--?lit$311819298$-->,
             "_$AB": 
           ,
             "_$AH": Tt {
@@ -1867,7 +1114,7 @@ R {
               "_$AN": undefined,
               "u": Array [
                 H {
-                  "_$AA": <!--?lit$7821081631$-->,
+                  "_$AA": <!--?lit$311819298$-->,
                   "_$AB": <!--?-->,
                   "_$AH": Array [],
                   "_$AM": [Circular],

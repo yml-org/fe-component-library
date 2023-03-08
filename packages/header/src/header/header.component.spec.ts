@@ -1,6 +1,7 @@
 import { HeaderComponent } from './header.component';
+import { Nav } from '../types/header.component';
 
-const navOptions = {
+const navOptions : Nav = {
   mode: 'dark',
   logo: 'https://ymedialabs.atlassian.net/s/1jmxwi/b/8/d35727372e299c952e88a10ef82bbaf6/_/jira-logo-scaled.png',
   headerText: 'YML',
@@ -45,16 +46,16 @@ describe('ymlwebcl-header', () => {
     headerElement.setAttribute('openMenu', 'false');
     window.document.body.appendChild(headerElement);
     await headerElement.updateComplete;
-    const renderedComponent = getShadowRoot(HEADER_COMPONENT)?.innerHTML;
-    expect(renderedComponent.indexOf('false')).not.toBe(-1);
+    const renderedComponent =  document.querySelector('ymlwebcl-header').getAttribute('openMenu');
+    expect(renderedComponent).toBe('false');
   });
 
   it('sets the openMenu to true', async () => {
     headerElement.setAttribute('openMenu', 'true');
     window.document.body.appendChild(headerElement);
     await headerElement.updateComplete;
-    const renderedComponent = getShadowRoot(HEADER_COMPONENT)?.innerHTML;
-    expect(renderedComponent.indexOf('true')).not.toBe(-1);
+    const renderedComponent = document.querySelector('ymlwebcl-header').getAttribute('openMenu');
+    expect(renderedComponent).toBe('true');
   });
 
   it('sets the default header hoverTextColor correctly', async () => {
@@ -91,11 +92,11 @@ describe('ymlwebcl-header', () => {
   it('renders the component passed in slot', async () => {
     headerElement['navOptions'] = navOptions;
     window.document.body.appendChild(headerElement);
-    document.querySelector('header-component').innerHTML =
+    document.querySelector('ymlwebcl-header').innerHTML =
       '<div slot="bell" class="slot-test">Test</div>';
     await headerElement.updateComplete;
     const elem = document
-      .querySelector('header-component')
+      .querySelector('ymlwebcl-header')
       .querySelector('div');
     expect(elem.classList.contains('slot-test')).toBe(true);
   });
@@ -115,7 +116,7 @@ describe('ymlwebcl-header', () => {
     window.document.body.appendChild(headerElement);
     await headerElement.updateComplete;
     document
-      .querySelector('header-component')
+      .querySelector('ymlwebcl-header')
       .addEventListener('my-custom-event', func);
     const customElem = getShadowRoot(HEADER_COMPONENT);
     const btnElem = customElem.querySelectorAll('button');
