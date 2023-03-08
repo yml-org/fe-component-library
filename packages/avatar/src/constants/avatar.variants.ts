@@ -1,4 +1,4 @@
-import { AvatarVariant } from 'types/avatar';
+import { AvatarVariant } from '../types/avatar';
 
 const roundedVariant: AvatarVariant = {
   isRounded: true,
@@ -20,9 +20,22 @@ const withSlot: AvatarVariant = {
   isRounded: true,
   slotName: 'avatar-slot',
 };
+
+const withRoundedBorderAvatar: AvatarVariant = {
+  ...withDefaultIcon,
+  isRounded: true,
+  hasBorder: true,
+};
+
+const withShadow: AvatarVariant = {
+  ...withRoundedBorderAvatar,
+  hasShadow: true,
+};
 export {
   roundedVariant,
   withDefaultIcon,
   withCustomHeightWidth,
   withSlot,
+  withRoundedBorderAvatar,
+  withShadow,
 };
