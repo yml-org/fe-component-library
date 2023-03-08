@@ -1,14 +1,16 @@
-import { LitElement } from 'lit-element';
+import { CardComponent } from './card.component';
 
-describe('card-component', () => {
-  const CARD_COMPONENT = 'card-component';
-  let cardElement: LitElement;
+describe('ymlwebcl-card', () => {
+  const CARD_COMPONENT = 'ymlwebcl-card';
+  let cardElement: CardComponent;
 
-  const getShadowRoot = (tagName: string): ShadowRoot =>
+  const getShadowRoot = (tagName: string): ShadowRoot | null =>
     document.body.getElementsByTagName(tagName)[0].shadowRoot;
 
   beforeEach(() => {
-    cardElement = window.document.createElement(CARD_COMPONENT) as LitElement;
+    cardElement = window.document.createElement(
+      CARD_COMPONENT
+    ) as CardComponent;
     document.body.appendChild(cardElement);
   });
 
@@ -26,7 +28,7 @@ describe('card-component', () => {
     cardElement['hasRoundedBorder'] = true;
     await cardElement.updateComplete;
     const cardComponentClassList =
-      getShadowRoot(CARD_COMPONENT).querySelector('div').classList;
+      getShadowRoot(CARD_COMPONENT)?.querySelector('div')?.classList;
     expect(cardComponentClassList).toContain('rounded-lg');
   });
 
@@ -35,7 +37,7 @@ describe('card-component', () => {
     cardElement['cardWidth'] = CUSTOM_WIDTH;
     await cardElement.updateComplete;
     const cardComponentStyle =
-      getShadowRoot(CARD_COMPONENT).querySelector('div').style;
+      getShadowRoot(CARD_COMPONENT)?.querySelector('div')?.style;
     expect(cardComponentStyle?.width).toBe(`${CUSTOM_WIDTH}px`);
   });
 
@@ -44,7 +46,7 @@ describe('card-component', () => {
     cardElement['cardHeight'] = CUSTOM_HEIGHT;
     await cardElement.updateComplete;
     const cardComponentStyle =
-      getShadowRoot(CARD_COMPONENT).querySelector('div').style;
+      getShadowRoot(CARD_COMPONENT)?.querySelector('div')?.style;
     expect(cardComponentStyle?.minHeight).toBe(`${CUSTOM_HEIGHT}px`);
   });
 
@@ -52,12 +54,12 @@ describe('card-component', () => {
     cardElement['customSlotName'] = 'card-slot';
     cardElement['showCustomSlot'] = true;
     window.document.body.appendChild(cardElement);
-    document.querySelector('card-component').innerHTML =
+    (document.querySelector('ymlwebcl-card') || document.body).innerHTML =
       '<div slot="card-slot" class="slot-test">Test</div>';
     await cardElement.updateComplete;
     const elemClassList = document
-      .querySelector('card-component')
-      .querySelector('div').classList;
+      ?.querySelector('ymlwebcl-card')
+      ?.querySelector('div')?.classList;
     expect(elemClassList).toContain('slot-test');
   });
 
@@ -65,7 +67,7 @@ describe('card-component', () => {
     cardElement['isHorizontal'] = true;
     await cardElement.updateComplete;
     const cardComponentClassList =
-      getShadowRoot(CARD_COMPONENT).querySelector('div').classList;
+      getShadowRoot(CARD_COMPONENT)?.querySelector('div')?.classList;
     expect(cardComponentClassList).toContain('flex-row');
   });
 });

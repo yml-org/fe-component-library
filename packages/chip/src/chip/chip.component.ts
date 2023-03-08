@@ -3,25 +3,25 @@ import { customElement, property } from 'lit/decorators.js';
 import { TailwindElement } from '../shared/tailwind.element';
 import { msg, str } from '@lit/localize';
 
-@customElement('chip-component')
+@customElement('ymlwebcl-chip')
 export class ChipComponent extends TailwindElement(null) {
-  @property()
+  @property({ type: String, reflect: true })
   text?: string = 'Label';
 
-  @property()
+  @property({ type: String, reflect: true })
   rightSlotName?: string;
 
-  @property()
+  @property({ type: String, reflect: true })
   leftSlotName?: string;
 
   @property()
   chipPartAttribute?: string = 'webcl-chip';
 
-  protected getContainerClassList() {
+  private getContainerClassList() {
     return `[word-wrap: break-word] inline-flex flex-row items-center my-[5px] pt-[4px] pb-[6px] px-[12px]`;
   }
 
-  render() {
+  public override render() {
     return html`
       <div class=${this.getContainerClassList()} part=${this.chipPartAttribute}>
         <slot name=${this.leftSlotName}></slot>
@@ -29,11 +29,5 @@ export class ChipComponent extends TailwindElement(null) {
         <slot name=${this.rightSlotName}></slot>
       </div>
     `;
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    'chip-component': ChipComponent;
   }
 }

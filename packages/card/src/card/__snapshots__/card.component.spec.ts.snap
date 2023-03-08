@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`card-component matches component snapshot 1`] = `
+exports[`ymlwebcl-card matches component snapshot 1`] = `
 v {
   "_$AL": Map {},
-  "_$Do": N {
+  "_$Do": O {
     "_$AA": <!---->,
     "_$AB": null,
-    "_$AH": gt {
-      "_$AD": H {
+    "_$AH": yt {
+      "_$AD": N {
         "el": <template />,
         "parts": Array [
           Object {
@@ -39,7 +39,7 @@ v {
       "_$AM": [Circular],
       "_$AN": undefined,
       "u": Array [
-        U {
+        L {
           "_$AH": "webcl-card-wrapper flex flex-col",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -50,7 +50,7 @@ v {
           >
             
       
-            <!--?lit$026050424$-->
+            <!--?lit$006157844$-->
             <div
               class="webcl-card-header-section"
               part="webcl-card-header"
@@ -105,7 +105,7 @@ v {
           },
           "type": 1,
         },
-        U {
+        L {
           "_$AH": "width:300px; min-height:300px",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -116,7 +116,7 @@ v {
           >
             
       
-            <!--?lit$026050424$-->
+            <!--?lit$006157844$-->
             <div
               class="webcl-card-header-section"
               part="webcl-card-header"
@@ -171,12 +171,12 @@ v {
           },
           "type": 1,
         },
-        N {
-          "_$AA": <!--?lit$026050424$-->,
+        O {
+          "_$AA": <!--?lit$006157844$-->,
           "_$AB": 
     ,
-          "_$AH": gt {
-            "_$AD": H {
+          "_$AH": yt {
+            "_$AD": N {
               "el": <template />,
               "parts": Array [],
             },
@@ -206,6 +206,7 @@ v {
     },
     "type": 2,
   },
+  "_$EC": undefined,
   "_$E_": Promise {},
   "_$Ei": undefined,
   "_$El": null,
@@ -225,11 +226,11 @@ v {
     "renderBefore": null,
   },
   "renderRoot": ShadowRoot {
-    "_$litPart$": N {
+    "_$litPart$": O {
       "_$AA": <!---->,
       "_$AB": null,
-      "_$AH": gt {
-        "_$AD": H {
+      "_$AH": yt {
+        "_$AD": N {
           "el": <template />,
           "parts": Array [
             Object {
@@ -261,7 +262,7 @@ v {
         "_$AM": [Circular],
         "_$AN": undefined,
         "u": Array [
-          U {
+          L {
             "_$AH": "webcl-card-wrapper flex flex-col",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -272,7 +273,7 @@ v {
             >
               
       
-              <!--?lit$026050424$-->
+              <!--?lit$006157844$-->
               <div
                 class="webcl-card-header-section"
                 part="webcl-card-header"
@@ -327,7 +328,7 @@ v {
             },
             "type": 1,
           },
-          U {
+          L {
             "_$AH": "width:300px; min-height:300px",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -338,7 +339,7 @@ v {
             >
               
       
-              <!--?lit$026050424$-->
+              <!--?lit$006157844$-->
               <div
                 class="webcl-card-header-section"
                 part="webcl-card-header"
@@ -393,12 +394,12 @@ v {
             },
             "type": 1,
           },
-          N {
-            "_$AA": <!--?lit$026050424$-->,
+          O {
+            "_$AA": <!--?lit$006157844$-->,
             "_$AB": 
     ,
-            "_$AH": gt {
-              "_$AD": H {
+            "_$AH": yt {
+              "_$AD": N {
                 "el": <template />,
                 "parts": Array [],
               },

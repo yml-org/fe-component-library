@@ -1,20 +1,22 @@
-import { LitElement } from 'lit-element';
 import { withTextProp, withSlot } from '../constants/chip.variants';
+import { ChipComponent } from './chip.component';
 
-describe('chip-component', () => {
-  const CHIP_COMPONENT = 'chip-component';
-  let chipElement: LitElement;
+describe('ymlwebcl-chip', () => {
+  const CHIP_COMPONENT = 'ymlwebcl-chip';
+  let chipElement: ChipComponent;
 
-  const getShadowRoot = (tagName: string): ShadowRoot =>
+  const getShadowRoot = (tagName: string): ShadowRoot | null =>
     document.body.getElementsByTagName(tagName)[0].shadowRoot;
 
   beforeEach(() => {
-    chipElement = window.document.createElement(CHIP_COMPONENT) as LitElement;
+    chipElement = window?.document?.createElement(
+      CHIP_COMPONENT
+    ) as ChipComponent;
     document.body.appendChild(chipElement);
   });
 
   afterEach(() => {
-    document.body.getElementsByTagName(CHIP_COMPONENT)[0].remove();
+    document.body.getElementsByTagName(CHIP_COMPONENT)[0]?.remove();
   });
 
   it('matches component snapshot', async () => {
@@ -26,14 +28,14 @@ describe('chip-component', () => {
   it('sets the text property correctly', async () => {
     chipElement['text'] = withTextProp.text;
     await chipElement.updateComplete;
-    const elem = getShadowRoot(CHIP_COMPONENT).querySelector('div').innerText;
+    const elem = getShadowRoot(CHIP_COMPONENT)?.querySelector('div')?.innerText;
     expect(elem).toBe(withTextProp.text);
   });
 
   it('sets the chipPartAttribute property correctly', async () => {
     chipElement['chipPartAttribute'] = withSlot.chipPartAttribute;
     await chipElement.updateComplete;
-    const elem = getShadowRoot(CHIP_COMPONENT).querySelector('div');
+    const elem = getShadowRoot(CHIP_COMPONENT)?.querySelector('div');
     expect(elem.getAttribute('part')).toBe(withSlot.chipPartAttribute);
   });
 

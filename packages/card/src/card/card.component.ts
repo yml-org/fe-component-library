@@ -4,36 +4,36 @@ import { TailwindElement } from '../shared/tailwind.element';
 import { CardDimensionUnit } from '../types/card';
 import { CardDimensionUnits } from '../constants/card';
 
-@customElement('card-component')
+@customElement('ymlwebcl-card')
 export class CardComponent extends TailwindElement(null) {
-  @property()
+  @property({ type: Boolean, reflect: true })
   hasRoundedBorder?: boolean = false;
-  @property()
+  @property({ type: String, reflect: true })
   customSlotName?: string = '';
-  @property()
+  @property({ type: Boolean, reflect: true })
   showCustomSlot?: boolean = false;
-  @property()
+  @property({ type: Number, reflect: true })
   cardHeight?: number = 300;
-  @property()
+  @property({ type: Number, reflect: true })
   cardWidth?: number = 300;
-  @property()
+  @property({ reflect: true })
   cardDimensionUnit?: CardDimensionUnit = CardDimensionUnits.Pixel;
-  @property()
+  @property({ type: Boolean, reflect: true })
   isHorizontal?: boolean = false;
 
-  protected getContainerClassList() {
+  private getContainerClassList() {
     const { hasRoundedBorder, isHorizontal } = this;
     return `webcl-card-wrapper flex ${isHorizontal ? 'flex-row' : 'flex-col'} ${
       hasRoundedBorder ? 'rounded-lg' : ''
     }`.trim();
   }
 
-  protected setCardDimensions() {
+  private setCardDimensions() {
     const { cardHeight, cardWidth, cardDimensionUnit } = this;
     return `width:${cardWidth}${cardDimensionUnit}; min-height:${cardHeight}${cardDimensionUnit}`;
   }
 
-  protected renderSlots() {
+  private renderSlots() {
     const { showCustomSlot } = this;
     return !showCustomSlot
       ? html`<div class="webcl-card-header-section" part="webcl-card-header">
@@ -50,7 +50,7 @@ export class CardComponent extends TailwindElement(null) {
           </div>`
       : html`<slot name=${this.customSlotName} />`;
   }
-  render() {
+  public override render() {
     return html`<div
       class=${this.getContainerClassList()}
       style=${this.setCardDimensions()}
@@ -58,11 +58,5 @@ export class CardComponent extends TailwindElement(null) {
     >
       ${this.renderSlots()}
     </div>`;
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    'card-component': CardComponent;
   }
 }
