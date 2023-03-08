@@ -3,15 +3,15 @@ import { customElement, property } from 'lit/decorators.js';
 import { TailwindElement } from '../shared/tailwind.element';
 import { msg, str } from '@lit/localize';
 
-@customElement('progress-bar-component')
+@customElement('ymlwebcl-progressbar')
 export class ProgressBarComponent extends TailwindElement(null) {
-  @property()
+  @property({ type: Number, reflect: true })
   percent: number;
-  @property()
+  @property({ type: Number, reflect: true })
   max?: number = 100;
-  @property()
+  @property({ type: String, reflect: true })
   containerPartAttribute?: string = 'webcl-progress-bar-container';
-  @property()
+  @property({ type: String, reflect: true })
   progressBarPartAttribute?: string = 'webcl-progress-bar';
 
   protected getProgressBarStyle() {
@@ -35,11 +35,5 @@ export class ProgressBarComponent extends TailwindElement(null) {
         ></div>
       </div>
     `;
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    'progress-bar-component': ProgressBarComponent;
   }
 }

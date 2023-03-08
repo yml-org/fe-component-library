@@ -1,19 +1,21 @@
-import { LitElement } from 'lit-element';
+import { LinkComponent } from './link.component';
 import {
   linkConfig,
   linkConfigTypeButton,
   linkConfigSlot,
 } from '../constants/link.variants';
 
-describe('link-component', () => {
-  const LINK_COMPONENT = 'link-component';
-  let linkElement: LitElement;
+describe('ymlwebcl-link', () => {
+  const LINK_COMPONENT = 'ymlwebcl-link';
+  let linkElement: LinkComponent;
 
-  const getShadowRoot = (tagName: string): ShadowRoot =>
+  const getShadowRoot = (tagName: string): ShadowRoot | null =>
     document.body.getElementsByTagName(tagName)[0].shadowRoot;
 
   beforeEach(() => {
-    linkElement = window.document.createElement(LINK_COMPONENT) as LitElement;
+    linkElement = window.document.createElement(
+      LINK_COMPONENT
+    ) as LinkComponent;
     document.body.appendChild(linkElement);
   });
 
@@ -84,4 +86,3 @@ describe('link-component', () => {
     expect(elem.classList.contains('slot-test')).toBe(true);
   });
 });
-

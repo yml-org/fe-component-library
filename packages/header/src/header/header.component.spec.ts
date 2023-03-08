@@ -1,4 +1,4 @@
-import { LitElement } from 'lit-element';
+import { HeaderComponent } from './header.component';
 
 const navOptions = {
   mode: 'dark',
@@ -17,17 +17,17 @@ const navOptions = {
   },
 };
 
-describe('header-component', () => {
-  const HEADER_COMPONENT = 'header-component';
-  let headerElement: LitElement;
+describe('ymlwebcl-header', () => {
+  const HEADER_COMPONENT = 'ymlwebcl-header';
+  let headerElement: HeaderComponent;
 
-  const getShadowRoot = (tagName: string): ShadowRoot =>
+  const getShadowRoot = (tagName: string): ShadowRoot | null =>
     document.body.getElementsByTagName(tagName)[0].shadowRoot;
 
   beforeEach(() => {
     headerElement = window.document.createElement(
       HEADER_COMPONENT
-    ) as LitElement;
+    ) as HeaderComponent;
     document.body.appendChild(headerElement);
   });
 
@@ -45,7 +45,7 @@ describe('header-component', () => {
     headerElement.setAttribute('openMenu', 'false');
     window.document.body.appendChild(headerElement);
     await headerElement.updateComplete;
-    const renderedComponent = getShadowRoot(HEADER_COMPONENT).innerHTML;
+    const renderedComponent = getShadowRoot(HEADER_COMPONENT)?.innerHTML;
     expect(renderedComponent.indexOf('false')).not.toBe(-1);
   });
 
@@ -53,7 +53,7 @@ describe('header-component', () => {
     headerElement.setAttribute('openMenu', 'true');
     window.document.body.appendChild(headerElement);
     await headerElement.updateComplete;
-    const renderedComponent = getShadowRoot(HEADER_COMPONENT).innerHTML;
+    const renderedComponent = getShadowRoot(HEADER_COMPONENT)?.innerHTML;
     expect(renderedComponent.indexOf('true')).not.toBe(-1);
   });
 

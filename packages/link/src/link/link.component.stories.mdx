@@ -35,7 +35,7 @@ The link has the following types:
 
 Basic link component without `props`
 
-export const TemplateDefault = () => html`<link-component></link-component>`;
+export const TemplateDefault = () => html`<ymlwebcl-link></ymlwebcl-link>`;
 
 <Canvas columns={1}>
   <Story name="default">{TemplateDefault.bind({})}</Story>
@@ -43,7 +43,7 @@ export const TemplateDefault = () => html`<link-component></link-component>`;
 
 Link component with `props`
 
-export const TemplateProps = (args) => html`<link-component
+export const TemplateProps = (args) => html`<ymlwebcl-link
   .href=${args.linkProps.href}
   .text=${args.linkProps.text}
   .linkTitle=${args.linkProps.linkTitle}
@@ -51,7 +51,7 @@ export const TemplateProps = (args) => html`<link-component
   .target=${args.linkProps.target}
   .type=${args.linkProps.type}
 >
-</link-component>`;
+</ymlwebcl-link>`;
 
 <Canvas columns={1}>
   <Story
@@ -79,7 +79,7 @@ Link component with type `button`
 
 Link component with `slot`
 
-export const TemplateSlot = (args) => html`<link-component
+export const TemplateSlot = (args) => html`<ymlwebcl-link
   .href=${args.linkSlot.href}
   .text=${args.linkSlot.text}
   .linkTitle=${args.linkSlot.linkTitle}
@@ -96,7 +96,7 @@ export const TemplateSlot = (args) => html`<link-component
       alt=""
     />
   </div>
-</link-component>`;
+</ymlwebcl-link>`;
 
 <Canvas columns={1}>
   <Story

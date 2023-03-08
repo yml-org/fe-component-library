@@ -2,19 +2,18 @@ import { msg, str } from '@lit/localize';
 import { html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { TailwindElement } from '../shared/tailwind.element';
-import {Size } from '../constants/image.component'
+import { Size } from '../constants/image.component';
 
-@customElement('image-component')
+@customElement('ymlwebcl-image')
 export class ImageComponent extends TailwindElement(null) {
-
-  @property()
-  altText?:string="";
-  @property()
-  src?:string = "";
-  @property()
-  placeholderImg?:string= "";
-  @property()
-  size?: Size= {};
+  @property({ type: String, reflect: true })
+  altText?: string = '';
+  @property({ type: String, reflect: true })
+  src?: string = '';
+  @property({ type: String, reflect: true })
+  placeholderImg?: string = '';
+  @property({ reflect: true })
+  size?: Size = {};
 
   render() {
     return html`
@@ -41,11 +40,5 @@ export class ImageComponent extends TailwindElement(null) {
      }"
      >
      </img>`;
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    'image-component': ImageComponent;
   }
 }

@@ -1,16 +1,16 @@
-import { LitElement } from 'lit-element';
+import { ProgressBarComponent } from './progressBar.component';
 
-describe('progress-bar-component', () => {
-  const PROGRESS_BAR_COMPONENT = 'progress-bar-component';
-  let progressBarEle: LitElement;
+describe('ymlwebcl-progressbar', () => {
+  const PROGRESS_BAR_COMPONENT = 'ymlwebcl-progressbar';
+  let progressBarEle: ProgressBarComponent;
 
-  const getShadowRoot = (tagName: string): ShadowRoot =>
+  const getShadowRoot = (tagName: string): ShadowRoot | null =>
     document.body.getElementsByTagName(tagName)[0].shadowRoot;
 
   beforeEach(() => {
     progressBarEle = window.document.createElement(
       PROGRESS_BAR_COMPONENT
-    ) as LitElement;
+    ) as ProgressBarComponent;
     document.body.appendChild(progressBarEle);
   });
 

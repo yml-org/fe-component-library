@@ -1,0 +1,6 @@
+{
+  ".": "./src/index.js",
+  "./src/*.js": "./src/*.js",
+  "./package.json": "./package.json",
+  "./link.component.js": "./link.component.js"
+}
