@@ -6,7 +6,7 @@ $ {
   "_$Do": U {
     "_$AA": <!---->,
     "_$AB": null,
-    "_$AH": gt {
+    "_$AH": yt {
       "_$AD": O {
         "el": <template />,
         "parts": Array [
@@ -74,7 +74,7 @@ $ {
       "_$AN": undefined,
       "u": Array [
         L {
-          "_$AH": "webcl-avatar-container flex items-center justify-center ",
+          "_$AH": "webcl-avatar-container flex items-center justify-center",
           "_$AM": [Circular],
           "_$AN": undefined,
           "element": <div
@@ -85,10 +85,10 @@ $ {
           >
             
       
-            <!--?lit$33669318$-->
+            <!--?lit$9078157464$-->
             
       
-            <!--?lit$33669318$-->
+            <!--?lit$9078157464$-->
             
     
           </div>,
@@ -112,41 +112,14 @@ $ {
           >
             
       
-            <!--?lit$33669318$-->
+            <!--?lit$9078157464$-->
             
       
-            <!--?lit$33669318$-->
+            <!--?lit$9078157464$-->
             
     
           </div>,
           "name": "style",
-          "options": Object {
-            "host": [Circular],
-            "isConnected": true,
-            "renderBefore": null,
-          },
-          "type": 1,
-        },
-        L {
-          "_$AH": "webcl-avatar",
-          "_$AM": [Circular],
-          "_$AN": undefined,
-          "element": <div
-            class="webcl-avatar-container flex items-center justify-center "
-            part="webcl-avatar"
-            role="button"
-            style="width: 75px;height: 75px;"
-          >
-            
-      
-            <!--?lit$33669318$-->
-            
-      
-            <!--?lit$33669318$-->
-            
-    
-          </div>,
-          "name": "part",
           "options": Object {
             "host": [Circular],
             "isConnected": true,
@@ -166,10 +139,10 @@ $ {
           >
             
       
-            <!--?lit$33669318$-->
+            <!--?lit$9078157464$-->
             
       
-            <!--?lit$33669318$-->
+            <!--?lit$9078157464$-->
             
     
           </div>,
@@ -193,10 +166,10 @@ $ {
           >
             
       
-            <!--?lit$33669318$-->
+            <!--?lit$9078157464$-->
             
       
-            <!--?lit$33669318$-->
+            <!--?lit$9078157464$-->
             
     
           </div>,
@@ -209,7 +182,7 @@ $ {
           "type": 5,
         },
         U {
-          "_$AA": <!--?lit$33669318$-->,
+          "_$AA": <!--?lit$9078157464$-->,
           "_$AB": 
       ,
           "_$AH": Symbol(lit-nothing),
@@ -224,7 +197,7 @@ $ {
           "type": 2,
         },
         U {
-          "_$AA": <!--?lit$33669318$-->,
+          "_$AA": <!--?lit$9078157464$-->,
           "_$AB": 
     ,
           "_$AH": Symbol(lit-nothing),
@@ -272,7 +245,7 @@ $ {
     "_$litPart$": U {
       "_$AA": <!---->,
       "_$AB": null,
-      "_$AH": gt {
+      "_$AH": yt {
         "_$AD": O {
           "el": <template />,
           "parts": Array [
@@ -340,7 +313,7 @@ $ {
         "_$AN": undefined,
         "u": Array [
           L {
-            "_$AH": "webcl-avatar-container flex items-center justify-center ",
+            "_$AH": "webcl-avatar-container flex items-center justify-center",
             "_$AM": [Circular],
             "_$AN": undefined,
             "element": <div
@@ -351,10 +324,10 @@ $ {
             >
               
       
-              <!--?lit$33669318$-->
+              <!--?lit$9078157464$-->
               
       
-              <!--?lit$33669318$-->
+              <!--?lit$9078157464$-->
               
     
             </div>,
@@ -378,41 +351,14 @@ $ {
             >
               
       
-              <!--?lit$33669318$-->
+              <!--?lit$9078157464$-->
               
       
-              <!--?lit$33669318$-->
+              <!--?lit$9078157464$-->
               
     
             </div>,
             "name": "style",
-            "options": Object {
-              "host": [Circular],
-              "isConnected": true,
-              "renderBefore": null,
-            },
-            "type": 1,
-          },
-          L {
-            "_$AH": "webcl-avatar",
-            "_$AM": [Circular],
-            "_$AN": undefined,
-            "element": <div
-              class="webcl-avatar-container flex items-center justify-center "
-              part="webcl-avatar"
-              role="button"
-              style="width: 75px;height: 75px;"
-            >
-              
-      
-              <!--?lit$33669318$-->
-              
-      
-              <!--?lit$33669318$-->
-              
-    
-            </div>,
-            "name": "part",
             "options": Object {
               "host": [Circular],
               "isConnected": true,
@@ -432,10 +378,10 @@ $ {
             >
               
       
-              <!--?lit$33669318$-->
+              <!--?lit$9078157464$-->
               
       
-              <!--?lit$33669318$-->
+              <!--?lit$9078157464$-->
               
     
             </div>,
@@ -459,10 +405,10 @@ $ {
             >
               
       
-              <!--?lit$33669318$-->
+              <!--?lit$9078157464$-->
               
       
-              <!--?lit$33669318$-->
+              <!--?lit$9078157464$-->
               
     
             </div>,
@@ -475,7 +421,7 @@ $ {
             "type": 5,
           },
           U {
-            "_$AA": <!--?lit$33669318$-->,
+            "_$AA": <!--?lit$9078157464$-->,
             "_$AB": 
       ,
             "_$AH": Symbol(lit-nothing),
@@ -490,7 +436,7 @@ $ {
             "type": 2,
           },
           U {
-            "_$AA": <!--?lit$33669318$-->,
+            "_$AA": <!--?lit$9078157464$-->,
             "_$AB": 
     ,
             "_$AH": Symbol(lit-nothing),

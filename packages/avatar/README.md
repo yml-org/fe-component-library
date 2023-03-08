@@ -122,16 +122,16 @@ If you want to contribute or share some thoughts, just get in touch with us.
 
 Enjoy.
 
-# button-component
+# ymlwebcl-avatar
 
 ## Install
 
 ```bash
-yarn add avatar-component
+yarn add ymlwebcl-avatar
 ```
 
 ```bash
-npm i avatar-component
+npm i ymlwebcl-avatar
 ```
 
 ## Usage
@@ -142,8 +142,8 @@ npm i avatar-component
 
 ```js
 <template>
-  <avatar-component isRounded=true>
-  </avatar-component>
+  <ymlwebcl-avatar isRounded=true>
+  </ymlwebcl-avatar>
 </template>
 
 <script>
@@ -162,9 +162,9 @@ export default {
 
 ```js
 <template>
-  <avatar-component
+  <ymlwebcl-avatar
     :isRounded="true"
-  ></avatar-component>
+  ></ymlwebcl-avatar>
 </template>
 
 <script>
@@ -183,7 +183,7 @@ export default {
 
 ```js
 <template>
-  <avatar-component
+  <ymlwebcl-avatar
     slotName="slot"
   >
     <div slot="slot">
@@ -194,7 +194,7 @@ export default {
         alt=""
       />
     </div>
-  </avatar-component>
+  </ymlwebcl-avatar>
 </template>
 
 <script>
@@ -221,7 +221,7 @@ npm i reactify-wc
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const AvatarComponent = reactifyWc("avatar-component");
+  const AvatarComponent = reactifyWc("ymlwebcl-avatar");
   return (
     <div className="App">
       <AvatarComponent />
@@ -235,7 +235,7 @@ export default App;
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const AvatarComponent = reactifyWc("avatar-component");
+  const AvatarComponent = reactifyWc("ymlwebcl-avatar");
   return (
     <div className="App">
       <AvatarComponent
@@ -251,7 +251,7 @@ export default App;
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const AvatarComponent = reactifyWc("avatar-component");
+  const AvatarComponent = reactifyWc("ymlwebcl-avatar");
   return (
     <div className="App">
       <AvatarComponent
@@ -279,7 +279,7 @@ Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/::part
 ```style.scss
 //The ::part CSS pseudo-element represents any element within a shadow tree that has a matching part attribute.
 
-avatar-component::part(webcl-avatar) { /*Note : avatar-component is the custom component and webcl-avatar is the name given to the the part attribute in element within avatar-component */
+ymlwebcl-avatar::part(webcl-avatar) { /*Note : ymlwebcl-avatar is the custom component and webcl-avatar is the name given to the the part attribute in element within ymlwebcl-avatar */
 background-color: yellow;
 color:black;
 //add css properties

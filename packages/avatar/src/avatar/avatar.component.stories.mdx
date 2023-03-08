@@ -35,7 +35,7 @@ Avatar component with rounded border with custom background
 
 export const roundedBorderTemplate = ({ isRounded }) =>
   html`<div class="rounded-avatar">
-    <avatar-component .isRounded=${isRounded}></avatar-component>
+    <ymlwebcl-avatar .isRounded=${isRounded}></ymlwebcl-avatar>
   </div>`;
 
 <Canvas>
@@ -79,10 +79,57 @@ export const withCustomWidthHeightTemplate = ({
   </Story>
 </Canvas>
 
+Avatar component with border
+
+export const withRoundedBorderAvatarTemplate = ({
+  showDefaultIcon,
+  defaultImage,
+  isRounded,
+  hasBorder,
+}) =>
+  html`<ymlwebcl-avatar
+    .showDefaultIcon=${showDefaultIcon}
+    .defaultImage=${defaultImage}
+    .isRounded=${isRounded}
+    .hasBorder=${hasBorder}
+  ></ymlwebcl-avatar>`;
+
+<Canvas>
+  <Story
+    name="with rounded border avatar variant"
+    args={withRoundedBorderAvatar}
+  >
+    {withRoundedBorderAvatarTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Avatar component with shadow and border
+
+export const withShadowTemplate = ({
+  showDefaultIcon,
+  defaultImage,
+  isRounded,
+  hasBorder,
+  hasShadow,
+}) =>
+  html`<ymlwebcl-avatar
+    .showDefaultIcon=${showDefaultIcon}
+    .defaultImage=${defaultImage}
+    .isRounded=${isRounded}
+    .hasBorder=${hasBorder}
+    .hasShadow=${hasShadow}
+  ></ymlwebcl-avatar>`;
+
+<Canvas>
+  <Story name=" avatar with shadow" args={withShadow}>
+    {withShadowTemplate.bind({})}
+  </Story>
+</Canvas>
+
 Avatar component with slot and custom children
 
 export const withSlotAndChildrenTemplate = ({ isRounded, slotName }) =>
-  html`<avatar-component .slotName=${slotName} .isRounded=${isRounded}>
+  html`<ymlwebcl-avatar .slotName=${slotName} .isRounded=${isRounded}>
     <div slot=${slotName}>${'YML'.charAt(0)}</div>
   </ymlwebcl-avatar>`;
 
@@ -96,7 +143,7 @@ Avatar component with custom styling
 
 export const withCustomStylingTemplate = ({ isRounded, slotName }) =>
   html` <div class="parent-container">
-    <avatar-component .slotName=${slotName} .isRounded=${isRounded}>
+    <ymlwebcl-avatar .slotName=${slotName} .isRounded=${isRounded}>
       <div slot=${slotName}>
         <span> ${'YML'.charAt(0)}</span>
       </div>

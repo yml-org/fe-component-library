@@ -122,16 +122,16 @@ If you want to contribute or share some thoughts, just get in touch with us.
 
 Enjoy.
 
-# button-component
+# ymlwebcl-button
 
 ## Install
 
 ```bash
-yarn add button-component
+yarn add ymlwebcl-button
 ```
 
 ```bash
-npm i button-component
+npm i ymlwebcl-button
 ```
 
 ## Usage
@@ -142,8 +142,8 @@ npm i button-component
 
 ```js
 <template>
-  <button-component text="button">
-  </button-component>
+  <ymlwebcl-button text="button">
+  </ymlwebcl-button>
 </template>
 
 <script>
@@ -162,14 +162,14 @@ export default {
 
 ```js
 <template>
-  <button-component
+  <ymlwebcl-button
     text="button"
     variant="contained"
     color="primary"
     :isDisabled="false"
     :fullWidth="false"
     :isRounded="false"
-  ></button-component>
+  ></ymlwebcl-button>
 </template>
 
 <script>
@@ -188,7 +188,7 @@ export default {
 
 ```js
 <template>
-  <button-component
+  <ymlwebcl-button
     text="button"
     variant="contained"
     color="primary"
@@ -205,7 +205,7 @@ export default {
         alt=""
       />
     </div>
-  </button-component>
+  </ymlwebcl-button>
 </template>
 
 <script>
@@ -232,7 +232,7 @@ npm i reactify-wc
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const ButtonComponent = reactifyWc("button-component");
+  const ButtonComponent = reactifyWc("ymlwebcl-button");
   return (
     <div className="App">
       <ButtonComponent text="button"></ButtonComponent>
@@ -246,7 +246,7 @@ export default App;
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const ButtonComponent = reactifyWc("button-component");
+  const ButtonComponent = reactifyWc("ymlwebcl-button");
   return (
     <div className="App">
       <ButtonComponent
@@ -267,7 +267,7 @@ export default App;
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const ButtonComponent = reactifyWc("button-component");
+  const ButtonComponent = reactifyWc("ymlwebcl-button");
   return (
     <div className="App">
       <ButtonComponent
@@ -300,7 +300,7 @@ Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/::part
 ```style.scss
 //The ::part CSS pseudo-element represents any element within a shadow tree that has a matching part attribute.
 
-button-component::part(custom-button) { /*Note : button-component is the custom component and custom-button is the name given to the the part attribute in element within button-component */
+ymlwebcl-button::part(custom-button) { /*Note : ymlwebcl-button is the custom component and custom-button is the name given to the the part attribute in element within ymlwebcl-button */
 background-color: yellow;
 color:black;
 //add css properties

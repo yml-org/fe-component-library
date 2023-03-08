@@ -3,27 +3,27 @@ import { customElement, property } from 'lit/decorators.js';
 import { TailwindElement } from '../shared/tailwind.element';
 import { msg, str } from '@lit/localize';
 
-@customElement('media-component')
+@customElement('ymlwebcl-media')
 export class MediaComponent extends TailwindElement(null) {
-  @property()
+  @property({ type: String, reflect: true })
   mediaTitle?: string = 'Title';
 
-  @property()
+  @property({ type: String, reflect: true })
   imageSlotName?: string;
 
-  @property()
+  @property({ type: String, reflect: true })
   staticContentSlotName?: string;
 
-  @property()
+  @property({ type: String, reflect: true })
   iconSlotName?: string;
 
-  @property()
+  @property({ type: String, reflect: true })
   mediaPartAttribute?: string = 'webcl-media';
 
-  @property()
+  @property({ type: String, reflect: true })
   textPartAttribute?: string = 'media-text-container';
 
-  @property()
+  @property({ type: String, reflect: true })
   titlePartAttribute?: string = 'media-title-container';
 
   render() {
@@ -34,17 +34,17 @@ export class MediaComponent extends TailwindElement(null) {
       <slot name=${this.imageSlotName}></slot>
       <div part=${this.textPartAttribute}>
         <div part=${this.titlePartAttribute}>
-          <p>${this.mediaTitle ? this.mediaTitle : this.mediaTitle === '' ? '' : msg(str`Title`)}</p>
+          <p>
+            ${this.mediaTitle
+              ? this.mediaTitle
+              : this.mediaTitle === ''
+              ? ''
+              : msg(str`Title`)}
+          </p>
         </div>
         <slot name=${this.staticContentSlotName}></slot>
       </div>
       <slot name=${this.iconSlotName}></slot>
     </div>`;
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    'media-component': MediaComponent;
   }
 }
