@@ -20,6 +20,7 @@
     "@types/jest": "^29.2.5",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "babel-loader": "^8.3.0",
+    "cem-plugin-module-file-extensions": "^0.0.5",
     "electron": "^22.0.1",
     "eslint": "^8.0.1",
     "eslint-config-prettier": "^8.6.0",
@@ -27,6 +28,7 @@
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
+    "fs-extra": "^10.1.0",
     "husky": "^8.0.3",
     "jest": "^25.2.7",
     "jest-electron": "^0.1.11",
@@ -40,7 +42,14 @@
   "dependencies": {
     "@babel/plugin-syntax-import-meta": "^7.10.4",
     "@babel/plugin-transform-runtime": "^7.21.0",
+<<<<<<< Updated upstream
     "babel-plugin-transform-import-meta": "^2.2.0"
+=======
+    "@custom-elements-manifest/analyzer": "^0.6.9",
+    "babel-plugin-transform-import-meta": "^2.2.0",
+    "custom-elements-manifest": "^2.0.0",
+    "typescript": "^4.9.5"
+>>>>>>> Stashed changes
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
@@ -49,7 +58,8 @@
     "test": "yarn build && jest --no-verbose -u --silent",
     "test:coverage": "yarn build && jest --coverage -u",
     "test:watch": "yarn build && jest -u --watch",
-    "lint": "yarn eslint \"packages/**/src/**\" --fix"
+    "lint": "yarn eslint \"packages/**/src/**\" --fix",
+    "gen-react-wrapper": "lerna exec --ignore \"{@spectrum-web-components/{base,bundle,custom-vars-viewer,modal,iconset,shared,styles},documentation,example-project-rollup,example-project-webpack,swc-templates,@types/swc}\" -- cem analyze --config ../../cem-react-wrapper.config.js"
   },
   "husky": {
     "hooks": {

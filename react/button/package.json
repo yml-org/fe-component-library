@@ -1,0 +1,21 @@
+{
+    "name": "@swc-react/button",
+    "version": "0.20.2",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "React wrapper of the @spectrum-web-components/button component",
+    "license": "Apache-2.0",
+    "author": "",
+    "main": "index.js",
+    "files": ["**/*.d.ts", "**/*.js", "**/*.js.map"],
+    "keywords": [
+        "React",
+        "Spectrum Web Components",
+        "@spectrum-web-components/button"
+    ],
+    "dependencies": {
+        "@lit-labs/react": "^1.1.1",
+        "@spectrum-web-components/button": "0.20.2"
+    }
+}
