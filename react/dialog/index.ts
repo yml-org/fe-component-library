@@ -14,10 +14,6 @@ import type { EventName } from '@lit-labs/react';
 import { Dialog as SpDialog } from '@spectrum-web-components/dialog';
 import { DialogWrapper as SpDialogWrapper } from '@spectrum-web-components/dialog';
 
-import '@spectrum-web-components/dialog/sp-dialog-base.js';
-import '@spectrum-web-components/dialog/sp-dialog-wrapper.js';
-import '@spectrum-web-components/dialog/sp-dialog.js';
-
 export const Dialog = createComponent({
     displayName: 'Dialog',
     elementClass: SpDialog,

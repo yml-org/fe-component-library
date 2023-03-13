@@ -12,21 +12,22 @@ governing permissions and limitations under the License.
 import { moduleFileExtensionsPlugin } from 'cem-plugin-module-file-extensions';
 
 export default {
-    globs: [
-        '**/sp-*.ts',
-        '**/overlay-trigger.ts',
-        '**/src/[A-Z]*.ts',
-        '**/src/elements/[A-Z]*.ts',
-    ],
-    exclude: [
-        '**/*.d.ts',
-        '**/stories/**',
-        '**/test/**',
-        'node_modules/*',
-        '**/*.dev.*',
-    ],
-    outdir: '.',
-    litelement: true,
-    packagejson: false,
-    plugins: [moduleFileExtensionsPlugin()],
+  globs: [
+    '',
+    '**/*.component.ts',
+    '**/overlay-trigger.ts',
+    '**/src/[A-Z]*.ts',
+    '**/src/**/[A-Z]*.ts',
+  ],
+  exclude: [
+    '**/*.d.ts',
+    '**/stories/**',
+    '**/test/**',
+    'node_modules/*',
+    '**/*.dev.*',
+  ],
+  outdir: '.',
+  litelement: true,
+  packagejson: false,
+  plugins: [moduleFileExtensionsPlugin()],
 };

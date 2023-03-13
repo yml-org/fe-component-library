@@ -1,0 +1,93 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js
+
+PATH: 
+  C:\Users\LATITUDE\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\LATITUDE\bin;C:\Python310\Scripts;C:\Python310;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI;%NVM_HOME%;%NVM_SYMLINK%;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Yarn\bin;C:\Users\LATITUDE\AppData\Local\Microsoft\WindowsApps;C:\Users\LATITUDE\Desktop\Microsoft VS Code\bin;C:\Program Files (x86)\Sophos\Sophos SSL VPN Client\bin;C:\Users\LATITUDE\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\LATITUDE\AppData\Roaming\npm;C:\Program Files (x86)\BrowserStackLocal;C:\Users\LATITUDE\AppData\Local\Yarn\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.12.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'C:\Web CL\fe-component-library\node_modules\esbuild-windows-64\esbuild.exe'
+
+npm manifest: 
+  {
+    "name": "@yml-org/fe-component-library",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "workspaces": [
+      "packages/*"
+    ],
+    "devDependencies": {
+      "@babel/core": "^7.20.12",
+      "@commitlint/config-conventional": "^17.4.0",
+      "@storybook/addon-actions": "^6.5.15",
+      "@storybook/addon-essentials": "^6.5.15",
+      "@storybook/addon-links": "^6.5.15",
+      "@storybook/addon-postcss": "^2.0.0",
+      "@storybook/addons": "^6.5.15",
+      "@storybook/builder-vite": "^0.2.6",
+      "@storybook/preset-scss": "^1.0.3",
+      "@storybook/theming": "^6.5.15",
+      "@storybook/web-components": "^6.5.15",
+      "@types/jest": "^29.2.5",
+      "@typescript-eslint/eslint-plugin": "^5.0.0",
+      "babel-loader": "^8.3.0",
+      "cem-plugin-module-file-extensions": "^0.0.5",
+      "electron": "^22.0.1",
+      "esbuild-jest": "^0.5.0",
+      "eslint": "^8.0.1",
+      "eslint-config-prettier": "^8.6.0",
+      "eslint-config-standard-with-typescript": "^26.0.0",
+      "eslint-plugin-import": "^2.25.2",
+      "eslint-plugin-n": "^15.0.0",
+      "eslint-plugin-promise": "^6.0.0",
+      "fs-extra": "^10.1.0",
+      "husky": "^8.0.3",
+      "jest": "^25.2.7",
+      "jest-electron": "^0.1.11",
+      "lerna": "^6.3.0",
+      "lint-staged": "^13.1.0",
+      "lit-html": "^2.5.0",
+      "prettier": "^2.8.2",
+      "tailwindcss": "^3.2.4",
+      "ts-jest": "^25.3.1"
+    },
+    "dependencies": {
+      "@babel/plugin-syntax-import-meta": "^7.10.4",
+      "@babel/plugin-transform-runtime": "^7.21.0",
+      "@custom-elements-manifest/analyzer": "^0.6.9",
+      "babel-plugin-transform-import-meta": "^2.2.0",
+      "custom-elements-manifest": "^2.0.0",
+      "typescript": "^4.9.5"
+    },
+    "scripts": {
+      "storybook": "start-storybook -p 6006",
+      "build-storybook": "build-storybook",
+      "build": "lerna run build",
+      "test": "yarn build && jest --no-verbose -u --silent",
+      "test:coverage": "yarn build && jest --coverage -u",
+      "test:watch": "yarn build && jest -u --watch",
+      "lint": "yarn eslint \"packages/**/src/**\" --fix",
+      "gen-react-wrapper": "rm -fr react && lerna exec -- cem analyze --config ../../cem-react-wrapper.config.js"
+    },
+    "husky": {
+      "hooks": {
+        "pre-commit": "lint-staged",
+        "commit-msg": "commitlint"
+      }
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

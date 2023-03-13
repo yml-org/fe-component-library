@@ -4,51 +4,6 @@
   "modules": [
     {
       "kind": "javascript-module",
-      "path": "sp-dialog-base.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "custom-element-definition",
-          "name": "sp-dialog-base",
-          "declaration": {
-            "name": "DialogBase",
-            "module": "/src/DialogBase.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "sp-dialog-wrapper.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "custom-element-definition",
-          "name": "sp-dialog-wrapper",
-          "declaration": {
-            "name": "DialogWrapper",
-            "module": "/src/DialogWrapper.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "sp-dialog.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "custom-element-definition",
-          "name": "sp-dialog",
-          "declaration": {
-            "name": "Dialog",
-            "module": "/src/Dialog.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/Dialog.ts",
       "declarations": [
         {
