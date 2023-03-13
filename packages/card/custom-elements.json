@@ -10,76 +10,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "dist/index.js",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "e"
-        },
-        {
-          "kind": "variable",
-          "name": "i"
-        },
-        {
-          "kind": "variable",
-          "name": "n"
-        },
-        {
-          "kind": "variable",
-          "name": "f",
-          "default": "class extends Ht(null) {\n  constructor() {\n    super(...arguments), this.hasRoundedBorder = !1, this.customSlotName = \"\", this.showCustomSlot = !1, this.cardHeight = 300, this.cardWidth = 300, this.cardDimensionUnit = dt.Pixel, this.isHorizontal = !1;\n  }\n  getContainerClassList() {\n    const { hasRoundedBorder: o, isHorizontal: t } = this;\n    return `webcl-card-wrapper flex ${t ? \"flex-row\" : \"flex-col\"} ${o ? \"rounded-lg\" : \"\"}`.trim();\n  }\n  setCardDimensions() {\n    const { cardHeight: o, cardWidth: t, cardDimensionUnit: e } = this;\n    return `width:${t}${e}; min-height:${o}${e}`;\n  }\n  renderSlots() {\n    const { showCustomSlot: o } = this;\n    return o ? I`<slot name=${this.customSlotName} />` : I`<div class=\"webcl-card-header-section\" part=\"webcl-card-header\">\n            <slot name=\"webcl-card-header\" />\n          </div>\n          <div class=\"webcl-card-content-section\" part=\"webcl-card-content\">\n            <slot name=\"webcl-card-content\" />\n          </div>\n          <div\n            class=\"webcl-card-footer-section mt-auto\"\n            part=\"webcl-card-footer\"\n          >\n            <slot name=\"webcl-card-footer\" />\n          </div>`;\n  }\n  render() {\n    return I`<div\n      class=${this.getContainerClassList()}\n      style=${this.setCardDimensions()}\n      part=\"webcl-card-container\"\n    >\n      ${this.renderSlots()}\n    </div>`;\n  }\n}"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "custom-element-definition",
-          "name": "e",
-          "declaration": {
-            "name": "i",
-            "module": "dist/index.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "e",
-          "declaration": {
-            "name": "n",
-            "module": "dist/index.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "CardComponent",
-          "declaration": {
-            "name": "f",
-            "module": "dist/index.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/index.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./card/card.component"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/card/card.component.spec.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/card/card.component.ts",
       "declarations": [
         {
@@ -93,7 +23,9 @@
               "type": {
                 "text": "boolean | undefined"
               },
-              "default": "false"
+              "default": "false",
+              "attribute": "hasRoundedBorder",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -101,7 +33,9 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "''"
+              "default": "''",
+              "attribute": "customSlotName",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -109,7 +43,9 @@
               "type": {
                 "text": "boolean | undefined"
               },
-              "default": "false"
+              "default": "false",
+              "attribute": "showCustomSlot",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -117,7 +53,9 @@
               "type": {
                 "text": "number | undefined"
               },
-              "default": "300"
+              "default": "300",
+              "attribute": "cardHeight",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -125,14 +63,18 @@
               "type": {
                 "text": "number | undefined"
               },
-              "default": "300"
+              "default": "300",
+              "attribute": "cardWidth",
+              "reflects": true
             },
             {
               "kind": "field",
               "name": "cardDimensionUnit",
               "type": {
                 "text": "CardDimensionUnit | undefined"
-              }
+              },
+              "attribute": "cardDimensionUnit",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -140,7 +82,9 @@
               "type": {
                 "text": "boolean | undefined"
               },
-              "default": "false"
+              "default": "false",
+              "attribute": "isHorizontal",
+              "reflects": true
             },
             {
               "kind": "method",
@@ -156,24 +100,63 @@
               "kind": "method",
               "name": "renderSlots",
               "privacy": "private"
-            },
+            }
+          ],
+          "attributes": [
             {
-              "kind": "method",
-              "name": "render",
-              "privacy": "public"
-            },
-            {
-              "kind": "field",
-              "name": "styles",
+              "name": "hasRoundedBorder",
               "type": {
-                "text": "array"
+                "text": "boolean | undefined"
               },
-              "static": true,
-              "default": "[tailwindElement, unsafeCSS(style)]",
-              "inheritedFrom": {
-                "name": "TailwindElement",
-                "module": "src/shared/tailwind.element.ts"
-              }
+              "default": "false",
+              "fieldName": "hasRoundedBorder"
+            },
+            {
+              "name": "customSlotName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "''",
+              "fieldName": "customSlotName"
+            },
+            {
+              "name": "showCustomSlot",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "false",
+              "fieldName": "showCustomSlot"
+            },
+            {
+              "name": "cardHeight",
+              "type": {
+                "text": "number | undefined"
+              },
+              "default": "300",
+              "fieldName": "cardHeight"
+            },
+            {
+              "name": "cardWidth",
+              "type": {
+                "text": "number | undefined"
+              },
+              "default": "300",
+              "fieldName": "cardWidth"
+            },
+            {
+              "name": "cardDimensionUnit",
+              "type": {
+                "text": "CardDimensionUnit | undefined"
+              },
+              "fieldName": "cardDimensionUnit"
+            },
+            {
+              "name": "isHorizontal",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "false",
+              "fieldName": "isHorizontal"
             }
           ],
           "mixins": [
@@ -184,7 +167,9 @@
           ],
           "superclass": {
             "module": "src/card/card.component.ts"
-          }
+          },
+          "tagName": "ymlwebcl-card",
+          "customElement": true
         }
       ],
       "exports": [
@@ -195,116 +180,16 @@
             "name": "CardComponent",
             "module": "src/card/card.component.ts"
           }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/constants/card.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/constants/card.variants.ts",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "cardWithRoundedBorder",
-          "type": {
-            "text": "CardVariant"
-          },
-          "default": "{\n  hasRoundedBorder: true,\n}"
         },
         {
-          "kind": "variable",
-          "name": "cardWithCustomWidthHeight",
-          "type": {
-            "text": "CardVariant"
-          },
-          "default": "{\n  ...cardWithRoundedBorder,\n  cardHeight: 450,\n  cardWidth: 300,\n}"
-        },
-        {
-          "kind": "variable",
-          "name": "cardWithCustomSlot",
-          "type": {
-            "text": "CardVariant"
-          },
-          "default": "{\n  ...cardWithCustomWidthHeight,\n  customSlotName: 'custom-card-slot',\n  showCustomSlot: true,\n}"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "cardWithRoundedBorder",
+          "kind": "custom-element-definition",
+          "name": "ymlwebcl-card",
           "declaration": {
-            "name": "cardWithRoundedBorder",
-            "module": "src/constants/card.variants.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "cardWithCustomWidthHeight",
-          "declaration": {
-            "name": "cardWithCustomWidthHeight",
-            "module": "src/constants/card.variants.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "cardWithCustomSlot",
-          "declaration": {
-            "name": "cardWithCustomSlot",
-            "module": "src/constants/card.variants.ts"
+            "name": "CardComponent",
+            "module": "src/card/card.component.ts"
           }
         }
       ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/shared/tailwind.element.ts",
-      "declarations": [
-        {
-          "kind": "mixin",
-          "description": "",
-          "name": "TailwindElement",
-          "members": [
-            {
-              "kind": "field",
-              "name": "styles",
-              "type": {
-                "text": "array"
-              },
-              "static": true,
-              "default": "[tailwindElement, unsafeCSS(style)]"
-            }
-          ],
-          "parameters": [
-            {
-              "name": "style",
-              "type": {
-                "text": "CSSStyleSheet | null"
-              }
-            }
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "TailwindElement",
-          "declaration": {
-            "name": "TailwindElement",
-            "module": "src/shared/tailwind.element.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/types/card.ts",
-      "declarations": [],
-      "exports": []
     }
   ]
 }

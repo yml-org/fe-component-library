@@ -10,134 +10,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "dist/index.js",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "e"
-        },
-        {
-          "kind": "variable",
-          "name": "i"
-        },
-        {
-          "kind": "variable",
-          "name": "n"
-        },
-        {
-          "kind": "variable",
-          "name": "f",
-          "default": "class extends Pt(null) {\n  constructor() {\n    super(...arguments), this.mediaTitle = \"Title\", this.mediaPartAttribute = \"webcl-media\", this.textPartAttribute = \"media-text-container\", this.titlePartAttribute = \"media-title-container\";\n  }\n  render() {\n    return $t` <div\n      class=\"inline-flex flex-row\"\n      part=${this.mediaPartAttribute}\n    >\n      <slot name=${this.imageSlotName}></slot>\n      <div part=${this.textPartAttribute}>\n        <div part=${this.titlePartAttribute}>\n          <p>\n            ${this.mediaTitle ? this.mediaTitle : this.mediaTitle === \"\" ? \"\" : Rt(Nt`Title`)}\n          </p>\n        </div>\n        <slot name=${this.staticContentSlotName}></slot>\n      </div>\n      <slot name=${this.iconSlotName}></slot>\n    </div>`;\n  }\n}"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "custom-element-definition",
-          "name": "e",
-          "declaration": {
-            "name": "i",
-            "module": "dist/index.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "e",
-          "declaration": {
-            "name": "n",
-            "module": "dist/index.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "MediaComponent",
-          "declaration": {
-            "name": "f",
-            "module": "dist/index.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/index.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./media/media.component"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/constants/media.variants.ts",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "mediaProps",
-          "type": {
-            "text": "MediaProps"
-          },
-          "default": "{\n  mediaPartAttribute: 'custom-media',\n  textPartAttribute: 'custom-text',\n  titlePartAttribute: 'custom-title',\n  staticContentSlotName: 'staticContent',\n  imageSlotName: 'imageSlot',\n  iconSlotName: 'iconSlot',\n  mediaTitle: 'Media Component',\n}"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "mediaProps",
-          "declaration": {
-            "name": "mediaProps",
-            "module": "src/constants/media.variants.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/constants/mediaIcons.ts",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "houseIcon",
-          "default": "html`<svg\r\n  width=\"80px\"\r\n  height=\"80px\"\r\n  viewBox=\"0 0 24 24\"\r\n  fill=\"none\"\r\n  xmlns=\"http://www.w3.org/2000/svg\"\r\n>\r\n  <path\r\n    d=\"M2 22H22\"\r\n    stroke=\"#292D32\"\r\n    stroke-width=\"1.5\"\r\n    stroke-miterlimit=\"10\"\r\n    stroke-linecap=\"round\"\r\n    stroke-linejoin=\"round\"\r\n  />\r\n  <path\r\n    d=\"M2.94995 22L2.99995 9.96999C2.99995 9.35999 3.28995 8.78004 3.76995 8.40004L10.77 2.95003C11.49 2.39003 12.5 2.39003 13.23 2.95003L20.23 8.39003C20.72 8.77003 21 9.34999 21 9.96999V22\"\r\n    stroke=\"#292D32\"\r\n    stroke-width=\"1.5\"\r\n    stroke-miterlimit=\"10\"\r\n    stroke-linejoin=\"round\"\r\n  />\r\n  <path\r\n    d=\"M15.5 11H8.5C7.67 11 7 11.67 7 12.5V22H17V12.5C17 11.67 16.33 11 15.5 11Z\"\r\n    stroke=\"#292D32\"\r\n    stroke-width=\"1.5\"\r\n    stroke-miterlimit=\"10\"\r\n    stroke-linecap=\"round\"\r\n    stroke-linejoin=\"round\"\r\n  />\r\n</svg>`"
-        },
-        {
-          "kind": "variable",
-          "name": "bookmarkIcon",
-          "default": "html` <svg\r\n  width=\"20px\"\r\n  height=\"20px\"\r\n  viewBox=\"0 0 24 24\"\r\n  fill=\"none\"\r\n  xmlns=\"http://www.w3.org/2000/svg\"\r\n>\r\n  <path\r\n    d=\"M17 3C18.1046 3 19 3.89543 19 5L19 19.0536C19 20.5893 17.341 21.552 16.0077 20.7901L12.9923 19.067C12.3774 18.7157 11.6226 18.7157 11.0077 19.067L7.99228 20.7901C6.65897 21.552 5 20.5893 5 19.0536L5 5C5 3.89543 5.89543 3 7 3L17 3Z\"\r\n    stroke=\"#323232\"\r\n    stroke-width=\"2\"\r\n    stroke-linejoin=\"round\"\r\n  />\r\n</svg>`"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "houseIcon",
-          "declaration": {
-            "name": "houseIcon",
-            "module": "src/constants/mediaIcons.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "bookmarkIcon",
-          "declaration": {
-            "name": "bookmarkIcon",
-            "module": "src/constants/mediaIcons.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/media/media.component.spec.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/media/media.component.ts",
       "declarations": [
         {
@@ -151,28 +23,36 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "'Title'"
+              "default": "'Title'",
+              "attribute": "mediaTitle",
+              "reflects": true
             },
             {
               "kind": "field",
               "name": "imageSlotName",
               "type": {
                 "text": "string | undefined"
-              }
+              },
+              "attribute": "imageSlotName",
+              "reflects": true
             },
             {
               "kind": "field",
               "name": "staticContentSlotName",
               "type": {
                 "text": "string | undefined"
-              }
+              },
+              "attribute": "staticContentSlotName",
+              "reflects": true
             },
             {
               "kind": "field",
               "name": "iconSlotName",
               "type": {
                 "text": "string | undefined"
-              }
+              },
+              "attribute": "iconSlotName",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -180,7 +60,9 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "'webcl-media'"
+              "default": "'webcl-media'",
+              "attribute": "mediaPartAttribute",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -188,7 +70,9 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "'media-text-container'"
+              "default": "'media-text-container'",
+              "attribute": "textPartAttribute",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -196,24 +80,64 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "'media-title-container'"
-            },
+              "default": "'media-title-container'",
+              "attribute": "titlePartAttribute",
+              "reflects": true
+            }
+          ],
+          "attributes": [
             {
-              "kind": "method",
-              "name": "render"
-            },
-            {
-              "kind": "field",
-              "name": "styles",
+              "name": "mediaTitle",
               "type": {
-                "text": "array"
+                "text": "string | undefined"
               },
-              "static": true,
-              "default": "[tailwindElement, unsafeCSS(style)]",
-              "inheritedFrom": {
-                "name": "TailwindElement",
-                "module": "src/shared/tailwind.element.ts"
-              }
+              "default": "'Title'",
+              "fieldName": "mediaTitle"
+            },
+            {
+              "name": "imageSlotName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "imageSlotName"
+            },
+            {
+              "name": "staticContentSlotName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "staticContentSlotName"
+            },
+            {
+              "name": "iconSlotName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "iconSlotName"
+            },
+            {
+              "name": "mediaPartAttribute",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'webcl-media'",
+              "fieldName": "mediaPartAttribute"
+            },
+            {
+              "name": "textPartAttribute",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'media-text-container'",
+              "fieldName": "textPartAttribute"
+            },
+            {
+              "name": "titlePartAttribute",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'media-title-container'",
+              "fieldName": "titlePartAttribute"
             }
           ],
           "mixins": [
@@ -224,7 +148,9 @@
           ],
           "superclass": {
             "module": "src/media/media.component.ts"
-          }
+          },
+          "tagName": "ymlwebcl-media",
+          "customElement": true
         }
       ],
       "exports": [
@@ -235,99 +161,13 @@
             "name": "MediaComponent",
             "module": "src/media/media.component.ts"
           }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/shared/tailwind.element.ts",
-      "declarations": [
+        },
         {
-          "kind": "mixin",
-          "description": "",
-          "name": "TailwindElement",
-          "members": [
-            {
-              "kind": "field",
-              "name": "styles",
-              "type": {
-                "text": "array"
-              },
-              "static": true,
-              "default": "[tailwindElement, unsafeCSS(style)]"
-            }
-          ],
-          "parameters": [
-            {
-              "name": "style",
-              "type": {
-                "text": "CSSStyleSheet | null"
-              }
-            }
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "TailwindElement",
+          "kind": "custom-element-definition",
+          "name": "ymlwebcl-media",
           "declaration": {
-            "name": "TailwindElement",
-            "module": "src/shared/tailwind.element.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/types/media.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/generated/locales/es-419.ts",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "templates",
-          "type": {
-            "text": "object"
-          },
-          "default": "{\n      's99f110d27e30b289': str`objetivo`,\n    }"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "templates",
-          "declaration": {
-            "name": "templates",
-            "module": "src/generated/locales/es-419.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/generated/locales/zh-Hans.ts",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "templates",
-          "type": {
-            "text": "object"
-          },
-          "default": "{\n      's99f110d27e30b289': str`目標`,\n    }"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "templates",
-          "declaration": {
-            "name": "templates",
-            "module": "src/generated/locales/zh-Hans.ts"
+            "name": "MediaComponent",
+            "module": "src/media/media.component.ts"
           }
         }
       ]

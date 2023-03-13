@@ -10,71 +10,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "dist/index.js",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "i",
-          "default": "o[0]"
-        },
-        {
-          "kind": "variable",
-          "name": "e"
-        },
-        {
-          "kind": "variable",
-          "name": "n"
-        },
-        {
-          "kind": "variable",
-          "name": "R",
-          "default": "class extends Vt(Zt) {\n  constructor() {\n    var o;\n    super(...arguments), this.navOptions = ft, this.themeOptions = Kt, this.openMenu = (o = this.navOptions) == null ? void 0 : o.isMenuOpen;\n  }\n  setMenuOpen() {\n    this.openMenu = !this.openMenu;\n  }\n  getThemeProperty(o) {\n    var t;\n    return this.themeOptions[(t = this.navOptions) == null ? void 0 : t.mode][o] || this.themeOptions[gt.Dark][o];\n  }\n  renderMenuOptionsAsButton(o, t) {\n    return g`<button\n      part=\"btn-menu-link-${t.label}\"\n      class=\"${o === C.DESKTOP ? `${this.getThemeProperty(\n      m.TextHoverColorDesktop\n    )} px-3 py-2 rounded-md text-sm font-medium` : ` w-full text-left ${this.getThemeProperty(\n      m.TextHoverColorMobile\n    )} ${this.getThemeProperty(\n      m.BackgroundHoverColor\n    )} block px-3 py-2 rounded-md text-base font-medium`}\"\n      @click=${() => {\n      this.dispatchEvent(new CustomEvent(t.eventName)), this.openMenu = !1;\n    }}\n    >\n      ${t.label}\n    </button>`;\n  }\n  renderMenuOptionsAsLink(o, t) {\n    return g`<a\n      href=${t.url}\n      part=\"a-menu-link-${t.label}\"\n      class=\"${o === C.DESKTOP ? `${this.getThemeProperty(\n      m.TextHoverColorDesktop\n    )} px-3 py-2 rounded-md text-sm font-medium` : `text-left ${this.getThemeProperty(\n      m.TextHoverColorMobile\n    )} ${this.getThemeProperty(\n      m.BackgroundHoverColor\n    )} block px-3 py-2 rounded-md text-base font-medium`}\"\n      aria-current=${t.label}\n    >\n      ${t.label}\n    </a>`;\n  }\n  displayMenuLinks(o) {\n    var t, e;\n    return g` ${(e = (t = this.navOptions) == null ? void 0 : t.menuLinks) == null ? void 0 : e.map(\n      (i) => i.type === vt.LINK ? this.renderMenuOptionsAsLink(o, i) : this.renderMenuOptionsAsButton(o, i)\n    )}`;\n  }\n  renderNavBarLogo() {\n    var o, t, e;\n    return g`<img\n      part=\"logo\"\n      class=\"hidden h-8 w-8 lg:block\"\n      src=${(o = this.navOptions) == null ? void 0 : o.logo}\n      alt=\"${(t = this.navOptions) != null && t.logoAltText ? (e = this.navOptions) == null ? void 0 : e.logoAltText : S(E`Company logo`)}\"\n    />`;\n  }\n  renderHamburgerIcon() {\n    var o, t, e, i, s, r, n, d;\n    return g`<button\n      type=\"button\"\n      class=\"inline-flex items-center justify-center rounded-md p-2 ${this.getThemeProperty(\n      m.TextHoverColorDesktop\n    )} focus:outline-none btn-tap-color\"\n      aria-controls=${S(E`mobile menu`)}\n      aria-expanded=\"${this.navOptions.isMenuOpen}\"\n      aria-label=${S(E`mobile button`)}\n      @click=${this.setMenuOpen}\n      part=\"menu-icon-button\"\n    >\n      ${this.openMenu ? (t = (o = this.navOptions) == null ? void 0 : o.closeMenuIcon) != null && t.slotName ? g`<div class=\"h-6 w-6\" part=\"menu-close-icon\">\n              <slot name=${(i = (e = this.navOptions) == null ? void 0 : e.closeMenuIcon) == null ? void 0 : i.slotName}></slot>\n            </div>` : qt : (r = (s = this.navOptions) == null ? void 0 : s.openMenuIcon) != null && r.slotName ? g`<div class=\"h-6 w-6\" part=\"menu-open-icon\">\n            <slot name=${(d = (n = this.navOptions) == null ? void 0 : n.openMenuIcon) == null ? void 0 : d.slotName}></slot>\n          </div>` : Wt}\n    </button>`;\n  }\n  render() {\n    var o, t, e, i, s, r;\n    return g`\n      <nav class=\"${this.getThemeProperty(m.BackgroundColor)}\n      ${this.getThemeProperty(m.HeaderTextColor)} \" part=\"nav\">\n        \n        <div class=\"mx-auto max-w-8xl px-2 sm:px-6 lg:px-4\" >\n          \n          <div class=\"relative flex h-16 items-center justify-between\">\n            \n            <div class=\"absolute inset-y-0 left-0 flex items-center sm:hidden\" part=\"menu-icon-container\" >\n              \n              <!-- Mobile menu button-->\n            ${((t = (o = this.navOptions) == null ? void 0 : o.menuLinks) == null ? void 0 : t.length) > 0 ? this.renderHamburgerIcon() : \"\"}\n            </div>\n\n            <div class=\"flex flex-1 items-center justify-center sm:items-stretch sm:justify-start\">\n              <div class=\"flex flex-shrink-0 items-center\" part=\"logo-container\">\n                ${((e = this.navOptions) == null ? void 0 : e.logo) && this.renderNavBarLogo()}\n              </div> \n         \n            <div class=\"flex flex-1 items-center justify-center sm:items-stretch sm:justify-start\">\n              \n              <div class=\"flex flex-shrink-0 items-center font-bold  pl-4 ${this.getThemeProperty(\n      m.HeaderTextColor\n    )} \" part=\"headerText-container\">\n                <h2 part=\"headerText\">${(i = this.navOptions) == null ? void 0 : i.headerText}</h2>\n              </div>\n\n              <div class=\"hidden sm:ml-6 sm:block\">\n                <div class=\"flex space-x-4 pl-10\" part=\"menu-link-container\">\n                 \n                ${this.displayMenuLinks(C.DESKTOP)}\n                </div>\n              </div>\n\n            </div>\n\n            <div class=\"inset-y-0 right-0 flex pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0\" part=\"right-icons-container\">\n                <slot name=${(r = (s = this.navOptions) == null ? void 0 : s.topRightSlot) == null ? void 0 : r.slotName}></slot>\n            </div>\n\n          </div>\n\n        </div>\n\n        <!-- Mobile menu, show/hide based on menu state. -->\n\n        <div class=\"sm:hidden\" id=\"mobile-menu\" ?hidden=${!this.openMenu}>\n          \n          <div class=\"space-y-1 px-2 pt-2 pb-3\" part=\"menu-link-container-mobile\">\n          ${this.displayMenuLinks(C.MOBILE)}\n          </div>\n\n        </div>\n\n      </nav>\n    `;\n  }\n}"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "custom-element-definition",
-          "name": "e",
-          "declaration": {
-            "name": "i",
-            "module": "dist/index.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "e",
-          "declaration": {
-            "name": "n",
-            "module": "dist/index.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "HeaderComponent",
-          "declaration": {
-            "name": "R",
-            "module": "dist/index.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/index.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./header/header.component"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/constants/header.component.ts",
       "declarations": [
         {
@@ -99,84 +34,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/constants/header.variants.ts",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "defaultNavConfig",
-          "type": {
-            "text": "Nav"
-          },
-          "default": "{\n  mode: 'dark',\n  logo: 'https://ymedialabs.atlassian.net/s/1jmxwi/b/8/d35727372e299c952e88a10ef82bbaf6/_/jira-logo-scaled.png',\n  headerText: 'YML',\n  openMenuIcon: {\n    slotName: '',\n  },\n  closeMenuIcon: {\n    slotName: '',\n  },\n  menuLinks: [],\n  isMenuOpen: false,\n  topRightSlot: {\n    slotName: 'bell',\n  },\n}"
-        },
-        {
-          "kind": "variable",
-          "name": "withMenuLinks",
-          "type": {
-            "text": "Nav"
-          },
-          "default": "{\n  ...defaultNavConfig,\n  menuLinks: [\n    {\n      label: 'Home',\n      type: 'link',\n      url: 'home',\n    },\n    {\n      label: 'Company',\n      type: 'link',\n      url: 'company',\n    },\n    {\n      label: 'Team',\n      type: 'link',\n      url: 'team',\n    },\n    {\n      label: 'Map',\n      type: 'button',\n      eventName: 'map-click',\n    },\n  ],\n}"
-        },
-        {
-          "kind": "variable",
-          "name": "lightModeNavConfig",
-          "type": {
-            "text": "Nav"
-          },
-          "default": "{\n  ...withMenuLinks,\n  mode: 'light',\n}"
-        },
-        {
-          "kind": "variable",
-          "name": "withSlots",
-          "type": {
-            "text": "Nav"
-          },
-          "default": "{\n  ...withMenuLinks,\n  topRightSlot: {\n    slotName: 'slot-div',\n  },\n  openMenuIcon: {\n    slotName: 'open',\n  },\n  closeMenuIcon: {\n    slotName: 'close',\n  },\n}"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "defaultNavConfig",
-          "declaration": {
-            "name": "defaultNavConfig",
-            "module": "src/constants/header.variants.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "withMenuLinks",
-          "declaration": {
-            "name": "withMenuLinks",
-            "module": "src/constants/header.variants.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "lightModeNavConfig",
-          "declaration": {
-            "name": "lightModeNavConfig",
-            "module": "src/constants/header.variants.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "withSlots",
-          "declaration": {
-            "name": "withSlots",
-            "module": "src/constants/header.variants.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/header/header.component.spec.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/header/header.component.ts",
       "declarations": [
         {
@@ -190,7 +47,9 @@
               "type": {
                 "text": "Nav"
               },
-              "default": "defaultNavConfig"
+              "default": "defaultNavConfig",
+              "attribute": "navOptions",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -282,24 +141,6 @@
               "kind": "method",
               "name": "renderHamburgerIcon",
               "privacy": "protected"
-            },
-            {
-              "kind": "method",
-              "name": "render",
-              "privacy": "public"
-            },
-            {
-              "kind": "field",
-              "name": "styles",
-              "type": {
-                "text": "array"
-              },
-              "static": true,
-              "default": "[tailwindElement, unsafeCSS(style)]",
-              "inheritedFrom": {
-                "name": "TailwindElement",
-                "module": "src/shared/tailwind.element.ts"
-              }
             }
           ],
           "events": [
@@ -307,6 +148,19 @@
               "type": {
                 "text": "CustomEvent"
               }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "navOptions",
+              "type": {
+                "text": "Nav"
+              },
+              "default": "defaultNavConfig",
+              "resolveInitializer": {
+                "module": "/src/constants/header.variants"
+              },
+              "fieldName": "navOptions"
             }
           ],
           "mixins": [
@@ -318,7 +172,9 @@
           "superclass": {
             "name": "Style",
             "module": "/src/header/header.component.scss"
-          }
+          },
+          "tagName": "ymlwebcl-header",
+          "customElement": true
         }
       ],
       "exports": [
@@ -329,79 +185,13 @@
             "name": "HeaderComponent",
             "module": "src/header/header.component.ts"
           }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/header/headerIcons.ts",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "OpenMenuIcon",
-          "default": "html` <svg\n  class=\"block h-6 w-6\"\n  aria-label=${msg(str`Open menu`)}\n  xmlns=\"http://www.w3.org/2000/svg\"\n  fill=\"currentColor\"\n  viewBox=\"0 0 24 24\"\n  stroke-width=\"1.5\"\n  stroke=\"currentColor\"\n  aria-hidden=\"true\"\n>\n  <path\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    d=\"M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5\"\n  />\n</svg>`"
         },
         {
-          "kind": "variable",
-          "name": "CloseMenuIcon",
-          "default": "html`<svg\n  class=\"block h-6 w-6\"\n  aria-label=${msg(str`Close menu`)}\n  xmlns=\"http://www.w3.org/2000/svg\"\n  fill=\"currentColor\"\n  viewBox=\"0 0 24 24\"\n  stroke-width=\"1.5\"\n  stroke=\"currentColor\"\n  aria-hidden=\"true\"\n>\n  <path\n    stroke-linecap=\"round\"\n    stroke-linejoin=\"round\"\n    d=\"M6 18L18 6M6 6l12 12\"\n  />\n</svg> `"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "OpenMenuIcon",
+          "kind": "custom-element-definition",
+          "name": "ymlwebcl-header",
           "declaration": {
-            "name": "OpenMenuIcon",
-            "module": "src/header/headerIcons.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "CloseMenuIcon",
-          "declaration": {
-            "name": "CloseMenuIcon",
-            "module": "src/header/headerIcons.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/shared/tailwind.element.ts",
-      "declarations": [
-        {
-          "kind": "mixin",
-          "description": "",
-          "name": "TailwindElement",
-          "members": [
-            {
-              "kind": "field",
-              "name": "styles",
-              "type": {
-                "text": "array"
-              },
-              "static": true,
-              "default": "[tailwindElement, unsafeCSS(style)]"
-            }
-          ],
-          "parameters": [
-            {
-              "name": "style",
-              "type": {
-                "text": "CSSStyleSheet | null"
-              }
-            }
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "TailwindElement",
-          "declaration": {
-            "name": "TailwindElement",
-            "module": "src/shared/tailwind.element.ts"
+            "name": "HeaderComponent",
+            "module": "src/header/header.component.ts"
           }
         }
       ]
@@ -411,54 +201,6 @@
       "path": "src/types/header.component.ts",
       "declarations": [],
       "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/generated/locales/es-419.ts",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "templates",
-          "type": {
-            "text": "object"
-          },
-          "default": "{\n      's1d5d2564d7aae78e': str`Cerrar menú`,\n's6abb1cd87fe0114e': str`Casa`,\n's8d91340b5caa2d5c': str`Menú abierto`,\n's9674b657327cb801': str`botón móvil`,\n's96815c0ec61797ea': str`menú móvil`,\n'sc7c1a00bdcf6e82b': str`Logo de la compañía`,\n    }"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "templates",
-          "declaration": {
-            "name": "templates",
-            "module": "src/generated/locales/es-419.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/generated/locales/zh-Hans.ts",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "templates",
-          "type": {
-            "text": "object"
-          },
-          "default": "{\n      's1d5d2564d7aae78e': str`关闭菜单`,\n's6abb1cd87fe0114e': str`家`,\n's8d91340b5caa2d5c': str`打开菜单`,\n's9674b657327cb801': str`移动按钮`,\n's96815c0ec61797ea': str`移动菜单`,\n'sc7c1a00bdcf6e82b': str`公司标志`,\n    }"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "templates",
-          "declaration": {
-            "name": "templates",
-            "module": "src/generated/locales/zh-Hans.ts"
-          }
-        }
-      ]
     }
   ]
 }

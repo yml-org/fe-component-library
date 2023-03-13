@@ -10,76 +10,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "dist/index.js",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "e"
-        },
-        {
-          "kind": "variable",
-          "name": "i"
-        },
-        {
-          "kind": "variable",
-          "name": "n"
-        },
-        {
-          "kind": "variable",
-          "name": "u",
-          "default": "class extends Pt(null) {\n  constructor() {\n    super(...arguments), this.isRounded = !1, this.width = 75, this.height = 75, this.usePercentage = !1, this.hasBorder = !1, this.borderColor = \"slate-200\", this.hasShadow = !1, this.showDefaultIcon = !1, this.avatarPartAttribute = \"webcl-avatar\";\n  }\n  getContainerClassList() {\n    const { isRounded: o, hasBorder: t, borderColor: e, hasShadow: i, defaultBgColor: s } = this;\n    return `webcl-avatar-container flex items-center justify-center ${s || \"\"} ${o ? \"rounded-full\" : \"\"} ${t ? `border border-${e}` : \"\"} ${i ? \"shadow\" : \"\"}`.trim();\n  }\n  getContainerDimensions() {\n    const { width: o, height: t, usePercentage: e } = this, i = `${e ? \"%\" : \"px\"}`;\n    return `width: ${o}${i};height: ${t}${i};`;\n  }\n  renderDefaultIcon() {\n    const { defaultImage: o, showDefaultIcon: t, width: e, height: i } = this;\n    return t ? I`<img\n          src=${o}\n          alt=\"default icon\"\n          width=\"${e}px\"\n          height=\"${i}px\"\n        />` : \"\";\n  }\n  render() {\n    return I`<div\n      class=${this.getContainerClassList()}\n      style=${this.getContainerDimensions()}\n      part=${this.avatarPartAttribute}\n      role=${Rt(Ut`button`)}\n      @click=${this.onAvatarClick}\n    >\n      ${this.renderDefaultIcon()}\n      ${this.slotName ? I`<slot name=${this.slotName}></slot>` : \"\"}\n    </div>`;\n  }\n}"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "custom-element-definition",
-          "name": "e",
-          "declaration": {
-            "name": "i",
-            "module": "dist/index.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "e",
-          "declaration": {
-            "name": "n",
-            "module": "dist/index.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "AvatarComponent",
-          "declaration": {
-            "name": "u",
-            "module": "dist/index.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/index.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./avatar/avatar.component"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/avatar/avatar.component.spec.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/avatar/avatar.component.ts",
       "declarations": [
         {
@@ -93,7 +23,9 @@
               "type": {
                 "text": "boolean | undefined"
               },
-              "default": "false"
+              "default": "false",
+              "attribute": "isRounded",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -101,7 +33,9 @@
               "type": {
                 "text": "number | undefined"
               },
-              "default": "75"
+              "default": "75",
+              "attribute": "width",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -109,7 +43,9 @@
               "type": {
                 "text": "number | undefined"
               },
-              "default": "75"
+              "default": "75",
+              "attribute": "height",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -117,7 +53,9 @@
               "type": {
                 "text": "boolean | undefined"
               },
-              "default": "false"
+              "default": "false",
+              "attribute": "usePercentage",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -125,7 +63,9 @@
               "type": {
                 "text": "boolean | undefined"
               },
-              "default": "false"
+              "default": "false",
+              "attribute": "hasBorder",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -133,28 +73,36 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "'slate-200'"
+              "default": "'slate-200'",
+              "attribute": "borderColor",
+              "reflects": true
             },
             {
               "kind": "field",
               "name": "defaultBgColor",
               "type": {
                 "text": "string | undefined"
-              }
+              },
+              "attribute": "defaultBgColor",
+              "reflects": true
             },
             {
               "kind": "field",
               "name": "slotName",
               "type": {
                 "text": "string | undefined"
-              }
+              },
+              "attribute": "slotName",
+              "reflects": true
             },
             {
               "kind": "field",
               "name": "onAvatarClick",
               "type": {
                 "text": "() => void | undefined"
-              }
+              },
+              "attribute": "onAvatarClick",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -162,7 +110,9 @@
               "type": {
                 "text": "boolean | undefined"
               },
-              "default": "false"
+              "default": "false",
+              "attribute": "hasShadow",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -170,14 +120,18 @@
               "type": {
                 "text": "boolean | undefined"
               },
-              "default": "false"
+              "default": "false",
+              "attribute": "showDefaultIcon",
+              "reflects": true
             },
             {
               "kind": "field",
               "name": "defaultImage",
               "type": {
                 "text": "string | undefined"
-              }
+              },
+              "attribute": "defaultImage",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -185,7 +139,8 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "'webcl-avatar'"
+              "default": "'webcl-avatar'",
+              "attribute": "avatarPartAttribute"
             },
             {
               "kind": "method",
@@ -201,24 +156,108 @@
               "kind": "method",
               "name": "renderDefaultIcon",
               "privacy": "private"
-            },
+            }
+          ],
+          "attributes": [
             {
-              "kind": "method",
-              "name": "render",
-              "privacy": "public"
-            },
-            {
-              "kind": "field",
-              "name": "styles",
+              "name": "isRounded",
               "type": {
-                "text": "array"
+                "text": "boolean | undefined"
               },
-              "static": true,
-              "default": "[tailwindElement, unsafeCSS(style)]",
-              "inheritedFrom": {
-                "name": "TailwindElement",
-                "module": "src/shared/tailwind.element.ts"
-              }
+              "default": "false",
+              "fieldName": "isRounded"
+            },
+            {
+              "name": "width",
+              "type": {
+                "text": "number | undefined"
+              },
+              "default": "75",
+              "fieldName": "width"
+            },
+            {
+              "name": "height",
+              "type": {
+                "text": "number | undefined"
+              },
+              "default": "75",
+              "fieldName": "height"
+            },
+            {
+              "name": "usePercentage",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "false",
+              "fieldName": "usePercentage"
+            },
+            {
+              "name": "hasBorder",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "false",
+              "fieldName": "hasBorder"
+            },
+            {
+              "name": "borderColor",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'slate-200'",
+              "fieldName": "borderColor"
+            },
+            {
+              "name": "defaultBgColor",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "defaultBgColor"
+            },
+            {
+              "name": "slotName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "slotName"
+            },
+            {
+              "name": "onAvatarClick",
+              "type": {
+                "text": "() => void | undefined"
+              },
+              "fieldName": "onAvatarClick"
+            },
+            {
+              "name": "hasShadow",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "false",
+              "fieldName": "hasShadow"
+            },
+            {
+              "name": "showDefaultIcon",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "false",
+              "fieldName": "showDefaultIcon"
+            },
+            {
+              "name": "defaultImage",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "defaultImage"
+            },
+            {
+              "name": "avatarPartAttribute",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'webcl-avatar'",
+              "fieldName": "avatarPartAttribute"
             }
           ],
           "mixins": [
@@ -229,7 +268,9 @@
           ],
           "superclass": {
             "module": "src/avatar/avatar.component.ts"
-          }
+          },
+          "tagName": "ymlwebcl-avatar",
+          "customElement": true
         }
       ],
       "exports": [
@@ -240,203 +281,13 @@
             "name": "AvatarComponent",
             "module": "src/avatar/avatar.component.ts"
           }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/constants/avatar.variants.ts",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "roundedVariant",
-          "type": {
-            "text": "AvatarVariant"
-          },
-          "default": "{\n  isRounded: true,\n}"
         },
         {
-          "kind": "variable",
-          "name": "withDefaultIcon",
-          "type": {
-            "text": "AvatarVariant"
-          },
-          "default": "{\n  showDefaultIcon: true,\n  defaultImage:\n    'https://cdn3.iconfinder.com/data/icons/office-485/100/ICON_BASIC-11-512.png',\n}"
-        },
-        {
-          "kind": "variable",
-          "name": "withCustomHeightWidth",
-          "type": {
-            "text": "AvatarVariant"
-          },
-          "default": "{\n  ...withDefaultIcon,\n  width: 100,\n  height: 100,\n}"
-        },
-        {
-          "kind": "variable",
-          "name": "withSlot",
-          "type": {
-            "text": "AvatarVariant"
-          },
-          "default": "{\n  isRounded: true,\n  slotName: 'avatar-slot',\n}"
-        },
-        {
-          "kind": "variable",
-          "name": "withRoundedBorderAvatar",
-          "type": {
-            "text": "AvatarVariant"
-          },
-          "default": "{\n  ...withDefaultIcon,\n  isRounded: true,\n  hasBorder: true,\n}"
-        },
-        {
-          "kind": "variable",
-          "name": "withShadow",
-          "type": {
-            "text": "AvatarVariant"
-          },
-          "default": "{\n  ...withRoundedBorderAvatar,\n  hasShadow: true,\n}"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "roundedVariant",
+          "kind": "custom-element-definition",
+          "name": "ymlwebcl-avatar",
           "declaration": {
-            "name": "roundedVariant",
-            "module": "src/constants/avatar.variants.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "withDefaultIcon",
-          "declaration": {
-            "name": "withDefaultIcon",
-            "module": "src/constants/avatar.variants.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "withCustomHeightWidth",
-          "declaration": {
-            "name": "withCustomHeightWidth",
-            "module": "src/constants/avatar.variants.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "withSlot",
-          "declaration": {
-            "name": "withSlot",
-            "module": "src/constants/avatar.variants.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "withRoundedBorderAvatar",
-          "declaration": {
-            "name": "withRoundedBorderAvatar",
-            "module": "src/constants/avatar.variants.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "withShadow",
-          "declaration": {
-            "name": "withShadow",
-            "module": "src/constants/avatar.variants.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/shared/tailwind.element.ts",
-      "declarations": [
-        {
-          "kind": "mixin",
-          "description": "",
-          "name": "TailwindElement",
-          "members": [
-            {
-              "kind": "field",
-              "name": "styles",
-              "type": {
-                "text": "array"
-              },
-              "static": true,
-              "default": "[tailwindElement, unsafeCSS(style)]"
-            }
-          ],
-          "parameters": [
-            {
-              "name": "style",
-              "type": {
-                "text": "CSSStyleSheet | null"
-              }
-            }
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "TailwindElement",
-          "declaration": {
-            "name": "TailwindElement",
-            "module": "src/shared/tailwind.element.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/types/avatar.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/generated/locales/es-419.ts",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "templates",
-          "type": {
-            "text": "object"
-          },
-          "default": "{\n      's1aa9c45c0f9ef371': str`botón`,\n    }"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "templates",
-          "declaration": {
-            "name": "templates",
-            "module": "src/generated/locales/es-419.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/generated/locales/zh-Hans.ts",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "templates",
-          "type": {
-            "text": "object"
-          },
-          "default": "{\n      's1aa9c45c0f9ef371': str`按钮`,\n    }"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "templates",
-          "declaration": {
-            "name": "templates",
-            "module": "src/generated/locales/zh-Hans.ts"
+            "name": "AvatarComponent",
+            "module": "src/avatar/avatar.component.ts"
           }
         }
       ]

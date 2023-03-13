@@ -10,242 +10,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "dist/index.js",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "e"
-        },
-        {
-          "kind": "variable",
-          "name": "i"
-        },
-        {
-          "kind": "variable",
-          "name": "n"
-        },
-        {
-          "kind": "variable",
-          "name": "d",
-          "default": "class extends Nt(null) {\n  constructor() {\n    super(...arguments), this.label = \"\", this.textAreaId = \"\", this.textAreaName = \"\", this.textAreaRows = 2, this.textAreaCols = 20, this.textAreaAutoComplete = ct.Off, this.isAutoFocus = !1, this.isDisabled = !1, this.labelPartAttribute = \"webcl-textarea-label\", this.containerPartAttribute = \"webcl-textarea-container\", this.textAreaPartAttribute = \"webcl-textarea\", this.formId = \"\", this.textAreaPlaceHolder = \"\", this.isReadOnly = !1, this.isRequired = !1, this.changeHandlerName = \"\", this.canResize = !0;\n  }\n  getTextAreaClassList() {\n    const { canResize: r } = this;\n    return r ? \"resize\" : \"resize-none\";\n  }\n  render() {\n    return it`<div part=${this.containerPartAttribute}>\n      ${this.label ? it`<label\n            for=${this.textAreaId}\n            part=${this.labelPartAttribute}\n            class=\"flex\"\n            >${this.label}</label\n          >` : f}\n      <textarea\n        part=${this.textAreaPartAttribute}\n        class=${this.getTextAreaClassList()}\n        id=${this.textAreaId}\n        name=${this.textAreaName}\n        rows=${this.textAreaRows}\n        cols=${this.textAreaCols}\n        autocomplete=${this.textAreaAutoComplete}\n        ?autofocus=${this.isAutoFocus}\n        ?disabled=${this.isDisabled}\n        ?form=${this.formId}\n        maxlength=${this.textAreaMaxLength}\n        minlength=${this.textAreaMinLength}\n        placeholder=${this.textAreaPlaceHolder}\n        ?readonly=${this.isReadOnly}\n        ?required=${this.isRequired}\n        @input=${({ target: { value: r } }) => this.dispatchEvent(\n      new CustomEvent(this.changeHandlerName, { detail: { value: r } })\n    )}\n      ></textarea>\n    </div>`;\n  }\n}"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "custom-element-definition",
-          "name": "e",
-          "declaration": {
-            "name": "i",
-            "module": "dist/index.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "e",
-          "declaration": {
-            "name": "n",
-            "module": "dist/index.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "TextAreaComponent",
-          "declaration": {
-            "name": "d",
-            "module": "dist/index.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/index.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./text-area/textArea.component"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/constants/text-area.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/constants/text-area.variants.ts",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "withLabel",
-          "type": {
-            "text": "TextAreaVariant"
-          },
-          "default": "{\n  label: 'LABEL',\n  textAreaId: 'default',\n  textAreaName: 'default',\n}"
-        },
-        {
-          "kind": "variable",
-          "name": "withCustomRows",
-          "type": {
-            "text": "TextAreaVariant"
-          },
-          "default": "{\n  ...withLabel,\n  textAreaRows: 5,\n}"
-        },
-        {
-          "kind": "variable",
-          "name": "withCustomCols",
-          "type": {
-            "text": "TextAreaVariant"
-          },
-          "default": "{\n  ...withCustomRows,\n  textAreaCols: 40,\n}"
-        },
-        {
-          "kind": "variable",
-          "name": "disabledVariant",
-          "type": {
-            "text": "TextAreaVariant"
-          },
-          "default": "{\n  ...withCustomCols,\n  isDisabled: true,\n}"
-        },
-        {
-          "kind": "variable",
-          "name": "autoFocusVariant",
-          "type": {
-            "text": "TextAreaVariant"
-          },
-          "default": "{\n  ...withCustomCols,\n  isAutoFocus: true,\n}"
-        },
-        {
-          "kind": "variable",
-          "name": "withPlaceHolder",
-          "type": {
-            "text": "TextAreaVariant"
-          },
-          "default": "{\n  ...withCustomCols,\n  textAreaPlaceHolder: 'Sample Place holder',\n  label: '',\n}"
-        },
-        {
-          "kind": "variable",
-          "name": "withNoResize",
-          "type": {
-            "text": "TextAreaVariant"
-          },
-          "default": "{\n  ...withCustomCols,\n  canResize: false,\n}"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "withLabel",
-          "declaration": {
-            "name": "withLabel",
-            "module": "src/constants/text-area.variants.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "withCustomRows",
-          "declaration": {
-            "name": "withCustomRows",
-            "module": "src/constants/text-area.variants.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "withCustomCols",
-          "declaration": {
-            "name": "withCustomCols",
-            "module": "src/constants/text-area.variants.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "disabledVariant",
-          "declaration": {
-            "name": "disabledVariant",
-            "module": "src/constants/text-area.variants.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "autoFocusVariant",
-          "declaration": {
-            "name": "autoFocusVariant",
-            "module": "src/constants/text-area.variants.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "withPlaceHolder",
-          "declaration": {
-            "name": "withPlaceHolder",
-            "module": "src/constants/text-area.variants.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "withNoResize",
-          "declaration": {
-            "name": "withNoResize",
-            "module": "src/constants/text-area.variants.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/shared/tailwind.element.ts",
-      "declarations": [
-        {
-          "kind": "mixin",
-          "description": "",
-          "name": "TailwindElement",
-          "members": [
-            {
-              "kind": "field",
-              "name": "styles",
-              "type": {
-                "text": "array"
-              },
-              "static": true,
-              "default": "[tailwindElement, unsafeCSS(style)]"
-            }
-          ],
-          "parameters": [
-            {
-              "name": "style",
-              "type": {
-                "text": "CSSStyleSheet | null"
-              }
-            }
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "TailwindElement",
-          "declaration": {
-            "name": "TailwindElement",
-            "module": "src/shared/tailwind.element.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/text-area/textArea.component.spec.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/text-area/textArea.component.ts",
       "declarations": [
         {
@@ -259,7 +23,9 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "''"
+              "default": "''",
+              "attribute": "label",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -267,7 +33,9 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "''"
+              "default": "''",
+              "attribute": "textAreaId",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -275,7 +43,9 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "''"
+              "default": "''",
+              "attribute": "textAreaName",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -283,7 +53,9 @@
               "type": {
                 "text": "number | undefined"
               },
-              "default": "2"
+              "default": "2",
+              "attribute": "textAreaRows",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -291,14 +63,18 @@
               "type": {
                 "text": "number | undefined"
               },
-              "default": "20"
+              "default": "20",
+              "attribute": "textAreaCols",
+              "reflects": true
             },
             {
               "kind": "field",
               "name": "textAreaAutoComplete",
               "type": {
                 "text": "AutoComplete | undefined"
-              }
+              },
+              "attribute": "textAreaAutoComplete",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -306,7 +82,9 @@
               "type": {
                 "text": "boolean | undefined"
               },
-              "default": "false"
+              "default": "false",
+              "attribute": "isAutoFocus",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -314,7 +92,9 @@
               "type": {
                 "text": "boolean | undefined"
               },
-              "default": "false"
+              "default": "false",
+              "attribute": "isDisabled",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -322,7 +102,9 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "'webcl-textarea-label'"
+              "default": "'webcl-textarea-label'",
+              "attribute": "labelPartAttribute",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -330,7 +112,9 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "'webcl-textarea-container'"
+              "default": "'webcl-textarea-container'",
+              "attribute": "containerPartAttribute",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -338,7 +122,9 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "'webcl-textarea'"
+              "default": "'webcl-textarea'",
+              "attribute": "textAreaPartAttribute",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -346,21 +132,27 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "''"
+              "default": "''",
+              "attribute": "formId",
+              "reflects": true
             },
             {
               "kind": "field",
               "name": "textAreaMaxLength",
               "type": {
                 "text": "number | undefined"
-              }
+              },
+              "attribute": "textAreaMaxLength",
+              "reflects": true
             },
             {
               "kind": "field",
               "name": "textAreaMinLength",
               "type": {
                 "text": "number | undefined"
-              }
+              },
+              "attribute": "textAreaMinLength",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -368,7 +160,9 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "''"
+              "default": "''",
+              "attribute": "textAreaPlaceHolder",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -376,7 +170,9 @@
               "type": {
                 "text": "boolean | undefined"
               },
-              "default": "false"
+              "default": "false",
+              "attribute": "isReadOnly",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -384,7 +180,9 @@
               "type": {
                 "text": "boolean | undefined"
               },
-              "default": "false"
+              "default": "false",
+              "attribute": "isRequired",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -392,7 +190,9 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "''"
+              "default": "''",
+              "attribute": "changeHandlerName",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -400,29 +200,14 @@
               "type": {
                 "text": "boolean | undefined"
               },
-              "default": "true"
+              "default": "true",
+              "attribute": "canResize",
+              "reflects": true
             },
             {
               "kind": "method",
               "name": "getTextAreaClassList",
               "privacy": "protected"
-            },
-            {
-              "kind": "method",
-              "name": "render"
-            },
-            {
-              "kind": "field",
-              "name": "styles",
-              "type": {
-                "text": "array"
-              },
-              "static": true,
-              "default": "[tailwindElement, unsafeCSS(style)]",
-              "inheritedFrom": {
-                "name": "TailwindElement",
-                "module": "src/shared/tailwind.element.ts"
-              }
             }
           ],
           "events": [
@@ -430,6 +215,157 @@
               "type": {
                 "text": "CustomEvent"
               }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "label",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "''",
+              "fieldName": "label"
+            },
+            {
+              "name": "textAreaId",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "''",
+              "fieldName": "textAreaId"
+            },
+            {
+              "name": "textAreaName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "''",
+              "fieldName": "textAreaName"
+            },
+            {
+              "name": "textAreaRows",
+              "type": {
+                "text": "number | undefined"
+              },
+              "default": "2",
+              "fieldName": "textAreaRows"
+            },
+            {
+              "name": "textAreaCols",
+              "type": {
+                "text": "number | undefined"
+              },
+              "default": "20",
+              "fieldName": "textAreaCols"
+            },
+            {
+              "name": "textAreaAutoComplete",
+              "type": {
+                "text": "AutoComplete | undefined"
+              },
+              "fieldName": "textAreaAutoComplete"
+            },
+            {
+              "name": "isAutoFocus",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "false",
+              "fieldName": "isAutoFocus"
+            },
+            {
+              "name": "isDisabled",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "false",
+              "fieldName": "isDisabled"
+            },
+            {
+              "name": "labelPartAttribute",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'webcl-textarea-label'",
+              "fieldName": "labelPartAttribute"
+            },
+            {
+              "name": "containerPartAttribute",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'webcl-textarea-container'",
+              "fieldName": "containerPartAttribute"
+            },
+            {
+              "name": "textAreaPartAttribute",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'webcl-textarea'",
+              "fieldName": "textAreaPartAttribute"
+            },
+            {
+              "name": "formId",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "''",
+              "fieldName": "formId"
+            },
+            {
+              "name": "textAreaMaxLength",
+              "type": {
+                "text": "number | undefined"
+              },
+              "fieldName": "textAreaMaxLength"
+            },
+            {
+              "name": "textAreaMinLength",
+              "type": {
+                "text": "number | undefined"
+              },
+              "fieldName": "textAreaMinLength"
+            },
+            {
+              "name": "textAreaPlaceHolder",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "''",
+              "fieldName": "textAreaPlaceHolder"
+            },
+            {
+              "name": "isReadOnly",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "false",
+              "fieldName": "isReadOnly"
+            },
+            {
+              "name": "isRequired",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "false",
+              "fieldName": "isRequired"
+            },
+            {
+              "name": "changeHandlerName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "''",
+              "fieldName": "changeHandlerName"
+            },
+            {
+              "name": "canResize",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "true",
+              "fieldName": "canResize"
             }
           ],
           "mixins": [
@@ -440,7 +376,9 @@
           ],
           "superclass": {
             "module": "src/text-area/textArea.component.ts"
-          }
+          },
+          "tagName": "ymlwebcl-textarea",
+          "customElement": true
         }
       ],
       "exports": [
@@ -451,14 +389,16 @@
             "name": "TextAreaComponent",
             "module": "src/text-area/textArea.component.ts"
           }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "ymlwebcl-textarea",
+          "declaration": {
+            "name": "TextAreaComponent",
+            "module": "src/text-area/textArea.component.ts"
+          }
         }
       ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/types/text-area.ts",
-      "declarations": [],
-      "exports": []
     }
   ]
 }

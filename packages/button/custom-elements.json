@@ -10,76 +10,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "dist/index.js",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "e"
-        },
-        {
-          "kind": "variable",
-          "name": "o"
-        },
-        {
-          "kind": "variable",
-          "name": "a"
-        },
-        {
-          "kind": "variable",
-          "name": "b",
-          "default": "class extends Nt(null) {\n  constructor() {\n    super(...arguments), this.partName = \"custom-button\";\n  }\n  getClassTheme() {\n    return `inline-block px-6 font-medium text-xs leading-tight uppercase focus:outline-none focus:ring-0 transition duration-150 ease-in-out\n      ${Ut[this.color || \"primary\"][this.variant || \"contained\"]}\n      ${this.isRounded ? \"rounded-full\" : \"rounded\"}\n      ${this.fullWidth && \"w-full\"}\n      ${this.isDisabled && \"pointer-events-none opacity-60\"}\n    `;\n  }\n  render() {\n    return vt`\n      <button\n        tabindex=${this.isDisabled ? \"-1\" : \"0\"}\n        type=\"button\"\n        part=${this.partName}\n        role=${st(Tt`button`)}\n        class=${this.getClassTheme()}\n      >\n        ${st(this.text)}\n        <slot name=${this.slotName}></slot>\n      </button>\n    `;\n  }\n}"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "custom-element-definition",
-          "name": "e",
-          "declaration": {
-            "name": "o",
-            "module": "dist/index.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "e",
-          "declaration": {
-            "name": "a",
-            "module": "dist/index.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "ButtonComponent",
-          "declaration": {
-            "name": "b",
-            "module": "dist/index.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/index.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./button/button.component"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/button/button.component.spec.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/button/button.component.ts",
       "declarations": [
         {
@@ -92,49 +22,56 @@
               "name": "text",
               "type": {
                 "text": "string | undefined"
-              }
+              },
+              "attribute": "text"
             },
             {
               "kind": "field",
               "name": "variant",
               "type": {
                 "text": "VariantType | undefined"
-              }
+              },
+              "attribute": "variant"
             },
             {
               "kind": "field",
               "name": "color",
               "type": {
                 "text": "colorType | undefined"
-              }
+              },
+              "attribute": "color"
             },
             {
               "kind": "field",
               "name": "slotName",
               "type": {
                 "text": "string | undefined"
-              }
+              },
+              "attribute": "slotName"
             },
             {
               "kind": "field",
               "name": "isDisabled",
               "type": {
                 "text": "boolean | undefined"
-              }
+              },
+              "attribute": "isDisabled"
             },
             {
               "kind": "field",
               "name": "fullWidth",
               "type": {
                 "text": "boolean | undefined"
-              }
+              },
+              "attribute": "fullWidth"
             },
             {
               "kind": "field",
               "name": "isRounded",
               "type": {
                 "text": "boolean | undefined"
-              }
+              },
+              "attribute": "isRounded"
             },
             {
               "kind": "field",
@@ -142,29 +79,72 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "'custom-button'"
+              "default": "'custom-button'",
+              "attribute": "partName"
             },
             {
               "kind": "method",
               "name": "getClassTheme",
               "privacy": "protected"
-            },
+            }
+          ],
+          "attributes": [
             {
-              "kind": "method",
-              "name": "render"
-            },
-            {
-              "kind": "field",
-              "name": "styles",
+              "name": "text",
               "type": {
-                "text": "array"
+                "text": "string | undefined"
               },
-              "static": true,
-              "default": "[tailwindElement, unsafeCSS(style)]",
-              "inheritedFrom": {
-                "name": "TailwindElement",
-                "module": "src/shared/tailwind.element.ts"
-              }
+              "fieldName": "text"
+            },
+            {
+              "name": "variant",
+              "type": {
+                "text": "VariantType | undefined"
+              },
+              "fieldName": "variant"
+            },
+            {
+              "name": "color",
+              "type": {
+                "text": "colorType | undefined"
+              },
+              "fieldName": "color"
+            },
+            {
+              "name": "slotName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "slotName"
+            },
+            {
+              "name": "isDisabled",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "fieldName": "isDisabled"
+            },
+            {
+              "name": "fullWidth",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "fieldName": "fullWidth"
+            },
+            {
+              "name": "isRounded",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "fieldName": "isRounded"
+            },
+            {
+              "name": "partName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'custom-button'",
+              "fieldName": "partName"
             }
           ],
           "mixins": [
@@ -175,13 +155,23 @@
           ],
           "superclass": {
             "module": "src/button/button.component.ts"
-          }
+          },
+          "tagName": "ymlwebcl-button",
+          "customElement": true
         }
       ],
       "exports": [
         {
           "kind": "js",
           "name": "ButtonComponent",
+          "declaration": {
+            "name": "ButtonComponent",
+            "module": "src/button/button.component.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "ymlwebcl-button",
           "declaration": {
             "name": "ButtonComponent",
             "module": "src/button/button.component.ts"
@@ -209,100 +199,6 @@
           "declaration": {
             "name": "themeOptions",
             "module": "src/constants/button.component.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/shared/tailwind.element.ts",
-      "declarations": [
-        {
-          "kind": "mixin",
-          "description": "",
-          "name": "TailwindElement",
-          "members": [
-            {
-              "kind": "field",
-              "name": "styles",
-              "type": {
-                "text": "array"
-              },
-              "static": true,
-              "default": "[tailwindElement, unsafeCSS(style)]"
-            }
-          ],
-          "parameters": [
-            {
-              "name": "style",
-              "type": {
-                "text": "CSSStyleSheet | null"
-              }
-            }
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "TailwindElement",
-          "declaration": {
-            "name": "TailwindElement",
-            "module": "src/shared/tailwind.element.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/types/button.type.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/generated/locales/es-419.ts",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "templates",
-          "type": {
-            "text": "object"
-          },
-          "default": "{\n      's1aa9c45c0f9ef371': str`botón`,\n    }"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "templates",
-          "declaration": {
-            "name": "templates",
-            "module": "src/generated/locales/es-419.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/generated/locales/zh-Hans.ts",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "templates",
-          "type": {
-            "text": "object"
-          },
-          "default": "{\n      's1aa9c45c0f9ef371': str`按钮`,\n    }"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "templates",
-          "declaration": {
-            "name": "templates",
-            "module": "src/generated/locales/zh-Hans.ts"
           }
         }
       ]

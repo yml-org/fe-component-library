@@ -10,189 +10,7 @@
     },
     {
       "kind": "javascript-module",
-      "path": "dist/index.js",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "e"
-        },
-        {
-          "kind": "variable",
-          "name": "i"
-        },
-        {
-          "kind": "variable",
-          "name": "n"
-        },
-        {
-          "kind": "variable",
-          "name": "f",
-          "default": "class extends jt(null) {\n  constructor() {\n    super(...arguments), this.text = \"Click Here\", this.linkTitle = \"\", this.href = \"#\", this.rel = \"\", this.target = \"_self\", this.type = \"link\", this.slotName = \"\";\n  }\n  getClassTheme() {\n    return this.type === pt.Default ? \"font-medium text-blue-600 dark:text-blue-500 hover:underline\" : \"text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 inline-block \";\n  }\n  render() {\n    return $t`\n      <a\n        part=\"custom-link\"\n        class=\"${this.getClassTheme()}\"\n        title=${this.linkTitle}\n        href=${this.href}\n        target=${this.target}\n        rel=${this.rel}\n        aria-label=${nt(ot`Click Here to redirect`)}\n      >\n        ${this.text ? this.text : this.text === \"\" ? \"\" : nt(ot`Click Here`)}\n        <slot name=${this.slotName}></slot>\n      </a>\n    `;\n  }\n}"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "custom-element-definition",
-          "name": "e",
-          "declaration": {
-            "name": "i",
-            "module": "dist/index.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "e",
-          "declaration": {
-            "name": "n",
-            "module": "dist/index.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "LinkComponent",
-          "declaration": {
-            "name": "f",
-            "module": "dist/index.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/index.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./link/link.component"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/constants/link.component.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/constants/link.variants.ts",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "linkConfig",
-          "type": {
-            "text": "Link"
-          },
-          "default": "{\r\n  text: 'Click here to test',\r\n  linkTitle: 'myLink',\r\n  href: 'https://www.w3schools.com/html/html_links.asp',\r\n  rel: 'noopener noreferrer',\r\n  target: '_blank',\r\n  type: 'link',\r\n}"
-        },
-        {
-          "kind": "variable",
-          "name": "linkConfigTypeButton",
-          "type": {
-            "text": "Link"
-          },
-          "default": "{\r\n  text: 'Click here to test',\r\n  linkTitle: 'myLink',\r\n  href: 'https://www.w3schools.com/html/html_links.asp',\r\n  rel: 'noopener noreferrer',\r\n  target: '_blank',\r\n  type: 'button',\r\n}"
-        },
-        {
-          "kind": "variable",
-          "name": "linkConfigSlot",
-          "type": {
-            "text": "Link"
-          },
-          "default": "{\r\n  text: '',\r\n  linkTitle: 'myLink',\r\n  href: 'https://www.w3schools.com/html/html_links.asp',\r\n  rel: 'noopener noreferrer',\r\n  target: '_blank',\r\n  type: 'link',\r\n  slotName: 'newSlot',\r\n}"
-        },
-        {
-          "kind": "variable",
-          "name": "linkConfigSlotTypeButton",
-          "type": {
-            "text": "Link"
-          },
-          "default": "{\r\n  text: '',\r\n  linkTitle: 'myLink',\r\n  href: 'https://www.w3schools.com/html/html_links.asp',\r\n  rel: 'noopener noreferrer',\r\n  target: '_blank',\r\n  type: 'button',\r\n  slotName: 'newSlot',\r\n}"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "linkConfig",
-          "declaration": {
-            "name": "linkConfig",
-            "module": "src/constants/link.variants.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "linkConfigTypeButton",
-          "declaration": {
-            "name": "linkConfigTypeButton",
-            "module": "src/constants/link.variants.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "linkConfigSlot",
-          "declaration": {
-            "name": "linkConfigSlot",
-            "module": "src/constants/link.variants.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "linkConfigSlotTypeButton",
-          "declaration": {
-            "name": "linkConfigSlotTypeButton",
-            "module": "src/constants/link.variants.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/shared/tailwind.element.ts",
-      "declarations": [
-        {
-          "kind": "mixin",
-          "description": "",
-          "name": "TailwindElement",
-          "members": [
-            {
-              "kind": "field",
-              "name": "styles",
-              "type": {
-                "text": "array"
-              },
-              "static": true,
-              "default": "[tailwindElement, unsafeCSS(style)]"
-            }
-          ],
-          "parameters": [
-            {
-              "name": "style",
-              "type": {
-                "text": "CSSStyleSheet | null"
-              }
-            }
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "TailwindElement",
-          "declaration": {
-            "name": "TailwindElement",
-            "module": "src/shared/tailwind.element.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/link/link.component.spec.ts",
       "declarations": [],
       "exports": []
     },
@@ -211,7 +29,9 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "'Click Here'"
+              "default": "'Click Here'",
+              "attribute": "text",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -219,7 +39,9 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "''"
+              "default": "''",
+              "attribute": "linkTitle",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -227,7 +49,9 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "'#'"
+              "default": "'#'",
+              "attribute": "href",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -235,7 +59,9 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "''"
+              "default": "''",
+              "attribute": "rel",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -243,7 +69,9 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "'_self'"
+              "default": "'_self'",
+              "attribute": "target",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -251,7 +79,9 @@
               "type": {
                 "text": "LinkComponentTypes | undefined"
               },
-              "default": "'link'"
+              "default": "'link'",
+              "attribute": "type",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -259,29 +89,72 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "''"
+              "default": "''",
+              "attribute": "slotName",
+              "reflects": true
             },
             {
               "kind": "method",
               "name": "getClassTheme",
               "privacy": "protected"
-            },
+            }
+          ],
+          "attributes": [
             {
-              "kind": "method",
-              "name": "render"
-            },
-            {
-              "kind": "field",
-              "name": "styles",
+              "name": "text",
               "type": {
-                "text": "array"
+                "text": "string | undefined"
               },
-              "static": true,
-              "default": "[tailwindElement, unsafeCSS(style)]",
-              "inheritedFrom": {
-                "name": "TailwindElement",
-                "module": "src/shared/tailwind.element.ts"
-              }
+              "default": "'Click Here'",
+              "fieldName": "text"
+            },
+            {
+              "name": "linkTitle",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "''",
+              "fieldName": "linkTitle"
+            },
+            {
+              "name": "href",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'#'",
+              "fieldName": "href"
+            },
+            {
+              "name": "rel",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "''",
+              "fieldName": "rel"
+            },
+            {
+              "name": "target",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'_self'",
+              "fieldName": "target"
+            },
+            {
+              "name": "type",
+              "type": {
+                "text": "LinkComponentTypes | undefined"
+              },
+              "default": "'link'",
+              "fieldName": "type"
+            },
+            {
+              "name": "slotName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "''",
+              "fieldName": "slotName"
             }
           ],
           "mixins": [
@@ -292,13 +165,23 @@
           ],
           "superclass": {
             "module": "src/link/link.component.ts"
-          }
+          },
+          "tagName": "ymlwebcl-link",
+          "customElement": true
         }
       ],
       "exports": [
         {
           "kind": "js",
           "name": "LinkComponent",
+          "declaration": {
+            "name": "LinkComponent",
+            "module": "src/link/link.component.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "ymlwebcl-link",
           "declaration": {
             "name": "LinkComponent",
             "module": "src/link/link.component.ts"
@@ -311,54 +194,6 @@
       "path": "src/types/link.component.ts",
       "declarations": [],
       "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/generated/locales/es-419.ts",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "templates",
-          "type": {
-            "text": "object"
-          },
-          "default": "{\n      's66e7012cb5146b20': str`Haga clic aquí para redirigir`,\n'sd832bfea9a82a813': str`Haga clic aquí`,\n    }"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "templates",
-          "declaration": {
-            "name": "templates",
-            "module": "src/generated/locales/es-419.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/generated/locales/zh-Hans.ts",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "templates",
-          "type": {
-            "text": "object"
-          },
-          "default": "{\n      's66e7012cb5146b20': str`单击此处重定向`,\n'sd832bfea9a82a813': str`点击这里`,\n    }"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "templates",
-          "declaration": {
-            "name": "templates",
-            "module": "src/generated/locales/zh-Hans.ts"
-          }
-        }
-      ]
     }
   ]
 }

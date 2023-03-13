@@ -21,6 +21,7 @@
     "@types/jest": "^29.2.5",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "babel-loader": "^8.3.0",
+    "case": "^1.6.3",
     "cem-plugin-module-file-extensions": "^0.0.5",
     "cem-plugin-reactify": "^0.0.2",
     "electron": "^22.0.1",
@@ -58,7 +59,8 @@
     "test:coverage": "yarn build && jest --coverage -u",
     "test:watch": "yarn build && jest -u --watch",
     "lint": "yarn eslint \"packages/**/src/**\" --fix",
-    "analyze": "lerna exec custom-elements-manifest analyze"
+    "analyze": "lerna exec cem analyze",
+    "gen-react-wrapper": "rm -fr react && lerna exec  -- cem analyze --config ../../cem-react-wrapper.config.js"
   },
   "husky": {
     "hooks": {

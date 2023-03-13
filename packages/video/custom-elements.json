@@ -10,158 +10,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/index.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./video/video.component"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "dist/index.js",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "i"
-        },
-        {
-          "kind": "variable",
-          "name": "r"
-        },
-        {
-          "kind": "variable",
-          "name": "s"
-        },
-        {
-          "kind": "function",
-          "name": "i",
-          "parameters": [
-            {
-              "name": "u"
-            }
-          ]
-        },
-        {
-          "kind": "function",
-          "name": "r"
-        },
-        {
-          "kind": "function",
-          "name": "s"
-        },
-        {
-          "kind": "function",
-          "name": "s"
-        },
-        {
-          "kind": "function",
-          "name": "i"
-        },
-        {
-          "kind": "function",
-          "name": "r",
-          "parameters": [
-            {
-              "name": "b"
-            }
-          ]
-        },
-        {
-          "kind": "function",
-          "name": "i"
-        },
-        {
-          "kind": "function",
-          "name": "r",
-          "parameters": [
-            {
-              "name": "c"
-            }
-          ]
-        },
-        {
-          "kind": "function",
-          "name": "r",
-          "parameters": [
-            {
-              "name": "n"
-            }
-          ]
-        },
-        {
-          "kind": "function",
-          "name": "s",
-          "parameters": [
-            {
-              "name": "ie"
-            }
-          ]
-        },
-        {
-          "kind": "function",
-          "name": "s",
-          "parameters": [
-            {
-              "name": "p"
-            },
-            {
-              "name": "_"
-            },
-            {
-              "name": "b"
-            }
-          ]
-        },
-        {
-          "kind": "function",
-          "name": "i"
-        },
-        {
-          "kind": "function",
-          "name": "i"
-        },
-        {
-          "kind": "variable",
-          "name": "ke",
-          "default": "class extends Yb(Gb) {\n  constructor() {\n    super(...arguments), this.preload = \"auto\", this.autoplay = !1, this.controls = !0, this.fluid = !1, this.responsive = !0, this.muted = !1, this.loop = !1, this.playbackRates = [], this.seekTo = \"\", this.customPlayEvent = \"\", this.customPauseEvent = \"\", this.customSeekEvent = \"\", this.player = null, this.hasSeeked = !1;\n  }\n  getTrackOptions() {\n    return this.captions && this.captions.filter((a) => a.srcTrack).map((a) => ({\n      src: a.srcTrack,\n      kind: a.kind,\n      srclang: a.srcLang,\n      label: a.label\n    }));\n  }\n  firstUpdated() {\n    var t, i, r;\n    const a = (t = this.shadowRoot) == null ? void 0 : t.querySelector(\n      \".vjs-styles-defaults\"\n    );\n    this.shadowRoot.appendChild(\n      a ? a.nextSibling : document.head.firstChild\n    ), this.player = O(this.shadowRoot.querySelector(\"video\"), {\n      autoplay: this.autoplay,\n      controls: this.controls,\n      fluid: this.fluid,\n      responsive: this.responsive,\n      muted: this.muted,\n      poster: this.poster,\n      loop: this.loop,\n      aspectRatio: (r = (i = this.videoStyle) == null ? void 0 : i.aspectRatio) != null ? r : Qb,\n      playbackRates: this.playbackRates,\n      tracks: this.getTrackOptions(),\n      userActions: {\n        hotkeys: !0\n      },\n      preload: this.preload\n    }), this.player.on(\"play\", () => {\n      this.hasSeeked = !1, this != null && this.customPlayEvent && this.dispatchEvent(new CustomEvent(\"handlePlay\"));\n    }), this.player.on(\"pause\", () => {\n      this.hasSeeked = !1, this != null && this.customPauseEvent && this.dispatchEvent(new CustomEvent(\"handlePause\"));\n    }), this.player.on(\"seeked\", () => {\n      (this == null ? void 0 : this.customSeekEvent) && !this.hasSeeked && (this.seek(Number(this.seekTo) + this.player.currentTime()), this.dispatchEvent(new CustomEvent(\"handleSeek\")), this.hasSeeked = !0, setTimeout(() => {\n        this.hasSeeked = !1;\n      }, 1e3));\n    });\n  }\n  seek(a) {\n    this.player.currentTime(a);\n  }\n  render() {\n    return Fm`\n      <div\n        data-vjs-player\n        style=\"${this.videoStyle && `width:${this.videoStyle.width}; height:${this.videoStyle.height}`}\"\n        part=\"video\"\n      >\n        <video id=\"my-video\" class=\"video-js vjs-big-play-centered\"></video>\n      </div>\n    `;\n  }\n  updated(a) {\n    a.has(\"src\") && this.player.src(this.src);\n  }\n}"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "custom-element-definition",
-          "name": "i",
-          "declaration": {
-            "name": "r",
-            "module": "dist/index.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "i",
-          "declaration": {
-            "name": "s",
-            "module": "dist/index.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "VideoComponent",
-          "declaration": {
-            "name": "ke",
-            "module": "dist/index.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/constants/video.component.ts",
       "declarations": [
         {
@@ -186,36 +34,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/constants/video.variant.ts",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "videoConfig",
-          "type": {
-            "text": "Video"
-          },
-          "default": "{\r\n  src: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',\r\n  preload: 'auto',\r\n  autoplay: false,\r\n  controls: true,\r\n  fluid: false,\r\n  responsive: true,\r\n  muted: false,\r\n  loop: false,\r\n  playbackRates: [0.25, 0.5, 1, 1.5, 2, 2.5, 3],\r\n  poster:\r\n    'https://upload.wikimedia.org/wikipedia/commons/6/69/Big_Buck_Bunny_-_forest.jpg',\r\n  videoStyle: {\r\n    width: '600px',\r\n    height: '400px',\r\n    aspectRatio: '4:3',\r\n  },\r\n\r\n  captions: [\r\n    {\r\n      srcTrack:\r\n        'https://gist.githubusercontent.com/samdutton/ca37f3adaf4e23679957b8083e061177/raw/e19399fbccbc069a2af4266e5120ae6bad62699a/sample.vtt',\r\n      kind: 'captions',\r\n      srcLang: 'en',\r\n      label: 'English',\r\n    },\r\n  ],\r\n  seekTo: '60',\r\n}"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "videoConfig",
-          "declaration": {
-            "name": "videoConfig",
-            "module": "src/constants/video.variant.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/video/video.component.spec.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/video/video.component.ts",
       "declarations": [
         {
@@ -228,7 +46,9 @@
               "name": "src",
               "type": {
                 "text": "string"
-              }
+              },
+              "attribute": "src",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -236,7 +56,9 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "'auto'"
+              "default": "'auto'",
+              "attribute": "preload",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -244,7 +66,9 @@
               "type": {
                 "text": "boolean | string | undefined"
               },
-              "default": "false"
+              "default": "false",
+              "attribute": "autoplay",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -252,7 +76,9 @@
               "type": {
                 "text": "boolean | undefined"
               },
-              "default": "true"
+              "default": "true",
+              "attribute": "controls",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -260,7 +86,9 @@
               "type": {
                 "text": "boolean | undefined"
               },
-              "default": "false"
+              "default": "false",
+              "attribute": "fluid",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -268,7 +96,9 @@
               "type": {
                 "text": "boolean | undefined"
               },
-              "default": "true"
+              "default": "true",
+              "attribute": "responsive",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -276,7 +106,9 @@
               "type": {
                 "text": "boolean | undefined"
               },
-              "default": "false"
+              "default": "false",
+              "attribute": "muted",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -284,7 +116,9 @@
               "type": {
                 "text": "boolean | undefined"
               },
-              "default": "false"
+              "default": "false",
+              "attribute": "loop",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -292,28 +126,36 @@
               "type": {
                 "text": "array"
               },
-              "default": "[]"
+              "default": "[]",
+              "attribute": "playbackRates",
+              "reflects": true
             },
             {
               "kind": "field",
               "name": "poster",
               "type": {
                 "text": "string | undefined"
-              }
+              },
+              "attribute": "poster",
+              "reflects": true
             },
             {
               "kind": "field",
               "name": "videoStyle",
               "type": {
                 "text": "VideoStyle | null | undefined"
-              }
+              },
+              "attribute": "videoStyle",
+              "reflects": true
             },
             {
               "kind": "field",
               "name": "captions",
               "type": {
                 "text": "Captions[] | undefined"
-              }
+              },
+              "attribute": "captions",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -321,7 +163,9 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "''"
+              "default": "''",
+              "attribute": "seekTo",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -329,7 +173,9 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "''"
+              "default": "''",
+              "attribute": "customPlayEvent",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -337,7 +183,9 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "''"
+              "default": "''",
+              "attribute": "customPauseEvent",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -345,7 +193,9 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "''"
+              "default": "''",
+              "attribute": "customSeekEvent",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -371,10 +221,6 @@
             },
             {
               "kind": "method",
-              "name": "firstUpdated"
-            },
-            {
-              "kind": "method",
               "name": "seek",
               "privacy": "protected",
               "parameters": [
@@ -385,35 +231,6 @@
                   }
                 }
               ]
-            },
-            {
-              "kind": "method",
-              "name": "render"
-            },
-            {
-              "kind": "method",
-              "name": "updated",
-              "parameters": [
-                {
-                  "name": "changedProperties",
-                  "type": {
-                    "text": "Map<keyof this, string | boolean | undefined>"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "field",
-              "name": "styles",
-              "type": {
-                "text": "array"
-              },
-              "static": true,
-              "default": "[tailwindElement, unsafeCSS(style)]",
-              "inheritedFrom": {
-                "name": "TailwindElement",
-                "module": "src/shared/tailwind.element.ts"
-              }
             }
           ],
           "events": [
@@ -436,6 +253,132 @@
               }
             }
           ],
+          "attributes": [
+            {
+              "name": "src",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "src"
+            },
+            {
+              "name": "preload",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'auto'",
+              "fieldName": "preload"
+            },
+            {
+              "name": "autoplay",
+              "type": {
+                "text": "boolean | string | undefined"
+              },
+              "default": "false",
+              "fieldName": "autoplay"
+            },
+            {
+              "name": "controls",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "true",
+              "fieldName": "controls"
+            },
+            {
+              "name": "fluid",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "false",
+              "fieldName": "fluid"
+            },
+            {
+              "name": "responsive",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "true",
+              "fieldName": "responsive"
+            },
+            {
+              "name": "muted",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "false",
+              "fieldName": "muted"
+            },
+            {
+              "name": "loop",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "false",
+              "fieldName": "loop"
+            },
+            {
+              "name": "playbackRates",
+              "type": {
+                "text": "array"
+              },
+              "default": "[]",
+              "fieldName": "playbackRates"
+            },
+            {
+              "name": "poster",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "poster"
+            },
+            {
+              "name": "videoStyle",
+              "type": {
+                "text": "VideoStyle | null | undefined"
+              },
+              "fieldName": "videoStyle"
+            },
+            {
+              "name": "captions",
+              "type": {
+                "text": "Captions[] | undefined"
+              },
+              "fieldName": "captions"
+            },
+            {
+              "name": "seekTo",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "''",
+              "fieldName": "seekTo"
+            },
+            {
+              "name": "customPlayEvent",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "''",
+              "fieldName": "customPlayEvent"
+            },
+            {
+              "name": "customPauseEvent",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "''",
+              "fieldName": "customPauseEvent"
+            },
+            {
+              "name": "customSeekEvent",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "''",
+              "fieldName": "customSeekEvent"
+            }
+          ],
           "mixins": [
             {
               "name": "TailwindElement",
@@ -445,7 +388,9 @@
           "superclass": {
             "name": "Style",
             "module": "/node_modules/video.js/dist/video-js.css"
-          }
+          },
+          "tagName": "ymlwebcl-video",
+          "customElement": true
         }
       ],
       "exports": [
@@ -456,45 +401,13 @@
             "name": "VideoComponent",
             "module": "src/video/video.component.ts"
           }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/shared/tailwind.element.ts",
-      "declarations": [
+        },
         {
-          "kind": "mixin",
-          "description": "",
-          "name": "TailwindElement",
-          "members": [
-            {
-              "kind": "field",
-              "name": "styles",
-              "type": {
-                "text": "array"
-              },
-              "static": true,
-              "default": "[tailwindElement, unsafeCSS(style)]"
-            }
-          ],
-          "parameters": [
-            {
-              "name": "style",
-              "type": {
-                "text": "CSSStyleSheet | null"
-              }
-            }
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "TailwindElement",
+          "kind": "custom-element-definition",
+          "name": "ymlwebcl-video",
           "declaration": {
-            "name": "TailwindElement",
-            "module": "src/shared/tailwind.element.ts"
+            "name": "VideoComponent",
+            "module": "src/video/video.component.ts"
           }
         }
       ]

@@ -10,128 +10,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "dist/index.js",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "e"
-        },
-        {
-          "kind": "variable",
-          "name": "i"
-        },
-        {
-          "kind": "variable",
-          "name": "n"
-        },
-        {
-          "kind": "variable",
-          "name": "d",
-          "default": "class extends Ht(null) {\n  constructor() {\n    super(...arguments), this.label = \"Label\", this.value = \"\", this.placeholder = \"Input\", this.changeHandler = \"\", this.clickIconHandler = \"\", this.labelPartAttribute = \"text-field-label\", this.textFieldPartAttribute = \"text-field-input\", this.iconPartAttribute = \"text-field-icon\", this.hintTextPartAttribute = \"text-field-hint-text\", this.autocomplete = ct.Off;\n  }\n  getContainerList() {\n    const { error: s, disabled: t } = this;\n    return s ? \"text-field-wrapper-error\" : t ? \"text-field-wrapper-disabled\" : \"text-field-wrapper\";\n  }\n  getInputClassList() {\n    return \"text-field-input\";\n  }\n  renderLabel() {\n    const { label: s, required: t, labelPartAttribute: e, textFieldId: i } = this;\n    return s ? O`<label\n          class=\"text-field-label-container\"\n          part=${e}\n          for=${i}\n        >\n          ${s} ${t ? O`<span class=\"text-red-500\">*</span>` : \"\"}\n        </label>` : \"\";\n  }\n  renderHintText() {\n    const { hintText: s, hintTextPartAttribute: t } = this;\n    return s ? O`<div part=${t}>${s}</div>` : \"\";\n  }\n  handleIconClick() {\n    this.clearField ? (document.body.getElementsByTagName(\"ymlwebcl-textfield\")[0].shadowRoot.querySelector(\".text-field-input\").value = \"\", this.value = \"\") : this.dispatchEvent(new CustomEvent(this.clickIconHandler));\n  }\n  updateValue(s) {\n    this.value = s, this.dispatchEvent(\n      new CustomEvent(this.changeHandler, { detail: { value: s } })\n    );\n  }\n  render() {\n    return O`<div\n      class=${this.getContainerList()}\n      part=${this.getContainerList()}\n    >\n      ${this.renderLabel()}\n      <div class=\"text-field-input-wrapper\">\n        <div\n          part=${this.iconPartAttribute}\n          @click=${() => this.handleIconClick()}\n        >\n          <slot name=\"textfield-icon\"></slot>\n        </div>\n        <input\n          class=${this.getInputClassList()}\n          type=\"text\"\n          id=${this.textFieldId}\n          value=${this.value || \"\"}\n          autocomplete=${this.autocomplete}\n          placeholder=${this.placeholder || \"\"}\n          autofocus=${this.autofocus || !1}\n          ?disabled=${this.disabled || !1}\n          ?readonly=${this.readonly || !1}\n          ?required=${this.required || !1}\n          ?pattern=${this.pattern || \"\"}\n          ?minlength=${this.minLength || \"\"}\n          ?maxlength=${this.maxLength || \"\"}\n          @input=${({ target: { value: s } }) => this.updateValue(s)}\n          part=${this.textFieldPartAttribute}\n        />\n      </div>\n      ${this.renderHintText()}\n    </div>`;\n  }\n}"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "custom-element-definition",
-          "name": "e",
-          "declaration": {
-            "name": "i",
-            "module": "dist/index.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "e",
-          "declaration": {
-            "name": "n",
-            "module": "dist/index.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "TextFieldComponent",
-          "declaration": {
-            "name": "d",
-            "module": "dist/index.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/index.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./text-field/textField.component"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/constants/text-field.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/shared/tailwind.element.ts",
-      "declarations": [
-        {
-          "kind": "mixin",
-          "description": "",
-          "name": "TailwindElement",
-          "members": [
-            {
-              "kind": "field",
-              "name": "styles",
-              "type": {
-                "text": "array"
-              },
-              "static": true,
-              "default": "[tailwindElement, unsafeCSS(style)]"
-            }
-          ],
-          "parameters": [
-            {
-              "name": "style",
-              "type": {
-                "text": "CSSStyleSheet | null"
-              }
-            }
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "TailwindElement",
-          "declaration": {
-            "name": "TailwindElement",
-            "module": "src/shared/tailwind.element.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/types/text-field.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/text-field/textField.component.spec.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/text-field/textField.component.ts",
       "declarations": [
         {
@@ -144,7 +22,9 @@
               "name": "textFieldId",
               "type": {
                 "text": "string"
-              }
+              },
+              "attribute": "textFieldId",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -152,7 +32,9 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "'Label'"
+              "default": "'Label'",
+              "attribute": "label",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -160,7 +42,9 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "''"
+              "default": "''",
+              "attribute": "value",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -168,77 +52,99 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "'Input'"
+              "default": "'Input'",
+              "attribute": "placeholder",
+              "reflects": true
             },
             {
               "kind": "field",
               "name": "disabled",
               "type": {
                 "text": "boolean | undefined"
-              }
+              },
+              "attribute": "disabled",
+              "reflects": true
             },
             {
               "kind": "field",
               "name": "readonly",
               "type": {
                 "text": "boolean | undefined"
-              }
+              },
+              "attribute": "readonly",
+              "reflects": true
             },
             {
               "kind": "field",
               "name": "required",
               "type": {
                 "text": "boolean | undefined"
-              }
+              },
+              "attribute": "required",
+              "reflects": true
             },
             {
               "kind": "field",
               "name": "clearField",
               "type": {
                 "text": "boolean | undefined"
-              }
+              },
+              "attribute": "clearField",
+              "reflects": true
             },
             {
               "kind": "field",
               "name": "autofocus",
               "type": {
                 "text": "boolean"
-              }
+              },
+              "attribute": "autofocus",
+              "reflects": true
             },
             {
               "kind": "field",
               "name": "error",
               "type": {
                 "text": "boolean | undefined"
-              }
+              },
+              "attribute": "error",
+              "reflects": true
             },
             {
               "kind": "field",
               "name": "minLength",
               "type": {
                 "text": "number | undefined"
-              }
+              },
+              "attribute": "minLength",
+              "reflects": true
             },
             {
               "kind": "field",
               "name": "maxLength",
               "type": {
                 "text": "number | undefined"
-              }
+              },
+              "attribute": "maxLength",
+              "reflects": true
             },
             {
               "kind": "field",
               "name": "pattern",
               "type": {
                 "text": "string | undefined"
-              }
+              },
+              "attribute": "pattern",
+              "reflects": true
             },
             {
               "kind": "field",
               "name": "hintText",
               "type": {
                 "text": "string | undefined"
-              }
+              },
+              "attribute": "hintText",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -246,7 +152,9 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "''"
+              "default": "''",
+              "attribute": "changeHandler",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -254,7 +162,9 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "''"
+              "default": "''",
+              "attribute": "clickIconHandler",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -262,7 +172,9 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "'text-field-label'"
+              "default": "'text-field-label'",
+              "attribute": "labelPartAttribute",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -270,7 +182,9 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "'text-field-input'"
+              "default": "'text-field-input'",
+              "attribute": "textFieldPartAttribute",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -278,7 +192,9 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "'text-field-icon'"
+              "default": "'text-field-icon'",
+              "attribute": "iconPartAttribute",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -286,14 +202,18 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "'text-field-hint-text'"
+              "default": "'text-field-hint-text'",
+              "attribute": "hintTextPartAttribute",
+              "reflects": true
             },
             {
               "kind": "field",
               "name": "autocomplete",
               "type": {
                 "text": "AutoComplete | undefined"
-              }
+              },
+              "attribute": "autocomplete",
+              "reflects": true
             },
             {
               "kind": "method",
@@ -329,23 +249,6 @@
                   "name": "newValue"
                 }
               ]
-            },
-            {
-              "kind": "method",
-              "name": "render"
-            },
-            {
-              "kind": "field",
-              "name": "styles",
-              "type": {
-                "text": "array"
-              },
-              "static": true,
-              "default": "[tailwindElement, unsafeCSS(style)]",
-              "inheritedFrom": {
-                "name": "TailwindElement",
-                "module": "src/shared/tailwind.element.ts"
-              }
             }
           ],
           "events": [
@@ -353,6 +256,164 @@
               "type": {
                 "text": "CustomEvent"
               }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "textFieldId",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "textFieldId"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'Label'",
+              "fieldName": "label"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "''",
+              "fieldName": "value"
+            },
+            {
+              "name": "placeholder",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'Input'",
+              "fieldName": "placeholder"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "fieldName": "disabled"
+            },
+            {
+              "name": "readonly",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "fieldName": "readonly"
+            },
+            {
+              "name": "required",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "fieldName": "required"
+            },
+            {
+              "name": "clearField",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "fieldName": "clearField"
+            },
+            {
+              "name": "autofocus",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "autofocus"
+            },
+            {
+              "name": "error",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "fieldName": "error"
+            },
+            {
+              "name": "minLength",
+              "type": {
+                "text": "number | undefined"
+              },
+              "fieldName": "minLength"
+            },
+            {
+              "name": "maxLength",
+              "type": {
+                "text": "number | undefined"
+              },
+              "fieldName": "maxLength"
+            },
+            {
+              "name": "pattern",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "pattern"
+            },
+            {
+              "name": "hintText",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "hintText"
+            },
+            {
+              "name": "changeHandler",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "''",
+              "fieldName": "changeHandler"
+            },
+            {
+              "name": "clickIconHandler",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "''",
+              "fieldName": "clickIconHandler"
+            },
+            {
+              "name": "labelPartAttribute",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'text-field-label'",
+              "fieldName": "labelPartAttribute"
+            },
+            {
+              "name": "textFieldPartAttribute",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'text-field-input'",
+              "fieldName": "textFieldPartAttribute"
+            },
+            {
+              "name": "iconPartAttribute",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'text-field-icon'",
+              "fieldName": "iconPartAttribute"
+            },
+            {
+              "name": "hintTextPartAttribute",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'text-field-hint-text'",
+              "fieldName": "hintTextPartAttribute"
+            },
+            {
+              "name": "autocomplete",
+              "type": {
+                "text": "AutoComplete | undefined"
+              },
+              "fieldName": "autocomplete"
             }
           ],
           "mixins": [
@@ -363,13 +424,23 @@
           ],
           "superclass": {
             "module": "src/text-field/textField.component.ts"
-          }
+          },
+          "tagName": "ymlwebcl-textfield",
+          "customElement": true
         }
       ],
       "exports": [
         {
           "kind": "js",
           "name": "TextFieldComponent",
+          "declaration": {
+            "name": "TextFieldComponent",
+            "module": "src/text-field/textField.component.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "ymlwebcl-textfield",
           "declaration": {
             "name": "TextFieldComponent",
             "module": "src/text-field/textField.component.ts"

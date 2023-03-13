@@ -10,76 +10,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "dist/index.js",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "e"
-        },
-        {
-          "kind": "variable",
-          "name": "i"
-        },
-        {
-          "kind": "variable",
-          "name": "n"
-        },
-        {
-          "kind": "variable",
-          "name": "A",
-          "default": "class extends Pt(null) {\n  constructor() {\n    super(...arguments), this.max = 100, this.containerPartAttribute = \"webcl-progress-bar-container\", this.progressBarPartAttribute = \"webcl-progress-bar\";\n  }\n  getProgressBarStyle() {\n    const { percent: r, max: t } = this;\n    return `width: ${r / t * 100}%; transition: width 0.3s ease-in-out; height: 100%`;\n  }\n  render() {\n    const { percent: r, max: t, containerPartAttribute: e, progressBarPartAttribute: i } = this;\n    return gt`\n      <div part=${e}>\n        <div\n          part=${i}\n          style=${this.getProgressBarStyle()}\n          role=\"${Rt(Nt`progressbar`)}\"\n          aria-valuemin=\"0\"\n          aria-valuemax=${t}\n          aria-valuenow=${r}\n        ></div>\n      </div>\n    `;\n  }\n}"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "custom-element-definition",
-          "name": "e",
-          "declaration": {
-            "name": "i",
-            "module": "dist/index.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "e",
-          "declaration": {
-            "name": "n",
-            "module": "dist/index.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "ProgressBarComponent",
-          "declaration": {
-            "name": "A",
-            "module": "dist/index.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/index.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./progress-bar/progressBar.component"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/progress-bar/progressBar.component.spec.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/progress-bar/progressBar.component.ts",
       "declarations": [
         {
@@ -92,7 +22,9 @@
               "name": "percent",
               "type": {
                 "text": "number"
-              }
+              },
+              "attribute": "percent",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -100,7 +32,9 @@
               "type": {
                 "text": "number | undefined"
               },
-              "default": "100"
+              "default": "100",
+              "attribute": "max",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -108,7 +42,9 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "'webcl-progress-bar-container'"
+              "default": "'webcl-progress-bar-container'",
+              "attribute": "containerPartAttribute",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -116,29 +52,47 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "'webcl-progress-bar'"
+              "default": "'webcl-progress-bar'",
+              "attribute": "progressBarPartAttribute",
+              "reflects": true
             },
             {
               "kind": "method",
               "name": "getProgressBarStyle",
               "privacy": "protected"
-            },
+            }
+          ],
+          "attributes": [
             {
-              "kind": "method",
-              "name": "render"
-            },
-            {
-              "kind": "field",
-              "name": "styles",
+              "name": "percent",
               "type": {
-                "text": "array"
+                "text": "number"
               },
-              "static": true,
-              "default": "[tailwindElement, unsafeCSS(style)]",
-              "inheritedFrom": {
-                "name": "TailwindElement",
-                "module": "src/shared/tailwind.element.ts"
-              }
+              "fieldName": "percent"
+            },
+            {
+              "name": "max",
+              "type": {
+                "text": "number | undefined"
+              },
+              "default": "100",
+              "fieldName": "max"
+            },
+            {
+              "name": "containerPartAttribute",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'webcl-progress-bar-container'",
+              "fieldName": "containerPartAttribute"
+            },
+            {
+              "name": "progressBarPartAttribute",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'webcl-progress-bar'",
+              "fieldName": "progressBarPartAttribute"
             }
           ],
           "mixins": [
@@ -149,7 +103,9 @@
           ],
           "superclass": {
             "module": "src/progress-bar/progressBar.component.ts"
-          }
+          },
+          "tagName": "ymlwebcl-progressbar",
+          "customElement": true
         }
       ],
       "exports": [
@@ -160,93 +116,13 @@
             "name": "ProgressBarComponent",
             "module": "src/progress-bar/progressBar.component.ts"
           }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/shared/tailwind.element.ts",
-      "declarations": [
+        },
         {
-          "kind": "mixin",
-          "description": "",
-          "name": "TailwindElement",
-          "members": [
-            {
-              "kind": "field",
-              "name": "styles",
-              "type": {
-                "text": "array"
-              },
-              "static": true,
-              "default": "[tailwindElement, unsafeCSS(style)]"
-            }
-          ],
-          "parameters": [
-            {
-              "name": "style",
-              "type": {
-                "text": "CSSStyleSheet | null"
-              }
-            }
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "TailwindElement",
+          "kind": "custom-element-definition",
+          "name": "ymlwebcl-progressbar",
           "declaration": {
-            "name": "TailwindElement",
-            "module": "src/shared/tailwind.element.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/generated/locales/es-419.ts",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "templates",
-          "type": {
-            "text": "object"
-          },
-          "default": "{\n      's81b657f2a152dbdf': str`进度条`,\n    }"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "templates",
-          "declaration": {
-            "name": "templates",
-            "module": "src/generated/locales/es-419.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/generated/locales/zh-Hans.ts",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "templates",
-          "type": {
-            "text": "object"
-          },
-          "default": "{\n      's81b657f2a152dbdf': str`Jìndù tiáo`,\n    }"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "templates",
-          "declaration": {
-            "name": "templates",
-            "module": "src/generated/locales/zh-Hans.ts"
+            "name": "ProgressBarComponent",
+            "module": "src/progress-bar/progressBar.component.ts"
           }
         }
       ]

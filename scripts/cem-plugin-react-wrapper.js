@@ -1,216 +1,269 @@
-/* eslint-disable */
+/*
+Copyright 2022 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
 
-import fs from 'fs';
-import path from 'path';
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+import { readFile } from 'fs/promises';
+import fsExtra from 'fs-extra';
+import { basename, dirname, resolve } from 'path';
 import prettier from 'prettier';
+import Case from 'case';
+import glob from 'glob';
+import yaml from 'js-yaml';
+import { fileURLToPath } from 'url';
 
-import {
-  camelize,
-  createEventName,
-  has,
-  getDefineCallForElement,
-  RESERVED_WORDS,
-} from './utils.js';
+const { existsSync, outputFile, readFileSync, readJSON } = fsExtra;
 
-const packageJsonPath = `${process.cwd()}${path.sep}package.json`;
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath).toString());
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const prettierConfig = yaml.load(
+  readFileSync(resolve(__dirname, '..', '.prettierrc.yaml'))
+);
 
-export default function reactify({
+/* Share =============================================================== */
+
+/**
+ * Generate tsconfig.json file for each of the wrapper component.
+ */
+function genTsconfigJson() {
+  return `{
+        "extends": "../../tsconfig.json",
+        "compilerOptions": {
+            "composite": true,
+            "rootDir": "./"
+        },
+        "include": ["*.ts"]
+    }`;
+}
+
+/**
+ * Generate package.json file for each of the wrapper component.
+ */
+function genPackageJson(
+  componentName,
+  dependencyPkgName,
+  dependencyPkgVersion
+) {
+  return `{
+        "name": "@fe-component-library/${componentName}",
+        "version": "${dependencyPkgVersion}",
+        "publishConfig": {
+            "access": "public"
+        },
+        "description": "React wrapper of the ${dependencyPkgName} component",
+        "license": "Apache-2.0",
+        "author": "",
+        "main": "index.js",
+        "files": [
+            "**/*.d.ts",
+            "**/*.js",
+            "**/*.js.map"
+        ],
+        "keywords": [
+            "React",
+            "${dependencyPkgName}"
+        ],
+        "dependencies": {
+            "@lit-labs/react": "^1.1.1",
+            "${dependencyPkgName}": "${dependencyPkgVersion}"
+        }
+    }`;
+}
+
+/**
+ * Remove the duplicate array elements that has same value of a property
+ */
+function uniqueBy(arr, prop) {
+  return [...new Map(arr.map((m) => [m[prop], m])).values()];
+}
+
+/* React wrapper generation ============================================ */
+
+/**
+ * Recusively get all the public events/methods from component itself and its super class
+ * It even supports extracting from external component package.
+ */
+async function getEvents(decl, declMap, events) {
+  if (declMap.has(decl?.superclass?.name)) {
+    getEvents(declMap.get(decl?.superclass?.name), declMap, events);
+  } else if (
+    decl?.superclass?.package &&
+    existsSync(
+      `../../packages/${decl?.superclass?.package.replace(
+        '@fe-component-library/',
+        ''
+      )}/custom-elements.json`
+    )
+  ) {
+    // Extract events/method from external package
+    const { modules } = JSON.parse(
+      await readFile(
+        `../../packages/${decl?.superclass?.package.replace(
+          '@fe-component-library/',
+          ''
+        )}/custom-elements.json`
+      )
+    );
+    const [superDecl, ...rest] = modules.flatMap((m) =>
+      m.declarations.filter((d) => d.name === decl?.superclass?.name)
+    );
+    if (superDecl) {
+      getEvents(superDecl, declMap, events);
+    }
+  }
+
+  if (decl?.events) {
+    events.push(
+      decl?.events
+        .filter((event) => !!event.name)
+        .map((event) => {
+          return {
+            name: event.name,
+            type: event.type?.text || 'Event',
+            description: event.description,
+          };
+        })
+    );
+  }
+}
+
+/**
+ * CEM package will invoke this callback function.
+ *
+ * @param {*} exclude array of excluded component class name
+ * @param {*} outDir root output directory for generated code
+ * @param {*} prettierConfig prettier library configuration
+ */
+export default function genReactWrapper({
   exclude = [],
-  attributeMapping = {},
-  outdir = 'legacy',
+  outDir = 'legacy',
+  prettierConfig = {},
 } = {}) {
   return {
-    name: 'reactify',
-    packageLinkPhase({ customElementsManifest }) {
-      if (!fs.existsSync(outdir)) {
-        fs.mkdirSync(outdir);
+    name: 'react-wrapper',
+    async packageLinkPhase({ customElementsManifest }) {
+      const { name: pkgName, version: pkgVersion } = JSON.parse(
+        await readFile(`${process.cwd()}/package.json`)
+      );
+      const { modules } = customElementsManifest;
+      const declMap = new Map(
+        modules.flatMap((m) => m.declarations.map((decl) => [decl.name, decl]))
+      );
+      const components = modules.flatMap((m) =>
+        m.declarations.filter(
+          (decl) =>
+            !exclude.includes(decl.name) && (decl.customElement || decl.tagName)
+        )
+      );
+
+      if (components.length === 0) {
+        return;
       }
 
-      const components = [];
-      customElementsManifest.modules.forEach((mod) => {
-        mod.declarations.forEach((dec) => {
-          if (
-            !exclude.includes(dec.name) &&
-            (dec.customElement || dec.tagName)
-          ) {
-            components.push(dec);
-          }
-        });
-      });
+      const componentImports = [];
 
-      components.forEach((component) => {
-        let useEffect = false;
-        const fields = component?.members?.filter(
-          (member) =>
-            member.kind === 'field' &&
-            !member.static &&
-            member.privacy !== 'private' &&
-            member.privacy !== 'protected'
+      const fileImports = modules
+        .filter(
+          (m) =>
+            m.exports.length === 1 &&
+            m.exports.some((exp) => exp.kind === 'custom-element-definition')
+        )
+        .map((m) => `import '${pkgName}/${m.path?.replace('.ts', '.js')}';`);
+
+      const reactComponents = [];
+
+      for (let component of components) {
+        componentImports.push(
+          `import { ${component.name} as Sp${component.name} } from '${pkgName}';`
         );
 
-        const booleanAttributes = [];
-        const attributes = [];
+        const reactComponent = {};
+        reactComponent.name = `${component.name}`;
+        reactComponent.swcComponentName = `${component.name}`;
+        reactComponent.elementName = component.tagName;
+        const events = [];
+        await getEvents(component, declMap, events);
+        reactComponent.events = uniqueBy(events.flat(), 'name');
 
-        component?.attributes
-          ?.filter((attr) => !attr.fieldName)
-          ?.forEach((attr) => {
-            /** Handle reserved keyword attributes */
-            if (RESERVED_WORDS.includes(attr?.name)) {
-              /** If we have a user-specified mapping, rename */
-              if (attr.name in attributeMapping) {
-                const attribute = {
-                  ...attr,
-                  originalName: attr.name,
-                  name: attributeMapping[attr.name],
-                };
-                if (attr?.type?.text === 'boolean') {
-                  booleanAttributes.push(attribute);
-                } else {
-                  attributes.push(attribute);
-                }
-                return;
-              }
-              throw new Error(
-                `Attribute \`${attr.name}\` in custom element \`${component.name}\` is a reserved keyword and cannot be used. Please provide an \`attributeMapping\` in the plugin options to rename the JavaScript variable that gets passed to the attribute.`
-              );
-            }
+        reactComponents.push(reactComponent);
+      }
 
-            if (attr?.type?.text === 'boolean') {
-              booleanAttributes.push(attr);
-            } else {
-              attributes.push(attr);
-            }
-          });
+      const componentSrc = `
+import * as React from 'react';
+import { createComponent } from '@lit-labs/react';
+${
+  reactComponents.flatMap((component) => component.events).length > 0
+    ? "\nimport type { EventName } from '@lit-labs/react';"
+    : ''
+}
+${componentImports.reduce((pre, cur) => pre + cur + '\n', '')}
+${fileImports.reduce((pre, cur) => pre + cur + '\n', '')}
 
-        let params = [];
-        component?.events?.forEach((event) => {
-          params.push(createEventName(event));
-        });
-
-        fields?.forEach((member) => {
-          params.push(member.name);
-        });
-
-        [...(booleanAttributes || []), ...(attributes || [])]?.forEach(
-          (attr) => {
-            params.push(camelize(attr.name));
-          }
-        );
-
-        params = params?.join(', ');
-
-        const events = component?.events?.map(
-          (event) => `
-            useEffect(() => {
-              if(${createEventName(event)} !== undefined) {
-                ref.current.addEventListener('${event.name}', ${createEventName(
-            event
-          )});
-              }
-            }, [])
-          `
-        );
-
-        const booleanAttrs = booleanAttributes?.map(
-          (attr) => `
-            useEffect(() => {
-              if(${attr?.name ?? attr.originalName} !== undefined) {
-                if(${attr?.name ?? attr.originalName}) {
-                  ref.current.setAttribute('${attr.name}', '');
-                } else {
-                  ref.current.removeAttribute('${attr.name}');
-                }
-              }
-            }, [${attr?.originalName ?? attr.name}])
-          `
-        );
-
-        const attrs = attributes?.map(
-          (attr) => `
-            useEffect(() => {
-              if(${
-                attr?.name ?? attr.originalName
-              } !== undefined && ref.current.getAttribute('${
-            attr?.originalName ?? attr.name
-          }') !== String(${attr?.name ?? attr.originalName})) {
-                ref.current.setAttribute('${
-                  attr?.originalName ?? attr.name
-                }', ${attr?.name ?? attr.originalName})
-              }
-            }, [${attr?.name ?? attr.originalName}])
-        `
-        );
-
-        const props = fields?.map(
-          (member) => `
-            useEffect(() => {
-              if(${member.name} !== undefined && ref.current.${member.name} !== ${member.name}) {
-                ref.current.${member.name} = ${member.name};
-              }
-            }, [${member.name}])
-        `
-        );
-
-        if (has(events) || has(props) || has(attrs) || has(booleanAttrs)) {
-          useEffect = true;
+${reactComponents.reduce(
+  (pre, component) =>
+    pre +
+    `export const ${component.name} = createComponent({
+        displayName: '${component.name}',
+        elementClass: ${component.swcComponentName},
+        react: React,
+        tagName: '${component.elementName}',
+        events: {
+            ${component.events.reduce(
+              (pre, event) =>
+                pre +
+                `${event.name.replace(/-./g, (m) => m[1].toUpperCase())}: '${
+                  event.name
+                }' as EventName<${event.type}>, ${
+                  event.description ? `// ${event.description}` : ''
+                }\n`,
+              ''
+            )}
         }
+    });`,
+  ''
+)}
 
-        const moduleSpecifier = path.join(
-          packageJson.name,
-          getDefineCallForElement(customElementsManifest, component.tagName)
-        );
+${reactComponents.reduce(
+  (pre, component) =>
+    pre +
+    `export type ${component.name}Type = EventTarget & ${component.swcComponentName};\n`,
+  ''
+)}
+`;
 
-        const result = `
-          import React${useEffect ? ', {useEffect, useRef}' : ''} from "react";
-          import '${moduleSpecifier}';
-          export function ${component.name}({children${
-          params ? ',' : ''
-        } ${params}}) {
-            ${useEffect ? `const ref = useRef(null);` : ''}
-            ${has(events) ? '/** Event listeners - run once */' : ''}
-            ${events?.join('') || ''}
-            ${
-              has(booleanAttrs)
-                ? '/** Boolean attributes - run whenever an attr has changed */'
-                : ''
-            }
-            ${booleanAttrs?.join('') || ''}
-            ${
-              has(attrs)
-                ? '/** Attributes - run whenever an attr has changed */'
-                : ''
-            }
-            ${attrs?.join('') || ''}
-            ${
-              has(props)
-                ? '/** Properties - run whenever a property has changed */'
-                : ''
-            }
-            ${props?.join('') || ''}
-            return (
-              <${component.tagName} ${useEffect ? 'ref={ref}' : ''} ${[
-          ...booleanAttributes,
-          ...attributes,
-        ]
-          .map(
-            (attr) =>
-              `${attr?.originalName ?? attr.name}={${
-                attr?.name ?? attr.originalName
-              }}`
-          )
-          .join(' ')}>
-                {children}
-              </${component.tagName}>
-            )
+      const componentShortName = pkgName.replace('@fe-component-library/', '');
+
+      const componentPath = resolve(`${outDir}/${componentShortName}`);
+      await outputFile(
+        resolve(`${componentPath}/index.ts`),
+        prettier.format(componentSrc, {
+          parser: 'typescript',
+          ...prettierConfig,
+        })
+      );
+      await outputFile(
+        resolve(`${componentPath}/package.json`),
+        prettier.format(
+          genPackageJson(componentShortName, pkgName, pkgVersion),
+          {
+            parser: 'json',
+            ...prettierConfig,
           }
-        `;
-
-        fs.writeFileSync(
-          path.join(outdir, `${component.name}.jsx`),
-          prettier.format(result, { parser: 'babel' })
-        );
-      });
+        )
+      );
+      await outputFile(
+        resolve(`${componentPath}/tsconfig.json`),
+        prettier.format(genTsconfigJson(), {
+          parser: 'json',
+          ...prettierConfig,
+        })
+      );
     },
   };
 }

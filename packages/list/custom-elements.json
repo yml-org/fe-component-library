@@ -10,154 +10,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "dist/index.js",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "e"
-        },
-        {
-          "kind": "variable",
-          "name": "s"
-        },
-        {
-          "kind": "variable",
-          "name": "n"
-        },
-        {
-          "kind": "variable",
-          "name": "b",
-          "default": "class extends Jt(null) {\n  constructor() {\n    super(...arguments), this.listType = j.Ordered, this.listItems = [], this.overrideDefaultListStyles = !1, this.showBorder = !1, this.borderPosition = x.All, this.borderStyle = kt.Solid, this.containerPartName = \"webcl-list-container\", this.listPartName = \"webcl-list\";\n  }\n  renderListItemContent(i, t, e, s) {\n    return w` ${t != null && t.hasSlot ? w`<slot name=${t == null ? void 0 : t.slotName} />` : $}\n      <span part=${s}>${se(Yt`${e}`)}</span>\n      ${i != null && i.hasSlot ? w`<slot name=${i == null ? void 0 : i.slotName} />` : $}`;\n  }\n  renderAnchorOrButton({\n    id: i,\n    isAnchor: t,\n    isButton: e,\n    href: s,\n    listLabel: r,\n    rightSlot: o,\n    leftSlot: n,\n    btnClickHandler: h,\n    contentPartName: a,\n    listLabelPartName: l\n  }) {\n    return t ? w`<a\n          href=${s}\n          class=\"w-full flex basis-full flex-row\"\n          part=${a}\n          >${this.renderListItemContent(\n      o,\n      n,\n      r,\n      l\n    )}\n        </a>` : e ? w`<button\n          @click=${() => h(i, r)}\n          class=\"w-full flex basis-full flex-row\"\n          part=${a}\n        >\n          ${this.renderListItemContent(\n      o,\n      n,\n      r,\n      l\n    )}\n        </button>` : w`<p class=\"w-full flex basis-full flex-row\" part=${a}>\n          ${this.renderListItemContent(\n      o,\n      n,\n      r,\n      l\n    )}\n        </p>`;\n  }\n  renderBorderStyles() {\n    const { borderPosition: i, borderStyle: t } = this;\n    switch (i) {\n      case x.Bottom:\n        return `border-${t} border-b`;\n      case x.Top:\n        return `border-${t} border-t`;\n      case x.Right:\n        return `border-${t} border-r`;\n      case x.Left:\n        return `border-${t} border-l`;\n      case x.All:\n      default:\n        return `border border-${t}`;\n    }\n  }\n  renderListItems() {\n    const { showBorder: i, renderBorderStyles: t } = this;\n    return w` ${Ft(\n      this.listItems,\n      (e) => (e == null ? void 0 : e.id) || (e == null ? void 0 : e.listLabel),\n      (e) => w`\n          <li\n            class=${i ? t.call(this) : \"\"}\n            part=${(e == null ? void 0 : e.listItemPartName) || \"webcl-list-item\"}\n          >\n            ${this.renderAnchorOrButton(e)}\n          </li>\n        `\n    )}`;\n  }\n  renderUnorderedList() {\n    const { overrideDefaultListStyles: i } = this;\n    return w`<ul\n      part=${this.listPartName}\n      class=\" flex flex-col ${i ? \"\" : \"list-disc\"}\"\n    >\n      ${this.renderListItems()}\n    </ul>`;\n  }\n  renderOrderedList() {\n    const { overrideDefaultListStyles: i } = this;\n    return w`<ol\n      part=${this.listPartName}\n      class=\"flex flex-col ${i ? \"\" : \"list-decimal\"}\"\n    >\n      ${this.renderListItems()}\n    </ol>`;\n  }\n  renderList() {\n    const { listType: i } = this;\n    switch (i) {\n      case j.Unordered:\n        return this.renderUnorderedList();\n      case j.Ordered:\n      default:\n        return this.renderOrderedList();\n    }\n  }\n  render() {\n    return w`<div class=\"webcl-list-wrapper\" part=${this.containerPartName}>\n      ${this.renderList()}\n    </div>`;\n  }\n}"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "custom-element-definition",
-          "name": "e",
-          "declaration": {
-            "name": "s",
-            "module": "dist/index.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "e",
-          "declaration": {
-            "name": "n",
-            "module": "dist/index.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "ListComponent",
-          "declaration": {
-            "name": "b",
-            "module": "dist/index.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/index.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./list/list.component"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/constants/list.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/constants/list.variants.ts",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "listItemsMock",
-          "type": {
-            "text": "ListItemType[]"
-          },
-          "default": "[\n  {\n    id: 1,\n    listLabel: 'Account Details',\n  },\n  {\n    id: 2,\n    listLabel: 'Notifications',\n  },\n  {\n    id: 3,\n    listLabel: 'About',\n    isAnchor: true,\n    href: 'http://google.com/',\n    rightSlot: {\n      hasSlot: true,\n      slotName: 'list-slot',\n    },\n    listItemPartName: 'custom-part-name',\n  },\n  {\n    id: 4,\n    listLabel: 'Technical Support',\n  },\n  {\n    id: 5,\n    listLabel: 'Logout',\n    isButton: true,\n    btnClickHandler: (id, listLabel) => {\n      console.log(id, listLabel);\n    },\n    rightSlot: {\n      hasSlot: true,\n      slotName: 'list-slot-1',\n    },\n  },\n]"
-        },
-        {
-          "kind": "variable",
-          "name": "orderedListVariant",
-          "type": {
-            "text": "ListVariant"
-          },
-          "default": "{\n  listType: ListTypes.Ordered,\n  listItems: listItemsMock,\n}"
-        },
-        {
-          "kind": "variable",
-          "name": "unOrderedListVariant",
-          "type": {
-            "text": "ListVariant"
-          },
-          "default": "{\n  listType: ListTypes.Unordered,\n  listItems: listItemsMock,\n}"
-        },
-        {
-          "kind": "variable",
-          "name": "unOrderedListWithBottomBorder",
-          "type": {
-            "text": "ListVariant"
-          },
-          "default": "{\n  ...unOrderedListVariant,\n  showBorder: true,\n  borderPosition: BorderPositions.Bottom,\n  borderStyle: BorderStyles.Solid,\n  overrideDefaultListStyles: true,\n}"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "listItemsMock",
-          "declaration": {
-            "name": "listItemsMock",
-            "module": "src/constants/list.variants.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "orderedListVariant",
-          "declaration": {
-            "name": "orderedListVariant",
-            "module": "src/constants/list.variants.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "unOrderedListVariant",
-          "declaration": {
-            "name": "unOrderedListVariant",
-            "module": "src/constants/list.variants.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "unOrderedListWithBottomBorder",
-          "declaration": {
-            "name": "unOrderedListWithBottomBorder",
-            "module": "src/constants/list.variants.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/list/list.component.spec.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/list/list.component.ts",
       "declarations": [
         {
@@ -170,7 +22,9 @@
               "name": "listType",
               "type": {
                 "text": "ListType | undefined"
-              }
+              },
+              "attribute": "listType",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -178,7 +32,9 @@
               "type": {
                 "text": "ListItemType[] | undefined"
               },
-              "default": "[]"
+              "default": "[]",
+              "attribute": "listItems",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -186,7 +42,9 @@
               "type": {
                 "text": "boolean | undefined"
               },
-              "default": "false"
+              "default": "false",
+              "attribute": "overrideDefaultListStyles",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -194,21 +52,27 @@
               "type": {
                 "text": "boolean | undefined"
               },
-              "default": "false"
+              "default": "false",
+              "attribute": "showBorder",
+              "reflects": true
             },
             {
               "kind": "field",
               "name": "borderPosition",
               "type": {
                 "text": "BorderPosition | undefined"
-              }
+              },
+              "attribute": "borderPosition",
+              "reflects": true
             },
             {
               "kind": "field",
               "name": "borderStyle",
               "type": {
                 "text": "BorderStyle | undefined"
-              }
+              },
+              "attribute": "borderStyle",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -216,7 +80,9 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "'webcl-list-container'"
+              "default": "'webcl-list-container'",
+              "attribute": "containerPartName",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -224,7 +90,9 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "'webcl-list'"
+              "default": "'webcl-list'",
+              "attribute": "listPartName",
+              "reflects": true
             },
             {
               "kind": "method",
@@ -282,23 +150,69 @@
               "kind": "method",
               "name": "renderList",
               "privacy": "protected"
-            },
+            }
+          ],
+          "attributes": [
             {
-              "kind": "method",
-              "name": "render"
-            },
-            {
-              "kind": "field",
-              "name": "styles",
+              "name": "listType",
               "type": {
-                "text": "array"
+                "text": "ListType | undefined"
               },
-              "static": true,
-              "default": "[tailwindElement, unsafeCSS(style)]",
-              "inheritedFrom": {
-                "name": "TailwindElement",
-                "module": "src/shared/tailwind.element.ts"
-              }
+              "fieldName": "listType"
+            },
+            {
+              "name": "listItems",
+              "type": {
+                "text": "ListItemType[] | undefined"
+              },
+              "default": "[]",
+              "fieldName": "listItems"
+            },
+            {
+              "name": "overrideDefaultListStyles",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "false",
+              "fieldName": "overrideDefaultListStyles"
+            },
+            {
+              "name": "showBorder",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "false",
+              "fieldName": "showBorder"
+            },
+            {
+              "name": "borderPosition",
+              "type": {
+                "text": "BorderPosition | undefined"
+              },
+              "fieldName": "borderPosition"
+            },
+            {
+              "name": "borderStyle",
+              "type": {
+                "text": "BorderStyle | undefined"
+              },
+              "fieldName": "borderStyle"
+            },
+            {
+              "name": "containerPartName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'webcl-list-container'",
+              "fieldName": "containerPartName"
+            },
+            {
+              "name": "listPartName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'webcl-list'",
+              "fieldName": "listPartName"
             }
           ],
           "mixins": [
@@ -309,7 +223,9 @@
           ],
           "superclass": {
             "module": "src/list/list.component.ts"
-          }
+          },
+          "tagName": "ymlwebcl-list",
+          "customElement": true
         }
       ],
       "exports": [
@@ -320,54 +236,16 @@
             "name": "ListComponent",
             "module": "src/list/list.component.ts"
           }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/shared/tailwind.element.ts",
-      "declarations": [
+        },
         {
-          "kind": "mixin",
-          "description": "",
-          "name": "TailwindElement",
-          "members": [
-            {
-              "kind": "field",
-              "name": "styles",
-              "type": {
-                "text": "array"
-              },
-              "static": true,
-              "default": "[tailwindElement, unsafeCSS(style)]"
-            }
-          ],
-          "parameters": [
-            {
-              "name": "style",
-              "type": {
-                "text": "CSSStyleSheet | null"
-              }
-            }
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "TailwindElement",
+          "kind": "custom-element-definition",
+          "name": "ymlwebcl-list",
           "declaration": {
-            "name": "TailwindElement",
-            "module": "src/shared/tailwind.element.ts"
+            "name": "ListComponent",
+            "module": "src/list/list.component.ts"
           }
         }
       ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/types/list.ts",
-      "declarations": [],
-      "exports": []
     }
   ]
 }

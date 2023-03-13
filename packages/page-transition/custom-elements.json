@@ -10,117 +10,7 @@
     },
     {
       "kind": "javascript-module",
-      "path": "dist/index.js",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "e"
-        },
-        {
-          "kind": "variable",
-          "name": "i"
-        },
-        {
-          "kind": "variable",
-          "name": "r"
-        },
-        {
-          "kind": "variable",
-          "name": "d",
-          "default": "class extends Ut(Rt) {\n  constructor() {\n    super(...arguments), this.componentArray = [\"slot1\", \"slot2\", \"slot3\"], this.allowCircularSwipe = !1, this.callbackEvent = null, this.scrollDirection = A.VERTICAL, this.backgroundColor = \"#ffffff\", this.index = 0, this.slotClass = \"\", this.offset = [0, 0], this.isDown = !1, this.isScrolled = !1, this.swipedDirection = \"\", this.handleSlot = () => {\n      this.slotWrapperDiv = this.renderRoot.querySelector(`#${this.slotName}`), this.animationDuration && (this.slotWrapperDiv.style.animationDuration = `${this.animationDuration}s`), this.animationDelay && (this.slotWrapperDiv.style.animationDelay = `${this.animationDelay}s`), this.slotWrapperDiv.style.position = E.Position, this.slotWrapperDiv.style.display = E.Display, this.slotWrapperDiv.style.overflow = E.Overflow, this.slotWrapperDiv.style.maxHeight = E.MaxHeight, this.slotWrapperDiv.style.maxWidth = E.MaxWidth, this.componentArray.map((s) => {\n        s !== this.slotName && (this.hideSlotWrapperDiv = this.renderRoot.querySelector(`#${s}`), this.hideSlotWrapperDiv.style.display = \"none\");\n      }), this.slotWrapperDiv.addEventListener(\n        \"mousedown\",\n        (s) => this.handleMouseDown(s, $.MouseEvent)\n      ), this.slotWrapperDiv.addEventListener(\n        \"touchstart\",\n        (s) => this.handleMouseDown(s, $.TouchEvent)\n      );\n    }, this.handleMove = (s, t, e) => {\n      this.slotClass = \"\";\n      const i = t === \"x\", o = e === $.TouchEvent;\n      i ? this.mousePosition = {\n        axis: o ? s.touches[0].clientX : s.clientX\n      } : this.mousePosition = {\n        axis: o ? s.touches[0].clientY : s.clientY\n      };\n      const n = () => i ? this.slotWrapperDiv.scrollLeft === 0 : this.slotWrapperDiv.scrollTop === 0, r = () => Math.trunc(\n        i ? this.slotWrapperDiv.scrollLeft : this.slotWrapperDiv.scrollTop\n      ) === Math.trunc(\n        (i ? this.slotWrapperDiv.scrollWidth : this.slotWrapperDiv.scrollHeight) - (i ? this.slotWrapperDiv.offsetWidth : this.slotWrapperDiv.offsetHeight)\n      );\n      o ? this.slotWrapperDivPosition = this.mousePosition.axis + this.offset[i ? \"0\" : \"1\"] > 0 ? n() ? this.mousePosition.axis + this.offset[i ? \"0\" : \"1\"] + \"px\" : \"0px\" : r() ? this.mousePosition.axis + this.offset[i ? \"0\" : \"1\"] + \"px\" : \"0px\" : this.slotWrapperDivPosition = this.mousePosition.axis + this.offset[i ? \"0\" : \"1\"] + \"px\", i ? this.slotWrapperDiv.style.left = this.slotWrapperDivPosition : this.slotWrapperDiv.style.top = this.slotWrapperDivPosition, this.mousePosition.axis + this.offset[i ? \"0\" : \"1\"] > (i ? 20 : 50) ? (this.swipedDirection = i ? g.SwipedRight : g.SwipedDown, this.isScrolled = o ? n() : !0) : this.mousePosition.axis + this.offset[i ? \"0\" : \"1\"] < (i ? -20 : -50) ? (this.swipedDirection = i ? g.SwipedLeft : g.SwipedUP, this.isScrolled = o ? r() : !0) : (this.swipedDirection = g.None, this.isScrolled = !1);\n    }, this.handleMouseDown = (s, t) => {\n      const e = t === $.TouchEvent;\n      t === $.MouseEvent && (this.isDown = !0), this.offset = [\n        this.slotWrapperDiv.offsetLeft - (e ? s.touches[0].clientX : s.clientX),\n        this.slotWrapperDiv.offsetTop - (e ? s.touches[0].clientY : s.clientY)\n      ];\n    }, this.handleDecrementIndex = () => {\n      this.disableSwipePrev || ((this.index !== 0 || this.allowCircularSwipe) && (this.slotClass = `animate__animated ${this.scrollDirection === A.HORIZONTAL ? \"animate__fadeInLeft\" : \"animate__fadeInDown\"}`), this.index > 0 ? (this.index = this.index - 1, this.slotName = this.componentArray[this.index]) : this.allowCircularSwipe && (this.index = this.componentArray.length - 1, this.slotName = this.componentArray[this.index]));\n    }, this.handleIncrementIndex = () => {\n      this.disableSwipeNext || ((this.index !== this.componentArray.length - 1 || this.allowCircularSwipe) && (this.slotClass = `animate__animated ${this.scrollDirection === A.HORIZONTAL ? \"animate__fadeInRight\" : \"animate__fadeInUp\"}`), this.index < this.componentArray.length - 1 ? (this.index = this.index + 1, this.slotName = this.componentArray[this.index]) : this.allowCircularSwipe && (this.index = 0, this.slotName = this.componentArray[this.index]));\n    }, this.handleUp = () => {\n      this.isDown = !1, this.scrollDirection === A.HORIZONTAL ? this.slotWrapperDiv.style.left = \"0px\" : this.slotWrapperDiv.style.top = \"0px\", this.isScrolled && (this.swipedDirection === g.SwipedUP || this.swipedDirection === g.SwipedLeft ? (this.handleIncrementIndex(), this.callbackEvent && this.dispatchEvent(new CustomEvent(this.callbackEvent))) : this.handleDecrementIndex(), this.handleSlot()), this.isScrolled = !1;\n    };\n  }\n  firstUpdated() {\n    this.slotName = this.componentArray[0], this.handleSlot(), document.addEventListener(\"touchend\", this.handleUp), document.addEventListener(\"mouseup\", this.handleUp), document.addEventListener(\"mousemove\", (s) => {\n      let t = \"\";\n      t = this.scrollDirection === A.HORIZONTAL ? \"x\" : \"y\", s.preventDefault(), this.isDown && this.handleMove(s, t, $.MouseEvent);\n    }), document.addEventListener(\"touchmove\", (s) => {\n      let t = \"\";\n      t = this.scrollDirection === A.HORIZONTAL ? \"x\" : \"y\", this.handleMove(s, t, $.TouchEvent);\n    });\n  }\n  render() {\n    return at`\n      <div\n        part=\"flick-to-transition-container\"\n        style=\"overflow : hidden ; background : ${this.backgroundColor}\"\n      >\n        ${this.componentArray.map(\n      (s) => at` <div\n            part=\"flick-to-transition-${s}\"\n            id=${s}\n            class=${this.slotClass}\n          >\n            <slot id=${s} name=${s}></slot>\n          </div>`\n    )}\n      </div>\n    `;\n  }\n}"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "custom-element-definition",
-          "name": "e",
-          "declaration": {
-            "name": "i",
-            "module": "dist/index.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "e",
-          "declaration": {
-            "name": "r",
-            "module": "dist/index.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "TransitionComponent",
-          "declaration": {
-            "name": "d",
-            "module": "dist/index.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/index.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./transition/transition.component"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/constants/transition.component.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/shared/tailwind.element.ts",
-      "declarations": [
-        {
-          "kind": "mixin",
-          "description": "",
-          "name": "TailwindElement",
-          "members": [
-            {
-              "kind": "field",
-              "name": "styles",
-              "type": {
-                "text": "array"
-              },
-              "static": true,
-              "default": "[tailwindElement, unsafeCSS(style)]"
-            }
-          ],
-          "parameters": [
-            {
-              "name": "style",
-              "type": {
-                "text": "CSSStyleSheet | null"
-              }
-            }
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "TailwindElement",
-          "declaration": {
-            "name": "TailwindElement",
-            "module": "src/shared/tailwind.element.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/transition/transition.component.spec.ts",
       "declarations": [],
       "exports": []
     },
@@ -139,35 +29,45 @@
               "type": {
                 "text": "Array<string> | undefined"
               },
-              "default": "['slot1', 'slot2', 'slot3']"
+              "default": "['slot1', 'slot2', 'slot3']",
+              "attribute": "componentArray",
+              "reflects": true
             },
             {
               "kind": "field",
               "name": "disableSwipeNext",
               "type": {
                 "text": "boolean | undefined"
-              }
+              },
+              "attribute": "disableSwipeNext",
+              "reflects": true
             },
             {
               "kind": "field",
               "name": "disableSwipePrev",
               "type": {
                 "text": "boolean | undefined"
-              }
+              },
+              "attribute": "disableSwipePrev",
+              "reflects": true
             },
             {
               "kind": "field",
               "name": "animationDuration",
               "type": {
                 "text": "number | undefined"
-              }
+              },
+              "attribute": "animationDuration",
+              "reflects": true
             },
             {
               "kind": "field",
               "name": "animationDelay",
               "type": {
                 "text": "number | undefined"
-              }
+              },
+              "attribute": "animationDelay",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -175,7 +75,9 @@
               "type": {
                 "text": "boolean | undefined"
               },
-              "default": "false"
+              "default": "false",
+              "attribute": "allowCircularSwipe",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -183,14 +85,18 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "null"
+              "default": "null",
+              "attribute": "callbackEvent",
+              "reflects": true
             },
             {
               "kind": "field",
               "name": "scrollDirection",
               "type": {
                 "text": "Direction | undefined"
-              }
+              },
+              "attribute": "scrollDirection",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -198,7 +104,9 @@
               "type": {
                 "text": "string | undefined"
               },
-              "default": "'#ffffff'"
+              "default": "'#ffffff'",
+              "attribute": "backgroundColor",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -312,28 +220,75 @@
               "kind": "field",
               "name": "handleUp",
               "privacy": "protected"
-            },
+            }
+          ],
+          "attributes": [
             {
-              "kind": "method",
-              "name": "firstUpdated"
-            },
-            {
-              "kind": "method",
-              "name": "render",
-              "privacy": "public"
-            },
-            {
-              "kind": "field",
-              "name": "styles",
+              "name": "componentArray",
               "type": {
-                "text": "array"
+                "text": "Array<string> | undefined"
               },
-              "static": true,
-              "default": "[tailwindElement, unsafeCSS(style)]",
-              "inheritedFrom": {
-                "name": "TailwindElement",
-                "module": "src/shared/tailwind.element.ts"
-              }
+              "default": "['slot1', 'slot2', 'slot3']",
+              "fieldName": "componentArray"
+            },
+            {
+              "name": "disableSwipeNext",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "fieldName": "disableSwipeNext"
+            },
+            {
+              "name": "disableSwipePrev",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "fieldName": "disableSwipePrev"
+            },
+            {
+              "name": "animationDuration",
+              "type": {
+                "text": "number | undefined"
+              },
+              "fieldName": "animationDuration"
+            },
+            {
+              "name": "animationDelay",
+              "type": {
+                "text": "number | undefined"
+              },
+              "fieldName": "animationDelay"
+            },
+            {
+              "name": "allowCircularSwipe",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "false",
+              "fieldName": "allowCircularSwipe"
+            },
+            {
+              "name": "callbackEvent",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "null",
+              "fieldName": "callbackEvent"
+            },
+            {
+              "name": "scrollDirection",
+              "type": {
+                "text": "Direction | undefined"
+              },
+              "fieldName": "scrollDirection"
+            },
+            {
+              "name": "backgroundColor",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'#ffffff'",
+              "fieldName": "backgroundColor"
             }
           ],
           "mixins": [
@@ -345,13 +300,23 @@
           "superclass": {
             "name": "Style",
             "module": "/src/transition/transition.component.scss"
-          }
+          },
+          "tagName": "ymlwebcl-transition",
+          "customElement": true
         }
       ],
       "exports": [
         {
           "kind": "js",
           "name": "TransitionComponent",
+          "declaration": {
+            "name": "TransitionComponent",
+            "module": "src/transition/transition.component.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "ymlwebcl-transition",
           "declaration": {
             "name": "TransitionComponent",
             "module": "src/transition/transition.component.ts"
