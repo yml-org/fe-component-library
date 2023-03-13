@@ -215,6 +215,12 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/types/button.type.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/shared/tailwind.element.ts",
       "declarations": [
         {
@@ -252,12 +258,6 @@
           }
         }
       ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/types/button.type.ts",
-      "declarations": [],
-      "exports": []
     },
     {
       "kind": "javascript-module",

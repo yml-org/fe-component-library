@@ -224,12 +224,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/types/scroll.component.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/shared/tailwind.element.ts",
       "declarations": [
         {
@@ -267,6 +261,12 @@
           }
         }
       ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/types/scroll.component.ts",
+      "declarations": [],
+      "exports": []
     },
     {
       "kind": "javascript-module",
