@@ -1,0 +1,21 @@
+{
+    "name": "@swc-react/dialog",
+    "version": "0.11.12",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "React wrapper of the @spectrum-web-components/dialog component",
+    "license": "Apache-2.0",
+    "author": "",
+    "main": "index.js",
+    "files": ["**/*.d.ts", "**/*.js", "**/*.js.map"],
+    "keywords": [
+        "React",
+        "Spectrum Web Components",
+        "@spectrum-web-components/dialog"
+    ],
+    "dependencies": {
+        "@lit-labs/react": "^1.1.1",
+        "@spectrum-web-components/dialog": "0.11.12"
+    }
+}
