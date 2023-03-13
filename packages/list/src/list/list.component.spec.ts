@@ -1,16 +1,18 @@
 import { ListTypes } from '../constants/list';
-import { LitElement } from 'lit-element';
+import { ListComponent } from './list.component';
 import { listItemsMock } from '../constants/list.variants';
 
-describe('avatar-component', () => {
-  const LIST_COMPONENT = 'list-component';
-  let listElement: LitElement;
+describe('ymlwebcl-list', () => {
+  const LIST_COMPONENT = 'ymlwebcl-list';
+  let listElement: ListComponent;
 
-  const getShadowRoot = (tagName: string): ShadowRoot =>
+  const getShadowRoot = (tagName: string): ShadowRoot | null =>
     document.body.getElementsByTagName(tagName)[0].shadowRoot;
 
   beforeEach(() => {
-    listElement = window.document.createElement(LIST_COMPONENT) as LitElement;
+    listElement = window.document.createElement(
+      LIST_COMPONENT
+    ) as ListComponent;
     document.body.appendChild(listElement);
   });
 

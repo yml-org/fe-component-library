@@ -1,19 +1,21 @@
-import { LitElement } from 'lit-element';
+import { LinkComponent } from './link.component';
 import {
   linkConfig,
   linkConfigTypeButton,
   linkConfigSlot,
 } from '../constants/link.variants';
 
-describe('link-component', () => {
-  const LINK_COMPONENT = 'link-component';
-  let linkElement: LitElement;
+describe('ymlwebcl-link', () => {
+  const LINK_COMPONENT = 'ymlwebcl-link';
+  let linkElement: LinkComponent;
 
-  const getShadowRoot = (tagName: string): ShadowRoot =>
+  const getShadowRoot = (tagName: string): ShadowRoot | null =>
     document.body.getElementsByTagName(tagName)[0].shadowRoot;
 
   beforeEach(() => {
-    linkElement = window.document.createElement(LINK_COMPONENT) as LitElement;
+    linkElement = window.document.createElement(
+      LINK_COMPONENT
+    ) as LinkComponent;
     document.body.appendChild(linkElement);
   });
 
@@ -77,11 +79,10 @@ describe('link-component', () => {
   it('renders the component passed in slot', async () => {
     linkElement.setAttribute('slotName', linkConfigSlot?.slotName);
     window.document.body.appendChild(linkElement);
-    document.querySelector('link-component').innerHTML =
+    document.querySelector('ymlwebcl-link').innerHTML =
       '<p slot="bell" class="slot-test">Test</p>';
     await linkElement.updateComplete;
-    const elem = document.querySelector('link-component').querySelector('p');
+    const elem = document.querySelector('ymlwebcl-link').querySelector('p');
     expect(elem.classList.contains('slot-test')).toBe(true);
   });
 });
-

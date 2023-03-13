@@ -1,0 +1,14 @@
+.progress-bar-storybook-container {
+  ymlwebcl-progressbar {
+    &::part(webcl-progress-bar-container) {
+      background-color: #f2f2f2;
+      height: 12px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    &::part(webcl-progress-bar) {
+      height: 100%;
+      background-color: #000;
+    }
+  }
+}

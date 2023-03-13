@@ -4,45 +4,45 @@ import { TailwindElement } from '../shared/tailwind.element';
 import { AutoComplete } from '../types/text-area';
 import { AutoCompleteValues } from '../constants/text-area';
 
-@customElement('text-area-component')
+@customElement('ymlwebcl-textarea')
 export class TextAreaComponent extends TailwindElement(null) {
-  @property()
+  @property({ type: String, reflect: true })
   label?: string = '';
-  @property()
+  @property({ type: String, reflect: true })
   textAreaId?: string = '';
-  @property()
+  @property({ type: String, reflect: true })
   textAreaName?: string = '';
-  @property()
+  @property({ type: Number, reflect: true })
   textAreaRows?: number = 2;
-  @property()
+  @property({ type: Number, reflect: true })
   textAreaCols?: number = 20;
-  @property()
+  @property({ reflect: true })
   textAreaAutoComplete?: AutoComplete = AutoCompleteValues.Off;
-  @property()
+  @property({ type: Boolean, reflect: true })
   isAutoFocus?: boolean = false;
-  @property()
+  @property({ type: Boolean, reflect: true })
   isDisabled?: boolean = false;
-  @property()
+  @property({ type: String, reflect: true })
   labelPartAttribute?: string = 'webcl-textarea-label';
-  @property()
+  @property({ type: String, reflect: true })
   containerPartAttribute?: string = 'webcl-textarea-container';
-  @property()
+  @property({ type: String, reflect: true })
   textAreaPartAttribute?: string = 'webcl-textarea';
-  @property()
+  @property({ type: String, reflect: true })
   formId?: string = '';
-  @property()
+  @property({ type: Number, reflect: true })
   textAreaMaxLength?: number;
-  @property()
+  @property({ type: Number, reflect: true })
   textAreaMinLength?: number;
-  @property()
+  @property({ type: String, reflect: true })
   textAreaPlaceHolder?: string = '';
-  @property()
+  @property({ type: Boolean, reflect: true })
   isReadOnly?: boolean = false;
-  @property()
+  @property({ type: Boolean, reflect: true })
   isRequired?: boolean = false;
-  @property()
+  @property({ type: String, reflect: true })
   changeHandlerName?: string = '';
-  @property()
+  @property({ type: Boolean, reflect: true })
   canResize?: boolean = true;
 
   protected getTextAreaClassList() {
@@ -82,11 +82,5 @@ export class TextAreaComponent extends TailwindElement(null) {
           )}
       ></textarea>
     </div>`;
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    'text-area-component': TextAreaComponent;
   }
 }

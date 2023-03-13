@@ -11,30 +11,35 @@ import {
 } from '../types/list';
 import { ListTypes, BorderPositions, BorderStyles } from '../constants/list';
 
-@customElement('list-component')
+@customElement('ymlwebcl-list')
 export class ListComponent extends TailwindElement(null) {
-  @property()
+  @property({ reflect: true })
   listType?: ListType = ListTypes.Ordered;
-  @property()
+  @property({ reflect: true })
   listItems?: ListItemType[] = [];
-  @property()
+  @property({ type: Boolean, reflect: true })
   overrideDefaultListStyles?: boolean = false;
-  @property()
+  @property({ type: Boolean, reflect: true })
   showBorder?: boolean = false;
-  @property()
+  @property({ reflect: true })
   borderPosition?: BorderPosition = BorderPositions.All;
-  @property()
+  @property({ reflect: true })
   borderStyle?: BorderStyle = BorderStyles.Solid;
-  @property()
+  @property({ type: String, reflect: true })
   containerPartName?: string = 'webcl-list-container';
-  @property()
+  @property({ type: String, reflect: true })
   listPartName?: string = 'webcl-list';
 
-  protected renderListItemContent(rightSlot, leftSlot, listLabel) {
+  protected renderListItemContent(
+    rightSlot,
+    leftSlot,
+    listLabel,
+    listLabelPartName
+  ) {
     return html` ${leftSlot?.hasSlot
         ? html`<slot name=${leftSlot?.slotName} />`
         : nothing}
-      <span>${msg(str`${listLabel}`)}</span>
+      <span part=${listLabelPartName}>${msg(str`${listLabel}`)}</span>
       ${rightSlot?.hasSlot
         ? html`<slot name=${rightSlot?.slotName} />`
         : nothing}`;
@@ -49,21 +54,42 @@ export class ListComponent extends TailwindElement(null) {
     rightSlot,
     leftSlot,
     btnClickHandler,
+    contentPartName,
+    listLabelPartName,
   }: ListItemType) {
     return isAnchor
-      ? html`<a href=${href} class="w-full flex basis-full flex-row"
-          >${this.renderListItemContent(rightSlot, leftSlot, listLabel)}
+      ? html`<a
+          href=${href}
+          class="w-full flex basis-full flex-row"
+          part=${contentPartName}
+          >${this.renderListItemContent(
+            rightSlot,
+            leftSlot,
+            listLabel,
+            listLabelPartName
+          )}
         </a>`
       : isButton
       ? html`<button
           @click=${() => btnClickHandler(id, listLabel)}
           class="w-full flex basis-full flex-row"
+          part=${contentPartName}
         >
-          ${this.renderListItemContent(rightSlot, leftSlot, listLabel)}
+          ${this.renderListItemContent(
+            rightSlot,
+            leftSlot,
+            listLabel,
+            listLabelPartName
+          )}
         </button>`
-      : html`<span
-          >${this.renderListItemContent(rightSlot, leftSlot, listLabel)}</span
-        >`;
+      : html`<p class="w-full flex basis-full flex-row" part=${contentPartName}>
+          ${this.renderListItemContent(
+            rightSlot,
+            leftSlot,
+            listLabel,
+            listLabelPartName
+          )}
+        </p>`;
   }
 
   protected renderBorderStyles() {
@@ -134,11 +160,5 @@ export class ListComponent extends TailwindElement(null) {
     return html`<div class="webcl-list-wrapper" part=${this.containerPartName}>
       ${this.renderList()}
     </div>`;
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    'list-component': ListComponent;
   }
 }

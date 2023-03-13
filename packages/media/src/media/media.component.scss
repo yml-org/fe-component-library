@@ -1,0 +1,19 @@
+.parent-container {
+    ymlwebcl-media {
+        &::part(custom-media) {
+            padding: 1rem;
+            gap: 1.5rem;
+            background-color: rgb(246, 243, 243)
+        };
+        &::part(custom-title) {
+            font-weight: 600;
+            font-size: 1.5rem;
+        };
+    }
+    .static-slot-content {
+        color: rgb(167, 166, 166);
+    }
+    .icon-slot-content {
+        margin-top: 0.625rem;
+    }
+}

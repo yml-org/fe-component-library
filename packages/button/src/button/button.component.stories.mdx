@@ -20,6 +20,7 @@ The Button component is a Lit component that renders a button element that is fr
 | isDisabled | boolean     | Flag to determine whether the button needs to be disabled or not                     |
 | fullWidth  | boolean     | Flag to determine whether the button needs to occupy the full width of the container |
 | isRounded  | boolean     | Flag to determine whether the button will have rounded corners                       |
+| partName   | string      | Custom part name provided by user for styling                                        |
 
 The button has the following variants:
 
@@ -42,7 +43,7 @@ The different color options for the button component are as follows:
 Button component with `text` prop
 
 export const withTextTemplate = ({ text }) =>
-  html`<button-component .text=${text}></button-component>`;
+  html`<ymlwebcl-button .text=${text}></ymlwebcl-button>`;
 
 <Canvas>
   <Story
@@ -58,7 +59,7 @@ export const withTextTemplate = ({ text }) =>
 Button component with `link` Variant
 
 export const withVariantTemplate = ({ variant, text }) =>
-  html`<button-component .text=${text} .variant=${variant}></button-component>`;
+  html`<ymlwebcl-button .text=${text} .variant=${variant}></ymlwebcl-button>`;
 
 <Canvas>
   <Story
@@ -103,7 +104,7 @@ Button component with `outlined` Variant
 Button component with `Primary` color
 
 export const withColorTemplate = ({ color, text }) =>
-  html`<button-component .color=${color} .text=${text}></button-component>`;
+  html`<ymlwebcl-button .color=${color} .text=${text}></ymlwebcl-button>`;
 
 <Canvas>
   <Story
@@ -202,10 +203,10 @@ Button component with `dark` color
 Button component with `round` border
 
 export const withRoundedTemplate = ({ isRounded, text }) =>
-  html`<button-component
+  html`<ymlwebcl-button
     .text=${text}
     .isRounded=${isRounded}
-  ></button-component>`;
+  ></ymlwebcl-button>`;
 
 <Canvas>
   <Story
@@ -222,10 +223,10 @@ export const withRoundedTemplate = ({ isRounded, text }) =>
 Button component with `disabled` property
 
 export const withDisableTemplate = ({ isDisabled, text }) =>
-  html`<button-component
+  html`<ymlwebcl-button
     .text=${text}
     .isDisabled=${isDisabled}
-  ></button-component>`;
+  ></ymlwebcl-button>`;
 
 <Canvas>
   <Story
@@ -242,10 +243,10 @@ export const withDisableTemplate = ({ isDisabled, text }) =>
 Button component with `full-width`
 
 export const withFullWidthTemplate = ({ fullWidth, text }) =>
-  html`<button-component
+  html`<ymlwebcl-button
     .text=${text}
     .fullWidth=${fullWidth}
-  ></button-component>`;
+  ></ymlwebcl-button>`;
 
 <Canvas>
   <Story
@@ -262,8 +263,8 @@ export const withFullWidthTemplate = ({ fullWidth, text }) =>
 Button component with `Slot`
 
 export const withSlotTemplate = () =>
-  html`<button-component>
-    <a href="#" slotName="text">A Link</a></button-component
+  html`<ymlwebcl-button>
+    <a href="#" slotName="text">A Link</a></ymlwebcl-button
   >`;
 
 <Canvas>

@@ -5,9 +5,9 @@ import {
   roundedVariant,
   withDefaultIcon,
   withCustomHeightWidth,
+  withSlot,
   withRoundedBorderAvatar,
   withShadow,
-  withSlot,
 } from '../constants/avatar.variants.ts';
 import './avatar.component.scss';
 
@@ -19,44 +19,27 @@ The Avatar component is a Lit component that renders an avatar component that is
 
 # Props
 
-| Prop Name       | Type     | Description                                                              |
-| --------------- | -------- | ------------------------------------------------------------------------ |
-| isRounded       | boolean  | Flag to determine whether or not to have rounded borders                 |
-| width           | number   | The width of the avatar component                                        |
-| height          | number   | The height of the avatar component                                       |
-| usePercentage   | boolean  | Flag to determine whether or not the dimensions should be in percentages |
-| hasBorder       | boolean  | Flag to determine whether the border is shown or not                     |
-| borderColor     | string   | The border color                                                         |
-| slotName        | string   | The name of the child slot                                               |
-| onAvatarClick   | Function | The click function that gets triggered on avatar component click         |
-| hasShadow       | boolean  | Flag to determine whether the avatar component has box shadow or not     |
-| showDefaultIcon | boolean  | Flag to determine whether tho show default avatar icon or not            |
-| defaultImage    | string   | The default image to be displayed                                        |
-| defaultBgColor  | string   | The default background color provided by the user                        |
+| Prop Name           | Type     | Description                                                              |
+| ------------------- | -------- | ------------------------------------------------------------------------ |
+| isRounded           | boolean  | Flag to determine whether or not to have rounded borders                 |
+| width               | number   | The width of the avatar component                                        |
+| height              | number   | The height of the avatar component                                       |
+| usePercentage       | boolean  | Flag to determine whether or not the dimensions should be in percentages |
+| slotName            | string   | The name of the child slot                                               |
+| onAvatarClick       | Function | The click function that gets triggered on avatar component click         |
+| showDefaultIcon     | boolean  | Flag to determine whether to show default avatar icon or not             |
+| defaultImage        | string   | The default image to be displayed                                        |
+| avatarPartAttribute | string   | The part name for avatar component                                       |
 
 # Examples
-
-Avatar component with rounded border with default background
-
-export const roundedBorderTemplate = ({ isRounded, defaultBgColor }) =>
-  html`<avatar-component
-    .isRounded=${isRounded}
-    .defaultBgColor=${defaultBgColor}
-  ></avatar-component>`;
-
-<Canvas>
-  <Story name="rounded border" args={roundedVariant}>
-    {roundedBorderTemplate.bind({})}
-  </Story>
-</Canvas>
 
 Avatar component with default icon
 
 export const defaultIconTemplate = ({ showDefaultIcon, defaultImage }) =>
-  html`<avatar-component
+  html`<ymlwebcl-avatar
     .showDefaultIcon=${showDefaultIcon}
     .defaultImage=${defaultImage}
-  ></avatar-component>`;
+  ></ymlwebcl-avatar>`;
 
 <Canvas>
   <Story name="default icon" args={withDefaultIcon}>
@@ -72,12 +55,12 @@ export const withCustomWidthHeightTemplate = ({
   width,
   height,
 }) =>
-  html`<avatar-component
+  html`<ymlwebcl-avatar
     .showDefaultIcon=${showDefaultIcon}
     .defaultImage=${defaultImage}
     .width=${width}
     .height=${height}
-  ></avatar-component>`;
+  ></ymlwebcl-avatar>`;
 
 <Canvas>
   <Story name="custom height and width" args={withCustomHeightWidth}>
@@ -93,12 +76,12 @@ export const withRoundedBorderAvatarTemplate = ({
   isRounded,
   hasBorder,
 }) =>
-  html`<avatar-component
+  html`<ymlwebcl-avatar
     .showDefaultIcon=${showDefaultIcon}
     .defaultImage=${defaultImage}
     .isRounded=${isRounded}
     .hasBorder=${hasBorder}
-  ></avatar-component>`;
+  ></ymlwebcl-avatar>`;
 
 <Canvas>
   <Story
@@ -106,6 +89,19 @@ export const withRoundedBorderAvatarTemplate = ({
     args={withRoundedBorderAvatar}
   >
     {withRoundedBorderAvatarTemplate.bind({})}
+  </Story>
+</Canvas>
+
+Avatar component with rounded border with custom background
+
+export const roundedBorderTemplate = ({ isRounded }) =>
+  html`<div class="rounded-avatar">
+    <ymlwebcl-avatar .isRounded=${isRounded}></ymlwebcl-avatar>
+  </div>`;
+
+<Canvas>
+  <Story name="rounded border with custom background" args={roundedVariant}>
+    {roundedBorderTemplate.bind({})}
   </Story>
 </Canvas>
 
@@ -118,13 +114,13 @@ export const withShadowTemplate = ({
   hasBorder,
   hasShadow,
 }) =>
-  html`<avatar-component
+  html`<ymlwebcl-avatar
     .showDefaultIcon=${showDefaultIcon}
     .defaultImage=${defaultImage}
     .isRounded=${isRounded}
     .hasBorder=${hasBorder}
     .hasShadow=${hasShadow}
-  ></avatar-component>`;
+  ></ymlwebcl-avatar>`;
 
 <Canvas>
   <Story name=" avatar with shadow" args={withShadow}>
@@ -134,20 +130,10 @@ export const withShadowTemplate = ({
 
 Avatar component with slot and custom children
 
-export const withSlotAndChildrenTemplate = ({
-  isRounded,
-  hasBorder,
-  hasShadow,
-  slotName,
-}) =>
-  html`<avatar-component
-    .slotName=${slotName}
-    .isRounded=${isRounded}
-    .hasBorder=${hasBorder}
-    .hasShadow=${hasShadow}
-  >
+export const withSlotAndChildrenTemplate = ({ isRounded, slotName }) =>
+  html`<ymlwebcl-avatar .slotName=${slotName} .isRounded=${isRounded}>
     <div slot=${slotName}>${'YML'.charAt(0)}</div>
-  </avatar-component>`;
+  </ymlwebcl-avatar>`;
 
 <Canvas>
   <Story name="with slot and children" args={withSlot}>
@@ -157,23 +143,13 @@ export const withSlotAndChildrenTemplate = ({
 
 Avatar component with custom styling
 
-export const withCustomStylingTemplate = ({
-  isRounded,
-  hasBorder,
-  hasShadow,
-  slotName,
-}) =>
+export const withCustomStylingTemplate = ({ isRounded, slotName }) =>
   html` <div class="parent-container">
-    <avatar-component
-      .slotName=${slotName}
-      .isRounded=${isRounded}
-      .hasBorder=${hasBorder}
-      .hasShadow=${hasShadow}
-    >
+    <ymlwebcl-avatar .slotName=${slotName} .isRounded=${isRounded}>
       <div slot=${slotName}>
         <span> ${'YML'.charAt(0)}</span>
       </div>
-    </avatar-component>
+    </ymlwebcl-avatar>
   </div>`;
 
 <Canvas>

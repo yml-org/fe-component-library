@@ -122,16 +122,16 @@ If you want to contribute or share some thoughts, just get in touch with us.
 
 Enjoy.
 
-# button-component
+# ymlwebcl-avatar
 
 ## Install
 
 ```bash
-yarn add avatar-component
+yarn add ymlwebcl-avatar
 ```
 
 ```bash
-npm i avatar-component
+npm i ymlwebcl-avatar
 ```
 
 ## Usage
@@ -142,8 +142,8 @@ npm i avatar-component
 
 ```js
 <template>
-  <avatar-component isRounded=true>
-  </avatar-component>
+  <ymlwebcl-avatar isRounded=true>
+  </ymlwebcl-avatar>
 </template>
 
 <script>
@@ -162,9 +162,9 @@ export default {
 
 ```js
 <template>
-  <avatar-component
+  <ymlwebcl-avatar
     :isRounded="true"
-  ></avatar-component>
+  ></ymlwebcl-avatar>
 </template>
 
 <script>
@@ -183,7 +183,7 @@ export default {
 
 ```js
 <template>
-  <avatar-component
+  <ymlwebcl-avatar
     slotName="slot"
   >
     <div slot="slot">
@@ -194,7 +194,7 @@ export default {
         alt=""
       />
     </div>
-  </avatar-component>
+  </ymlwebcl-avatar>
 </template>
 
 <script>
@@ -221,7 +221,7 @@ npm i reactify-wc
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const AvatarComponent = reactifyWc("avatar-component");
+  const AvatarComponent = reactifyWc("ymlwebcl-avatar");
   return (
     <div className="App">
       <AvatarComponent />
@@ -235,7 +235,7 @@ export default App;
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const AvatarComponent = reactifyWc("avatar-component");
+  const AvatarComponent = reactifyWc("ymlwebcl-avatar");
   return (
     <div className="App">
       <AvatarComponent
@@ -251,7 +251,7 @@ export default App;
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const AvatarComponent = reactifyWc("avatar-component");
+  const AvatarComponent = reactifyWc("ymlwebcl-avatar");
   return (
     <div className="App">
       <AvatarComponent
@@ -279,7 +279,7 @@ Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/::part
 ```style.scss
 //The ::part CSS pseudo-element represents any element within a shadow tree that has a matching part attribute.
 
-avatar-component::part(webcl-avatar) { /*Note : avatar-component is the custom component and webcl-avatar is the name given to the the part attribute in element within avatar-component */
+ymlwebcl-avatar::part(webcl-avatar) { /*Note : ymlwebcl-avatar is the custom component and webcl-avatar is the name given to the the part attribute in element within ymlwebcl-avatar */
 background-color: yellow;
 color:black;
 //add css properties
@@ -306,53 +306,36 @@ color:black;
     </thead>
     <tbody>
         <tr>
-          <td>text</td>
-          <td>String</td>
+          <td>isRounded</td>
+          <td>boolean</td>
           <td>no</td>
-          <td></td>
-          <td></td>
-          <td>This will add text to the button tag</td>
+          <td>false</td>
+          <td>true | false</td>
+          <td>Flag to determine whether or not to have rounded borders</td>
         </tr>
         <tr>
-          <td>variant</td>
-          <td>String</td>
+          <td>width</td>
+          <td>number</td>
           <td>no</td>
-          <td>contained</td>
-          <td>contained | outlined | link</td>
-          <td>Choose from several predefined button styles to customize the button component
-          </td>
+          <td>75</td>
+          <td></td>
+          <td>The width of the avatar component </td>
         </tr>		
         <tr>
-          <td>color</td>
-          <td>String</td>
+          <td>height</td>
+          <td>number</td>
           <td>no</td>
-          <td>primary</td>
-          <td>primary | secondary | success | danger | warning | light | dark</td>
-          <td>Choose from several predefined button colors to customize the button component</td>
-        </tr>
-        <tr>
-          <td>isDisabled</td>
-          <td>Boolean</td>
-          <td>no</td>
+          <td>75</td>
           <td></td>
-          <td>true | false</td>
-          <td>Disables the button to make it unusable and un-clickable.</td>
+          <td>The height of the avatar component</td>
         </tr>
-        <tr>
-          <td>fullWidth</td>
-          <td>Boolean</td>
+          <tr>
+          <td>usePercentage</td>
+          <td>boolean</td>
           <td>no</td>
-          <td></td>
+          <td>false</td>
           <td>true | false</td>
-          <td>Changes the width of the button to 100%.</td>
-        </tr>
-        <tr>
-          <td>isRounded</td>
-          <td>Boolean</td>
-          <td>no</td>
-          <td></td>
-          <td>true | false</td>
-          <td>This attribute is used to get rounded corners </td>
+          <td>Flag to determine whether or not the dimensions should be in percentages</td>
         </tr>
         <tr>
           <td>slotName</td>
@@ -360,15 +343,47 @@ color:black;
           <td>no</td>
           <td></td>
           <td></td>
-          <td>A Slot which can render a HTMLElement or a component</td>
+          <td>The name of the child slot</td>
+        </tr>
+        <tr>
+          <td>onAvatarClick</td>
+          <td>Function</td>
+          <td>no</td>
+          <td></td>
+          <td></td>
+          <td>The click function that gets triggered on avatar component click</td>
+        </tr>
+           <tr>
+          <td>showDefaultIcon</td>
+          <td>boolean</td>
+          <td>no</td>
+          <td>false</td>
+          <td>true | false</td>
+          <td> Flag to determine whether to show default avatar icon or not      </td>
+        </tr>
+           <tr>
+          <td>avatarPartAttribute</td>
+          <td>String</td>
+          <td>no</td>
+          <td>webcl-avatar</td>
+          <td></td>
+          <td>The part name for avatar component </td>
+        </tr>
+           <tr>
+          <td>defaultImage</td>
+          <td>String</td>
+          <td>no</td>
+          <td></td>
+          <td></td>
+          <td>The default image to be displayed</td>
         </tr>
     </tbody>
 </table>
 
 ## Accessibility
 
-Throughout the development of this component proper a11y options are set. This means things like aria-expanded , aria-label, aria-current, aria-control are set and any user can use the button component easily.
+Throughout the development of this component proper a11y options are set. This means things like aria-expanded , aria-label, aria-current, aria-control are set and any user can use the avatar component easily.
 
 ## Localization
 
-Button component supports localization, currently supports English[en], Spanish[es-419] and Chinese[zh-Hans]
+avatar component supports localization, currently supports English[en], Spanish[es-419] and Chinese[zh-Hans]

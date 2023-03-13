@@ -122,16 +122,16 @@ If you want to contribute or share some thoughts, just get in touch with us.
 
 Enjoy.
 
-# header-component
+# ymlwebcl-header
 
 ## Install
 
 ```bash
-yarn add header-component
+yarn add ymlwebcl-header
 ```
 
 ```bash
-npm i header-component
+npm i ymlwebcl-header
 ```
 
 ## Usage
@@ -142,8 +142,8 @@ npm i header-component
 
 ```js
 <template>
-  <header-component>
-  </header-component>
+  <ymlwebcl-header>
+  </ymlwebcl-header>
 </template>
 
 <script>
@@ -162,11 +162,11 @@ export default {
 
 ```js
 <template>
-  <header-component
+  <ymlwebcl-header
     :navOptions="navOptions"
   >
   <button slot="notification">Notification</button>
-  </header-component>
+  </ymlwebcl-header>
 </template>
 
 <script>
@@ -220,7 +220,7 @@ export default {
 
 ```js
 <template>
-  <header-component
+  <ymlwebcl-header
     :navOptions="navOptions"
     @handle-setting="handleSetting" /*custom event*/
   >
@@ -253,7 +253,7 @@ export default {
         d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
       />
     </svg>
-  </header-component>
+  </ymlwebcl-header>
 </template>
 
 <script>
@@ -310,7 +310,7 @@ npm i reactify-wc
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const HeaderComponent = reactifyWc("header-component");
+  const HeaderComponent = reactifyWc("ymlwebcl-header");
   return (
     <div className="App">
       <HeaderComponent></HeaderComponent>
@@ -324,7 +324,7 @@ export default App;
 import reactifyWc from "reactify-wc";
 import { useState } from "react";
 function App() {
-  const HeaderComponent = reactifyWc("header-component");
+  const HeaderComponent = reactifyWc("ymlwebcl-header");
   const [navOption, setNavOption] = useState({
     mode: "dark",
     logo: "https://ymedialabs.atlassian.net/s/1jmxwi/b/8/d35727372e299c952e88a10ef82bbaf6/_/jira-logo-scaled.png",
@@ -367,7 +367,7 @@ export default App;
 import reactifyWc from "reactify-wc";
 import { useState } from "react";
 function App() {
-  const HeaderComponent = reactifyWc("header-component");
+  const HeaderComponent = reactifyWc("ymlwebcl-header");
   const [navOption, setNavOption] = useState({
     mode: "dark",
     logo: "https://ymedialabs.atlassian.net/s/1jmxwi/b/8/d35727372e299c952e88a10ef82bbaf6/_/jira-logo-scaled.png",
@@ -441,11 +441,11 @@ Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/::part
 
 ```style.scss
 //The ::part CSS pseudo-element represents any element within a shadow tree that has a matching part attribute.
-header-component::part(nav) { /*Note : header-component is the custom component and nav is the name given to the the part attribute in element within header-components */
+ymlwebcl-header::part(nav) { /*Note : ymlwebcl-header is the custom component and nav is the name given to the the part attribute in element within ymlwebcl-headers */
 background: yellow ;
 //add css properties
  }
- header-component::part(menu-icon-container) { /*Note : header-component is the custom component and menu-icon-container is the name given to the the part attribute in element within header-components */
+ ymlwebcl-header::part(menu-icon-container) { /*Note : ymlwebcl-header is the custom component and menu-icon-container is the name given to the the part attribute in element within ymlwebcl-headers */
 background: yellow ;
 //add css properties
  }

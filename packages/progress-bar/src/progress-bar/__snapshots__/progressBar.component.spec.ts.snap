@@ -1,0 +1,448 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ymlwebcl-progressbar matches component snapshot 1`] = `
+b {
+  "_$AL": Map {},
+  "_$Do": O {
+    "_$AA": <!---->,
+    "_$AB": null,
+    "_$AH": gt {
+      "_$AD": x {
+        "el": <template />,
+        "parts": Array [
+          Object {
+            "ctor": [Function],
+            "index": 0,
+            "name": "part",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 1,
+            "name": "part",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 1,
+            "name": "style",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 1,
+            "name": "role",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 1,
+            "name": "aria-valuemax",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 1,
+            "name": "aria-valuenow",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+        ],
+      },
+      "_$AM": [Circular],
+      "_$AN": undefined,
+      "u": Array [
+        k {
+          "_$AH": "webcl-progress-bar-container",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <div
+            part="webcl-progress-bar-container"
+          >
+            
+        
+            <div
+              aria-valuemax="100"
+              aria-valuemin="0"
+              aria-valuenow=""
+              part="webcl-progress-bar"
+              role="progressbar"
+              style="width: NaN%; transition: width 0.3s ease-in-out; height: 100%"
+            />
+            
+      
+          </div>,
+          "name": "part",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        k {
+          "_$AH": "webcl-progress-bar",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <div
+            aria-valuemax="100"
+            aria-valuemin="0"
+            aria-valuenow=""
+            part="webcl-progress-bar"
+            role="progressbar"
+            style="width: NaN%; transition: width 0.3s ease-in-out; height: 100%"
+          />,
+          "name": "part",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        k {
+          "_$AH": "width: NaN%; transition: width 0.3s ease-in-out; height: 100%",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <div
+            aria-valuemax="100"
+            aria-valuemin="0"
+            aria-valuenow=""
+            part="webcl-progress-bar"
+            role="progressbar"
+            style="width: NaN%; transition: width 0.3s ease-in-out; height: 100%"
+          />,
+          "name": "style",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        k {
+          "_$AH": "progressbar",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <div
+            aria-valuemax="100"
+            aria-valuemin="0"
+            aria-valuenow=""
+            part="webcl-progress-bar"
+            role="progressbar"
+            style="width: NaN%; transition: width 0.3s ease-in-out; height: 100%"
+          />,
+          "name": "role",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        k {
+          "_$AH": 100,
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <div
+            aria-valuemax="100"
+            aria-valuemin="0"
+            aria-valuenow=""
+            part="webcl-progress-bar"
+            role="progressbar"
+            style="width: NaN%; transition: width 0.3s ease-in-out; height: 100%"
+          />,
+          "name": "aria-valuemax",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        k {
+          "_$AH": undefined,
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <div
+            aria-valuemax="100"
+            aria-valuemin="0"
+            aria-valuenow=""
+            part="webcl-progress-bar"
+            role="progressbar"
+            style="width: NaN%; transition: width 0.3s ease-in-out; height: 100%"
+          />,
+          "name": "aria-valuenow",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+      ],
+    },
+    "_$AM": undefined,
+    "_$AN": undefined,
+    "_$Cm": true,
+    "options": Object {
+      "host": [Circular],
+      "isConnected": true,
+      "renderBefore": null,
+    },
+    "type": 2,
+  },
+  "_$EC": undefined,
+  "_$E_": Promise {},
+  "_$Ei": undefined,
+  "_$El": null,
+  "__containerPartAttribute": "webcl-progress-bar-container",
+  "__max": 100,
+  "__progressBarPartAttribute": "webcl-progress-bar",
+  "enableUpdating": [Function],
+  "hasUpdated": true,
+  "isUpdatePending": false,
+  "renderOptions": Object {
+    "host": [Circular],
+    "isConnected": true,
+    "renderBefore": null,
+  },
+  "renderRoot": ShadowRoot {
+    "_$litPart$": O {
+      "_$AA": <!---->,
+      "_$AB": null,
+      "_$AH": gt {
+        "_$AD": x {
+          "el": <template />,
+          "parts": Array [
+            Object {
+              "ctor": [Function],
+              "index": 0,
+              "name": "part",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 1,
+              "name": "part",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 1,
+              "name": "style",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 1,
+              "name": "role",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 1,
+              "name": "aria-valuemax",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 1,
+              "name": "aria-valuenow",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+          ],
+        },
+        "_$AM": [Circular],
+        "_$AN": undefined,
+        "u": Array [
+          k {
+            "_$AH": "webcl-progress-bar-container",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <div
+              part="webcl-progress-bar-container"
+            >
+              
+        
+              <div
+                aria-valuemax="100"
+                aria-valuemin="0"
+                aria-valuenow=""
+                part="webcl-progress-bar"
+                role="progressbar"
+                style="width: NaN%; transition: width 0.3s ease-in-out; height: 100%"
+              />
+              
+      
+            </div>,
+            "name": "part",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          k {
+            "_$AH": "webcl-progress-bar",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <div
+              aria-valuemax="100"
+              aria-valuemin="0"
+              aria-valuenow=""
+              part="webcl-progress-bar"
+              role="progressbar"
+              style="width: NaN%; transition: width 0.3s ease-in-out; height: 100%"
+            />,
+            "name": "part",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          k {
+            "_$AH": "width: NaN%; transition: width 0.3s ease-in-out; height: 100%",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <div
+              aria-valuemax="100"
+              aria-valuemin="0"
+              aria-valuenow=""
+              part="webcl-progress-bar"
+              role="progressbar"
+              style="width: NaN%; transition: width 0.3s ease-in-out; height: 100%"
+            />,
+            "name": "style",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          k {
+            "_$AH": "progressbar",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <div
+              aria-valuemax="100"
+              aria-valuemin="0"
+              aria-valuenow=""
+              part="webcl-progress-bar"
+              role="progressbar"
+              style="width: NaN%; transition: width 0.3s ease-in-out; height: 100%"
+            />,
+            "name": "role",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          k {
+            "_$AH": 100,
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <div
+              aria-valuemax="100"
+              aria-valuemin="0"
+              aria-valuenow=""
+              part="webcl-progress-bar"
+              role="progressbar"
+              style="width: NaN%; transition: width 0.3s ease-in-out; height: 100%"
+            />,
+            "name": "aria-valuemax",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          k {
+            "_$AH": undefined,
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <div
+              aria-valuemax="100"
+              aria-valuemin="0"
+              aria-valuenow=""
+              part="webcl-progress-bar"
+              role="progressbar"
+              style="width: NaN%; transition: width 0.3s ease-in-out; height: 100%"
+            />,
+            "name": "aria-valuenow",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+        ],
+      },
+      "_$AM": undefined,
+      "_$AN": undefined,
+      "_$Cm": true,
+      "options": Object {
+        "host": [Circular],
+        "isConnected": true,
+        "renderBefore": null,
+      },
+      "type": 2,
+    },
+  },
+}
+`;

@@ -124,16 +124,16 @@ Enjoy.
 
 
 
-# video-component
+# ymlwebcl-video
 
 ## Install
 
 ```bash
-yarn add video-component
+yarn add ymlwebcl-video
 ```
 
 ```bash
-npm i video-component
+npm i ymlwebcl-video
 ```
 
 ## Usage
@@ -144,8 +144,8 @@ npm i video-component
 
 ```js
 <template>
-  <video-component :src="src">    
-  </video-component>
+  <ymlwebcl-video :src="src">    
+  </ymlwebcl-video>
 </template>
 
 <script>
@@ -165,7 +165,7 @@ export default {
 
 ```js
 <template>
-  <video-component
+  <ymlwebcl-video
     :src="src"
     :poster="poster"
     :playbackRates="playbackRates"
@@ -175,7 +175,7 @@ export default {
     :customSeekEvent="customSeekEvent""
     @handleSeek="handleSeek"
   >
-  </video-component>
+  </ymlwebcl-video>
   <router-view />
 </template>
 
@@ -225,7 +225,7 @@ npm i reactify-wc
 import reactifyWc from "reactify-wc";
 
 function App() {
-  const VideoComponent = reactifyWc("video-component");
+  const VideoComponent = reactifyWc("ymlwebcl-video");
   return (
     <div className="App">
       <VideoComponent 
@@ -242,7 +242,7 @@ import reactifyWc from "reactify-wc";
 import "./index.css";
 
 function App() {
-  const VideoComponent = reactifyWc("video-component");
+  const VideoComponent = reactifyWc("ymlwebcl-video");
   const captions = [
     {
         srcTrack:
@@ -283,7 +283,7 @@ Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/::part
 
 ```style.scss
 //The ::part CSS pseudo-element represents any element within a shadow tree that has a matching part attribute.
-video-component::part(video) { /*Note : video-component is the custom component and video is the name given to the the part attribute for 'div' tag wrapping the video-components */
+ymlwebcl-video::part(video) { /*Note : ymlwebcl-video is the custom component and video is the name given to the the part attribute for 'div' tag wrapping the video-components */
 width: 500px;
 //add css properties
  }

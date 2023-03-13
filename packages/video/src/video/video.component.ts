@@ -9,39 +9,39 @@ import {
   AspectRatioDefault,
 } from '../constants/video.component';
 
-@customElement('video-component')
+@customElement('ymlwebcl-video')
 export class VideoComponent extends TailwindElement(Style) {
-  @property()
+  @property({ type: String, reflect: true })
   src: string;
-  @property()
+  @property({ type: String, reflect: true })
   preload?: string = 'auto';
-  @property()
+  @property({ type: Boolean, reflect: true })
   autoplay?: boolean | string = false;
-  @property()
+  @property({ type: Boolean, reflect: true })
   controls?: boolean = true;
-  @property()
+  @property({ type: Boolean, reflect: true })
   fluid?: boolean = false;
-  @property()
+  @property({ type: Boolean, reflect: true })
   responsive?: boolean = true;
-  @property()
+  @property({ type: Boolean, reflect: true })
   muted?: boolean = false;
-  @property()
+  @property({ type: Boolean, reflect: true })
   loop?: boolean = false;
-  @property()
+  @property({ type: Array, reflect: true })
   playbackRates? = [];
-  @property()
+  @property({ type: String, reflect: true })
   poster?: string;
-  @property()
+  @property({ reflect: true })
   videoStyle?: VideoStyle | null;
-  @property()
+  @property({ reflect: true })
   captions?: Captions[];
-  @property()
+  @property({ type: String, reflect: true })
   seekTo?: string = '';
-  @property()
+  @property({ type: String, reflect: true })
   customPlayEvent?: string = '';
-  @property()
+  @property({ type: String, reflect: true })
   customPauseEvent?: string = '';
-  @property()
+  @property({ type: String, reflect: true })
   customSeekEvent?: string = '';
 
   private player = null;
@@ -135,11 +135,5 @@ export class VideoComponent extends TailwindElement(Style) {
     if (changedProperties.has('src')) {
       this.player.src(this.src);
     }
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    'video-component': VideoComponent;
   }
 }

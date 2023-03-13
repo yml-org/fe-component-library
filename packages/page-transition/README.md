@@ -122,16 +122,16 @@ If you want to contribute or share some thoughts, just get in touch with us.
 
 Enjoy.
 
-# flick-to-transition-component
+# flick-to-transition component
 
 ## Install
 
 ```bash
-yarn add transition-component
+yarn add ymlwebcl-transition
 ```
 
 ```bash
-npm i transition-component
+npm i ymlwebcl-transition
 ```
 
 ## Usage
@@ -143,7 +143,7 @@ npm i transition-component
 ```js
 <template>
   <!-- Note: User can give any name to the slot but make sure to add the same name in the componentArray prop -->
-  <transition-component :componentArray="['slot1', 'slot2', 'slot3']">
+  <ymlwebcl-transition :componentArray="['slot1', 'slot2', 'slot3']">
     <!-- Note: Wrap the component within container element containing the slot attribute -->
     <div slot="slot1">
       <div style="width: 100vw; height: 100vh">
@@ -175,7 +175,7 @@ npm i transition-component
         />
       </div>
     </div>
-  </transition-component>
+  </ymlwebcl-transition>
 </template>
 <script>
 export default {
@@ -190,7 +190,7 @@ export default {
 
 ```js
 <template>
-  <transition-component 
+  <ymlwebcl-transition 
     :componentArray="['slot1', 'slot2', 'slot3']" 
     :allowCircularSwipe="true" 
     :animationDuration=3 
@@ -226,7 +226,7 @@ export default {
         />
       </div>
     </div>
-  </transition-component>
+  </ymlwebcl-transition>
 </template>
 <script>
 export default {
@@ -242,7 +242,7 @@ export default {
 ```js
 <template>
     <!-- Note: User can give any name to the callbackEvent but it need to be in kebab-case and same name should be used while using the custom event as shown in the example below. -->
-  <transition-component :componentArray="['slot1', 'slot2', 'slot3']"  callbackEvent="on-custom-callback" @on-custom-callback="handleCallBack">
+  <ymlwebcl-transition :componentArray="['slot1', 'slot2', 'slot3']"  callbackEvent="on-custom-callback" @on-custom-callback="handleCallBack">
     <div slot="slot1">
       <div style="width: 100vw; height: 100vh">
         <p>company</p>
@@ -273,7 +273,7 @@ export default {
         />
       </div>
     </div>
-  </transition-component>
+  </ymlwebcl-transition>
 </template>
 <script>
 export default {
@@ -301,7 +301,7 @@ npm i reactify-wc
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const TransitionComponent = reactifyWc("transition-component");
+  const TransitionComponent = reactifyWc("ymlwebcl-transition");
   const compArray = ["slot1", "slot2", "slot3"];
   return (
     <div className="App">
@@ -349,7 +349,7 @@ export default App;
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const TransitionComponent = reactifyWc("transition-component");
+  const TransitionComponent = reactifyWc("ymlwebcl-transition");
   const compArray = ["slot1", "slot2", "slot3"];
   return (
     <div className="App">
@@ -401,7 +401,7 @@ export default App;
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const TransitionComponent = reactifyWc("transition-component");
+  const TransitionComponent = reactifyWc("ymlwebcl-transition");
   const compArray = ["slot1", "slot2", "slot3"];
   const handleCallback = () => {
     //define the function
@@ -457,7 +457,7 @@ Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/::part
 ```style.scss
 //The ::part CSS pseudo-element represents any element within a shadow tree that has a matching part attribute.
 
-transition-component::part(flick-to-transition-container){ /*Note : transition-component is the custom component and flick-to-transition-container is the name given to the the part attribute in element within transition-component */
+ymlwebcl-transition::part(flick-to-transition-container){ /*Note : ymlwebcl-transition is the custom component and flick-to-transition-container is the name given to the the part attribute in element within ymlwebcl-transition */
 background: black;
 //add css properties
  }

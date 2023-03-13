@@ -1,8 +1,7 @@
-import { AvatarVariant } from 'types/avatar';
+import { AvatarVariant } from '../types/avatar';
 
 const roundedVariant: AvatarVariant = {
   isRounded: true,
-  defaultBgColor: 'bg-slate-200',
 };
 
 const withDefaultIcon: AvatarVariant = {
@@ -17,9 +16,14 @@ const withCustomHeightWidth: AvatarVariant = {
   height: 100,
 };
 
+const withSlot: AvatarVariant = {
+  isRounded: true,
+  slotName: 'avatar-slot',
+};
+
 const withRoundedBorderAvatar: AvatarVariant = {
   ...withDefaultIcon,
-  ...roundedVariant,
+  isRounded: true,
   hasBorder: true,
 };
 
@@ -27,18 +31,11 @@ const withShadow: AvatarVariant = {
   ...withRoundedBorderAvatar,
   hasShadow: true,
 };
-
-const withSlot: AvatarVariant = {
-  isRounded: true,
-  hasBorder: true,
-  hasShadow: true,
-  slotName: 'avatar-slot',
-};
 export {
   roundedVariant,
   withDefaultIcon,
   withCustomHeightWidth,
+  withSlot,
   withRoundedBorderAvatar,
   withShadow,
-  withSlot,
 };

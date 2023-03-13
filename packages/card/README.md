@@ -122,16 +122,16 @@ If you want to contribute or share some thoughts, just get in touch with us.
 
 Enjoy.
 
-# button-component
+# ymlwebcl-card
 
 ## Install
 
 ```bash
-yarn add card-component
+yarn add ymlwebcl-card
 ```
 
 ```bash
-npm i card-component
+npm i ymlwebcl-card
 ```
 
 ## Usage
@@ -142,8 +142,8 @@ npm i card-component
 
 ```js
 <template>
-  <card-component hasRoundedBorder={true}>
-  </card-component>
+  <ymlwebcl-card hasRoundedBorder={true}>
+  </ymlwebcl-card>
 </template>
 
 <script>
@@ -162,9 +162,9 @@ export default {
 
 ```js
 <template>
-  <card-component
+  <ymlwebcl-card
    :hasRoundedBorder="true"
-  ></card-component>
+  ></ymlwebcl-card>
 </template>
 
 <script>
@@ -183,7 +183,7 @@ export default {
 
 ```js
 <template>
-  <card-component
+  <ymlwebcl-card
   >
     <div slot="webcl-card-content">
       <p>Add any Slot Elements</p>
@@ -193,7 +193,7 @@ export default {
         alt=""
       />
     </div>
-  </card-component>
+  </ymlwebcl-card>
 </template>
 
 <script>
@@ -220,7 +220,7 @@ npm i reactify-wc
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const CardComponent = reactifyWc("card-component");
+  const CardComponent = reactifyWc("ymlwebcl-card");
   return (
     <div className="App">
       <CardComponent />
@@ -234,7 +234,7 @@ export default App;
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-const CardComponent = reactifyWc("card-component");
+const CardComponent = reactifyWc("ymlwebcl-card");
   return (
     <div className="App">
       <CardComponent
@@ -250,7 +250,7 @@ export default App;
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-const CardComponent = reactifyWc("card-component");
+const CardComponent = reactifyWc("ymlwebcl-card");
   return (
     <div className="App">
       <CardComponent
@@ -278,7 +278,7 @@ Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/::part
 ```style.scss
 //The ::part CSS pseudo-element represents any element within a shadow tree that has a matching part attribute.
 
-card-component::part(webcl-card-container) { /*Note : card-component is the custom component and webcl-card-container is the name given to the the part attribute in element within card-component */
+ymlwebcl-card::part(webcl-card-container) { /*Note : ymlwebcl-card is the custom component and webcl-card-container is the name given to the the part attribute in element within ymlwebcl-card */
 background-color: yellow;
 color:black;
 //add css properties
@@ -305,69 +305,68 @@ color:black;
     </thead>
     <tbody>
         <tr>
-          <td>text</td>
-          <td>String</td>
+          <td>hasRoundedBorder</td>
+          <td>boolean</td>
           <td>no</td>
-          <td></td>
-          <td></td>
-          <td>This will add text to the button tag</td>
+          <td>false</td>
+          <td>true | false</td>
+          <td>Flag to determine whether or not to have rounded borders </td>
         </tr>
         <tr>
-          <td>variant</td>
-          <td>String</td>
+          <td>cardWidth</td>
+          <td>number</td>
           <td>no</td>
-          <td>contained</td>
-          <td>contained | outlined | link</td>
-          <td>Choose from several predefined button styles to customize the button component
-          </td>
+          <td>300</td>
+          <td></td>
+          <td>The width of the card component </td>
         </tr>		
         <tr>
-          <td>color</td>
-          <td>String</td>
+          <td>cardHeight</td>
+          <td>number</td>
           <td>no</td>
-          <td>primary</td>
-          <td>primary | secondary | success | danger | warning | light | dark</td>
-          <td>Choose from several predefined button colors to customize the button component</td>
-        </tr>
-        <tr>
-          <td>isDisabled</td>
-          <td>Boolean</td>
-          <td>no</td>
+          <td>300</td>
           <td></td>
-          <td>true | false</td>
-          <td>Disables the button to make it unusable and un-clickable.</td>
+          <td>The height of the card component</td>
         </tr>
         <tr>
-          <td>fullWidth</td>
-          <td>Boolean</td>
-          <td>no</td>
-          <td></td>
-          <td>true | false</td>
-          <td>Changes the width of the button to 100%.</td>
-        </tr>
-        <tr>
-          <td>isRounded</td>
-          <td>Boolean</td>
-          <td>no</td>
-          <td></td>
-          <td>true | false</td>
-          <td>This attribute is used to get rounded corners </td>
-        </tr>
-        <tr>
-          <td>slotName</td>
+          <td>customSlotName</td>
           <td>String</td>
           <td>no</td>
           <td></td>
           <td></td>
-          <td>A Slot which can render a HTMLElement or a component</td>
+          <td>The name of the child slot</td>
+        </tr>
+           <tr>
+          <td>showCustomSlot</td>
+          <td>boolean</td>
+          <td>no</td>
+          <td>false</td>
+          <td>true | false</td>
+          <td>Flag to determine whether or not to render the custom slot     </td>
+        </tr>
+           <tr>
+          <td>cardDimensionUnit</td>
+          <td>string</td>
+          <td>no</td>
+          <td>'px'</td>
+          <td>'cm', 'in', 'mm', 'pt', 'pc', 'em', 'rem', 'ex', 'ch', 'vw', 'vh', '%'</td>
+          <td>The unit for the card width and height</td>
+        </tr>
+           <tr>
+          <td>isHorizontal</td>
+          <td>boolean</td>
+          <td>no</td>
+          <td>false</td>
+          <td>true | false</td>
+          <td>Flag to determine the content direction</td>
         </tr>
     </tbody>
 </table>
 
 ## Accessibility
 
-Throughout the development of this component proper a11y options are set. This means things like aria-expanded , aria-label, aria-current, aria-control are set and any user can use the button component easily.
+Throughout the development of this component proper a11y options are set. This means things like aria-expanded , aria-label, aria-current, aria-control are set and any user can use the card component easily.
 
 ## Localization
 
-Button component supports localization, currently supports English[en], Spanish[es-419] and Chinese[zh-Hans]
+card component supports localization, currently supports English[en], Spanish[es-419] and Chinese[zh-Hans]

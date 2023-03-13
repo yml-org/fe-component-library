@@ -1,0 +1,444 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ymlwebcl-scroll matches component snapshot 1`] = `
+T {
+  "_$AL": Map {},
+  "_$Do": O {
+    "_$AA": <!---->,
+    "_$AB": null,
+    "_$AH": St {
+      "_$AD": P {
+        "el": <template />,
+        "parts": Array [
+          Object {
+            "index": 3,
+            "type": 2,
+          },
+        ],
+      },
+      "_$AM": [Circular],
+      "_$AN": undefined,
+      "u": Array [
+        O {
+          "_$AA": <!--?lit$178972012$-->,
+          "_$AB": 
+        ,
+          "_$AH": Array [
+            O {
+              "_$AA": <!---->,
+              "_$AB": <!---->,
+              "_$AH": St {
+                "_$AD": P {
+                  "el": <template />,
+                  "parts": Array [
+                    Object {
+                      "ctor": [Function],
+                      "index": 0,
+                      "name": "part",
+                      "strings": Array [
+                        "",
+                        "",
+                      ],
+                      "type": 1,
+                    },
+                    Object {
+                      "ctor": [Function],
+                      "index": 0,
+                      "name": "data-start",
+                      "strings": Array [
+                        "",
+                        "",
+                      ],
+                      "type": 1,
+                    },
+                    Object {
+                      "ctor": [Function],
+                      "index": 0,
+                      "name": "data-end",
+                      "strings": Array [
+                        "",
+                        "",
+                      ],
+                      "type": 1,
+                    },
+                    Object {
+                      "ctor": [Function],
+                      "index": 1,
+                      "name": "name",
+                      "strings": Array [
+                        "",
+                        "",
+                      ],
+                      "type": 1,
+                    },
+                  ],
+                },
+                "_$AM": [Circular],
+                "_$AN": undefined,
+                "u": Array [
+                  M {
+                    "_$AH": "slot_1",
+                    "_$AM": [Circular],
+                    "_$AN": undefined,
+                    "element": <div
+                      class="scroll-reveal text"
+                      data-end="20"
+                      data-start="2"
+                      part="slot_1"
+                    >
+                      
+              
+                      <slot
+                        name="slot_1"
+                      />
+                      
+            
+                    </div>,
+                    "name": "part",
+                    "options": Object {
+                      "host": [Circular],
+                      "isConnected": true,
+                      "renderBefore": null,
+                    },
+                    "type": 1,
+                  },
+                  M {
+                    "_$AH": 2,
+                    "_$AM": [Circular],
+                    "_$AN": undefined,
+                    "element": <div
+                      class="scroll-reveal text"
+                      data-end="20"
+                      data-start="2"
+                      part="slot_1"
+                    >
+                      
+              
+                      <slot
+                        name="slot_1"
+                      />
+                      
+            
+                    </div>,
+                    "name": "data-start",
+                    "options": Object {
+                      "host": [Circular],
+                      "isConnected": true,
+                      "renderBefore": null,
+                    },
+                    "type": 1,
+                  },
+                  M {
+                    "_$AH": 20,
+                    "_$AM": [Circular],
+                    "_$AN": undefined,
+                    "element": <div
+                      class="scroll-reveal text"
+                      data-end="20"
+                      data-start="2"
+                      part="slot_1"
+                    >
+                      
+              
+                      <slot
+                        name="slot_1"
+                      />
+                      
+            
+                    </div>,
+                    "name": "data-end",
+                    "options": Object {
+                      "host": [Circular],
+                      "isConnected": true,
+                      "renderBefore": null,
+                    },
+                    "type": 1,
+                  },
+                  M {
+                    "_$AH": "slot_1",
+                    "_$AM": [Circular],
+                    "_$AN": undefined,
+                    "element": <slot
+                      name="slot_1"
+                    />,
+                    "name": "name",
+                    "options": Object {
+                      "host": [Circular],
+                      "isConnected": true,
+                      "renderBefore": null,
+                    },
+                    "type": 1,
+                  },
+                ],
+              },
+              "_$AM": [Circular],
+              "_$AN": undefined,
+              "_$Cm": true,
+              "options": Object {
+                "host": [Circular],
+                "isConnected": true,
+                "renderBefore": null,
+              },
+              "type": 2,
+            },
+          ],
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "_$Cm": true,
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 2,
+        },
+      ],
+    },
+    "_$AM": undefined,
+    "_$AN": undefined,
+    "_$Cm": true,
+    "options": Object {
+      "host": [Circular],
+      "isConnected": true,
+      "renderBefore": null,
+    },
+    "type": 2,
+  },
+  "_$EC": undefined,
+  "_$E_": Promise {},
+  "_$Ei": undefined,
+  "_$El": null,
+  "__dataSlot": Array [
+    Object {
+      "dataEnd": 20,
+      "dataStart": 2,
+      "slotName": "slot_1",
+    },
+  ],
+  "__desktopImages": Object {
+    "yonder-0001": "../assets/yonder/images/desktop/png/yonder-0001.png",
+    "yonder-0002": "../assets/yonder/images/desktop/png/yonder-0002.png",
+    "yonder-0003": "../assets/yonder/images/desktop/png/yonder-0003.png",
+    "yonder-0004": "../assets/yonder/images/desktop/png/yonder-0004.png",
+    "yonder-0005": "../assets/yonder/images/desktop/png/yonder-0005.png",
+  },
+  "__mobileImages": Object {
+    "yonder-0001": "../assets/yonder/images/mobile/png/yonder-0001.png",
+    "yonder-0002": "../assets/yonder/images/mobile/png/yonder-0002.png",
+    "yonder-0003": "../assets/yonder/images/mobile/png/yonder-0003.png",
+    "yonder-0004": "../assets/yonder/images/mobile/png/yonder-0004.png",
+    "yonder-0005": "../assets/yonder/images/mobile/png/yonder-0005.png",
+  },
+  "enableUpdating": [Function],
+  "hasUpdated": true,
+  "isUpdatePending": false,
+  "renderOptions": Object {
+    "host": [Circular],
+    "isConnected": true,
+    "renderBefore": null,
+  },
+  "renderRoot": ShadowRoot {
+    "_$litPart$": O {
+      "_$AA": <!---->,
+      "_$AB": null,
+      "_$AH": St {
+        "_$AD": P {
+          "el": <template />,
+          "parts": Array [
+            Object {
+              "index": 3,
+              "type": 2,
+            },
+          ],
+        },
+        "_$AM": [Circular],
+        "_$AN": undefined,
+        "u": Array [
+          O {
+            "_$AA": <!--?lit$178972012$-->,
+            "_$AB": 
+        ,
+            "_$AH": Array [
+              O {
+                "_$AA": <!---->,
+                "_$AB": <!---->,
+                "_$AH": St {
+                  "_$AD": P {
+                    "el": <template />,
+                    "parts": Array [
+                      Object {
+                        "ctor": [Function],
+                        "index": 0,
+                        "name": "part",
+                        "strings": Array [
+                          "",
+                          "",
+                        ],
+                        "type": 1,
+                      },
+                      Object {
+                        "ctor": [Function],
+                        "index": 0,
+                        "name": "data-start",
+                        "strings": Array [
+                          "",
+                          "",
+                        ],
+                        "type": 1,
+                      },
+                      Object {
+                        "ctor": [Function],
+                        "index": 0,
+                        "name": "data-end",
+                        "strings": Array [
+                          "",
+                          "",
+                        ],
+                        "type": 1,
+                      },
+                      Object {
+                        "ctor": [Function],
+                        "index": 1,
+                        "name": "name",
+                        "strings": Array [
+                          "",
+                          "",
+                        ],
+                        "type": 1,
+                      },
+                    ],
+                  },
+                  "_$AM": [Circular],
+                  "_$AN": undefined,
+                  "u": Array [
+                    M {
+                      "_$AH": "slot_1",
+                      "_$AM": [Circular],
+                      "_$AN": undefined,
+                      "element": <div
+                        class="scroll-reveal text"
+                        data-end="20"
+                        data-start="2"
+                        part="slot_1"
+                      >
+                        
+              
+                        <slot
+                          name="slot_1"
+                        />
+                        
+            
+                      </div>,
+                      "name": "part",
+                      "options": Object {
+                        "host": [Circular],
+                        "isConnected": true,
+                        "renderBefore": null,
+                      },
+                      "type": 1,
+                    },
+                    M {
+                      "_$AH": 2,
+                      "_$AM": [Circular],
+                      "_$AN": undefined,
+                      "element": <div
+                        class="scroll-reveal text"
+                        data-end="20"
+                        data-start="2"
+                        part="slot_1"
+                      >
+                        
+              
+                        <slot
+                          name="slot_1"
+                        />
+                        
+            
+                      </div>,
+                      "name": "data-start",
+                      "options": Object {
+                        "host": [Circular],
+                        "isConnected": true,
+                        "renderBefore": null,
+                      },
+                      "type": 1,
+                    },
+                    M {
+                      "_$AH": 20,
+                      "_$AM": [Circular],
+                      "_$AN": undefined,
+                      "element": <div
+                        class="scroll-reveal text"
+                        data-end="20"
+                        data-start="2"
+                        part="slot_1"
+                      >
+                        
+              
+                        <slot
+                          name="slot_1"
+                        />
+                        
+            
+                      </div>,
+                      "name": "data-end",
+                      "options": Object {
+                        "host": [Circular],
+                        "isConnected": true,
+                        "renderBefore": null,
+                      },
+                      "type": 1,
+                    },
+                    M {
+                      "_$AH": "slot_1",
+                      "_$AM": [Circular],
+                      "_$AN": undefined,
+                      "element": <slot
+                        name="slot_1"
+                      />,
+                      "name": "name",
+                      "options": Object {
+                        "host": [Circular],
+                        "isConnected": true,
+                        "renderBefore": null,
+                      },
+                      "type": 1,
+                    },
+                  ],
+                },
+                "_$AM": [Circular],
+                "_$AN": undefined,
+                "_$Cm": true,
+                "options": Object {
+                  "host": [Circular],
+                  "isConnected": true,
+                  "renderBefore": null,
+                },
+                "type": 2,
+              },
+            ],
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "_$Cm": true,
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 2,
+          },
+        ],
+      },
+      "_$AM": undefined,
+      "_$AN": undefined,
+      "_$Cm": true,
+      "options": Object {
+        "host": [Circular],
+        "isConnected": true,
+        "renderBefore": null,
+      },
+      "type": 2,
+    },
+  },
+}
+`;

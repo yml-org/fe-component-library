@@ -1,4 +1,4 @@
-export const gaInstall = (trackingId, additionalConfig = {}) => {
+export const ymlGaInstall = (trackingId, additionalConfig = {}) => {
   const scriptId = 'ga-accelerator';
 
   if (document.getElementById(scriptId)) return;
@@ -15,7 +15,7 @@ export const gaInstall = (trackingId, additionalConfig = {}) => {
   gtag('config', trackingId, additionalConfig);
 };
 
-export const gaCookieLessInstall = (trackingId) => {
+export const ymlGaCookieLessInstall = (trackingId) => {
   const scriptId = 'ga-accelerator';
 
   if (document.getElementById(scriptId)) return;
@@ -35,8 +35,8 @@ export const gaCookieLessInstall = (trackingId) => {
   });
 };
 
-export const gaAccelerator = function (...args) {
+export const ymlGaAccelerator = function (...args) {
   window.dataLayer.push(args);
 };
 
-export default gaAccelerator;
+export default ymlGaAccelerator;

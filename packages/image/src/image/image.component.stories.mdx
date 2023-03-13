@@ -71,7 +71,7 @@ f the image. this will be loaded instead of the src
 image on high-resolution devices.
 
 export const defaultTemplate = ({ src }) =>
-  html`<image-component .src=${src}></image-component>`;
+  html`<ymlwebcl-image .src=${src}></ymlwebcl-image>`;
 
 <Canvas>
   <Story
@@ -87,9 +87,9 @@ export const defaultTemplate = ({ src }) =>
 Image component with `altText` prop
 
 export const withAltTextTemplate = ({ src, altText }) =>
-  html`<image-component .src=${src} .altText=${altText}
-    ><image-component></image-component
-  ></image-component>`;
+  html`<ymlwebcl-image .src=${src} .altText=${altText}
+    ><ymlwebcl-image></ymlwebcl-image
+  ></ymlwebcl-image>`;
 
 <Canvas>
   <Story
@@ -110,12 +110,12 @@ src attribute. Displayed, in case the 'srcset' is
 failed to load the image or before image is loaded
 
 export const withPlaceholderImgTemplate = ({ src, altText, placeholderImg }) =>
-  html`<image-component
+  html`<ymlwebcl-image
     .src=${src}
     .altText=${altText}
     .placeholderImg=${placeholderImg}
-    ><image-component></image-component
-  ></image-component>`;
+    ><ymlwebcl-image></ymlwebcl-image
+  ></ymlwebcl-image>`;
 
 <Canvas>
   <Story
@@ -138,13 +138,13 @@ export const withWidthAndHeightTemplate = ({
   placeholderImg,
   size,
 }) =>
-  html`<image-component
+  html`<ymlwebcl-image
     .src=${src}
     .altText=${altText}
     .placeholderImg=${placeholderImg}
     .size=${size}
-    ><image-component></image-component
-  ></image-component>`;
+    ><ymlwebcl-image></ymlwebcl-image
+  ></ymlwebcl-image>`;
 
 <Canvas>
   <Story
@@ -166,13 +166,13 @@ export const withWidthAndHeightTemplate = ({
 Image component with `max-height/width`
 
 export const withMaxWidthTemplate = ({ src, altText, placeholderImg, size }) =>
-  html`<image-component
+  html`<ymlwebcl-image
     .src=${src}
     .altText=${altText}
     .placeholderImg=${placeholderImg}
     .size=${size}
-    ><image-component></image-component
-  ></image-component>`;
+    ><ymlwebcl-image></ymlwebcl-image
+  ></ymlwebcl-image>`;
 
 <Canvas>
   <Story
@@ -194,13 +194,13 @@ export const withMaxWidthTemplate = ({ src, altText, placeholderImg, size }) =>
 Image component with `min-height/width`
 
 export const withMinWidthTemplate = ({ src, altText, placeholderImg, size }) =>
-  html`<image-component
+  html`<ymlwebcl-image
     .src=${src}
     .altText=${altText}
     .placeholderImg=${placeholderImg}
     .size=${size}
-    ><image-component></image-component
-  ></image-component>`;
+    ><ymlwebcl-image></ymlwebcl-image
+  ></ymlwebcl-image>`;
 
 <Canvas>
   <Story
@@ -221,13 +221,13 @@ export const withMinWidthTemplate = ({ src, altText, placeholderImg, size }) =>
 Image component with `round border`
 
 export const withRoundImgTemplate = ({ src, altText, placeholderImg, size }) =>
-  html`<image-component
+  html`<ymlwebcl-image
     .src=${src}
     .altText=${altText}
     .placeholderImg=${placeholderImg}
     .size=${size}
-    ><image-component></image-component
-  ></image-component>`;
+    ><ymlwebcl-image></ymlwebcl-image
+  ></ymlwebcl-image>`;
 
 <Canvas>
   <Story
@@ -248,13 +248,13 @@ export const withRoundImgTemplate = ({ src, altText, placeholderImg, size }) =>
 Image component with `object-fit`
 
 export const withObjectFitTemplate = ({ src, altText, placeholderImg, size }) =>
-  html`<image-component
+  html`<ymlwebcl-image
     .src=${src}
     .altText=${altText}
     .placeholderImg=${placeholderImg}
     .size=${size}
-    ><image-component></image-component
-  ></image-component>`;
+    ><ymlwebcl-image></ymlwebcl-image
+  ></ymlwebcl-image>`;
 
 <Canvas>
   <Story
@@ -275,13 +275,13 @@ export const withObjectFitTemplate = ({ src, altText, placeholderImg, size }) =>
 Image component with `border`
 
 export const withBorderTemplate = ({ src, altText, placeholderImg, size }) =>
-  html`<image-component
+  html`<ymlwebcl-image
     .src=${src}
     .altText=${altText}
     .placeholderImg=${placeholderImg}
     .size=${size}
-    ><image-component></image-component
-  ></image-component>`;
+    ><ymlwebcl-image></ymlwebcl-image
+  ></ymlwebcl-image>`;
 
 <Canvas>
   <Story

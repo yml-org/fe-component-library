@@ -19,9 +19,9 @@ The card component is a Lit component that renders a skeleton card that is frame
 | Prop Name         | Type              | Description                                                |
 | ----------------- | ----------------- | ---------------------------------------------------------- |
 | hasRoundedBorder  | boolean           | Flag to determine whether or not to have rounded borders   |
-| cardWidth         | number            | The width of the avatar component                          |
-| cardHeight        | number            | The height of the avatar component                         |
-| customSlotName    | boolean           | The name of the child slot                                 |
+| cardWidth         | number            | The width of the card component                            |
+| cardHeight        | number            | The height of the card component                           |
+| customSlotName    | string            | The name of the child slot                                 |
 | showCustomSlot    | boolean           | Flag to determine whether or not to render the custom slot |
 | cardDimensionUnit | CardDimensionUnit | The unit for the card width and height                     |
 | isHorizontal      | boolean           | Flag to determine the content direction                    |
@@ -54,7 +54,7 @@ Basic card component without `props`
 
 export const TemplateDefault = () =>
   html`<div class="storybook-card-container">
-    <card-component></card-component>
+    <ymlwebcl-card></ymlwebcl-card>
   </div>`;
 
 <Canvas columns={1}>
@@ -65,7 +65,7 @@ Basic card with rounded border
 
 export const withRoundedBorderTemplate = ({ hasRoundedBorder }) =>
   html`<div class="storybook-card-container">
-    <card-component .hasRoundedBorder=${hasRoundedBorder}></card-component>
+    <ymlwebcl-card .hasRoundedBorder=${hasRoundedBorder}></ymlwebcl-card>
   </div>`;
 
 <Canvas>
@@ -82,11 +82,11 @@ export const withCustomHeightWidth = ({
   cardHeight,
 }) =>
   html`<div class="storybook-card-container">
-    <card-component
+    <ymlwebcl-card
       .hasRoundedBorder=${hasRoundedBorder}
       .cardHeight=${cardHeight}
       .cardWidth=${cardWidth}
-    ></card-component>
+    ></ymlwebcl-card>
   </div>`;
 
 <Canvas>
@@ -103,7 +103,7 @@ export const withDefinedHeaderSlot = ({
   cardHeight,
 }) =>
   html`<div class="storybook-card-container custom-header-variant">
-    <card-component
+    <ymlwebcl-card
       .hasRoundedBorder=${hasRoundedBorder}
       .cardHeight=${cardHeight}
       .cardWidth=${cardWidth}
@@ -111,7 +111,7 @@ export const withDefinedHeaderSlot = ({
       <div slot="webcl-card-header">
         <h1>WebCl Card Header</h1>
       </div>
-    </card-component>
+    </ymlwebcl-card>
   </div>`;
 
 <Canvas>
@@ -128,7 +128,7 @@ export const withDefinedFooterSlot = ({
   cardHeight,
 }) =>
   html`<div class="storybook-card-container">
-    <card-component
+    <ymlwebcl-card
       .hasRoundedBorder=${hasRoundedBorder}
       .cardHeight=${cardHeight}
       .cardWidth=${cardWidth}
@@ -136,7 +136,7 @@ export const withDefinedFooterSlot = ({
       <div slot="webcl-card-footer">
         <p>WebCl Card Footer</p>
       </div>
-    </card-component>
+    </ymlwebcl-card>
   </div>`;
 
 <Canvas>
@@ -153,7 +153,7 @@ export const withAllDefinedSlots = ({
   cardHeight,
 }) =>
   html`<div class="storybook-card-container all-slots-variant">
-    <card-component
+    <ymlwebcl-card
       .hasRoundedBorder=${hasRoundedBorder}
       .cardHeight=${cardHeight}
       .cardWidth=${cardWidth}
@@ -173,7 +173,7 @@ export const withAllDefinedSlots = ({
       <div slot="webcl-card-footer">
         <p>WebCl Card Footer</p>
       </div>
-    </card-component>
+    </ymlwebcl-card>
   </div>`;
 
 <Canvas>
@@ -192,7 +192,7 @@ export const cardWithCustomSlotNameTemplate = ({
   showCustomSlot,
 }) =>
   html`<div class="storybook-card-container">
-    <card-component
+    <ymlwebcl-card
       .hasRoundedBorder=${hasRoundedBorder}
       .cardHeight=${cardHeight}
       .cardWidth=${cardWidth}
@@ -208,7 +208,7 @@ export const cardWithCustomSlotNameTemplate = ({
           semper mi.
         </p>
       </div>
-    </card-component>
+    </ymlwebcl-card>
   </div>`;
 
 <Canvas>

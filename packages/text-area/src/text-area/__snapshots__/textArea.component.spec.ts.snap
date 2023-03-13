@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`text-area-component matches component snapshot 1`] = `
-d {
+exports[`ymlwebcl-textarea matches component snapshot 1`] = `
+c {
   "_$AL": Map {},
-  "_$Do": N {
+  "_$Do": H {
     "_$AA": <!---->,
     "_$AB": null,
-    "_$AH": bt {
-      "_$AD": O {
+    "_$AH": _t {
+      "_$AD": N {
         "el": <template />,
         "parts": Array [
           Object {
@@ -189,7 +189,7 @@ d {
       "_$AM": [Circular],
       "_$AN": undefined,
       "u": Array [
-        M {
+        k {
           "_$AH": "webcl-textarea-container",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -198,7 +198,7 @@ d {
           >
             
       
-            <!--?lit$873057108$-->
+            <!--?lit$391089817$-->
             
       
             <textarea
@@ -224,8 +224,8 @@ d {
           },
           "type": 1,
         },
-        N {
-          "_$AA": <!--?lit$873057108$-->,
+        H {
+          "_$AA": <!--?lit$391089817$-->,
           "_$AB": 
       ,
           "_$AH": Symbol(lit-nothing),
@@ -239,7 +239,7 @@ d {
           },
           "type": 2,
         },
-        M {
+        k {
           "_$AH": "webcl-textarea",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -263,7 +263,7 @@ d {
           },
           "type": 1,
         },
-        M {
+        k {
           "_$AH": "resize",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -287,7 +287,7 @@ d {
           },
           "type": 1,
         },
-        M {
+        k {
           "_$AH": "",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -311,7 +311,7 @@ d {
           },
           "type": 1,
         },
-        M {
+        k {
           "_$AH": "",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -335,7 +335,7 @@ d {
           },
           "type": 1,
         },
-        M {
+        k {
           "_$AH": 2,
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -359,7 +359,7 @@ d {
           },
           "type": 1,
         },
-        M {
+        k {
           "_$AH": 20,
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -383,7 +383,7 @@ d {
           },
           "type": 1,
         },
-        M {
+        k {
           "_$AH": "off",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -407,7 +407,7 @@ d {
           },
           "type": 1,
         },
-        At {
+        bt {
           "_$AH": false,
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -431,7 +431,7 @@ d {
           },
           "type": 4,
         },
-        At {
+        bt {
           "_$AH": false,
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -455,7 +455,7 @@ d {
           },
           "type": 4,
         },
-        At {
+        bt {
           "_$AH": "",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -479,7 +479,7 @@ d {
           },
           "type": 4,
         },
-        M {
+        k {
           "_$AH": undefined,
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -503,7 +503,7 @@ d {
           },
           "type": 1,
         },
-        M {
+        k {
           "_$AH": undefined,
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -527,7 +527,7 @@ d {
           },
           "type": 1,
         },
-        M {
+        k {
           "_$AH": "",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -551,7 +551,7 @@ d {
           },
           "type": 1,
         },
-        At {
+        bt {
           "_$AH": false,
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -575,7 +575,7 @@ d {
           },
           "type": 4,
         },
-        At {
+        bt {
           "_$AH": false,
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -599,7 +599,7 @@ d {
           },
           "type": 4,
         },
-        _t {
+        Et {
           "_$AH": [Function],
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -635,6 +635,7 @@ d {
     },
     "type": 2,
   },
+  "_$EC": undefined,
   "_$E_": Promise {},
   "_$Ei": undefined,
   "_$El": null,
@@ -664,11 +665,11 @@ d {
     "renderBefore": null,
   },
   "renderRoot": ShadowRoot {
-    "_$litPart$": N {
+    "_$litPart$": H {
       "_$AA": <!---->,
       "_$AB": null,
-      "_$AH": bt {
-        "_$AD": O {
+      "_$AH": _t {
+        "_$AD": N {
           "el": <template />,
           "parts": Array [
             Object {
@@ -850,7 +851,7 @@ d {
         "_$AM": [Circular],
         "_$AN": undefined,
         "u": Array [
-          M {
+          k {
             "_$AH": "webcl-textarea-container",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -859,7 +860,7 @@ d {
             >
               
       
-              <!--?lit$873057108$-->
+              <!--?lit$391089817$-->
               
       
               <textarea
@@ -885,8 +886,8 @@ d {
             },
             "type": 1,
           },
-          N {
-            "_$AA": <!--?lit$873057108$-->,
+          H {
+            "_$AA": <!--?lit$391089817$-->,
             "_$AB": 
       ,
             "_$AH": Symbol(lit-nothing),
@@ -900,7 +901,7 @@ d {
             },
             "type": 2,
           },
-          M {
+          k {
             "_$AH": "webcl-textarea",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -924,7 +925,7 @@ d {
             },
             "type": 1,
           },
-          M {
+          k {
             "_$AH": "resize",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -948,7 +949,7 @@ d {
             },
             "type": 1,
           },
-          M {
+          k {
             "_$AH": "",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -972,7 +973,7 @@ d {
             },
             "type": 1,
           },
-          M {
+          k {
             "_$AH": "",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -996,7 +997,7 @@ d {
             },
             "type": 1,
           },
-          M {
+          k {
             "_$AH": 2,
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -1020,7 +1021,7 @@ d {
             },
             "type": 1,
           },
-          M {
+          k {
             "_$AH": 20,
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -1044,7 +1045,7 @@ d {
             },
             "type": 1,
           },
-          M {
+          k {
             "_$AH": "off",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -1068,7 +1069,7 @@ d {
             },
             "type": 1,
           },
-          At {
+          bt {
             "_$AH": false,
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -1092,7 +1093,7 @@ d {
             },
             "type": 4,
           },
-          At {
+          bt {
             "_$AH": false,
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -1116,7 +1117,7 @@ d {
             },
             "type": 4,
           },
-          At {
+          bt {
             "_$AH": "",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -1140,7 +1141,7 @@ d {
             },
             "type": 4,
           },
-          M {
+          k {
             "_$AH": undefined,
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -1164,7 +1165,7 @@ d {
             },
             "type": 1,
           },
-          M {
+          k {
             "_$AH": undefined,
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -1188,7 +1189,7 @@ d {
             },
             "type": 1,
           },
-          M {
+          k {
             "_$AH": "",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -1212,7 +1213,7 @@ d {
             },
             "type": 1,
           },
-          At {
+          bt {
             "_$AH": false,
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -1236,7 +1237,7 @@ d {
             },
             "type": 4,
           },
-          At {
+          bt {
             "_$AH": false,
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -1260,7 +1261,7 @@ d {
             },
             "type": 4,
           },
-          _t {
+          Et {
             "_$AH": [Function],
             "_$AM": [Circular],
             "_$AN": undefined,

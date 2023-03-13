@@ -63,8 +63,7 @@ Following are the MenuLinkTypes:
 
 **Basic header component without `props`**
 
-export const TemplateDefault = () =>
-  html`<header-component></header-component>`;
+export const TemplateDefault = () => html`<ymlwebcl-header></ymlwebcl-header>`;
 
 <Canvas columns={1}>
   <Story name="default">{TemplateDefault.bind({})}</Story>
@@ -72,10 +71,10 @@ export const TemplateDefault = () =>
 
 Header component With `dark` mode and `props`
 
-export const TemplateTheme = (args) => html`<header-component
+export const TemplateTheme = (args) => html`<ymlwebcl-header
   .navOptions=${args.navOptions}
 >
-</header-component>`;
+</ymlwebcl-header>`;
 
 <Canvas columns={1}>
   <Story name="Dark" args={{ navOptions: withMenuLinks }}>
@@ -93,7 +92,7 @@ Header component With `light` mode and `props`
 
 Header component With `slot` for top right icons and open and close menu icons
 
-export const Template = (args) => html`<header-component
+export const Template = (args) => html`<ymlwebcl-header
   .navOptions=${args.navOptions}
 >
   <div slot="slot-div" style="display:flex;flex-direction:row">
@@ -120,7 +119,7 @@ export const Template = (args) => html`<header-component
   </div>
   <button slot="open">open</button>
   <button slot="close">Close</button>
-</header-component>`;
+</ymlwebcl-header>`;
 
 <Canvas columns={1}>
   <Story name="withSlot" args={{ navOptions: withSlots }}>

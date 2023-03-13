@@ -122,16 +122,16 @@ If you want to contribute or share some thoughts, just get in touch with us.
 
 Enjoy.
 
-# link-component
+# ymlwebcl-link
 
 ## Install
 
 ```bash
-yarn add link-component
+yarn add ymlwebcl-link
 ```
 
 ```bash
-npm i link-component
+npm i ymlwebcl-link
 ```
 
 ## Usage
@@ -142,8 +142,8 @@ npm i link-component
 
 ```js
 <template>
-  <link-component>
-  </link-component>
+  <ymlwebcl-link>
+  </ymlwebcl-link>
 </template>
 
 <script>
@@ -162,14 +162,14 @@ export default {
 
 ```js
 <template>
-    <link-component
+    <ymlwebcl-link
     text="Anchor tag with props"
     linkTitle="tool tip"
     href="https://www.w3schools.com/html/html_links.asp"
     target="_blank"
     rel="noopener noreferrer"
     type="button"
-  ></link-component>
+  ></ymlwebcl-link>
 </template>
 
 <script>
@@ -188,7 +188,7 @@ export default {
 
 ```js
 <template>
-    <link-component
+    <ymlwebcl-link
     text="Anchor tag with props"
     linkTitle="tool tip"
     href="https://www.w3schools.com/html/html_links.asp"
@@ -203,7 +203,7 @@ export default {
         alt=""
       />
     </div>
-  </link-component>
+  </ymlwebcl-link>
 </template>
 
 <script>
@@ -230,7 +230,7 @@ npm i reactify-wc
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const LinkComponent = reactifyWc("link-component");
+  const LinkComponent = reactifyWc("ymlwebcl-link");
   return (
     <div className="App">
       <LinkComponent></LinkComponent>
@@ -245,7 +245,7 @@ export default App;
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const LinkComponent = reactifyWc("link-component");
+  const LinkComponent = reactifyWc("ymlwebcl-link");
   return (
     <div >
       <LinkComponent
@@ -266,7 +266,7 @@ export default App;
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const LinkComponent = reactifyWc("link-component");
+  const LinkComponent = reactifyWc("ymlwebcl-link");
   return (
     <div >
       <LinkComponent
@@ -297,7 +297,7 @@ Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/::part
 ```style.scss
 //The ::part CSS pseudo-element represents any element within a shadow tree that has a matching part attribute.
 
-link-component::part(custom-link) { /*Note : link-component is the custom component and custom-link is the name given to the the part attribute in element within link-components */
+ymlwebcl-link::part(custom-link) { /*Note : ymlwebcl-link is the custom component and custom-link is the name given to the the part attribute in element within ymlwebcl-links */
  color: black;
  text-decoration: none;
 //add css properties

@@ -5,23 +5,24 @@ import { themeOptions } from '../constants/button.component';
 import { VariantType, colorType } from '../types/button.type';
 import { msg, str } from '@lit/localize';
 
-@customElement('button-component')
+@customElement('ymlwebcl-button')
 export class ButtonComponent extends TailwindElement(null) {
   @property()
   text?: string;
   @property()
-  variant?: VariantType; 
+  variant?: VariantType;
   @property()
-  color?: colorType; 
+  color?: colorType;
   @property()
   slotName?: string;
   @property()
-  isDisabled?:boolean;
+  isDisabled?: boolean;
   @property()
   fullWidth?: boolean;
   @property()
   isRounded?: boolean;
-  
+  @property()
+  partName?: string = 'custom-button';
 
   protected getClassTheme() {
     return `inline-block px-6 font-medium text-xs leading-tight uppercase focus:outline-none focus:ring-0 transition duration-150 ease-in-out
@@ -31,25 +32,19 @@ export class ButtonComponent extends TailwindElement(null) {
       ${this.isDisabled && 'pointer-events-none opacity-60'}
     `;
   }
-   
+
   render() {
     return html`
       <button
-        tabindex=${this.isDisabled? '-1': '0'}
+        tabindex=${this.isDisabled ? '-1' : '0'}
         type="button"
-        part="custom-button"
+        part=${this.partName}
         role=${msg(str`button`)}
         class=${this.getClassTheme()}
       >
-        ${this.text}
+        ${msg(this.text)}
         <slot name=${this.slotName}></slot>
       </button>
     `;
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    'button-component': ButtonComponent;
   }
 }

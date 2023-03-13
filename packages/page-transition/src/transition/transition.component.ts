@@ -11,33 +11,33 @@ import {
 } from './../constants/transition.component';
 import Style from './transition.component.scss?inline';
 
-@customElement('transition-component')
+@customElement('ymlwebcl-transition')
 export class TransitionComponent extends TailwindElement(Style) {
-  @property()
+  @property({ type: Array, reflect: true })
   componentArray?: Array<string> = ['slot1', 'slot2', 'slot3'];
 
-  @property()
+  @property({ type: Boolean, reflect: true })
   disableSwipeNext?: boolean;
 
-  @property()
+  @property({ type: Boolean, reflect: true })
   disableSwipePrev?: boolean;
 
-  @property()
+  @property({ type: Number, reflect: true })
   animationDuration?: number;
 
-  @property()
+  @property({ type: Number, reflect: true })
   animationDelay?: number;
 
-  @property()
+  @property({ type: Boolean, reflect: true })
   allowCircularSwipe?: boolean = false;
 
-  @property()
+  @property({ type: String, reflect: true })
   callbackEvent?: string = null;
 
-  @property()
+  @property({ reflect: true })
   scrollDirection?: Direction = Direction.VERTICAL;
 
-  @property()
+  @property({ type: String, reflect: true })
   backgroundColor?: string = '#ffffff';
 
   @state()
@@ -212,7 +212,7 @@ export class TransitionComponent extends TailwindElement(Style) {
         if (this.allowCircularSwipe) {
           this.index = this.componentArray.length - 1;
           this.slotName = this.componentArray[this.index];
-        };
+        }
       }
     }
   };
@@ -285,7 +285,7 @@ export class TransitionComponent extends TailwindElement(Style) {
     });
   }
 
-  render() {
+  public override render() {
     return html`
       <div
         part="flick-to-transition-container"
@@ -302,11 +302,5 @@ export class TransitionComponent extends TailwindElement(Style) {
         )}
       </div>
     `;
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    'transition-component': TransitionComponent;
   }
 }

@@ -1,0 +1,381 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ymlwebcl-chip matches component snapshot 1`] = `
+S {
+  "_$AL": Map {},
+  "_$Do": N {
+    "_$AA": <!---->,
+    "_$AB": null,
+    "_$AH": mt {
+      "_$AD": P {
+        "el": <template />,
+        "parts": Array [
+          Object {
+            "ctor": [Function],
+            "index": 0,
+            "name": "class",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 0,
+            "name": "part",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 1,
+            "name": "name",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+          Object {
+            "index": 2,
+            "type": 2,
+          },
+          Object {
+            "ctor": [Function],
+            "index": 3,
+            "name": "name",
+            "strings": Array [
+              "",
+              "",
+            ],
+            "type": 1,
+          },
+        ],
+      },
+      "_$AM": [Circular],
+      "_$AN": undefined,
+      "u": Array [
+        L {
+          "_$AH": "[word-wrap: break-word] inline-flex flex-row items-center my-[5px] pt-[4px] pb-[6px] px-[12px]",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <div
+            class="[word-wrap: break-word] inline-flex flex-row items-center my-[5px] pt-[4px] pb-[6px] px-[12px]"
+            part="webcl-chip"
+          >
+            
+        
+            <slot
+              name=""
+            />
+            
+        
+            <!--?lit$8956586804$-->
+            Label
+            
+        
+            <slot
+              name=""
+            />
+            
+      
+          </div>,
+          "name": "class",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        L {
+          "_$AH": "webcl-chip",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <div
+            class="[word-wrap: break-word] inline-flex flex-row items-center my-[5px] pt-[4px] pb-[6px] px-[12px]"
+            part="webcl-chip"
+          >
+            
+        
+            <slot
+              name=""
+            />
+            
+        
+            <!--?lit$8956586804$-->
+            Label
+            
+        
+            <slot
+              name=""
+            />
+            
+      
+          </div>,
+          "name": "part",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        L {
+          "_$AH": undefined,
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <slot
+            name=""
+          />,
+          "name": "name",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+        N {
+          "_$AA": <!--?lit$8956586804$-->,
+          "_$AB": 
+        ,
+          "_$AH": "Label",
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "_$Cm": true,
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 2,
+        },
+        L {
+          "_$AH": undefined,
+          "_$AM": [Circular],
+          "_$AN": undefined,
+          "element": <slot
+            name=""
+          />,
+          "name": "name",
+          "options": Object {
+            "host": [Circular],
+            "isConnected": true,
+            "renderBefore": null,
+          },
+          "type": 1,
+        },
+      ],
+    },
+    "_$AM": undefined,
+    "_$AN": undefined,
+    "_$Cm": true,
+    "options": Object {
+      "host": [Circular],
+      "isConnected": true,
+      "renderBefore": null,
+    },
+    "type": 2,
+  },
+  "_$EC": undefined,
+  "_$E_": Promise {},
+  "_$Ei": undefined,
+  "_$El": null,
+  "__chipPartAttribute": "webcl-chip",
+  "__text": "Label",
+  "enableUpdating": [Function],
+  "hasUpdated": true,
+  "isUpdatePending": false,
+  "renderOptions": Object {
+    "host": [Circular],
+    "isConnected": true,
+    "renderBefore": null,
+  },
+  "renderRoot": ShadowRoot {
+    "_$litPart$": N {
+      "_$AA": <!---->,
+      "_$AB": null,
+      "_$AH": mt {
+        "_$AD": P {
+          "el": <template />,
+          "parts": Array [
+            Object {
+              "ctor": [Function],
+              "index": 0,
+              "name": "class",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 0,
+              "name": "part",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 1,
+              "name": "name",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+            Object {
+              "index": 2,
+              "type": 2,
+            },
+            Object {
+              "ctor": [Function],
+              "index": 3,
+              "name": "name",
+              "strings": Array [
+                "",
+                "",
+              ],
+              "type": 1,
+            },
+          ],
+        },
+        "_$AM": [Circular],
+        "_$AN": undefined,
+        "u": Array [
+          L {
+            "_$AH": "[word-wrap: break-word] inline-flex flex-row items-center my-[5px] pt-[4px] pb-[6px] px-[12px]",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <div
+              class="[word-wrap: break-word] inline-flex flex-row items-center my-[5px] pt-[4px] pb-[6px] px-[12px]"
+              part="webcl-chip"
+            >
+              
+        
+              <slot
+                name=""
+              />
+              
+        
+              <!--?lit$8956586804$-->
+              Label
+              
+        
+              <slot
+                name=""
+              />
+              
+      
+            </div>,
+            "name": "class",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          L {
+            "_$AH": "webcl-chip",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <div
+              class="[word-wrap: break-word] inline-flex flex-row items-center my-[5px] pt-[4px] pb-[6px] px-[12px]"
+              part="webcl-chip"
+            >
+              
+        
+              <slot
+                name=""
+              />
+              
+        
+              <!--?lit$8956586804$-->
+              Label
+              
+        
+              <slot
+                name=""
+              />
+              
+      
+            </div>,
+            "name": "part",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          L {
+            "_$AH": undefined,
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <slot
+              name=""
+            />,
+            "name": "name",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+          N {
+            "_$AA": <!--?lit$8956586804$-->,
+            "_$AB": 
+        ,
+            "_$AH": "Label",
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "_$Cm": true,
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 2,
+          },
+          L {
+            "_$AH": undefined,
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "element": <slot
+              name=""
+            />,
+            "name": "name",
+            "options": Object {
+              "host": [Circular],
+              "isConnected": true,
+              "renderBefore": null,
+            },
+            "type": 1,
+          },
+        ],
+      },
+      "_$AM": undefined,
+      "_$AN": undefined,
+      "_$Cm": true,
+      "options": Object {
+        "host": [Circular],
+        "isConnected": true,
+        "renderBefore": null,
+      },
+      "type": 2,
+    },
+  },
+}
+`;

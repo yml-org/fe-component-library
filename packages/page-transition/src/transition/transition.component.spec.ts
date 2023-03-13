@@ -1,16 +1,16 @@
-import { LitElement } from 'lit-element';
+import { TransitionComponent } from './transition.component';
 
-describe('transition-component', () => {
-  const TRANSITION_COMPONENT = 'transition-component';
-  let transitionElement: LitElement;
+describe('ymlwebcl-transition', () => {
+  const TRANSITION_COMPONENT = 'ymlwebcl-transition';
+  let transitionElement: TransitionComponent;
 
-  const getShadowRoot = (tagName: string): ShadowRoot =>
+  const getShadowRoot = (tagName: string): ShadowRoot | null =>
     document.body.getElementsByTagName(tagName)[0].shadowRoot;
 
   beforeEach(() => {
     transitionElement = window.document.createElement(
       TRANSITION_COMPONENT
-    ) as LitElement;
+    ) as TransitionComponent;
     document.body.appendChild(transitionElement);
   });
 
@@ -61,8 +61,8 @@ describe('transition-component', () => {
     transitionElement['backgroundColor'] = 'white';
     window.document.body.appendChild(transitionElement);
     await transitionElement.updateComplete;
-    const slotComponents = getShadowRoot(TRANSITION_COMPONENT)
-      .querySelector('div')
+    const slotComponents =
+      getShadowRoot(TRANSITION_COMPONENT).querySelector('div');
     expect(slotComponents.style.background).toBe('white');
   });
 
@@ -70,11 +70,12 @@ describe('transition-component', () => {
     document.body.getElementsByTagName(TRANSITION_COMPONENT)[0].remove();
     transitionElement = window.document.createElement(
       TRANSITION_COMPONENT
-    ) as LitElement;
+    ) as TransitionComponent;
     transitionElement['componentArray'] = ['mySlot1', 'mySlot2'];
-    transitionElement.setAttribute('animationDuration','3')
+    transitionElement.setAttribute('animationDuration', '3');
     await window.document.body.appendChild(transitionElement);
-    const slotComponents = getShadowRoot(TRANSITION_COMPONENT).getElementById('mySlot1')
+    const slotComponents =
+      getShadowRoot(TRANSITION_COMPONENT).getElementById('mySlot1');
     expect(slotComponents.style.animationDuration).toBe('3s');
   });
 
@@ -82,12 +83,12 @@ describe('transition-component', () => {
     document.body.getElementsByTagName(TRANSITION_COMPONENT)[0].remove();
     transitionElement = window.document.createElement(
       TRANSITION_COMPONENT
-    ) as LitElement;
+    ) as TransitionComponent;
     transitionElement['componentArray'] = ['mySlot1', 'mySlot2'];
-    transitionElement.setAttribute('animationDelay','2')
+    transitionElement.setAttribute('animationDelay', '2');
     await window.document.body.appendChild(transitionElement);
-    const slotComponents = getShadowRoot(TRANSITION_COMPONENT).getElementById('mySlot1')
+    const slotComponents =
+      getShadowRoot(TRANSITION_COMPONENT).getElementById('mySlot1');
     expect(slotComponents.style.animationDelay).toBe('2s');
   });
-
 });
