@@ -53,5 +53,6 @@
     "web components",
     "lit-element",
     "lit-html"
-  ]
+  ],
+  "gitHead": "94eb51c67ba33ef485675713405fa170cc57434d"
 }
