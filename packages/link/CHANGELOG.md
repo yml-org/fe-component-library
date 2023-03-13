@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.2](https://github.com/yml-org/fe-component-library/compare/@yml-webcl/link@0.1.1...@yml-webcl/link@0.1.2) (2023-03-13)
+
+### Bug Fixes
+
+- **version:** update package versions ([2c20a65](https://github.com/yml-org/fe-component-library/commit/2c20a6508da35e35a82b3572c27d37f5828749a6))
+
 ## [0.1.1](https://github.com/yml-org/fe-component-library/compare/@yml-webcl/link@0.1.0...@yml-webcl/link@0.1.1) (2023-03-13)
 
 ### Bug Fixes
