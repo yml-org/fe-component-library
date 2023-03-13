@@ -1,6 +1,6 @@
 {
   "name": "@fe-component-library/button",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "main": "./src/index.js",
   "module": "./src/index.js",
   "type": "module",
@@ -56,5 +56,5 @@
     "lit-element",
     "lit-html"
   ],
-  "gitHead": "bf706f189352e631def25fe71380648ad3ccb8e4"
+  "gitHead": "38f2e26193ad3882bd7a240ffdfd9a0af4e5baf6"
 }

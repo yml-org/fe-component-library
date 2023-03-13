@@ -1,6 +1,6 @@
 {
   "name": "@fe-component-library/ga-accelerator",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/yml-org/fe-component-library",
@@ -32,5 +32,5 @@
     },
     "./package.json": "./package.json"
   },
-  "gitHead": "bf706f189352e631def25fe71380648ad3ccb8e4"
+  "gitHead": "38f2e26193ad3882bd7a240ffdfd9a0af4e5baf6"
 }
