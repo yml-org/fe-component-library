@@ -1,6 +1,6 @@
 {
   "name": "@yml-webcl/media",
-  "version": "0.0.4",
+  "version": "0.0.0",
   "main": "./src/index.js",
   "module": "./src/index.js",
   "type": "module",
