@@ -1,5 +1,5 @@
 {
-  "name": "@yml-webcl/transition",
+  "name": "@fe-component-library/transition",
   "version": "0.0.0",
   "main": "./src/index.js",
   "module": "./src/index.js",

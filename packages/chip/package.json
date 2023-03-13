@@ -1,5 +1,5 @@
 {
-  "name": "@yml-webcl/chip",
+  "name": "@fe-component-library/chip",
   "version": "0.0.0",
   "main": "./src/index.js",
   "module": "./src/index.js",

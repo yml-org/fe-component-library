@@ -1,5 +1,5 @@
 {
-  "name": "@yml-webcl/scroll",
+  "name": "@fe-component-library/scroll",
   "version": "0.0.0",
   "main": "./src/index.js",
   "module": "./src/index.js",

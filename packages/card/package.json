@@ -1,5 +1,5 @@
 {
-  "name": "@yml-webcl/card",
+  "name": "@fe-component-library/card",
   "version": "0.0.0",
   "main": "./src/index.js",
   "module": "./src/index.js",

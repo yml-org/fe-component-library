@@ -1,5 +1,5 @@
 {
-  "name": "@yml-webcl/list",
+  "name": "@fe-component-library/list",
   "version": "0.0.0",
   "main": "./src/index.js",
   "module": "./src/index.js",

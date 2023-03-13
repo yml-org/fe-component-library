@@ -1,5 +1,5 @@
 {
-  "name": "@yml-webcl/avatar",
+  "name": "@fe-component-library/avatar",
   "version": "0.0.0",
   "main": "./src/index.js",
   "module": "./src/index.js",
