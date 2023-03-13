@@ -1,10 +1,10 @@
 .rounded-avatar {
-  avatar-component::part(webcl-avatar) {
+  ymlwebcl-avatar::part(webcl-avatar) {
     background-color: black;
   }
 }
 .parent-container {
-  avatar-component::part(webcl-avatar) {
+  ymlwebcl-avatar::part(webcl-avatar) {
     background-color: black;
     color: white;
 

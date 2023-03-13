@@ -8,7 +8,7 @@
     "type": "git",
     "url": "https://github.com/yml-org/fe-component-library",
     "directory": "packages/chip"
-},
+  },
   "scripts": {
     "start": "vite dev --host",
     "dev": "vite dev --host",
@@ -29,7 +29,8 @@
   },
   "dependencies": {
     "@lit/localize": "^0.11.4",
-    "@lit/localize-tools": "^0.6.5"
+    "@lit/localize-tools": "^0.6.5",
+    "vite-plugin-dts": "^2.1.0"
   },
   "exports": {
     ".": {
