@@ -1,4 +1,4 @@
-module.exports = {
-    presets: ['@babel/preset-env'],
-    plugins: ['@babel/transform-runtime', 'babel-plugin-transform-import-meta'],
-  }
+export default {
+  presets: ['@babel/preset-env'],
+  plugins: ['@babel/transform-runtime', 'babel-plugin-transform-import-meta'],
+};
