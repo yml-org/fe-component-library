@@ -1,5 +1,451 @@
 {
   "schemaVersion": "1.0.0",
   "readme": "",
-  "modules": []
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "scroll.component.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./scroll/scroll.component"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/assets/index.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "e"
+        },
+        {
+          "kind": "variable",
+          "name": "i"
+        },
+        {
+          "kind": "variable",
+          "name": "r"
+        },
+        {
+          "kind": "variable",
+          "name": "T",
+          "default": "class extends Mt(Rt) {\n  constructor() {\n    super(...arguments), this.dataSlot = qt, this.desktopImages = Bt, this.mobileImages = Vt;\n  }\n  firstUpdated() {\n    const o = document.body.getElementsByTagName(\"ymlwebcl-scroll\")[0].shadowRoot.querySelector(\".scrub-scroll\"), t = o.querySelectorAll(\".scroll-reveal\"), e = o.querySelector(\"canvas\"), i = e.getContext(\"2d\");\n    let s = [], n = -1;\n    const r = (p) => {\n      var l;\n      n === p || !((l = s[p]) != null && l.complete) || (i == null || i.drawImage(s[p], 0, 0), n = p);\n    }, d = () => {\n      const p = o.scrollHeight - window.innerHeight, l = document.documentElement.scrollTop / p;\n      let h = Math.min(\n        s.length - 1,\n        Math.ceil(l * s.length)\n      );\n      if (l > 1) {\n        t.forEach((m) => m.classList.remove(\"active\")), e.classList.add(\"scroll-finished\"), h = s.length - 1;\n        return;\n      }\n      e.classList.remove(\"scroll-finished\"), requestAnimationFrame(() => {\n        t.forEach((m) => It(m, h)), r(h);\n      });\n    }, a = async () => {\n      let p = !1;\n      s = await ct(this.desktopImages, this.mobileImages), await ht(e);\n      const l = () => {\n        p = !0, n = -1, d();\n      };\n      s[2].onload = l, s[2].complete && !p && l();\n    }, c = async () => {\n      ht(e), s = await ct(this.desktopImages, this.mobileImages), s[2].onload = d;\n    };\n    history.scrollRestoration = \"manual\", document.documentElement.scrollTop = 0, document.body.scrollTop = 0, window.addEventListener(\"load\", d, { passive: !0 }), window.addEventListener(\"scroll\", d, { passive: !0 }), window.addEventListener(\"resize\", Dt(a), {\n      passive: !0\n    }), c();\n  }\n  render() {\n    return ot`\n      <div>\n        <section class=\"scrub-scroll \" aria-hidden=\"true\">\n          <canvas></canvas>\n          ${this.dataSlot.map((o) => ot` <div\n              part=${o.slotName}\n              class=\"scroll-reveal text\"\n              data-start=${o.dataStart}\n              data-end=${o.dataEnd}\n            >\n              <slot name=${o.slotName}></slot>\n            </div>`)}\n        </section>\n      </div>\n    `;\n  }\n}"
+        },
+        {
+          "kind": "function",
+          "name": "r",
+          "parameters": [
+            {
+              "name": "p"
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "e",
+          "declaration": {
+            "name": "i",
+            "module": "dist/assets/index.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "e",
+          "declaration": {
+            "name": "r",
+            "module": "dist/assets/index.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "ScrollComponent",
+          "declaration": {
+            "name": "T",
+            "module": "dist/assets/index.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/constants/scroll.variant.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "defaultDesktopImages",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n    'yonder-0001': '../assets/yonder/images/desktop/png/yonder-0001.png',\n    'yonder-0002': '../assets/yonder/images/desktop/png/yonder-0002.png',\n    'yonder-0003': '../assets/yonder/images/desktop/png/yonder-0003.png',\n    'yonder-0004': '../assets/yonder/images/desktop/png/yonder-0004.png',\n    'yonder-0005': '../assets/yonder/images/desktop/png/yonder-0005.png',\n   \n}"
+        },
+        {
+          "kind": "variable",
+          "name": "defaultMobileImages",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n    'yonder-0002': '../assets/yonder/images/mobile/png/yonder-0002.png',\n    'yonder-0003': '../assets/yonder/images/mobile/png/yonder-0003.png',\n    'yonder-0001': '../assets/yonder/images/mobile/png/yonder-0001.png',\n    'yonder-0004': '../assets/yonder/images/mobile/png/yonder-0004.png',\n    'yonder-0005': '../assets/yonder/images/mobile/png/yonder-0005.png'\n\n}"
+        },
+        {
+          "kind": "variable",
+          "name": "defaultDataSlots",
+          "type": {
+            "text": "array"
+          },
+          "default": "[\n    {\n      dataStart: 2,\n      dataEnd: 20,\n      slotName: 'slot_1',\n    }\n  ]"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "defaultDesktopImages",
+          "declaration": {
+            "name": "defaultDesktopImages",
+            "module": "src/constants/scroll.variant.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "defaultMobileImages",
+          "declaration": {
+            "name": "defaultMobileImages",
+            "module": "src/constants/scroll.variant.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "defaultDataSlots",
+          "declaration": {
+            "name": "defaultDataSlots",
+            "module": "src/constants/scroll.variant.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/scroll/scroll.component.spec.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/scroll/scroll.component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "ScrollComponent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "dataSlot",
+              "type": {
+                "text": "Array<dataSlots>"
+              },
+              "default": "defaultDataSlots"
+            },
+            {
+              "kind": "field",
+              "name": "desktopImages",
+              "type": {
+                "text": "object"
+              },
+              "default": "defaultDesktopImages"
+            },
+            {
+              "kind": "field",
+              "name": "mobileImages",
+              "type": {
+                "text": "object"
+              },
+              "default": "defaultMobileImages"
+            },
+            {
+              "kind": "method",
+              "name": "firstUpdated",
+              "privacy": "protected"
+            },
+            {
+              "kind": "method",
+              "name": "render"
+            },
+            {
+              "kind": "field",
+              "name": "styles",
+              "type": {
+                "text": "array"
+              },
+              "static": true,
+              "default": "[tailwindElement, unsafeCSS(style)]",
+              "inheritedFrom": {
+                "name": "TailwindElement",
+                "module": "src/shared/tailwind.element.ts"
+              }
+            }
+          ],
+          "mixins": [
+            {
+              "name": "TailwindElement",
+              "module": "/src/shared/tailwind.element"
+            }
+          ],
+          "superclass": {
+            "name": "Style",
+            "module": "/src/scroll/scroll.component.scss"
+          }
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ScrollComponent",
+          "declaration": {
+            "name": "ScrollComponent",
+            "module": "src/scroll/scroll.component.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/shared/tailwind.element.ts",
+      "declarations": [
+        {
+          "kind": "mixin",
+          "description": "",
+          "name": "TailwindElement",
+          "members": [
+            {
+              "kind": "field",
+              "name": "styles",
+              "type": {
+                "text": "array"
+              },
+              "static": true,
+              "default": "[tailwindElement, unsafeCSS(style)]"
+            }
+          ],
+          "parameters": [
+            {
+              "name": "style",
+              "type": {
+                "text": "CSSStyleSheet | null"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "TailwindElement",
+          "declaration": {
+            "name": "TailwindElement",
+            "module": "src/shared/tailwind.element.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/types/scroll.component.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/utils/breakpoints.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "src/utils/breakpoints.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/utils/debounce.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "debounce",
+          "return": {
+            "type": {
+              "text": "() => void"
+            }
+          },
+          "parameters": [
+            {
+              "name": "fn",
+              "type": {
+                "text": "() => void"
+              }
+            },
+            {
+              "name": "delay",
+              "default": "500"
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "debounce",
+          "declaration": {
+            "name": "debounce",
+            "module": "src/utils/debounce.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/utils/getImages.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "getImages",
+          "return": {
+            "type": {
+              "text": "Promise<string[]>"
+            }
+          },
+          "parameters": [
+            {
+              "name": "desktopImages"
+            },
+            {
+              "name": "mobileImages"
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "getImages",
+          "declaration": {
+            "name": "getImages",
+            "module": "src/utils/getImages.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/utils/preload.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "preload",
+          "return": {
+            "type": {
+              "text": "Promise<HTMLImageElement[]>"
+            }
+          },
+          "parameters": [
+            {
+              "name": "desktopImages"
+            },
+            {
+              "name": "mobileImages"
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "preload",
+          "declaration": {
+            "name": "preload",
+            "module": "src/utils/preload.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/utils/setupCanvas.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "setupCanvas",
+          "parameters": [
+            {
+              "name": "canvas",
+              "type": {
+                "text": "HTMLCanvasElement"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "setupCanvas",
+          "declaration": {
+            "name": "setupCanvas",
+            "module": "src/utils/setupCanvas.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/utils/updateText.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "updateText",
+          "parameters": [
+            {
+              "name": "el",
+              "type": {
+                "text": "Element"
+              }
+            },
+            {
+              "name": "frameIndex",
+              "type": {
+                "text": "number"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "updateText",
+          "declaration": {
+            "name": "updateText",
+            "module": "src/utils/updateText.ts"
+          }
+        }
+      ]
+    }
+  ]
 }

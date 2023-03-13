@@ -1,5 +1,288 @@
 {
   "schemaVersion": "1.0.0",
   "readme": "",
-  "modules": []
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "image.component.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./image/image.component"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/assets/index.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "i",
+          "default": "o[0]"
+        },
+        {
+          "kind": "variable",
+          "name": "e"
+        },
+        {
+          "kind": "variable",
+          "name": "n"
+        },
+        {
+          "kind": "variable",
+          "name": "E",
+          "default": "class extends jt(null) {\n  constructor() {\n    super(...arguments), this.altText = \"\", this.src = \"\", this.placeholderImg = \"\", this.size = {};\n  }\n  render() {\n    var o, t, e, i, s, r, n, d, l, a, $, h, c, u, g;\n    return Et`\n     <img \n     class=\"max-w-full h-auto transition-shadow ease-in-out duration-300\n     ${((o = this.size) == null ? void 0 : o.objectFit) && `object-${(t = this.size) == null ? void 0 : t.objectFit}`}\n     ${((e = this.size) == null ? void 0 : e.rounded) && \"rounded-full\"}\"\n     src=${this.placeholderImg}\n     srcset=\"${this.src}\"\n     alt=\"${this.altText ? this.altText : vt(ct`image`)}\"\n     part=\"custom-image\"\n     width=${(i = this.size) == null ? void 0 : i.width}\n     height=${(s = this.size) == null ? void 0 : s.height}\n     min-width=${(r = this.size) == null ? void 0 : r.minWidth}\n     max-width=${(n = this.size) == null ? void 0 : n.maxWidth}\n     min-height=${(d = this.size) == null ? void 0 : d.minHeight}\n     max-height=${(l = this.size) == null ? void 0 : l.maxHeight}\n     style=\"border:${(($ = (a = this.size) == null ? void 0 : a.border) == null ? void 0 : $.width) + \" \" + ((c = (h = this.size) == null ? void 0 : h.border) == null ? void 0 : c.type) + \" \" + ((g = (u = this.size) == null ? void 0 : u.border) == null ? void 0 : g.color)}\"\n     >\n     </img>`;\n  }\n}"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "e",
+          "declaration": {
+            "name": "i",
+            "module": "dist/assets/index.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "e",
+          "declaration": {
+            "name": "n",
+            "module": "dist/assets/index.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "ImageComponent",
+          "declaration": {
+            "name": "E",
+            "module": "dist/assets/index.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/constants/image.component.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/constants/image.variant.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "imageConfig",
+          "type": {
+            "text": "Image"
+          },
+          "default": "{\n  altText: 'background image',\n  src: 'https://i.ibb.co/yBV3M1C/planet.jpg',\n  placeholderImg: 'https://i.ibb.co/yBV3M1C/planet-mini.jpg',\n  size: {\n    width: '500px',\n    height: '500px',\n    rounded: true,\n    border: {\n      type: 'solid',\n      color: '#000',\n      width: '2px',\n    },\n    objectFit: 'fill',\n    minWidth: '100px',\n    maxHeight: '100%',\n    maxWidth: '200px',\n    minHeight: '100%'\n  },\n}"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "imageConfig",
+          "declaration": {
+            "name": "imageConfig",
+            "module": "src/constants/image.variant.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/image/image.component.spec.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/image/image.component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "ImageComponent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "altText",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "''"
+            },
+            {
+              "kind": "field",
+              "name": "src",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "''"
+            },
+            {
+              "kind": "field",
+              "name": "placeholderImg",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "''"
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "Size | undefined"
+              },
+              "default": "{}"
+            },
+            {
+              "kind": "method",
+              "name": "render"
+            },
+            {
+              "kind": "field",
+              "name": "styles",
+              "type": {
+                "text": "array"
+              },
+              "static": true,
+              "default": "[tailwindElement, unsafeCSS(style)]",
+              "inheritedFrom": {
+                "name": "TailwindElement",
+                "module": "src/shared/tailwind.element.ts"
+              }
+            }
+          ],
+          "mixins": [
+            {
+              "name": "TailwindElement",
+              "module": "/src/shared/tailwind.element"
+            }
+          ],
+          "superclass": {
+            "module": "src/image/image.component.ts"
+          }
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ImageComponent",
+          "declaration": {
+            "name": "ImageComponent",
+            "module": "src/image/image.component.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/shared/tailwind.element.ts",
+      "declarations": [
+        {
+          "kind": "mixin",
+          "description": "",
+          "name": "TailwindElement",
+          "members": [
+            {
+              "kind": "field",
+              "name": "styles",
+              "type": {
+                "text": "array"
+              },
+              "static": true,
+              "default": "[tailwindElement, unsafeCSS(style)]"
+            }
+          ],
+          "parameters": [
+            {
+              "name": "style",
+              "type": {
+                "text": "CSSStyleSheet | null"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "TailwindElement",
+          "declaration": {
+            "name": "TailwindElement",
+            "module": "src/shared/tailwind.element.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/types/image.type.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/generated/locales/es-419.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "templates",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n      's2ab612888528489a': str`imagen`,\n    }"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "templates",
+          "declaration": {
+            "name": "templates",
+            "module": "src/generated/locales/es-419.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/generated/locales/zh-Hans.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "templates",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n      's2ab612888528489a': str`图片`,\n    }"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "templates",
+          "declaration": {
+            "name": "templates",
+            "module": "src/generated/locales/zh-Hans.ts"
+          }
+        }
+      ]
+    }
+  ]
 }

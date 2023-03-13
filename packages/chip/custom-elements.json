@@ -1,5 +1,301 @@
 {
   "schemaVersion": "1.0.0",
   "readme": "",
-  "modules": []
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "chip.component.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./chip/chip.component"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/assets/index.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "e"
+        },
+        {
+          "kind": "variable",
+          "name": "i"
+        },
+        {
+          "kind": "variable",
+          "name": "n"
+        },
+        {
+          "kind": "variable",
+          "name": "A",
+          "default": "class extends Pt(null) {\n  constructor() {\n    super(...arguments), this.text = \"Label\", this.chipPartAttribute = \"webcl-chip\";\n  }\n  getContainerClassList() {\n    return \"[word-wrap: break-word] inline-flex flex-row items-center my-[5px] pt-[4px] pb-[6px] px-[12px]\";\n  }\n  render() {\n    return $t`\n      <div class=${this.getContainerClassList()} part=${this.chipPartAttribute}>\n        <slot name=${this.leftSlotName}></slot>\n        ${this.text ? this.text : this.text === \"\" ? \"\" : Rt(Ut`Label`)}\n        <slot name=${this.rightSlotName}></slot>\n      </div>\n    `;\n  }\n}"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "e",
+          "declaration": {
+            "name": "i",
+            "module": "dist/assets/index.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "e",
+          "declaration": {
+            "name": "n",
+            "module": "dist/assets/index.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "ChipComponent",
+          "declaration": {
+            "name": "A",
+            "module": "dist/assets/index.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/chip/chip.component.spec.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/chip/chip.component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "ChipComponent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "text",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'Label'"
+            },
+            {
+              "kind": "field",
+              "name": "rightSlotName",
+              "type": {
+                "text": "string | undefined"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "leftSlotName",
+              "type": {
+                "text": "string | undefined"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "chipPartAttribute",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'webcl-chip'"
+            },
+            {
+              "kind": "method",
+              "name": "getContainerClassList",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "render",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "styles",
+              "type": {
+                "text": "array"
+              },
+              "static": true,
+              "default": "[tailwindElement, unsafeCSS(style)]",
+              "inheritedFrom": {
+                "name": "TailwindElement",
+                "module": "src/shared/tailwind.element.ts"
+              }
+            }
+          ],
+          "mixins": [
+            {
+              "name": "TailwindElement",
+              "module": "/src/shared/tailwind.element"
+            }
+          ],
+          "superclass": {
+            "module": "src/chip/chip.component.ts"
+          }
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ChipComponent",
+          "declaration": {
+            "name": "ChipComponent",
+            "module": "src/chip/chip.component.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/constants/chip.variants.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "withSlot",
+          "type": {
+            "text": "ChipVariant"
+          },
+          "default": "{\r\n  rightSlotName: 'closeIcon',\r\n  leftSlotName: 'menuIcon',\r\n  chipPartAttribute : 'customizeChip'\r\n}"
+        },
+        {
+          "kind": "variable",
+          "name": "withTextProp",
+          "type": {
+            "text": "ChipVariant"
+          },
+          "default": "{\r\n  text : 'Chip Component',\r\n}"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "withSlot",
+          "declaration": {
+            "name": "withSlot",
+            "module": "src/constants/chip.variants.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "withTextProp",
+          "declaration": {
+            "name": "withTextProp",
+            "module": "src/constants/chip.variants.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/shared/tailwind.element.ts",
+      "declarations": [
+        {
+          "kind": "mixin",
+          "description": "",
+          "name": "TailwindElement",
+          "members": [
+            {
+              "kind": "field",
+              "name": "styles",
+              "type": {
+                "text": "array"
+              },
+              "static": true,
+              "default": "[tailwindElement, unsafeCSS(style)]"
+            }
+          ],
+          "parameters": [
+            {
+              "name": "style",
+              "type": {
+                "text": "CSSStyleSheet | null"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "TailwindElement",
+          "declaration": {
+            "name": "TailwindElement",
+            "module": "src/shared/tailwind.element.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/types/chip.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/generated/locales/es-419.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "templates",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n      's5590dbf7e425789d': str`etiqueta`,\n    }"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "templates",
+          "declaration": {
+            "name": "templates",
+            "module": "src/generated/locales/es-419.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/generated/locales/zh-Hans.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "templates",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n      's5590dbf7e425789d': str`标签`,\n    }"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "templates",
+          "declaration": {
+            "name": "templates",
+            "module": "src/generated/locales/zh-Hans.ts"
+          }
+        }
+      ]
+    }
+  ]
 }

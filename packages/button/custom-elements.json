@@ -1,5 +1,311 @@
 {
   "schemaVersion": "1.0.0",
   "readme": "",
-  "modules": []
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "button.component.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./button/button.component"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "dist/assets/index.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "e"
+        },
+        {
+          "kind": "variable",
+          "name": "o"
+        },
+        {
+          "kind": "variable",
+          "name": "a"
+        },
+        {
+          "kind": "variable",
+          "name": "b",
+          "default": "class extends Nt(null) {\n  constructor() {\n    super(...arguments), this.partName = \"custom-button\";\n  }\n  getClassTheme() {\n    return `inline-block px-6 font-medium text-xs leading-tight uppercase focus:outline-none focus:ring-0 transition duration-150 ease-in-out\n      ${Ut[this.color || \"primary\"][this.variant || \"contained\"]}\n      ${this.isRounded ? \"rounded-full\" : \"rounded\"}\n      ${this.fullWidth && \"w-full\"}\n      ${this.isDisabled && \"pointer-events-none opacity-60\"}\n    `;\n  }\n  render() {\n    return vt`\n      <button\n        tabindex=${this.isDisabled ? \"-1\" : \"0\"}\n        type=\"button\"\n        part=${this.partName}\n        role=${st(Tt`button`)}\n        class=${this.getClassTheme()}\n      >\n        ${st(this.text)}\n        <slot name=${this.slotName}></slot>\n      </button>\n    `;\n  }\n}"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "e",
+          "declaration": {
+            "name": "o",
+            "module": "dist/assets/index.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "e",
+          "declaration": {
+            "name": "a",
+            "module": "dist/assets/index.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "ButtonComponent",
+          "declaration": {
+            "name": "b",
+            "module": "dist/assets/index.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/button/button.component.spec.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/button/button.component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "ButtonComponent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "text",
+              "type": {
+                "text": "string | undefined"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "VariantType | undefined"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "color",
+              "type": {
+                "text": "colorType | undefined"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "slotName",
+              "type": {
+                "text": "string | undefined"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "isDisabled",
+              "type": {
+                "text": "boolean | undefined"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "fullWidth",
+              "type": {
+                "text": "boolean | undefined"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "isRounded",
+              "type": {
+                "text": "boolean | undefined"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "partName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'custom-button'"
+            },
+            {
+              "kind": "method",
+              "name": "getClassTheme",
+              "privacy": "protected"
+            },
+            {
+              "kind": "method",
+              "name": "render"
+            },
+            {
+              "kind": "field",
+              "name": "styles",
+              "type": {
+                "text": "array"
+              },
+              "static": true,
+              "default": "[tailwindElement, unsafeCSS(style)]",
+              "inheritedFrom": {
+                "name": "TailwindElement",
+                "module": "src/shared/tailwind.element.ts"
+              }
+            }
+          ],
+          "mixins": [
+            {
+              "name": "TailwindElement",
+              "module": "/src/shared/tailwind.element"
+            }
+          ],
+          "superclass": {
+            "module": "src/button/button.component.ts"
+          }
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ButtonComponent",
+          "declaration": {
+            "name": "ButtonComponent",
+            "module": "src/button/button.component.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/constants/button.component.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "themeOptions",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n  primary: {\n    contained:\n      'py-2.5 bg-blue-600 text-white shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg  active:bg-blue-800 active:shadow-lg',\n    outlined:\n      'py-2 border-2 border-blue-600 text-blue-600 hover:bg-black hover:bg-opacity-5',\n    link: 'py-2.5 bg-transparent text-blue-600 hover:text-blue-700 hover:bg-gray-100 focus:bg-gray-100 active:bg-gray-200',\n  },\n\n  secondary: {\n    contained:\n      'py-2.5 bg-purple-600 text-white shadow-md hover:bg-purple-700 hover:shadow-lg focus:bg-purple-700 focus:shadow-lg  active:bg-purple-800 active:shadow-lg',\n\n    outlined:\n      'py-2 border-2 border-purple-600 text-purple-600 hover:bg-black hover:bg-opacity-5',\n\n    link: 'py-2.5 bg-transparent text-purple-600 hover:text-purple-700 hover:bg-gray-100 focus:bg-gray-100 active:bg-gray-200',\n  },\n  success: {\n    contained:\n      'py-2.5 bg-green-500 text-white shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg  active:bg-green-700 active:shadow-lg',\n\n    outlined:\n      'py-2 border-2 border-green-500 text-green-500 hover:bg-black hover:bg-opacity-5',\n\n    link: 'py-2.5 bg-transparent text-green-600 hover:text-green-700 hover:bg-gray-100 focus:bg-gray-100 active:bg-gray-200',\n  },\n  danger: {\n    contained:\n      'py-2.5 bg-red-600 text-white shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg  active:bg-red-800 active:shadow-lg',\n\n    outlined:\n      'py-2 border-2 border-red-600 text-red-600 hover:bg-black hover:bg-opacity-5',\n\n    link: 'py-2.5 bg-transparent text-red-600 hover:text-red-700 hover:bg-gray-100 focus:bg-gray-100    active:bg-gray-200',\n  },\n  warning: {\n    contained:\n      'py-2.5 bg-yellow-500 text-white shadow-md hover:bg-yellow-600 hover:shadow-lg focus:bg-yellow-600 focus:shadow-lg  active:bg-yellow-700 active:shadow-lg',\n\n    outlined:\n      'py-2 border-2 border-yellow-500 text-yellow-500 hover:bg-black hover:bg-opacity-5',\n\n    link: 'py-2.5 bg-transparent text-yellow-600 hover:text-yellow-700 hover:bg-gray-100 focus:bg-gray-100    active:bg-gray-200',\n  },\n  light: {\n    contained:\n      'py-2.5 bg-gray-200 text-gray-700 shadow-md hover:bg-gray-300 hover:shadow-lg focus:bg-gray-300 focus:shadow-lg  active:bg-gray-400 active:shadow-lg',\n\n    outlined:\n      'py-2 border-2 border-gray-200 text-gray-200 hover:bg-black hover:bg-opacity-5',\n\n    link: 'py-2.5 bg-transparent text-gray-600 hover:text-gray-700 hover:bg-gray-100 focus:bg-gray-100    active:bg-gray-200',\n  },\n  dark: {\n    contained:\n      'py-2.5 bg-gray-800 text-white shadow-md hover:bg-gray-900 hover:shadow-lg focus:bg-gray-900 focus:shadow-lg  active:bg-gray-900 active:shadow-lg',\n\n    outlined:\n      'py-2 border-2 border-gray-800 text-gray-800 hover:bg-black hover:bg-opacity-5',\n\n    link: 'py-2.5 bg-transparent text-gray-600 hover:text-gray-700 hover:bg-gray-100 focus:bg-gray-100    active:bg-gray-200',\n  },\n}"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "themeOptions",
+          "declaration": {
+            "name": "themeOptions",
+            "module": "src/constants/button.component.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/shared/tailwind.element.ts",
+      "declarations": [
+        {
+          "kind": "mixin",
+          "description": "",
+          "name": "TailwindElement",
+          "members": [
+            {
+              "kind": "field",
+              "name": "styles",
+              "type": {
+                "text": "array"
+              },
+              "static": true,
+              "default": "[tailwindElement, unsafeCSS(style)]"
+            }
+          ],
+          "parameters": [
+            {
+              "name": "style",
+              "type": {
+                "text": "CSSStyleSheet | null"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "TailwindElement",
+          "declaration": {
+            "name": "TailwindElement",
+            "module": "src/shared/tailwind.element.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/types/button.type.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/generated/locales/es-419.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "templates",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n      's1aa9c45c0f9ef371': str`botón`,\n    }"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "templates",
+          "declaration": {
+            "name": "templates",
+            "module": "src/generated/locales/es-419.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/generated/locales/zh-Hans.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "templates",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n      's1aa9c45c0f9ef371': str`按钮`,\n    }"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "templates",
+          "declaration": {
+            "name": "templates",
+            "module": "src/generated/locales/zh-Hans.ts"
+          }
+        }
+      ]
+    }
+  ]
 }

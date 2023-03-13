@@ -1,358 +1,323 @@
-/*
-Copyright 2022 Adobe. All rights reserved.
-This file is licensed to you under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License. You may obtain a copy
-of the License at http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing, software distributed under
-the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
-OF ANY KIND, either express or implied. See the License for the specific language
-governing permissions and limitations under the License.
-*/
-
-import { readFile } from 'fs/promises';
-import fsExtra from 'fs-extra';
-import { basename, dirname, resolve } from 'path';
+import fs from 'fs';
+import path from 'path';
 import prettier from 'prettier';
-// import Case from 'case';
-import glob from 'glob';
-import yaml from 'js-yaml';
-import { fileURLToPath } from 'url';
 
-const { existsSync, outputFile, readFileSync, readJSON } = fsExtra;
+const packageJsonPath = `${process.cwd()}${path.sep}package.json`;
+const packageJson = JSON.parse(fs.readFileSync(packageJsonPath).toString());
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const prettierConfig = yaml.load(
-  readFileSync(resolve(__dirname, '..', '.prettierrc.yaml'))
-);
+function getDefineCallForElement(cem, tagName) {
+  let result = undefined;
 
-/* Share =============================================================== */
+  cem?.modules?.forEach((_module) => {
+    _module?.exports?.forEach((ex) => {
+      if (ex.kind === 'custom-element-definition' && ex.name === tagName)
+        result = _module.path;
+    });
+  });
 
-/**
- * Generate tsconfig.json file for each of the wrapper component.
- */
-function genTsconfigJson() {
-  return `{
-        "extends": "../../tsconfig.json",
-        "compilerOptions": {
-            "composite": true,
-            "rootDir": "./"
-        },
-        "include": ["*.ts"]
-    }`;
+  return result;
 }
 
-/**
- * Generate package.json file for each of the wrapper component.
- */
-function genPackageJson(
-  componentName,
-  dependencyPkgName,
-  dependencyPkgVersion
-) {
-  return `{
-        "name": "@fe-component-library/${componentName}",
-        "version": "${dependencyPkgVersion}",
-        "publishConfig": {
-            "access": "public"
-        },
-        "description": "React wrapper of the ${dependencyPkgName} component",
-        "license": "Apache-2.0",
-        "author": "",
-        "main": "index.js",
-        "files": [
-            "**/*.d.ts",
-            "**/*.js",
-            "**/*.js.map"
-        ],
-        "keywords": [
-            "React",
-            "Web Components",
-            "${dependencyPkgName}"
-        ],
-        "dependencies": {
-            "@lit-labs/react": "^1.1.1",
-            "${dependencyPkgName}": "${dependencyPkgVersion}"
-        }
-    }`;
+function camelize(str) {
+  const arr = str.split('-');
+  const capital = arr.map((item, index) =>
+    index
+      ? item.charAt(0).toUpperCase() + item.slice(1).toLowerCase()
+      : item.toLowerCase()
+  );
+  return capital.join('');
 }
 
-/**
- * Remove the duplicate array elements that has same value of a property
- */
-function uniqueBy(arr, prop) {
-  return [...new Map(arr.map((m) => [m[prop], m])).values()];
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-/* React wrapper generation ============================================ */
+const has = (arr) => Array.isArray(arr) && arr.length > 0;
+
+const RESERVED_WORDS = [
+  'children',
+  'localName',
+  'ref',
+  'style',
+  'className',
+  'abstract',
+  'arguments',
+  'await',
+  'boolean',
+  'break',
+  'byte',
+  'case',
+  'catch',
+  'char',
+  'class',
+  'const',
+  'continue',
+  'debugger',
+  'default',
+  'delete',
+  'do',
+  'double',
+  'else',
+  'enum',
+  'eval',
+  'export',
+  'extends',
+  'false',
+  'final',
+  'finally',
+  'float',
+  'for',
+  'function',
+  'goto',
+  'if',
+  'implements',
+  'import',
+  'in',
+  'instanceof',
+  'int',
+  'interface',
+  'let',
+  'long',
+  'native',
+  'new',
+  'null',
+  'package',
+  'private',
+  'protected',
+  'public',
+  'return',
+  'short',
+  'static',
+  'super',
+  'switch',
+  'synchronized',
+  'this',
+  'throw',
+  'throws',
+  'transient',
+  'true',
+  'try',
+  'typeof',
+  'var',
+  'void',
+  'volatile',
+  'while',
+  'with',
+  'yield',
+];
 
 /**
- * Recusively get all the public events/methods from component itself and its super class
- * It even supports extracting from external component package.
- */
-async function getEvents(decl, declMap, events) {
-  if (declMap.has(decl?.superclass?.name)) {
-    getEvents(declMap.get(decl?.superclass?.name), declMap, events);
-  } else if (
-    decl?.superclass?.package &&
-    existsSync(
-      `../../packages/${decl?.superclass?.package.replace(
-        '@spectrum-web-components/',
-        ''
-      )}/custom-elements.json`
-    )
-  ) {
-    // Extract events/method from external package
-    const { modules } = JSON.parse(
-      await readFile(
-        `../../packages/${decl?.superclass?.package.replace(
-          '@spectrum-web-components/',
-          ''
-        )}/custom-elements.json`
-      )
-    );
-    const [superDecl, ...rest] = modules.flatMap((m) =>
-      m.declarations.filter((d) => d.name === decl?.superclass?.name)
-    );
-    if (superDecl) {
-      getEvents(superDecl, declMap, events);
-    }
-  }
-
-  if (decl?.events) {
-    events.push(
-      decl?.events
-        .filter((event) => !!event.name)
-        .map((event) => {
-          return {
-            name: event.name,
-            type: event.type?.text || 'Event',
-            description: event.description,
-          };
-        })
-    );
-  }
-}
-
-/**
- * CEM package will invoke this callback function.
+ * ATTRIBUTE/PROPERTY NAME CLASHES:
+ * It could be the case that an attr/property are not correctly linked together (e.g.: the attr does not have a `fieldName` pointing
+ * to the property). In that case, there will be two props passed to the React component function with the same name, which will break things
+ * Make sure to document components correctly (in most cases, all you have to do is add an @attr jsdoc to the field)
  *
- * @param {*} exclude array of excluded component class name
- * @param {*} outDir root output directory for generated code
- * @param {*} prettierConfig prettier library configuration
+ * Attrs and properties are distinguished by an attr's `fieldName`. If an attr has a `fieldName`, we ignore it as being an attribute, and
+ * only use the property (which is whatever the `fieldName` points to). If an attr does not have a `fieldName`, we apply it as an attr
+ *
+ * EVENTS:
+ * `'selected-changed'` event expects a function passed as `onSelectedChanged` (we add the 'on', and we camelize and capitalize the event name)
  */
-export default function genReactWrapper({
-  exclude = [],
-  outDir = 'legacy',
-  prettierConfig = {},
-} = {}) {
-  return {
-    name: 'react-wrapper',
-    async packageLinkPhase({ customElementsManifest }) {
-      const { name: pkgName, version: pkgVersion } = JSON.parse(
-        await readFile(`${process.cwd()}/package.json`)
-      );
-      const { modules } = customElementsManifest;
-      const declMap = new Map(
-        modules.flatMap((m) => m.declarations.map((decl) => [decl.name, decl]))
-      );
-      const components = modules.flatMap((m) =>
-        m.declarations.filter(
-          (decl) =>
-            !exclude.includes(decl.name) && (decl.customElement || decl.tagName)
-        )
-      );
 
-      if (components.length === 0) {
-        return;
+export default function reactify({
+  exclude = [],
+  attributeMapping = {},
+  outdir = 'legacy',
+}) {
+  return {
+    name: 'reactify',
+    packageLinkPhase({ customElementsManifest }) {
+      if (!fs.existsSync(outdir)) {
+        fs.mkdirSync(outdir);
       }
 
-      const componentImports = [];
+      const components = [];
+      customElementsManifest.modules.forEach((mod) => {
+        mod.declarations.forEach((dec) => {
+          if (
+            !exclude.includes(dec.name) &&
+            (dec.customElement || dec.tagName)
+          ) {
+            components.push(dec);
+          }
+        });
+      });
 
-      const fileImports = modules
-        .filter(
-          (m) =>
-            m.exports.length === 1 &&
-            m.exports.some((exp) => exp.kind === 'custom-element-definition')
-        )
-        .map((m) => `import '${pkgName}/${m.path?.replace('.ts', '.js')}';`);
-
-      const reactComponents = [];
-
-      for (let component of components) {
-        componentImports.push(
-          `import { ${component.name} as Sp${component.name} } from '${pkgName}';`
+      components.forEach((component) => {
+        let useEffect = false;
+        const fields = component?.members?.filter(
+          (member) =>
+            member.kind === 'field' &&
+            !member.static &&
+            member.privacy !== 'private' &&
+            member.privacy !== 'protected'
         );
 
-        const reactComponent = {};
-        reactComponent.name = `${component.name}`;
-        reactComponent.swcComponentName = `Sp${component.name}`;
-        reactComponent.elementName = component.tagName;
-        const events = [];
-        await getEvents(component, declMap, events);
-        reactComponent.events = uniqueBy(events.flat(), 'name');
+        const booleanAttributes = [];
+        const attributes = [];
 
-        reactComponents.push(reactComponent);
-      }
+        component?.attributes
+          ?.filter((attr) => !attr.fieldName)
+          ?.forEach((attr) => {
+            /** Handle reserved keyword attributes */
+            if (RESERVED_WORDS.includes(attr?.name)) {
+              /** If we have a user-specified mapping, rename */
+              if (attr.name in attributeMapping) {
+                const attribute = {
+                  ...attr,
+                  originalName: attr.name,
+                  name: attributeMapping[attr.name],
+                };
+                if (attr?.type?.text === 'boolean') {
+                  booleanAttributes.push(attribute);
+                } else {
+                  attributes.push(attribute);
+                }
+                return;
+              }
+              throw new Error(
+                `Attribute \`${attr.name}\` in custom element \`${component.name}\` is a reserved keyword and cannot be used. Please provide an \`attributeMapping\` in the plugin options to rename the JavaScript variable that gets passed to the attribute.`
+              );
+            }
 
-      const componentSrc = `/*
-Copyright 2022 Adobe. All rights reserved.
-This file is licensed to you under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License. You may obtain a copy
-of the License at http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing, software distributed under
-the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
-OF ANY KIND, either express or implied. See the License for the specific language
-governing permissions and limitations under the License.
-*/
-import * as React from 'react';
-import { createComponent } from '@lit-labs/react';${
-        reactComponents.flatMap((component) => component.events).length > 0
-          ? "\nimport type { EventName } from '@lit-labs/react';"
-          : ''
-      }
-${componentImports.reduce((pre, cur) => pre + cur + '\n', '')}
-${fileImports.reduce((pre, cur) => pre + cur + '\n', '')}
-${reactComponents.reduce(
-  (pre, component) =>
-    pre +
-    `export const ${component.name} = createComponent({
-        displayName: '${component.name}',
-        elementClass: ${component.swcComponentName},
-        react: React,
-        tagName: '${component.elementName}',
-        events: {
-            ${component.events.reduce(
-              (pre, event) =>
-                pre +
-                `${event.name.replace(/-./g, (m) => m[1].toUpperCase())}: '${
-                  event.name
-                }' as EventName<${event.type}>, ${
-                  event.description ? `// ${event.description}` : ''
-                }\n`,
-              ''
-            )}
-        }
-    });`,
-  ''
-)}
-${reactComponents.reduce(
-  (pre, component) =>
-    pre +
-    `export type ${component.name}Type = EventTarget & ${component.swcComponentName};\n`,
-  ''
-)}
-`;
+            if (attr?.type?.text === 'boolean') {
+              booleanAttributes.push(attr);
+            } else {
+              attributes.push(attr);
+            }
+          });
 
-      const componentShortName = pkgName.replace(
-        '@spectrum-web-components/',
-        ''
-      );
+        let params = [];
+        component?.events?.forEach((event) => {
+          params.push(`on${capitalizeFirstLetter(camelize(event.name))}`);
+        });
 
-      const componentPath = resolve(`${outDir}/${componentShortName}`);
-      await outputFile(
-        resolve(`${componentPath}/index.ts`),
-        prettier.format(componentSrc, {
-          parser: 'typescript',
-          ...prettierConfig,
-        })
-      );
-      await outputFile(
-        resolve(`${componentPath}/package.json`),
-        prettier.format(
-          genPackageJson(componentShortName, pkgName, pkgVersion),
-          {
-            parser: 'json',
-            ...prettierConfig,
+        fields?.forEach((member) => {
+          params.push(member.name);
+        });
+
+        [...(booleanAttributes || []), ...(attributes || [])]?.forEach(
+          (attr) => {
+            params.push(camelize(attr.name));
           }
-        )
-      );
-      await outputFile(
-        resolve(`${componentPath}/tsconfig.json`),
-        prettier.format(genTsconfigJson(), {
-          parser: 'json',
-          ...prettierConfig,
-        })
-      );
+        );
+
+        params = params?.join(', ');
+
+        const createEventName = (event) =>
+          `on${capitalizeFirstLetter(camelize(event.name))}`;
+
+        const events = component?.events?.map(
+          (event) => `
+            useEffect(() => {
+              if(${createEventName(event)} !== undefined) {
+                ref.current.addEventListener('${event.name}', ${createEventName(
+            event
+          )});
+              }
+            }, [])
+`
+        );
+
+        const booleanAttrs = booleanAttributes?.map(
+          (attr) => `
+            useEffect(() => {
+              if(${attr?.name ?? attr.originalName} !== undefined) {
+                if(${attr?.name ?? attr.originalName}) {
+                  ref.current.setAttribute('${attr.name}', '');
+                } else {
+                  ref.current.removeAttribute('${attr.name}');
+                }
+              }
+            }, [${attr?.originalName ?? attr.name}])
+`
+        );
+
+        const attrs = attributes?.map(
+          (attr) => `
+            useEffect(() => {
+              if(${
+                attr?.name ?? attr.originalName
+              } !== undefined && ref.current.getAttribute('${
+            attr?.originalName ?? attr.name
+          }') !== String(${attr?.name ?? attr.originalName})) {
+                ref.current.setAttribute('${
+                  attr?.originalName ?? attr.name
+                }', ${attr?.name ?? attr.originalName})
+              }
+            }, [${attr?.name ?? attr.originalName}])
+        `
+        );
+
+        const props = fields?.map(
+          (member) => `
+            useEffect(() => {
+              if(${member.name} !== undefined && ref.current.${member.name} !== ${member.name}) {
+                ref.current.${member.name} = ${member.name};
+              }
+            }, [${member.name}])
+        `
+        );
+
+        if (has(events) || has(props) || has(attrs) || has(booleanAttrs)) {
+          useEffect = true;
+        }
+
+        const moduleSpecifier = path.join(
+          packageJson.name,
+          getDefineCallForElement(customElementsManifest, component.tagName)
+        );
+
+        const result = `
+          import React${useEffect ? ', {useEffect, useRef}' : ''} from "react";
+          import '${moduleSpecifier}';
+          export function ${component.name}({children${
+          params ? ',' : ''
+        } ${params}}) {
+            ${useEffect ? `const ref = useRef(null);` : ''}
+            ${has(events) ? '/** Event listeners - run once */' : ''}
+            ${events?.join('') || ''}
+            ${
+              has(booleanAttrs)
+                ? '/** Boolean attributes - run whenever an attr has changed */'
+                : ''
+            }
+            ${booleanAttrs?.join('') || ''}
+            ${
+              has(attrs)
+                ? '/** Attributes - run whenever an attr has changed */'
+                : ''
+            }
+            ${attrs?.join('') || ''}
+            ${
+              has(props)
+                ? '/** Properties - run whenever a property has changed */'
+                : ''
+            }
+            ${props?.join('') || ''}
+            return (
+              <${component.tagName} ${useEffect ? 'ref={ref}' : ''} ${[
+          ...booleanAttributes,
+          ...attributes,
+        ]
+          .map(
+            (attr) =>
+              `${attr?.originalName ?? attr.name}={${
+                attr?.name ?? attr.originalName
+              }}`
+          )
+          .join(' ')}>
+                {children}
+              </${component.tagName}>
+            )
+          }
+        `;
+
+        fs.writeFileSync(
+          path.join(outdir, `${component.name}.jsx`),
+          prettier.format(result, { parser: 'babel' })
+        );
+      });
     },
   };
-}
-
-/* Icon wrapper generation ============================================= */
-
-/**
- * Generate Icon component
- */
-function genIconComponent(component, id, iconElementName, iconPkg) {
-  const componentAliasName = `Sp${component}`;
-  return `/*
-Copyright 2022 Adobe. All rights reserved.
-This file is licensed to you under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License. You may obtain a copy
-of the License at http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing, software distributed under
-the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
-OF ANY KIND, either express or implied. See the License for the specific language
-governing permissions and limitations under the License.
-*/
-import { createComponent } from '@lit-labs/react';
-import * as React from 'react';
-  
-import { ${component} as ${componentAliasName} } from '@spectrum-web-components/${iconPkg}/src/elements/${id}.js';
-import '@spectrum-web-components/${iconPkg}/icons/${iconElementName}.js';
-  
-export const ${component} = createComponent({ react: React, tagName: '${iconElementName}', elementClass: ${componentAliasName}, events: {}, displayName: '${component}' });
-export type ${component}Type = ${componentAliasName};
-`;
-}
-
-/**
- * Core entry function
- */
-export async function generateIconWrapper(iconType) {
-  glob(
-    resolve(__dirname, '..', `packages/${iconType}/src/elements/**.d.ts`),
-    async (_, icons) => {
-      for (let icon of icons) {
-        const id = basename(icon).split('.')[0].substring('Icon'.length);
-        // const componentName =
-        //     id === 'github' ? 'GitHub' : Case.pascal(id);
-        // const iconElementName = `sp-icon-${Case.kebab(componentName)}`;
-        await outputFile(
-          resolve(__dirname, '..', `react/${iconType}/${componentName}.ts`),
-          prettier.format(
-            genIconComponent(
-              `Icon${componentName}`,
-              `Icon${id}`,
-              iconElementName,
-              `${iconType}`
-            ),
-            {
-              parser: 'babel',
-              ...prettierConfig,
-            }
-          )
-        );
-      }
-
-      const { name: pkgName, version: pkgVersion } = await readJSON(
-        resolve(__dirname, '..', `packages/${iconType}/package.json`)
-      );
-
-      await outputFile(
-        resolve(__dirname, '..', `react/${iconType}/package.json`),
-        prettier.format(genPackageJson(iconType, pkgName, pkgVersion), {
-          parser: 'json',
-          ...prettierConfig,
-        })
-      );
-
-      await outputFile(
-        resolve(__dirname, '..', `react/${iconType}/tsconfig.json`),
-        prettier.format(genTsconfigJson(), {
-          parser: 'json',
-          ...prettierConfig,
-        })
-      );
-    }
-  );
 }

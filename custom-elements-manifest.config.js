@@ -9,25 +9,18 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import { moduleFileExtensionsPlugin } from 'cem-plugin-module-file-extensions';
+import reactify from 'cem-plugin-reactify';
 
 export default {
-  globs: [
-    '',
-    '**/*.component.ts',
-    '**/overlay-trigger.ts',
-    '**/src/[A-Z]*.ts',
-    '**/src/**/[A-Z]*.ts',
+  plugins: [
+    reactify({
+      /** Directory to write the React wrappers to, defaults to `legacy` */
+      outdir: '../../react',
+
+      /** Provide an attribute mapping to avoid using JS/React reserved keywords */
+      attributeMapping: {
+        for: '_for',
+      },
+    }),
   ],
-  exclude: [
-    '**/*.d.ts',
-    '**/stories/**',
-    '**/test/**',
-    'node_modules/*',
-    '**/*.dev.*',
-  ],
-  outdir: '.',
-  litelement: true,
-  packagejson: false,
-  plugins: [moduleFileExtensionsPlugin()],
 };
