@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.1](https://github.com/yml-org/fe-component-library/compare/@fe-component-library/progress-bar@0.0.3...@fe-component-library/progress-bar@0.0.1) (2023-03-13)
+
+### Bug Fixes
+
+- **app:** update package versions ([694310b](https://github.com/yml-org/fe-component-library/commit/694310b770a2c94b5289e64507ce7ed85edb3897))
+
 ## 0.0.3 (2023-03-13)
 
 ### Bug Fixes
