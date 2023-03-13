@@ -1,6 +1,6 @@
 {
   "name": "@fe-component-library/button",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "main": "./src/index.js",
   "module": "./src/index.js",
   "type": "module",
@@ -8,6 +8,9 @@
     "type": "git",
     "url": "https://github.com/yml-org/fe-component-library",
     "directory": "packages/button"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
     "start": "vite dev --host",
