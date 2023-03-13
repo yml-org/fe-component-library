@@ -1,6 +1,6 @@
 {
   "name": "@yml-webcl/transition",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "main": "./src/index.js",
   "module": "./src/index.js",
   "type": "module",
