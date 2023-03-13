@@ -10,22 +10,7 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/index.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./scroll/scroll.component"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "dist/assets/index.js",
+      "path": "dist/index.js",
       "declarations": [
         {
           "kind": "variable",
@@ -60,7 +45,7 @@
           "name": "e",
           "declaration": {
             "name": "i",
-            "module": "dist/assets/index.js"
+            "module": "dist/index.js"
           }
         },
         {
@@ -68,7 +53,7 @@
           "name": "e",
           "declaration": {
             "name": "r",
-            "module": "dist/assets/index.js"
+            "module": "dist/index.js"
           }
         },
         {
@@ -76,7 +61,22 @@
           "name": "ScrollComponent",
           "declaration": {
             "name": "T",
-            "module": "dist/assets/index.js"
+            "module": "dist/index.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./scroll/scroll.component"
           }
         }
       ]
@@ -224,6 +224,12 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/types/scroll.component.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/shared/tailwind.element.ts",
       "declarations": [
         {
@@ -261,12 +267,6 @@
           }
         }
       ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/types/scroll.component.ts",
-      "declarations": [],
-      "exports": []
     },
     {
       "kind": "javascript-module",

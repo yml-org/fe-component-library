@@ -10,22 +10,7 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/index.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./transition/transition.component"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "dist/assets/index.js",
+      "path": "dist/index.js",
       "declarations": [
         {
           "kind": "variable",
@@ -51,7 +36,7 @@
           "name": "e",
           "declaration": {
             "name": "i",
-            "module": "dist/assets/index.js"
+            "module": "dist/index.js"
           }
         },
         {
@@ -59,7 +44,7 @@
           "name": "e",
           "declaration": {
             "name": "r",
-            "module": "dist/assets/index.js"
+            "module": "dist/index.js"
           }
         },
         {
@@ -67,7 +52,22 @@
           "name": "TransitionComponent",
           "declaration": {
             "name": "d",
-            "module": "dist/assets/index.js"
+            "module": "dist/index.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./transition/transition.component"
           }
         }
       ]

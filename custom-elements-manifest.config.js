@@ -14,9 +14,6 @@ import reactify from 'cem-plugin-reactify';
 export default {
   plugins: [
     reactify({
-      /** Directory to write the React wrappers to, defaults to `legacy` */
-      outdir: '../../react',
-
       /** Provide an attribute mapping to avoid using JS/React reserved keywords */
       attributeMapping: {
         for: '_for',

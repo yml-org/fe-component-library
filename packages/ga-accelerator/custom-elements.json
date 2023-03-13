@@ -4,6 +4,68 @@
   "modules": [
     {
       "kind": "javascript-module",
+      "path": "dist/index.js",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "c",
+          "parameters": [
+            {
+              "name": "t"
+            },
+            {
+              "name": "n",
+              "default": "{}"
+            }
+          ]
+        },
+        {
+          "kind": "variable",
+          "name": "r"
+        },
+        {
+          "kind": "variable",
+          "name": "s",
+          "default": "function(...t) {\n  window.dataLayer.push(t);\n}"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "s",
+            "module": "dist/index.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "ymlGaAccelerator",
+          "declaration": {
+            "name": "s",
+            "module": "dist/index.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "ymlGaCookieLessInstall",
+          "declaration": {
+            "name": "r",
+            "module": "dist/index.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "ymlGaInstall",
+          "declaration": {
+            "name": "c",
+            "module": "dist/index.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/index.ts",
       "declarations": [
         {
@@ -65,68 +127,6 @@
           "declaration": {
             "name": "ymlGaAccelerator",
             "module": "src/index.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "dist/assets/index.js",
-      "declarations": [
-        {
-          "kind": "function",
-          "name": "c",
-          "parameters": [
-            {
-              "name": "t"
-            },
-            {
-              "name": "n",
-              "default": "{}"
-            }
-          ]
-        },
-        {
-          "kind": "variable",
-          "name": "r"
-        },
-        {
-          "kind": "variable",
-          "name": "s",
-          "default": "function(...t) {\n  window.dataLayer.push(t);\n}"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "s",
-            "module": "dist/assets/index.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "ymlGaAccelerator",
-          "declaration": {
-            "name": "s",
-            "module": "dist/assets/index.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "ymlGaCookieLessInstall",
-          "declaration": {
-            "name": "r",
-            "module": "dist/assets/index.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "ymlGaInstall",
-          "declaration": {
-            "name": "c",
-            "module": "dist/assets/index.js"
           }
         }
       ]

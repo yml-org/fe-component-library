@@ -59,7 +59,7 @@
     "test:watch": "yarn build && jest -u --watch",
     "lint": "yarn eslint \"packages/**/src/**\" --fix",
     "analyze": "lerna exec custom-elements-manifest analyze",
-    "gen-react-wrapper": "rm -fr react && lerna exec -- custom-elements-manifest analyze --config ../../cem-react-wrapper.config.js"
+    "gen-react-wrapper": "rm -rf react && lerna exec -- custom-elements-manifest analyze --config ../../cem-react-wrapper.config.js"
   },
   "husky": {
     "hooks": {
