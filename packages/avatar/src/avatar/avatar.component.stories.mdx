@@ -33,19 +33,6 @@ The Avatar component is a Lit component that renders an avatar component that is
 
 # Examples
 
-Avatar component with rounded border with custom background
-
-export const roundedBorderTemplate = ({ isRounded }) =>
-  html`<div class="rounded-avatar">
-    <ymlwebcl-avatar .isRounded=${isRounded}></ymlwebcl-avatar>
-  </div>`;
-
-<Canvas>
-  <Story name="rounded border" args={roundedVariant}>
-    {roundedBorderTemplate.bind({})}
-  </Story>
-</Canvas>
-
 Avatar component with default icon
 
 export const defaultIconTemplate = ({ showDefaultIcon, defaultImage }) =>
@@ -105,7 +92,23 @@ export const withRoundedBorderAvatarTemplate = ({
   </Story>
 </Canvas>
 
-Avatar component with shadow and border
+# <<<<<<< HEAD
+
+Avatar component with rounded border with custom background
+
+export const roundedBorderTemplate = ({ isRounded }) =>
+  html`<div class="rounded-avatar">
+    <ymlwebcl-avatar .isRounded=${isRounded}></ymlwebcl-avatar>
+  </div>`;
+
+<Canvas>
+  <Story name="rounded border with custom background" args={roundedVariant}>
+    {roundedBorderTemplate.bind({})}
+  </Story>
+</Canvas>
+
+> > > > > > > 38f2e26193ad3882bd7a240ffdfd9a0af4e5baf6
+> > > > > > > Avatar component with shadow and border
 
 export const withShadowTemplate = ({
   showDefaultIcon,

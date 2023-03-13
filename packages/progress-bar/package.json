@@ -1,9 +1,17 @@
 {
-  "name": "@yml-webcl/progress-bar",
-  "version": "1.0.0",
+  "name": "@fe-component-library/progress-bar",
+  "version": "0.0.1",
   "main": "./src/index.js",
   "module": "./src/index.js",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yml-org/fe-component-library",
+    "directory": "packages/progress-bar"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "scripts": {
     "start": "vite dev --host",
     "dev": "vite dev --host",
@@ -24,7 +32,8 @@
   },
   "dependencies": {
     "@lit/localize": "^0.11.4",
-    "@lit/localize-tools": "^0.6.5"
+    "@lit/localize-tools": "^0.6.5",
+    "vite-plugin-dts": "^2.1.0"
   },
   "exports": {
     ".": {
@@ -46,5 +55,6 @@
     "web components",
     "lit-element",
     "lit-html"
-  ]
+  ],
+  "gitHead": "bf706f189352e631def25fe71380648ad3ccb8e4"
 }
