@@ -25,7 +25,7 @@ Basic progress bar component with percent
 export const TemplateWithProgressPercent = ({ percent }) =>
   html`
     <div class="progress-bar-storybook-container">
-      <progress-bar-component .percent=${percent}></progress-bar-component>
+      <ymlwebcl-progressbar .percent=${percent}></ymlwebcl-progressbar>
     </div>
   `;
 
@@ -44,10 +44,10 @@ Basic progress bar component with percent and max prop
 
 export const TemplateWithPercentAndMax = ({ percent, max }) =>
   html` <div class="progress-bar-storybook-container">
-    <progress-bar-component
+    <ymlwebcl-progressbar
       .percent=${percent}
       .max=${max}
-    ></progress-bar-component>
+    ></ymlwebcl-progressbar>
   </div>`;
 
 <Canvas columns={1}>

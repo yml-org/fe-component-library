@@ -5,7 +5,7 @@ import { themeOptions } from '../constants/button.component';
 import { VariantType, colorType } from '../types/button.type';
 import { msg, str } from '@lit/localize';
 
-@customElement('button-component')
+@customElement('ymlwebcl-button')
 export class ButtonComponent extends TailwindElement(null) {
   @property()
   text?: string;
@@ -46,11 +46,5 @@ export class ButtonComponent extends TailwindElement(null) {
         <slot name=${this.slotName}></slot>
       </button>
     `;
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    'button-component': ButtonComponent;
   }
 }

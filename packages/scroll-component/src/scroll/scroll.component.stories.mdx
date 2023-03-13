@@ -29,13 +29,11 @@ The slot record has the following key value pairs:
 | dataStart | number | From which image number, the custom element should start coming up on screen while scrolling |
 | dataEnd   | number | From which image number, the custom element should go off the screen while scrolling         |
 
-
 # Examples
 
-Basic  scroll component without `props`
+Basic scroll component without `props`
 
-export const TemplateDefault = () =>
-  html`<scroll-component> </scroll-component>`;
+export const TemplateDefault = () => html`<ymlwebcl-scroll> </ymlwebcl-scroll>`;
 
 <Canvas columns={1}>
   <Story name="default">{TemplateDefault.bind({})}</Story>
@@ -44,10 +42,10 @@ export const TemplateDefault = () =>
 Basic scroll component with `slots` and `props`
 
 export const TemplateWithSlots = (args) =>
-  html`<scroll-component .dataSlot=${args.dataSlot}>
+  html`<ymlwebcl-scroll .dataSlot=${args.dataSlot}>
     <h1 slot="slot_1">WATER BOTTLE</h1>
     <h1 slot="slot_2">AIR PURIFIER</h1>
-  </scroll-component>`;
+  </ymlwebcl-scroll>`;
 
 <Canvas columns={1}>
   <Story
@@ -71,16 +69,16 @@ export const TemplateWithSlots = (args) =>
   </Story>
 </Canvas>
 
-Basic  scroll component with `slots` and `props`
+Basic scroll component with `slots` and `props`
 
 export const TemplateWithImages = (args) =>
-  html`<scroll-component
+  html`<ymlwebcl-scroll
     .dataSlot=${args.dataSlot}
     .desktopImages=${args.desktopImages}
     .mobileImages=${args.mobileImages}
   >
     <h1 slot="slot_1">WATER BOTTLE</h1>
-  </scroll-component>`;
+  </ymlwebcl-scroll>`;
 
 <Canvas columns={1}>
   <Story

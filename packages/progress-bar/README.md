@@ -122,16 +122,16 @@ If you want to contribute or share some thoughts, just get in touch with us.
 
 Enjoy.
 
-# progress-bar-component
+# ymlwebcl-progressbar
 
 ## Install
 
 ```bash
-yarn add progress-bar-component
+yarn add ymlwebcl-progressbar
 ```
 
 ```bash
-npm i progress-bar-component
+npm i ymlwebcl-progressbar
 ```
 
 ## Usage
@@ -142,9 +142,9 @@ npm i progress-bar-component
 
 ```js
 <template>
-  <progress-bar-component
+  <ymlwebcl-progressbar
     percent={50}
-  ></progress-bar-component>
+  ></ymlwebcl-progressbar>
 </template>
 
 <script>
@@ -172,7 +172,7 @@ npm i reactify-wc
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-const ProgressBarComponent = reactifyWc("progress-bar-component");
+const ProgressBarComponent = reactifyWc("ymlwebcl-progressbar");
   return (
     <div className="App">
       <ProgressBarComponent
@@ -191,7 +191,7 @@ Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/::part
 ```style.scss
 //The ::part CSS pseudo-element represents any element within a shadow tree that has a matching part attribute.
 
-progress-bar-component::part(webcl-progress-bar) { /*Note : progress-bar-component is the custom component and webcl-progress-bar is the name given to the the part attribute in element within progress-bar-component */
+ymlwebcl-progressbar::part(webcl-progress-bar) { /*Note : ymlwebcl-progressbar is the custom component and webcl-progress-bar is the name given to the the part attribute in element within ymlwebcl-progressbar */
 background-color: yellow;
 color:black;
 //add css properties

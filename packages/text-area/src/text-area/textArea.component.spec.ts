@@ -1,16 +1,16 @@
-import { LitElement } from 'lit-element';
+import { TextAreaComponent } from './textArea.component';
 
-describe('text-area-component', () => {
-  const TEXTAREA_COMPONENT = 'text-area-component';
-  let textAreaElement: LitElement;
+describe('ymlwebcl-textarea', () => {
+  const TEXTAREA_COMPONENT = 'ymlwebcl-textarea';
+  let textAreaElement: TextAreaComponent;
 
-  const getShadowRoot = (tagName: string): ShadowRoot =>
+  const getShadowRoot = (tagName: string): ShadowRoot | null =>
     document.body.getElementsByTagName(tagName)[0].shadowRoot;
 
   beforeEach(() => {
     textAreaElement = window.document.createElement(
       TEXTAREA_COMPONENT
-    ) as LitElement;
+    ) as TextAreaComponent;
     document.body.appendChild(textAreaElement);
   });
 

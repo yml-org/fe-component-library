@@ -1,4 +1,4 @@
-import { ThemeOptions } from 'types/header.component';
+import { ThemeOptions } from '../types/header.component';
 export enum NavbarModes {
   Dark = 'dark',
   Light = 'light',

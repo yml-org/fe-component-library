@@ -1,31 +1,31 @@
-import { LitElement } from 'lit-element';
+import { ScrollComponent } from './scroll.component';
 
-describe('scroll-component', () => {
-  const SCROLL_COMPONENT = 'scroll-component';
-  let scrollElement: LitElement;
+describe('ymlwebcl-scroll', () => {
+  const SCROLL_COMPONENT = 'ymlwebcl-scroll';
+  let scrollElement: ScrollComponent;
 
-  const getShadowRoot = (tagName: string): ShadowRoot =>
+  const getShadowRoot = (tagName: string): ShadowRoot | null =>
     document.body.getElementsByTagName(tagName)[0].shadowRoot;
 
-    const dataSlots = [
-        {
-          dataStart: 1,
-          dataEnd: 5,
-          slotName: 'slot1',
-        },
-      ];
+  const dataSlots = [
+    {
+      dataStart: 1,
+      dataEnd: 5,
+      slotName: 'slot1',
+    },
+  ];
 
- const getSlotElements = () => {
+  const getSlotElements = () => {
     return getShadowRoot(SCROLL_COMPONENT)
-    .querySelector('div')
-    .querySelector('section')
-    .querySelector('div')
- }
+      .querySelector('div')
+      .querySelector('section')
+      .querySelector('div');
+  };
 
   beforeEach(() => {
     scrollElement = window.document.createElement(
       SCROLL_COMPONENT
-    ) as LitElement;
+    ) as ScrollComponent;
     document.body.appendChild(scrollElement);
   });
 
@@ -53,10 +53,11 @@ describe('scroll-component', () => {
     scrollElement['dataSlot'] = dataSlots;
     await scrollElement.updateComplete;
     const elem = getSlotElements();
-    expect(elem.querySelector('slot').getAttribute('name')).toBe(dataSlots[0].slotName);
+    expect(elem.querySelector('slot').getAttribute('name')).toBe(
+      dataSlots[0].slotName
+    );
   });
 
-  
   it('sets the dataStart property correctly', async () => {
     scrollElement['dataSlot'] = dataSlots;
     await scrollElement.updateComplete;

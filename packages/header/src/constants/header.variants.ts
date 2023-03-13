@@ -1,4 +1,4 @@
-import { Nav } from 'types/header.component';
+import { Nav } from '../types/header.component';
 
 const defaultNavConfig: Nav = {
   mode: 'dark',

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   rootDir: '.',
 
   projects: [
@@ -103,7 +103,7 @@ module.exports = {
       ],
       collectCoverageFrom: ['**/*.{js,ts}', '!**/node_modules/**'],
       transform: {
-        '\\.js$': ['babel-jest', { configFile: './babel-jest.config.js' }],
+        '\\.js$': ['babel-jest', { configFile: './babel-jest.config.cjs' }],
       },
     },
     {

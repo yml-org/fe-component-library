@@ -11,23 +11,23 @@ import {
 } from '../types/list';
 import { ListTypes, BorderPositions, BorderStyles } from '../constants/list';
 
-@customElement('list-component')
+@customElement('ymlwebcl-list')
 export class ListComponent extends TailwindElement(null) {
-  @property()
+  @property({ reflect: true })
   listType?: ListType = ListTypes.Ordered;
-  @property()
+  @property({ reflect: true })
   listItems?: ListItemType[] = [];
-  @property()
+  @property({ type: Boolean, reflect: true })
   overrideDefaultListStyles?: boolean = false;
-  @property()
+  @property({ type: Boolean, reflect: true })
   showBorder?: boolean = false;
-  @property()
+  @property({ reflect: true })
   borderPosition?: BorderPosition = BorderPositions.All;
-  @property()
+  @property({ reflect: true })
   borderStyle?: BorderStyle = BorderStyles.Solid;
-  @property()
+  @property({ type: String, reflect: true })
   containerPartName?: string = 'webcl-list-container';
-  @property()
+  @property({ type: String, reflect: true })
   listPartName?: string = 'webcl-list';
 
   protected renderListItemContent(
@@ -160,11 +160,5 @@ export class ListComponent extends TailwindElement(null) {
     return html`<div class="webcl-list-wrapper" part=${this.containerPartName}>
       ${this.renderList()}
     </div>`;
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    'list-component': ListComponent;
   }
 }

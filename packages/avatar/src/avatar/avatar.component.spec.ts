@@ -1,16 +1,16 @@
-import { LitElement } from 'lit-element';
+import { AvatarComponent } from './avatar.component';
 
-describe('avatar-component', () => {
-  const AVATAR_COMPONENT = 'avatar-component';
-  let avatarElement: LitElement;
+describe('ymlwebcl-avatar', () => {
+  const AVATAR_COMPONENT = 'ymlwebcl-avatar';
+  let avatarElement: AvatarComponent;
 
-  const getShadowRoot = (tagName: string): ShadowRoot =>
+  const getShadowRoot = (tagName: string): ShadowRoot | null =>
     document.body.getElementsByTagName(tagName)[0].shadowRoot;
 
   beforeEach(() => {
     avatarElement = window.document.createElement(
       AVATAR_COMPONENT
-    ) as LitElement;
+    ) as AvatarComponent;
     document.body.appendChild(avatarElement);
   });
 
@@ -28,17 +28,24 @@ describe('avatar-component', () => {
     avatarElement['isRounded'] = true;
     await avatarElement.updateComplete;
     const avatarComponentClassList =
-      getShadowRoot(AVATAR_COMPONENT).querySelector('div').classList;
+      getShadowRoot(AVATAR_COMPONENT)?.querySelector('div')?.classList;
     expect(avatarComponentClassList).toContain('rounded-full');
   });
 
+  it('renders the avatar with border', async () => {
+    avatarElement['hasBorder'] = true;
+    await avatarElement.updateComplete;
+    const avatarComponentClassList =
+      getShadowRoot(AVATAR_COMPONENT)?.querySelector('div')?.classList;
+    expect(avatarComponentClassList).toContain('border');
+  });
 
   it('renders the avatar with custom width', async () => {
     const CUSTOM_WIDTH = 200;
     avatarElement['width'] = CUSTOM_WIDTH;
     await avatarElement.updateComplete;
     const avatarComponentStyle =
-      getShadowRoot(AVATAR_COMPONENT).querySelector('div').style;
+      getShadowRoot(AVATAR_COMPONENT)?.querySelector('div')?.style;
     expect(avatarComponentStyle?.width).toBe(`${CUSTOM_WIDTH}px`);
   });
 
@@ -48,7 +55,7 @@ describe('avatar-component', () => {
     avatarElement['width'] = CUSTOM_WIDTH;
     await avatarElement.updateComplete;
     const avatarComponentStyle =
-      getShadowRoot(AVATAR_COMPONENT).querySelector('div').style;
+      getShadowRoot(AVATAR_COMPONENT)?.querySelector('div')?.style;
     expect(avatarComponentStyle?.width).toBe(`${CUSTOM_WIDTH}%`);
   });
 
@@ -57,7 +64,7 @@ describe('avatar-component', () => {
     avatarElement['onAvatarClick'] = clickHandler;
     await avatarElement.updateComplete;
     const avatarComponent =
-      getShadowRoot(AVATAR_COMPONENT).querySelector('div');
+      getShadowRoot(AVATAR_COMPONENT)?.querySelector('div');
     avatarComponent?.click();
     expect(clickHandler).toBeCalled();
   });
@@ -65,12 +72,12 @@ describe('avatar-component', () => {
   it('renders the component passed in slot', async () => {
     avatarElement['slotName'] = 'avatar';
     window.document.body.appendChild(avatarElement);
-    document.querySelector('avatar-component').innerHTML =
+    (document.querySelector('ymlwebcl-avatar') || document.body).innerHTML =
       '<div slot="avatar" class="slot-test">Test</div>';
     await avatarElement.updateComplete;
     const elemClassList = document
-      .querySelector('avatar-component')
-      .querySelector('div').classList;
+      ?.querySelector('ymlwebcl-avatar')
+      ?.querySelector('div')?.classList;
     expect(elemClassList).toContain('slot-test');
   });
 });

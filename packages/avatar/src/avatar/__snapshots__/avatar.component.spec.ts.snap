@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`avatar-component matches component snapshot 1`] = `
-f {
+exports[`ymlwebcl-avatar matches component snapshot 1`] = `
+p {
   "_$AL": Map {},
   "_$Do": U {
     "_$AA": <!---->,
     "_$AB": null,
-    "_$AH": mt {
-      "_$AD": N {
+    "_$AH": yt {
+      "_$AD": O {
         "el": <template />,
         "parts": Array [
           Object {
@@ -73,22 +73,22 @@ f {
       "_$AM": [Circular],
       "_$AN": undefined,
       "u": Array [
-        R {
-          "_$AH": "webcl-avatar-container flex items-center justify-center ",
+        L {
+          "_$AH": "webcl-avatar-container flex items-center justify-center",
           "_$AM": [Circular],
           "_$AN": undefined,
           "element": <div
-            class="webcl-avatar-container flex items-center justify-center "
+            class="webcl-avatar-container flex items-center justify-center"
             part="webcl-avatar"
             role="button"
             style="width: 75px;height: 75px;"
           >
             
       
-            <!--?lit$49197072$-->
+            <!--?lit$794244673$-->
             
       
-            <!--?lit$49197072$-->
+            <!--?lit$794244673$-->
             
     
           </div>,
@@ -100,22 +100,22 @@ f {
           },
           "type": 1,
         },
-        R {
+        L {
           "_$AH": "width: 75px;height: 75px;",
           "_$AM": [Circular],
           "_$AN": undefined,
           "element": <div
-            class="webcl-avatar-container flex items-center justify-center "
+            class="webcl-avatar-container flex items-center justify-center"
             part="webcl-avatar"
             role="button"
             style="width: 75px;height: 75px;"
           >
             
       
-            <!--?lit$49197072$-->
+            <!--?lit$794244673$-->
             
       
-            <!--?lit$49197072$-->
+            <!--?lit$794244673$-->
             
     
           </div>,
@@ -127,22 +127,22 @@ f {
           },
           "type": 1,
         },
-        R {
+        L {
           "_$AH": "webcl-avatar",
           "_$AM": [Circular],
           "_$AN": undefined,
           "element": <div
-            class="webcl-avatar-container flex items-center justify-center "
+            class="webcl-avatar-container flex items-center justify-center"
             part="webcl-avatar"
             role="button"
             style="width: 75px;height: 75px;"
           >
             
       
-            <!--?lit$49197072$-->
+            <!--?lit$794244673$-->
             
       
-            <!--?lit$49197072$-->
+            <!--?lit$794244673$-->
             
     
           </div>,
@@ -154,22 +154,22 @@ f {
           },
           "type": 1,
         },
-        R {
+        L {
           "_$AH": "button",
           "_$AM": [Circular],
           "_$AN": undefined,
           "element": <div
-            class="webcl-avatar-container flex items-center justify-center "
+            class="webcl-avatar-container flex items-center justify-center"
             part="webcl-avatar"
             role="button"
             style="width: 75px;height: 75px;"
           >
             
       
-            <!--?lit$49197072$-->
+            <!--?lit$794244673$-->
             
       
-            <!--?lit$49197072$-->
+            <!--?lit$794244673$-->
             
     
           </div>,
@@ -181,22 +181,22 @@ f {
           },
           "type": 1,
         },
-        bt {
+        Et {
           "_$AH": Symbol(lit-nothing),
           "_$AM": [Circular],
           "_$AN": undefined,
           "element": <div
-            class="webcl-avatar-container flex items-center justify-center "
+            class="webcl-avatar-container flex items-center justify-center"
             part="webcl-avatar"
             role="button"
             style="width: 75px;height: 75px;"
           >
             
       
-            <!--?lit$49197072$-->
+            <!--?lit$794244673$-->
             
       
-            <!--?lit$49197072$-->
+            <!--?lit$794244673$-->
             
     
           </div>,
@@ -209,7 +209,7 @@ f {
           "type": 5,
         },
         U {
-          "_$AA": <!--?lit$49197072$-->,
+          "_$AA": <!--?lit$794244673$-->,
           "_$AB": 
       ,
           "_$AH": Symbol(lit-nothing),
@@ -224,7 +224,7 @@ f {
           "type": 2,
         },
         U {
-          "_$AA": <!--?lit$49197072$-->,
+          "_$AA": <!--?lit$794244673$-->,
           "_$AB": 
     ,
           "_$AH": Symbol(lit-nothing),
@@ -250,10 +250,14 @@ f {
     },
     "type": 2,
   },
+  "_$EC": undefined,
   "_$E_": Promise {},
   "_$Ei": undefined,
   "_$El": null,
   "__avatarPartAttribute": "webcl-avatar",
+  "__borderColor": "slate-200",
+  "__hasBorder": false,
+  "__hasShadow": false,
   "__height": 75,
   "__isRounded": false,
   "__showDefaultIcon": false,
@@ -271,8 +275,8 @@ f {
     "_$litPart$": U {
       "_$AA": <!---->,
       "_$AB": null,
-      "_$AH": mt {
-        "_$AD": N {
+      "_$AH": yt {
+        "_$AD": O {
           "el": <template />,
           "parts": Array [
             Object {
@@ -338,22 +342,22 @@ f {
         "_$AM": [Circular],
         "_$AN": undefined,
         "u": Array [
-          R {
-            "_$AH": "webcl-avatar-container flex items-center justify-center ",
+          L {
+            "_$AH": "webcl-avatar-container flex items-center justify-center",
             "_$AM": [Circular],
             "_$AN": undefined,
             "element": <div
-              class="webcl-avatar-container flex items-center justify-center "
+              class="webcl-avatar-container flex items-center justify-center"
               part="webcl-avatar"
               role="button"
               style="width: 75px;height: 75px;"
             >
               
       
-              <!--?lit$49197072$-->
+              <!--?lit$794244673$-->
               
       
-              <!--?lit$49197072$-->
+              <!--?lit$794244673$-->
               
     
             </div>,
@@ -365,22 +369,22 @@ f {
             },
             "type": 1,
           },
-          R {
+          L {
             "_$AH": "width: 75px;height: 75px;",
             "_$AM": [Circular],
             "_$AN": undefined,
             "element": <div
-              class="webcl-avatar-container flex items-center justify-center "
+              class="webcl-avatar-container flex items-center justify-center"
               part="webcl-avatar"
               role="button"
               style="width: 75px;height: 75px;"
             >
               
       
-              <!--?lit$49197072$-->
+              <!--?lit$794244673$-->
               
       
-              <!--?lit$49197072$-->
+              <!--?lit$794244673$-->
               
     
             </div>,
@@ -392,22 +396,22 @@ f {
             },
             "type": 1,
           },
-          R {
+          L {
             "_$AH": "webcl-avatar",
             "_$AM": [Circular],
             "_$AN": undefined,
             "element": <div
-              class="webcl-avatar-container flex items-center justify-center "
+              class="webcl-avatar-container flex items-center justify-center"
               part="webcl-avatar"
               role="button"
               style="width: 75px;height: 75px;"
             >
               
       
-              <!--?lit$49197072$-->
+              <!--?lit$794244673$-->
               
       
-              <!--?lit$49197072$-->
+              <!--?lit$794244673$-->
               
     
             </div>,
@@ -419,22 +423,22 @@ f {
             },
             "type": 1,
           },
-          R {
+          L {
             "_$AH": "button",
             "_$AM": [Circular],
             "_$AN": undefined,
             "element": <div
-              class="webcl-avatar-container flex items-center justify-center "
+              class="webcl-avatar-container flex items-center justify-center"
               part="webcl-avatar"
               role="button"
               style="width: 75px;height: 75px;"
             >
               
       
-              <!--?lit$49197072$-->
+              <!--?lit$794244673$-->
               
       
-              <!--?lit$49197072$-->
+              <!--?lit$794244673$-->
               
     
             </div>,
@@ -446,22 +450,22 @@ f {
             },
             "type": 1,
           },
-          bt {
+          Et {
             "_$AH": Symbol(lit-nothing),
             "_$AM": [Circular],
             "_$AN": undefined,
             "element": <div
-              class="webcl-avatar-container flex items-center justify-center "
+              class="webcl-avatar-container flex items-center justify-center"
               part="webcl-avatar"
               role="button"
               style="width: 75px;height: 75px;"
             >
               
       
-              <!--?lit$49197072$-->
+              <!--?lit$794244673$-->
               
       
-              <!--?lit$49197072$-->
+              <!--?lit$794244673$-->
               
     
             </div>,
@@ -474,7 +478,7 @@ f {
             "type": 5,
           },
           U {
-            "_$AA": <!--?lit$49197072$-->,
+            "_$AA": <!--?lit$794244673$-->,
             "_$AB": 
       ,
             "_$AH": Symbol(lit-nothing),
@@ -489,7 +493,7 @@ f {
             "type": 2,
           },
           U {
-            "_$AA": <!--?lit$49197072$-->,
+            "_$AA": <!--?lit$794244673$-->,
             "_$AB": 
     ,
             "_$AH": Symbol(lit-nothing),

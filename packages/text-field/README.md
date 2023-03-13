@@ -122,16 +122,16 @@ If you want to contribute or share some thoughts, just get in touch with us.
 
 Enjoy.
 
-# text-field-component
+# ymlwebcl-textfield
 
 ## Install
 
 ```bash
-yarn add text-field-component
+yarn add ymlwebcl-textfield
 ```
 
 ```bash
-npm i text-field-component
+npm i ymlwebcl-textfield
 ```
 
 ## Usage
@@ -142,8 +142,8 @@ npm i text-field-component
 
 ```js
 <template>
-  <text-field-component >
-  </text-field-component>
+  <ymlwebcl-textfield >
+  </ymlwebcl-textfield>
 </template>
 
 <script>
@@ -162,9 +162,9 @@ export default {
 
 ```js
 <template>
-  <text-field-component
+  <ymlwebcl-textfield
   :disabled="true"
-  ></text-field-component>
+  ></ymlwebcl-textfield>
 </template>
 
 <script>
@@ -192,7 +192,7 @@ npm i reactify-wc
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const TextFieldComponent = reactifyWc("text-field-component");
+  const TextFieldComponent = reactifyWc("ymlwebcl-textfield");
   return (
     <div className="App">
       <TextFieldComponent />
@@ -206,7 +206,7 @@ export default App;
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-const TextFieldComponent = reactifyWc("text-field-component");
+const TextFieldComponent = reactifyWc("ymlwebcl-textfield");
   return (
     <div className="App">
       <TextFieldComponent
@@ -225,7 +225,7 @@ Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/::part
 ```style.scss
 //The ::part CSS pseudo-element represents any element within a shadow tree that has a matching part attribute.
 
-text-field-component::part(text-field-input) { /*Note : text-field-component is the custom component and text-field-input is the name given to the the part attribute in element within text-field-component */
+ymlwebcl-textfield::part(text-field-input) { /*Note : ymlwebcl-textfield is the custom component and text-field-input is the name given to the the part attribute in element within ymlwebcl-textfield */
 background-color: yellow;
 color:black;
 //add css properties

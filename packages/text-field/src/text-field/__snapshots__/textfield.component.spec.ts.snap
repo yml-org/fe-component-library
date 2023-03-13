@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`text-field-component matches component snapshot 1`] = `
+exports[`ymlwebcl-textfield matches component snapshot 1`] = `
 d {
   "_$AL": Map {},
-  "_$Do": O {
+  "_$Do": T {
     "_$AA": <!---->,
     "_$AB": null,
-    "_$AH": bt {
-      "_$AD": H {
+    "_$AH": mt {
+      "_$AD": O {
         "el": <template />,
         "parts": Array [
           Object {
@@ -203,7 +203,7 @@ d {
       "_$AM": [Circular],
       "_$AN": undefined,
       "u": Array [
-        R {
+        I {
           "_$AH": "text-field-wrapper",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -213,7 +213,21 @@ d {
           >
             
       
-            <!--?lit$00684845$-->
+            <!--?lit$4851512428$-->
+            <label
+              class="text-field-label-container"
+              for=""
+              part="text-field-label"
+            >
+              
+          
+              <!--?lit$4851512428$-->
+              Label
+               
+              <!--?lit$4851512428$-->
+              
+        
+            </label>
             
       
             <div
@@ -240,7 +254,7 @@ d {
                 class="text-field-input"
                 id=""
                 part="text-field-input"
-                placeholder=""
+                placeholder="Input"
                 type="text"
                 value=""
               />
@@ -249,7 +263,7 @@ d {
             </div>
             
       
-            <!--?lit$00684845$-->
+            <!--?lit$4851512428$-->
             
     
           </div>,
@@ -261,7 +275,7 @@ d {
           },
           "type": 1,
         },
-        R {
+        I {
           "_$AH": "text-field-wrapper",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -271,7 +285,21 @@ d {
           >
             
       
-            <!--?lit$00684845$-->
+            <!--?lit$4851512428$-->
+            <label
+              class="text-field-label-container"
+              for=""
+              part="text-field-label"
+            >
+              
+          
+              <!--?lit$4851512428$-->
+              Label
+               
+              <!--?lit$4851512428$-->
+              
+        
+            </label>
             
       
             <div
@@ -298,7 +326,7 @@ d {
                 class="text-field-input"
                 id=""
                 part="text-field-input"
-                placeholder=""
+                placeholder="Input"
                 type="text"
                 value=""
               />
@@ -307,7 +335,7 @@ d {
             </div>
             
       
-            <!--?lit$00684845$-->
+            <!--?lit$4851512428$-->
             
     
           </div>,
@@ -319,11 +347,130 @@ d {
           },
           "type": 1,
         },
-        O {
-          "_$AA": <!--?lit$00684845$-->,
+        T {
+          "_$AA": <!--?lit$4851512428$-->,
           "_$AB": 
       ,
-          "_$AH": Symbol(lit-nothing),
+          "_$AH": mt {
+            "_$AD": O {
+              "el": <template />,
+              "parts": Array [
+                Object {
+                  "ctor": [Function],
+                  "index": 0,
+                  "name": "part",
+                  "strings": Array [
+                    "",
+                    "",
+                  ],
+                  "type": 1,
+                },
+                Object {
+                  "ctor": [Function],
+                  "index": 0,
+                  "name": "for",
+                  "strings": Array [
+                    "",
+                    "",
+                  ],
+                  "type": 1,
+                },
+                Object {
+                  "index": 1,
+                  "type": 2,
+                },
+                Object {
+                  "index": 2,
+                  "type": 2,
+                },
+              ],
+            },
+            "_$AM": [Circular],
+            "_$AN": undefined,
+            "u": Array [
+              I {
+                "_$AH": "text-field-label",
+                "_$AM": [Circular],
+                "_$AN": undefined,
+                "element": <label
+                  class="text-field-label-container"
+                  for=""
+                  part="text-field-label"
+                >
+                  
+          
+                  <!--?lit$4851512428$-->
+                  Label
+                   
+                  <!--?lit$4851512428$-->
+                  
+        
+                </label>,
+                "name": "part",
+                "options": Object {
+                  "host": [Circular],
+                  "isConnected": true,
+                  "renderBefore": null,
+                },
+                "type": 1,
+              },
+              I {
+                "_$AH": undefined,
+                "_$AM": [Circular],
+                "_$AN": undefined,
+                "element": <label
+                  class="text-field-label-container"
+                  for=""
+                  part="text-field-label"
+                >
+                  
+          
+                  <!--?lit$4851512428$-->
+                  Label
+                   
+                  <!--?lit$4851512428$-->
+                  
+        
+                </label>,
+                "name": "for",
+                "options": Object {
+                  "host": [Circular],
+                  "isConnected": true,
+                  "renderBefore": null,
+                },
+                "type": 1,
+              },
+              T {
+                "_$AA": <!--?lit$4851512428$-->,
+                "_$AB":  ,
+                "_$AH": "Label",
+                "_$AM": [Circular],
+                "_$AN": undefined,
+                "_$Cm": true,
+                "options": Object {
+                  "host": [Circular],
+                  "isConnected": true,
+                  "renderBefore": null,
+                },
+                "type": 2,
+              },
+              T {
+                "_$AA": <!--?lit$4851512428$-->,
+                "_$AB": 
+        ,
+                "_$AH": Symbol(lit-nothing),
+                "_$AM": [Circular],
+                "_$AN": undefined,
+                "_$Cm": true,
+                "options": Object {
+                  "host": [Circular],
+                  "isConnected": true,
+                  "renderBefore": null,
+                },
+                "type": 2,
+              },
+            ],
+          },
           "_$AM": [Circular],
           "_$AN": undefined,
           "_$Cm": true,
@@ -334,7 +481,7 @@ d {
           },
           "type": 2,
         },
-        R {
+        I {
           "_$AH": "text-field-icon",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -357,7 +504,7 @@ d {
           },
           "type": 1,
         },
-        At {
+        Et {
           "_$AH": [Function],
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -380,7 +527,7 @@ d {
           },
           "type": 5,
         },
-        R {
+        I {
           "_$AH": "text-field-input",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -390,7 +537,7 @@ d {
             class="text-field-input"
             id=""
             part="text-field-input"
-            placeholder=""
+            placeholder="Input"
             type="text"
             value=""
           />,
@@ -402,7 +549,7 @@ d {
           },
           "type": 1,
         },
-        R {
+        I {
           "_$AH": undefined,
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -412,7 +559,7 @@ d {
             class="text-field-input"
             id=""
             part="text-field-input"
-            placeholder=""
+            placeholder="Input"
             type="text"
             value=""
           />,
@@ -424,7 +571,7 @@ d {
           },
           "type": 1,
         },
-        R {
+        I {
           "_$AH": "",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -434,7 +581,7 @@ d {
             class="text-field-input"
             id=""
             part="text-field-input"
-            placeholder=""
+            placeholder="Input"
             type="text"
             value=""
           />,
@@ -446,7 +593,7 @@ d {
           },
           "type": 1,
         },
-        R {
+        I {
           "_$AH": "off",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -456,7 +603,7 @@ d {
             class="text-field-input"
             id=""
             part="text-field-input"
-            placeholder=""
+            placeholder="Input"
             type="text"
             value=""
           />,
@@ -468,8 +615,8 @@ d {
           },
           "type": 1,
         },
-        R {
-          "_$AH": "",
+        I {
+          "_$AH": "Input",
           "_$AM": [Circular],
           "_$AN": undefined,
           "element": <input
@@ -478,7 +625,7 @@ d {
             class="text-field-input"
             id=""
             part="text-field-input"
-            placeholder=""
+            placeholder="Input"
             type="text"
             value=""
           />,
@@ -490,7 +637,7 @@ d {
           },
           "type": 1,
         },
-        R {
+        I {
           "_$AH": false,
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -500,7 +647,7 @@ d {
             class="text-field-input"
             id=""
             part="text-field-input"
-            placeholder=""
+            placeholder="Input"
             type="text"
             value=""
           />,
@@ -512,7 +659,7 @@ d {
           },
           "type": 1,
         },
-        _t {
+        bt {
           "_$AH": false,
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -522,7 +669,7 @@ d {
             class="text-field-input"
             id=""
             part="text-field-input"
-            placeholder=""
+            placeholder="Input"
             type="text"
             value=""
           />,
@@ -534,7 +681,7 @@ d {
           },
           "type": 4,
         },
-        _t {
+        bt {
           "_$AH": false,
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -544,7 +691,7 @@ d {
             class="text-field-input"
             id=""
             part="text-field-input"
-            placeholder=""
+            placeholder="Input"
             type="text"
             value=""
           />,
@@ -556,7 +703,7 @@ d {
           },
           "type": 4,
         },
-        _t {
+        bt {
           "_$AH": false,
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -566,7 +713,7 @@ d {
             class="text-field-input"
             id=""
             part="text-field-input"
-            placeholder=""
+            placeholder="Input"
             type="text"
             value=""
           />,
@@ -578,7 +725,7 @@ d {
           },
           "type": 4,
         },
-        _t {
+        bt {
           "_$AH": "",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -588,7 +735,7 @@ d {
             class="text-field-input"
             id=""
             part="text-field-input"
-            placeholder=""
+            placeholder="Input"
             type="text"
             value=""
           />,
@@ -600,7 +747,7 @@ d {
           },
           "type": 4,
         },
-        _t {
+        bt {
           "_$AH": "",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -610,7 +757,7 @@ d {
             class="text-field-input"
             id=""
             part="text-field-input"
-            placeholder=""
+            placeholder="Input"
             type="text"
             value=""
           />,
@@ -622,7 +769,7 @@ d {
           },
           "type": 4,
         },
-        _t {
+        bt {
           "_$AH": "",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -632,7 +779,7 @@ d {
             class="text-field-input"
             id=""
             part="text-field-input"
-            placeholder=""
+            placeholder="Input"
             type="text"
             value=""
           />,
@@ -644,7 +791,7 @@ d {
           },
           "type": 4,
         },
-        At {
+        Et {
           "_$AH": [Function],
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -654,7 +801,7 @@ d {
             class="text-field-input"
             id=""
             part="text-field-input"
-            placeholder=""
+            placeholder="Input"
             type="text"
             value=""
           />,
@@ -666,7 +813,7 @@ d {
           },
           "type": 5,
         },
-        R {
+        I {
           "_$AH": "text-field-input",
           "_$AM": [Circular],
           "_$AN": undefined,
@@ -676,7 +823,7 @@ d {
             class="text-field-input"
             id=""
             part="text-field-input"
-            placeholder=""
+            placeholder="Input"
             type="text"
             value=""
           />,
@@ -688,8 +835,8 @@ d {
           },
           "type": 1,
         },
-        O {
-          "_$AA": <!--?lit$00684845$-->,
+        T {
+          "_$AA": <!--?lit$4851512428$-->,
           "_$AB": 
     ,
           "_$AH": Symbol(lit-nothing),
@@ -715,6 +862,7 @@ d {
     },
     "type": 2,
   },
+  "_$EC": undefined,
   "_$E_": Promise {},
   "_$Ei": undefined,
   "_$El": null,
@@ -723,8 +871,11 @@ d {
   "__clickIconHandler": "",
   "__hintTextPartAttribute": "text-field-hint-text",
   "__iconPartAttribute": "text-field-icon",
+  "__label": "Label",
   "__labelPartAttribute": "text-field-label",
+  "__placeholder": "Input",
   "__textFieldPartAttribute": "text-field-input",
+  "__value": "",
   "enableUpdating": [Function],
   "hasUpdated": true,
   "isUpdatePending": false,
@@ -734,11 +885,11 @@ d {
     "renderBefore": null,
   },
   "renderRoot": ShadowRoot {
-    "_$litPart$": O {
+    "_$litPart$": T {
       "_$AA": <!---->,
       "_$AB": null,
-      "_$AH": bt {
-        "_$AD": H {
+      "_$AH": mt {
+        "_$AD": O {
           "el": <template />,
           "parts": Array [
             Object {
@@ -934,7 +1085,7 @@ d {
         "_$AM": [Circular],
         "_$AN": undefined,
         "u": Array [
-          R {
+          I {
             "_$AH": "text-field-wrapper",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -944,7 +1095,21 @@ d {
             >
               
       
-              <!--?lit$00684845$-->
+              <!--?lit$4851512428$-->
+              <label
+                class="text-field-label-container"
+                for=""
+                part="text-field-label"
+              >
+                
+          
+                <!--?lit$4851512428$-->
+                Label
+                 
+                <!--?lit$4851512428$-->
+                
+        
+              </label>
               
       
               <div
@@ -971,7 +1136,7 @@ d {
                   class="text-field-input"
                   id=""
                   part="text-field-input"
-                  placeholder=""
+                  placeholder="Input"
                   type="text"
                   value=""
                 />
@@ -980,7 +1145,7 @@ d {
               </div>
               
       
-              <!--?lit$00684845$-->
+              <!--?lit$4851512428$-->
               
     
             </div>,
@@ -992,7 +1157,7 @@ d {
             },
             "type": 1,
           },
-          R {
+          I {
             "_$AH": "text-field-wrapper",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -1002,7 +1167,21 @@ d {
             >
               
       
-              <!--?lit$00684845$-->
+              <!--?lit$4851512428$-->
+              <label
+                class="text-field-label-container"
+                for=""
+                part="text-field-label"
+              >
+                
+          
+                <!--?lit$4851512428$-->
+                Label
+                 
+                <!--?lit$4851512428$-->
+                
+        
+              </label>
               
       
               <div
@@ -1029,7 +1208,7 @@ d {
                   class="text-field-input"
                   id=""
                   part="text-field-input"
-                  placeholder=""
+                  placeholder="Input"
                   type="text"
                   value=""
                 />
@@ -1038,7 +1217,7 @@ d {
               </div>
               
       
-              <!--?lit$00684845$-->
+              <!--?lit$4851512428$-->
               
     
             </div>,
@@ -1050,11 +1229,130 @@ d {
             },
             "type": 1,
           },
-          O {
-            "_$AA": <!--?lit$00684845$-->,
+          T {
+            "_$AA": <!--?lit$4851512428$-->,
             "_$AB": 
       ,
-            "_$AH": Symbol(lit-nothing),
+            "_$AH": mt {
+              "_$AD": O {
+                "el": <template />,
+                "parts": Array [
+                  Object {
+                    "ctor": [Function],
+                    "index": 0,
+                    "name": "part",
+                    "strings": Array [
+                      "",
+                      "",
+                    ],
+                    "type": 1,
+                  },
+                  Object {
+                    "ctor": [Function],
+                    "index": 0,
+                    "name": "for",
+                    "strings": Array [
+                      "",
+                      "",
+                    ],
+                    "type": 1,
+                  },
+                  Object {
+                    "index": 1,
+                    "type": 2,
+                  },
+                  Object {
+                    "index": 2,
+                    "type": 2,
+                  },
+                ],
+              },
+              "_$AM": [Circular],
+              "_$AN": undefined,
+              "u": Array [
+                I {
+                  "_$AH": "text-field-label",
+                  "_$AM": [Circular],
+                  "_$AN": undefined,
+                  "element": <label
+                    class="text-field-label-container"
+                    for=""
+                    part="text-field-label"
+                  >
+                    
+          
+                    <!--?lit$4851512428$-->
+                    Label
+                     
+                    <!--?lit$4851512428$-->
+                    
+        
+                  </label>,
+                  "name": "part",
+                  "options": Object {
+                    "host": [Circular],
+                    "isConnected": true,
+                    "renderBefore": null,
+                  },
+                  "type": 1,
+                },
+                I {
+                  "_$AH": undefined,
+                  "_$AM": [Circular],
+                  "_$AN": undefined,
+                  "element": <label
+                    class="text-field-label-container"
+                    for=""
+                    part="text-field-label"
+                  >
+                    
+          
+                    <!--?lit$4851512428$-->
+                    Label
+                     
+                    <!--?lit$4851512428$-->
+                    
+        
+                  </label>,
+                  "name": "for",
+                  "options": Object {
+                    "host": [Circular],
+                    "isConnected": true,
+                    "renderBefore": null,
+                  },
+                  "type": 1,
+                },
+                T {
+                  "_$AA": <!--?lit$4851512428$-->,
+                  "_$AB":  ,
+                  "_$AH": "Label",
+                  "_$AM": [Circular],
+                  "_$AN": undefined,
+                  "_$Cm": true,
+                  "options": Object {
+                    "host": [Circular],
+                    "isConnected": true,
+                    "renderBefore": null,
+                  },
+                  "type": 2,
+                },
+                T {
+                  "_$AA": <!--?lit$4851512428$-->,
+                  "_$AB": 
+        ,
+                  "_$AH": Symbol(lit-nothing),
+                  "_$AM": [Circular],
+                  "_$AN": undefined,
+                  "_$Cm": true,
+                  "options": Object {
+                    "host": [Circular],
+                    "isConnected": true,
+                    "renderBefore": null,
+                  },
+                  "type": 2,
+                },
+              ],
+            },
             "_$AM": [Circular],
             "_$AN": undefined,
             "_$Cm": true,
@@ -1065,7 +1363,7 @@ d {
             },
             "type": 2,
           },
-          R {
+          I {
             "_$AH": "text-field-icon",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -1088,7 +1386,7 @@ d {
             },
             "type": 1,
           },
-          At {
+          Et {
             "_$AH": [Function],
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -1111,7 +1409,7 @@ d {
             },
             "type": 5,
           },
-          R {
+          I {
             "_$AH": "text-field-input",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -1121,7 +1419,7 @@ d {
               class="text-field-input"
               id=""
               part="text-field-input"
-              placeholder=""
+              placeholder="Input"
               type="text"
               value=""
             />,
@@ -1133,7 +1431,7 @@ d {
             },
             "type": 1,
           },
-          R {
+          I {
             "_$AH": undefined,
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -1143,7 +1441,7 @@ d {
               class="text-field-input"
               id=""
               part="text-field-input"
-              placeholder=""
+              placeholder="Input"
               type="text"
               value=""
             />,
@@ -1155,7 +1453,7 @@ d {
             },
             "type": 1,
           },
-          R {
+          I {
             "_$AH": "",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -1165,7 +1463,7 @@ d {
               class="text-field-input"
               id=""
               part="text-field-input"
-              placeholder=""
+              placeholder="Input"
               type="text"
               value=""
             />,
@@ -1177,7 +1475,7 @@ d {
             },
             "type": 1,
           },
-          R {
+          I {
             "_$AH": "off",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -1187,7 +1485,7 @@ d {
               class="text-field-input"
               id=""
               part="text-field-input"
-              placeholder=""
+              placeholder="Input"
               type="text"
               value=""
             />,
@@ -1199,8 +1497,8 @@ d {
             },
             "type": 1,
           },
-          R {
-            "_$AH": "",
+          I {
+            "_$AH": "Input",
             "_$AM": [Circular],
             "_$AN": undefined,
             "element": <input
@@ -1209,7 +1507,7 @@ d {
               class="text-field-input"
               id=""
               part="text-field-input"
-              placeholder=""
+              placeholder="Input"
               type="text"
               value=""
             />,
@@ -1221,7 +1519,7 @@ d {
             },
             "type": 1,
           },
-          R {
+          I {
             "_$AH": false,
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -1231,7 +1529,7 @@ d {
               class="text-field-input"
               id=""
               part="text-field-input"
-              placeholder=""
+              placeholder="Input"
               type="text"
               value=""
             />,
@@ -1243,7 +1541,7 @@ d {
             },
             "type": 1,
           },
-          _t {
+          bt {
             "_$AH": false,
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -1253,7 +1551,7 @@ d {
               class="text-field-input"
               id=""
               part="text-field-input"
-              placeholder=""
+              placeholder="Input"
               type="text"
               value=""
             />,
@@ -1265,7 +1563,7 @@ d {
             },
             "type": 4,
           },
-          _t {
+          bt {
             "_$AH": false,
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -1275,7 +1573,7 @@ d {
               class="text-field-input"
               id=""
               part="text-field-input"
-              placeholder=""
+              placeholder="Input"
               type="text"
               value=""
             />,
@@ -1287,7 +1585,7 @@ d {
             },
             "type": 4,
           },
-          _t {
+          bt {
             "_$AH": false,
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -1297,7 +1595,7 @@ d {
               class="text-field-input"
               id=""
               part="text-field-input"
-              placeholder=""
+              placeholder="Input"
               type="text"
               value=""
             />,
@@ -1309,7 +1607,7 @@ d {
             },
             "type": 4,
           },
-          _t {
+          bt {
             "_$AH": "",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -1319,7 +1617,7 @@ d {
               class="text-field-input"
               id=""
               part="text-field-input"
-              placeholder=""
+              placeholder="Input"
               type="text"
               value=""
             />,
@@ -1331,7 +1629,7 @@ d {
             },
             "type": 4,
           },
-          _t {
+          bt {
             "_$AH": "",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -1341,7 +1639,7 @@ d {
               class="text-field-input"
               id=""
               part="text-field-input"
-              placeholder=""
+              placeholder="Input"
               type="text"
               value=""
             />,
@@ -1353,7 +1651,7 @@ d {
             },
             "type": 4,
           },
-          _t {
+          bt {
             "_$AH": "",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -1363,7 +1661,7 @@ d {
               class="text-field-input"
               id=""
               part="text-field-input"
-              placeholder=""
+              placeholder="Input"
               type="text"
               value=""
             />,
@@ -1375,7 +1673,7 @@ d {
             },
             "type": 4,
           },
-          At {
+          Et {
             "_$AH": [Function],
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -1385,7 +1683,7 @@ d {
               class="text-field-input"
               id=""
               part="text-field-input"
-              placeholder=""
+              placeholder="Input"
               type="text"
               value=""
             />,
@@ -1397,7 +1695,7 @@ d {
             },
             "type": 5,
           },
-          R {
+          I {
             "_$AH": "text-field-input",
             "_$AM": [Circular],
             "_$AN": undefined,
@@ -1407,7 +1705,7 @@ d {
               class="text-field-input"
               id=""
               part="text-field-input"
-              placeholder=""
+              placeholder="Input"
               type="text"
               value=""
             />,
@@ -1419,8 +1717,8 @@ d {
             },
             "type": 1,
           },
-          O {
-            "_$AA": <!--?lit$00684845$-->,
+          T {
+            "_$AA": <!--?lit$4851512428$-->,
             "_$AB": 
     ,
             "_$AH": Symbol(lit-nothing),

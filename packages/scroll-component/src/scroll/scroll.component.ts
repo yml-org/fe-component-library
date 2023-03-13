@@ -13,20 +13,20 @@ import {
 } from '../constants/scroll.variant';
 import { dataSlots } from '../types/scroll.component';
 
-@customElement('scroll-component')
+@customElement('ymlwebcl-scroll')
 export class ScrollComponent extends TailwindElement(Style) {
-  @property()
+  @property({ type: Array, reflect: true })
   dataSlot: Array<dataSlots> = defaultDataSlots;
 
-  @property()
+  @property({ type: Object, reflect: true })
   desktopImages: object = defaultDesktopImages;
 
-  @property()
+  @property({ type: Object, reflect: true })
   mobileImages: object = defaultMobileImages;
 
   protected firstUpdated() {
     const container = document.body
-      .getElementsByTagName('scroll-component')[0]
+      .getElementsByTagName('ymlwebcl-scroll')[0]
       .shadowRoot.querySelector('.scrub-scroll') as HTMLElement;
     const elements = container.querySelectorAll('.scroll-reveal');
     const canvas = container.querySelector('canvas') as HTMLCanvasElement;
@@ -118,11 +118,5 @@ export class ScrollComponent extends TailwindElement(Style) {
         </section>
       </div>
     `;
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    'scroll-component': ScrollComponent;
   }
 }

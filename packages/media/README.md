@@ -122,16 +122,16 @@ If you want to contribute or share some thoughts, just get in touch with us.
 
 Enjoy.
 
-# media-component
+# ymlwebcl-media
 
 ## Install
 
 ```bash
-yarn add media-component
+yarn add ymlwebcl-media
 ```
 
 ```bash
-npm i media-component
+npm i ymlwebcl-media
 ```
 
 ## Usage
@@ -142,8 +142,8 @@ npm i media-component
 
 ```js
 <template>
-  <media-component >
-  </media-component>
+  <ymlwebcl-media >
+  </ymlwebcl-media>
 </template>
 
 <script>
@@ -162,8 +162,8 @@ export default {
 
 ```js
  <template>
-  <media-component mediaTitle="media Component" >
-  </media-component>
+  <ymlwebcl-media mediaTitle="media Component" >
+  </ymlwebcl-media>
 </template>
 
 <script>
@@ -182,7 +182,7 @@ export default {
 
 ```js
  <template>
-  <media-component
+  <ymlwebcl-media
     mediaTitle="Chip Component"
     imageSlotName="imageSlot"
     staticContentSlotName="staticContent"
@@ -233,7 +233,7 @@ export default {
         />
       </svg>
     </div>
-  </media-component>
+  </ymlwebcl-media>
 </template>
 
 <script>
@@ -260,7 +260,7 @@ npm i reactify-wc
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const MediaComponent = reactifyWc("media-component");
+  const MediaComponent = reactifyWc("ymlwebcl-media");
 
   return (
     <div className="App">
@@ -275,7 +275,7 @@ export default App;
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const MediaComponent = reactifyWc("media-component");
+  const MediaComponent = reactifyWc("ymlwebcl-media");
 
   return (
     <div className="App">
@@ -290,7 +290,7 @@ export default App;
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const MediaComponent = reactifyWc("media-component");
+  const MediaComponent = reactifyWc("ymlwebcl-media");
 
   return (
     <div className="App">
@@ -358,7 +358,7 @@ Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/::part
 ```style.scss
 //The ::part CSS pseudo-element represents any element within a shadow tree that has a matching part attribute.
 
-media-component::part(webcl-media) { /*Note : media-component is the custom component and webcl-media is the name given to the the part attribute in element within webcl-component */
+ymlwebcl-media::part(webcl-media) { /*Note : ymlwebcl-media is the custom component and webcl-media is the name given to the the part attribute in element within ymlwebcl-media component */
  padding: 1rem;
  gap: 1.5rem;
 //add css properties

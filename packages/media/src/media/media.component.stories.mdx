@@ -1,8 +1,8 @@
 import { html } from 'lit';
 import { Story, Meta, Canvas } from '@storybook/addon-docs';
 import './media.component.ts';
-import {mediaProps} from '../constants/media.variants.ts';  
-import { houseIcon, bookmarkIcon} from '../constants/mediaIcons.ts'; 
+import { mediaProps } from '../constants/media.variants.ts';
+import { houseIcon, bookmarkIcon } from '../constants/mediaIcons.ts';
 import './media.component.scss';
 
 <Meta title="Components/Media" />
@@ -25,21 +25,18 @@ The Media component is a Lit component that renders a media component that is fr
 
 # Examples
 
-Default Media component 
+Default Media component
 
-export const defaultMediaTemplate = () =>
-  html`<media-component />`;
+export const defaultMediaTemplate = () => html`<ymlwebcl-media />`;
 
 <Canvas>
-  <Story name="default" >
-    {defaultMediaTemplate.bind({})}
-  </Story>
+  <Story name="default">{defaultMediaTemplate.bind({})}</Story>
 </Canvas>
 
 Media component with title prop
 
 export const propMediaTemplate = ({ mediaTitle }) =>
-  html`<media-component .mediaTitle=${mediaTitle} />`;
+  html`<ymlwebcl-media .mediaTitle=${mediaTitle} />`;
 
 <Canvas>
   <Story name="title" args={mediaProps}>
@@ -50,12 +47,12 @@ export const propMediaTemplate = ({ mediaTitle }) =>
 Media component with image slot
 
 export const imageSlotTemplate = ({ mediaTitle, imageSlotName }) =>
-  html`<media-component
+  html`<ymlwebcl-media
     .mediaTitle=${mediaTitle}
     .imageSlotName=${imageSlotName}
   >
     <div slot=${imageSlotName}>${houseIcon}</div>
-  </media-component>`;
+  </ymlwebcl-media>`;
 
 <Canvas>
   <Story name="image slot" args={mediaProps}>
@@ -70,7 +67,7 @@ export const staticSlotTemplate = ({
   staticContentSlotName,
   imageSlotName,
 }) =>
-  html`<media-component
+  html`<ymlwebcl-media
     .mediaTitle=${mediaTitle}
     .imageSlotName=${imageSlotName}
     .staticContentSlotName=${staticContentSlotName}
@@ -80,7 +77,7 @@ export const staticSlotTemplate = ({
       <p>Emotion</p>
       <p>Time</p>
     </div>
-  </media-component>`;
+  </ymlwebcl-media>`;
 
 <Canvas>
   <Story name="static content slot" args={mediaProps}>
@@ -96,7 +93,7 @@ export const iconSlotTemplate = ({
   imageSlotName,
   iconSlotName,
 }) =>
-  html`<media-component
+  html`<ymlwebcl-media
     .mediaTitle=${mediaTitle}
     .imageSlotName=${imageSlotName}
     .staticContentSlotName=${staticContentSlotName}
@@ -108,7 +105,7 @@ export const iconSlotTemplate = ({
       <p>Time</p>
     </div>
     <div slot=${iconSlotName}>${bookmarkIcon}</div>
-  </media-component>`;
+  </ymlwebcl-media>`;
 
 <Canvas>
   <Story name="icon slot" args={mediaProps}>
@@ -128,7 +125,7 @@ export const customizedTemplate = ({
   titlePartAttribute,
 }) =>
   html` <div class="parent-container">
-    <media-component
+    <ymlwebcl-media
       .mediaTitle=${mediaTitle}
       .imageSlotName=${imageSlotName}
       .staticContentSlotName=${staticContentSlotName}
@@ -143,7 +140,7 @@ export const customizedTemplate = ({
         <p>Time</p>
       </div>
       <div class="icon-slot-content" slot=${iconSlotName}>${bookmarkIcon}</div>
-    </media-component>
+    </ymlwebcl-media>
   </div>`;
 
 <Canvas>

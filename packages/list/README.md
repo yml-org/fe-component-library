@@ -122,16 +122,16 @@ If you want to contribute or share some thoughts, just get in touch with us.
 
 Enjoy.
 
-# button-component
+# ymlwebcl-list
 
 ## Install
 
 ```bash
-yarn add list-component
+yarn add ymlwebcl-list
 ```
 
 ```bash
-npm i list-component
+npm i ymlwebcl-list
 ```
 
 ## Usage
@@ -142,8 +142,8 @@ npm i list-component
 
 ```js
 <template>
-  <list-component listItems=[]>
-  </list-component>
+  <ymlwebcl-list listItems=[]>
+  </ymlwebcl-list>
 </template>
 
 <script>
@@ -162,9 +162,9 @@ export default {
 
 ```js
 <template>
-  <list-component
+  <ymlwebcl-list
     :listItems="[]"
-  ></list-component>
+  ></ymlwebcl-list>
 </template>
 
 <script>
@@ -183,7 +183,7 @@ export default {
 
 ```js
 <template>
-  <list-component
+  <ymlwebcl-list
     listItems=[{
       slotName:'slot',
       hasSlot:true
@@ -197,7 +197,7 @@ export default {
         alt=""
       />
     </div>
-  </list-component>
+  </ymlwebcl-list>
 </template>
 
 <script>
@@ -224,7 +224,7 @@ npm i reactify-wc
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const ListComponent = reactifyWc("list-component");
+  const ListComponent = reactifyWc("ymlwebcl-list");
   return (
     <div className="App">
       <ListComponent />
@@ -238,7 +238,7 @@ export default App;
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-const ListComponent = reactifyWc("list-component");
+const ListComponent = reactifyWc("ymlwebcl-list");
   return (
     <div className="App">
       <ListComponent
@@ -254,7 +254,7 @@ export default App;
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-const ListComponent = reactifyWc("list-component");
+const ListComponent = reactifyWc("ymlwebcl-list");
   return (
     <div className="App">
       <ListComponent
@@ -284,7 +284,7 @@ Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/::part
 ```style.scss
 //The ::part CSS pseudo-element represents any element within a shadow tree that has a matching part attribute.
 
-list-component::part(webcl-list-container) { /*Note : list-component is the custom component and webcl-list-container is the name given to the the part attribute in element within list-component */
+ymlwebcl-list::part(webcl-list-container) { /*Note : ymlwebcl-list is the custom component and webcl-list-container is the name given to the the part attribute in element within ymlwebcl-list */
 background-color: yellow;
 color:black;
 //add css properties

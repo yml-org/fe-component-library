@@ -7,4 +7,6 @@ export type AvatarVariant = {
   onAvatarClick?: () => void;
   showDefaultIcon?: boolean;
   defaultImage?: string;
+  hasBorder?: boolean;
+  hasShadow?: boolean;
 };
