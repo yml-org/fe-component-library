@@ -1,6 +1,6 @@
 {
   "name": "@yml-webcl/transition",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "./src/index.js",
   "module": "./src/index.js",
   "type": "module",
@@ -30,8 +30,8 @@
   "dependencies": {
     "@lit/localize": "^0.11.4",
     "@lit/localize-tools": "^0.6.5",
-    "vite-plugin-dts": "^2.1.0",
-    "animate.css": "^4.1.1"
+    "animate.css": "^4.1.1",
+    "vite-plugin-dts": "^2.1.0"
   },
   "exports": {
     ".": {
