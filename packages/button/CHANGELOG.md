@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.1](https://github.com/yml-org/fe-component-library/compare/@yml-webcl/button@0.2.0...@yml-webcl/button@0.0.1) (2023-03-13)
+
+### Bug Fixes
+
+- **app:** update package versions ([c7af278](https://github.com/yml-org/fe-component-library/commit/c7af27899d3679b497126fb26cf2ee71920c7fd8))
+
 # 0.2.0 (2023-03-13)
 
 ### Bug Fixes
