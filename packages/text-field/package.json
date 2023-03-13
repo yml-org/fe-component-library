@@ -1,6 +1,6 @@
 {
   "name": "@fe-component-library/text-field",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "./src/index.js",
   "module": "./src/index.js",
   "type": "module",
