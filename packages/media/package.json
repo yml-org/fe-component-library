@@ -20,6 +20,7 @@
     "localize": "lit-localize extract",
     "localize-build": "lit-localize build"
   },
+  "customElements": "custom-elements.json",
   "devDependencies": {
     "@lit/localize-tools": "^0.6.5",
     "autoprefixer": "^10.4.12",

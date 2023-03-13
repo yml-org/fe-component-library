@@ -56,5 +56,6 @@
     "lit-element",
     "lit-html"
   ],
+  "customElements": "custom-elements.json",
   "gitHead": "bf706f189352e631def25fe71380648ad3ccb8e4"
 }
