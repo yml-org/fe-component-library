@@ -4,6 +4,11 @@
   "main": "./src/index.js",
   "module": "./src/index.js",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yml-org/fe-component-library",
+    "directory": "packages/page-transition"
+},
   "scripts": {
     "start": "vite dev --host",
     "dev": "vite dev --host",
