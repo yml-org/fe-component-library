@@ -1,6 +1,6 @@
 {
-  "name": "@yml-webcl/transition",
-  "version": "1.0.0",
+  "name": "@fe-component-library/transition",
+  "version": "0.2.0",
   "main": "./src/index.js",
   "module": "./src/index.js",
   "type": "module",
@@ -8,6 +8,9 @@
     "type": "git",
     "url": "https://github.com/yml-org/fe-component-library",
     "directory": "packages/page-transition"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "start": "vite dev --host",
@@ -17,6 +20,7 @@
     "localize": "lit-localize extract",
     "localize-build": "lit-localize build"
   },
+  "customElements": "custom-elements.json",
   "devDependencies": {
     "@lit/localize-tools": "^0.6.5",
     "autoprefixer": "^10.4.12",
@@ -30,8 +34,8 @@
   "dependencies": {
     "@lit/localize": "^0.11.4",
     "@lit/localize-tools": "^0.6.5",
-    "vite-plugin-dts": "^2.1.0",
-    "animate.css": "^4.1.1"
+    "animate.css": "^4.1.1",
+    "vite-plugin-dts": "^2.1.0"
   },
   "exports": {
     ".": {
@@ -53,5 +57,6 @@
     "web components",
     "lit-element",
     "lit-html"
-  ]
+  ],
+  "gitHead": "38f2e26193ad3882bd7a240ffdfd9a0af4e5baf6"
 }

@@ -1,6 +1,6 @@
 {
-  "name": "@yml-webcl/scroll",
-  "version": "1.0.0",
+  "name": "@fe-component-library/scroll",
+  "version": "0.2.0",
   "main": "./src/index.js",
   "module": "./src/index.js",
   "type": "module",
@@ -8,6 +8,9 @@
     "type": "git",
     "url": "https://github.com/yml-org/fe-component-library",
     "directory": "packages/scroll-component"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "start": "vite dev --host",
@@ -48,9 +51,11 @@
     }
   },
   "types": "./src/index.d.ts",
+  "customElements": "custom-elements.json",
   "keywords": [
     "web components",
     "lit-element",
     "lit-html"
-  ]
+  ],
+  "gitHead": "38f2e26193ad3882bd7a240ffdfd9a0af4e5baf6"
 }

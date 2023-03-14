@@ -1,10 +1,13 @@
 {
-  "name": "@yml-webcl/ga-accelerator",
-  "version": "1.0.0",
+  "name": "@fe-component-library/ga-accelerator",
+  "version": "0.2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/yml-org/fe-component-library",
     "directory": "packages/ga-accelerator"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "start": "vite dev --host",
@@ -28,5 +31,7 @@
       "default": "./src/index.js"
     },
     "./package.json": "./package.json"
-  }
+  },
+  "customElements": "custom-elements.json",
+  "gitHead": "38f2e26193ad3882bd7a240ffdfd9a0af4e5baf6"
 }

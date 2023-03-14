@@ -52,7 +52,7 @@ The AutoComplete type has the following values:
 Basic textarea component without `props`
 
 export const TemplateDefault = () =>
-  html` <text-area-component></text-area-component> `;
+  html` <ymlwebcl-textarea></ymlwebcl-textarea> `;
 
 <Canvas columns={1}>
   <Story name="default textarea">{TemplateDefault.bind({})}</Story>
@@ -63,11 +63,11 @@ Basic textarea component with label
 export const TemplateWithLabel = ({ label, textAreaId, textAreaName }) =>
   html`
     <div class="textarea-storybook-container">
-      <text-area-component
+      <ymlwebcl-textarea
         label=${label}
         textAreaId=${textAreaId}
         textAreaName=${textAreaName}
-      ></text-area-component>
+      ></ymlwebcl-textarea>
     </div>
   `;
 
@@ -86,12 +86,12 @@ export const TemplateWithCustomRows = ({
   textAreaRows,
 }) =>
   html` <div class="textarea-storybook-container">
-    <text-area-component
+    <ymlwebcl-textarea
       label=${label}
       textAreaId=${textAreaId}
       textAreaName=${textAreaName}
       textAreaRows=${textAreaRows}
-    ></text-area-component>
+    ></ymlwebcl-textarea>
   </div>`;
 
 <Canvas columns={1}>
@@ -110,13 +110,13 @@ export const TemplateWithCustomRowsAndCols = ({
   textAreaCols,
 }) =>
   html` <div class="textarea-storybook-container">
-    <text-area-component
+    <ymlwebcl-textarea
       label=${label}
       textAreaId=${textAreaId}
       textAreaName=${textAreaName}
       textAreaRows=${textAreaRows}
       textAreaCols=${textAreaCols}
-    ></text-area-component>
+    ></ymlwebcl-textarea>
   </div>`;
 
 <Canvas columns={1}>
@@ -139,14 +139,14 @@ export const TemplateWithDisabledTextArea = ({
   isDisabled,
 }) =>
   html` <div class="textarea-storybook-container">
-    <text-area-component
+    <ymlwebcl-textarea
       label=${label}
       textAreaId=${textAreaId}
       textAreaName=${textAreaName}
       textAreaRows=${textAreaRows}
       textAreaCols=${textAreaCols}
       isDisabled=${isDisabled}
-    ></text-area-component>
+    ></ymlwebcl-textarea>
   </div>`;
 
 <Canvas columns={1}>
@@ -166,14 +166,14 @@ export const TemplateWithAutoFocus = ({
   isAutoFocus,
 }) =>
   html` <div class="textarea-storybook-container">
-    <text-area-component
+    <ymlwebcl-textarea
       label=${label}
       textAreaId=${textAreaId}
       textAreaName=${textAreaName}
       textAreaRows=${textAreaRows}
       textAreaCols=${textAreaCols}
       isAutoFocus=${isAutoFocus}
-    ></text-area-component>
+    ></ymlwebcl-textarea>
   </div>`;
 
 <Canvas columns={1}>
@@ -193,14 +193,14 @@ export const TemplateWithPlaceHolder = ({
   textAreaPlaceHolder,
 }) =>
   html` <div class="textarea-storybook-container">
-    <text-area-component
+    <ymlwebcl-textarea
       label=${label}
       textAreaId=${textAreaId}
       textAreaName=${textAreaName}
       textAreaRows=${textAreaRows}
       textAreaCols=${textAreaCols}
       textAreaPlaceHolder=${textAreaPlaceHolder}
-    ></text-area-component>
+    ></ymlwebcl-textarea>
   </div>`;
 
 <Canvas columns={1}>
@@ -220,14 +220,14 @@ export const TemplateWithNoResize = ({
   canResize,
 }) =>
   html` <div class="textarea-storybook-container">
-    <text-area-component
+    <ymlwebcl-textarea
       .label=${label}
       .textAreaId=${textAreaId}
       .textAreaName=${textAreaName}
       .textAreaRows=${textAreaRows}
       .textAreaCols=${textAreaCols}
       .canResize=${canResize}
-    ></text-area-component>
+    ></ymlwebcl-textarea>
   </div>`;
 
 <Canvas columns={1}>
