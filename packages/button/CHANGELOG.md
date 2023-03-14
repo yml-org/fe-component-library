@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2023-03-14)
+
+### Bug Fixes
+
+- **app:** generate react wrapper ([f8928c4](https://github.com/yml-org/fe-component-library/commit/f8928c48420f4f4cb3d05831857d3290b2790bfa))
+- **app:** update app versions ([fc7f326](https://github.com/yml-org/fe-component-library/commit/fc7f326a597c80f91ea06e8b8534cd178c7139b3))
+- **app:** update package versions ([f3f49c3](https://github.com/yml-org/fe-component-library/commit/f3f49c30bf36af964ed0360e82fc69b14afb0cb5))
+- **app:** update package versions ([0752243](https://github.com/yml-org/fe-component-library/commit/07522435e7bf61a46a55e0d6cf3bab4b7904c674))
+- **app:** update package versions ([694310b](https://github.com/yml-org/fe-component-library/commit/694310b770a2c94b5289e64507ce7ed85edb3897))
+- **app:** update package versions ([81c3361](https://github.com/yml-org/fe-component-library/commit/81c336171a8a8f2fc7eac71b9190058b6bfdd18d))
+- **app:** update package versions ([675fc5c](https://github.com/yml-org/fe-component-library/commit/675fc5c5718859c3ef2858f2c47aabf9fa5a13f2))
+- **app:** update package versions ([c7af278](https://github.com/yml-org/fe-component-library/commit/c7af27899d3679b497126fb26cf2ee71920c7fd8))
+- **textarea:** fix storybook ([e2a9109](https://github.com/yml-org/fe-component-library/commit/e2a9109798c17c77092555e83d73f50f0aedfec6))
+- **version:** update package versions ([2c20a65](https://github.com/yml-org/fe-component-library/commit/2c20a6508da35e35a82b3572c27d37f5828749a6))
+- **version:** update package versions ([7d8cf7f](https://github.com/yml-org/fe-component-library/commit/7d8cf7f15d4f548555eb74705c83e8125f89486c))
+- **version:** update package versions ([d0aeb30](https://github.com/yml-org/fe-component-library/commit/d0aeb30a06f38e6a5b5b2f309f2cd86448a848e8))
+
+### Features
+
+- **app:** initial commit for packages ([f40b152](https://github.com/yml-org/fe-component-library/commit/f40b15238f90163336dca610f88b3ef7fdc1c75f))
+- **app:** initial commit for packages ([2c7f827](https://github.com/yml-org/fe-component-library/commit/2c7f8279775d2dbd4eeda179d96fa14160391858))
+- **app:** initial setup ([39ab767](https://github.com/yml-org/fe-component-library/commit/39ab7675f5fc00f3878fc03e7e98dcfc21e16f71))
+- **app:** initial setup ([d52da08](https://github.com/yml-org/fe-component-library/commit/d52da088fc3fc4237a69a31bbff20caca2f041f1))
+- **app:** react wrapper generator script ([fa9d264](https://github.com/yml-org/fe-component-library/commit/fa9d264adbabc99972185c65ca6164cad362ac6c))
+- **app:** react wrapper generator script ([d54f81a](https://github.com/yml-org/fe-component-library/commit/d54f81ad267100300156f45d1730300105167206))
+- **app:** react wrapper generator script ([897e7f0](https://github.com/yml-org/fe-component-library/commit/897e7f01105145c219426651d30649163a27f5a6))
+- **app:** react wrapper generator script ([813319a](https://github.com/yml-org/fe-component-library/commit/813319ac698860867736ba7c98ce5874522fef86))
+- **app:** update package name ([2d0a577](https://github.com/yml-org/fe-component-library/commit/2d0a577d7db2445f5b141c2704c1eed990c22294))
+- **button:** update props ([a2a1f60](https://github.com/yml-org/fe-component-library/commit/a2a1f60456b26f299fa8490e69b7ba9d3efd7694))
+- **button:** update props ([#40](https://github.com/yml-org/fe-component-library/issues/40)) ([d19fedc](https://github.com/yml-org/fe-component-library/commit/d19fedc41acb568d7933a6962a66799b8be8c430))
+- **storybook:** improve documentation ([#24](https://github.com/yml-org/fe-component-library/issues/24)) ([e273d09](https://github.com/yml-org/fe-component-library/commit/e273d09b6eb5fd842f23ea8bcbd56fb160b827e8))
+
 # 0.1.0 (2023-03-14)
 
 ### Bug Fixes
