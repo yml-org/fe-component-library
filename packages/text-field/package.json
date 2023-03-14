@@ -1,5 +1,5 @@
 {
-  "name": "@yml-orgy/text-field",
+  "name": "@fe-component-library/text-field",
   "version": "0.0.0",
   "main": "./src/index.js",
   "module": "./src/index.js",

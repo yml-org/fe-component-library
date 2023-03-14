@@ -1,5 +1,5 @@
 {
-  "name": "@yml-org/fe-component-library",
+  "name": "fe-component-library",
   "version": "0.0.0",
   "type": "module",
   "workspaces": [
