@@ -2508,6 +2508,22 @@
     source-map-support "^0.5.19"
     typescript "~4.7.4"
 
+"@lit/localize-tools@^0.6.7":
+  version "0.6.7"
+  resolved "https://registry.yarnpkg.com/@lit/localize-tools/-/localize-tools-0.6.7.tgz#471f098e1678e580484c563458dd379ef8c3f320"
+  integrity sha512-zzDSuBcO/vWjpGDuKX1SdOkmR2hjNWHmE6XQHLAh21xNEhCiHyN4k5NqN/uPkB2mx7wxK3n6KH3hppN3AANWmA==
+  dependencies:
+    "@lit/localize" "^0.11.0"
+    "@xmldom/xmldom" "^0.8.2"
+    fast-glob "^3.2.7"
+    fs-extra "^10.0.0"
+    jsonschema "^1.4.0"
+    lit "^2.6.0"
+    minimist "^1.2.5"
+    parse5 "^6.0.1"
+    source-map-support "^0.5.19"
+    typescript "~4.7.4"
+
 "@lit/localize@^0.11.0", "@lit/localize@^0.11.4":
   version "0.11.4"
   resolved "https://registry.npmjs.org/@lit/localize/-/localize-0.11.4.tgz"
@@ -11506,6 +11522,15 @@ lit@^2.4.0:
     lit-element "^3.2.0"
     lit-html "^2.5.0"
 
+lit@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/lit/-/lit-2.6.1.tgz#5951a2098b9bde5b328c73b55c15fdc0eefd96d7"
+  integrity sha512-DT87LD64f8acR7uVp7kZfhLRrHkfC/N4BVzAtnw9Yg8087mbBJ//qedwdwX0kzDbxgPccWRW6mFwGbRQIxy0pw==
+  dependencies:
+    "@lit/reactive-element" "^1.6.0"
+    lit-element "^3.2.0"
+    lit-html "^2.6.0"
+
 load-json-file@^1.0.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/load-json-file/-/load-json-file-1.1.0.tgz"
@@ -13959,6 +13984,11 @@ react@16.14.0:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
+
+reactify-wc@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/reactify-wc/-/reactify-wc-4.0.0.tgz#7e55f4f28c3222764335e5760b2a9ac4b5c93173"
+  integrity sha512-NLBk/0oYD3/v273xCvNbCWgAvlRYfBQX/k1BnPu0DTpE/Jwp8tTHzlc2vAmm1VO4DnOM81idSMeuVS78K4VXwQ==
 
 read-cache@^1.0.0:
   version "1.0.0"
