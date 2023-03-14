@@ -1,0 +1,126 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "scroll.component.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/types/scroll.component.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/scroll/scroll.component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "ScrollComponent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "dataSlot",
+              "type": {
+                "text": "Array<dataSlots>"
+              },
+              "default": "defaultDataSlots",
+              "attribute": "dataSlot",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "desktopImages",
+              "type": {
+                "text": "object"
+              },
+              "default": "defaultDesktopImages",
+              "attribute": "desktopImages",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "mobileImages",
+              "type": {
+                "text": "object"
+              },
+              "default": "defaultMobileImages",
+              "attribute": "mobileImages",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "dataSlot",
+              "type": {
+                "text": "Array<dataSlots>"
+              },
+              "default": "defaultDataSlots",
+              "resolveInitializer": {
+                "module": "/src/constants/scroll.variant"
+              },
+              "fieldName": "dataSlot"
+            },
+            {
+              "name": "desktopImages",
+              "type": {
+                "text": "object"
+              },
+              "default": "defaultDesktopImages",
+              "resolveInitializer": {
+                "module": "/src/constants/scroll.variant"
+              },
+              "fieldName": "desktopImages"
+            },
+            {
+              "name": "mobileImages",
+              "type": {
+                "text": "object"
+              },
+              "default": "defaultMobileImages",
+              "resolveInitializer": {
+                "module": "/src/constants/scroll.variant"
+              },
+              "fieldName": "mobileImages"
+            }
+          ],
+          "mixins": [
+            {
+              "name": "TailwindElement",
+              "module": "/src/shared/tailwind.element"
+            }
+          ],
+          "superclass": {
+            "name": "Style",
+            "module": "/src/scroll/scroll.component.scss"
+          },
+          "tagName": "ymlwebcl-scroll",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ScrollComponent",
+          "declaration": {
+            "name": "ScrollComponent",
+            "module": "src/scroll/scroll.component.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "ymlwebcl-scroll",
+          "declaration": {
+            "name": "ScrollComponent",
+            "module": "src/scroll/scroll.component.ts"
+          }
+        }
+      ]
+    }
+  ]
+}

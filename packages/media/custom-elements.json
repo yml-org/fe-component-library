@@ -1,0 +1,176 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "media.component.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/media/media.component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MediaComponent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "mediaTitle",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'Title'",
+              "attribute": "mediaTitle",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "imageSlotName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "attribute": "imageSlotName",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "staticContentSlotName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "attribute": "staticContentSlotName",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "iconSlotName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "attribute": "iconSlotName",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "mediaPartAttribute",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'webcl-media'",
+              "attribute": "mediaPartAttribute",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "textPartAttribute",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'media-text-container'",
+              "attribute": "textPartAttribute",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "titlePartAttribute",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'media-title-container'",
+              "attribute": "titlePartAttribute",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "mediaTitle",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'Title'",
+              "fieldName": "mediaTitle"
+            },
+            {
+              "name": "imageSlotName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "imageSlotName"
+            },
+            {
+              "name": "staticContentSlotName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "staticContentSlotName"
+            },
+            {
+              "name": "iconSlotName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "iconSlotName"
+            },
+            {
+              "name": "mediaPartAttribute",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'webcl-media'",
+              "fieldName": "mediaPartAttribute"
+            },
+            {
+              "name": "textPartAttribute",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'media-text-container'",
+              "fieldName": "textPartAttribute"
+            },
+            {
+              "name": "titlePartAttribute",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'media-title-container'",
+              "fieldName": "titlePartAttribute"
+            }
+          ],
+          "mixins": [
+            {
+              "name": "TailwindElement",
+              "module": "/src/shared/tailwind.element"
+            }
+          ],
+          "superclass": {
+            "module": "src/media/media.component.ts"
+          },
+          "tagName": "ymlwebcl-media",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MediaComponent",
+          "declaration": {
+            "name": "MediaComponent",
+            "module": "src/media/media.component.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "ymlwebcl-media",
+          "declaration": {
+            "name": "MediaComponent",
+            "module": "src/media/media.component.ts"
+          }
+        }
+      ]
+    }
+  ]
+}
