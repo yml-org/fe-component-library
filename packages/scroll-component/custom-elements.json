@@ -10,12 +10,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/types/scroll.component.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/scroll/scroll.component.ts",
       "declarations": [
         {
@@ -121,6 +115,12 @@
           }
         }
       ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/types/scroll.component.ts",
+      "declarations": [],
+      "exports": []
     }
   ]
 }
