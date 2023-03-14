@@ -1,6 +1,6 @@
 {
-  "name": "@fe-component-library/header",
-  "version": "0.1.0",
+  "name": "@yml-orgy/header",
+  "version": "0.0.0",
   "main": "./src/index.js",
   "module": "./src/index.js",
   "type": "module",
@@ -10,7 +10,7 @@
     "directory": "packages/header"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "access": "public"
   },
   "scripts": {
     "start": "vite dev --host",
@@ -57,5 +57,5 @@
     "lit-html"
   ],
   "customElements": "custom-elements.json",
-  "gitHead": "bf706f189352e631def25fe71380648ad3ccb8e4"
+  "gitHead": "38f2e26193ad3882bd7a240ffdfd9a0af4e5baf6"
 }
