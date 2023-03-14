@@ -1,8 +1,7 @@
 {
-  "name": "fe-component-library",
+  "name": "@yml-org/fe-component-library",
   "version": "0.0.0",
   "type": "module",
-  "private": "true",
   "workspaces": [
     "packages/*"
   ],
