@@ -1,5 +1,5 @@
 {
-  "name": "@fe-component-library/ga-accelerator",
+  "name": "@yml-orgy/ga-accelerator",
   "version": "0.0.0",
   "repository": {
     "type": "git",
@@ -7,7 +7,7 @@
     "directory": "packages/ga-accelerator"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "access": "public"
   },
   "scripts": {
     "start": "vite dev --host",

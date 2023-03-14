@@ -1,5 +1,5 @@
 {
-  "name": "@fe-component-library/avatar",
+  "name": "@yml-orgy/avatar",
   "version": "0.0.0",
   "main": "./src/index.js",
   "module": "./src/index.js",
@@ -10,7 +10,7 @@
     "directory": "packages/avatar"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "access": "public"
   },
   "scripts": {
     "start": "vite dev --host",

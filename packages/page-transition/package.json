@@ -1,5 +1,5 @@
 {
-  "name": "@fe-component-library/transition",
+  "name": "@yml-orgy/transition",
   "version": "0.0.0",
   "main": "./src/index.js",
   "module": "./src/index.js",
@@ -10,7 +10,7 @@
     "directory": "packages/page-transition"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "access": "public"
   },
   "scripts": {
     "start": "vite dev --host",
