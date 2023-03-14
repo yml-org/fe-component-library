@@ -20,6 +20,10 @@
     "@types/jest": "^29.2.5",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "babel-loader": "^8.3.0",
+    "case": "^1.6.3",
+    "cem-plugin-module-file-extensions": "^0.0.5",
+    "cem-plugin-react-wrapper": "^2.0.0",
+    "cem-plugin-reactify": "^0.0.2",
     "electron": "^22.0.1",
     "esbuild-jest": "^0.5.0",
     "eslint": "^8.0.1",
@@ -28,6 +32,7 @@
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
+    "fs-extra": "^10.1.0",
     "husky": "^8.0.3",
     "jest": "^25.2.7",
     "jest-electron": "^0.1.11",
@@ -41,7 +46,9 @@
   "dependencies": {
     "@babel/plugin-syntax-import-meta": "^7.10.4",
     "@babel/plugin-transform-runtime": "^7.21.0",
+    "@custom-elements-manifest/analyzer": "^0.6.9",
     "babel-plugin-transform-import-meta": "^2.2.0",
+    "custom-elements-manifest": "^2.0.0",
     "typescript": "^4.9.5"
   },
   "scripts": {
@@ -51,19 +58,14 @@
     "test": "yarn build && jest --no-verbose -u --silent",
     "test:coverage": "yarn build && jest --coverage -u",
     "test:watch": "yarn build && jest -u --watch",
-    "lint": "yarn eslint \"packages/**/src/**\" --fix"
+    "lint": "yarn eslint \"packages/**/src/**\" --fix",
+    "analyze": "lerna exec cem analyze",
+    "gen-react-wrapper": "rm -fr react && lerna exec  -- cem analyze --config ../../cem-react-wrapper.config.js"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
       "commit-msg": "commitlint"
     }
-  },
-  "lint-staged": {
-    "packages/**/*.{js,mjs,ts}": [
-      "eslint \"packages/**/src/**\" --fix",
-      "prettier --write",
-      "git add"
-    ]
   }
 }

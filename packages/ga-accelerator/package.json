@@ -32,5 +32,6 @@
     },
     "./package.json": "./package.json"
   },
+  "customElements": "custom-elements.json",
   "gitHead": "38f2e26193ad3882bd7a240ffdfd9a0af4e5baf6"
 }

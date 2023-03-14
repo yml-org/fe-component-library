@@ -1,0 +1,206 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "header.component.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/constants/header.component.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "themeOptions",
+          "type": {
+            "text": "ThemeOptions"
+          },
+          "default": "{\n  dark: {\n    bgColor: 'bg-black',\n    textColor: 'text-gray-300',\n    textHoverColorDesktop: 'hover:text-white',\n    textHoverColorMobile: 'hover:text-black',\n    bgHoverColor: 'hover:bg-gray-300',\n    headerTextColor: 'text-white',\n  },\n  light: {\n    bgColor: 'bg-gray-200',\n    textColor: 'text-stone-900',\n    textHoverColorDesktop: 'hover:text-black',\n    textHoverColorMobile: 'hover:text-white',\n    bgHoverColor: 'hover:bg-stone-700',\n    headerTextColor: 'text-black',\n  },\n}"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "themeOptions",
+          "declaration": {
+            "name": "themeOptions",
+            "module": "src/constants/header.component.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/header/header.component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "HeaderComponent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "navOptions",
+              "type": {
+                "text": "Nav"
+              },
+              "default": "defaultNavConfig",
+              "attribute": "navOptions",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "themeOptions",
+              "default": "themeOptions"
+            },
+            {
+              "kind": "field",
+              "name": "openMenu",
+              "type": {
+                "text": "boolean"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "setMenuOpen",
+              "privacy": "protected"
+            },
+            {
+              "kind": "method",
+              "name": "getThemeProperty",
+              "privacy": "protected",
+              "parameters": [
+                {
+                  "name": "key",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "renderMenuOptionsAsButton",
+              "privacy": "protected",
+              "parameters": [
+                {
+                  "name": "type",
+                  "type": {
+                    "text": "DeviceType"
+                  }
+                },
+                {
+                  "name": "link",
+                  "type": {
+                    "text": "MenuLink"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "renderMenuOptionsAsLink",
+              "privacy": "protected",
+              "parameters": [
+                {
+                  "name": "type",
+                  "type": {
+                    "text": "DeviceType"
+                  }
+                },
+                {
+                  "name": "link",
+                  "type": {
+                    "text": "MenuLink"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "displayMenuLinks",
+              "privacy": "protected",
+              "parameters": [
+                {
+                  "name": "type",
+                  "type": {
+                    "text": "DeviceType"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "renderNavBarLogo",
+              "privacy": "protected"
+            },
+            {
+              "kind": "method",
+              "name": "renderHamburgerIcon",
+              "privacy": "protected"
+            }
+          ],
+          "events": [
+            {
+              "type": {
+                "text": "CustomEvent"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "navOptions",
+              "type": {
+                "text": "Nav"
+              },
+              "default": "defaultNavConfig",
+              "resolveInitializer": {
+                "module": "/src/constants/header.variants"
+              },
+              "fieldName": "navOptions"
+            }
+          ],
+          "mixins": [
+            {
+              "name": "TailwindElement",
+              "module": "/src/shared/tailwind.element"
+            }
+          ],
+          "superclass": {
+            "name": "Style",
+            "module": "/src/header/header.component.scss"
+          },
+          "tagName": "ymlwebcl-header",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "HeaderComponent",
+          "declaration": {
+            "name": "HeaderComponent",
+            "module": "src/header/header.component.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "ymlwebcl-header",
+          "declaration": {
+            "name": "HeaderComponent",
+            "module": "src/header/header.component.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/types/header.component.ts",
+      "declarations": [],
+      "exports": []
+    }
+  ]
+}

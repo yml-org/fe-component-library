@@ -59,7 +59,7 @@ export class AvatarComponent extends TailwindElement(null) {
       : '';
   }
 
-  render() {
+  public override render() {
     return html`<div
       class=${this.getContainerClassList()}
       style=${this.getContainerDimensions()}

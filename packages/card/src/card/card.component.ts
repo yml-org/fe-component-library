@@ -50,7 +50,7 @@ export class CardComponent extends TailwindElement(null) {
           </div>`
       : html`<slot name=${this.customSlotName} />`;
   }
-  render() {
+  public override render() {
     return html`<div
       class=${this.getContainerClassList()}
       style=${this.setCardDimensions()}

@@ -1,0 +1,328 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "transition.component.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/constants/transition.component.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/transition/transition.component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "TransitionComponent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "componentArray",
+              "type": {
+                "text": "Array<string> | undefined"
+              },
+              "default": "['slot1', 'slot2', 'slot3']",
+              "attribute": "componentArray",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "disableSwipeNext",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "attribute": "disableSwipeNext",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "disableSwipePrev",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "attribute": "disableSwipePrev",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "animationDuration",
+              "type": {
+                "text": "number | undefined"
+              },
+              "attribute": "animationDuration",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "animationDelay",
+              "type": {
+                "text": "number | undefined"
+              },
+              "attribute": "animationDelay",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "allowCircularSwipe",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "false",
+              "attribute": "allowCircularSwipe",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "callbackEvent",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "null",
+              "attribute": "callbackEvent",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "scrollDirection",
+              "type": {
+                "text": "Direction | undefined"
+              },
+              "attribute": "scrollDirection",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "backgroundColor",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'#ffffff'",
+              "attribute": "backgroundColor",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "slotName",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "index",
+              "type": {
+                "text": "number"
+              },
+              "default": "0"
+            },
+            {
+              "kind": "field",
+              "name": "slotClass",
+              "type": {
+                "text": "string"
+              },
+              "default": "''"
+            },
+            {
+              "kind": "field",
+              "name": "mousePosition",
+              "type": {
+                "text": "MousePosition"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "offset",
+              "type": {
+                "text": "array"
+              },
+              "default": "[0, 0]"
+            },
+            {
+              "kind": "field",
+              "name": "slotWrapperDiv",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "hideSlotWrapperDiv",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "isDown",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "isScrolled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "swipedDirection",
+              "type": {
+                "text": "string"
+              },
+              "default": "''"
+            },
+            {
+              "kind": "field",
+              "name": "slotWrapperDivPosition",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "handleSlot",
+              "privacy": "protected"
+            },
+            {
+              "kind": "field",
+              "name": "handleMove",
+              "privacy": "protected"
+            },
+            {
+              "kind": "field",
+              "name": "handleMouseDown",
+              "privacy": "protected"
+            },
+            {
+              "kind": "field",
+              "name": "handleDecrementIndex",
+              "privacy": "protected"
+            },
+            {
+              "kind": "field",
+              "name": "handleIncrementIndex",
+              "privacy": "protected"
+            },
+            {
+              "kind": "field",
+              "name": "handleUp",
+              "privacy": "protected"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "componentArray",
+              "type": {
+                "text": "Array<string> | undefined"
+              },
+              "default": "['slot1', 'slot2', 'slot3']",
+              "fieldName": "componentArray"
+            },
+            {
+              "name": "disableSwipeNext",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "fieldName": "disableSwipeNext"
+            },
+            {
+              "name": "disableSwipePrev",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "fieldName": "disableSwipePrev"
+            },
+            {
+              "name": "animationDuration",
+              "type": {
+                "text": "number | undefined"
+              },
+              "fieldName": "animationDuration"
+            },
+            {
+              "name": "animationDelay",
+              "type": {
+                "text": "number | undefined"
+              },
+              "fieldName": "animationDelay"
+            },
+            {
+              "name": "allowCircularSwipe",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "false",
+              "fieldName": "allowCircularSwipe"
+            },
+            {
+              "name": "callbackEvent",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "null",
+              "fieldName": "callbackEvent"
+            },
+            {
+              "name": "scrollDirection",
+              "type": {
+                "text": "Direction | undefined"
+              },
+              "fieldName": "scrollDirection"
+            },
+            {
+              "name": "backgroundColor",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'#ffffff'",
+              "fieldName": "backgroundColor"
+            }
+          ],
+          "mixins": [
+            {
+              "name": "TailwindElement",
+              "module": "/src/shared/tailwind.element"
+            }
+          ],
+          "superclass": {
+            "name": "Style",
+            "module": "/src/transition/transition.component.scss"
+          },
+          "tagName": "ymlwebcl-transition",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "TransitionComponent",
+          "declaration": {
+            "name": "TransitionComponent",
+            "module": "src/transition/transition.component.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "ymlwebcl-transition",
+          "declaration": {
+            "name": "TransitionComponent",
+            "module": "src/transition/transition.component.ts"
+          }
+        }
+      ]
+    }
+  ]
+}

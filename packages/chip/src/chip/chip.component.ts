@@ -21,7 +21,7 @@ export class ChipComponent extends TailwindElement(null) {
     return `[word-wrap: break-word] inline-flex flex-row items-center my-[5px] pt-[4px] pb-[6px] px-[12px]`;
   }
 
-  render() {
+  public override render() {
     return html`
       <div class=${this.getContainerClassList()} part=${this.chipPartAttribute}>
         <slot name=${this.leftSlotName}></slot>
