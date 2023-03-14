@@ -5967,6 +5967,13 @@ cem-plugin-module-file-extensions@^0.0.5:
   resolved "https://registry.yarnpkg.com/cem-plugin-module-file-extensions/-/cem-plugin-module-file-extensions-0.0.5.tgz#6d6b8e45aac65cec7d27757d6ab58cd88ad6a7fe"
   integrity sha512-Ky9tlWNnh9f6A/H3QbRqB0fu5sf9M6pbVwr2LMO6uqGkEn9A1+xF1fmq0SRJlUYPUszw6JEjaK7IByLOuAeAVg==
 
+cem-plugin-react-wrapper@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/cem-plugin-react-wrapper/-/cem-plugin-react-wrapper-2.0.0.tgz#b18f969fd39e3e8a71cee5f178c7d56f8d613c72"
+  integrity sha512-6kIgsBaZdCm7bU6DGjMUEOM1QOhkbrlZIXWQVYv7Ks7gxOr1zxBMzf2V0CWUICgWyC8vtVc5nNi4t1M9on+RjA==
+  dependencies:
+    prettier "^2.7.1"
+
 cem-plugin-reactify@^0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/cem-plugin-reactify/-/cem-plugin-reactify-0.0.2.tgz#14637ce0c3e3da243eea38b286a67099ca3c05b9"
@@ -13567,7 +13574,7 @@ prepend-http@^2.0.0:
   resolved "https://registry.npmjs.org/prettier/-/prettier-2.3.0.tgz"
   integrity sha512-kXtO4s0Lz/DW/IJ9QdWhAf7/NmPWQXkFr/r/WkR3vyI+0v8amTDxiaQSLzs8NBlytfLWX/7uQUMIW677yLKl4w==
 
-prettier@^2.3.2:
+prettier@^2.3.2, prettier@^2.7.1:
   version "2.8.4"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.4.tgz#34dd2595629bfbb79d344ac4a91ff948694463c3"
   integrity sha512-vIS4Rlc2FNh0BySk3Wkd6xmwxB0FpOndW5fisM5H8hsZSxU2VWVB5CWIkIjWvrHjIhxk2g3bfMKM87zNTrZddw==

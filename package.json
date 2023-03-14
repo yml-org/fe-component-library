@@ -23,6 +23,7 @@
     "babel-loader": "^8.3.0",
     "case": "^1.6.3",
     "cem-plugin-module-file-extensions": "^0.0.5",
+    "cem-plugin-react-wrapper": "^2.0.0",
     "cem-plugin-reactify": "^0.0.2",
     "electron": "^22.0.1",
     "esbuild-jest": "^0.5.0",

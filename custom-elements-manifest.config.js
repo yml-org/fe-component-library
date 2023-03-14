@@ -1,4 +1,4 @@
-import { moduleFileExtensionsPlugin } from 'cem-plugin-module-file-extensions';
+import { reactWrapper } from 'cem-plugin-react-wrapper';
 
 export default {
   globs: [
@@ -17,5 +17,16 @@ export default {
   outdir: '.',
   litelement: true,
   packagejson: false,
-  plugins: [moduleFileExtensionsPlugin()],
+  plugins: [
+    reactWrapper({
+      /** If true, types will be created for your wrappers - default is "true" */
+      typescript: true,
+      /** The property name from the component object constructed by the CEM Analyzer */
+      descriptionSrc: 'description',
+      /** Displays the slot section of the element description */
+      slotDocs: true,
+      /** Displays the events section of the element description */
+      eventDocs: true,
+    }),
+  ],
 };
